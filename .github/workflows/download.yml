@@ -1,0 +1,35 @@
+name: Download SEPA prices
+
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Download new price files
+        run: python fetch_sepa.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save the log
+        run: |
+          git config user.name "la-canasta-bot"
+          git config user.email "la-canasta-bot@users.noreply.github.com"
+          git add download_log.csv || true
+          git commit -m "Daily download log" || echo "Nothing new"
+          git push

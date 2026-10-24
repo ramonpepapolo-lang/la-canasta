@@ -103,28 +103,28 @@ before = len(prices)
 for term in SEARCHES:
     for res in coto_search(term):
         data = res.get("data", {})
-        store_prices = [x for x in data.get("price", []) if x.get("formatPrice")]
+        store_prices = [x for x in data.get("price", []) if x.get("listPrice")]
         if not store_prices or ("Coto", data.get("id")) in prices:
             continue
-        sale = [x["formatPrice"] for x in store_prices]
-        lists = [x.get("listPrice") or x["formatPrice"] for x in store_prices]
+        shelf = [x["listPrice"] for x in store_prices]                                  # price on the shelf
+        per_unit = [x["formatPrice"] for x in store_prices if x.get("formatPrice")]    # price per kg or litre
         # Every other field Coto sends (except the long list of store prices), saved for later
         other = {k: v for k, v in data.items() if k != "price" and not isinstance(v, (dict, list))}
-        other.update({"price_min": min(sale), "price_max": max(sale), "n_stores": len(sale)})
-        ean = next((v for k, v in data.items() if "ean" in k.lower() and isinstance(v, (str, int))), None)
+        other.update({"price_min": min(shelf), "price_max": max(shelf), "n_stores": len(shelf),
+                      "price_per_unit": statistics.median(per_unit) if per_unit else None})
         prices[("Coto", data.get("id"))] = {
             "date": today,
             "shop": "Coto",
             "search": term,
             "sku_id": data.get("id"),
-            "ean": ean,
+            "ean": None,  # Coto doesn't send barcodes
             "name": res.get("value"),
-            "brand": data.get("brand") or data.get("marca"),
-            "category": data.get("category") or data.get("categoria"),
-            "unit": None,
-            "unit_multiplier": None,
-            "price": statistics.median(sale),       # typical price across Coto's stores
-            "list_price": statistics.median(lists),
+            "brand": data.get("product_brand"),
+            "category": None,
+            "unit": data.get("product_format"),
+            "unit_multiplier": data.get("product_format_quantity"),
+            "price": statistics.median(shelf),  # typical shelf price across Coto's stores
+            "list_price": data.get("product_list_price"),
             "available": True,
             "extra": json.dumps(other, ensure_ascii=False),
         }

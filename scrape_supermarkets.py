@@ -1,5 +1,6 @@
 # La Canasta: every day, collects prices from Jumbo, Carrefour, ChangoMas, Dia and Coto
 # and saves them in the "data" folder, one file per day.
+# It also makes sure every product in basket.csv is collected, even if a search misses it.
 
 import csv
 import datetime
@@ -34,10 +35,11 @@ SEARCHES = [
     "gaseosa", "agua mineral", "cerveza", "vino tinto",
     "papel higienico", "detergente", "lavandina", "jabon en polvo",
     "shampoo", "pasta dental", "jabon de tocador",
+    "coca cola", "chimichurri", "asado", "nalga", "vacio", "milanesa",
 ]
 
 COLUMNS = ["date", "shop", "search", "sku_id", "ean", "name", "brand", "category",
-           "unit", "unit_multiplier", "price", "list_price", "available", "extra"]
+           "unit", "unit_multiplier", "price", "list_price", "available", "basket_type", "extra"]
 
 today = datetime.date.today().isoformat()
 prices = {}  # one entry per shop + product, so nothing is saved twice
@@ -81,6 +83,7 @@ for shop, base in SHOPS.items():
                     "price": offer.get("Price"),
                     "list_price": offer.get("ListPrice"),
                     "available": offer.get("IsAvailable"),
+                    "basket_type": "",
                     "extra": "",
                 }
         time.sleep(2)  # be polite: wait 2 seconds between searches
@@ -126,10 +129,66 @@ for term in SEARCHES:
             "price": statistics.median(shelf),  # typical shelf price across Coto's stores
             "list_price": data.get("product_list_price"),
             "available": True,
+            "basket_type": "",
             "extra": json.dumps(other, ensure_ascii=False),
         }
     time.sleep(2)
 print(f"Coto: {len(prices) - before} prices")
+
+
+# ---------- Part 3: make sure every basket product is collected ----------
+def vtex_row(shop, p, item, term):
+    offer = item["sellers"][0]["commertialOffer"]
+    return {
+        "date": today, "shop": shop, "search": term, "sku_id": item.get("itemId"),
+        "ean": item.get("ean"), "name": item.get("nameComplete") or p.get("productName"),
+        "brand": p.get("brand"), "category": (p.get("categories") or [""])[0],
+        "unit": item.get("measurementUnit"), "unit_multiplier": item.get("unitMultiplier"),
+        "price": offer.get("Price"), "list_price": offer.get("ListPrice"),
+        "available": offer.get("IsAvailable"), "basket_type": "", "extra": "",
+    }
+
+
+missing = 0
+with open("basket.csv", newline="", encoding="utf-8") as f:
+    basket = list(csv.DictReader(f))
+for b in basket:
+    key = (b["shop"], b["sku_id"])
+    if key not in prices and b["shop"] in SHOPS:
+        url = f"{SHOPS[b['shop']]}/api/catalog_system/pub/products/search?fq=skuId:{b['sku_id']}"
+        try:
+            for p in get_json(url):
+                for item in p.get("items", []):
+                    if str(item.get("itemId")) == b["sku_id"]:
+                        prices[key] = vtex_row(b["shop"], p, item, "basket")
+        except Exception as e:
+            print(f"Basket {b['type_id']} at {b['shop']}: failed ({e})")
+        time.sleep(1)
+    if key in prices:
+        prices[key]["basket_type"] = b["type_id"]
+    else:
+        missing += 1
+        print(f"Basket {b['type_id']} at {b['shop']}: not found today")
+print(f"Basket: {len(basket) - missing} of {len(basket)} products found")
+
+
+# ---------- Part 4 (one time only): save raw Coto data to investigate old prices ----------
+debug_path = "data/coto_debug.json.gz"
+if not os.path.exists(debug_path):
+    raw = {}
+    for term in ["yogur bebible", "pan lactal", "leche entera", "harina 000", "aceite girasol"]:
+        for key in COTO_KEYS:
+            url = (f"https://ac.cnstrc.com/search/{quote(term)}?key={key}"
+                   f"&c=ciojs-client-2.35.2&i={uuid.uuid4()}&s=1&num_results_per_page=40&page=1")
+            try:
+                raw[f"{term}|{key}"] = get_json(url)
+            except Exception as e:
+                raw[f"{term}|{key}"] = str(e)
+        time.sleep(2)
+    os.makedirs("data", exist_ok=True)
+    with gzip.open(debug_path, "wt", encoding="utf-8") as f:
+        json.dump(raw, f, ensure_ascii=False)
+    print("Saved Coto investigation file")
 
 
 # ---------- Save ----------

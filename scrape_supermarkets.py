@@ -45,9 +45,19 @@ today = datetime.date.today().isoformat()
 prices = {}  # one entry per shop + product, so nothing is saved twice
 
 
-def get_json(url):
-    r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
-    return r.json()
+def get_json(url, want=list):
+    """Downloads a page and returns its data. Tries again once if the answer looks wrong."""
+    for attempt in range(2):
+        try:
+            r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
+            data = r.json()
+            if isinstance(data, want):
+                return data
+            print(f"  Unexpected answer (status {r.status_code}): {str(data)[:150]}")
+        except Exception as e:
+            print(f"  Problem with {url[:90]}: {e}")
+        time.sleep(10)
+    return want()  # empty list or dict, so the script keeps going
 
 
 # ---------- Part 1: Jumbo, Carrefour, ChangoMas, Dia ----------
@@ -55,17 +65,15 @@ for shop, base in SHOPS.items():
     before = len(prices)
     for term in SEARCHES:
         url = f"{base}/api/catalog_system/pub/products/search?ft={quote(term)}&_from=0&_to=49"
-        try:
-            products = get_json(url)
-        except Exception as e:
-            print(f"{shop} '{term}': failed ({e})")
-            continue
+        products = get_json(url)
 
         for p in products:
-            for item in p.get("items", []):
+            if not isinstance(p, dict):
+                continue
+            for item in p.get("items") or []:
                 try:
                     offer = item["sellers"][0]["commertialOffer"]
-                except (KeyError, IndexError):
+                except (KeyError, IndexError, TypeError):
                     continue
                 if (shop, item.get("itemId")) in prices:
                     continue  # already saved from an earlier search
@@ -95,18 +103,20 @@ def coto_search(term):
     for key in COTO_KEYS:
         url = (f"https://ac.cnstrc.com/search/{quote(term)}?key={key}"
                f"&c=ciojs-client-2.35.2&i={uuid.uuid4()}&s=1&num_results_per_page=100&page=1")
-        try:
-            return get_json(url)["response"]["results"]
-        except Exception as e:
-            print(f"Coto '{term}' with {key}: failed ({e})")
+        results = get_json(url, want=dict).get("response", {}).get("results")
+        if isinstance(results, list):
+            return results
+        print(f"Coto '{term}' with {key}: no results")
     return []
 
 
 before = len(prices)
 for term in SEARCHES:
     for res in coto_search(term):
-        data = res.get("data", {})
-        store_prices = [x for x in data.get("price", []) if x.get("listPrice")]
+        if not isinstance(res, dict):
+            continue
+        data = res.get("data") or {}
+        store_prices = [x for x in data.get("price") or [] if isinstance(x, dict) and x.get("listPrice")]
         if not store_prices or ("Coto", data.get("id")) in prices:
             continue
         shelf = [x["listPrice"] for x in store_prices]                                  # price on the shelf
@@ -156,13 +166,13 @@ for b in basket:
     key = (b["shop"], b["sku_id"])
     if key not in prices and b["shop"] in SHOPS:
         url = f"{SHOPS[b['shop']]}/api/catalog_system/pub/products/search?fq=skuId:{b['sku_id']}"
-        try:
-            for p in get_json(url):
-                for item in p.get("items", []):
+        for p in get_json(url):
+            for item in (p.get("items") or []) if isinstance(p, dict) else []:
+                try:
                     if str(item.get("itemId")) == b["sku_id"]:
                         prices[key] = vtex_row(b["shop"], p, item, "basket")
-        except Exception as e:
-            print(f"Basket {b['type_id']} at {b['shop']}: failed ({e})")
+                except (KeyError, IndexError, TypeError) as e:
+                    print(f"Basket {b['type_id']} at {b['shop']}: bad data ({e})")
         time.sleep(1)
     if key in prices:
         prices[key]["basket_type"] = b["type_id"]
@@ -180,10 +190,7 @@ if not os.path.exists(debug_path):
         for key in COTO_KEYS:
             url = (f"https://ac.cnstrc.com/search/{quote(term)}?key={key}"
                    f"&c=ciojs-client-2.35.2&i={uuid.uuid4()}&s=1&num_results_per_page=40&page=1")
-            try:
-                raw[f"{term}|{key}"] = get_json(url)
-            except Exception as e:
-                raw[f"{term}|{key}"] = str(e)
+            raw[f"{term}|{key}"] = get_json(url, want=dict)
         time.sleep(2)
     os.makedirs("data", exist_ok=True)
     with gzip.open(debug_path, "wt", encoding="utf-8") as f:

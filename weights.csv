@@ -1,0 +1,14 @@
+group,group_name,indec_code,indec_name,spending_2004_gba,basket_types
+pan_cereales,Bread and cereals,111000,Pan y cereales,12646584094,pan_lactal;harina_000;arroz;fideos
+carne_ave,Chicken,112200,"Carne de ave, fresca, congelada o semipreparadas",6120216785,pollo_entero
+lacteos,Dairy and eggs,115000,"Leche, productos lácteos y huevos",10759834724,leche;manteca;queso_cremoso;dulce_de_leche;huevos
+aceites,Oils,114000,Aceites y grasas,937711154,aceite_girasol
+frutas,Fruit,116000,Frutas,2882421824,banana;manzana
+verduras,Vegetables,117000,"Verduras, tubérculos y legumbres",6581133344,papa;cebolla;tomate
+azucar,Sugar and sweets,118000,"Azúcar, dulces, chocolate, golosinas, etc.",3650279624,azucar
+otros_alimentos,Other food,119000,Otros alimentos,7484387234,mayonesa;pure_tomate
+cafe_te_yerba,"Coffee, tea and yerba",121100,"Café, té, yerba y cacao",2005581555,yerba;cafe;te
+aguas_gaseosas,Water and soft drinks,121200,"Aguas minerales, bebidas gaseosas y jugos",6455675475,agua;coca_cola
+alcohol,Alcoholic drinks,122000,Bebidas alcohólicas,2526024354,cerveza;vino
+limpieza,Cleaning products,461100,Productos de limpieza,4177600625,detergente;lavandina;jabon_ropa
+cuidado_personal,Personal care,,(official weight not found yet),,shampoo;pasta_dental;jabon_tocador;papel_higienico

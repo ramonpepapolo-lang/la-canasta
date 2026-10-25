@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Canasta</title>
+<meta name="description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:title" content="La Canasta">
+<meta property="og:description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:image" content="https://ramonpepapolo-lang.github.io/la-canasta/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:url" content="https://ramonpepapolo-lang.github.io/la-canasta/">
+<meta name="twitter:card" content="summary">
+<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
+<link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
+<link rel="apple-touch-icon" href="la-canasta-logo/la-canasta-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+/* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
+   The day's number sits on a price tag; the basket is printed like a till receipt.
+   Single light theme on purpose: the brand is defined on white. */
+:root {
+  --bg: #FFFFFF;
+  --band: #F3F7F9;
+  --navy: #2B3B5C;
+  --muted: #5D6A84;
+  --rule: #DCE4EA;
+  --celeste: #7FB1C6;
+  --celeste-fill: rgba(127, 177, 198, 0.18);
+  --sun: #D98A2B;
+  --up: #B2462B;
+  --down: #2D7A57;
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.container {
+  width: 100%; max-width: 72rem; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; color: var(--navy); }
+h2 { font-size: clamp(2rem, 4vw, 2.7rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0; max-width: 62ch; }
+a { color: var(--navy); text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outline-offset: 3px; border-radius: 6px; }
+.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Top bar */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 0.7rem; }
+.logo { display: block; line-height: 0; flex: none; }
+.logo img { height: 48px; width: auto; display: block; }
+nav { display: flex; gap: 1.7rem; }
+nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.96rem; }
+nav a:hover { color: var(--navy); }
+.lang { display: flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; flex: none; }
+.lang button { font: 600 0.82rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 0.35rem 0.85rem; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+.lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
+.lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.copy { font-size: 0.85rem; }
+@media (max-width: 800px) { nav { display: none; } }
+
+main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
+section { scroll-margin-top: 5.5rem; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+.hero-text { display: grid; gap: 1.4rem; min-width: 0; }
+.hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
+.lede { font-size: 1.2rem; color: var(--muted); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.4rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--navy); }
+.btn.primary { background: var(--navy); color: #FFFFFF; }
+.btn.ghost { color: var(--navy); background: var(--bg); }
+.btn.ghost:hover { background: var(--band); }
+
+.tag-card { display: grid; gap: 1.2rem; justify-items: start; min-width: 0; }
+.tag {
+  position: relative; background: var(--navy); color: #FFFFFF;
+  border-radius: 8px 28px 28px 8px; padding: 1.4rem 2.1rem 1.5rem 3.5rem;
+  display: grid; gap: 0.25rem; max-width: 100%;
+  box-shadow: 0 22px 44px -26px rgba(43, 59, 92, 0.65);
+  transform: rotate(-1.5deg);
+}
+.tag::before { content: ""; position: absolute; left: 1.3rem; top: 50%; width: 1rem; height: 1rem; margin-top: -0.5rem; border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 3px var(--sun); }
+.tag::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 28px 8px; background: linear-gradient(90deg, var(--celeste) 0 33.3%, #FFFFFF 33.3% 66.6%, var(--celeste) 66.6%); opacity: 0.9; }
+.tag .small { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
+.tag .big { font-family: var(--body); font-weight: 700; font-size: clamp(3.8rem, 10.5vw, 6.2rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag .sub { font-size: 0.92rem; color: rgba(255, 255, 255, 0.82); }
+.tag-meta { display: flex; gap: 2.2rem; flex-wrap: wrap; padding-left: 0.4rem; }
+.tag-meta div { display: grid; gap: 0.1rem; }
+.tag-meta strong { font-weight: 700; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.stats div { padding: 1.5rem 1.3rem; display: grid; gap: 0.25rem; border-left: 1px solid var(--rule); }
+.stats div:first-child { border-left: 0; padding-left: 0; }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 0.93rem; }
+
+/* Section heads */
+.head { display: grid; gap: 0.9rem; margin-bottom: 2rem; }
+.head p { color: var(--muted); font-size: 1.08rem; }
+
+/* Chart */
+.panel { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
+.chart-panel { padding: 1.5rem 1.5rem 1rem; display: grid; gap: 1rem; box-shadow: 0 1px 2px rgba(43, 59, 92, 0.04); }
+.chart-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+.readout { display: flex; gap: 2.2rem; flex-wrap: wrap; }
+.readout div { display: grid; gap: 0.15rem; }
+.readout strong { font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.key { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.86rem; color: var(--muted); }
+.key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
+.key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
+.chart-wrap { position: relative; }
+#chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
+.tip { position: absolute; pointer-events: none; background: var(--navy); color: #FFFFFF; font-size: 0.82rem; padding: 0.45rem 0.7rem; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -120%); font-variant-numeric: tabular-nums; }
+.chart-note { font-size: 0.92rem; color: var(--muted); }
+
+/* Why + how */
+.band { background: var(--band); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.band .container { padding-block: 4.5rem; }
+.why { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; }
+.why-text { display: grid; gap: 1.15rem; min-width: 0; }
+.why-text p { font-size: 1.12rem; }
+.why-text .quote { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; max-width: 24ch; }
+.why-text .src { font-size: 0.8rem; color: var(--muted); margin-top: -0.4rem; }
+.timeline { list-style: none; margin: 0.2rem 0 0.4rem; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.timeline li { display: grid; grid-template-columns: 3.6rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); font-size: 0.98rem; align-items: baseline; }
+.timeline .yr { font-family: var(--display); font-size: 1.35rem; line-height: 1; }
+.why-text .closing { font-weight: 700; font-size: 1.12rem; padding-left: 1rem; border-left: 4px solid var(--celeste); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: step; min-width: 0; }
+.steps li { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem 1.35rem; display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
+.steps li::before { counter-increment: step; content: counter(step); font-weight: 700; font-size: 1.1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #FFFFFF; }
+.steps h3 { font-size: 1.35rem; margin-bottom: 0.2rem; }
+.steps p { color: var(--muted); font-size: 0.98rem; }
+
+/* Basket */
+.basket { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.basket-text { display: grid; gap: 1.2rem; min-width: 0; }
+.legend-list { display: grid; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.legend-list li { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.75rem; font-size: 0.98rem; }
+.legend-list code { font-family: var(--body); font-weight: 700; font-size: 0.85rem; background: var(--band); border: 1px solid var(--rule); border-radius: 6px; padding: 0.1rem 0.45rem; justify-self: start; font-variant-numeric: tabular-nums; }
+.receipt {
+  background: var(--bg); color: var(--navy); font-size: 0.93rem;
+  padding: 1.6rem 1.6rem 1.8rem; display: grid; gap: 0.5rem; width: 100%; min-width: 0;
+  border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 26px 50px -34px rgba(43, 59, 92, 0.55);
+}
+.receipt .rhead { text-align: center; display: grid; justify-items: center; gap: 0.35rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed var(--rule); margin-bottom: 0.35rem; }
+.receipt .rhead img { width: 3.2rem; height: 3.2rem; }
+.receipt .rhead strong { font-size: 0.95rem; letter-spacing: 0.22em; }
+.receipt .rhead span { color: var(--muted); font-size: 0.8rem; }
+.row { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; }
+.row .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.row .dots { flex: 1; border-bottom: 1.5px dotted var(--rule); transform: translateY(-0.28rem); min-width: 0.75rem; }
+.row .w { color: var(--muted); font-variant-numeric: tabular-nums; }
+.row .chg { font-variant-numeric: tabular-nums; min-width: 4.4rem; text-align: right; font-weight: 600; }
+.up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--muted); }
+.receipt .rfoot { border-top: 1.5px dashed var(--rule); padding-top: 0.8rem; margin-top: 0.35rem; display: grid; gap: 0.5rem; }
+.receipt .total { font-weight: 700; font-size: 1rem; }
+.receipt .small { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+
+/* Shops */
+.shops { padding: 0.5rem 1.5rem; }
+.shop { display: grid; grid-template-columns: 8rem 1fr 5.5rem; gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.shop:last-child { border-bottom: 0; }
+.shop .sname { font-weight: 600; }
+.bar-track { height: 0.65rem; background: var(--band); border-radius: 999px; position: relative; overflow: hidden; }
+.bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: var(--celeste); }
+.shop .sval { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.shop.off .sname, .shop.off .sval { color: var(--muted); font-weight: 500; }
+.shop.off .sval { font-size: 0.85rem; }
+
+/* Report + data cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card-link { display: grid; gap: 0.5rem; padding: 1.5rem; text-decoration: none; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); align-content: start; }
+.card-link:hover { border-color: var(--navy); }
+.card-link p { color: var(--muted); font-size: 0.96rem; }
+.card-link .go { font-weight: 700; font-size: 0.92rem; padding-top: 0.3rem; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.report { display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; padding: 1.7rem 1.9rem; }
+.chip { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; background: var(--band); border: 1px solid var(--celeste); color: var(--navy); }
+.report-date { font-family: var(--display); font-size: 2.8rem; line-height: 1; }
+.report-text { display: grid; gap: 0.4rem; min-width: 0; }
+
+/* Footer: navy ground, white logo */
+footer { margin-top: 6rem; background: var(--navy); color: #FFFFFF; }
+footer .container { padding-block: 2.75rem 3rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
+footer .logo img { height: 44px; }
+footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 1.3rem; justify-content: flex-end; }
+.foot-links a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.foot-links a:hover { text-decoration: underline; text-decoration-color: var(--celeste); }
+
+@media (max-width: 900px) {
+  .hero, .why, .basket { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cards { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  footer .container { grid-template-columns: 1fr; }
+  .foot-links { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  main { gap: 4.5rem; padding-block: 2rem 0; }
+  .band .container { padding-block: 3.5rem; }
+  .shop { grid-template-columns: 6rem 1fr 4.8rem; gap: 0.75rem; }
+  .report { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.3rem; }
+  .tag { padding: 1.2rem 1.5rem 1.35rem 2.9rem; }
+  .tag::before { left: 1rem; }
+  .logo img { height: 44px; }
+  .lang-label { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tag { animation: swing 0.7s cubic-bezier(.2,.8,.3,1.2) both; transform-origin: 1.8rem 50%; }
+  @keyframes swing { from { transform: rotate(-6deg) translateY(-8px); } to { transform: rotate(-1.5deg); } }
+  .bar { transition: width 0.6s ease; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
+    <nav aria-label="Sections">
+      <a href="#index" data-t="navIndex">The index</a>
+      <a href="#basket" data-t="navBasket">The basket</a>
+      <a href="#shops" data-t="navShops">Supermarkets</a>
+      <a href="#data" data-t="navData">Data and method</a>
+    </nav>
+    <div class="lang-wrap">
+      <span class="lang-label" data-t="langLabel">Language</span>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="btn-es" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" id="btn-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="container hero">
+    <div class="hero-text">
+      <span class="eyebrow" data-t="eyebrow">Daily supermarket price index · Argentina</span>
+      <h1 data-t="title">How fast are supermarket prices rising in Argentina?</h1>
+      <p class="lede" data-t="lede">La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#index" data-t="ctaIndex">See the index</a>
+        <a class="btn ghost" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/data" target="_blank" rel="noopener" data-t="ctaData">Download the data</a>
+      </div>
+    </div>
+    <div class="tag-card">
+      <div class="tag" aria-live="polite">
+        <span class="small" data-t="tagLabel">Supermarket prices since 24 Oct 2026</span>
+        <span class="big" id="bigChange">+0.00%</span>
+        <span class="sub" id="tagSub">Updated</span>
+      </div>
+      <div class="tag-meta">
+        <div><span class="eyebrow" data-t="indexLabel">Index today</span><strong class="num" id="indexToday">100.00</strong></div>
+        <div><span class="eyebrow" data-t="regularLabel">Regular prices</span><strong class="num" id="regularToday">+0.00%</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats">
+      <div><strong id="statDays">1</strong><span data-t="statDays">days of data</span></div>
+      <div><strong>5</strong><span data-t="statShops">supermarket chains tracked</span></div>
+      <div><strong>33</strong><span data-t="statProducts">everyday products in the basket</span></div>
+      <div><strong>12</strong><span data-t="statDaily">spending groups, weighted like INDEC</span></div>
+    </div>
+  </div>
+
+  <section class="container" id="index">
+    <div class="head">
+      <span class="eyebrow" data-t="indexEyebrow">The index</span>
+      <h2 data-t="chartTitle">Every day since we started</h2>
+      <p data-t="chartIntro">100 is what the basket cost on 24 October 2026. 101 means it costs 1% more than that day.</p>
+    </div>
+    <div class="panel chart-panel">
+      <div class="chart-top">
+        <div class="readout">
+          <div><span class="key" data-t="legendPaid">Price people pay</span><strong class="num" id="roPaid">100.00</strong></div>
+          <div><span class="key regular" data-t="legendRegular">Regular price</span><strong class="num" id="roReg">100.00</strong></div>
+        </div>
+        <span class="eyebrow" id="roDate"></span>
+      </div>
+      <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
+    </div>
+    <p class="chart-note" data-t="early" style="margin-top:1rem">One day's move says very little. The number to watch is the monthly one, published on the 1st of every month.</p>
+  </section>
+
+  <section class="band" id="why"><div class="container why">
+    <div class="why-text">
+      <span class="eyebrow" data-t="whyEyebrow">Why it exists</span>
+      <p class="quote" data-t="quote">Since 1945, Argentina has had inflation of 10% or more in about 8 out of every 10 years.</p>
+      <ol class="timeline">
+        <li><span class="yr">1975</span><span data-t="t1">The Rodrigazo: prices shoot up almost overnight.</span></li>
+        <li><span class="yr">1989</span><span data-t="t2">Hyperinflation: nearly 200% in July alone, about 3,000% over the year.</span></li>
+        <li><span class="yr">2007</span><span data-t="t3">INDEC is intervened. In 2013 the IMF censures Argentina over its statistics; the censure is lifted in 2016.</span></li>
+        <li><span class="yr">2023</span><span data-t="t4">211% over the year.</span></li>
+        <li><span class="yr">2026</span><span data-t="t5">1.9% in September and 33.4% over twelve months, according to INDEC.</span></li>
+      </ol>
+      <p class="src" data-t="src">Sources: INDEC; Fundar (Argendata).</p>
+      <p data-t="why1">The official index still weighs prices by how households spent in 2004/05, more than 20 years ago.</p>
+      <p data-t="why2">And inflation hits hardest those who have least: the lower the income, the bigger the share spent on food.</p>
+      <p class="closing" data-t="closing">We don't give opinions on inflation. We measure it, every day, and publish the data so anyone can check it.</p>
+    </div>
+    <ol class="steps" aria-label="How it works">
+      <li><div><h3 data-t="s1t">Collect</h3><p data-t="s1">Every morning, a program reads the online prices of 33 everyday products at Carrefour, Jumbo, ChangoMás and Día.</p></div></li>
+      <li><div><h3 data-t="s2t">Compare</h3><p data-t="s2">Each price is compared with the day before. Same shop, same product. Out of stock means skipped, never guessed.</p></div></li>
+      <li><div><h3 data-t="s3t">Weigh</h3><p data-t="s3">The changes are combined using INDEC's official weights, so what families spend more on counts more.</p></div></li>
+    </ol>
+  </div></section>
+
+  <section class="container basket" id="basket">
+    <div class="basket-text">
+      <span class="eyebrow" data-t="basketEyebrow">The basket</span>
+      <h2 data-t="basketTitle">What's in the basket</h2>
+      <p class="muted" data-t="basketIntro">Milk, bread, yerba, chicken, vegetables, cleaning products and more, grouped the way INDEC groups them.</p>
+      <ul class="legend-list">
+        <li><code>19.1%</code><span data-t="legendShare">How much of a household's spending the group represents (INDEC).</span></li>
+        <li><code>+1.0%</code><span data-t="legendChange">How much the group's prices have changed since 24 October 2026.</span></li>
+      </ul>
+      <a class="btn ghost" style="justify-self:start" href="https://github.com/ramonpepapolo-lang/la-canasta/blob/main/basket.csv" target="_blank" rel="noopener" data-t="seeProducts">See every product</a>
+    </div>
+    <div class="receipt" id="receipt"></div>
+  </section>
+
+  <section class="container" id="shops">
+    <div class="head">
+      <span class="eyebrow" data-t="shopsEyebrow">Supermarkets</span>
+      <h2 data-t="shopsTitle">Shop by shop</h2>
+      <p data-t="shopsIntro">Each supermarket is only ever compared with itself. Change since 24 October 2026.</p>
+    </div>
+    <div class="panel shops" id="shopList"></div>
+  </section>
+
+  <section class="container" id="reports">
+    <div class="panel report">
+      <div class="report-date" data-t="reportDate">1 Dec</div>
+      <div class="report-text">
+        <span><span class="chip" data-t="reportChip">Coming</span></span>
+        <h3 data-t="reportTitle">First monthly report</h3>
+        <p class="muted" data-t="reportText">November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="data">
+    <div class="head">
+      <span class="eyebrow" data-t="dataEyebrow">Data and method</span>
+      <h2 data-t="dataTitle">Check every number</h2>
+    </div>
+    <div class="cards">
+      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/data" target="_blank" rel="noopener">
+        <h3 data-t="c1t">Download the prices</h3>
+        <p data-t="c1">Every price collected, every day, one file per day. Free to use.</p>
+        <span class="go" data-t="c1g">Open the data</span>
+      </a>
+      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta#how-the-index-is-calculated" target="_blank" rel="noopener">
+        <h3 data-t="c2t">Read the method</h3>
+        <p data-t="c2">How the index is calculated, which price is used, and the known limits.</p>
+        <span class="go" data-t="c2g">Read it</span>
+      </a>
+      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/index" target="_blank" rel="noopener">
+        <h3 data-t="c3t">The results</h3>
+        <p data-t="c3">The index every day, by group and by supermarket, plus monthly inflation.</p>
+        <span class="go" data-t="c3g">See the results</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;gap:0.6rem">
+      <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
+      <p data-t="foot1">An independent project by Ramon. Not linked to any supermarket, INDEC or the government.</p>
+      <p class="copy">© 2026 La Canasta</p>
+    </div>
+    <div class="foot-links">
+      <a href="#index" data-t="navIndex">The index</a>
+      <a href="#basket" data-t="navBasket">The basket</a>
+      <a href="#data" data-t="navData">Data and method</a>
+      <a href="https://github.com/ramonpepapolo-lang/la-canasta" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fallback copy of the data, used only if the live files can't be loaded.
+const FALLBACK_DAILY = `date,index_paid,index_regular,products_in_stock,products_compared,Carrefour_paid,ChangoMas_paid,Dia_paid,Jumbo_paid
+2026-10-24,100.0,100.0,129,0,100.0,100.0,100.0,100.0
+2026-10-25,101.164,100.891,128,128,101.087,100.0,103.613,100.0`;
+const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,index_regular
+2026-10-25,pan_cereales,Bread and cereals,yes,100.0,100.0
+2026-10-25,carne_ave,Chicken,yes,110.077,110.077
+2026-10-25,lacteos,Dairy and eggs,yes,100.0,100.0
+2026-10-25,aceites,Oils,yes,100.0,100.0
+2026-10-25,frutas,Fruit,yes,106.406,100.0
+2026-10-25,verduras,Vegetables,yes,100.0,100.0
+2026-10-25,azucar,Sugar and sweets,yes,100.0,100.0
+2026-10-25,otros_alimentos,Other food,yes,100.0,100.0
+2026-10-25,cafe_te_yerba,"Coffee, tea and yerba",yes,100.0,100.0
+2026-10-25,aguas_gaseosas,Water and soft drinks,yes,100.0,100.0
+2026-10-25,alcohol,Alcoholic drinks,yes,100.0,100.0
+2026-10-25,limpieza,Cleaning products,yes,100.0,100.0
+2026-10-25,cuidado_personal,Personal care,no (weight pending),100.0,100.0`;
+
+// Share of household spending (INDEC, Greater Buenos Aires, 2004/05 survey), among the groups in the index.
+const SHARE = { pan_cereales: 19.1, lacteos: 16.2, otros_alimentos: 11.3, verduras: 9.9, aguas_gaseosas: 9.7,
+  carne_ave: 9.2, limpieza: 6.3, azucar: 5.5, frutas: 4.4, alcohol: 3.8, cafe_te_yerba: 3.0, aceites: 1.4 };
+const ES_GROUPS = { pan_cereales: "Pan y cereales", carne_ave: "Pollo", lacteos: "Lácteos y huevos", aceites: "Aceites",
+  frutas: "Frutas", verduras: "Verduras", azucar: "Azúcar y dulces", otros_alimentos: "Otros alimentos",
+  cafe_te_yerba: "Café, té y yerba", aguas_gaseosas: "Aguas y gaseosas", alcohol: "Bebidas alcohólicas", limpieza: "Limpieza" };
+const SHOPS = [["Carrefour", "Carrefour_paid"], ["Jumbo", "Jumbo_paid"], ["ChangoMás", "ChangoMas_paid"], ["Día", "Dia_paid"]];
+
+const T = {
+  en: {
+    navIndex: "The index", navBasket: "The basket", navShops: "Supermarkets", navData: "Data and method", langLabel: "Idioma",
+    eyebrow: "Daily supermarket price index · Argentina",
+    title: "How fast are supermarket prices rising in Argentina?",
+    lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
+    ctaIndex: "See the index", ctaData: "Download the data",
+    tagLabel: "Supermarket prices since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Regular prices",
+    statDays: "days of data", statShops: "supermarket chains tracked", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
+    indexEyebrow: "The index", chartTitle: "Every day since we started",
+    chartIntro: "100 is what the basket cost on 24 October 2026. 101 means it costs 1% more than that day.",
+    legendPaid: "Price people pay", legendRegular: "Regular price",
+    early: "One day's move says very little. The number to watch is the monthly one, published on the 1st of every month.",
+    whyEyebrow: "Why measure it",
+    quote: "Since 1945, Argentina has had inflation of 10% or more in about 8 out of every 10 years.",
+    t1: "The Rodrigazo: prices shoot up almost overnight.",
+    t2: "Hyperinflation: nearly 200% in July alone, about 3,000% over the year.",
+    t3: "INDEC is intervened. In 2013 the IMF censures Argentina over its statistics; the censure is lifted in 2016.",
+    t4: "211% over the year.",
+    t5: "1.9% in September and 33.4% over twelve months, according to INDEC.",
+    src: "Sources: INDEC; Fundar (Argendata).",
+    why1: "The official index still weighs prices by how households spent in 2004/05, more than 20 years ago.",
+    why2: "And inflation hits hardest those who have least: the lower the income, the bigger the share spent on food.",
+    closing: "We don't give opinions on inflation. We measure it, every day, and publish the data so anyone can check it.",
+    s1t: "Collect", s1: "Every morning, a program reads the online prices of 33 everyday products at Carrefour, Jumbo, ChangoMás and Día.",
+    s2t: "Compare", s2: "Each price is compared with the day before. Same shop, same product. Out of stock means skipped, never guessed.",
+    s3t: "Weigh", s3: "The changes are combined using INDEC's official weights, so what families spend more on counts more.",
+    basketEyebrow: "The basket", basketTitle: "What's in the basket",
+    basketIntro: "Milk, bread, yerba, chicken, vegetables, cleaning products and more, grouped the way INDEC groups them.",
+    legendShare: "How much of a household's spending the group represents (INDEC).",
+    legendChange: "How much the group's prices have changed since 24 October 2026.",
+    seeProducts: "See every product",
+    receiptHead: "LA CANASTA", receiptSub: "Prices since 24/10/2026", total: "TOTAL BASKET",
+    personal: "Personal care", pending: "not counted yet",
+    receiptFoot: "Personal care is collected but not counted until INDEC's official weight for it is found.",
+    shopsEyebrow: "Supermarkets", shopsTitle: "Shop by shop",
+    shopsIntro: "Each supermarket is only ever compared with itself. Change since 24 October 2026.",
+    coto: "collected, not counted yet",
+    reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
+    reportText: "November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.",
+    dataEyebrow: "Data and method", dataTitle: "Check every number",
+    c1t: "Download the prices", c1: "Every price collected, every day, one file per day. Free to use.", c1g: "Open the data",
+    c2t: "Read the method", c2: "How the index is calculated, which price is used, and the known limits.", c2g: "Read it",
+    c3t: "The results", c3: "The index every day, by group and by supermarket, plus monthly inflation.", c3g: "See the results",
+    foot1: "An independent project by Ramon. Not linked to any supermarket, INDEC or the government.",
+    chartLabel: "Line chart of the La Canasta index"
+  },
+  es: {
+    navIndex: "El índice", navBasket: "La canasta", navShops: "Supermercados", navData: "Datos y método", langLabel: "Language",
+    eyebrow: "Índice diario de precios de supermercados · Argentina",
+    title: "¿Qué tan rápido suben los precios del súper en Argentina?",
+    lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
+    ctaIndex: "Ver el índice", ctaData: "Descargar los datos",
+    tagLabel: "Precios del súper desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Precios de lista",
+    statDays: "días de datos", statShops: "cadenas de supermercados", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
+    indexEyebrow: "El índice", chartTitle: "Todos los días desde que empezamos",
+    chartIntro: "100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.",
+    legendPaid: "Precio que se paga", legendRegular: "Precio de lista",
+    early: "El movimiento de un día dice muy poco. El número que importa es el mensual, que se publica el 1 de cada mes.",
+    whyEyebrow: "Por qué medir",
+    quote: "Desde 1945, la Argentina tuvo inflación de dos dígitos o más en unos 8 de cada 10 años.",
+    t1: "El Rodrigazo: los precios se disparan casi de un día para el otro.",
+    t2: "Hiperinflación: cerca de 200% solo en julio, unos 3.000% en el año.",
+    t3: "Se interviene el INDEC. En 2013 el FMI censura a la Argentina por sus estadísticas; la censura se levanta en 2016.",
+    t4: "211% en el año.",
+    t5: "1,9% en septiembre y 33,4% en doce meses, según el INDEC.",
+    src: "Fuentes: INDEC; Fundar (Argendata).",
+    why1: "El índice oficial todavía pondera los precios según cómo gastaban los hogares en 2004/05, hace más de 20 años.",
+    why2: "Y la inflación golpea más a quien menos tiene: cuanto más chico el ingreso, más se gasta en comida.",
+    closing: "No opinamos sobre la inflación. La medimos, todos los días, y publicamos los datos para que cualquiera pueda comprobarlo.",
+    s1t: "Recolectar", s1: "Todas las mañanas, un programa lee los precios online de 33 productos de todos los días en Carrefour, Jumbo, ChangoMás y Día.",
+    s2t: "Comparar", s2: "Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.",
+    s3t: "Ponderar", s3: "Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.",
+    basketEyebrow: "La canasta", basketTitle: "Qué hay en la canasta",
+    basketIntro: "Leche, pan, yerba, pollo, verduras, productos de limpieza y más, agrupados como los agrupa el INDEC.",
+    legendShare: "Cuánto del gasto de un hogar representa el grupo (INDEC).",
+    legendChange: "Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.",
+    seeProducts: "Ver cada producto",
+    receiptHead: "LA CANASTA", receiptSub: "Precios desde el 24/10/2026", total: "TOTAL CANASTA",
+    personal: "Cuidado personal", pending: "todavía no cuenta",
+    receiptFoot: "Cuidado personal se recolecta pero no se cuenta hasta encontrar la ponderación oficial del INDEC.",
+    shopsEyebrow: "Supermercados", shopsTitle: "Súper por súper",
+    shopsIntro: "Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.",
+    coto: "se recolecta, todavía no cuenta",
+    reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
+    reportText: "El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.",
+    dataEyebrow: "Datos y método", dataTitle: "Revisá cada número",
+    c1t: "Descargar los precios", c1: "Cada precio recolectado, todos los días, un archivo por día. Uso libre.", c1g: "Abrir los datos",
+    c2t: "Leer el método", c2: "Cómo se calcula el índice, qué precio se usa y los límites conocidos.", c2g: "Leerlo",
+    c3t: "Los resultados", c3: "El índice de cada día, por grupo y por supermercado, más la inflación mensual.", c3g: "Ver los resultados",
+    foot1: "Un proyecto independiente de Ramon. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.",
+    chartLabel: "Gráfico de líneas del índice La Canasta"
+  }
+};
+
+function parseCSV(text) {
+  const rows = []; let row = [], cell = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (quoted) {
+      if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+      else if (ch === '"') quoted = false;
+      else cell += ch;
+    } else if (ch === '"') quoted = true;
+    else if (ch === ",") { row.push(cell); cell = ""; }
+    else if (ch === "\n" || ch === "\r") {
+      if (ch === "\r" && text[i + 1] === "\n") i++;
+      row.push(cell); cell = "";
+      if (row.some(c => c !== "")) rows.push(row);
+      row = [];
+    } else cell += ch;
+  }
+  row.push(cell); if (row.some(c => c !== "")) rows.push(row);
+  const head = rows.shift();
+  return rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i]])));
+}
+async function load(path, fallback) {
+  try {
+    const r = await fetch(path, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const text = await r.text();
+    if (!text.startsWith("date,")) throw new Error("not csv");
+    return parseCSV(text);
+  } catch (e) { return parseCSV(fallback); }
+}
+
+let lang = "es", daily = [], groups = [];
+try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
+
+const sep = s => (lang === "es" ? s.replace(".", ",") : s);
+const pct = (v, d = 2) => sep((v >= 0 ? "+" : "−") + Math.abs(v).toFixed(d)) + "%";
+const num = (v, d = 2) => sep(v.toFixed(d));
+const cls = v => (v > 0.005 ? "up" : v < -0.005 ? "down" : "flat");
+const fmtDate = (d, year = true) => new Date(d + "T12:00:00Z").toLocaleDateString(lang === "es" ? "es-AR" : "en-GB",
+  Object.assign({ day: "numeric", month: "short", timeZone: "UTC" }, year ? { year: "numeric" } : {}));
+function el(tag, className, text) { const e = document.createElement(tag); if (className) e.className = className; if (text !== undefined) e.textContent = text; return e; }
+
+let geo = null;
+function drawChart() {
+  const box = document.getElementById("chart");
+  box.setAttribute("aria-label", T[lang].chartLabel);
+  const W = 900, H = 320, L = 46, R = 18, Tp = 16, B = 32;
+  const paid = daily.map(d => +d.index_paid), reg = daily.map(d => +d.index_regular);
+  let lo = Math.min(100, ...paid, ...reg), hi = Math.max(100, ...paid, ...reg);
+  const span0 = hi - lo, pad = Math.max(0.5, span0 * 0.2);
+  const step = span0 + 2 * pad <= 3 ? 0.5 : span0 + 2 * pad <= 8 ? 1 : span0 + 2 * pad <= 20 ? 2 : 5;
+  lo = Math.floor((lo - pad) / step) * step; hi = Math.ceil((hi + pad) / step) * step;
+  const n = daily.length;
+  const x = i => (n === 1 ? L + (W - L - R) / 2 : L + (i * (W - L - R)) / (n - 1));
+  const y = v => Tp + ((hi - v) * (H - Tp - B)) / (hi - lo);
+  geo = { x, y, W, n };
+  let s = `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">`;
+  for (let v = lo; v <= hi + 1e-9; v += step) {
+    const yy = y(v).toFixed(1), base = Math.abs(v - 100) < 1e-9;
+    s += `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" stroke="var(--rule)" stroke-width="${base ? 1.5 : 1}" ${base ? "" : 'stroke-dasharray="2 5"'}/>`;
+    s += `<text x="${L - 10}" y="${(+yy + 4).toFixed(1)}" text-anchor="end">${num(v, step < 1 ? 1 : 0)}</text>`;
+  }
+  const every = Math.max(1, Math.ceil(n / 7));
+  daily.forEach((d, i) => {
+    if (i % every === 0 || i === n - 1) {
+      const a = n === 1 ? "middle" : i === 0 ? "start" : i === n - 1 ? "end" : "middle";
+      s += `<text x="${x(i).toFixed(1)}" y="${H - 8}" text-anchor="${a}">${fmtDate(d.date, false)}</text>`;
+    }
+  });
+  const path = arr => arr.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  if (n > 1) s += `<path d="${path(paid)} L${x(n - 1).toFixed(1)},${(H - B).toFixed(1)} L${x(0).toFixed(1)},${(H - B).toFixed(1)} Z" fill="var(--celeste-fill)"/>`;
+  s += `<path d="${path(reg)}" fill="none" stroke="var(--navy)" stroke-width="2" stroke-dasharray="6 5" stroke-linejoin="round" stroke-linecap="round"/>`;
+  s += `<path d="${path(paid)}" fill="none" stroke="var(--celeste)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>`;
+  s += `<line id="hoverLine" x1="0" x2="0" y1="${Tp}" y2="${H - B}" stroke="var(--muted)" stroke-dasharray="3 4" visibility="hidden"/>`;
+  s += `<circle cx="${x(n - 1).toFixed(1)}" cy="${y(paid[n - 1]).toFixed(1)}" r="6.5" fill="var(--navy)" stroke="var(--bg)" stroke-width="3"/>`;
+  s += `<circle id="hoverDot" r="5" fill="var(--navy)" stroke="var(--bg)" stroke-width="2" visibility="hidden"/>`;
+  s += "</svg>";
+  box.innerHTML = s;
+}
+
+function hover(evt) {
+  if (!geo || !daily.length) return;
+  const svg = document.querySelector("#chart svg"); if (!svg) return;
+  const rect = svg.getBoundingClientRect();
+  const sx = ((evt.clientX - rect.left) / rect.width) * geo.W;
+  let best = 0, bd = Infinity;
+  daily.forEach((d, i) => { const dd = Math.abs(geo.x(i) - sx); if (dd < bd) { bd = dd; best = i; } });
+  const d = daily[best], px = geo.x(best), py = geo.y(+d.index_paid);
+  const hl = document.getElementById("hoverLine"), hd = document.getElementById("hoverDot");
+  hl.setAttribute("x1", px); hl.setAttribute("x2", px); hl.setAttribute("visibility", "visible");
+  hd.setAttribute("cx", px); hd.setAttribute("cy", py); hd.setAttribute("visibility", "visible");
+  const tip = document.getElementById("tip");
+  tip.textContent = `${fmtDate(d.date)} · ${num(+d.index_paid)} / ${num(+d.index_regular)}`;
+  const k = rect.width / geo.W;
+  tip.style.left = Math.min(Math.max(px * k, 90), rect.width - 90) + "px";
+  tip.style.top = py * (rect.height / 320) + "px";
+  tip.hidden = false;
+}
+function unhover() {
+  ["hoverLine", "hoverDot"].forEach(id => { const e = document.getElementById(id); if (e) e.setAttribute("visibility", "hidden"); });
+  document.getElementById("tip").hidden = true;
+}
+
+function render() {
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(e => { const k = e.dataset.t; if (t[k]) e.textContent = t[k]; });
+  document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+  document.getElementById("btn-es").setAttribute("aria-pressed", String(lang === "es"));
+
+  const last = daily[daily.length - 1];
+  const change = +last.index_paid - 100;
+  document.getElementById("bigChange").textContent = pct(change);
+  document.getElementById("tagSub").textContent = `${t.tagSub} ${fmtDate(last.date)}`;
+  document.getElementById("indexToday").textContent = num(+last.index_paid);
+  document.getElementById("regularToday").textContent = pct(+last.index_regular - 100);
+  document.getElementById("statDays").textContent = daily.length;
+  document.getElementById("roPaid").textContent = num(+last.index_paid);
+  document.getElementById("roReg").textContent = num(+last.index_regular);
+  document.getElementById("roDate").textContent = fmtDate(last.date);
+  drawChart();
+
+  // Receipt
+  const latest = {}; groups.forEach(g => { latest[g.group] = g; });
+  const rc = document.getElementById("receipt"); rc.textContent = "";
+  const head = el("div", "rhead"); const ic = el("img"); ic.src = "la-canasta-logo/la-canasta-icon.svg"; ic.alt = ""; head.append(ic, el("strong", "", t.receiptHead), el("span", "", t.receiptSub)); rc.append(head);
+  Object.keys(SHARE).forEach(k => {
+    const g = latest[k]; if (!g) return;
+    const ch = +g.index_paid - 100, r = el("div", "row");
+    r.append(el("span", "name", lang === "es" ? ES_GROUPS[k] : g.group_name), el("span", "dots"),
+      el("span", "w", num(SHARE[k], 1) + "%"), el("span", "chg " + cls(ch), pct(ch, 1)));
+    rc.append(r);
+  });
+  const pc = el("div", "row"); pc.append(el("span", "name", t.personal), el("span", "dots"), el("span", "chg flat", t.pending)); rc.append(pc);
+  const foot = el("div", "rfoot"), tot = el("div", "row total");
+  tot.append(el("span", "name", t.total), el("span", "dots"), el("span", "chg " + cls(change), pct(change, 1)));
+  foot.append(tot, el("span", "small", t.receiptFoot)); rc.append(foot);
+
+  // Shops
+  const list = document.getElementById("shopList"); list.textContent = "";
+  const vals = SHOPS.map(([name, col]) => [name, +last[col] - 100]);
+  const maxAbs = Math.max(1, ...vals.map(v => Math.abs(v[1])));
+  vals.sort((a, b) => b[1] - a[1]).forEach(([name, v]) => {
+    const row = el("div", "shop"), track = el("div", "bar-track"), bar = el("div", "bar");
+    bar.style.width = (Math.abs(v) / maxAbs * 100).toFixed(1) + "%";
+    if (v < 0) bar.style.background = "var(--down)";
+    track.append(bar);
+    row.append(el("span", "sname", name), track, el("span", "sval " + cls(v), pct(v)));
+    list.append(row);
+  });
+  const coto = el("div", "shop off"); coto.append(el("span", "sname", "Coto"), el("div", "bar-track"), el("span", "sval", t.coto)); list.append(coto);
+}
+
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang; try { localStorage.setItem("lc-lang", lang); } catch (e) {} render();
+}));
+const cw = document.querySelector(".chart-wrap");
+cw.addEventListener("pointermove", hover); cw.addEventListener("pointerleave", unhover);
+
+daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
+(async () => {
+  const [d, g] = await Promise.all([load("index/daily.csv", FALLBACK_DAILY), load("index/groups.csv", FALLBACK_GROUPS)]);
+  const lastDate = g.reduce((m, r) => (r.date > m ? r.date : m), "");
+  daily = d; groups = g.filter(r => r.date === lastDate); render();
+})();
+</script>
+
+</body>
+</html>

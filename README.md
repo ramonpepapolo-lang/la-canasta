@@ -47,6 +47,24 @@ Products that could not be measured reliably across shops were left out. Meat cu
 
 Coto's website search system still contains **old prices for some products** (for example, a 1 kg yoghurt at $140). Until real and old prices can be told apart reliably, Coto's data is collected but **not used in the index**.
 
+## How the index is calculated
+
+1. Every day, each basket product's price is compared with the last day it was in stock. Same shop, same product.
+2. Products are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...). Inside each group, the price changes are averaged (geometric mean).
+3. Groups are combined using **INDEC's official weights**: how much households in Greater Buenos Aires spend on each group, from INDEC's 2004/05 household spending survey (the same one INDEC still uses for official inflation).
+4. The days are chained together. **24 October 2026 = 100.**
+5. A price that triples or falls to a third overnight is treated as a data error and left out. Every case is listed in [`index/checks.txt`](index/checks.txt).
+
+**Monthly inflation:** the average of the month compared with the average of the month before, like INDEC. Because collection started on 24 October, the first full comparison is December vs November. For November only, the change from 31 October to 30 November is published instead, and labelled as such.
+
+**Results** are in the [`index`](index) folder: `daily.csv` (the index every day, overall and per shop), `groups.csv` (each group), `monthly.csv` (monthly inflation).
+
+### Known limits
+
+- **Meat:** only chicken is covered so far. Beef is not yet included.
+- **Personal care** (shampoo, toothpaste, soap, toilet paper) is collected but left out of the headline number until INDEC's official weight for it is found.
+- **Newer weights:** a second version using INDEC's 2017/18 spending survey will be added once the official figures are found.
+
 ## The data is open
 
 Every day's prices are in the [`data`](data) folder, one file per day (`YYYY-MM-DD.csv.gz`). Anyone can download and use them.

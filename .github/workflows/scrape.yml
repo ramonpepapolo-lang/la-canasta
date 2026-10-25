@@ -19,10 +19,11 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - run: python scrape_supermarkets.py
-      - name: Save the data
+      - run: python compute_index.py
+      - name: Save the data and the index
         run: |
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
-          git add data
-          git commit -m "Prices for $(date +%F)" || echo "Nothing new"
+          git add data index
+          git commit -m "Prices and index for $(date +%F)" || echo "Nothing new"
           git push

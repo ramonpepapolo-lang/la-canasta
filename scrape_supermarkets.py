@@ -25,8 +25,7 @@ SHOPS = {
 }
 
 # Coto uses a search company called Constructor.io. These are Coto's public search keys.
-COTO_KEYS = ["key_41VWjhgxyQGjBiyf", "key_r6xzz4IAoTWcipni"]
-
+COTO_KEYS = ["key_r6xzz4IAoTWcipni", "key_41VWjhgxyQGjBiyf"]
 SEARCHES = [
     "leche", "yogur", "manteca", "queso", "dulce de leche", "huevos",
     "pan lactal", "harina", "arroz", "fideos", "azucar", "aceite girasol",

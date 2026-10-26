@@ -1,0 +1,10 @@
+[
+ {
+  "month": "2026-10",
+  "complete": false,
+  "days_of_data": 3,
+  "publishable": false,
+  "inflation": 3.22,
+  "method": "end_to_end"
+ }
+]

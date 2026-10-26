@@ -1,0 +1,32 @@
+type_id,product_type,shop,sku_id,name
+asado,Beef short ribs (asado) per kg,Carrefour,6631,Asado de Novillo x kg
+asado,Beef short ribs (asado) per kg,Jumbo,322124,Asado del Centro Vacuno
+asado,Beef short ribs (asado) per kg,Jumbo,247557,Asado Del Centro
+asado,Beef short ribs (asado) per kg,ChangoMas,112394,Asado De Tira De Novillito 1 Kg
+asado,Beef short ribs (asado) per kg,Dia,279637,Asado x Kg.
+asado,Beef short ribs (asado) per kg,Dia,163188,Asado de Novillito Envasado al Vacío x 1 Kg.
+vacio,Beef flank (vacío) per kg,Carrefour,57565,Vacio x kg
+vacio,Beef flank (vacío) per kg,Carrefour,13767,Vacio de Novillo x kg
+vacio,Beef flank (vacío) per kg,Jumbo,247580,Vacio
+vacio,Beef flank (vacío) per kg,Jumbo,330346,Vacio
+vacio,Beef flank (vacío) per kg,ChangoMas,111741,Vacío De Novillito Envasado Al Vacío 1.5 Kg
+vacio,Beef flank (vacío) per kg,Dia,279533,Vacío Envasado al Vacío x Kg.
+vacio,Beef flank (vacío) per kg,Dia,162846,Vacio de Novillo X Kg.
+nalga,Beef round (nalga / milanesa de nalga) per kg,Carrefour,217554,Nalga x kg
+nalga,Beef round (nalga / milanesa de nalga) per kg,Carrefour,57086,Milanesa de nalga de Novillo x kg
+nalga,Beef round (nalga / milanesa de nalga) per kg,Jumbo,330342,Milanesa Nalga
+nalga,Beef round (nalga / milanesa de nalga) per kg,Jumbo,247559,Milanesa de Nalga Vacuna
+nalga,Beef round (nalga / milanesa de nalga) per kg,ChangoMas,212994,Nalga Feteada Envasado Al Vacío 1 Kg
+nalga,Beef round (nalga / milanesa de nalga) per kg,Dia,279506,Milanesa de Nalga Envasado al Vacío x Kg.
+nalga,Beef round (nalga / milanesa de nalga) per kg,Dia,90414,Nalga Feteada Envasado al Vacío x Kg.
+chimichurri_dos_anclas,Chimichurri Dos Anclas 375 g,Carrefour,94461,Salsa chimichurri Dos Anclas pet 375 g.
+chimichurri_dos_anclas,Chimichurri Dos Anclas 375 g,Jumbo,373912,Salsa Chimichurri 375 Grs Dos Anclas
+chimichurri_dos_anclas,Chimichurri Dos Anclas 375 g,ChangoMas,174643,Salsa Dos Anclas Chimichurri 375 g
+chimichurri_dos_anclas,Chimichurri Dos Anclas 375 g,Dia,260533,Salsa Chimichurri Dos Anclas 375 Gr.
+chimichurri_alicante,Chimichurri seasoning Alicante 25 g,Carrefour,74057,Condimento Alicante chimichurri 25 g
+chimichurri_alicante,Chimichurri seasoning Alicante 25 g,Jumbo,339461,Chimichurri Condimento 25 Grs Alicante
+chimichurri_alicante,Chimichurri seasoning Alicante 25 g,ChangoMas,165514,Condimento Chimichurri Alicante 25gr
+chimichurri_alicante,Chimichurri seasoning Alicante 25 g,Dia,157537,Condimento Chimichurri Alicante 25 Gr.
+chimichurri_la_parmesana,Chimichurri La Parmesana 300 ml,Carrefour,4531,Salsa chimichurri La Parmesana 300 g.
+chimichurri_la_parmesana,Chimichurri La Parmesana 300 ml,Jumbo,574,Chimichurri 300 Ml La Parmesana
+chimichurri_la_parmesana,Chimichurri La Parmesana 300 ml,ChangoMas,229330,Salsa La Parmesana Chimichurri 300 Ml

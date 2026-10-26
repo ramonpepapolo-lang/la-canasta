@@ -181,6 +181,31 @@ for b in basket:
 print(f"Basket: {len(basket) - missing} of {len(basket)} products found")
 
 
+# ---------- Part 3b: products we are watching before deciding if they join the basket ----------
+# (beef cuts and chimichurri). Collected every day so their history is complete. Not in the index.
+if os.path.exists("watch.csv"):
+    with open("watch.csv", newline="", encoding="utf-8") as f:
+        watch = list(csv.DictReader(f))
+    found = 0
+    for w in watch:
+        key = (w["shop"], w["sku_id"])
+        if key not in prices and w["shop"] in SHOPS:
+            url = f"{SHOPS[w['shop']]}/api/catalog_system/pub/products/search?fq=skuId:{w['sku_id']}"
+            for p in get_json(url):
+                for item in (p.get("items") or []) if isinstance(p, dict) else []:
+                    try:
+                        if str(item.get("itemId")) == w["sku_id"]:
+                            prices[key] = vtex_row(w["shop"], p, item, "watch")
+                    except (KeyError, IndexError, TypeError) as e:
+                        print(f"Watch {w['type_id']} at {w['shop']}: bad data ({e})")
+            time.sleep(1)
+        if key in prices:
+            found += 1
+            if not prices[key]["basket_type"]:
+                prices[key]["basket_type"] = "watch:" + w["type_id"]
+    print(f"Watch list: {found} of {len(watch)} products found")
+
+
 # ---------- Part 4 (one time only): save raw Coto data to investigate old prices ----------
 debug_path = "data/coto_debug.json.gz"
 if not os.path.exists(debug_path):

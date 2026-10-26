@@ -1,0 +1,181 @@
+{
+ "month": "2026-10",
+ "complete": false,
+ "full_month": false,
+ "method": "end_to_end",
+ "inflation": 3.22,
+ "base_date": "2026-10-24",
+ "end_date": "2026-10-26",
+ "days_of_data": 3,
+ "prices_collected": 30905,
+ "headline": {
+  "end_to_end_paid": 3.22,
+  "end_to_end_regular": 0.84,
+  "avg_paid": null,
+  "avg_regular": null
+ },
+ "shops": [
+  {
+   "shop": "Carrefour",
+   "pct": 1.09
+  },
+  {
+   "shop": "ChangoMas",
+   "pct": 9.22
+  },
+  {
+   "shop": "Dia",
+   "pct": 3.61
+  },
+  {
+   "shop": "Jumbo",
+   "pct": -0.21
+  }
+ ],
+ "groups": [
+  {
+   "group": "carne_ave",
+   "in_headline": true,
+   "pct": 10.08
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 5.91
+  },
+  {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": 4.76
+  },
+  {
+   "group": "limpieza",
+   "in_headline": true,
+   "pct": 4.74
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 4.37
+  },
+  {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": 3.66
+  },
+  {
+   "group": "verduras",
+   "in_headline": true,
+   "pct": 2.65
+  },
+  {
+   "group": "lacteos",
+   "in_headline": true,
+   "pct": 1.53
+  },
+  {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": 0.0
+  },
+  {
+   "group": "azucar",
+   "in_headline": true,
+   "pct": 0.0
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": 0.0
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": 0.0
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": 0.0
+  }
+ ],
+ "products_compared": 129,
+ "products_up": 12,
+ "products_down": 1,
+ "products_same": 116,
+ "top_up": [
+  {
+   "type": "banana",
+   "type_en": "Bananas, per kg",
+   "shop": "Carrefour",
+   "name": "Banana selección x kg.",
+   "before": 1399.0,
+   "now": 2299.0,
+   "pct": 64.33
+  },
+  {
+   "type": "pan_lactal",
+   "type_en": "Sliced white bread",
+   "shop": "ChangoMas",
+   "name": "Pan Lactal De Mesa 315 G",
+   "before": 2347.8,
+   "now": 3612.0,
+   "pct": 53.85
+  },
+  {
+   "type": "shampoo",
+   "type_en": "Shampoo, ~350-400 ml",
+   "shop": "ChangoMas",
+   "name": "Shampoo Sedal Ceramidas 340ml",
+   "before": 4152.85,
+   "now": 6389.0,
+   "pct": 53.85
+  },
+  {
+   "type": "jabon_tocador",
+   "type_en": "Bar soap, ~85-90 g",
+   "shop": "ChangoMas",
+   "name": "Jabón De Tocador Palmolive Naturals Karite 85 G",
+   "before": 636.35,
+   "now": 979.0,
+   "pct": 53.85
+  },
+  {
+   "type": "pollo_entero",
+   "type_en": "Whole chicken, per kg",
+   "shop": "Dia",
+   "name": "Pollo Fresco x Kg.",
+   "before": 2990.0,
+   "now": 4390.0,
+   "pct": 46.82
+  }
+ ],
+ "top_down": [
+  {
+   "type": "banana",
+   "type_en": "Bananas, per kg",
+   "shop": "Jumbo",
+   "name": "Banana Ecuador X Kg",
+   "before": 3499.0,
+   "now": 2999.0,
+   "pct": -14.29
+  }
+ ],
+ "series": [
+  {
+   "date": "2026-10-24",
+   "paid": 100.0,
+   "regular": 100.0
+  },
+  {
+   "date": "2026-10-25",
+   "paid": 101.164,
+   "regular": 100.891
+  },
+  {
+   "date": "2026-10-26",
+   "paid": 103.217,
+   "regular": 100.838
+  }
+ ]
+}

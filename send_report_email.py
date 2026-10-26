@@ -191,6 +191,32 @@ def main():
     print(f"Email: report {m} sent to the subscriber list.")
 
 
+def count_subscribers():
+    """Saves HOW MANY people are subscribed (never their emails) to index/suscriptores.csv, for the admin page."""
+    key, list_id = (os.environ.get(k, "").strip() for k in ("BREVO_API_KEY", "BREVO_LIST_ID"))
+    if not (key and list_id):
+        return
+    import requests
+    res = requests.get(f"https://api.brevo.com/v3/contacts/lists/{int(list_id)}",
+                       headers={"api-key": key, "accept": "application/json"}, timeout=30)
+    if res.status_code != 200:
+        print(f"WARNING: could not count subscribers ({res.status_code}): {res.text[:200]}")
+        return
+    info = res.json()
+    n = info.get("uniqueSubscribers", info.get("totalSubscribers"))
+    if n is None:
+        print("WARNING: Brevo did not say how many subscribers there are.")
+        return
+    path, today = "index/suscriptores.csv", datetime.date.today().isoformat()
+    rows = [l for l in (read(path) or "date,subscribers\n").splitlines() if l and not l.startswith(today)]
+    if rows[0] != "date,subscribers":
+        rows.insert(0, "date,subscribers")
+    rows.append(f"{today},{int(n)}")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(rows) + "\n")
+    print(f"Subscribers today: {n}")
+
+
 try:
     main()
 except SystemExit:
@@ -199,3 +225,9 @@ except Exception as e:  # never break the daily run
     print(f"WARNING: email step failed: {e}", file=sys.stderr)
     if PRUEBA:
         sys.exit(1)
+
+if not PRUEBA:
+    try:
+        count_subscribers()
+    except Exception as e:
+        print(f"WARNING: subscriber count failed: {e}", file=sys.stderr)

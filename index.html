@@ -122,6 +122,9 @@ section { scroll-margin-top: 5.5rem; }
 .hero-text { display: grid; gap: 1.4rem; min-width: 0; }
 .hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
 .lede { font-size: 1.2rem; color: var(--muted); }
+.lede-points { list-style: none; margin: -0.4rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
+.lede-points li { position: relative; padding-left: 1.6rem; font-size: 1.1rem; font-weight: 600; color: var(--navy); max-width: 62ch; }
+.lede-points li::before { content: ""; position: absolute; left: 0.2rem; top: 0.55em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--celeste); box-shadow: 0 0 0 3px var(--celeste-fill); }
 .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.4rem; }
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--navy); }
 .btn.primary { background: var(--navy); color: #FFFFFF; }
@@ -150,6 +153,9 @@ section { scroll-margin-top: 5.5rem; }
 .tag .small { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
 .tag .big { font-family: var(--body); font-weight: 700; font-size: clamp(3.8rem, 10.5vw, 6.2rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tag .sub { font-size: 0.92rem; color: rgba(255, 255, 255, 0.82); }
+.tag-note { display: grid; gap: 0.35rem; max-width: 30rem; background: #FDF4E9; border: 1px solid rgba(217, 138, 43, 0.35); border-left: 5px solid var(--sun); border-radius: 10px; padding: 1rem 1.2rem; }
+.tag-note strong { font-size: 1.08rem; font-weight: 700; color: var(--navy); }
+.tag-note p { font-size: 0.97rem; line-height: 1.55; color: var(--navy); }
 .tag-meta { display: flex; gap: 2.2rem; flex-wrap: wrap; padding-left: 0.4rem; }
 .tag-meta div { display: grid; gap: 0.1rem; }
 .tag-meta strong { font-weight: 700; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
@@ -310,6 +316,9 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <span class="eyebrow" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
       <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
       <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
+      <ul class="lede-points">
+        <li data-t="ledePoint">5 agentes automáticos, uno por supermercado, revisan más de 10.000 precios por día. De ahí sale este número.</li>
+      </ul>
       <div class="ctas">
         <a class="btn primary" href="#index" data-t="ctaIndex">Ver el índice</a>
         <a class="btn ghost" href="informes.html" data-t="ctaReport">Informe mensual</a>
@@ -321,6 +330,10 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
         <span class="small" data-t="tagLabel">Lo que se paga, desde el 24 oct 2026</span>
         <span class="big" id="bigChange">+0.00%</span>
         <span class="sub" id="tagSub">Updated</span>
+      </div>
+      <div class="tag-note" role="note">
+        <strong data-t="noteTitle">¿Por qué el número parece tan alto?</strong>
+        <p data-t="noteText">La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.</p>
       </div>
       <div class="tag-meta">
         <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
@@ -544,6 +557,9 @@ const T = {
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
     ctaIndex: "See the index", ctaData: "Download the data", ctaReport: "Monthly report",
+    ledePoint: "5 automated agents, one per supermarket, check more than 10,000 prices every day. That is where this number comes from.",
+    noteTitle: "Why does the number look so high?",
+    noteText: "La Canasta started measuring on a weekend (24 Oct), when many supermarkets were running promotions. When those offers ended, prices went back to normal, and that shows up as a rise. The data should settle in about 8 days, and the number will then reflect real inflation much better.",
     tagLabel: "What shoppers pay, since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
     statDays: "days of data", statShops: "supermarket chains tracked", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
     indexEyebrow: "The index", chartTitle: "Every day since we started",
@@ -590,6 +606,9 @@ const T = {
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
     ctaIndex: "Ver el índice", ctaData: "Descargar los datos", ctaReport: "Informe mensual",
+    ledePoint: "5 agentes automáticos, uno por supermercado, revisan más de 10.000 precios por día. De ahí sale este número.",
+    noteTitle: "¿Por qué el número parece tan alto?",
+    noteText: "La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.",
     tagLabel: "Lo que se paga, desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
     statDays: "días de datos", statShops: "cadenas de supermercados", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
     indexEyebrow: "El índice", chartTitle: "Todos los días desde que empezamos",

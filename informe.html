@@ -437,6 +437,7 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
         <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
         <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
         <input type="hidden" name="locale" value="es">
+        <input type="hidden" name="html_type" value="simple">
         <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
       </form>
       <p class="sub-ok" id="subOk" hidden><span data-lang="es">¡Listo! Revisá tu email y confirmá la suscripción (mirá también en spam).</span><span data-lang="en">Done! Check your email and confirm your subscription (check spam too).</span></p>
@@ -665,7 +666,6 @@ setLang(lang);
   if (!action) return;                       // hidden until the email service is connected
   var f = document.getElementById("subForm"); f.action = action; box.hidden = false;
   f.addEventListener("submit", function () {
-    f.querySelector('[name=locale]').value = document.documentElement.lang === "en" ? "en" : "es";
     setTimeout(function () { f.hidden = true; document.getElementById("subOk").hidden = false; }, 300);
   });
 })();

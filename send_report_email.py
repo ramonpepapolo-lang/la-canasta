@@ -7,12 +7,17 @@
 #   4. The Brevo secrets are set in GitHub (BREVO_API_KEY, BREVO_LIST_ID, BREVO_SENDER).
 # Every day it also saves a preview of the email: index/informes/email-YYYY-MM.html
 # If anything goes wrong it just prints a warning. It never stops the daily prices from being saved.
+#
+# Test mode: "python send_report_email.py --prueba" creates a [PRUEBA] email in Brevo
+# with the latest numbers but does NOT send it to anyone. Used by the "Test email" button in GitHub Actions.
 
 import datetime
 import html
 import json
 import os
 import sys
+
+PRUEBA = "--prueba" in sys.argv
 
 SITE = "https://lacanastaindex.com"
 MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
@@ -101,6 +106,27 @@ Recibís este email porque te suscribiste en lacanastaindex.com. <a href="{unsub
 </td></tr></table></body></html>"""
 
 
+def create_campaign(m, headers, list_id, sender, test=False):
+    """Creates the email in Brevo (not sent yet). Returns its id, or None if Brevo said no."""
+    import requests
+    r = json.loads(read(f"index/informes/{m}.json"))
+    mi = int(m[5:]) - 1
+    subject = f"La Canasta · {MES[mi].capitalize()} {m[:4]}: {sp(r['inflation'])}"
+    body = {
+        "name": ("PRUEBA " if test else "") + f"Informe {m}",
+        "subject": ("[PRUEBA] " if test else "") + subject,
+        "previewText": f"Cuánto subieron los precios del súper en {MES[mi]}.",
+        "sender": {"name": "La Canasta", "email": sender},
+        "htmlContent": build_email(r, "{{ unsubscribe }}"),
+        "recipients": {"listIds": [int(list_id)]},
+    }
+    res = requests.post("https://api.brevo.com/v3/emailCampaigns", headers=headers, json=body, timeout=60)
+    if res.status_code not in (200, 201):
+        print(f"WARNING: Brevo did not create the email ({res.status_code}): {res.text[:300]}")
+        return None
+    return res.json()["id"]
+
+
 def main():
     listing = json.loads(read("index/informes/lista.json") or "[]")
     if not listing:
@@ -111,6 +137,19 @@ def main():
     rep = json.loads(read(f"index/informes/{latest}.json"))
     with open(f"index/informes/email-{latest}.html", "w", encoding="utf-8") as f:
         f.write(build_email(rep, "#"))
+
+    if PRUEBA:
+        key, list_id, sender = (os.environ.get(k, "").strip() for k in ("BREVO_API_KEY", "BREVO_LIST_ID", "BREVO_SENDER"))
+        if not (key and list_id and sender):
+            print("PRUEBA: missing secrets. Check BREVO_API_KEY, BREVO_LIST_ID and BREVO_SENDER in GitHub.")
+            sys.exit(1)
+        headers = {"api-key": key, "accept": "application/json", "content-type": "application/json"}
+        cid = create_campaign(latest, headers, list_id, sender, test=True)
+        if not cid:
+            sys.exit(1)
+        print(f"PRUEBA OK: Brevo created the test email (campaign {cid}). It was NOT sent to anyone.")
+        print("Look for it in Brevo: Marketing > Campañas.")
+        return
 
     ready = [x for x in listing if x["publishable"]]
     if not ready:
@@ -138,23 +177,11 @@ def main():
         print("Email: Brevo is not connected yet (secrets missing), not sending.")
         return
 
-    import requests
-    r = json.loads(read(f"index/informes/{m}.json"))
-    mi = int(m[5:]) - 1
     headers = {"api-key": key, "accept": "application/json", "content-type": "application/json"}
-    body = {
-        "name": f"Informe {m}",
-        "subject": f"La Canasta · {MES[mi].capitalize()} {m[:4]}: {sp(r['inflation'])}",
-        "previewText": f"Cuánto subieron los precios del súper en {MES[mi]}.",
-        "sender": {"name": "La Canasta", "email": sender},
-        "htmlContent": build_email(r, "{{ unsubscribe }}"),
-        "recipients": {"listIds": [int(list_id)]},
-    }
-    res = requests.post("https://api.brevo.com/v3/emailCampaigns", headers=headers, json=body, timeout=60)
-    if res.status_code not in (200, 201):
-        print(f"WARNING: Brevo did not create the email ({res.status_code}): {res.text[:300]}")
+    cid = create_campaign(m, headers, list_id, sender)
+    if not cid:
         return
-    cid = res.json()["id"]
+    import requests
     res = requests.post(f"https://api.brevo.com/v3/emailCampaigns/{cid}/sendNow", headers=headers, timeout=60)
     if res.status_code not in (200, 202, 204):
         print(f"WARNING: Brevo created the email (campaign {cid}) but did not send it ({res.status_code}): {res.text[:300]}")
@@ -166,5 +193,9 @@ def main():
 
 try:
     main()
+except SystemExit:
+    raise
 except Exception as e:  # never break the daily run
     print(f"WARNING: email step failed: {e}", file=sys.stderr)
+    if PRUEBA:
+        sys.exit(1)

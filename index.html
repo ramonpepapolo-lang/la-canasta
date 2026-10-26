@@ -7,8 +7,8 @@
 <meta name="description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
 <meta property="og:title" content="La Canasta">
 <meta property="og:description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
-<meta property="og:image" content="https://ramonpepapolo-lang.github.io/la-canasta/la-canasta-logo/la-canasta-icon-512.png">
-<meta property="og:url" content="https://ramonpepapolo-lang.github.io/la-canasta/">
+<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:url" content="https://lacanastaindex.com/">
 <meta name="twitter:card" content="summary">
 <style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
 <link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
@@ -229,17 +229,18 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
   @keyframes swing { from { transform: rotate(-6deg) translateY(-8px); } to { transform: rotate(-1.5deg); } }
   .bar { transition: width 0.6s ease; }
 }
+.admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
+.admin-link:hover { color: #FFFFFF; }
 </style>
-</head>
-<body>
+
 <header class="topbar">
   <div class="container">
     <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
     <nav aria-label="Sections">
-      <a href="#index" data-t="navIndex">The index</a>
-      <a href="#basket" data-t="navBasket">The basket</a>
-      <a href="#shops" data-t="navShops">Supermarkets</a>
-      <a href="#data" data-t="navData">Data and method</a>
+      <a href="#index" data-t="navIndex">El índice</a>
+      <a href="#basket" data-t="navBasket">La canasta</a>
+      <a href="#shops" data-t="navShops">Supermercados</a>
+      <a href="#data" data-t="navData">Datos y método</a>
     </nav>
     <div class="lang-wrap">
       <span class="lang-label" data-t="langLabel">Language</span>
@@ -254,132 +255,132 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
 <main id="top">
   <div class="container hero">
     <div class="hero-text">
-      <span class="eyebrow" data-t="eyebrow">Daily supermarket price index · Argentina</span>
-      <h1 data-t="title">How fast are supermarket prices rising in Argentina?</h1>
-      <p class="lede" data-t="lede">La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.</p>
+      <span class="eyebrow" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
+      <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
+      <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
       <div class="ctas">
-        <a class="btn primary" href="#index" data-t="ctaIndex">See the index</a>
-        <a class="btn ghost" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/data" target="_blank" rel="noopener" data-t="ctaData">Download the data</a>
+        <a class="btn primary" href="#index" data-t="ctaIndex">Ver el índice</a>
+        <a class="btn ghost" href="#data" data-t="ctaData">Descargar los datos</a>
       </div>
     </div>
     <div class="tag-card">
       <div class="tag" aria-live="polite">
-        <span class="small" data-t="tagLabel">Supermarket prices since 24 Oct 2026</span>
+        <span class="small" data-t="tagLabel">Precios del súper desde el 24 oct 2026</span>
         <span class="big" id="bigChange">+0.00%</span>
         <span class="sub" id="tagSub">Updated</span>
       </div>
       <div class="tag-meta">
-        <div><span class="eyebrow" data-t="indexLabel">Index today</span><strong class="num" id="indexToday">100.00</strong></div>
-        <div><span class="eyebrow" data-t="regularLabel">Regular prices</span><strong class="num" id="regularToday">+0.00%</strong></div>
+        <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
+        <div><span class="eyebrow" data-t="regularLabel">Precios de lista</span><strong class="num" id="regularToday">+0.00%</strong></div>
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="stats">
-      <div><strong id="statDays">1</strong><span data-t="statDays">days of data</span></div>
-      <div><strong>5</strong><span data-t="statShops">supermarket chains tracked</span></div>
-      <div><strong>33</strong><span data-t="statProducts">everyday products in the basket</span></div>
-      <div><strong>12</strong><span data-t="statDaily">spending groups, weighted like INDEC</span></div>
+      <div><strong id="statDays">1</strong><span data-t="statDays">días de datos</span></div>
+      <div><strong>5</strong><span data-t="statShops">cadenas de supermercados</span></div>
+      <div><strong>33</strong><span data-t="statProducts">productos en la canasta</span></div>
+      <div><strong>12</strong><span data-t="statDaily">grupos de gasto, ponderados como el INDEC</span></div>
     </div>
   </div>
 
   <section class="container" id="index">
     <div class="head">
-      <span class="eyebrow" data-t="indexEyebrow">The index</span>
-      <h2 data-t="chartTitle">Every day since we started</h2>
-      <p data-t="chartIntro">100 is what the basket cost on 24 October 2026. 101 means it costs 1% more than that day.</p>
+      <span class="eyebrow" data-t="indexEyebrow">El índice</span>
+      <h2 data-t="chartTitle">Todos los días desde que empezamos</h2>
+      <p data-t="chartIntro">100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.</p>
     </div>
     <div class="panel chart-panel">
       <div class="chart-top">
         <div class="readout">
-          <div><span class="key" data-t="legendPaid">Price people pay</span><strong class="num" id="roPaid">100.00</strong></div>
-          <div><span class="key regular" data-t="legendRegular">Regular price</span><strong class="num" id="roReg">100.00</strong></div>
+          <div><span class="key" data-t="legendPaid">Precio que se paga</span><strong class="num" id="roPaid">100.00</strong></div>
+          <div><span class="key regular" data-t="legendRegular">Precio de lista</span><strong class="num" id="roReg">100.00</strong></div>
         </div>
         <span class="eyebrow" id="roDate"></span>
       </div>
       <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
     </div>
-    <p class="chart-note" data-t="early" style="margin-top:1rem">One day's move says very little. The number to watch is the monthly one, published on the 1st of every month.</p>
+    <p class="chart-note" data-t="early" style="margin-top:1rem">El movimiento de un día dice muy poco. El número que importa es el mensual, que se publica el 1 de cada mes.</p>
   </section>
 
   <section class="band" id="why"><div class="container why">
     <div class="why-text">
-      <span class="eyebrow" data-t="whyEyebrow">Why it exists</span>
-      <p class="quote" data-t="quote">Since 1945, Argentina has had inflation of 10% or more in about 8 out of every 10 years.</p>
+      <span class="eyebrow" data-t="whyEyebrow">Por qué medir</span>
+      <p class="quote" data-t="quote">Desde 1945, la Argentina tuvo inflación de dos dígitos o más en unos 8 de cada 10 años.</p>
       <ol class="timeline">
-        <li><span class="yr">1975</span><span data-t="t1">The Rodrigazo: prices shoot up almost overnight.</span></li>
-        <li><span class="yr">1989</span><span data-t="t2">Hyperinflation: nearly 200% in July alone, about 3,000% over the year.</span></li>
-        <li><span class="yr">2007</span><span data-t="t3">INDEC is intervened. In 2013 the IMF censures Argentina over its statistics; the censure is lifted in 2016.</span></li>
-        <li><span class="yr">2023</span><span data-t="t4">211% over the year.</span></li>
-        <li><span class="yr">2026</span><span data-t="t5">1.9% in September and 33.4% over twelve months, according to INDEC.</span></li>
+        <li><span class="yr">1975</span><span data-t="t1">El Rodrigazo: los precios se disparan casi de un día para el otro.</span></li>
+        <li><span class="yr">1989</span><span data-t="t2">Hiperinflación: cerca de 200% solo en julio, unos 3.000% en el año.</span></li>
+        <li><span class="yr">2007</span><span data-t="t3">Se interviene el INDEC. En 2013 el FMI censura a la Argentina por sus estadísticas; la censura se levanta en 2016.</span></li>
+        <li><span class="yr">2023</span><span data-t="t4">211% en el año.</span></li>
+        <li><span class="yr">2026</span><span data-t="t5">1,9% en septiembre y 33,4% en doce meses, según el INDEC.</span></li>
       </ol>
-      <p class="src" data-t="src">Sources: INDEC; Fundar (Argendata).</p>
-      <p data-t="why1">The official index still weighs prices by how households spent in 2004/05, more than 20 years ago.</p>
-      <p data-t="why2">And inflation hits hardest those who have least: the lower the income, the bigger the share spent on food.</p>
-      <p class="closing" data-t="closing">We don't give opinions on inflation. We measure it, every day, and publish the data so anyone can check it.</p>
+      <p class="src" data-t="src">Fuentes: INDEC; Fundar (Argendata).</p>
+      <p data-t="why1">El índice oficial todavía pondera los precios según cómo gastaban los hogares en 2004/05, hace más de 20 años.</p>
+      <p data-t="why2">Y la inflación golpea más a quien menos tiene: cuanto más chico el ingreso, más se gasta en comida.</p>
+      <p class="closing" data-t="closing">No opinamos sobre la inflación. La medimos, todos los días, y publicamos los datos para que cualquiera pueda comprobarlo.</p>
     </div>
     <ol class="steps" aria-label="How it works">
-      <li><div><h3 data-t="s1t">Collect</h3><p data-t="s1">Every morning, a program reads the online prices of 33 everyday products at Carrefour, Jumbo, ChangoMás and Día.</p></div></li>
-      <li><div><h3 data-t="s2t">Compare</h3><p data-t="s2">Each price is compared with the day before. Same shop, same product. Out of stock means skipped, never guessed.</p></div></li>
-      <li><div><h3 data-t="s3t">Weigh</h3><p data-t="s3">The changes are combined using INDEC's official weights, so what families spend more on counts more.</p></div></li>
+      <li><div><h3 data-t="s1t">Recolectar</h3><p data-t="s1">Todas las mañanas, un programa lee los precios online de 33 productos de todos los días en Carrefour, Jumbo, ChangoMás y Día.</p></div></li>
+      <li><div><h3 data-t="s2t">Comparar</h3><p data-t="s2">Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.</p></div></li>
+      <li><div><h3 data-t="s3t">Ponderar</h3><p data-t="s3">Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.</p></div></li>
     </ol>
   </div></section>
 
   <section class="container basket" id="basket">
     <div class="basket-text">
-      <span class="eyebrow" data-t="basketEyebrow">The basket</span>
-      <h2 data-t="basketTitle">What's in the basket</h2>
-      <p class="muted" data-t="basketIntro">Milk, bread, yerba, chicken, vegetables, cleaning products and more, grouped the way INDEC groups them.</p>
+      <span class="eyebrow" data-t="basketEyebrow">La canasta</span>
+      <h2 data-t="basketTitle">Qué hay en la canasta</h2>
+      <p class="muted" data-t="basketIntro">Leche, pan, yerba, pollo, verduras, productos de limpieza y más, agrupados como los agrupa el INDEC.</p>
       <ul class="legend-list">
-        <li><code>19.1%</code><span data-t="legendShare">How much of a household's spending the group represents (INDEC).</span></li>
-        <li><code>+1.0%</code><span data-t="legendChange">How much the group's prices have changed since 24 October 2026.</span></li>
+        <li><code>19.1%</code><span data-t="legendShare">Cuánto del gasto de un hogar representa el grupo (INDEC).</span></li>
+        <li><code>+1.0%</code><span data-t="legendChange">Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.</span></li>
       </ul>
-      <a class="btn ghost" style="justify-self:start" href="https://github.com/ramonpepapolo-lang/la-canasta/blob/main/basket.csv" target="_blank" rel="noopener" data-t="seeProducts">See every product</a>
+      <a class="btn ghost" style="justify-self:start" href="metodo.html#canasta" data-t="seeProducts">Ver cada producto</a>
     </div>
     <div class="receipt" id="receipt"></div>
   </section>
 
   <section class="container" id="shops">
     <div class="head">
-      <span class="eyebrow" data-t="shopsEyebrow">Supermarkets</span>
-      <h2 data-t="shopsTitle">Shop by shop</h2>
-      <p data-t="shopsIntro">Each supermarket is only ever compared with itself. Change since 24 October 2026.</p>
+      <span class="eyebrow" data-t="shopsEyebrow">Supermercados</span>
+      <h2 data-t="shopsTitle">Súper por súper</h2>
+      <p data-t="shopsIntro">Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.</p>
     </div>
     <div class="panel shops" id="shopList"></div>
   </section>
 
   <section class="container" id="reports">
     <div class="panel report">
-      <div class="report-date" data-t="reportDate">1 Dec</div>
+      <div class="report-date" data-t="reportDate">1 dic</div>
       <div class="report-text">
-        <span><span class="chip" data-t="reportChip">Coming</span></span>
-        <h3 data-t="reportTitle">First monthly report</h3>
-        <p class="muted" data-t="reportText">November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.</p>
+        <span><span class="chip" data-t="reportChip">Próximamente</span></span>
+        <h3 data-t="reportTitle">Primer informe mensual</h3>
+        <p class="muted" data-t="reportText">El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.</p>
       </div>
     </div>
   </section>
 
   <section class="container" id="data">
     <div class="head">
-      <span class="eyebrow" data-t="dataEyebrow">Data and method</span>
-      <h2 data-t="dataTitle">Check every number</h2>
+      <span class="eyebrow" data-t="dataEyebrow">Datos y método</span>
+      <h2 data-t="dataTitle">Revisá cada número</h2>
     </div>
     <div class="cards">
-      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/data" target="_blank" rel="noopener">
-        <h3 data-t="c1t">Download the prices</h3>
-        <p data-t="c1">Every price collected, every day, one file per day. Free to use.</p>
-        <span class="go" data-t="c1g">Open the data</span>
+      <a class="card-link" href="index/daily.csv" download="la-canasta-indice-diario.csv">
+        <h3 data-t="c1t">Descargar el índice</h3>
+        <p data-t="c1">El índice de cada día, en total y por supermercado. Se abre en Excel o Google Sheets.</p>
+        <span class="go" data-t="c1g">Descargar (CSV)</span>
       </a>
-      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta#how-the-index-is-calculated" target="_blank" rel="noopener">
-        <h3 data-t="c2t">Read the method</h3>
-        <p data-t="c2">How the index is calculated, which price is used, and the known limits.</p>
-        <span class="go" data-t="c2g">Read it</span>
+      <a class="card-link" id="latestPrices" href="#data" download>
+        <h3 data-t="c2t">Todos los precios de hoy</h3>
+        <p data-t="c2">Los más de 10.000 precios recolectados hoy en los cinco supermercados. Uso libre.</p>
+        <span class="go" data-t="c2g">Descargar (CSV comprimido)</span>
       </a>
-      <a class="card-link" href="https://github.com/ramonpepapolo-lang/la-canasta/tree/main/index" target="_blank" rel="noopener">
-        <h3 data-t="c3t">The results</h3>
-        <p data-t="c3">The index every day, by group and by supermarket, plus monthly inflation.</p>
-        <span class="go" data-t="c3g">See the results</span>
+      <a class="card-link" href="metodo.html">
+        <h3 data-t="c3t">Leer el método</h3>
+        <p data-t="c3">Cómo se calcula el índice, qué precio se usa, la canasta completa y los límites conocidos.</p>
+        <span class="go" data-t="c3g">Leerlo</span>
       </a>
     </div>
   </section>
@@ -389,14 +390,14 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
   <div class="container">
     <div style="display:grid;gap:0.6rem">
       <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
-      <p data-t="foot1">An independent project by Ramon. Not linked to any supermarket, INDEC or the government.</p>
-      <p class="copy">© 2026 La Canasta</p>
+      <p data-t="foot1">La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+      <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
     </div>
     <div class="foot-links">
-      <a href="#index" data-t="navIndex">The index</a>
-      <a href="#basket" data-t="navBasket">The basket</a>
-      <a href="#data" data-t="navData">Data and method</a>
-      <a href="https://github.com/ramonpepapolo-lang/la-canasta" target="_blank" rel="noopener">GitHub</a>
+      <a href="#index" data-t="navIndex">El índice</a>
+      <a href="#basket" data-t="navBasket">La canasta</a>
+      <a href="#data" data-t="navData">Datos y método</a>
+      <a href="metodo.html" data-t="navMethod">Metodología</a>
     </div>
   </div>
 </footer>
@@ -431,7 +432,7 @@ const SHOPS = [["Carrefour", "Carrefour_paid"], ["Jumbo", "Jumbo_paid"], ["Chang
 
 const T = {
   en: {
-    navIndex: "The index", navBasket: "The basket", navShops: "Supermarkets", navData: "Data and method", langLabel: "Idioma",
+    navIndex: "The index", navBasket: "The basket", navShops: "Supermarkets", navData: "Data and method", langLabel: "Idioma", navMethod: "Methodology",
     eyebrow: "Daily supermarket price index · Argentina",
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
@@ -470,14 +471,14 @@ const T = {
     reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
     reportText: "November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.",
     dataEyebrow: "Data and method", dataTitle: "Check every number",
-    c1t: "Download the prices", c1: "Every price collected, every day, one file per day. Free to use.", c1g: "Open the data",
-    c2t: "Read the method", c2: "How the index is calculated, which price is used, and the known limits.", c2g: "Read it",
-    c3t: "The results", c3: "The index every day, by group and by supermarket, plus monthly inflation.", c3g: "See the results",
-    foot1: "An independent project by Ramon. Not linked to any supermarket, INDEC or the government.",
+    c1t: "Download the index", c1: "The index every day, overall and by supermarket. Opens in Excel or Google Sheets.", c1g: "Download (CSV)",
+    c2t: "All of today's prices", c2: "The 10,000+ prices collected today across the five supermarkets. Free to use.", c2g: "Download (compressed CSV)",
+    c3t: "Read the method", c3: "How the index is calculated, which price is used, the full basket and the known limits.", c3g: "Read it",
+    foot1: "La Canasta is an independent project by Ramon Pepa. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.",
     chartLabel: "Line chart of the La Canasta index"
   },
   es: {
-    navIndex: "El índice", navBasket: "La canasta", navShops: "Supermercados", navData: "Datos y método", langLabel: "Language",
+    navIndex: "El índice", navBasket: "La canasta", navShops: "Supermercados", navData: "Datos y método", langLabel: "Language", navMethod: "Metodología",
     eyebrow: "Índice diario de precios de supermercados · Argentina",
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
@@ -516,10 +517,10 @@ const T = {
     reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
     reportText: "El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.",
     dataEyebrow: "Datos y método", dataTitle: "Revisá cada número",
-    c1t: "Descargar los precios", c1: "Cada precio recolectado, todos los días, un archivo por día. Uso libre.", c1g: "Abrir los datos",
-    c2t: "Leer el método", c2: "Cómo se calcula el índice, qué precio se usa y los límites conocidos.", c2g: "Leerlo",
-    c3t: "Los resultados", c3: "El índice de cada día, por grupo y por supermercado, más la inflación mensual.", c3g: "Ver los resultados",
-    foot1: "Un proyecto independiente de Ramon. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.",
+    c1t: "Descargar el índice", c1: "El índice de cada día, en total y por supermercado. Se abre en Excel o Google Sheets.", c1g: "Descargar (CSV)",
+    c2t: "Todos los precios de hoy", c2: "Los más de 10.000 precios recolectados hoy en los cinco supermercados. Uso libre.", c2g: "Descargar (CSV comprimido)",
+    c3t: "Leer el método", c3: "Cómo se calcula el índice, qué precio se usa, la canasta completa y los límites conocidos.", c3g: "Leerlo",
+    foot1: "La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.",
     chartLabel: "Gráfico de líneas del índice La Canasta"
   }
 };
@@ -644,6 +645,8 @@ function render() {
   document.getElementById("roPaid").textContent = num(+last.index_paid);
   document.getElementById("roReg").textContent = num(+last.index_regular);
   document.getElementById("roDate").textContent = fmtDate(last.date);
+  document.getElementById("latestPrices").setAttribute("href", "data/" + last.date + ".csv.gz");
+  document.getElementById("latestPrices").setAttribute("download", "la-canasta-precios-" + last.date + ".csv.gz");
   drawChart();
 
   // Receipt
@@ -690,6 +693,4 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
   daily = d; groups = g.filter(r => r.date === lastDate); render();
 })();
 </script>
-
-</body>
-</html>
+<script src="counter.js"></script>

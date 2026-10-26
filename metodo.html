@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Canasta · Metodología</title>
+<meta name="description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:title" content="La Canasta · Metodología">
+<meta property="og:description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:url" content="https://lacanastaindex.com/metodo.html">
+<meta name="twitter:card" content="summary">
+<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
+<link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
+<link rel="apple-touch-icon" href="la-canasta-logo/la-canasta-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+/* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
+   The day's number sits on a price tag; the basket is printed like a till receipt.
+   Single light theme on purpose: the brand is defined on white. */
+:root {
+  --bg: #FFFFFF;
+  --band: #F3F7F9;
+  --navy: #2B3B5C;
+  --muted: #5D6A84;
+  --rule: #DCE4EA;
+  --celeste: #7FB1C6;
+  --celeste-fill: rgba(127, 177, 198, 0.18);
+  --sun: #D98A2B;
+  --up: #B2462B;
+  --down: #2D7A57;
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.container {
+  width: 100%; max-width: 72rem; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; color: var(--navy); }
+h2 { font-size: clamp(2rem, 4vw, 2.7rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0; max-width: 62ch; }
+a { color: var(--navy); text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outline-offset: 3px; border-radius: 6px; }
+.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Top bar */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 0.7rem; }
+.logo { display: block; line-height: 0; flex: none; }
+.logo img { height: 48px; width: auto; display: block; }
+nav { display: flex; gap: 1.7rem; }
+nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.96rem; }
+nav a:hover { color: var(--navy); }
+.lang { display: flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; flex: none; }
+.lang button { font: 600 0.82rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 0.35rem 0.85rem; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+.lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
+.lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.copy { font-size: 0.85rem; }
+@media (max-width: 800px) { nav { display: none; } }
+
+main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
+section { scroll-margin-top: 5.5rem; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+.hero-text { display: grid; gap: 1.4rem; min-width: 0; }
+.hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
+.lede { font-size: 1.2rem; color: var(--muted); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.4rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--navy); }
+.btn.primary { background: var(--navy); color: #FFFFFF; }
+.btn.ghost { color: var(--navy); background: var(--bg); }
+.btn.ghost:hover { background: var(--band); }
+
+.tag-card { display: grid; gap: 1.2rem; justify-items: start; min-width: 0; }
+.tag {
+  position: relative; background: var(--navy); color: #FFFFFF;
+  border-radius: 8px 28px 28px 8px; padding: 1.4rem 2.1rem 1.5rem 3.5rem;
+  display: grid; gap: 0.25rem; max-width: 100%;
+  box-shadow: 0 22px 44px -26px rgba(43, 59, 92, 0.65);
+  transform: rotate(-1.5deg);
+}
+.tag::before { content: ""; position: absolute; left: 1.3rem; top: 50%; width: 1rem; height: 1rem; margin-top: -0.5rem; border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 3px var(--sun); }
+.tag::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 28px 8px; background: linear-gradient(90deg, var(--celeste) 0 33.3%, #FFFFFF 33.3% 66.6%, var(--celeste) 66.6%); opacity: 0.9; }
+.tag .small { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
+.tag .big { font-family: var(--body); font-weight: 700; font-size: clamp(3.8rem, 10.5vw, 6.2rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag .sub { font-size: 0.92rem; color: rgba(255, 255, 255, 0.82); }
+.tag-meta { display: flex; gap: 2.2rem; flex-wrap: wrap; padding-left: 0.4rem; }
+.tag-meta div { display: grid; gap: 0.1rem; }
+.tag-meta strong { font-weight: 700; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.stats div { padding: 1.5rem 1.3rem; display: grid; gap: 0.25rem; border-left: 1px solid var(--rule); }
+.stats div:first-child { border-left: 0; padding-left: 0; }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 0.93rem; }
+
+/* Section heads */
+.head { display: grid; gap: 0.9rem; margin-bottom: 2rem; }
+.head p { color: var(--muted); font-size: 1.08rem; }
+
+/* Chart */
+.panel { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
+.chart-panel { padding: 1.5rem 1.5rem 1rem; display: grid; gap: 1rem; box-shadow: 0 1px 2px rgba(43, 59, 92, 0.04); }
+.chart-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+.readout { display: flex; gap: 2.2rem; flex-wrap: wrap; }
+.readout div { display: grid; gap: 0.15rem; }
+.readout strong { font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.key { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.86rem; color: var(--muted); }
+.key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
+.key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
+.chart-wrap { position: relative; }
+#chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
+.tip { position: absolute; pointer-events: none; background: var(--navy); color: #FFFFFF; font-size: 0.82rem; padding: 0.45rem 0.7rem; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -120%); font-variant-numeric: tabular-nums; }
+.chart-note { font-size: 0.92rem; color: var(--muted); }
+
+/* Why + how */
+.band { background: var(--band); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.band .container { padding-block: 4.5rem; }
+.why { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; }
+.why-text { display: grid; gap: 1.15rem; min-width: 0; }
+.why-text p { font-size: 1.12rem; }
+.why-text .quote { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; max-width: 24ch; }
+.why-text .src { font-size: 0.8rem; color: var(--muted); margin-top: -0.4rem; }
+.timeline { list-style: none; margin: 0.2rem 0 0.4rem; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.timeline li { display: grid; grid-template-columns: 3.6rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); font-size: 0.98rem; align-items: baseline; }
+.timeline .yr { font-family: var(--display); font-size: 1.35rem; line-height: 1; }
+.why-text .closing { font-weight: 700; font-size: 1.12rem; padding-left: 1rem; border-left: 4px solid var(--celeste); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: step; min-width: 0; }
+.steps li { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem 1.35rem; display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
+.steps li::before { counter-increment: step; content: counter(step); font-weight: 700; font-size: 1.1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #FFFFFF; }
+.steps h3 { font-size: 1.35rem; margin-bottom: 0.2rem; }
+.steps p { color: var(--muted); font-size: 0.98rem; }
+
+/* Basket */
+.basket { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.basket-text { display: grid; gap: 1.2rem; min-width: 0; }
+.legend-list { display: grid; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.legend-list li { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.75rem; font-size: 0.98rem; }
+.legend-list code { font-family: var(--body); font-weight: 700; font-size: 0.85rem; background: var(--band); border: 1px solid var(--rule); border-radius: 6px; padding: 0.1rem 0.45rem; justify-self: start; font-variant-numeric: tabular-nums; }
+.receipt {
+  background: var(--bg); color: var(--navy); font-size: 0.93rem;
+  padding: 1.6rem 1.6rem 1.8rem; display: grid; gap: 0.5rem; width: 100%; min-width: 0;
+  border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 26px 50px -34px rgba(43, 59, 92, 0.55);
+}
+.receipt .rhead { text-align: center; display: grid; justify-items: center; gap: 0.35rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed var(--rule); margin-bottom: 0.35rem; }
+.receipt .rhead img { width: 3.2rem; height: 3.2rem; }
+.receipt .rhead strong { font-size: 0.95rem; letter-spacing: 0.22em; }
+.receipt .rhead span { color: var(--muted); font-size: 0.8rem; }
+.row { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; }
+.row .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.row .dots { flex: 1; border-bottom: 1.5px dotted var(--rule); transform: translateY(-0.28rem); min-width: 0.75rem; }
+.row .w { color: var(--muted); font-variant-numeric: tabular-nums; }
+.row .chg { font-variant-numeric: tabular-nums; min-width: 4.4rem; text-align: right; font-weight: 600; }
+.up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--muted); }
+.receipt .rfoot { border-top: 1.5px dashed var(--rule); padding-top: 0.8rem; margin-top: 0.35rem; display: grid; gap: 0.5rem; }
+.receipt .total { font-weight: 700; font-size: 1rem; }
+.receipt .small { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+
+/* Shops */
+.shops { padding: 0.5rem 1.5rem; }
+.shop { display: grid; grid-template-columns: 8rem 1fr 5.5rem; gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.shop:last-child { border-bottom: 0; }
+.shop .sname { font-weight: 600; }
+.bar-track { height: 0.65rem; background: var(--band); border-radius: 999px; position: relative; overflow: hidden; }
+.bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: var(--celeste); }
+.shop .sval { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.shop.off .sname, .shop.off .sval { color: var(--muted); font-weight: 500; }
+.shop.off .sval { font-size: 0.85rem; }
+
+/* Report + data cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card-link { display: grid; gap: 0.5rem; padding: 1.5rem; text-decoration: none; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); align-content: start; }
+.card-link:hover { border-color: var(--navy); }
+.card-link p { color: var(--muted); font-size: 0.96rem; }
+.card-link .go { font-weight: 700; font-size: 0.92rem; padding-top: 0.3rem; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.report { display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; padding: 1.7rem 1.9rem; }
+.chip { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; background: var(--band); border: 1px solid var(--celeste); color: var(--navy); }
+.report-date { font-family: var(--display); font-size: 2.8rem; line-height: 1; }
+.report-text { display: grid; gap: 0.4rem; min-width: 0; }
+
+/* Footer: navy ground, white logo */
+footer { margin-top: 6rem; background: var(--navy); color: #FFFFFF; }
+footer .container { padding-block: 2.75rem 3rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
+footer .logo img { height: 44px; }
+footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 1.3rem; justify-content: flex-end; }
+.foot-links a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.foot-links a:hover { text-decoration: underline; text-decoration-color: var(--celeste); }
+
+@media (max-width: 900px) {
+  .hero, .why, .basket { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cards { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  footer .container { grid-template-columns: 1fr; }
+  .foot-links { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  main { gap: 4.5rem; padding-block: 2rem 0; }
+  .band .container { padding-block: 3.5rem; }
+  .shop { grid-template-columns: 6rem 1fr 4.8rem; gap: 0.75rem; }
+  .report { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.3rem; }
+  .tag { padding: 1.2rem 1.5rem 1.35rem 2.9rem; }
+  .tag::before { left: 1rem; }
+  .logo img { height: 44px; }
+  .lang-label { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tag { animation: swing 0.7s cubic-bezier(.2,.8,.3,1.2) both; transform-origin: 1.8rem 50%; }
+  @keyframes swing { from { transform: rotate(-6deg) translateY(-8px); } to { transform: rotate(-1.5deg); } }
+  .bar { transition: width 0.6s ease; }
+}
+
+/* Method page */
+.doc { display: grid; grid-template-columns: 14rem 1fr; gap: 3rem; align-items: start; padding-block: 3rem 0; }
+.toc { position: sticky; top: 6rem; display: grid; gap: 0.5rem; font-size: 0.95rem; }
+.toc a { color: var(--muted); text-decoration: none; }
+.toc a:hover { color: var(--navy); }
+.doc-body { display: grid; gap: 3.2rem; min-width: 0; }
+.doc-body section { display: grid; gap: 1rem; }
+.doc-body h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
+.doc-body h2 { font-size: 1.9rem; }
+.doc-body p, .doc-body li { font-size: 1.05rem; }
+.doc-body ol, .doc-body ul { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.55rem; max-width: 62ch; }
+.note { background: var(--band); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.98rem; max-width: 62ch; }
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--band); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+.grp td { background: var(--band); font-weight: 700; }
+.back { font-weight: 600; }
+html:not([lang="en"]) [data-lang="en"] { display: none !important; }
+html[lang="en"] [data-lang="es"] { display: none !important; }
+@media (max-width: 900px) { .doc { grid-template-columns: 1fr; gap: 1.5rem; } .toc { position: static; grid-auto-flow: column; overflow-x: auto; gap: 1.2rem; white-space: nowrap; } }
+.admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
+.admin-link:hover { color: #FFFFFF; }
+</style>
+<header class="topbar">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
+    <nav aria-label="Secciones">
+      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="index.html#basket"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
+      <a href="index.html#data"><span data-lang="es">Datos</span><span data-lang="en">Data</span></a>
+    </nav>
+    <div class="lang-wrap">
+      <span class="lang-label"><span data-lang="es">Language</span><span data-lang="en">Idioma</span></span>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="btn-es" data-set="es" aria-pressed="true">ES</button>
+        <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container doc">
+  <nav class="toc" aria-label="Contenido">
+    <a href="#que-mide"><span data-lang="es">Qué mide</span><span data-lang="en">What it measures</span></a>
+    <a href="#precio"><span data-lang="es">Qué precio se usa</span><span data-lang="en">Which price</span></a>
+    <a href="#calculo"><span data-lang="es">Cómo se calcula</span><span data-lang="en">How it's calculated</span></a>
+    <a href="#ponderaciones"><span data-lang="es">Ponderaciones</span><span data-lang="en">Weights</span></a>
+    <a href="#canasta"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
+    <a href="#limites"><span data-lang="es">Límites</span><span data-lang="en">Limits</span></a>
+    <a href="#datos"><span data-lang="es">Los datos</span><span data-lang="en">The data</span></a>
+  </nav>
+  <div class="doc-body">
+    <section>
+      <a class="back" href="index.html"><span data-lang="es">← Volver al índice</span><span data-lang="en">← Back to the index</span></a>
+      <h1><span data-lang="es">Metodología</span><span data-lang="en">Methodology</span></h1>
+      <p class="lede" data-lang="es">Cómo funciona La Canasta, explicado en palabras simples.</p>
+      <p class="lede" data-lang="en">How La Canasta works, in plain words.</p>
+    </section>
+
+    <section id="que-mide">
+      <h2><span data-lang="es">Qué mide</span><span data-lang="en">What it measures</span></h2>
+      <div data-lang="es"><p>La Canasta mide cuánto cambian, día a día, los precios online de 33 productos de todos los días en los principales supermercados de la Argentina. La recolección empezó el 24 de octubre de 2026.</p></div>
+      <div data-lang="en"><p>La Canasta measures how much the online prices of 33 everyday products change, day by day, in Argentina's main supermarkets. Collection started on 24 October 2026.</p></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th><span data-lang="es">Supermercado</span><span data-lang="en">Supermarket</span></th><th><span data-lang="es">En el índice</span><span data-lang="en">In the index</span></th></tr></thead>
+        <tbody>
+          <tr><td>Carrefour</td><td>✓</td></tr>
+          <tr><td>Jumbo</td><td>✓</td></tr>
+          <tr><td>ChangoMás</td><td>✓</td></tr>
+          <tr><td>Día</td><td>✓</td></tr>
+          <tr><td>Coto</td><td><span data-lang="es">Se recolecta, todavía no cuenta (ver Límites)</span><span data-lang="en">Collected, not counted yet (see Limits)</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="precio">
+      <h2><span data-lang="es">Qué precio se usa</span><span data-lang="en">Which price is used</span></h2>
+      <ol data-lang="es">
+        <li><strong>Índice principal: el precio que paga cualquiera en la web ese día</strong>, con las promociones abiertas a todos.</li>
+        <li><strong>No se incluyen</strong> los descuentos que solo algunas personas pueden usar: promociones bancarias, tarjetas de fidelidad o packs ("2x1", "segunda unidad").</li>
+        <li><strong>Segundo índice: el precio de lista</strong>, sin promociones, para mostrar cuánto cambian el panorama las promociones.</li>
+        <li><strong>Sin stock:</strong> el producto se saltea ese día. Los precios nunca se inventan.</li>
+        <li><strong>Precios que parecen errores</strong> se dejan afuera.</li>
+        <li><strong>Cada supermercado se compara solo consigo mismo.</strong></li>
+      </ol>
+      <ol data-lang="en">
+        <li><strong>Main index: the price anyone pays on the website that day</strong>, with promotions open to everyone.</li>
+        <li><strong>Not included:</strong> discounts only some people can use, such as bank offers, loyalty cards or multi-buy deals ("2x1", "second unit off").</li>
+        <li><strong>Second index: the regular price</strong>, without promotions, to show how much promotions change the picture.</li>
+        <li><strong>Out of stock:</strong> the product is skipped that day. Prices are never guessed.</li>
+        <li><strong>Prices that look like errors</strong> are left out.</li>
+        <li><strong>Each supermarket is only ever compared with itself.</strong></li>
+      </ol>
+    </section>
+
+    <section id="calculo">
+      <h2><span data-lang="es">Cómo se calcula</span><span data-lang="en">How it's calculated</span></h2>
+      <ol data-lang="es">
+        <li>Cada día, el precio de cada producto de la canasta se compara con el último día en que estuvo en stock. Mismo súper, mismo producto.</li>
+        <li>Los productos se agrupan como los agrupa el INDEC (pan y cereales, lácteos y huevos, frutas...). Dentro de cada grupo, los cambios se promedian con una media geométrica.</li>
+        <li>Los grupos se combinan con las <strong>ponderaciones oficiales del INDEC</strong>: cuánto gastan en cada grupo los hogares del Gran Buenos Aires, según la Encuesta de Gastos de los Hogares 2004/05, la misma que el INDEC todavía usa para la inflación oficial.</li>
+        <li>Los días se encadenan. <strong>24 de octubre de 2026 = 100.</strong></li>
+        <li>Un precio que se triplica o cae a un tercio de un día para el otro se trata como un error y se deja afuera.</li>
+      </ol>
+      <ol data-lang="en">
+        <li>Every day, each basket product's price is compared with the last day it was in stock. Same shop, same product.</li>
+        <li>Products are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...). Inside each group, the changes are averaged with a geometric mean.</li>
+        <li>Groups are combined using <strong>INDEC's official weights</strong>: how much households in Greater Buenos Aires spend on each group, from the 2004/05 household spending survey, the same one INDEC still uses for official inflation.</li>
+        <li>Days are chained together. <strong>24 October 2026 = 100.</strong></li>
+        <li>A price that triples or falls to a third overnight is treated as an error and left out.</li>
+      </ol>
+      <div class="note" data-lang="es"><strong>Inflación mensual:</strong> el promedio del mes comparado con el promedio del mes anterior, como el INDEC. Como la recolección empezó el 24 de octubre, para noviembre se publica el cambio entre el 31 de octubre y el 30 de noviembre, y se aclara. La primera comparación completa es diciembre contra noviembre.</div>
+      <div class="note" data-lang="en"><strong>Monthly inflation:</strong> the month's average compared with the previous month's average, like INDEC. Because collection started on 24 October, November's figure is the change from 31 October to 30 November, and is labelled as such. The first full comparison is December vs November.</div>
+    </section>
+
+    <section id="ponderaciones">
+      <h2><span data-lang="es">Ponderaciones</span><span data-lang="en">Weights</span></h2>
+      <p data-lang="es">Peso de cada grupo en el gasto de los hogares, entre los grupos que cubre La Canasta. Fuente: INDEC, ENGHo 2004/05, Gran Buenos Aires.</p>
+      <p data-lang="en">Each group's share of household spending, among the groups La Canasta covers. Source: INDEC, ENGHo 2004/05, Greater Buenos Aires.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th><span data-lang="es">Grupo</span><span data-lang="en">Group</span></th><th class="r"><span data-lang="es">Peso</span><span data-lang="en">Share</span></th></tr></thead>
+        <tbody id="weights"></tbody>
+      </table></div>
+    </section>
+
+    <section id="canasta">
+      <h2><span data-lang="es">La canasta completa</span><span data-lang="en">The full basket</span></h2>
+      <p data-lang="es">Los productos exactos que sigue el índice en cada supermercado. 22 son el mismo producto en todos (mismo código de barras); el resto son la versión de cada súper, sobre todo frescos.</p>
+      <p data-lang="en">The exact products the index follows in each supermarket. 22 are the same product everywhere (same barcode); the rest are each shop's own version, mostly fresh food.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th><span data-lang="es">Producto</span><span data-lang="en">Product</span></th><th>Carrefour</th><th>Jumbo</th><th>ChangoMás</th><th>Día</th></tr></thead>
+        <tbody id="basketTable"><tr><td colspan="5" class="muted"><span data-lang="es">Cargando la canasta...</span><span data-lang="en">Loading the basket...</span></td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section id="limites">
+      <h2><span data-lang="es">Límites conocidos</span><span data-lang="en">Known limits</span></h2>
+      <ul data-lang="es">
+        <li><strong>Carne:</strong> por ahora solo pollo. La carne vacuna todavía no está incluida.</li>
+        <li><strong>Cuidado personal</strong> (shampoo, pasta dental, jabón, papel higiénico) se recolecta, pero no cuenta en el número principal hasta encontrar la ponderación oficial del INDEC.</li>
+        <li><strong>Coto</strong> se recolecta pero no cuenta todavía: su sistema de búsqueda tiene precios viejos en algunos productos, y hasta poder separarlos de los reales, queda afuera.</li>
+        <li><strong>Ponderaciones nuevas:</strong> se agregará una segunda versión con la encuesta 2017/18 del INDEC cuando estén las cifras oficiales.</li>
+        <li><strong>Solo precios online</strong> de grandes cadenas, sobre todo del Gran Buenos Aires.</li>
+        <li><strong>Solo productos de supermercado:</strong> no incluye alquiler, servicios, transporte, educación ni salud. Por eso se compara sobre todo con el rubro Alimentos y bebidas del INDEC.</li>
+      </ul>
+      <ul data-lang="en">
+        <li><strong>Meat:</strong> only chicken so far. Beef is not included yet.</li>
+        <li><strong>Personal care</strong> (shampoo, toothpaste, soap, toilet paper) is collected but not counted in the main number until INDEC's official weight for it is found.</li>
+        <li><strong>Coto</strong> is collected but not counted yet: its search system holds old prices for some products, and until those can be separated from real ones, it stays out.</li>
+        <li><strong>Newer weights:</strong> a second version using INDEC's 2017/18 survey will be added once the official figures are found.</li>
+        <li><strong>Online prices only</strong>, from large chains, mostly in Greater Buenos Aires.</li>
+        <li><strong>Supermarket goods only:</strong> no rent, utilities, transport, education or health. So it is mainly compared with INDEC's Food and drinks figure.</li>
+      </ul>
+    </section>
+
+    <section id="datos">
+      <h2><span data-lang="es">Los datos</span><span data-lang="en">The data</span></h2>
+      <p data-lang="es">Todos los archivos son libres de usar. Se abren en Excel o Google Sheets.</p>
+      <p data-lang="en">All files are free to use. They open in Excel or Google Sheets.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th><span data-lang="es">Archivo</span><span data-lang="en">File</span></th><th><span data-lang="es">Qué tiene</span><span data-lang="en">What's in it</span></th></tr></thead>
+        <tbody>
+          <tr><td><a href="index/daily.csv" download="la-canasta-indice-diario.csv"><span data-lang="es">Índice diario</span><span data-lang="en">Daily index</span></a></td><td><span data-lang="es">El índice de cada día, en total y por supermercado, con precio pagado y de lista.</span><span data-lang="en">The index every day, overall and by supermarket, with price paid and regular price.</span></td></tr>
+          <tr><td><a href="index/groups.csv" download="la-canasta-grupos.csv"><span data-lang="es">Índice por grupo</span><span data-lang="en">Index by group</span></a></td><td><span data-lang="es">El índice de cada grupo de productos, cada día.</span><span data-lang="en">Each product group's index, every day.</span></td></tr>
+          <tr><td><a href="index/monthly.csv" download="la-canasta-mensual.csv"><span data-lang="es">Inflación mensual</span><span data-lang="en">Monthly inflation</span></a></td><td><span data-lang="es">Promedios mensuales y la inflación de cada mes.</span><span data-lang="en">Monthly averages and each month's inflation.</span></td></tr>
+          <tr><td><a href="basket.csv" download="la-canasta-productos.csv"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a></td><td><span data-lang="es">Cada producto seguido, con su código de barras.</span><span data-lang="en">Every product tracked, with its barcode.</span></td></tr>
+          <tr><td><a id="latestPrices" href="#datos" download><span data-lang="es">Todos los precios de hoy</span><span data-lang="en">All of today's prices</span></a></td><td><span data-lang="es">Los más de 10.000 precios del día, en un CSV comprimido (.gz).</span><span data-lang="en">All 10,000+ prices of the day, in a compressed CSV (.gz).</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div style="display:grid;gap:0.6rem">
+      <a class="logo" href="index.html"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
+      <p data-lang="es">La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+      <p data-lang="en">La Canasta is an independent project by Ramon Pepa. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.</p>
+      <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
+    </div>
+    <div class="foot-links">
+      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="index.html#basket"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
+      <a href="index.html#data"><span data-lang="es">Datos</span><span data-lang="en">Data</span></a>
+      <a href="metodo.html"><span data-lang="es">Metodología</span><span data-lang="en">Methodology</span></a>
+    </div>
+  </div>
+</footer>
+<script>
+const SHARE = [["pan_cereales","Pan y cereales","Bread and cereals",19.1],["lacteos","Lácteos y huevos","Dairy and eggs",16.2],["otros_alimentos","Otros alimentos","Other food",11.3],["verduras","Verduras","Vegetables",9.9],["aguas_gaseosas","Aguas y gaseosas","Water and soft drinks",9.7],["carne_ave","Pollo","Chicken",9.2],["limpieza","Limpieza","Cleaning products",6.3],["azucar","Azúcar y dulces","Sugar and sweets",5.5],["frutas","Frutas","Fruit",4.4],["alcohol","Bebidas alcohólicas","Alcoholic drinks",3.8],["cafe_te_yerba","Café, té y yerba","Coffee, tea and yerba",3.0],["aceites","Aceites","Oils",1.4]];
+const TYPE_ES = { pan_lactal:"Pan lactal blanco", harina_000:"Harina 000, 1 kg", arroz:"Arroz, 1 kg", fideos:"Fideos tallarín, 500 g", pollo_entero:"Pollo entero, por kg", leche:"Leche entera, 1 L", manteca:"Manteca, 200 g", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche, 400 g", huevos:"Huevos blancos x12", aceite_girasol:"Aceite de girasol, 1,5 L", papa:"Papa, por kg", cebolla:"Cebolla, por kg", tomate:"Tomate redondo, por kg", banana:"Banana, por kg", manzana:"Manzana roja, por kg", azucar:"Azúcar, 1 kg", yerba:"Yerba mate, 1 kg", cafe:"Café instantáneo, 170 g", te:"Té en saquitos", mayonesa:"Mayonesa, 500 g", pure_tomate:"Puré de tomate, 520 g", coca_cola:"Coca-Cola, 2,25 L", agua:"Agua mineral, 2 L", cerveza:"Cerveza rubia, 1 L", vino:"Vino tinto, 1 L", papel_higienico:"Papel higiénico 4 x 30 m", detergente:"Detergente, 500 ml", lavandina:"Lavandina, 1 L", jabon_ropa:"Jabón en polvo, 800 g", shampoo:"Shampoo", pasta_dental:"Pasta dental, 90 g", jabon_tocador:"Jabón de tocador" };
+const SHOPS = ["Carrefour","Jumbo","ChangoMas","Dia"];
+let lang = "es";
+try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
+function setLang(l) {
+  lang = l; document.documentElement.lang = l;
+  document.getElementById("btn-es").setAttribute("aria-pressed", String(l === "es"));
+  document.getElementById("btn-en").setAttribute("aria-pressed", String(l === "en"));
+  try { localStorage.setItem("lc-lang", l); } catch (e) {}
+  drawWeights(); drawBasket();
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
+function cell(text, cls) { const td = document.createElement("td"); if (cls) td.className = cls; td.textContent = text; return td; }
+function drawWeights() {
+  const tb = document.getElementById("weights"); tb.textContent = "";
+  SHARE.forEach(([k, es, en, w]) => { const tr = document.createElement("tr");
+    tr.append(cell(lang === "es" ? es : en), cell((lang === "es" ? String(w).replace(".", ",") : String(w)) + "%", "r")); tb.append(tr); });
+  const tr = document.createElement("tr");
+  tr.append(cell(lang === "es" ? "Cuidado personal" : "Personal care"), cell(lang === "es" ? "todavía no cuenta" : "not counted yet", "r muted")); tb.append(tr);
+}
+function parseCSV(text) {
+  const rows = []; let row = [], c = "", q = false;
+  for (let i = 0; i < text.length; i++) { const ch = text[i];
+    if (q) { if (ch === '"' && text[i+1] === '"') { c += '"'; i++; } else if (ch === '"') q = false; else c += ch; }
+    else if (ch === '"') q = true; else if (ch === ",") { row.push(c); c = ""; }
+    else if (ch === "\n" || ch === "\r") { if (ch === "\r" && text[i+1] === "\n") i++; row.push(c); c = ""; if (row.some(x => x)) rows.push(row); row = []; }
+    else c += ch; }
+  row.push(c); if (row.some(x => x)) rows.push(row);
+  const h = rows.shift(); return rows.map(r => Object.fromEntries(h.map((k, i) => [k, r[i]])));
+}
+let basket = null;
+function drawBasket() {
+  if (!basket) return;
+  const tb = document.getElementById("basketTable"); tb.textContent = "";
+  const types = []; const by = {};
+  basket.forEach(r => { if (!by[r.type_id]) { by[r.type_id] = { name: r.product_type, cat: r.category, shops: {} }; types.push(r.type_id); } by[r.type_id].shops[r.shop] = r.name; });
+  types.forEach(t => { const tr = document.createElement("tr");
+    const first = cell(lang === "es" ? (TYPE_ES[t] || by[t].name) : by[t].name); first.style.fontWeight = "600"; tr.append(first);
+    SHOPS.forEach(s => tr.append(cell(by[t].shops[s] || (lang === "es" ? "no se sigue" : "not tracked"), by[t].shops[s] ? "" : "muted")));
+    tb.append(tr); });
+}
+(async () => {
+  try { const r = await fetch("basket.csv", { cache: "no-store" }); if (r.ok) { basket = parseCSV(await r.text()); drawBasket(); } } catch (e) {}
+  try { const r = await fetch("index/daily.csv", { cache: "no-store" }); if (r.ok) { const d = parseCSV(await r.text()); const last = d[d.length - 1].date;
+    const a = document.getElementById("latestPrices"); a.setAttribute("href", "data/" + last + ".csv.gz"); a.setAttribute("download", "la-canasta-precios-" + last + ".csv.gz"); } } catch (e) {}
+})();
+setLang(lang);
+</script>
+<script src="counter.js"></script>

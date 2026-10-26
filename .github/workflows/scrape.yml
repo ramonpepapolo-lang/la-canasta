@@ -6,6 +6,9 @@ name: Daily supermarket prices
 # GitHub sometimes delays or skips scheduled runs. A backup only collects prices
 # if today's are still missing, so prices are always taken as early as possible.
 # If a run cannot save today's prices, it fails, and GitHub emails the owner.
+# An outside alarm clock (cron-job.org) also starts this workflow every day, because
+# GitHub's own clock can be hours late. Those starts also skip if today is already saved.
+# To collect again on purpose, start it by hand and tick "force".
 on:
   schedule:
     - cron: "23 13 * * *"
@@ -14,6 +17,11 @@ on:
     - cron: "11 20 * * *"
     - cron: "7 23 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Collect again even if today's prices are already saved"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -32,7 +40,7 @@ jobs:
         id: check
         run: |
           git pull --quiet origin main || true
-          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/$(date -u +%F).csv.gz" ]; then
+          if [ "${{ inputs.force }}" != "true" ] && [ -f "data/$(date -u +%F).csv.gz" ]; then
             echo "done=yes" >> "$GITHUB_OUTPUT"
             echo "Today's prices are already saved. Nothing to do."
           else

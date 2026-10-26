@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Canasta · Informe mensual</title>
+<meta name="description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:title" content="La Canasta · Informe mensual">
+<meta property="og:description" content="Índice diario de precios de supermercados en Argentina. Datos abiertos, publicados antes que la cifra oficial.">
+<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:url" content="https://lacanastaindex.com/informe.html">
+<meta name="twitter:card" content="summary">
+<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
+<link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
+<link rel="apple-touch-icon" href="la-canasta-logo/la-canasta-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+/* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
+   The day's number sits on a price tag; the basket is printed like a till receipt.
+   Single light theme on purpose: the brand is defined on white. */
+:root {
+  --bg: #FFFFFF;
+  --band: #F3F7F9;
+  --navy: #2B3B5C;
+  --muted: #5D6A84;
+  --rule: #DCE4EA;
+  --celeste: #7FB1C6;
+  --celeste-fill: rgba(127, 177, 198, 0.18);
+  --sun: #D98A2B;
+  --up: #B2462B;
+  --down: #2D7A57;
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--navy); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.container {
+  width: 100%; max-width: 72rem; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; color: var(--navy); }
+h2 { font-size: clamp(2rem, 4vw, 2.7rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0; max-width: 62ch; }
+a { color: var(--navy); text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outline-offset: 3px; border-radius: 6px; }
+.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Top bar */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 0.7rem; }
+.logo { display: block; line-height: 0; flex: none; }
+.logo img { height: 48px; width: auto; display: block; }
+nav { display: flex; gap: 1.7rem; }
+nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.96rem; }
+nav a:hover { color: var(--navy); }
+.lang { display: flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; flex: none; }
+.lang button { font: 600 0.82rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 0.35rem 0.85rem; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+.lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
+.lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.copy { font-size: 0.85rem; }
+@media (max-width: 800px) { nav { display: none; } }
+
+main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
+section { scroll-margin-top: 5.5rem; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+.hero-text { display: grid; gap: 1.4rem; min-width: 0; }
+.hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
+.lede { font-size: 1.2rem; color: var(--muted); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.4rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--navy); }
+.btn.primary { background: var(--navy); color: #FFFFFF; }
+.btn.ghost { color: var(--navy); background: var(--bg); }
+.btn.ghost:hover { background: var(--band); }
+
+.tag-card { display: grid; gap: 1.2rem; justify-items: start; min-width: 0; }
+.tag {
+  position: relative; background: var(--navy); color: #FFFFFF;
+  border-radius: 8px 28px 28px 8px; padding: 1.4rem 2.1rem 1.5rem 3.5rem;
+  display: grid; gap: 0.25rem; max-width: 100%;
+  box-shadow: 0 22px 44px -26px rgba(43, 59, 92, 0.65);
+  transform: rotate(-1.5deg);
+}
+.tag::before { content: ""; position: absolute; left: 1.3rem; top: 50%; width: 1rem; height: 1rem; margin-top: -0.5rem; border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 3px var(--sun); }
+.tag::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 28px 8px; background: linear-gradient(90deg, var(--celeste) 0 33.3%, #FFFFFF 33.3% 66.6%, var(--celeste) 66.6%); opacity: 0.9; }
+.tag .small { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
+.tag .big { font-family: var(--body); font-weight: 700; font-size: clamp(3.8rem, 10.5vw, 6.2rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag .sub { font-size: 0.92rem; color: rgba(255, 255, 255, 0.82); }
+.tag-meta { display: flex; gap: 2.2rem; flex-wrap: wrap; padding-left: 0.4rem; }
+.tag-meta div { display: grid; gap: 0.1rem; }
+.tag-meta strong { font-weight: 700; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.stats div { padding: 1.5rem 1.3rem; display: grid; gap: 0.25rem; border-left: 1px solid var(--rule); }
+.stats div:first-child { border-left: 0; padding-left: 0; }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 0.93rem; }
+
+/* Section heads */
+.head { display: grid; gap: 0.9rem; margin-bottom: 2rem; }
+.head p { color: var(--muted); font-size: 1.08rem; }
+
+/* Chart */
+.panel { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
+.chart-panel { padding: 1.5rem 1.5rem 1rem; display: grid; gap: 1rem; box-shadow: 0 1px 2px rgba(43, 59, 92, 0.04); }
+.chart-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+.readout { display: flex; gap: 2.2rem; flex-wrap: wrap; }
+.readout div { display: grid; gap: 0.15rem; }
+.readout strong { font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.key { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.86rem; color: var(--muted); }
+.key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
+.key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
+.chart-wrap { position: relative; }
+#chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
+.tip { position: absolute; pointer-events: none; background: var(--navy); color: #FFFFFF; font-size: 0.82rem; padding: 0.45rem 0.7rem; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -120%); font-variant-numeric: tabular-nums; }
+.chart-note { font-size: 0.92rem; color: var(--muted); }
+
+/* Why + how */
+.band { background: var(--band); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.band .container { padding-block: 4.5rem; }
+.why { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; }
+.why-text { display: grid; gap: 1.15rem; min-width: 0; }
+.why-text p { font-size: 1.12rem; }
+.why-text .quote { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; max-width: 24ch; }
+.why-text .src { font-size: 0.8rem; color: var(--muted); margin-top: -0.4rem; }
+.timeline { list-style: none; margin: 0.2rem 0 0.4rem; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.timeline li { display: grid; grid-template-columns: 3.6rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); font-size: 0.98rem; align-items: baseline; }
+.timeline .yr { font-family: var(--display); font-size: 1.35rem; line-height: 1; }
+.why-text .closing { font-weight: 700; font-size: 1.12rem; padding-left: 1rem; border-left: 4px solid var(--celeste); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: step; min-width: 0; }
+.steps li { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem 1.35rem; display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
+.steps li::before { counter-increment: step; content: counter(step); font-weight: 700; font-size: 1.1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #FFFFFF; }
+.steps h3 { font-size: 1.35rem; margin-bottom: 0.2rem; }
+.steps p { color: var(--muted); font-size: 0.98rem; }
+
+/* Basket */
+.basket { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.basket-text { display: grid; gap: 1.2rem; min-width: 0; }
+.legend-list { display: grid; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.legend-list li { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.75rem; font-size: 0.98rem; }
+.legend-list code { font-family: var(--body); font-weight: 700; font-size: 0.85rem; background: var(--band); border: 1px solid var(--rule); border-radius: 6px; padding: 0.1rem 0.45rem; justify-self: start; font-variant-numeric: tabular-nums; }
+.receipt {
+  background: var(--bg); color: var(--navy); font-size: 0.93rem;
+  padding: 1.6rem 1.6rem 1.8rem; display: grid; gap: 0.5rem; width: 100%; min-width: 0;
+  border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 26px 50px -34px rgba(43, 59, 92, 0.55);
+}
+.receipt .rhead { text-align: center; display: grid; justify-items: center; gap: 0.35rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed var(--rule); margin-bottom: 0.35rem; }
+.receipt .rhead img { width: 3.2rem; height: 3.2rem; }
+.receipt .rhead strong { font-size: 0.95rem; letter-spacing: 0.22em; }
+.receipt .rhead span { color: var(--muted); font-size: 0.8rem; }
+.row { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; }
+.row .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.row .dots { flex: 1; border-bottom: 1.5px dotted var(--rule); transform: translateY(-0.28rem); min-width: 0.75rem; }
+.row .w { color: var(--muted); font-variant-numeric: tabular-nums; }
+.row .chg { font-variant-numeric: tabular-nums; min-width: 4.4rem; text-align: right; font-weight: 600; }
+.up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--muted); }
+.receipt .rfoot { border-top: 1.5px dashed var(--rule); padding-top: 0.8rem; margin-top: 0.35rem; display: grid; gap: 0.5rem; }
+.receipt .total { font-weight: 700; font-size: 1rem; }
+.receipt .small { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+
+/* Shops */
+.shops { padding: 0.5rem 1.5rem; }
+.shop { display: grid; grid-template-columns: 8rem 1fr 5.5rem; gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.shop:last-child { border-bottom: 0; }
+.shop .sname { font-weight: 600; }
+.bar-track { height: 0.65rem; background: var(--band); border-radius: 999px; position: relative; overflow: hidden; }
+.bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: var(--celeste); }
+.shop .sval { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.shop.off .sname, .shop.off .sval { color: var(--muted); font-weight: 500; }
+.shop.off .sval { font-size: 0.85rem; }
+
+/* Report + data cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card-link { display: grid; gap: 0.5rem; padding: 1.5rem; text-decoration: none; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); align-content: start; }
+.card-link:hover { border-color: var(--navy); }
+.card-link p { color: var(--muted); font-size: 0.96rem; }
+.card-link .go { font-weight: 700; font-size: 0.92rem; padding-top: 0.3rem; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.report { display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; padding: 1.7rem 1.9rem; }
+.chip { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; background: var(--band); border: 1px solid var(--celeste); color: var(--navy); }
+.report-date { font-family: var(--display); font-size: 2.8rem; line-height: 1; }
+.report-text { display: grid; gap: 0.4rem; min-width: 0; }
+
+/* Footer: navy ground, white logo */
+footer { margin-top: 6rem; background: var(--navy); color: #FFFFFF; }
+footer .container { padding-block: 2.75rem 3rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
+footer .logo img { height: 44px; }
+footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 1.3rem; justify-content: flex-end; }
+.foot-links a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.foot-links a:hover { text-decoration: underline; text-decoration-color: var(--celeste); }
+
+@media (max-width: 900px) {
+  .hero, .why, .basket { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cards { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  footer .container { grid-template-columns: 1fr; }
+  .foot-links { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  main { gap: 4.5rem; padding-block: 2rem 0; }
+  .band .container { padding-block: 3.5rem; }
+  .shop { grid-template-columns: 6rem 1fr 4.8rem; gap: 0.75rem; }
+  .report { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.3rem; }
+  .tag { padding: 1.2rem 1.5rem 1.35rem 2.9rem; }
+  .tag::before { left: 1rem; }
+  .logo img { height: 44px; }
+  .lang-label { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tag { animation: swing 0.7s cubic-bezier(.2,.8,.3,1.2) both; transform-origin: 1.8rem 50%; }
+  @keyframes swing { from { transform: rotate(-6deg) translateY(-8px); } to { transform: rotate(-1.5deg); } }
+  .bar { transition: width 0.6s ease; }
+}
+
+/* Method page */
+.doc { display: grid; grid-template-columns: 14rem 1fr; gap: 3rem; align-items: start; padding-block: 3rem 0; }
+.toc { position: sticky; top: 6rem; display: grid; gap: 0.5rem; font-size: 0.95rem; }
+.toc a { color: var(--muted); text-decoration: none; }
+.toc a:hover { color: var(--navy); }
+.doc-body { display: grid; gap: 3.2rem; min-width: 0; }
+.doc-body section { display: grid; gap: 1rem; }
+.doc-body h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
+.doc-body h2 { font-size: 1.9rem; }
+.doc-body p, .doc-body li { font-size: 1.05rem; }
+.doc-body ol, .doc-body ul { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.55rem; max-width: 62ch; }
+.note { background: var(--band); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.98rem; max-width: 62ch; }
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--band); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+.grp td { background: var(--band); font-weight: 700; }
+.back { font-weight: 600; }
+html:not([lang="en"]) [data-lang="en"] { display: none !important; }
+html[lang="en"] [data-lang="es"] { display: none !important; }
+@media (max-width: 900px) { .doc { grid-template-columns: 1fr; gap: 1.5rem; } .toc { position: static; grid-auto-flow: column; overflow-x: auto; gap: 1.2rem; white-space: nowrap; } }
+.admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
+.admin-link:hover { color: #FFFFFF; }
+
+.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr auto; gap: 1.2rem 2.5rem; align-items: center; }
+.sub[hidden] { display: none; }
+.sub h2 { color: #FFFFFF; font-size: 1.9rem; }
+.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
+.sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; min-width: 16rem; color: var(--navy); }
+.sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
+.sub .btn-a { background: var(--celeste); color: var(--navy); }
+.sub-ok { grid-column: 1 / -1; font-weight: 600; color: #FFFFFF !important; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 760px) { .sub { grid-template-columns: 1fr; padding: 1.5rem; } .sub-form input[type=email] { min-width: 0; flex: 1 1 12rem; } }
+
+/* Monthly report page */
+.rep { display: grid; gap: 3rem; padding-block: 2rem 0; }
+.rep-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.pick { display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: var(--muted); }
+.pick select { font: inherit; color: var(--navy); padding: 0.45rem 0.7rem; border: 1px solid var(--rule); border-radius: 8px; background: #FFFFFF; }
+#report { display: grid; gap: 3.2rem; }
+#report[hidden] { display: none; }
+.draft { margin: 0; background: #FBF1E4; border: 1px solid #EBCB9F; color: var(--navy); border-radius: 10px; padding: 0.8rem 1rem; font-weight: 600; }
+.rep-hero { display: grid; gap: 1rem; }
+.rep-hero h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); }
+.big-row { display: flex; gap: 2.5rem 4rem; align-items: end; flex-wrap: wrap; margin-top: 0.5rem; }
+.big { font-family: var(--display); font-size: clamp(4.5rem, 12vw, 7.5rem); line-height: 0.95; margin: 0; font-variant-numeric: tabular-nums; }
+.big-sub { margin: 0.5rem 0 0; color: var(--muted); font-size: 1.05rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(9rem, auto)); gap: 1rem 2.5rem; margin: 0; }
+.facts div { display: grid; gap: 0.1rem; }
+.facts dt { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--display); font-size: 1.8rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.period { margin: 0; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
+.note-box { border-left: 4px solid var(--celeste); padding: 0.3rem 0 0.3rem 1.4rem; display: grid; gap: 0.7rem; max-width: 66ch; }
+.note-box h2 { font-size: 1.5rem; }
+.note-box p { margin: 0; font-size: 1.08rem; }
+#note { display: grid; gap: 0.7rem; }
+.rsec td { vertical-align: middle; }
+.note-box .sig { font-weight: 700; }
+.rsec { display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.rsec h2 { font-size: 1.8rem; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.legend { display: flex; align-items: center; gap: 0.5rem 0.8rem; flex-wrap: wrap; font-size: 0.92rem; color: var(--muted); }
+.key { display: inline-block; width: 22px; height: 0; border-top: 2px solid var(--celeste); margin-left: 0.4rem; }
+.key.k-paid { border-top-width: 3px; margin-left: 0; }
+.key.k-reg { border-top: 2px dashed var(--navy); }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .tip { position: absolute; pointer-events: none; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 8px; padding: 0.45rem 0.7rem; font-size: 0.85rem; box-shadow: 0 4px 14px rgba(43, 59, 92, 0.12); white-space: nowrap; transform: translate(-50%, -110%); }
+.bars { display: grid; gap: 0.15rem; }
+.bar-row { display: grid; grid-template-columns: minmax(7rem, 11rem) 1fr; gap: 0.8rem; align-items: center; padding: 0.3rem 0; font-size: 0.95rem; }
+.bar-row .lab { color: var(--navy); line-height: 1.25; }
+.bar-row .lab small { display: block; color: var(--muted); font-size: 0.78rem; }
+.track { position: relative; height: 1.5rem; }
+.track .zero { position: absolute; top: -0.2rem; bottom: -0.2rem; width: 1px; background: var(--muted); opacity: 0.5; }
+.track .fill { position: absolute; top: 0.3rem; height: 0.9rem; border-radius: 4px; }
+.track .fill.up { background: var(--up); }
+.track .fill.down { background: var(--down); }
+.track .val { position: absolute; top: 0; font-size: 0.85rem; font-weight: 700; color: var(--navy); white-space: nowrap; line-height: 1.5rem; font-variant-numeric: tabular-nums; }
+.bar-row.out .fill { opacity: 0.4; }
+td.pc { font-weight: 700; text-align: right; white-space: nowrap; }
+td.pr { text-align: right; white-space: nowrap; color: var(--muted); font-size: 0.88rem; }
+td .shop { display: block; color: var(--muted); font-size: 0.8rem; }
+ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-width: 66ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
+.btn-a { font: inherit; font-weight: 600; background: var(--navy); color: #FFFFFF; border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; text-decoration: none; }
+.btn-b { font: inherit; font-weight: 600; background: #FFFFFF; color: var(--navy); border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1.1rem; text-decoration: none; }
+.small { font-size: 0.88rem; margin: 0; }
+@media (max-width: 860px) { .two { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 7.5rem 1fr; } }
+@media print {
+  .noprint, header.topbar, footer, .actions { display: none !important; }
+  .rep { padding-top: 0; }
+  .two { grid-template-columns: 1fr 1fr; }
+  .rsec, .note-box { break-inside: avoid; }
+  body { font-size: 11pt; }
+}
+</style>
+<header class="topbar">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
+    <nav aria-label="Secciones">
+      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="index.html#basket"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
+      <a href="index.html#data"><span data-lang="es">Datos</span><span data-lang="en">Data</span></a>
+    </nav>
+    <div class="lang-wrap">
+      <span class="lang-label"><span data-lang="es">Language</span><span data-lang="en">Idioma</span></span>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="btn-es" data-set="es" aria-pressed="true">ES</button>
+        <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container rep">
+  <div class="rep-bar noprint">
+    <a class="back" href="index.html"><span data-lang="es">← Volver al índice</span><span data-lang="en">← Back to the index</span></a>
+    <span style="display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap">
+    <a class="back" href="informes.html"><span data-lang="es">Todos los informes</span><span data-lang="en">All reports</span></a>
+    <label class="pick" id="pickWrap" hidden><span data-lang="es">Informe</span><span data-lang="en">Report</span>
+      <select id="pick"></select>
+    </label>
+    </span>
+  </div>
+
+  <div id="empty" hidden>
+    <section class="rep-hero">
+      <p class="eyebrow"><span data-lang="es">Informe mensual</span><span data-lang="en">Monthly report</span></p>
+      <h1><span data-lang="es">El primer informe sale el 1 de diciembre de 2026</span><span data-lang="en">The first report comes out on 1 December 2026</span></h1>
+      <p class="lede" data-lang="es">Cada mes, La Canasta publica cuánto subieron los precios del súper el mes anterior, antes que el dato oficial del INDEC.</p>
+      <p class="lede" data-lang="en">Every month, La Canasta publishes how much supermarket prices rose the month before, ahead of INDEC's official figure.</p>
+    </section>
+  </div>
+
+  <article id="report" hidden>
+    <p class="draft" id="draft" hidden></p>
+
+    <section class="rep-hero">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 id="title"></h1>
+      <div class="big-row">
+        <div>
+          <p class="big" id="big"></p>
+          <p class="big-sub" id="bigSub"></p>
+        </div>
+        <dl class="facts" id="facts"></dl>
+      </div>
+      <p class="period" id="period"></p>
+    </section>
+
+    <section class="note-box" id="noteBox" hidden>
+      <h2><span data-lang="es">Comentario</span><span data-lang="en">Comment</span></h2>
+      <div id="note"></div>
+      <p class="sig">Ramon Pepa</p>
+    </section>
+
+    <section class="rsec">
+      <h2><span data-lang="es">Día a día</span><span data-lang="en">Day by day</span></h2>
+      <div class="legend"><span class="key k-paid"></span><span data-lang="es">Precio pagado</span><span data-lang="en">Price paid</span>
+        <span class="key k-reg"></span><span data-lang="es">Precio de lista</span><span data-lang="en">Regular price</span></div>
+      <div class="chart" id="chart"></div>
+    </section>
+
+    <div class="two">
+      <section class="rsec">
+        <h2><span data-lang="es">Por grupo</span><span data-lang="en">By group</span></h2>
+        <div class="bars" id="groups"></div>
+      </section>
+      <section class="rsec">
+        <h2><span data-lang="es">Por supermercado</span><span data-lang="en">By supermarket</span></h2>
+        <div class="bars" id="shops"></div>
+        <p class="small muted" data-lang="es">Cada súper comparado solo consigo mismo. Coto se recolecta pero todavía no cuenta.</p>
+        <p class="small muted" data-lang="en">Each shop is only compared with itself. Coto is collected but not counted yet.</p>
+      </section>
+    </div>
+
+    <div class="two">
+      <section class="rsec">
+        <h2><span data-lang="es">Los que más subieron</span><span data-lang="en">Biggest rises</span></h2>
+        <div class="tbl-wrap"><table><tbody id="up"></tbody></table></div>
+      </section>
+      <section class="rsec">
+        <h2><span data-lang="es">Los que más bajaron</span><span data-lang="en">Biggest falls</span></h2>
+        <div class="tbl-wrap"><table><tbody id="down"></tbody></table></div>
+      </section>
+    </div>
+
+    <section class="rsec" id="indecBox" hidden>
+      <h2><span data-lang="es">Comparación con el INDEC</span><span data-lang="en">Compared with INDEC</span></h2>
+      <div class="tbl-wrap"><table><tbody id="indec"></tbody></table></div>
+    </section>
+
+    <section class="sub" id="suscribirse" hidden>
+      <div>
+        <h2><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></h2>
+        <p data-lang="es">Una vez por mes, el día que sale. Gratis. Te podés dar de baja cuando quieras.</p>
+        <p data-lang="en">Once a month, the day it comes out. Free. Unsubscribe any time.</p>
+      </div>
+      <form class="sub-form" id="subForm" target="subFrame" method="POST">
+        <label class="sr" for="subEmail">Email</label>
+        <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+        <input type="hidden" name="locale" value="es">
+        <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
+      </form>
+      <p class="sub-ok" id="subOk" hidden><span data-lang="es">¡Listo! Revisá tu email y confirmá la suscripción (mirá también en spam).</span><span data-lang="en">Done! Check your email and confirm your subscription (check spam too).</span></p>
+      <iframe name="subFrame" title="subscribe" hidden></iframe>
+    </section>
+
+    <section class="rsec">
+      <h2><span data-lang="es">Cómo leer este informe</span><span data-lang="en">How to read this report</span></h2>
+      <ul class="plain" data-lang="es">
+        <li>Mide 33 productos de supermercado en Carrefour, Jumbo, ChangoMás y Día, todos los días.</li>
+        <li>Los grupos se combinan con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).</li>
+        <li>No incluye alquiler, servicios, transporte, educación ni salud: se compara sobre todo con el rubro Alimentos y bebidas del INDEC.</li>
+        <li>Cuidado personal se muestra pero no cuenta en el número principal.</li>
+      </ul>
+      <ul class="plain" data-lang="en">
+        <li>It measures 33 supermarket products at Carrefour, Jumbo, ChangoMás and Día, every day.</li>
+        <li>Groups are combined with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).</li>
+        <li>It excludes rent, utilities, transport, education and health, so it is mainly compared with INDEC's Food and drinks figure.</li>
+        <li>Personal care is shown but not counted in the main number.</li>
+      </ul>
+      <div class="actions noprint">
+        <button type="button" class="btn-a" id="printBtn"><span data-lang="es">Guardar como PDF</span><span data-lang="en">Save as PDF</span></button>
+        <a class="btn-b" href="metodo.html"><span data-lang="es">Metodología completa</span><span data-lang="en">Full methodology</span></a>
+        <a class="btn-b" href="index/daily.csv" download="la-canasta-indice-diario.csv"><span data-lang="es">Descargar los datos</span><span data-lang="en">Download the data</span></a>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;gap:0.6rem">
+      <a class="logo" href="index.html"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
+      <p data-lang="es">La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+      <p data-lang="en">La Canasta is an independent project by Ramon Pepa. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.</p>
+      <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
+    </div>
+    <div class="foot-links">
+      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="index.html#basket"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
+      <a href="index.html#data"><span data-lang="es">Datos</span><span data-lang="en">Data</span></a>
+      <a href="metodo.html"><span data-lang="es">Metodología</span><span data-lang="en">Methodology</span></a>
+      <a href="informes.html"><span data-lang="es">Informes</span><span data-lang="en">Reports</span></a>
+    </div>
+  </div>
+</footer>
+<script>
+const MONTHS = { es: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
+  en: ["January","February","March","April","May","June","July","August","September","October","November","December"] };
+const SHOP = { Carrefour: "Carrefour", Jumbo: "Jumbo", ChangoMas: "ChangoMás", Dia: "Día", Coto: "Coto" };
+const GROUP = { pan_cereales: ["Pan y cereales","Bread and cereals"], carne_ave: ["Pollo","Chicken"], lacteos: ["Lácteos y huevos","Dairy and eggs"],
+  aceites: ["Aceites","Oils"], frutas: ["Frutas","Fruit"], verduras: ["Verduras","Vegetables"], azucar: ["Azúcar y dulces","Sugar and sweets"],
+  otros_alimentos: ["Otros alimentos","Other food"], cafe_te_yerba: ["Café, té y yerba","Coffee, tea and yerba"], aguas_gaseosas: ["Aguas y gaseosas","Water and soft drinks"],
+  alcohol: ["Bebidas alcohólicas","Alcoholic drinks"], limpieza: ["Limpieza","Cleaning products"], cuidado_personal: ["Cuidado personal","Personal care"] };
+const TYPE_ES = { pan_lactal:"Pan lactal blanco", harina_000:"Harina 000, 1 kg", arroz:"Arroz, 1 kg", fideos:"Fideos tallarín, 500 g", pollo_entero:"Pollo entero, por kg", leche:"Leche entera, 1 L", manteca:"Manteca, 200 g", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche, 400 g", huevos:"Huevos blancos x12", aceite_girasol:"Aceite de girasol, 1,5 L", papa:"Papa, por kg", cebolla:"Cebolla, por kg", tomate:"Tomate redondo, por kg", banana:"Banana, por kg", manzana:"Manzana roja, por kg", azucar:"Azúcar, 1 kg", yerba:"Yerba mate, 1 kg", cafe:"Café instantáneo, 170 g", te:"Té en saquitos", mayonesa:"Mayonesa, 500 g", pure_tomate:"Puré de tomate, 520 g", coca_cola:"Coca-Cola, 2,25 L", agua:"Agua mineral, 2 L", cerveza:"Cerveza rubia, 1 L", vino:"Vino tinto, 1 L", papel_higienico:"Papel higiénico 4 x 30 m", detergente:"Detergente, 500 ml", lavandina:"Lavandina, 1 L", jabon_ropa:"Jabón en polvo, 800 g", shampoo:"Shampoo", pasta_dental:"Pasta dental, 90 g", jabon_tocador:"Jabón de tocador" };
+
+let lang = "es";
+try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
+let list = [], rep = null, notes = {}, indec = {};
+
+const $ = id => document.getElementById(id);
+const L = (es, en) => lang === "es" ? es : en;
+function el(tag, cls, text) { const x = document.createElement(tag); if (cls) x.className = cls; if (text != null) x.textContent = text; return x; }
+function num(v, d = 2) { return Number(v).toLocaleString(lang === "es" ? "es-AR" : "en-GB", { minimumFractionDigits: d, maximumFractionDigits: d }); }
+function sp(v) { return (v > 0 ? "+" : v < 0 ? "−" : "") + num(Math.abs(v)) + "%"; }
+function money(v) { return "$" + Number(v).toLocaleString(lang === "es" ? "es-AR" : "en-GB", { maximumFractionDigits: 0 }); }
+function monthName(m) { return MONTHS[lang][+m.slice(5) - 1]; }
+function longDate(d) { const day = +d.slice(8), mn = MONTHS[lang][+d.slice(5, 7) - 1], y = d.slice(0, 4);
+  return lang === "es" ? `${day} de ${mn} de ${y}` : `${day} ${mn} ${y}`; }
+function monthTitle(m) { return lang === "es" ? `${monthName(m)} de ${m.slice(0, 4)}` : `${monthName(m)} ${m.slice(0, 4)}`; }
+function typeName(p) { return lang === "es" ? (TYPE_ES[p.type] || p.type_en) : p.type_en; }
+
+function setLang(l) {
+  lang = l; document.documentElement.lang = l;
+  $("btn-es").setAttribute("aria-pressed", String(l === "es")); $("btn-en").setAttribute("aria-pressed", String(l === "en"));
+  try { localStorage.setItem("lc-lang", l); } catch (e) {}
+  render();
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
+$("printBtn").addEventListener("click", () => window.print());
+let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (rep) render(); }, 150); });
+
+function drawPicker() {
+  const sel = $("pick"); sel.textContent = "";
+  const shown = list.filter(x => x.publishable || (rep && x.month === rep.month));
+  shown.slice().reverse().forEach(x => { const o = el("option", null, monthTitle(x.month) + (x.publishable ? "" : L(" (borrador)", " (draft)")));
+    o.value = x.month; if (rep && x.month === rep.month) o.selected = true; sel.append(o); });
+  $("pickWrap").hidden = shown.length < 2;
+}
+$("pick").addEventListener("change", e => { history.replaceState(null, "", "?m=" + e.target.value); load(e.target.value); });
+
+function bars(box, items) {
+  box.textContent = "";
+  const vals = items.map(i => i.pct);
+  const maxPos = Math.max(0, ...vals), maxNeg = Math.max(0, ...vals.map(v => -v));
+  const tw = Math.max(150, box.clientWidth - 150), lw = 62 / tw * 100;
+  const left = maxNeg > 0 ? Math.min(40, lw) : 0, right = Math.min(40, lw), span = (maxPos + maxNeg) || 1;
+  const scale = (100 - left - right) / span, zero = left + maxNeg * scale;
+  items.forEach(i => {
+    const row = el("div", "bar-row" + (i.out ? " out" : ""));
+    const lab = el("div", "lab", i.label); if (i.sub) lab.append(el("small", null, i.sub));
+    const t = el("div", "track"); const z = el("span", "zero"); z.style.left = zero + "%"; t.append(z);
+    const f = el("span", "fill " + (i.pct >= 0 ? "up" : "down"));
+    const w = Math.abs(i.pct) * scale;
+    f.style.left = (i.pct >= 0 ? zero : zero - w) + "%"; f.style.width = Math.max(w, 0.4) + "%"; t.append(f);
+    const v = el("span", "val", sp(i.pct));
+    if (i.pct >= 0) v.style.left = (zero + w + 1.5) + "%"; else v.style.right = (100 - (zero - w) + 1.5) + "%";
+    t.append(v); row.append(lab, t); box.append(row);
+  });
+}
+
+function chart() {
+  const box = $("chart"); box.textContent = "";
+  const s = rep.series; if (s.length < 2) { box.append(el("p", "muted", L("Todavía no hay suficientes días.", "Not enough days yet."))); return; }
+  const W = Math.max(330, Math.round(box.clientWidth || 900)), H = W < 600 ? 240 : 300, pl = 52, pr = 16, pt = 14, pb = 34;
+  const ys = s.flatMap(d => [d.paid, d.regular]); let lo = Math.min(...ys), hi = Math.max(...ys);
+  const pad = Math.max((hi - lo) * 0.15, 0.3); lo -= pad; hi += pad;
+  const X = i => pl + i * (W - pl - pr) / (s.length - 1), Y = v => pt + (hi - v) * (H - pt - pb) / (hi - lo);
+  const NS = "http://www.w3.org/2000/svg", mk = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+  const svg = mk("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": L("Índice día a día durante el mes", "Daily index during the month") });
+  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4, y = Y(v);
+    svg.append(mk("line", { x1: pl, x2: W - pr, y1: y, y2: y, stroke: "#DCE4EA", "stroke-width": 1 }));
+    const t = mk("text", { x: pl - 8, y: y + 4, "text-anchor": "end", "font-size": 12, fill: "#5D6A84" }); t.textContent = num(v, 1); svg.append(t); }
+  [0, Math.floor((s.length - 1) / 2), s.length - 1].forEach((i, n) => { const t = mk("text", { x: X(i), y: H - 10, "text-anchor": n === 0 ? "start" : n === 2 ? "end" : "middle", "font-size": 12, fill: "#5D6A84" });
+    t.textContent = `${+s[i].date.slice(8)} ${MONTHS[lang][+s[i].date.slice(5, 7) - 1].slice(0, 3)}`; svg.append(t); });
+  const path = k => s.map((d, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(d[k]).toFixed(1)).join(" ");
+  svg.append(mk("path", { d: path("paid") + ` L${X(s.length - 1)} ${H - pb} L${pl} ${H - pb} Z`, fill: "rgba(127,177,198,0.18)" }));
+  svg.append(mk("path", { d: path("regular"), fill: "none", stroke: "#2B3B5C", "stroke-width": 2, "stroke-dasharray": "6 5" }));
+  svg.append(mk("path", { d: path("paid"), fill: "none", stroke: "#7FB1C6", "stroke-width": 3, "stroke-linejoin": "round" }));
+  const cross = mk("line", { y1: pt, y2: H - pb, stroke: "#2B3B5C", "stroke-width": 1, opacity: 0 }); svg.append(cross);
+  const dot = mk("circle", { r: 5, fill: "#7FB1C6", stroke: "#FFFFFF", "stroke-width": 2, opacity: 0 }); svg.append(dot);
+  const hit = mk("rect", { x: pl, y: pt, width: W - pl - pr, height: H - pt - pb, fill: "transparent" }); svg.append(hit);
+  const tip = el("div", "tip"); tip.hidden = true;
+  const move = ev => { const r = svg.getBoundingClientRect(); const x = (ev.clientX - r.left) * W / r.width;
+    const i = Math.max(0, Math.min(s.length - 1, Math.round((x - pl) / ((W - pl - pr) / (s.length - 1))))); const d = s[i];
+    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("opacity", 0.35);
+    dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(d.paid)); dot.setAttribute("opacity", 1);
+    tip.textContent = ""; tip.append(el("strong", null, longDate(d.date)), el("br"), document.createTextNode(L("Pagado ", "Paid ") + num(d.paid, 2) + " · " + L("Lista ", "Regular ") + num(d.regular, 2)));
+    tip.hidden = false; tip.style.left = (X(i) * r.width / W) + "px"; tip.style.top = (Y(d.paid) * r.height / H) + "px"; };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerleave", () => { tip.hidden = true; cross.setAttribute("opacity", 0); dot.setAttribute("opacity", 0); });
+  box.append(svg, tip);
+}
+
+function table(box, items) {
+  box.textContent = "";
+  if (!items.length) { const tr = el("tr"); tr.append(el("td", "muted", L("Ninguno este mes.", "None this month."))); box.append(tr); return; }
+  items.forEach(p => { const tr = el("tr"); const a = el("td"); a.append(el("strong", null, typeName(p)), el("span", "shop", SHOP[p.shop] || p.shop));
+    tr.append(a, el("td", "pr", money(p.before) + " → " + money(p.now)), el("td", "pc", sp(p.pct))); box.append(tr); });
+}
+
+function render() {
+  if (!list.length && !rep) return;
+  if (!rep) { $("empty").hidden = false; $("report").hidden = true; return; }
+  $("empty").hidden = true; $("report").hidden = false;
+  const m = rep.month; drawPicker();
+  document.title = "La Canasta · " + L("Informe de ", "Report, ") + monthTitle(m);
+  const d = $("draft");
+  if (!rep.complete) { d.hidden = false; d.textContent = L(`Borrador: ${monthName(m)} todavía no terminó. Estos números cambian todos los días hasta fin de mes.`, `Draft: ${monthName(m)} isn't over yet. These numbers change every day until the end of the month.`); }
+  else if (rep.days_of_data < 20) { d.hidden = false; d.textContent = L(`Mes incompleto: solo ${rep.days_of_data} días de datos (la recolección empezó el 24 de octubre de 2026).`, `Incomplete month: only ${rep.days_of_data} days of data (collection started on 24 October 2026).`); }
+  else d.hidden = true;
+
+  $("eyebrow").textContent = L("La Canasta · Informe mensual", "La Canasta · Monthly report");
+  $("title").textContent = lang === "es" ? `Informe de ${monthTitle(m)}` : `${monthTitle(m)} report`;
+  $("big").textContent = sp(rep.inflation);
+  $("bigSub").textContent = rep.inflation >= 0 ? L(`Suba de los precios del súper en ${monthName(m)}`, `Rise in supermarket prices in ${monthName(m)}`)
+                                                : L(`Baja de los precios del súper en ${monthName(m)}`, `Fall in supermarket prices in ${monthName(m)}`);
+  const reg = rep.method === "average" ? rep.headline.avg_regular : rep.headline.end_to_end_regular;
+  const facts = [[L("Precio de lista", "Regular price"), sp(reg)], [L("Días de datos", "Days of data"), String(rep.days_of_data)],
+    [L("Precios recolectados", "Prices collected"), Number(rep.prices_collected).toLocaleString(lang === "es" ? "es-AR" : "en-GB")],
+    [L("Productos que subieron", "Products that rose"), `${rep.products_up} / ${rep.products_compared}`]];
+  const fx = $("facts"); fx.textContent = ""; facts.forEach(([k, v]) => { const w = el("div"); w.append(el("dt", null, k), el("dd", null, v)); fx.append(w); });
+
+  const prevName = monthName(rep.base_date.slice(0, 7));
+  $("period").textContent = rep.method === "average"
+    ? L(`Promedio de ${monthName(m)} contra promedio de ${prevName}, como el INDEC. Punta a punta (${longDate(rep.base_date)} al ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`,
+        `Average of ${monthName(m)} vs average of ${prevName}, like INDEC. End to end (${longDate(rep.base_date)} to ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`)
+    : L(`Variación punta a punta, del ${longDate(rep.base_date)} al ${longDate(rep.end_date)}. Se usa porque ${prevName} tiene menos de 20 días de datos; desde el mes siguiente se compara promedio contra promedio, como el INDEC.`,
+        `End-to-end change, from ${longDate(rep.base_date)} to ${longDate(rep.end_date)}. Used because ${prevName} has fewer than 20 days of data; from the next month on it compares average vs average, like INDEC.`);
+
+  const note = notes[lang] || notes.es;
+  $("noteBox").hidden = !note;
+  if (note) { const n = $("note"); n.textContent = ""; note.trim().split(/\n\s*\n/).forEach(p => n.append(el("p", null, p.trim()))); }
+
+  chart();
+  bars($("groups"), rep.groups.map(g => ({ label: (GROUP[g.group] || [g.group, g.group])[lang === "es" ? 0 : 1], pct: g.pct, out: !g.in_headline,
+    sub: g.in_headline ? null : L("no cuenta en el número principal", "not in the main number") })));
+  bars($("shops"), rep.shops.slice().sort((a, b) => b.pct - a.pct).map(s => ({ label: SHOP[s.shop] || s.shop, pct: s.pct })));
+  table($("up"), rep.top_up); table($("down"), rep.top_down);
+
+  const ind = indec[m];
+  $("indecBox").hidden = !ind;
+  if (ind) { const tb = $("indec"); tb.textContent = "";
+    [[L("La Canasta (supermercados)", "La Canasta (supermarkets)"), rep.inflation],
+     [L("INDEC: Alimentos y bebidas, GBA", "INDEC: Food and drinks, Greater BA"), ind.alimentos_pct],
+     [L("INDEC: Nivel general, nacional", "INDEC: All items, national"), ind.general_pct]].forEach(([k, v]) => {
+      if (v === "" || v == null) return; const tr = el("tr"); tr.append(el("td", null, k), el("td", "pc", sp(Number(v)))); tb.append(tr); }); }
+}
+
+async function getText(u) { try { const r = await fetch(u, { cache: "no-store" }); return r.ok ? await r.text() : null; } catch (e) { return null; } }
+
+async function load(m) {
+  rep = null; notes = {};
+  if (m) { const t = await getText(`index/informes/${m}.json`); if (t) rep = JSON.parse(t); }
+  if (rep) { const [es, en] = await Promise.all([getText(`notas/${m}-es.txt`), getText(`notas/${m}-en.txt`)]); notes = { es, en }; }
+  render();
+}
+
+(async () => {
+  const t = await getText("index/informes/lista.json"); list = t ? JSON.parse(t) : [];
+  const ic = await getText("notas/indec.csv");
+  if (ic) { const lines = ic.trim().split(/\r?\n/); const h = lines.shift().split(",");
+    lines.forEach(l => { const r = Object.fromEntries(l.split(",").map((v, i) => [h[i].trim(), v.trim()])); if (r.month) indec[r.month] = r; }); }
+  const asked = new URLSearchParams(location.search).get("m");
+  const latest = list.filter(x => x.publishable).map(x => x.month).pop();
+  const m = asked && list.some(x => x.month === asked) ? asked : latest;
+  if (!m) { rep = null; $("empty").hidden = false; return; }
+  await load(m);
+})();
+setLang(lang);
+</script>
+<script src="counter.js"></script>
+<script>
+(function () {
+  var box = document.getElementById("suscribirse"); if (!box) return;
+  var action = (typeof SUBSCRIBE_ACTION === "string") ? SUBSCRIBE_ACTION : "";
+  if (!action) return;                       // hidden until the email service is connected
+  var f = document.getElementById("subForm"); f.action = action; box.hidden = false;
+  f.addEventListener("submit", function () {
+    f.querySelector('[name=locale]').value = document.documentElement.lang === "en" ? "en" : "es";
+    setTimeout(function () { f.hidden = true; document.getElementById("subOk").hidden = false; }, 300);
+  });
+})();
+</script>

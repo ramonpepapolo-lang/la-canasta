@@ -2,6 +2,9 @@
 // When you have your GoatCounter code, put it between the quotes below, e.g. "lacanasta".
 var GOATCOUNTER_CODE = "lacanasta";
 
+// Email sign-up: the address the subscribe form sends to (from Brevo). Empty = the sign-up box stays hidden.
+var SUBSCRIBE_ACTION = "";
+
 (function () {
   if (!GOATCOUNTER_CODE) return;
   if (/admin\.html$/.test(location.pathname)) return; // don't count your own admin visits

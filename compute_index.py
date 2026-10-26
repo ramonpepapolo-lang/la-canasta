@@ -157,3 +157,10 @@ last = daily_rows[-1]
 print(f"{len(dates)} days. Latest ({last['date']}): index {last['index_paid']} "
       f"(regular price {last['index_regular']}), {last['products_compared']} products compared.")
 print(f"{len(checks)} suspicious prices left out.")
+
+# ---------- Monthly report numbers (never stops the daily save if something goes wrong) ----------
+import subprocess
+import sys
+result = subprocess.run([sys.executable, "make_report.py"])
+if result.returncode != 0:
+    print("WARNING: the monthly report could not be built today. The index is saved anyway.")

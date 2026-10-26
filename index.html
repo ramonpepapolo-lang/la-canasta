@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <style>
+[hidden] { display: none !important; }
 /* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
    The day's number sits on a price tag; the basket is printed like a till receipt.
    Single light theme on purpose: the brand is defined on white. */
@@ -357,6 +358,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
         <span><span class="chip" data-t="reportChip">Próximamente</span></span>
         <h3 data-t="reportTitle">Primer informe mensual</h3>
         <p class="muted" data-t="reportText">El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.</p>
+        <span id="reportLinks" hidden style="display:flex;gap:1.2rem;flex-wrap:wrap"><a id="reportLink" href="informe.html" style="font-weight:600">Leer el informe →</a><a id="archiveLink" href="informes.html" style="font-weight:600">Todos los informes</a></span>
       </div>
     </div>
   </section>
@@ -398,6 +400,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <a href="#basket" data-t="navBasket">La canasta</a>
       <a href="#data" data-t="navData">Datos y método</a>
       <a href="metodo.html" data-t="navMethod">Metodología</a>
+      <a href="informes.html" data-t="navReport">Informes</a>
     </div>
   </div>
 </footer>
@@ -468,7 +471,7 @@ const T = {
     shopsEyebrow: "Supermarkets", shopsTitle: "Shop by shop",
     shopsIntro: "Each supermarket is only ever compared with itself. Change since 24 October 2026.",
     coto: "collected, not counted yet",
-    reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
+    navReport: "Reports", reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
     reportText: "November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.",
     dataEyebrow: "Data and method", dataTitle: "Check every number",
     c1t: "Download the index", c1: "The index every day, overall and by supermarket. Opens in Excel or Google Sheets.", c1g: "Download (CSV)",
@@ -514,7 +517,7 @@ const T = {
     shopsEyebrow: "Supermercados", shopsTitle: "Súper por súper",
     shopsIntro: "Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.",
     coto: "se recolecta, todavía no cuenta",
-    reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
+    navReport: "Informes", reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
     reportText: "El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.",
     dataEyebrow: "Datos y método", dataTitle: "Revisá cada número",
     c1t: "Descargar el índice", c1: "El índice de cada día, en total y por supermercado. Se abre en Excel o Google Sheets.", c1g: "Descargar (CSV)",
@@ -556,7 +559,7 @@ async function load(path, fallback) {
   } catch (e) { return parseCSV(fallback); }
 }
 
-let lang = "es", daily = [], groups = [];
+let lang = "es", daily = [], groups = [], latestReport = null;
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
 
 const sep = s => (lang === "es" ? s.replace(".", ",") : s);
@@ -634,6 +637,18 @@ function render() {
   document.querySelectorAll("[data-t]").forEach(e => { const k = e.dataset.t; if (t[k]) e.textContent = t[k]; });
   document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
   document.getElementById("btn-es").setAttribute("aria-pressed", String(lang === "es"));
+  if (latestReport) {
+    const r = latestReport, mi = +r.month.slice(5) - 1, y = r.month.slice(0, 4);
+    const MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const q = id => document.querySelector(`[data-t="${id}"]`);
+    q("reportDate").textContent = lang === "es" ? MES[mi].slice(0, 3) : MON[mi].slice(0, 3);
+    q("reportChip").textContent = lang === "es" ? "Último informe" : "Latest report";
+    q("reportTitle").textContent = lang === "es" ? `Informe de ${MES[mi]} de ${y}: ${pct(r.inflation)}` : `${MON[mi]} ${y} report: ${pct(r.inflation)}`;
+    q("reportText").textContent = lang === "es" ? "Cuánto subieron los precios del súper, por grupo y por supermercado, con los productos que más subieron y bajaron."
+                                                : "How much supermarket prices rose, by group and by supermarket, with the products that rose and fell the most.";
+    document.getElementById("reportLinks").hidden = false; document.getElementById("reportLink").textContent = lang === "es" ? "Leer el informe →" : "Read the report →"; document.getElementById("archiveLink").textContent = lang === "es" ? "Todos los informes" : "All reports";
+  }
 
   const last = daily[daily.length - 1];
   const change = +last.index_paid - 100;
@@ -691,6 +706,8 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
   const [d, g] = await Promise.all([load("index/daily.csv", FALLBACK_DAILY), load("index/groups.csv", FALLBACK_GROUPS)]);
   const lastDate = g.reduce((m, r) => (r.date > m ? r.date : m), "");
   daily = d; groups = g.filter(r => r.date === lastDate); render();
+  try { const r = await fetch("index/informes/lista.json", { cache: "no-store" });
+    if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}
 })();
 </script>
 <script src="counter.js"></script>

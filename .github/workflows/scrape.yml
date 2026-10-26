@@ -1,15 +1,18 @@
 name: Daily supermarket prices
 
-# Main run at 13:23 UTC (14:23 Spain, 10:23 Argentina).
-# GitHub sometimes delays or skips scheduled runs, so there are 3 backups.
-# A backup only does something if today's prices are still missing,
-# so prices are always taken as close to the same time as possible.
+# 5 tries a day, all inside the same Argentine day (UTC-3):
+#   13:23 UTC = 14:23 Spain = 10:23 Argentina  (main run)
+#   15:17 UTC, 16:47 UTC, 20:11 UTC, 23:07 UTC  (backups)
+# GitHub sometimes delays or skips scheduled runs. A backup only collects prices
+# if today's are still missing, so prices are always taken as early as possible.
+# If a run cannot save today's prices, it fails, and GitHub emails the owner.
 on:
   schedule:
     - cron: "23 13 * * *"
+    - cron: "17 15 * * *"
     - cron: "47 16 * * *"
     - cron: "11 20 * * *"
-    - cron: "37 23 * * *"
+    - cron: "7 23 * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,12 +25,13 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Already collected today?
         id: check
         run: |
+          git pull --quiet origin main || true
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/$(date -u +%F).csv.gz" ]; then
             echo "done=yes" >> "$GITHUB_OUTPUT"
             echo "Today's prices are already saved. Nothing to do."
@@ -57,6 +61,18 @@ jobs:
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
           git add data index
-          git commit -m "Prices and index for $(date +%F)" || echo "Nothing new"
-          git pull --rebase origin main
-          git push
+          git commit -m "Prices and index for $(date -u +%F)" || echo "Nothing new"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "Push failed, trying again in 20 seconds"; sleep 20
+          done
+      - name: Check today's prices are really saved
+        if: steps.check.outputs.done == 'no'
+        run: |
+          git fetch --quiet origin main
+          if git cat-file -e "origin/main:data/$(date -u +%F).csv.gz" 2>/dev/null; then
+            echo "OK: today's prices are saved on GitHub."
+          else
+            echo "PROBLEM: today's prices are NOT saved. The next backup run will try again."
+            exit 1
+          fi

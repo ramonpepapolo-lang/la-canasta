@@ -3,7 +3,14 @@
 var GOATCOUNTER_CODE = "lacanasta";
 
 // Email sign-up: the address the subscribe form sends to (from Brevo). Empty = the sign-up box stays hidden.
-var SUBSCRIBE_ACTION = "";
+var SUBSCRIBE_ACTION = "https://d0cbcf18.sibforms.com/serve/" + [
+  "MUIFAJ2G9E2LSize80XqnowNm0uTBtzGxHXvyjc-",
+  "SAI7JFpiIQG6y87uWRfmx3HR-aY8PlhwirhDb24r",
+  "oU7jCNV7w2Mfn5pcMNsHKNMtMloBhR23hvaKlU-n",
+  "-_e_ajxlSANVbDurWVa2n5jmejSZwn4CTPWOKBfH",
+  "Hh_vXy1pgmeyN8PeTQBEJYGNOHxIzu8R_K-vBf41",
+  "nqpE9dKDdg=="
+].join("");
 
 (function () {
   if (!GOATCOUNTER_CODE) return;

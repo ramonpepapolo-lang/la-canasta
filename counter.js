@@ -12,6 +12,9 @@ var SUBSCRIBE_ACTION = "https://d0cbcf18.sibforms.com/serve/" + [
   "nqpE9dKDdg=="
 ].join("");
 
+// Email unsubscribe form address (from Brevo). Empty = the "Darme de baja" button explains how to unsubscribe instead.
+var UNSUBSCRIBE_ACTION = "";
+
 (function () {
   if (!GOATCOUNTER_CODE) return;
   if (/admin\.html$/.test(location.pathname)) return; // don't count your own admin visits

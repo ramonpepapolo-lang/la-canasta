@@ -256,18 +256,27 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 .admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
 .admin-link:hover { color: #FFFFFF; }
 
-.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr auto; gap: 1.2rem 2.5rem; align-items: center; }
+.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr minmax(0, 30rem); gap: 1.2rem 2.5rem; align-items: center; }
 .sub[hidden] { display: none; }
 .sub h2 { color: #FFFFFF; font-size: 1.9rem; }
 .sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
+.sub-act { display: grid; gap: 0.5rem; min-width: 0; }
+.sub-act [hidden] { display: none !important; }
 .sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; min-width: 16rem; color: var(--navy); }
+.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; flex: 1 1 14rem; min-width: 0; color: var(--navy); }
 .sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
-.sub .btn-a { background: var(--celeste); color: var(--navy); }
-.sub-ok { grid-column: 1 / -1; font-weight: 600; color: #FFFFFF !important; }
+.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
+.sub-ok { font-weight: 600; color: #FFFFFF !important; margin: 0 !important; }
+.sub-links { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.92rem; }
+.sub-link { font: inherit; background: none; border: 0; padding: 0; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.sub-link:hover { color: #FFFFFF; }
+.sub .sub-ok a { color: #FFFFFF; }
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-@media (max-width: 760px) { .sub { grid-template-columns: 1fr; padding: 1.5rem; } .sub-form input[type=email] { min-width: 0; flex: 1 1 12rem; } }
+@media (max-width: 760px) { .sub { grid-template-columns: 1fr; padding: 1.5rem; } }
 
+nav a.nav-rep { color: var(--navy); font-weight: 700; border: 1.5px solid var(--navy); border-radius: 999px; padding: 0.3rem 0.85rem; text-decoration: none; }
+nav a.nav-rep:hover { background: var(--navy); color: #FFFFFF; }
+@media (max-width: 440px) { nav a.nav-rep { display: none !important; } }
 /* Monthly report page */
 .rep { display: grid; gap: 3rem; padding-block: 2rem 0; }
 .rep-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
@@ -345,6 +354,7 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
       <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
       <a href="index.html#basket"><span data-lang="es">La canasta</span><span data-lang="en">The basket</span></a>
       <a href="index.html#data"><span data-lang="es">Datos</span><span data-lang="en">Data</span></a>
+      <a class="nav-rep" href="informes.html"><span data-lang="es">Informes</span><span data-lang="en">Reports</span></a>
     </nav>
     <div class="lang-wrap">
       <span class="lang-label"><span data-lang="es">Language</span><span data-lang="en">Idioma</span></span>
@@ -371,21 +381,41 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
     <p class="muted" id="archEmpty" hidden><span data-lang="es">El primer informe sale el 1 de diciembre de 2026.</span><span data-lang="en">The first report comes out on 1 December 2026.</span></p>
   </section>
     <section class="sub" id="suscribirse" hidden>
-      <div>
+      <div class="sub-text">
         <h2><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></h2>
         <p data-lang="es">Una vez por mes, el día que sale. Gratis. Te podés dar de baja cuando quieras.</p>
         <p data-lang="en">Once a month, the day it comes out. Free. Unsubscribe any time.</p>
       </div>
-      <form class="sub-form" id="subForm" target="subFrame" method="POST">
-        <label class="sr" for="subEmail">Email</label>
-        <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
-        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
-        <input type="hidden" name="locale" value="es">
-        <input type="hidden" name="html_type" value="simple">
-        <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
-      </form>
-      <p class="sub-ok" id="subOk" hidden><span data-lang="es">¡Listo! Revisá tu email y confirmá la suscripción (mirá también en spam).</span><span data-lang="en">Done! Check your email and confirm your subscription (check spam too).</span></p>
-      <p class="sub-ok" id="subDone" hidden><span data-lang="es">✓ ¡Suscripción confirmada! Vas a recibir el informe por email el día 1 de cada mes.</span><span data-lang="en">✓ Subscription confirmed! You'll get the report by email on the 1st of every month.</span></p>
+      <div class="sub-act">
+        <form class="sub-form" id="subForm" target="subFrame" method="POST">
+          <label class="sr" for="subEmail">Email</label>
+          <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+          <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+          <input type="hidden" name="locale" value="es">
+          <input type="hidden" name="html_type" value="simple">
+          <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
+        </form>
+        <div id="subYes" hidden>
+          <p class="sub-ok" id="subMsg"></p>
+          <p class="sub-links">
+            <button type="button" class="sub-link" id="unsubBtn"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+            <span aria-hidden="true">·</span>
+            <button type="button" class="sub-link" id="otherBtn"><span data-lang="es">Usar otro email</span><span data-lang="en">Use another email</span></button>
+          </p>
+        </div>
+        <div id="unsubBox" hidden>
+          <p class="sub-ok" id="unsubMsg"></p>
+          <form class="sub-form" id="unsubForm" target="subFrame" method="POST" hidden>
+            <label class="sr" for="unsubEmail">Email</label>
+            <input type="email" id="unsubEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+            <input type="hidden" name="locale" value="es">
+            <input type="hidden" name="html_type" value="simple">
+            <button class="btn-a" type="submit"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+          </form>
+          <p class="sub-links"><button type="button" class="sub-link" id="unsubBack"><span data-lang="es">← Volver</span><span data-lang="en">← Back</span></button></p>
+        </div>
+      </div>
       <iframe name="subFrame" title="subscribe" hidden></iframe>
     </section>
 </main>
@@ -441,16 +471,60 @@ setLang(lang);
 <script src="counter.js"></script>
 <script>
 (function () {
+  // Email sign-up box. This browser remembers if you signed up (only on this device).
   var box = document.getElementById("suscribirse"); if (!box) return;
-  if (/[?&]suscripto=1/.test(location.search)) {      // came back from the confirmation email
-    box.hidden = false; document.getElementById("subForm").hidden = true; document.getElementById("subOk").hidden = true;
-    document.getElementById("subDone").hidden = false; box.scrollIntoView({ block: "center" }); return;
-  }
   var action = (typeof SUBSCRIBE_ACTION === "string") ? SUBSCRIBE_ACTION : "";
-  if (!action) return;                       // hidden until the email service is connected
-  var f = document.getElementById("subForm"); f.action = action; box.hidden = false;
-  f.addEventListener("submit", function () {
-    setTimeout(function () { f.hidden = true; document.getElementById("subOk").hidden = false; }, 300);
+  var unsubAction = (typeof UNSUBSCRIBE_ACTION === "string") ? UNSUBSCRIBE_ACTION : "";
+  if (!action) return;                                   // hidden until the email service is connected
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = "lc-sub";
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { return null; } }
+  function save(v) { try { if (v) localStorage.setItem(KEY, JSON.stringify(v)); else localStorage.removeItem(KEY); } catch (e) {} }
+  function both(es, en) { var a = document.createElement("span"); a.setAttribute("data-lang", "es"); a.textContent = es;
+    var b = document.createElement("span"); b.setAttribute("data-lang", "en"); b.textContent = en; return [a, b]; }
+  function fill(el, es, en) { el.textContent = ""; both(es, en).forEach(function (s) { el.appendChild(s); }); }
+
+  function show() {
+    var s = load();
+    $("subForm").hidden = !!s; $("subYes").hidden = !s; $("unsubBox").hidden = true;
+    if (!s) return;
+    var who = s.email ? " (" + s.email + ")" : "";
+    if (s.state === "confirmed") fill($("subMsg"), "✓ Ya estás suscripto" + who + ". Te llega el informe el día 1 de cada mes.",
+                                                   "✓ You're subscribed" + who + ". The report arrives on the 1st of every month.");
+    else fill($("subMsg"), "✓ Te anotaste" + who + ". Confirmá desde el email que te mandamos (mirá también en spam).",
+                           "✓ You signed up" + who + ". Confirm from the email we sent you (check spam too).");
+  }
+
+  $("subForm").action = action;
+  $("subForm").addEventListener("submit", function () {
+    var email = $("subEmail").value.trim();
+    setTimeout(function () { save({ state: "pending", email: email }); show(); }, 300);
   });
+  $("otherBtn").addEventListener("click", function () { save(null); show(); $("subEmail").focus(); });
+  $("unsubBtn").addEventListener("click", function () {
+    var s = load() || {};
+    $("subYes").hidden = true; $("unsubBox").hidden = false;
+    if (unsubAction) {
+      fill($("unsubMsg"), "Confirmá tu email para darte de baja:", "Confirm your email to unsubscribe:");
+      $("unsubForm").action = unsubAction; $("unsubForm").hidden = false; $("unsubEmail").value = s.email || "";
+    } else {
+      var m = $("unsubMsg"); m.textContent = "";
+      both("Al final de cada email del informe hay un enlace «Darte de baja»: un clic y listo. Si todavía no recibiste ninguno, escribí a ",
+           "Every report email has an «Unsubscribe» link at the bottom: one click and you're out. If you haven't had one yet, write to ")
+        .forEach(function (sp) { var a = document.createElement("a"); a.href = "mailto:hola@lacanastaindex.com?subject=Baja%20del%20informe"; a.textContent = "hola@lacanastaindex.com";
+          sp.appendChild(a); sp.appendChild(document.createTextNode(".")); m.appendChild(sp); });
+    }
+  });
+  $("unsubForm").addEventListener("submit", function () {
+    setTimeout(function () { save(null); $("unsubForm").hidden = true;
+      fill($("unsubMsg"), "Listo, te dimos de baja. No vas a recibir más emails.", "Done, you're unsubscribed. You won't get any more emails."); }, 300);
+  });
+  $("unsubBack").addEventListener("click", function () { show(); });
+
+  if (/[?&]suscripto=1/.test(location.search)) {          // came back from the confirmation email
+    var s = load() || {}; save({ state: "confirmed", email: s.email || "" });
+    setTimeout(function () { box.scrollIntoView({ block: "center" }); }, 200);
+  }
+  box.hidden = false; show();
 })();
 </script>

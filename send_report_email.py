@@ -102,6 +102,7 @@ def build_email(r, unsubscribe):
 supermarket prices in Argentina {"rose" if r["inflation"] >= 0 else "fell"} {sp(r["inflation"]).replace(",", ".")} in {MONTH[mi]} {y}. <a href="{link}" style="color:{NAVY}">Read the full report</a> (switch to English at the top).</p>
 </td></tr></table>
 <p style="max-width:600px;font-size:12px;color:{MUTED};line-height:1.5;margin:16px auto 0">La Canasta es un proyecto independiente de Ramon Pepa. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.<br>
+¿Preguntas o comentarios? Escribinos a <a href="mailto:hola@lacanastaindex.com" style="color:{MUTED}">hola@lacanastaindex.com</a> o respondé este email.<br>
 Recibís este email porque te suscribiste en lacanastaindex.com. <a href="{unsubscribe}" style="color:{MUTED}">Darte de baja</a></p>
 </td></tr></table></body></html>"""
 

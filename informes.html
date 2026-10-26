@@ -385,6 +385,7 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
         <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
       </form>
       <p class="sub-ok" id="subOk" hidden><span data-lang="es">¡Listo! Revisá tu email y confirmá la suscripción (mirá también en spam).</span><span data-lang="en">Done! Check your email and confirm your subscription (check spam too).</span></p>
+      <p class="sub-ok" id="subDone" hidden><span data-lang="es">✓ ¡Suscripción confirmada! Vas a recibir el informe por email el día 1 de cada mes.</span><span data-lang="en">✓ Subscription confirmed! You'll get the report by email on the 1st of every month.</span></p>
       <iframe name="subFrame" title="subscribe" hidden></iframe>
     </section>
 </main>
@@ -441,6 +442,10 @@ setLang(lang);
 <script>
 (function () {
   var box = document.getElementById("suscribirse"); if (!box) return;
+  if (/[?&]suscripto=1/.test(location.search)) {      // came back from the confirmation email
+    box.hidden = false; document.getElementById("subForm").hidden = true; document.getElementById("subOk").hidden = true;
+    document.getElementById("subDone").hidden = false; box.scrollIntoView({ block: "center" }); return;
+  }
   var action = (typeof SUBSCRIBE_ACTION === "string") ? SUBSCRIBE_ACTION : "";
   if (!action) return;                       // hidden until the email service is connected
   var f = document.getElementById("subForm"); f.action = action; box.hidden = false;

@@ -396,9 +396,13 @@ async function load() {
     let sent = "";
     try { const r = await fetch("index/informes/enviados.txt", { cache: "no-store" }); if (r.ok) sent = (await r.text()).trim(); } catch (e) {}
     const lastSent = sent ? sent.split(/\s+/).pop() : "";
-    const ageDays = Math.floor((Date.now() - new Date(last.date + "T13:30:00Z")) / 864e5);
+    // Today's prices are due from 13:23 UTC (14:23 Spain). Before that, yesterday's are the latest expected.
+    const nowUtc = new Date(); const due = new Date(nowUtc);
+    if (nowUtc.getUTCHours() * 60 + nowUtc.getUTCMinutes() < 13 * 60 + 45) due.setUTCDate(due.getUTCDate() - 1);
+    const expected = due.toISOString().slice(0, 10);
+    const ageDays = Math.round((new Date(expected + "T00:00:00Z") - new Date(last.date + "T00:00:00Z")) / 864e5);
     st.textContent = "";
-    st.append(card("Último dato", last.date, ageDays <= 1 ? "Al día" : "Atrasado " + ageDays + " días: revisá GitHub Actions", ageDays <= 1 ? "ok" : "bad"));
+    st.append(card("Último dato", last.date, ageDays <= 0 ? "Al día" : (ageDays === 1 ? "Falta el dato de hoy: GitHub puede venir atrasado, las corridas de respaldo son 17:47, 21:11 y 00:37" : "Faltan " + ageDays + " días: revisá GitHub Actions"), ageDays <= 0 ? "ok" : "bad"));
     st.append(card("Índice (precio pagado)", fmt(last.index_paid), "Precio de lista: " + fmt(last.index_regular)));
     const inStock = Number(last.products_in_stock);
     st.append(card("Productos en stock", inStock + " / 129", inStock >= 110 ? "Normal" : "Bajo: puede faltar un súper", inStock >= 110 ? "ok" : "bad"));

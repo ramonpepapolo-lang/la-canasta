@@ -1,12 +1,23 @@
 name: Daily supermarket prices
 
+# Main run at 13:23 UTC (14:23 Spain, 10:23 Argentina).
+# GitHub sometimes delays or skips scheduled runs, so there are 3 backups.
+# A backup only does something if today's prices are still missing,
+# so prices are always taken as close to the same time as possible.
 on:
   schedule:
     - cron: "23 13 * * *"
+    - cron: "47 16 * * *"
+    - cron: "11 20 * * *"
+    - cron: "37 23 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: daily-prices
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -14,22 +25,38 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Already collected today?
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/$(date -u +%F).csv.gz" ]; then
+            echo "done=yes" >> "$GITHUB_OUTPUT"
+            echo "Today's prices are already saved. Nothing to do."
+          else
+            echo "done=no" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.done == 'no'
         with:
           python-version: "3.12"
-      - run: pip install requests
-      - run: python scrape_supermarkets.py
-      - run: python compute_index.py
+      - if: steps.check.outputs.done == 'no'
+        run: pip install requests
+      - if: steps.check.outputs.done == 'no'
+        run: python scrape_supermarkets.py
+      - if: steps.check.outputs.done == 'no'
+        run: python compute_index.py
       - name: Email the monthly report (only on the 1st, only once)
+        if: steps.check.outputs.done == 'no'
         run: python send_report_email.py
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
           BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
       - name: Save the data and the index
+        if: steps.check.outputs.done == 'no'
         run: |
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
           git add data index
           git commit -m "Prices and index for $(date +%F)" || echo "Nothing new"
+          git pull --rebase origin main
           git push

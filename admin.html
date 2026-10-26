@@ -325,6 +325,7 @@ pre.checks { background: var(--band); border: 1px solid var(--rule); border-radi
         <a class="btn-a" id="draftLink" href="informe.html">Borrador del informe del mes</a>
         <a class="btn-b" id="emailLink" href="informes.html" target="_blank" rel="noopener">Vista previa del email</a>
         <a class="btn-b" href="informes.html">Todos los informes</a>
+        <a class="btn-b" href="https://app.brevo.com/contact/list-listing" target="_blank" rel="noopener">Lista de suscriptores (Brevo)</a>
         <a class="btn-b" href="https://github.com/ramonpepapolo-lang/la-canasta/actions" target="_blank" rel="noopener">Corridas diarias (GitHub Actions)</a>
         <a class="btn-b" href="https://github.com/ramonpepapolo-lang/la-canasta" target="_blank" rel="noopener">Repositorio</a>
         <a class="btn-b" href="https://porkbun.com" target="_blank" rel="noopener">Dominio (Porkbun)</a>
@@ -395,7 +396,6 @@ async function load() {
     let sent = "";
     try { const r = await fetch("index/informes/enviados.txt", { cache: "no-store" }); if (r.ok) sent = (await r.text()).trim(); } catch (e) {}
     const lastSent = sent ? sent.split(/\s+/).pop() : "";
-    st.append(card("Último email enviado", lastSent || "Ninguno", lastSent ? "Informe de " + lastSent : "El primero sale el 1 de diciembre"));
     const ageDays = Math.floor((Date.now() - new Date(last.date + "T13:30:00Z")) / 864e5);
     st.textContent = "";
     st.append(card("Último dato", last.date, ageDays <= 1 ? "Al día" : "Atrasado " + ageDays + " días: revisá GitHub Actions", ageDays <= 1 ? "ok" : "bad"));
@@ -403,6 +403,16 @@ async function load() {
     const inStock = Number(last.products_in_stock);
     st.append(card("Productos en stock", inStock + " / 129", inStock >= 110 ? "Normal" : "Bajo: puede faltar un súper", inStock >= 110 ? "ok" : "bad"));
     st.append(card("Días de datos", String(d.length), "Desde el 24/10/2026"));
+    let subs = [];
+    try { const r = await fetch("index/suscriptores.csv", { cache: "no-store" }); if (r.ok) subs = parseCSV(await r.text()); } catch (e) {}
+    if (subs.length) {
+      const now = subs[subs.length - 1], weekAgo = subs.find(x => x.date >= new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)) || subs[0];
+      const diff = Number(now.subscribers) - Number(weekAgo.subscribers);
+      st.append(card("Suscriptores", now.subscribers, (diff >= 0 ? "+" : "") + diff + " en la última semana · contado el " + now.date));
+    } else {
+      st.append(card("Suscriptores", "–", "Se cuenta todos los días a las 14:23"));
+    }
+    st.append(card("Último email enviado", lastSent || "Ninguno", lastSent ? "Informe de " + lastSent : "El primero sale el 1 de diciembre"));
   } catch (e) { st.textContent = ""; st.append(card("Estado", "–", "No se pudo leer index/daily.csv", "bad")); }
 
   // Checks

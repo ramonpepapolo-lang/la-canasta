@@ -42,23 +42,23 @@ html[lang="en"] span[data-lang="es"], html[lang="en"] p[data-lang="es"] { displa
 nav a.nav-rep { color: var(--navy); font-weight: 700; border: 1.5px solid var(--navy); border-radius: 999px; padding: 0.3rem 0.85rem; text-decoration: none; }
 nav a.nav-rep:hover { background: var(--navy); color: #FFFFFF; }
 @media (max-width: 440px) { nav a.nav-rep { display: none !important; } }
-.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr minmax(0, 30rem); gap: 1.2rem 2.5rem; align-items: center; }
-.sub[hidden] { display: none; }
-.sub h2 { color: #FFFFFF; font-size: 1.9rem; }
-.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
+section.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr minmax(0, 30rem); gap: 1.2rem 2.5rem; align-items: center; }
+section.sub[hidden] { display: none; }
+section.sub h2 { color: #FFFFFF; font-size: 1.9rem; }
+section.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
 .sub-act { display: grid; gap: 0.5rem; min-width: 0; }
 .sub-act [hidden] { display: none !important; }
 .sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; flex: 1 1 14rem; min-width: 0; color: var(--navy); }
 .sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
-.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
+section.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
 .sub-ok { font-weight: 600; color: #FFFFFF !important; margin: 0 !important; }
 .sub-links { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.92rem; }
 .sub-link { font: inherit; background: none; border: 0; padding: 0; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .sub-link:hover { color: #FFFFFF; }
-.sub .sub-ok a { color: #FFFFFF; }
+section.sub .sub-ok a { color: #FFFFFF; }
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-@media (max-width: 760px) { .sub { grid-template-columns: 1fr; padding: 1.5rem; } }
+@media (max-width: 760px) { section.sub { grid-template-columns: 1fr; padding: 1.5rem; } }
 
 /* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
    The day's number sits on a price tag; the basket is printed like a till receipt.
@@ -128,6 +128,15 @@ section { scroll-margin-top: 5.5rem; }
 .btn.ghost { color: var(--navy); background: var(--bg); }
 .btn.ghost:hover { background: var(--band); }
 
+.why-two { font-size: 0.9rem; font-weight: 600; padding-left: 0.4rem; }
+.two-nums { margin-top: 1.2rem; padding: 1.5rem 1.7rem; display: grid; gap: 0.9rem; }
+.two-nums h3 { font-size: 1.45rem; }
+.tn-row { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.8rem; align-items: start; }
+.tn-row p { margin: 0; max-width: 70ch; }
+.tn-key { width: 1.6rem; height: 0; margin-top: 0.75rem; border-top: 3px solid var(--celeste); }
+.tn-key.reg { border-top: 2px dashed var(--navy); }
+.tn-key.gap { border-top: 6px solid var(--band); outline: 1px solid var(--rule); }
+.tn-foot { margin: 0; color: var(--muted); font-size: 0.95rem; }
 .tag-card { display: grid; gap: 1.2rem; justify-items: start; min-width: 0; }
 .tag {
   position: relative; background: var(--navy); color: #FFFFFF;
@@ -309,14 +318,15 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
     </div>
     <div class="tag-card">
       <div class="tag" aria-live="polite">
-        <span class="small" data-t="tagLabel">Precios del súper desde el 24 oct 2026</span>
+        <span class="small" data-t="tagLabel">Lo que se paga, desde el 24 oct 2026</span>
         <span class="big" id="bigChange">+0.00%</span>
         <span class="sub" id="tagSub">Updated</span>
       </div>
       <div class="tag-meta">
         <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
-        <div><span class="eyebrow" data-t="regularLabel">Precios de lista</span><strong class="num" id="regularToday">+0.00%</strong></div>
+        <div><span class="eyebrow" data-t="regularLabel">Sin promociones</span><strong class="num" id="regularToday">+0.00%</strong></div>
       </div>
+      <a class="why-two" href="#dos-numeros"><span data-lang="es">¿Por qué dos números? ↓</span><span data-lang="en">Why two numbers? ↓</span></a>
     </div>
   </div>
 
@@ -345,7 +355,14 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       </div>
       <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
     </div>
-    <p class="chart-note" data-t="early" style="margin-top:1rem">El movimiento de un día dice muy poco. El número que importa es el mensual, que se publica el 1 de cada mes.</p>
+    <div class="panel two-nums" id="dos-numeros">
+      <h3><span data-lang="es">Dos números: ¿cuál mirar?</span><span data-lang="en">Two numbers: which one to look at?</span></h3>
+      <div class="tn-row"><span class="tn-key paid"></span><p data-lang="es"><strong>Precio pagado (el número grande).</strong> Lo que paga cualquier persona en la web del súper ese día, con las ofertas que tiene todo el mundo. Es el número principal, igual que en el INDEC.</p><p data-lang="en"><strong>Price paid (the big number).</strong> What anyone pays on the supermarket's website that day, with the offers everyone gets. It's the main number, the same as INDEC uses.</p></div>
+      <div class="tn-row"><span class="tn-key reg"></span><p data-lang="es"><strong>Sin promociones (precio de lista).</strong> El precio de la etiqueta, sin ninguna oferta.</p><p data-lang="en"><strong>Without promotions (regular price).</strong> The price on the label, with no offers at all.</p></div>
+      <div class="tn-row"><span class="tn-key gap"></span><p data-lang="es"><strong>La diferencia entre los dos es el efecto de las promociones.</strong> Las ofertas que no tiene cualquiera (tarjeta de un banco, 2x1, tarjeta del súper) no se cuentan en ninguno de los dos.</p><p data-lang="en"><strong>The gap between the two is the effect of promotions.</strong> Offers not everyone gets (a bank's card, 2-for-1, store loyalty cards) are not counted in either.</p></div>
+      <p class="tn-foot" data-lang="es">Un solo día dice muy poco: las ofertas empiezan y terminan todo el tiempo. El número que importa es el del mes completo, en el informe mensual.</p>
+      <p class="tn-foot" data-lang="en">A single day says very little: offers start and end all the time. The number that matters is the full month's, in the monthly report.</p>
+    </div>
   </section>
 
   <section class="band" id="why"><div class="container why">
@@ -527,7 +544,7 @@ const T = {
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
     ctaIndex: "See the index", ctaData: "Download the data", ctaReport: "Monthly report",
-    tagLabel: "Supermarket prices since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Regular prices",
+    tagLabel: "What shoppers pay, since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
     statDays: "days of data", statShops: "supermarket chains tracked", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
     indexEyebrow: "The index", chartTitle: "Every day since we started",
     chartIntro: "100 is what the basket cost on 24 October 2026. 101 means it costs 1% more than that day.",
@@ -573,7 +590,7 @@ const T = {
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
     ctaIndex: "Ver el índice", ctaData: "Descargar los datos", ctaReport: "Informe mensual",
-    tagLabel: "Precios del súper desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Precios de lista",
+    tagLabel: "Lo que se paga, desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
     statDays: "días de datos", statShops: "cadenas de supermercados", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
     indexEyebrow: "El índice", chartTitle: "Todos los días desde que empezamos",
     chartIntro: "100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.",

@@ -19,6 +19,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <style>
 [hidden] { display: none !important; }
+html:not([lang="en"]) span[data-lang="en"], html:not([lang="en"]) p[data-lang="en"] { display: none !important; }
+html[lang="en"] span[data-lang="es"], html[lang="en"] p[data-lang="es"] { display: none !important; }
+nav a.nav-rep { color: var(--navy); font-weight: 700; border: 1.5px solid var(--navy); border-radius: 999px; padding: 0.3rem 0.85rem; text-decoration: none; }
+nav a.nav-rep:hover { background: var(--navy); color: #FFFFFF; }
+@media (max-width: 440px) { nav a.nav-rep { display: none !important; } }
+.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr minmax(0, 30rem); gap: 1.2rem 2.5rem; align-items: center; }
+.sub[hidden] { display: none; }
+.sub h2 { color: #FFFFFF; font-size: 1.9rem; }
+.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
+.sub-act { display: grid; gap: 0.5rem; min-width: 0; }
+.sub-act [hidden] { display: none !important; }
+.sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; flex: 1 1 14rem; min-width: 0; color: var(--navy); }
+.sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
+.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
+.sub-ok { font-weight: 600; color: #FFFFFF !important; margin: 0 !important; }
+.sub-links { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.92rem; }
+.sub-link { font: inherit; background: none; border: 0; padding: 0; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.sub-link:hover { color: #FFFFFF; }
+.sub .sub-ok a { color: #FFFFFF; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 760px) { .sub { grid-template-columns: 1fr; padding: 1.5rem; } }
+
 /* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
    The day's number sits on a price tag; the basket is printed like a till receipt.
    Single light theme on purpose: the brand is defined on white. */
@@ -71,7 +94,7 @@ nav a:hover { color: var(--navy); }
 .lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
 .lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
 .copy { font-size: 0.85rem; }
-@media (max-width: 800px) { nav { display: none; } }
+@media (max-width: 800px) { nav { gap: 0; } nav a:not(.nav-rep) { display: none; } }
 
 main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
 section { scroll-margin-top: 5.5rem; }
@@ -242,6 +265,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <a href="#basket" data-t="navBasket">La canasta</a>
       <a href="#shops" data-t="navShops">Supermercados</a>
       <a href="#data" data-t="navData">Datos y método</a>
+      <a class="nav-rep" href="informes.html" data-t="navReport">Informes</a>
     </nav>
     <div class="lang-wrap">
       <span class="lang-label" data-t="langLabel">Language</span>
@@ -261,6 +285,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
       <div class="ctas">
         <a class="btn primary" href="#index" data-t="ctaIndex">Ver el índice</a>
+        <a class="btn ghost" href="informes.html" data-t="ctaReport">Informe mensual</a>
         <a class="btn ghost" href="#data" data-t="ctaData">Descargar los datos</a>
       </div>
     </div>
@@ -352,6 +377,10 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
   </section>
 
   <section class="container" id="reports">
+    <div class="head">
+      <span class="eyebrow" data-t="repEyebrow">Informe mensual</span>
+      <h2 data-t="repTitle">Cada mes, el informe completo</h2>
+    </div>
     <div class="panel report">
       <div class="report-date" data-t="reportDate">1 dic</div>
       <div class="report-text">
@@ -361,6 +390,45 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
         <span id="reportLinks" hidden style="display:flex;gap:1.2rem;flex-wrap:wrap"><a id="reportLink" href="informe.html" style="font-weight:600">Leer el informe →</a><a id="archiveLink" href="informes.html" style="font-weight:600">Todos los informes</a></span>
       </div>
     </div>
+    <div style="height:1rem"></div>
+    <section class="sub" id="suscribirse" hidden>
+      <div class="sub-text">
+        <h2><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></h2>
+        <p data-lang="es">Una vez por mes, el día que sale. Gratis. Te podés dar de baja cuando quieras.</p>
+        <p data-lang="en">Once a month, the day it comes out. Free. Unsubscribe any time.</p>
+      </div>
+      <div class="sub-act">
+        <form class="sub-form" id="subForm" target="subFrame" method="POST">
+          <label class="sr" for="subEmail">Email</label>
+          <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+          <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+          <input type="hidden" name="locale" value="es">
+          <input type="hidden" name="html_type" value="simple">
+          <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
+        </form>
+        <div id="subYes" hidden>
+          <p class="sub-ok" id="subMsg"></p>
+          <p class="sub-links">
+            <button type="button" class="sub-link" id="unsubBtn"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+            <span aria-hidden="true">·</span>
+            <button type="button" class="sub-link" id="otherBtn"><span data-lang="es">Usar otro email</span><span data-lang="en">Use another email</span></button>
+          </p>
+        </div>
+        <div id="unsubBox" hidden>
+          <p class="sub-ok" id="unsubMsg"></p>
+          <form class="sub-form" id="unsubForm" target="subFrame" method="POST" hidden>
+            <label class="sr" for="unsubEmail">Email</label>
+            <input type="email" id="unsubEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+            <input type="hidden" name="locale" value="es">
+            <input type="hidden" name="html_type" value="simple">
+            <button class="btn-a" type="submit"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+          </form>
+          <p class="sub-links"><button type="button" class="sub-link" id="unsubBack"><span data-lang="es">← Volver</span><span data-lang="en">← Back</span></button></p>
+        </div>
+      </div>
+      <iframe name="subFrame" title="subscribe" hidden></iframe>
+    </section>
   </section>
 
   <section class="container" id="data">
@@ -439,7 +507,7 @@ const T = {
     eyebrow: "Daily supermarket price index · Argentina",
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
-    ctaIndex: "See the index", ctaData: "Download the data",
+    ctaIndex: "See the index", ctaData: "Download the data", ctaReport: "Monthly report",
     tagLabel: "Supermarket prices since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Regular prices",
     statDays: "days of data", statShops: "supermarket chains tracked", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
     indexEyebrow: "The index", chartTitle: "Every day since we started",
@@ -471,7 +539,7 @@ const T = {
     shopsEyebrow: "Supermarkets", shopsTitle: "Shop by shop",
     shopsIntro: "Each supermarket is only ever compared with itself. Change since 24 October 2026.",
     coto: "collected, not counted yet",
-    navReport: "Reports", reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
+    navReport: "Reports", repEyebrow: "Monthly report", repTitle: "Every month, the full report", reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
     reportText: "November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.",
     dataEyebrow: "Data and method", dataTitle: "Check every number",
     c1t: "Download the index", c1: "The index every day, overall and by supermarket. Opens in Excel or Google Sheets.", c1g: "Download (CSV)",
@@ -485,7 +553,7 @@ const T = {
     eyebrow: "Índice diario de precios de supermercados · Argentina",
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
-    ctaIndex: "Ver el índice", ctaData: "Descargar los datos",
+    ctaIndex: "Ver el índice", ctaData: "Descargar los datos", ctaReport: "Informe mensual",
     tagLabel: "Precios del súper desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Precios de lista",
     statDays: "días de datos", statShops: "cadenas de supermercados", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
     indexEyebrow: "El índice", chartTitle: "Todos los días desde que empezamos",
@@ -517,7 +585,7 @@ const T = {
     shopsEyebrow: "Supermercados", shopsTitle: "Súper por súper",
     shopsIntro: "Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.",
     coto: "se recolecta, todavía no cuenta",
-    navReport: "Informes", reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
+    navReport: "Informes", repEyebrow: "Informe mensual", repTitle: "Cada mes, el informe completo", reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
     reportText: "El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.",
     dataEyebrow: "Datos y método", dataTitle: "Revisá cada número",
     c1t: "Descargar el índice", c1: "El índice de cada día, en total y por supermercado. Se abre en Excel o Google Sheets.", c1g: "Descargar (CSV)",
@@ -711,3 +779,62 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
 })();
 </script>
 <script src="counter.js"></script>
+<script>
+(function () {
+  // Email sign-up box. This browser remembers if you signed up (only on this device).
+  var box = document.getElementById("suscribirse"); if (!box) return;
+  var action = (typeof SUBSCRIBE_ACTION === "string") ? SUBSCRIBE_ACTION : "";
+  var unsubAction = (typeof UNSUBSCRIBE_ACTION === "string") ? UNSUBSCRIBE_ACTION : "";
+  if (!action) return;                                   // hidden until the email service is connected
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = "lc-sub";
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { return null; } }
+  function save(v) { try { if (v) localStorage.setItem(KEY, JSON.stringify(v)); else localStorage.removeItem(KEY); } catch (e) {} }
+  function both(es, en) { var a = document.createElement("span"); a.setAttribute("data-lang", "es"); a.textContent = es;
+    var b = document.createElement("span"); b.setAttribute("data-lang", "en"); b.textContent = en; return [a, b]; }
+  function fill(el, es, en) { el.textContent = ""; both(es, en).forEach(function (s) { el.appendChild(s); }); }
+
+  function show() {
+    var s = load();
+    $("subForm").hidden = !!s; $("subYes").hidden = !s; $("unsubBox").hidden = true;
+    if (!s) return;
+    var who = s.email ? " (" + s.email + ")" : "";
+    if (s.state === "confirmed") fill($("subMsg"), "✓ Ya estás suscripto" + who + ". Te llega el informe el día 1 de cada mes.",
+                                                   "✓ You're subscribed" + who + ". The report arrives on the 1st of every month.");
+    else fill($("subMsg"), "✓ Te anotaste" + who + ". Confirmá desde el email que te mandamos (mirá también en spam).",
+                           "✓ You signed up" + who + ". Confirm from the email we sent you (check spam too).");
+  }
+
+  $("subForm").action = action;
+  $("subForm").addEventListener("submit", function () {
+    var email = $("subEmail").value.trim();
+    setTimeout(function () { save({ state: "pending", email: email }); show(); }, 300);
+  });
+  $("otherBtn").addEventListener("click", function () { save(null); show(); $("subEmail").focus(); });
+  $("unsubBtn").addEventListener("click", function () {
+    var s = load() || {};
+    $("subYes").hidden = true; $("unsubBox").hidden = false;
+    if (unsubAction) {
+      fill($("unsubMsg"), "Confirmá tu email para darte de baja:", "Confirm your email to unsubscribe:");
+      $("unsubForm").action = unsubAction; $("unsubForm").hidden = false; $("unsubEmail").value = s.email || "";
+    } else {
+      var m = $("unsubMsg"); m.textContent = "";
+      both("Al final de cada email del informe hay un enlace «Darte de baja»: un clic y listo. Si todavía no recibiste ninguno, escribí a ",
+           "Every report email has an «Unsubscribe» link at the bottom: one click and you're out. If you haven't had one yet, write to ")
+        .forEach(function (sp) { var a = document.createElement("a"); a.href = "mailto:hola@lacanastaindex.com?subject=Baja%20del%20informe"; a.textContent = "hola@lacanastaindex.com";
+          sp.appendChild(a); sp.appendChild(document.createTextNode(".")); m.appendChild(sp); });
+    }
+  });
+  $("unsubForm").addEventListener("submit", function () {
+    setTimeout(function () { save(null); $("unsubForm").hidden = true;
+      fill($("unsubMsg"), "Listo, te dimos de baja. No vas a recibir más emails.", "Done, you're unsubscribed. You won't get any more emails."); }, 300);
+  });
+  $("unsubBack").addEventListener("click", function () { show(); });
+
+  if (/[?&]suscripto=1/.test(location.search)) {          // came back from the confirmation email
+    var s = load() || {}; save({ state: "confirmed", email: s.email || "" });
+    setTimeout(function () { box.scrollIntoView({ block: "center" }); }, 200);
+  }
+  box.hidden = false; show();
+})();
+</script>

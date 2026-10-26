@@ -20,6 +20,12 @@ jobs:
       - run: pip install requests
       - run: python scrape_supermarkets.py
       - run: python compute_index.py
+      - name: Email the monthly report (only on the 1st, only once)
+        run: python send_report_email.py
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
       - name: Save the data and the index
         run: |
           git config user.name "la-canasta-bot"

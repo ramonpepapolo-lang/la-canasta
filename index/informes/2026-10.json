@@ -3,14 +3,14 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 3.22,
+ "inflation": 3.1,
  "base_date": "2026-10-24",
- "end_date": "2026-10-26",
- "days_of_data": 3,
- "prices_collected": 30905,
+ "end_date": "2026-10-27",
+ "days_of_data": 4,
+ "prices_collected": 41632,
  "headline": {
-  "end_to_end_paid": 3.22,
-  "end_to_end_regular": 0.84,
+  "end_to_end_paid": 3.1,
+  "end_to_end_regular": 0.73,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -21,7 +21,7 @@
   },
   {
    "shop": "ChangoMas",
-   "pct": 9.22
+   "pct": 8.83
   },
   {
    "shop": "Dia",
@@ -29,7 +29,7 @@
   },
   {
    "shop": "Jumbo",
-   "pct": -0.21
+   "pct": -0.26
   }
  ],
  "groups": [
@@ -54,24 +54,29 @@
    "pct": 4.74
   },
   {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 4.37
-  },
-  {
    "group": "otros_alimentos",
    "in_headline": true,
    "pct": 3.66
   },
   {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 2.25
+  },
+  {
    "group": "verduras",
    "in_headline": true,
-   "pct": 2.65
+   "pct": 2.15
   },
   {
    "group": "lacteos",
    "in_headline": true,
    "pct": 1.53
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": 0.28
   },
   {
    "group": "aceites",
@@ -89,20 +94,15 @@
    "pct": 0.0
   },
   {
-   "group": "aguas_gaseosas",
-   "in_headline": true,
-   "pct": 0.0
-  },
-  {
    "group": "alcohol",
    "in_headline": true,
    "pct": 0.0
   }
  ],
  "products_compared": 129,
- "products_up": 12,
- "products_down": 1,
- "products_same": 116,
+ "products_up": 13,
+ "products_down": 3,
+ "products_same": 113,
  "top_up": [
   {
    "type": "banana",
@@ -154,11 +154,29 @@
   {
    "type": "banana",
    "type_en": "Bananas, per kg",
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "before": 3299.0,
+   "now": 2799.0,
+   "pct": -15.16
+  },
+  {
+   "type": "banana",
+   "type_en": "Bananas, per kg",
    "shop": "Jumbo",
    "name": "Banana Ecuador X Kg",
    "before": 3499.0,
    "now": 2999.0,
    "pct": -14.29
+  },
+  {
+   "type": "tomate",
+   "type_en": "Tomatoes (round), per kg",
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Por Kg",
+   "before": 5199.0,
+   "now": 4999.0,
+   "pct": -3.85
   }
  ],
  "series": [
@@ -176,6 +194,11 @@
    "date": "2026-10-26",
    "paid": 103.217,
    "regular": 100.838
+  },
+  {
+   "date": "2026-10-27",
+   "paid": 103.103,
+   "regular": 100.726
   }
  ]
 }

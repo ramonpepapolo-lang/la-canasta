@@ -95,3 +95,19 @@ jobs:
             echo "PROBLEM: today's prices are NOT saved. The next backup run will try again."
             exit 1
           fi
+      - name: Email Ramon that today's prices are saved (with checks)
+        if: steps.check.outputs.done == 'no'
+        run: python alert_email.py --ok
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}
+      - name: Email Ramon if this run failed
+        if: failure()
+        run: |
+          python3 alert_email.py --fail "La corrida de las $(TZ=Europe/Madrid date +%H:%M) (hora de España) falló. Detalle: $RUN_URL"
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

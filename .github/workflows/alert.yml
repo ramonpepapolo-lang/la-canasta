@@ -1,0 +1,27 @@
+name: Send alert email
+
+# Used by Claude's guardian agent to email Ramon (to the addresses in the ALERT_EMAILS secret).
+on:
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: "Email subject"
+        required: true
+      text:
+        description: "Email text"
+        required: true
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send the email
+        run: python3 alert_email.py --msg "$SUBJECT" "$TEXT"
+        env:
+          SUBJECT: ${{ inputs.subject }}
+          TEXT: ${{ inputs.text }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

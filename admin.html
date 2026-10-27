@@ -339,9 +339,10 @@ pre.checks { background: var(--band); border: 1px solid var(--rule); border-radi
 
 <script src="counter.js"></script>
 <script>
-// Live subscriber count, every minute. Paste the address of your Cloudflare Worker between the quotes
-// (see subscriber-worker.js). Empty = the count from the daily run is shown instead.
-const SUBS_LIVE_URL = "";
+// Live visits and subscribers, every minute. Paste the address of your Cloudflare Worker between the quotes
+// (see subscriber-worker.js). Empty = GoatCounter's public counter (refreshes every ~4 hours) and the
+// subscriber count from the daily run are shown instead.
+const ADMIN_WORKER_URL = "";
 const LIVE_EVERY_MS = 60 * 1000;
 
 const HASH = "5c069afae1a1448c402982902845d9938da49f5849acf7d9b4777ad1ce7b44b0";
@@ -378,6 +379,27 @@ async function loadVisits() {
     return;
   }
   const dash = "https://" + code + ".goatcounter.com";
+  const hhmm = () => new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  if (ADMIN_WORKER_URL) {
+    try {
+      const r = await fetch(ADMIN_WORKER_URL, { cache: "no-store" });
+      const v = r.ok ? (await r.json()).visits : null;
+      if (v && v.total != null) {
+        const pages = v.pages || {};
+        const n = x => (x == null ? "–" : String(x));
+        const cards = el("div", "cards");
+        cards.append(card("Visitas totales", n(v.total), "En vivo · actualizado " + hhmm()),
+          card("Hoy", n(v.today), "Visitas de hoy (hora de España)"),
+          card("Página principal", n(pages["/"]), "Desde el inicio"),
+          card("Informes", n((pages["/informes.html"] || 0) + (pages["/informe.html"] || 0)), "Archivo + informes"),
+          card("Metodología", n(pages["/metodo.html"]), "Desde el inicio"));
+        const l = el("div", "links"); const a = el("a", "btn-a", "Abrir GoatCounter (detalle por día, país, origen)");
+        a.href = dash; a.target = "_blank"; a.rel = "noopener"; l.append(a);
+        box.textContent = ""; box.append(cards, l);
+        return;
+      }
+    } catch (e) {}
+  }
   const one = async (label, path, sub) => {
     try {
       const r = await fetch(dash + "/counter/" + encodeURIComponent(path) + ".json", { cache: "no-store" });
@@ -386,7 +408,7 @@ async function loadVisits() {
     } catch (e) { return card(label, "–", "Activá en GoatCounter: Settings → “Allow adding visitor counts on your website”.", ""); }
   };
   const got = await Promise.all([
-    one("Visitas totales", "TOTAL", "Todas las páginas, desde el inicio"),
+    one("Visitas totales", "TOTAL", "Todas las páginas · GoatCounter actualiza este número cada ~4 horas"),
     one("Página principal", "/", "Visitas a lacanastaindex.com"),
     one("Metodología", "/metodo.html", "Visitas al método")
   ]);
@@ -400,8 +422,8 @@ async function subsCard() {
   let subs = [];
   try { const r = await fetch("index/suscriptores.csv", { cache: "no-store" }); if (r.ok) subs = parseCSV(await r.text()); } catch (e) {}
   let live = null;
-  if (SUBS_LIVE_URL) {
-    try { const r = await fetch(SUBS_LIVE_URL, { cache: "no-store" }); if (r.ok) { const j = await r.json(); if (j.subscribers != null) live = Number(j.subscribers); } } catch (e) {}
+  if (ADMIN_WORKER_URL) {
+    try { const r = await fetch(ADMIN_WORKER_URL, { cache: "no-store" }); if (r.ok) { const j = await r.json(); if (j.subscribers != null) live = Number(j.subscribers); } } catch (e) {}
   }
   const weekAgo = subs.length ? (subs.find(x => x.date >= new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)) || subs[0]) : null;
   const diffTxt = n => weekAgo ? ((n - Number(weekAgo.subscribers) >= 0 ? "+" : "") + (n - Number(weekAgo.subscribers)) + " en la última semana") : "";
@@ -410,7 +432,7 @@ async function subsCard() {
     c = card("Suscriptores", String(live), [diffTxt(live), "en vivo"].filter(Boolean).join(" · "), "ok");
   } else if (subs.length) {
     const now = subs[subs.length - 1];
-    c = card("Suscriptores", now.subscribers, diffTxt(Number(now.subscribers)) + " · contado el " + now.date + (SUBS_LIVE_URL ? " (el conteo en vivo no respondió)" : ""));
+    c = card("Suscriptores", now.subscribers, diffTxt(Number(now.subscribers)) + " · contado el " + now.date + (ADMIN_WORKER_URL ? " (el conteo en vivo no respondió)" : ""));
   } else {
     c = card("Suscriptores", "–", "Se cuenta todos los días a las 14:23");
   }

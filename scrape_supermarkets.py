@@ -40,7 +40,10 @@ SEARCHES = [
 COLUMNS = ["date", "shop", "search", "sku_id", "ean", "name", "brand", "category",
            "unit", "unit_multiplier", "price", "list_price", "available", "basket_type", "extra"]
 
-today = datetime.date.today().isoformat()
+# The day is always the ARGENTINE date (a run that GitHub starts late at night
+# in Europe still counts as the same day in Argentina).
+from zoneinfo import ZoneInfo
+today = datetime.datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date().isoformat()
 prices = {}  # one entry per shop + product, so nothing is saved twice
 
 

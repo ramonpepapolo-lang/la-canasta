@@ -774,11 +774,45 @@ function render() {
   }
 
   const last = daily[daily.length - 1];
-  const change = +last.index_paid - 100;
-  document.getElementById("bigChange").textContent = pct(change);
-  document.getElementById("tagSub").textContent = `${t.tagSub} ${fmtDate(last.date)}`;
+  // The big number only shows a FAIR comparison (promotions come and go every week):
+  //   fewer than 14 days of data -> "collecting data, day N of 14"
+  //   14+ days                   -> average of the last 7 days vs the 7 days before
+  //   a published monthly report -> that month's inflation (the official figure)
+  const change = +last.index_paid - 100;  // since 24 Oct, still used by the receipt below
+  const es = lang === "es", n = daily.length;
+  const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const avg = (rows, k) => rows.reduce((a, r) => a + +r[k], 0) / rows.length;
+  const week = k => (avg(daily.slice(-7), k) / avg(daily.slice(-14, -7), k) - 1) * 100;
+  const big = document.getElementById("bigChange"), label = document.querySelector('[data-t="tagLabel"]');
+  const note = document.querySelector(".tag-note"); if (note) note.hidden = true;
+  big.style.fontSize = "";
+  if (latestReport) {
+    const mi = +latestReport.month.slice(5) - 1, y = latestReport.month.slice(0, 4);
+    label.textContent = es ? `Inflación del súper en ${MESES[mi]} ${y}` : `Supermarket inflation, ${MONTHS[mi]} ${y}`;
+    big.textContent = pct(latestReport.inflation);
+    document.getElementById("tagSub").textContent = es ? "Informe mensual · precio pagado" : "Monthly report · price paid";
+  } else if (n >= 14) {
+    label.textContent = es ? "Últimos 7 días contra la semana anterior" : "Last 7 days vs the week before";
+    big.textContent = pct(week("index_paid"));
+    document.getElementById("tagSub").textContent = es ? `Promedio de 7 días · datos al ${fmtDate(last.date)}` : `7-day average · data to ${fmtDate(last.date)}`;
+  } else {
+    const first = new Date(daily[0].date + "T12:00:00Z"); first.setUTCDate(first.getUTCDate() + 13);
+    const ready = first.toISOString().slice(0, 10);
+    label.textContent = es ? "Recolectando datos" : "Collecting data";
+    big.textContent = es ? `Día ${n} de 14` : `Day ${n} of 14`;
+    big.style.fontSize = "clamp(2.6rem, 7vw, 4.4rem)";
+    document.getElementById("tagSub").textContent = es ? `Primera comparación confiable: ${fmtDate(ready)}` : `First reliable comparison: ${fmtDate(ready)}`;
+  }
   document.getElementById("indexToday").textContent = num(+last.index_paid);
-  document.getElementById("regularToday").textContent = pct(+last.index_regular - 100);
+  const regLabel = document.querySelector('[data-t="regularLabel"]');
+  if (n >= 14) {
+    regLabel.textContent = es ? "Sin promociones, 7 días" : "Without promotions, 7 days";
+    document.getElementById("regularToday").textContent = pct(week("index_regular"));
+  } else {
+    regLabel.textContent = es ? "Índice sin promociones" : "Index without promotions";
+    document.getElementById("regularToday").textContent = num(+last.index_regular);
+  }
   document.getElementById("statDays").textContent = daily.length;
   document.getElementById("roPaid").textContent = num(+last.index_paid);
   document.getElementById("roReg").textContent = num(+last.index_regular);

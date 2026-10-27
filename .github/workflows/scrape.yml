@@ -5,6 +5,8 @@ name: Daily supermarket prices
 #   15:17 UTC, 16:47 UTC, 20:11 UTC, 23:07 UTC  (backups)
 # GitHub sometimes delays or skips scheduled runs. A backup only collects prices
 # if today's are still missing, so prices are always taken as early as possible.
+# "Today" is always the ARGENTINE date, and nothing is collected before 9:00 in Argentina,
+# so a run that GitHub starts hours late can never be saved under the wrong day.
 # If a run cannot save today's prices, it fails, and GitHub emails the owner.
 # An outside alarm clock (cron-job.org) also starts this workflow every day, because
 # GitHub's own clock can be hours late. Those starts also skip if today is already saved.
@@ -36,11 +38,20 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - name: Already collected today?
+      - name: Already collected today? (Argentine date)
         id: check
         run: |
           git pull --quiet origin main || true
-          if [ "${{ inputs.force }}" != "true" ] && [ -f "data/$(date -u +%F).csv.gz" ]; then
+          AR_DATE=$(TZ=America/Argentina/Buenos_Aires date +%F)
+          AR_HOUR=$(TZ=America/Argentina/Buenos_Aires date +%-H)
+          echo "Argentina now: $AR_DATE, hour $AR_HOUR"
+          echo "ar_date=$AR_DATE" >> "$GITHUB_OUTPUT"
+          if [ "${{ inputs.force }}" = "true" ]; then
+            echo "done=no" >> "$GITHUB_OUTPUT"
+          elif [ "$AR_HOUR" -lt 9 ]; then
+            echo "done=yes" >> "$GITHUB_OUTPUT"
+            echo "Too early in Argentina (before 9:00). Prices are only collected from 9:00 Argentine time."
+          elif [ -f "data/$AR_DATE.csv.gz" ]; then
             echo "done=yes" >> "$GITHUB_OUTPUT"
             echo "Today's prices are already saved. Nothing to do."
           else
@@ -69,7 +80,7 @@ jobs:
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
           git add data index
-          git commit -m "Prices and index for $(date -u +%F)" || echo "Nothing new"
+          git commit -m "Prices and index for ${{ steps.check.outputs.ar_date }}" || echo "Nothing new"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && break
             echo "Push failed, trying again in 20 seconds"; sleep 20
@@ -78,7 +89,7 @@ jobs:
         if: steps.check.outputs.done == 'no'
         run: |
           git fetch --quiet origin main
-          if git cat-file -e "origin/main:data/$(date -u +%F).csv.gz" 2>/dev/null; then
+          if git cat-file -e "origin/main:data/${{ steps.check.outputs.ar_date }}.csv.gz" 2>/dev/null; then
             echo "OK: today's prices are saved on GitHub."
           else
             echo "PROBLEM: today's prices are NOT saved. The next backup run will try again."

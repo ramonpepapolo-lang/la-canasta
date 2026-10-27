@@ -12,6 +12,7 @@
 # with the latest numbers but does NOT send it to anyone. Used by the "Test email" button in GitHub Actions.
 
 import datetime
+from zoneinfo import ZoneInfo
 import html
 import json
 import os
@@ -161,7 +162,7 @@ def main():
     if m in sent:
         print(f"Email: {m} was already sent.")
         return
-    today = datetime.date.today()
+    today = datetime.datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date()
     y, mo = int(m[:4]), int(m[5:])
     next_month = datetime.date(y + mo // 12, mo % 12 + 1, 1)
     if today < next_month:
@@ -208,7 +209,7 @@ def count_subscribers():
     if n is None:
         print("WARNING: Brevo did not say how many subscribers there are.")
         return
-    path, today = "index/suscriptores.csv", datetime.date.today().isoformat()
+    path, today = "index/suscriptores.csv", datetime.datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date().isoformat()
     rows = [l for l in (read(path) or "date,subscribers\n").splitlines() if l and not l.startswith(today)]
     if rows[0] != "date,subscribers":
         rows.insert(0, "date,subscribers")

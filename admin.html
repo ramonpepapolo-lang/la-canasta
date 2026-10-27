@@ -305,6 +305,7 @@ pre.checks { background: var(--band); border: 1px solid var(--rule); border-radi
 
     <section class="asec">
       <h2>Visitas</h2>
+      <p class="muted" id="liveStamp" style="margin:0 0 0.8rem;font-size:0.9rem">Visitas y suscriptores se actualizan solos cada minuto.</p>
       <div id="gcBox"></div>
     </section>
 
@@ -338,6 +339,11 @@ pre.checks { background: var(--band); border: 1px solid var(--rule); border-radi
 
 <script src="counter.js"></script>
 <script>
+// Live subscriber count, every minute. Paste the address of your Cloudflare Worker between the quotes
+// (see subscriber-worker.js). Empty = the count from the daily run is shown instead.
+const SUBS_LIVE_URL = "";
+const LIVE_EVERY_MS = 60 * 1000;
+
 const HASH = "5c069afae1a1448c402982902845d9938da49f5849acf7d9b4777ad1ce7b44b0";
 const SALT = "la-canasta-admin-v1:";
 async function sha(t) {
@@ -359,32 +365,70 @@ function card(k, v, s, sCls) { const c = el("div", "card"); c.append(el("span", 
 function parseCSV(t) { const L = t.trim().split(/\r?\n/); const h = L.shift().split(","); return L.map(l => Object.fromEntries(l.split(",").map((v, i) => [h[i], v]))); }
 const fmt = n => Number(n).toLocaleString("es-AR", { maximumFractionDigits: 3 });
 
-async function load() {
-  // Visitors
-  const box = document.getElementById("gcBox"); box.textContent = "";
+async function loadVisits() {
+  const box = document.getElementById("gcBox");
   const code = (typeof GOATCOUNTER_CODE === "string") ? GOATCOUNTER_CODE : "";
   if (!code) {
+    box.textContent = "";
     const h = el("div", "howto");
     h.append(el("strong", null, "El contador de visitas todavía no está conectado."));
     const ol = el("ol");
     ["Creá una cuenta en goatcounter.com (gratis).", "Abrí el archivo counter.js en GitHub y escribí tu código entre las comillas.", "Listo: las visitas aparecen acá."].forEach(t => ol.append(el("li", null, t)));
     h.append(ol); box.append(h);
-  } else {
-    const cards = el("div", "cards"); box.append(cards);
-    const dash = "https://" + code + ".goatcounter.com";
-    const add = async (label, path, sub) => {
-      try {
-        const r = await fetch(dash + "/counter/" + encodeURIComponent(path) + ".json");
-        if (!r.ok) throw 0;
-        const j = await r.json(); cards.append(card(label, j.count, sub));
-      } catch (e) { cards.append(card(label, "–", "Activá en GoatCounter: Settings → “Allow adding visitor counts on your website”.", "")); }
-    };
-    await add("Visitas totales", "TOTAL", "Todas las páginas, desde el inicio");
-    await add("Página principal", "/", "Visitas a lacanastaindex.com");
-    await add("Metodología", "/metodo.html", "Visitas al método");
-    const l = el("div", "links"); const a = el("a", "btn-a", "Abrir GoatCounter (detalle por día, país, origen)");
-    a.href = dash; a.target = "_blank"; a.rel = "noopener"; l.append(a); box.append(l);
+    return;
   }
+  const dash = "https://" + code + ".goatcounter.com";
+  const one = async (label, path, sub) => {
+    try {
+      const r = await fetch(dash + "/counter/" + encodeURIComponent(path) + ".json", { cache: "no-store" });
+      if (!r.ok) throw 0;
+      const j = await r.json(); return card(label, j.count, sub);
+    } catch (e) { return card(label, "–", "Activá en GoatCounter: Settings → “Allow adding visitor counts on your website”.", ""); }
+  };
+  const got = await Promise.all([
+    one("Visitas totales", "TOTAL", "Todas las páginas, desde el inicio"),
+    one("Página principal", "/", "Visitas a lacanastaindex.com"),
+    one("Metodología", "/metodo.html", "Visitas al método")
+  ]);
+  const cards = el("div", "cards"); got.forEach(c => cards.append(c));
+  const l = el("div", "links"); const a = el("a", "btn-a", "Abrir GoatCounter (detalle por día, país, origen)");
+  a.href = dash; a.target = "_blank"; a.rel = "noopener"; l.append(a);
+  box.textContent = ""; box.append(cards, l);
+}
+
+async function subsCard() {
+  let subs = [];
+  try { const r = await fetch("index/suscriptores.csv", { cache: "no-store" }); if (r.ok) subs = parseCSV(await r.text()); } catch (e) {}
+  let live = null;
+  if (SUBS_LIVE_URL) {
+    try { const r = await fetch(SUBS_LIVE_URL, { cache: "no-store" }); if (r.ok) { const j = await r.json(); if (j.subscribers != null) live = Number(j.subscribers); } } catch (e) {}
+  }
+  const weekAgo = subs.length ? (subs.find(x => x.date >= new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)) || subs[0]) : null;
+  const diffTxt = n => weekAgo ? ((n - Number(weekAgo.subscribers) >= 0 ? "+" : "") + (n - Number(weekAgo.subscribers)) + " en la última semana") : "";
+  let c;
+  if (live != null) {
+    c = card("Suscriptores", String(live), [diffTxt(live), "en vivo"].filter(Boolean).join(" · "), "ok");
+  } else if (subs.length) {
+    const now = subs[subs.length - 1];
+    c = card("Suscriptores", now.subscribers, diffTxt(Number(now.subscribers)) + " · contado el " + now.date + (SUBS_LIVE_URL ? " (el conteo en vivo no respondió)" : ""));
+  } else {
+    c = card("Suscriptores", "–", "Se cuenta todos los días a las 14:23");
+  }
+  c.id = "subsCard";
+  return c;
+}
+
+async function refreshLive() {
+  if (document.getElementById("admin").hidden) return;
+  await loadVisits();
+  const old = document.getElementById("subsCard");
+  if (old) old.replaceWith(await subsCard());
+  const t = new Date().toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  document.getElementById("liveStamp").textContent = "Visitas y suscriptores se actualizan solos cada minuto · última vez " + t;
+}
+
+async function load() {
+  await refreshLive();
 
   // Index status
   const st = document.getElementById("status");
@@ -407,15 +451,7 @@ async function load() {
     const inStock = Number(last.products_in_stock);
     st.append(card("Productos en stock", inStock + " / 129", inStock >= 110 ? "Normal" : "Bajo: puede faltar un súper", inStock >= 110 ? "ok" : "bad"));
     st.append(card("Días de datos", String(d.length), "Desde el 24/10/2026"));
-    let subs = [];
-    try { const r = await fetch("index/suscriptores.csv", { cache: "no-store" }); if (r.ok) subs = parseCSV(await r.text()); } catch (e) {}
-    if (subs.length) {
-      const now = subs[subs.length - 1], weekAgo = subs.find(x => x.date >= new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)) || subs[0];
-      const diff = Number(now.subscribers) - Number(weekAgo.subscribers);
-      st.append(card("Suscriptores", now.subscribers, (diff >= 0 ? "+" : "") + diff + " en la última semana · contado el " + now.date));
-    } else {
-      st.append(card("Suscriptores", "–", "Se cuenta todos los días a las 14:23"));
-    }
+    st.append(await subsCard());
     st.append(card("Último email enviado", lastSent || "Ninguno", lastSent ? "Informe de " + lastSent : "El primero sale el 1 de diciembre"));
   } catch (e) { st.textContent = ""; st.append(card("Estado", "–", "No se pudo leer index/daily.csv", "bad")); }
 
@@ -424,4 +460,6 @@ async function load() {
   catch (e) { document.getElementById("checks").textContent = "No se pudo leer index/checks.txt"; }
 }
 if (unlocked()) show();
+setInterval(() => { if (!document.hidden) refreshLive(); }, LIVE_EVERY_MS);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshLive(); });
 </script>

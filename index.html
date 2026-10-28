@@ -112,6 +112,8 @@ nav a:hover { color: var(--navy); }
 .lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
 .lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
 .copy { font-size: 0.85rem; }
+@media (max-width: 1120px) { nav a[href="#shops"] { display: none; } }
+@media (max-width: 960px) { nav { gap: 1.1rem; } }
 @media (max-width: 800px) { nav { gap: 0; } nav a:not(.nav-rep) { display: none; } }
 
 main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
@@ -305,6 +307,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <a href="#basket" data-t="navBasket">La canasta</a>
       <a href="#shops" data-t="navShops">Supermercados</a>
       <a href="#data" data-t="navData">Datos y método</a>
+      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
       <a class="nav-rep" href="informes.html" data-t="navReport">Informes</a>
     </nav>
     <div class="lang-wrap">
@@ -526,6 +529,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <a href="#data" data-t="navData">Datos y método</a>
       <a href="metodo.html" data-t="navMethod">Metodología</a>
       <a href="informes.html" data-t="navReport">Informes</a>
+      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
     </div>
   </div>
 </footer>

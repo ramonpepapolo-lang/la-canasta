@@ -3,50 +3,50 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 3.1,
+ "inflation": 3.92,
  "base_date": "2026-10-24",
- "end_date": "2026-10-27",
- "days_of_data": 4,
- "prices_collected": 41632,
+ "end_date": "2026-10-28",
+ "days_of_data": 5,
+ "prices_collected": 52348,
  "headline": {
-  "end_to_end_paid": 3.1,
-  "end_to_end_regular": 0.73,
+  "end_to_end_paid": 3.92,
+  "end_to_end_regular": 1.37,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.09
+   "pct": 2.36
   },
   {
    "shop": "ChangoMas",
-   "pct": 8.83
+   "pct": 8.0
   },
   {
    "shop": "Dia",
-   "pct": 3.61
+   "pct": 5.95
   },
   {
    "shop": "Jumbo",
-   "pct": -0.26
+   "pct": 0.35
   }
  ],
  "groups": [
   {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": 10.18
+  },
+  {
+   "group": "verduras",
+   "in_headline": true,
+   "pct": 8.96
+  },
+  {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 10.08
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 5.91
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 4.76
+   "pct": 5.69
   },
   {
    "group": "limpieza",
@@ -54,24 +54,29 @@
    "pct": 4.74
   },
   {
-   "group": "otros_alimentos",
+   "group": "lacteos",
    "in_headline": true,
-   "pct": 3.66
+   "pct": 3.88
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 3.83
   },
   {
    "group": "frutas",
    "in_headline": true,
-   "pct": 2.25
+   "pct": 3.64
   },
   {
-   "group": "verduras",
+   "group": "pan_cereales",
    "in_headline": true,
-   "pct": 2.15
+   "pct": 1.47
   },
   {
-   "group": "lacteos",
+   "group": "azucar",
    "in_headline": true,
-   "pct": 1.53
+   "pct": 0.32
   },
   {
    "group": "aguas_gaseosas",
@@ -80,11 +85,6 @@
   },
   {
    "group": "aceites",
-   "in_headline": true,
-   "pct": 0.0
-  },
-  {
-   "group": "azucar",
    "in_headline": true,
    "pct": 0.0
   },
@@ -100,9 +100,9 @@
   }
  ],
  "products_compared": 129,
- "products_up": 13,
- "products_down": 3,
- "products_same": 113,
+ "products_up": 24,
+ "products_down": 10,
+ "products_same": 95,
  "top_up": [
   {
    "type": "banana",
@@ -110,26 +110,17 @@
    "shop": "Carrefour",
    "name": "Banana selección x kg.",
    "before": 1399.0,
-   "now": 2299.0,
-   "pct": 64.33
+   "now": 2499.0,
+   "pct": 78.63
   },
   {
-   "type": "pan_lactal",
-   "type_en": "Sliced white bread",
+   "type": "tomate",
+   "type_en": "Tomatoes (round), per kg",
    "shop": "ChangoMas",
-   "name": "Pan Lactal De Mesa 315 G",
-   "before": 2347.8,
-   "now": 3612.0,
-   "pct": 53.85
-  },
-  {
-   "type": "shampoo",
-   "type_en": "Shampoo, ~350-400 ml",
-   "shop": "ChangoMas",
-   "name": "Shampoo Sedal Ceramidas 340ml",
-   "before": 4152.85,
-   "now": 6389.0,
-   "pct": 53.85
+   "name": "Tomate Redondo 500 G",
+   "before": 2999.0,
+   "now": 4899.0,
+   "pct": 63.35
   },
   {
    "type": "jabon_tocador",
@@ -137,46 +128,73 @@
    "shop": "ChangoMas",
    "name": "Jabón De Tocador Palmolive Naturals Karite 85 G",
    "before": 636.35,
-   "now": 979.0,
-   "pct": 53.85
+   "now": 1039.0,
+   "pct": 63.27
   },
   {
-   "type": "pollo_entero",
-   "type_en": "Whole chicken, per kg",
+   "type": "mayonesa",
+   "type_en": "Mayonnaise, ~475-500 g",
    "shop": "Dia",
-   "name": "Pollo Fresco x Kg.",
-   "before": 2990.0,
-   "now": 4390.0,
-   "pct": 46.82
+   "name": "Mayonesa Pouch Danica 500 Gr.",
+   "before": 1390.0,
+   "now": 2265.0,
+   "pct": 62.95
+  },
+  {
+   "type": "leche",
+   "type_en": "Whole milk, 1 L",
+   "shop": "Dia",
+   "name": "Leche Larga Vida Clásica 3% La Serenisima 1 Lt.",
+   "before": 1940.0,
+   "now": 3030.0,
+   "pct": 56.19
   }
  ],
  "top_down": [
   {
-   "type": "banana",
-   "type_en": "Bananas, per kg",
-   "shop": "ChangoMas",
-   "name": "Banana 1 Kg",
-   "before": 3299.0,
-   "now": 2799.0,
-   "pct": -15.16
+   "type": "fideos",
+   "type_en": "Dry spaghetti, 500 g",
+   "shop": "Dia",
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "before": 1850.0,
+   "now": 1050.0,
+   "pct": -43.24
   },
   {
-   "type": "banana",
-   "type_en": "Bananas, per kg",
-   "shop": "Jumbo",
-   "name": "Banana Ecuador X Kg",
-   "before": 3499.0,
-   "now": 2999.0,
-   "pct": -14.29
+   "type": "shampoo",
+   "type_en": "Shampoo, ~350-400 ml",
+   "shop": "Dia",
+   "name": "Shampoo SEDAL Ceramidas Botella 340 Ml.",
+   "before": 6380.0,
+   "now": 4147.0,
+   "pct": -35.0
   },
   {
-   "type": "tomate",
-   "type_en": "Tomatoes (round), per kg",
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Por Kg",
-   "before": 5199.0,
-   "now": 4999.0,
-   "pct": -3.85
+   "type": "dulce_de_leche",
+   "type_en": "Dulce de leche, 400 g",
+   "shop": "Dia",
+   "name": "Dulce de Leche Clásico Ilolay 400 Gr.",
+   "before": 3819.0,
+   "now": 2860.0,
+   "pct": -25.11
+  },
+  {
+   "type": "harina_000",
+   "type_en": "Flour 000, 1 kg",
+   "shop": "Dia",
+   "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
+   "before": 1300.0,
+   "now": 975.0,
+   "pct": -25.0
+  },
+  {
+   "type": "huevos",
+   "type_en": "White eggs, 12",
+   "shop": "Dia",
+   "name": "Huevo Blanco Grande 12 Ud.",
+   "before": 4390.0,
+   "now": 3690.0,
+   "pct": -15.95
   }
  ],
  "series": [
@@ -199,6 +217,11 @@
    "date": "2026-10-27",
    "paid": 103.103,
    "regular": 100.726
+  },
+  {
+   "date": "2026-10-28",
+   "paid": 103.924,
+   "regular": 101.368
   }
  ]
 }

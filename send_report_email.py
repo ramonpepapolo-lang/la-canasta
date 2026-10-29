@@ -5,6 +5,8 @@
 #   2. We are already in the next month (so you get until the next run, on the 1st, to check it and write your note).
 #   3. The file notas/pausar-email.txt does NOT exist (create that file to stop sending).
 #   4. The Brevo secrets are set in GitHub (BREVO_API_KEY, BREVO_LIST_ID, BREVO_SENDER).
+#   5. Ramon APPROVED it: the file notas/aprobar-email-YYYY-MM.txt exists (he checks the preview first).
+#   6. The independent check passed: index/verificacion.txt exists and has no "PROBLEMA" line.
 # Every day it also saves a preview of the email: index/informes/email-YYYY-MM.html
 # If anything goes wrong it just prints a warning. It never stops the daily prices from being saved.
 #
@@ -173,6 +175,13 @@ def main():
         return
     if os.path.exists("notas/pausar-email.txt"):
         print("Email: PAUSED (notas/pausar-email.txt exists). Delete that file to send.")
+        return
+    if not os.path.exists(f"notas/aprobar-email-{m}.txt"):
+        print(f"Email: {m} is waiting for Ramon's approval (notas/aprobar-email-{m}.txt does not exist). Not sending.")
+        return
+    check = read("index/verificacion.txt") or ""
+    if not check or "PROBLEMA" in check:
+        print("Email: the independent check did not pass (index/verificacion.txt). Not sending.")
         return
     key, list_id, sender = (os.environ.get(k, "").strip() for k in ("BREVO_API_KEY", "BREVO_LIST_ID", "BREVO_SENDER"))
     if not (key and list_id and sender):

@@ -43,6 +43,13 @@ group_at = defaultdict(dict)  # date -> group -> row
 for g in groups:
     group_at[g["date"]][g["group"]] = g
 
+# Prices left out after the daily review (same file the index uses)
+EXCL_PAID = set()
+if os.path.exists("notas/excluir.csv"):
+    for r in read_csv("notas/excluir.csv"):
+        if r["kind"].strip() in ("paid", "both"):
+            EXCL_PAID.add((r["date"].strip(), r["shop"].strip(), str(r["sku_id"]).strip()))
+
 # Basket prices for every day (price paid, in stock only), and how many prices were collected
 prices = defaultdict(dict)    # date -> (shop, sku) -> price
 collected = defaultdict(int)  # date -> number of prices saved that day
@@ -57,7 +64,7 @@ for path in sorted(glob.glob("data/????-??-??.csv.gz")):
                     p = float(r["price"])
                 except (TypeError, ValueError):
                     continue
-                if p > 0:
+                if p > 0 and (date, key[0], key[1]) not in EXCL_PAID:
                     prices[date][key] = p
 
 

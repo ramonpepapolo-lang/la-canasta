@@ -67,8 +67,14 @@ jobs:
         run: python scrape_supermarkets.py
       - if: steps.check.outputs.done == 'no'
         run: python compute_index.py
-      - name: Email the monthly report (only on the 1st, only once)
+      - name: Check the index independently (never stops the prices being saved)
+        id: verify
         if: steps.check.outputs.done == 'no'
+        continue-on-error: true
+        run: python verify_index.py
+      - name: Email the monthly report (only once Ramon approved it and the check passed)
+        if: steps.check.outputs.done == 'no'
+        continue-on-error: true
         run: python send_report_email.py
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
@@ -99,6 +105,7 @@ jobs:
         if: steps.check.outputs.done == 'no'
         run: python alert_email.py --ok
         env:
+          VERIFY: ${{ steps.verify.outcome }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
           ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

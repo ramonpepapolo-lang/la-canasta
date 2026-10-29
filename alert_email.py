@@ -95,6 +95,11 @@ def daily_check():
         problems.append(f"Solo {in_stock} de 129 productos con stock.")
     if checks:
         problems.append(f"{len(checks) // 2 or 1} precio(s) dejados afuera por parecer errores (ver index/checks.txt).")
+    if os.environ.get("VERIFY") == "failure":
+        detail_v = ""
+        if os.path.exists("index/verificacion.txt"):
+            detail_v = " ".join(l for l in open("index/verificacion.txt", encoding="utf-8").read().splitlines() if l.startswith("PROBLEMA"))[:600]
+        problems.append("La verificación independiente del índice NO coincide. El informe mensual no se va a enviar hasta que se arregle. " + detail_v)
 
     change = ""
     if prev and last.get("date") == today:
@@ -112,7 +117,7 @@ def daily_check():
                     f"<p>Se guardaron <b>{len(rows):,}</b> precios a las {hora} (hora de España) y pasaron todos los controles. "
                     "No tenés que hacer nada.</p>".replace(",", ".") + detail +
                     f"<p style='color:{MUTED};font-size:13px'>Controles: los 5 súper respondieron normal, la canasta está completa, "
-                    "el índice se actualizó y no hubo precios raros. El auditor revisa además cada domingo que no haya precios viejos o falsos.</p>")
+                    "el índice se actualizó, la verificación independiente coincide y no hubo precios raros. Cada noche el revisor mira los cambios grandes y cada domingo el auditor revisa todo.</p>")
     items = "".join(f"<li>{html.escape(p)}</li>" for p in problems)
     return send(f"⚠️ La Canasta: datos guardados, pero revisá ({today})",
                 f"<h2 style='color:{BAD}'>Los datos de hoy se guardaron, pero algo no está normal</h2>"

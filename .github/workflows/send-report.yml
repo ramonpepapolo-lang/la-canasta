@@ -1,0 +1,65 @@
+name: Send the approved monthly report
+
+# The monthly report email is NEVER sent automatically.
+# 1. On the 1st, the report verifier agent checks the report and emails Ramon the preview.
+# 2. Ramon reads it. To approve, he tells Claude "aprobá el email de <mes>", which adds
+#    notas/aprobar-email-YYYY-MM.txt to the repo.
+# 3. That starts this workflow: it checks the whole index again, and only if everything matches
+#    it sends the email to the subscriber list (once), and tells Ramon.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "notas/aprobar-email-*.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-prices
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Check the index independently (must pass)
+        run: python verify_index.py
+      - name: Send the approved report
+        run: python send_report_email.py
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+      - name: Save the record of what was sent
+        run: |
+          git config user.name "la-canasta-bot"
+          git config user.email "la-canasta-bot@users.noreply.github.com"
+          git add index
+          git commit -m "Monthly report email: record" || echo "Nothing new"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "Push failed, trying again in 20 seconds"; sleep 20
+          done
+      - name: Tell Ramon what happened
+        if: always()
+        run: |
+          M=$(ls notas/aprobar-email-*.txt 2>/dev/null | sed 's/.*aprobar-email-//; s/.txt//' | sort | tail -1)
+          if [ -n "$M" ] && grep -qx "$M" index/informes/enviados.txt 2>/dev/null; then
+            python3 alert_email.py --msg "📨 La Canasta: informe de $M enviado" "El informe de $M se envió a la lista de suscriptores. La verificación independiente coincidió."
+          else
+            python3 alert_email.py --msg "⚠️ La Canasta: el informe NO se envió" "Aprobaste el informe de $M, pero no se envió. Puede ser que la verificación no coincidió, que ya se había enviado, o que pasaron más de 20 días. Detalle: $RUN_URL
+          Abrí un chat con Claude y decile: el informe no se envió."
+          fi
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

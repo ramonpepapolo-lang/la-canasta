@@ -7,6 +7,8 @@
 # 4. Chain the days together. Day 1 = 100.
 # Done twice: with the price people pay (promotions included) and with the regular price.
 # Each shop is only ever compared with itself.
+# Doubtful prices listed in notas/excluir.csv (found by the daily review) are left out, never replaced:
+# that product is simply not compared on that day, for that kind of price.
 
 import csv
 import glob
@@ -59,35 +61,54 @@ dates = sorted(days)
 if not dates:
     raise SystemExit("No data files found.")
 
+# ---------- Prices left out after review (notas/excluir.csv) ----------
+# Columns: date, shop, sku_id, kind (paid, regular or both), reason
+EXCLUDED = set()
+if os.path.exists("notas/excluir.csv"):
+    with open("notas/excluir.csv", newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            kinds = ("paid", "regular") if r["kind"].strip() == "both" else (r["kind"].strip(),)
+            for k in kinds:
+                EXCLUDED.add((r["date"].strip(), r["shop"].strip(), str(r["sku_id"]).strip(), k))
+
 # ---------- Chain the days ----------
 SHOP_NAMES = sorted({shop for shop, _ in basket})
 SCOPES = ["all"] + SHOP_NAMES  # the whole index, plus one index per shop
 level = {(s, kind): 100.0 for s in SCOPES for kind in ("paid", "regular")}
 group_level = {(g, kind): 100.0 for g in group_name for kind in ("paid", "regular")}
-last_seen = {}  # (shop, sku) -> (date, prices) from the last day it was in stock
+last_seen = {}  # ((shop, sku), kind) -> price on the last day it was in stock (and not left out)
 daily_rows, group_rows, checks = [], [], []
+n_excluded = 0
 
 for i, date in enumerate(dates):
     changes = defaultdict(list)  # (scope, group, kind) -> list of log price changes
     n_used = 0
     for key, now in days[date].items():
-        if key in last_seen:
-            _, before = last_seen[key]
-            ok = True
-            for kind in ("paid", "regular"):
-                ratio = now[kind] / before[kind]
-                if ratio > MAX_JUMP or ratio < 1 / MAX_JUMP:
-                    checks.append(f"{date} {key[0]} {basket[key]} ({kind}): {before[kind]} -> {now[kind]}, left out")
-                    ok = False
-            if not ok:
-                continue  # keep comparing against the last good price
+        usable = {}
+        for kind in ("paid", "regular"):
+            if (date, key[0], key[1], kind) in EXCLUDED:
+                n_excluded += 1
+            else:
+                usable[kind] = now[kind]
+        comparable = [kind for kind in usable if (key, kind) in last_seen]
+        ok = True
+        for kind in comparable:
+            before = last_seen[(key, kind)]
+            ratio = usable[kind] / before
+            if ratio > MAX_JUMP or ratio < 1 / MAX_JUMP:
+                checks.append(f"{date} {key[0]} {basket[key]} ({kind}): {before} -> {usable[kind]}, left out")
+                ok = False
+        if not ok:
+            continue  # keep comparing against the last good price
+        if comparable:
             n_used += 1
             g = group_of[basket[key]]
-            for kind in ("paid", "regular"):
-                lc = math.log(now[kind] / before[kind])
+            for kind in comparable:
+                lc = math.log(usable[kind] / last_seen[(key, kind)])
                 changes[("all", g, kind)].append(lc)
                 changes[(key[0], g, kind)].append(lc)
-        last_seen[key] = (date, now)
+        for kind, v in usable.items():
+            last_seen[(key, kind)] = v
 
     # Groups: geometric mean of their products' changes
     for g in group_name:
@@ -157,6 +178,7 @@ last = daily_rows[-1]
 print(f"{len(dates)} days. Latest ({last['date']}): index {last['index_paid']} "
       f"(regular price {last['index_regular']}), {last['products_compared']} products compared.")
 print(f"{len(checks)} suspicious prices left out.")
+print(f"{n_excluded} prices left out after review (notas/excluir.csv).")
 
 # ---------- Monthly report numbers (never stops the daily save if something goes wrong) ----------
 import subprocess

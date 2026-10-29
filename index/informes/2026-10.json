@@ -3,45 +3,55 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 3.92,
+ "inflation": 4.33,
  "base_date": "2026-10-24",
- "end_date": "2026-10-28",
- "days_of_data": 5,
- "prices_collected": 52348,
+ "end_date": "2026-10-29",
+ "days_of_data": 6,
+ "prices_collected": 63059,
  "headline": {
-  "end_to_end_paid": 3.92,
-  "end_to_end_regular": 0.47,
+  "end_to_end_paid": 4.33,
+  "end_to_end_regular": 0.33,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 2.36
+   "pct": 2.74
   },
   {
    "shop": "ChangoMas",
-   "pct": 8.0
+   "pct": 12.02
   },
   {
    "shop": "Dia",
-   "pct": 5.95
+   "pct": 4.88
   },
   {
    "shop": "Jumbo",
-   "pct": 0.35
+   "pct": 0.48
   }
  ],
  "groups": [
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 10.18
+   "pct": 14.58
+  },
+  {
+   "group": "lacteos",
+   "in_headline": true,
+   "pct": 7.76
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": 8.96
+   "pct": 7.36
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": 6.42
   },
   {
    "group": "carne_ave",
@@ -49,14 +59,9 @@
    "pct": 5.69
   },
   {
-   "group": "limpieza",
+   "group": "alcohol",
    "in_headline": true,
-   "pct": 4.74
-  },
-  {
-   "group": "lacteos",
-   "in_headline": true,
-   "pct": 3.88
+   "pct": 4.19
   },
   {
    "group": "cuidado_personal",
@@ -69,9 +74,9 @@
    "pct": 3.64
   },
   {
-   "group": "pan_cereales",
+   "group": "limpieza",
    "in_headline": true,
-   "pct": 1.47
+   "pct": 1.74
   },
   {
    "group": "azucar",
@@ -79,9 +84,9 @@
    "pct": 0.32
   },
   {
-   "group": "aguas_gaseosas",
+   "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": 0.28
+   "pct": 0.14
   },
   {
    "group": "aceites",
@@ -89,20 +94,15 @@
    "pct": 0.0
   },
   {
-   "group": "cafe_te_yerba",
+   "group": "pan_cereales",
    "in_headline": true,
-   "pct": 0.0
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": 0.0
+   "pct": -4.01
   }
  ],
  "products_compared": 129,
- "products_up": 24,
- "products_down": 10,
- "products_same": 95,
+ "products_up": 30,
+ "products_down": 14,
+ "products_same": 85,
  "top_up": [
   {
    "type": "banana",
@@ -152,6 +152,15 @@
  ],
  "top_down": [
   {
+   "type": "pan_lactal",
+   "type_en": "Sliced white bread",
+   "shop": "ChangoMas",
+   "name": "Pan Lactal De Mesa 315 G",
+   "before": 2347.8,
+   "now": 1264.2,
+   "pct": -46.15
+  },
+  {
    "type": "fideos",
    "type_en": "Dry spaghetti, 500 g",
    "shop": "Dia",
@@ -186,15 +195,6 @@
    "before": 1300.0,
    "now": 975.0,
    "pct": -25.0
-  },
-  {
-   "type": "huevos",
-   "type_en": "White eggs, 12",
-   "shop": "Dia",
-   "name": "Huevo Blanco Grande 12 Ud.",
-   "before": 4390.0,
-   "now": 3690.0,
-   "pct": -15.95
   }
  ],
  "series": [
@@ -222,6 +222,11 @@
    "date": "2026-10-28",
    "paid": 103.924,
    "regular": 100.473
+  },
+  {
+   "date": "2026-10-29",
+   "paid": 104.329,
+   "regular": 100.33
   }
  ]
 }

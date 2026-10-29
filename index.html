@@ -830,12 +830,10 @@ function render() {
     big.style.fontSize = "clamp(2.6rem, 7vw, 4.4rem)";
     document.getElementById("tagSub").textContent = es ? `Primera comparación confiable: ${fmtDate(ready)}` : `First reliable comparison: ${fmtDate(ready)}`;
     if (note) {
-      const ip = num(+last.index_paid), ir = num(+last.index_regular);
-      const cp = pct(+last.index_paid - 100), cr = pct(+last.index_regular - 100);
       note.querySelector("strong").textContent = es ? `¿Por qué dice "Día ${n} de 14"?` : `Why does it say "Day ${n} of 14"?`;
       note.querySelector("p").textContent = es
-        ? `Para comparar de forma justa hacen falta 2 semanas completas: las ofertas de fin de semana hacen que comparar días sueltos engañe. Mientras tanto, el índice de hoy es ${ip}: los precios variaron ${cp} desde el 24 de octubre con promociones, y ${cr} sin promociones (índice ${ir}).`
-        : `A fair comparison needs 2 full weeks: weekend offers make comparing single days misleading. Meanwhile, today's index is ${ip}: prices changed ${cp} since 24 October including promotions, and ${cr} without promotions (index ${ir}).`;
+        ? `Para comparar de forma justa hacen falta 2 semanas completas: las ofertas de fin de semana y los productos frescos hacen que comparar días sueltos engañe. Por eso, estos primeros números todavía no son la inflación. La inflación del mes sale en el informe del 1 de diciembre.`
+        : `A fair comparison needs 2 full weeks: weekend offers and fresh food make comparing single days misleading. So these first numbers are not inflation yet. The month's inflation comes out in the report on 1 December.`;
       note.hidden = false;
     }
   }

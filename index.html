@@ -135,6 +135,7 @@ section { scroll-margin-top: 5.5rem; }
 .hero-text { display: grid; gap: 1.4rem; min-width: 0; }
 .hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
 .lede { font-size: 1.2rem; color: var(--muted); }
+.founder-line { font-size: 0.92rem; font-weight: 600; color: var(--muted); margin-top: -0.6rem; }
 .lede-points { list-style: none; margin: -0.4rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
 .lede-points li { position: relative; padding-left: 1.6rem; font-size: 1.1rem; font-weight: 600; color: var(--navy); max-width: 62ch; }
 .lede-points li::before { content: ""; position: absolute; left: 0.2rem; top: 0.55em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--celeste); box-shadow: 0 0 0 3px var(--celeste-fill); }
@@ -337,6 +338,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <span class="eyebrow" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
       <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
       <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
+      <p class="founder-line"><span data-lang="es">Fundado por Ramon Pepa</span><span data-lang="en">Founded by Ramon Pepa</span></p>
       <ul class="lede-points">
         <li data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 4 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, la comparación con el INDEC y el informe mensual. De esos precios, este número sigue 33 productos básicos en cuatro cadenas (129 precios).</li>
         <li class="yt-point"><a class="yt-link" href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener"><span class="yt-ico" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M1 0.5L9.5 5L1 9.5Z" fill="#FFFFFF"/></svg></span><span data-lang="es">Mirá cómo funciona en nuestro canal de YouTube →</span><span data-lang="en">See how it works on our YouTube channel →</span></a></li>
@@ -530,7 +532,8 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
   <div class="container">
     <div style="display:grid;gap:0.6rem">
       <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
-      <p data-t="foot1">La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+      <p data-lang="es">La Canasta es un proyecto independiente de <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+      <p data-lang="en">La Canasta is an independent project by <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.</p>
       <p class="copy"><span data-lang="es">Contacto:</span><span data-lang="en">Contact:</span> <a href="mailto:hola@lacanastaindex.com" style="color:#FFFFFF">hola@lacanastaindex.com</a> · <a href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener" style="color:#FFFFFF">YouTube</a></p>
       <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
     </div>
@@ -541,7 +544,6 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
       <a href="metodo.html" data-t="navMethod">Metodología</a>
       <a href="informes.html" data-t="navReport">Informes</a>
       <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
-      <a href="ramon-pepa.html">Ramon Pepa</a>
     </div>
   </div>
 </footer>

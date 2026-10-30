@@ -48,36 +48,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <style>
 [hidden] { display: none !important; }
-html:not([lang="en"]) span[data-lang="en"], html:not([lang="en"]) p[data-lang="en"] { display: none !important; }
-html[lang="en"] span[data-lang="es"], html[lang="en"] p[data-lang="es"] { display: none !important; }
-nav a.nav-rep { color: var(--navy); font-weight: 700; border: 1.5px solid var(--navy); border-radius: 999px; padding: 0.3rem 0.85rem; text-decoration: none; }
-nav a.nav-rep:hover { background: var(--navy); color: #FFFFFF; }
-@media (max-width: 440px) { nav a.nav-rep { display: none !important; } }
-section.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 2rem 2.2rem; display: grid; grid-template-columns: 1fr minmax(0, 30rem); gap: 1.2rem 2.5rem; align-items: center; }
-section.sub[hidden] { display: none; }
-section.sub h2 { color: #FFFFFF; font-size: 1.9rem; }
-section.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
-.sub-act { display: grid; gap: 0.5rem; min-width: 0; }
-.sub-act [hidden] { display: none !important; }
-.sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; flex: 1 1 14rem; min-width: 0; color: var(--navy); }
-.sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
-section.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
-.sub-ok { font-weight: 600; color: #FFFFFF !important; margin: 0 !important; }
-.sub-links { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.92rem; }
-.sub-link { font: inherit; background: none; border: 0; padding: 0; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
-.sub-link:hover { color: #FFFFFF; }
-section.sub .sub-ok a { color: #FFFFFF; }
-.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-@media (max-width: 760px) { section.sub { grid-template-columns: 1fr; padding: 1.5rem; } }
+html:not([lang="en"]) span[data-lang="en"], html:not([lang="en"]) p[data-lang="en"], html:not([lang="en"]) img[data-lang="en"], html:not([lang="en"]) div[data-lang="en"] { display: none !important; }
+html[lang="en"] span[data-lang="es"], html[lang="en"] p[data-lang="es"], html[lang="en"] img[data-lang="es"], html[lang="en"] div[data-lang="es"] { display: none !important; }
 
-/* Layout: a wide two-column landing page in the La Canasta brand (white ground, navy, celeste, one sun highlight).
-   The day's number sits on a price tag; the basket is printed like a till receipt.
-   Single light theme on purpose: the brand is defined on white. */
 :root {
   --bg: #FFFFFF;
   --band: #F3F7F9;
+  --band-2: #EAF2F6;
   --navy: #2B3B5C;
+  --deep: #1E2B45;
   --muted: #5D6A84;
   --rule: #DCE4EA;
   --celeste: #7FB1C6;
@@ -87,157 +66,200 @@ section.sub .sub-ok a { color: #FFFFFF; }
   --down: #2D7A57;
   --display: "DM Serif Display", Georgia, "Times New Roman", serif;
   --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
-  --radius: 14px;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(43, 59, 92, 0.05), 0 18px 40px -28px rgba(43, 59, 92, 0.45);
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--navy); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.container {
-  width: 100%; max-width: 72rem; margin: 0 auto;
-  padding-left: max(20px, env(safe-area-inset-left, 0px));
-  padding-right: max(20px, env(safe-area-inset-right, 0px));
-}
+body { margin: 0; background: var(--bg); color: var(--navy); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; }
+.container { width: 100%; max-width: 74rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; color: var(--navy); }
-h2 { font-size: clamp(2rem, 4vw, 2.7rem); }
-h3 { font-size: 1.4rem; }
-p { margin: 0; max-width: 62ch; }
+h2 { font-size: clamp(2rem, 3.6vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+p { margin: 0; max-width: 64ch; }
 a { color: var(--navy); text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outline-offset: 3px; border-radius: 6px; }
-.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.eyebrow { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.eyebrow.sun { color: var(--sun); }
 .muted { color: var(--muted); }
 .num { font-variant-numeric: tabular-nums; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Top bar */
-.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
-.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 0.7rem; }
+/* ---------- Header ---------- */
+.topbar { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+.topbar > .container { display: flex; align-items: center; gap: 1.5rem; height: 72px; }
 .logo { display: block; line-height: 0; flex: none; }
-.logo img { height: 48px; width: auto; display: block; }
-nav { display: flex; gap: 1.7rem; }
-nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.96rem; }
-nav a:hover { color: var(--navy); }
+.logo img { height: 44px; width: auto; display: block; }
+.mainnav { display: flex; gap: 0.2rem; margin-left: auto; }
+.mainnav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.93rem; padding: 0.45rem 0.65rem; border-radius: 8px; white-space: nowrap; }
+.mainnav a:hover { color: var(--navy); background: var(--band); }
+.mainnav a.active { color: var(--navy); }
+.head-actions { display: flex; align-items: center; gap: 0.7rem; flex: none; }
 .lang { display: flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; flex: none; }
-.lang button { font: 600 0.82rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 0.35rem 0.85rem; cursor: pointer; }
+.lang button { font: 700 0.78rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 0.38rem 0.75rem; cursor: pointer; }
 .lang button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
-.lang-wrap { display: flex; align-items: center; gap: 0.6rem; flex: none; }
-.lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
-.copy { font-size: 0.85rem; }
-@media (max-width: 1120px) { nav a[href="#shops"] { display: none; } }
-@media (max-width: 960px) { nav { gap: 1.1rem; } }
-@media (max-width: 800px) { nav { gap: 0; } nav a:not(.nav-rep) { display: none; } }
+.btn-sub { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--navy); color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 0.55rem 1rem; border-radius: 999px; white-space: nowrap; }
+.btn-sub:hover { background: var(--deep); }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 10px; background: var(--bg); cursor: pointer; align-items: center; justify-content: center; }
+.menu-btn span { display: block; width: 18px; height: 2px; background: var(--navy); position: relative; }
+.menu-btn span::before, .menu-btn span::after { content: ""; position: absolute; left: 0; width: 18px; height: 2px; background: var(--navy); }
+.menu-btn span::before { top: -6px; } .menu-btn span::after { top: 6px; }
+.mobile-menu { display: none; border-top: 1px solid var(--rule); background: var(--bg); }
+.mobile-menu.open { display: block; }
+.mobile-menu nav { display: grid; padding-block: 0.4rem 1rem; }
+.mobile-menu a { padding: 0.85rem 0.2rem; border-bottom: 1px solid var(--rule); color: var(--navy); text-decoration: none; font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; }
+.mobile-menu a::after { content: "→"; color: var(--celeste); }
+@media (max-width: 1280px) { .mainnav a.opt { display: none; } }
+@media (max-width: 860px) {
+  .mainnav, .btn-sub { display: none; }
+  .head-actions { margin-left: auto; }
+  .menu-btn { display: inline-flex; }
+}
 
-main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
-section { scroll-margin-top: 5.5rem; }
-
-/* Hero */
-.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
-.hero-text { display: grid; gap: 1.4rem; min-width: 0; }
-.hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); letter-spacing: -0.01em; }
-.lede { font-size: 1.2rem; color: var(--muted); }
-.founder-line { font-size: 0.92rem; font-weight: 600; color: var(--muted); margin-top: -0.6rem; }
-.lede-points { list-style: none; margin: -0.4rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
-.lede-points li { position: relative; padding-left: 1.6rem; font-size: 1.1rem; font-weight: 600; color: var(--navy); max-width: 62ch; }
-.lede-points li::before { content: ""; position: absolute; left: 0.2rem; top: 0.55em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--celeste); box-shadow: 0 0 0 3px var(--celeste-fill); }
-.lede-points li.yt-point::before { display: none; }
-.lede-points li.yt-point { padding-left: 0; }
-.yt-link { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--navy); text-decoration: none; }
-.yt-link span[data-lang] { text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 5px; }
-.yt-link:hover span[data-lang] { text-decoration-color: var(--navy); }
-.yt-link .yt-ico { flex: 0 0 auto; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: #E2453C; display: inline-flex; align-items: center; justify-content: center; }
-.yt-link .yt-ico svg { width: 0.62rem; height: 0.62rem; margin-left: 2px; }
-.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.4rem; }
-.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--navy); }
+/* ---------- Hero ---------- */
+.hero-wrap { background: linear-gradient(180deg, var(--band) 0%, var(--bg) 100%); border-bottom: 1px solid var(--rule); }
+.hero { display: grid; grid-template-columns: 1.15fr 0.95fr; gap: 3.5rem; align-items: center; padding-block: 4rem 4.5rem; }
+.hero-text { display: grid; gap: 1.3rem; min-width: 0; }
+.hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.3rem); letter-spacing: -0.01em; }
+.lede { font-size: 1.18rem; color: var(--muted); }
+.founder-line { font-size: 0.92rem; font-weight: 600; color: var(--muted); display: flex; align-items: center; gap: 0.55rem; }
+.founder-line::before { content: ""; width: 1.6rem; height: 2px; background: var(--sun); }
+.founder-line a { color: var(--muted); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.3rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.35rem; border-radius: 999px; font-weight: 700; font-size: 0.97rem; text-decoration: none; border: 1.5px solid var(--navy); }
 .btn.primary { background: var(--navy); color: #FFFFFF; }
+.btn.primary:hover { background: var(--deep); }
 .btn.ghost { color: var(--navy); background: var(--bg); }
 .btn.ghost:hover { background: var(--band); }
+.trust { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; padding-top: 0.6rem; }
+.trust > span { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
+.trust > span::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--celeste); box-shadow: 0 0 0 3px var(--celeste-fill); }
 
-.why-two { font-size: 0.9rem; font-weight: 600; padding-left: 0.4rem; }
-.two-nums { margin-top: 1.2rem; padding: 1.5rem 1.7rem; display: grid; gap: 0.9rem; }
-.two-nums h3 { font-size: 1.45rem; }
-.tn-row { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.8rem; align-items: start; }
-.tn-row p { margin: 0; max-width: 70ch; }
-.tn-key { width: 1.6rem; height: 0; margin-top: 0.75rem; border-top: 3px solid var(--celeste); }
-.tn-key.reg { border-top: 2px dashed var(--navy); }
-.tn-key.gap { border-top: 6px solid var(--band); outline: 1px solid var(--rule); }
-.tn-foot { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.tag-card { display: grid; gap: 1.2rem; justify-items: start; min-width: 0; }
-.tag {
-  position: relative; background: var(--navy); color: #FFFFFF;
-  border-radius: 8px 28px 28px 8px; padding: 1.4rem 2.1rem 1.5rem 3.5rem;
-  display: grid; gap: 0.25rem; max-width: 100%;
-  box-shadow: 0 22px 44px -26px rgba(43, 59, 92, 0.65);
-  transform: rotate(-1.5deg);
-}
-.tag::before { content: ""; position: absolute; left: 1.3rem; top: 50%; width: 1rem; height: 1rem; margin-top: -0.5rem; border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 3px var(--sun); }
-.tag::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 28px 8px; background: linear-gradient(90deg, var(--celeste) 0 33.3%, #FFFFFF 33.3% 66.6%, var(--celeste) 66.6%); opacity: 0.9; }
-.tag .small { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
-.tag .big { font-family: var(--body); font-weight: 700; font-size: clamp(3.8rem, 10.5vw, 6.2rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.tag .sub { font-size: 0.92rem; color: rgba(255, 255, 255, 0.82); }
-.tag-note { display: grid; gap: 0.35rem; max-width: 30rem; background: #FDF4E9; border: 1px solid rgba(217, 138, 43, 0.35); border-left: 5px solid var(--sun); border-radius: 10px; padding: 1rem 1.2rem; }
-.tag-note strong { font-size: 1.08rem; font-weight: 700; color: var(--navy); }
-.tag-note p { font-size: 0.97rem; line-height: 1.55; color: var(--navy); }
-.tag-meta { display: flex; gap: 2.2rem; flex-wrap: wrap; padding-left: 0.4rem; }
-.tag-meta div { display: grid; gap: 0.1rem; }
-.tag-meta strong { font-weight: 700; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
+.today { background: var(--bg); border: 1px solid var(--rule); border-radius: 22px; box-shadow: var(--shadow); padding: 1.8rem 1.8rem 1.5rem; display: grid; gap: 1.25rem; min-width: 0; }
+.today-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.live { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--down); }
+.live::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--down); box-shadow: 0 0 0 4px rgba(45, 122, 87, 0.15); }
+.tag { position: relative; background: var(--navy); color: #FFFFFF; border-radius: 8px 26px 26px 8px; padding: 1.3rem 1.9rem 1.45rem 3.3rem; display: grid; gap: 0.25rem; box-shadow: 0 22px 44px -26px rgba(43, 59, 92, 0.65); transform: rotate(-1deg); justify-self: start; max-width: 100%; }
+.tag::before { content: ""; position: absolute; left: 1.2rem; top: 50%; width: 0.95rem; height: 0.95rem; margin-top: -0.48rem; border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 3px var(--sun); }
+.tag::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; border-radius: 0 0 26px 8px; background: linear-gradient(90deg, var(--celeste) 0 33.3%, #FFFFFF 33.3% 66.6%, var(--celeste) 66.6%); opacity: 0.9; }
+.tag .small { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
+.tag .big { font-weight: 700; font-size: clamp(3.4rem, 9vw, 5.4rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag .sub { font-size: 0.9rem; color: rgba(255, 255, 255, 0.82); }
+.tag-note { display: grid; gap: 0.35rem; background: #FDF4E9; border: 1px solid rgba(217, 138, 43, 0.3); border-left: 5px solid var(--sun); border-radius: 10px; padding: 0.95rem 1.15rem; }
+.tag-note strong { font-size: 1.02rem; font-weight: 700; }
+.tag-note p { font-size: 0.94rem; line-height: 1.55; }
+.tag-meta { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+.tag-meta div { display: grid; gap: 0.15rem; padding: 0.8rem 1rem; }
+.tag-meta div + div { border-left: 1px solid var(--rule); }
+.tag-meta strong { font-weight: 700; font-size: 1.5rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.why-two { font-size: 0.9rem; font-weight: 700; }
 
-/* Stat strip */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.stats div { padding: 1.5rem 1.3rem; display: grid; gap: 0.25rem; border-left: 1px solid var(--rule); }
-.stats div:first-child { border-left: 0; padding-left: 0; }
-.stats strong { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
-.stats span { color: var(--muted); font-size: 0.93rem; }
+/* Hero signup */
+.hero-sub { background: var(--bg); border: 1.5px solid var(--navy); border-radius: 16px; padding: 1.1rem 1.2rem 1rem; display: grid; gap: 0.7rem; box-shadow: 0 16px 34px -26px rgba(43, 59, 92, 0.6); scroll-margin-top: 100px; }
+.hero-sub strong { font-size: 1.12rem; line-height: 1.3; }
+.hero-sub strong em { font-style: normal; color: var(--sun); }
+.hs-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.hs-form input { font: inherit; flex: 1 1 14rem; min-width: 0; padding: 0.8rem 1rem; border: 1.5px solid var(--rule); border-radius: 10px; color: var(--navy); }
+.hs-form input:focus { outline: 3px solid var(--celeste); outline-offset: 1px; border-color: var(--navy); }
+.hs-form button { font: inherit; font-weight: 700; background: var(--sun); color: #FFFFFF; border: 0; border-radius: 10px; padding: 0.8rem 1.3rem; cursor: pointer; white-space: nowrap; }
+.hs-form button:hover { filter: brightness(0.95); }
+.hs-fine { font-size: 0.82rem; color: var(--muted); }
+.hs-ok { display: grid; gap: 0.7rem; }
+.hs-ok p { font-weight: 600; }
+.hs-ok .sub-link2 { font: inherit; font-size: 0.85rem; background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start; }
+.wa-btn { display: inline-flex; align-items: center; gap: 0.55rem; justify-self: start; background: #25D366; color: #FFFFFF; font-weight: 700; font-size: 0.95rem; text-decoration: none; padding: 0.7rem 1.15rem; border-radius: 999px; }
+.wa-btn:hover { background: #1EBE5A; }
+.wa-btn svg { width: 1.2rem; height: 1.2rem; }
+.sticky-sub { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 30; display: none; align-items: center; justify-content: center; gap: 0.5rem; background: var(--sun); color: #FFFFFF; font-weight: 700; font-size: 1rem; text-decoration: none; padding: 0.95rem 1rem; border-radius: 14px; box-shadow: 0 12px 30px -10px rgba(30, 43, 69, 0.55); transform: translateY(150%); transition: transform .25s ease; }
+.sticky-sub.show { transform: none; }
+@media (max-width: 760px) { .sticky-sub { display: flex; } footer { padding-bottom: 5rem; } }
 
-/* Section heads */
-.head { display: grid; gap: 0.9rem; margin-bottom: 2rem; }
-.head p { color: var(--muted); font-size: 1.08rem; }
+/* ---------- Stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: -2.2rem; position: relative; }
+.stats div { background: var(--bg); border: 1px solid var(--rule); border-radius: 14px; padding: 1.2rem 1.3rem; display: grid; gap: 0.2rem; box-shadow: 0 10px 24px -22px rgba(43, 59, 92, 0.5); }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: 2.5rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 0.9rem; line-height: 1.35; }
 
-/* Chart */
+/* ---------- Sections ---------- */
+main { display: grid; gap: 0; }
+.sec { padding-block: 5.5rem 0; scroll-margin-top: 80px; }
+.band { background: var(--band); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: 5.5rem; }
+.band .container { padding-block: 5rem; }
+.band + .sec { padding-top: 5.5rem; }
+.head { display: grid; gap: 0.75rem; margin-bottom: 2rem; }
+.head p { color: var(--muted); font-size: 1.06rem; }
+.head-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.head-row .head { margin-bottom: 0; }
 .panel { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
-.chart-panel { padding: 1.5rem 1.5rem 1rem; display: grid; gap: 1rem; box-shadow: 0 1px 2px rgba(43, 59, 92, 0.04); }
+
+/* Index */
+.index-grid { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.chart-panel { padding: 1.5rem 1.5rem 1rem; display: grid; gap: 1rem; box-shadow: var(--shadow); }
 .chart-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
 .readout { display: flex; gap: 2.2rem; flex-wrap: wrap; }
 .readout div { display: grid; gap: 0.15rem; }
-.readout strong { font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
-.key { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.86rem; color: var(--muted); }
+.readout strong { font-size: 1.85rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.key { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--muted); }
 .key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
 .key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
 .chart-wrap { position: relative; }
 #chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
 .tip { position: absolute; pointer-events: none; background: var(--navy); color: #FFFFFF; font-size: 0.82rem; padding: 0.45rem 0.7rem; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -120%); font-variant-numeric: tabular-nums; }
-.chart-note { font-size: 0.92rem; color: var(--muted); }
+.two-nums { padding: 1.5rem 1.5rem; display: grid; gap: 1rem; background: var(--band); }
+.two-nums h3 { font-size: 1.4rem; }
+.tn-row { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.75rem; align-items: start; }
+.tn-row p { font-size: 0.95rem; }
+.tn-key { width: 1.6rem; height: 0; margin-top: 0.7rem; border-top: 3px solid var(--celeste); }
+.tn-key.reg { border-top: 2px dashed var(--navy); }
+.tn-key.gap { border-top: 6px solid #FFFFFF; outline: 1px solid var(--rule); }
+.tn-foot { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 0.85rem; }
 
-/* Why + how */
-.band { background: var(--band); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.band .container { padding-block: 4.5rem; }
-.why { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; }
-.why-text { display: grid; gap: 1.15rem; min-width: 0; }
-.why-text p { font-size: 1.12rem; }
-.why-text .quote { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; max-width: 24ch; }
-.why-text .src { font-size: 0.8rem; color: var(--muted); margin-top: -0.4rem; }
-.timeline { list-style: none; margin: 0.2rem 0 0.4rem; padding: 0; display: grid; border-top: 1px solid var(--rule); }
-.timeline li { display: grid; grid-template-columns: 3.6rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); font-size: 0.98rem; align-items: baseline; }
-.timeline .yr { font-family: var(--display); font-size: 1.35rem; line-height: 1; }
-.why-text .closing { font-weight: 700; font-size: 1.12rem; padding-left: 1rem; border-left: 4px solid var(--celeste); }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: step; min-width: 0; }
-.steps li { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem 1.35rem; display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
-.steps li::before { counter-increment: step; content: counter(step); font-weight: 700; font-size: 1.1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #FFFFFF; }
-.steps h3 { font-size: 1.35rem; margin-bottom: 0.2rem; }
-.steps p { color: var(--muted); font-size: 0.98rem; }
+/* Video */
+.video-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 3.5rem; align-items: center; }
+.video-text { display: grid; gap: 1.1rem; }
+.video-text p { font-size: 1.08rem; color: var(--muted); }
+.yt-link { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+.yt-link span[data-lang] { text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.yt-ico { flex: 0 0 auto; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #E2453C; display: inline-flex; align-items: center; justify-content: center; }
+.yt-ico svg { width: 0.62rem; height: 0.62rem; margin-left: 2px; }
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: var(--deep); box-shadow: var(--shadow); border: 1px solid var(--rule); }
+.video > div, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+.video .play span { width: 84px; height: 60px; border-radius: 16px; background: #E2453C; display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
+.video .play svg { width: 26px; height: 26px; margin-left: 4px; }
+.video .vtag { position: absolute; left: 14px; bottom: 14px; background: rgba(30, 43, 69, 0.88); color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 999px; }
+.agents { display: flex; align-items: flex-start; gap: 0.9rem; background: var(--bg); border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.1rem; }
+.agents b { font-family: var(--display); font-weight: 400; font-size: 2.4rem; line-height: 1; color: var(--sun); }
+.agents p { font-size: 0.95rem; color: var(--navy); }
 
-/* Basket */
-.basket { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
-.basket-text { display: grid; gap: 1.2rem; min-width: 0; }
-.legend-list { display: grid; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
-.legend-list li { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.75rem; font-size: 0.98rem; }
+/* How it works */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; counter-reset: step; }
+.steps li { background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.5rem; display: grid; gap: 0.7rem; align-content: start; }
+.steps li::before { counter-increment: step; content: counter(step); font-weight: 700; font-size: 1.05rem; width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #FFFFFF; }
+.steps p { color: var(--muted); font-size: 0.97rem; }
+.how-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: end; margin-bottom: 2rem; }
+.hero-point { font-size: 1rem; font-weight: 600; color: var(--navy); padding-left: 1rem; border-left: 3px solid var(--celeste); }
+.hero-point a { font-weight: 700; }
+
+/* Shops + basket */
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; align-items: start; }
+.shops { padding: 0.4rem 1.5rem; box-shadow: var(--shadow); }
+.shop { display: grid; grid-template-columns: 7rem 1fr 5.5rem; gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.shop:last-child { border-bottom: 0; }
+.shop .sname { font-weight: 700; }
+.bar-track { height: 0.65rem; background: var(--band); border-radius: 999px; position: relative; overflow: hidden; }
+.bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: var(--celeste); }
+.shop .sval { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.shop.off .sname, .shop.off .sval { color: var(--muted); font-weight: 500; }
+.shop.off .sval { font-size: 0.82rem; line-height: 1.3; }
+.basket-text { display: grid; gap: 1.1rem; min-width: 0; }
+.legend-list { display: grid; gap: 0.7rem; margin: 0; padding: 0; list-style: none; }
+.legend-list li { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.75rem; font-size: 0.96rem; }
 .legend-list code { font-family: var(--body); font-weight: 700; font-size: 0.85rem; background: var(--band); border: 1px solid var(--rule); border-radius: 6px; padding: 0.1rem 0.45rem; justify-self: start; font-variant-numeric: tabular-nums; }
-.receipt {
-  background: var(--bg); color: var(--navy); font-size: 0.93rem;
-  padding: 1.6rem 1.6rem 1.8rem; display: grid; gap: 0.5rem; width: 100%; min-width: 0;
-  border: 1px solid var(--rule); border-radius: 4px;
-  box-shadow: 0 26px 50px -34px rgba(43, 59, 92, 0.55);
-}
+.receipt { background: var(--bg); color: var(--navy); font-size: 0.93rem; padding: 1.6rem 1.6rem 1.8rem; display: grid; gap: 0.5rem; width: 100%; min-width: 0; border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 26px 50px -34px rgba(43, 59, 92, 0.55); }
 .receipt .rhead { text-align: center; display: grid; justify-items: center; gap: 0.35rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed var(--rule); margin-bottom: 0.35rem; }
 .receipt .rhead img { width: 3.2rem; height: 3.2rem; }
 .receipt .rhead strong { font-size: 0.95rem; letter-spacing: 0.22em; }
@@ -252,118 +274,208 @@ svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
 .receipt .total { font-weight: 700; font-size: 1rem; }
 .receipt .small { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
 
-/* Shops */
-.shops { padding: 0.5rem 1.5rem; }
-.shop { display: grid; grid-template-columns: 8rem 1fr 5.5rem; gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
-.shop:last-child { border-bottom: 0; }
-.shop .sname { font-weight: 600; }
-.bar-track { height: 0.65rem; background: var(--band); border-radius: 999px; position: relative; overflow: hidden; }
-.bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: var(--celeste); }
-.shop .sval { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
-.shop.off .sname, .shop.off .sval { color: var(--muted); font-weight: 500; }
-.shop.off .sval { font-size: 0.85rem; }
+/* Why */
+.why { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; align-items: start; }
+.why-text { display: grid; gap: 1.1rem; }
+.why-text .quote { font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; max-width: 22ch; }
+.why-text p { font-size: 1.06rem; }
+.why-text .closing { font-weight: 700; padding-left: 1rem; border-left: 4px solid var(--celeste); }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; position: relative; }
+.timeline li { display: grid; grid-template-columns: 4.2rem 1fr; gap: 1rem; padding: 0.95rem 0 0.95rem; border-bottom: 1px solid var(--rule); font-size: 0.98rem; align-items: baseline; }
+.timeline li:first-child { border-top: 1px solid var(--rule); }
+.timeline .yr { font-family: var(--display); font-size: 1.5rem; line-height: 1; color: var(--navy); }
+.timeline li:last-child .yr { color: var(--sun); }
+.src { font-size: 0.8rem; color: var(--muted); margin-top: 0.7rem; }
 
-/* Report + data cards */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.card-link { display: grid; gap: 0.5rem; padding: 1.5rem; text-decoration: none; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); align-content: start; }
-.card-link:hover { border-color: var(--navy); }
-.card-link p { color: var(--muted); font-size: 0.96rem; }
-.card-link .go { font-weight: 700; font-size: 0.92rem; padding-top: 0.3rem; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.report { display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; padding: 1.7rem 1.9rem; }
-.chip { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; background: var(--band); border: 1px solid var(--celeste); color: var(--navy); }
+/* Reports + subscribe */
+.report { display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; padding: 1.7rem 1.9rem; box-shadow: var(--shadow); }
+.chip { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; background: var(--band); border: 1px solid var(--celeste); color: var(--navy); }
 .report-date { font-family: var(--display); font-size: 2.8rem; line-height: 1; }
 .report-text { display: grid; gap: 0.4rem; min-width: 0; }
+.rep-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; align-items: stretch; }
+section.sub { background: var(--navy); color: #FFFFFF; border-radius: var(--radius); padding: 1.8rem 1.9rem; display: grid; gap: 1rem; align-content: center; }
+section.sub[hidden] { display: none; }
+section.sub h2 { color: #FFFFFF; font-size: 1.75rem; }
+section.sub p { margin: 0.4rem 0 0; color: rgba(255, 255, 255, 0.82); }
+.sub-act { display: grid; gap: 0.5rem; min-width: 0; }
+.sub-act [hidden] { display: none !important; }
+.sub-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.sub-form input[type=email] { font: inherit; padding: 0.75rem 1rem; border-radius: 10px; border: 0; flex: 1 1 13rem; min-width: 0; color: var(--navy); }
+.sub-form input:focus { outline: 3px solid var(--celeste); outline-offset: 2px; }
+section.sub .btn-a { font: inherit; font-weight: 700; background: var(--celeste); color: var(--navy); border: 0; border-radius: 10px; padding: 0.75rem 1.2rem; cursor: pointer; }
+.sub-ok { font-weight: 600; color: #FFFFFF !important; margin: 0 !important; }
+.sub-links { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.92rem; }
+.sub-link { font: inherit; background: none; border: 0; padding: 0; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+section.sub .sub-ok a { color: #FFFFFF; }
 
-/* Footer: navy ground, white logo */
+/* Data cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card-link { display: grid; gap: 0.5rem; padding: 1.6rem; text-decoration: none; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); align-content: start; transition: border-color .15s, transform .15s; }
+.card-link:hover { border-color: var(--navy); transform: translateY(-2px); }
+.card-link .ic { width: 2.6rem; height: 2.6rem; border-radius: 12px; background: var(--band-2); display: grid; place-items: center; margin-bottom: 0.4rem; }
+.card-link .ic svg { width: 1.3rem; height: 1.3rem; }
+.card-link p { color: var(--muted); font-size: 0.95rem; }
+.card-link .go { font-weight: 700; font-size: 0.92rem; padding-top: 0.3rem; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* ---------- Footer ---------- */
 footer { margin-top: 6rem; background: var(--navy); color: #FFFFFF; }
-footer .container { padding-block: 2.75rem 3rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
-footer .logo img { height: 44px; }
-footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
-.foot-links { display: flex; flex-wrap: wrap; gap: 1.3rem; justify-content: flex-end; }
-.foot-links a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
-.foot-links a:hover { text-decoration: underline; text-decoration-color: var(--celeste); }
+footer .container { padding-block: 3.5rem 2rem; }
+.foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2.5rem; }
+footer .logo img { height: 42px; }
+footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.92rem; }
+.foot-col { display: grid; gap: 0.55rem; align-content: start; }
+.foot-col h4 { margin: 0 0 0.3rem; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--celeste); }
+.foot-col a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.foot-col a:hover { text-decoration: underline; text-decoration-color: var(--celeste); }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.3rem; border-top: 1px solid rgba(255, 255, 255, 0.15); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.copy { font-size: 0.85rem; }
+.admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
 
-@media (max-width: 900px) {
-  .hero, .why, .basket { grid-template-columns: 1fr; gap: 2.5rem; }
-  .cards { grid-template-columns: 1fr; }
+/* ---------- Smaller type (whole page a bit smaller, footer much smaller) ---------- */
+body { font-size: 1rem; }
+.hero h1 { font-size: clamp(2.4rem, 4.8vw, 3.8rem); }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+.lede { font-size: 1.08rem; }
+.hero-point { font-size: 0.93rem; }
+.head p, .video-text p, .why-text p { font-size: 0.98rem; }
+.why-text .quote { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.stats strong { font-size: 2.2rem; }
+.stats span, .steps p, .card-link p, .timeline li { font-size: 0.9rem; }
+.mainnav a { font-size: 0.88rem; }
+footer { margin-top: 5rem; }
+footer .container { padding-block: 2.4rem 1.4rem; }
+.foot-grid { gap: 2rem; }
+footer .logo img { height: 32px; }
+footer p { font-size: 0.8rem; line-height: 1.55; }
+.foot-col { gap: 0.4rem; }
+.foot-col h4 { font-size: 0.66rem; margin-bottom: 0.15rem; }
+.foot-col a { font-size: 0.82rem; }
+.foot-bottom { margin-top: 1.8rem; padding-top: 1rem; }
+.foot-bottom .copy, .copy { font-size: 0.7rem; }
+.admin-link { font-size: 0.64rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero, .index-grid, .video-grid, .two-col, .why, .how-intro, .rep-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero { padding-block: 2.8rem 4rem; }
+  .steps, .cards { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
-  .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
-  footer .container { grid-template-columns: 1fr; }
-  .foot-links { justify-content: flex-start; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .foot-grid > :first-child { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
-  main { gap: 4.5rem; padding-block: 2rem 0; }
-  .band .container { padding-block: 3.5rem; }
-  .shop { grid-template-columns: 6rem 1fr 4.8rem; gap: 0.75rem; }
+  .sec { padding-top: 4rem; }
+  .band { margin-top: 4rem; } .band .container { padding-block: 3.5rem; } .band + .sec { padding-top: 4rem; }
+  .today { padding: 1.3rem; border-radius: 18px; }
+  .tag { padding: 1.15rem 1.4rem 1.3rem 2.8rem; }
+  .tag::before { left: 0.95rem; }
+  .shop { grid-template-columns: 6.4rem 1fr 4.6rem; gap: 0.6rem; }
   .report { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.3rem; }
-  .tag { padding: 1.2rem 1.5rem 1.35rem 2.9rem; }
-  .tag::before { left: 1rem; }
-  .logo img { height: 44px; }
-  .lang-label { display: none; }
+  section.sub { padding: 1.4rem; }
+  .logo img { height: 38px; }
+  .stats strong { font-size: 2.1rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .tag { animation: swing 0.7s cubic-bezier(.2,.8,.3,1.2) both; transform-origin: 1.8rem 50%; }
-  @keyframes swing { from { transform: rotate(-6deg) translateY(-8px); } to { transform: rotate(-1.5deg); } }
+  @keyframes swing { from { transform: rotate(-5deg) translateY(-8px); } to { transform: rotate(-1deg); } }
   .bar { transition: width 0.6s ease; }
 }
-.admin-link { color: rgba(255, 255, 255, 0.5); font-size: 0.72rem; text-decoration: none; margin-left: 0.6rem; }
-.admin-link:hover { color: #FFFFFF; }
 </style>
 
 <header class="topbar">
   <div class="container">
-    <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
-    <nav aria-label="Sections">
+    <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="155" height="44"></a>
+    <nav class="mainnav" aria-label="Secciones">
       <a href="#index" data-t="navIndex">El índice</a>
-      <a href="#basket" data-t="navBasket">La canasta</a>
       <a href="#shops" data-t="navShops">Supermercados</a>
-      <a href="#data" data-t="navData">Datos y método</a>
+      <a href="#basket" data-t="navBasket">La canasta</a>
+      <a class="opt" href="#how"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></a>
+      <a href="informes.html" data-t="navReport">Informes</a>
       <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
-      <a class="nav-rep" href="informes.html" data-t="navReport">Informes</a>
+      <a class="opt" href="#data" data-t="navData">Datos y método</a>
     </nav>
-    <div class="lang-wrap">
-      <span class="lang-label" data-t="langLabel">Language</span>
+    <div class="head-actions">
       <div class="lang" role="group" aria-label="Idioma / Language">
         <button type="button" id="btn-es" data-lang="es" aria-pressed="true">ES</button>
         <button type="button" id="btn-en" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <a class="btn-sub" href="#heroSub" data-gosub><span data-lang="es">Recibí el informe</span><span data-lang="en">Get the report</span></a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu"><span></span><span class="sr">Menú</span></button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="container" aria-label="Menú">
+      <a href="#index" data-t="navIndex">El índice</a>
+      <a href="#shops" data-t="navShops">Supermercados</a>
+      <a href="#basket" data-t="navBasket">La canasta</a>
+      <a href="#how"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></a>
+      <a href="#video"><span data-lang="es">Video</span><span data-lang="en">Video</span></a>
+      <a href="informes.html" data-t="navReport">Informes</a>
+      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
+      <a href="#data" data-t="navData">Datos y método</a>
+      <a href="metodo.html" data-t="navMethod">Metodología</a>
+      <a href="#suscribirse"><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></a>
+    </nav>
   </div>
 </header>
 
 <main id="top">
-  <div class="container hero">
-    <div class="hero-text">
-      <span class="eyebrow" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
-      <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
-      <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
-      <p class="founder-line"><span data-lang="es">Fundado por Ramon Pepa</span><span data-lang="en">Founded by Ramon Pepa</span></p>
-      <ul class="lede-points">
-        <li data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 33 productos básicos en cuatro cadenas (129 precios).</li>
-        <li class="yt-point"><a class="yt-link" href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener"><span class="yt-ico" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M1 0.5L9.5 5L1 9.5Z" fill="#FFFFFF"/></svg></span><span data-lang="es">Mirá cómo funciona en nuestro canal de YouTube →</span><span data-lang="en">See how it works on our YouTube channel →</span></a></li>
-      </ul>
-      <div class="ctas">
-        <a class="btn primary" href="#index" data-t="ctaIndex">Ver el índice</a>
-        <a class="btn ghost" href="informes.html" data-t="ctaReport">Informe mensual</a>
-        <a class="btn ghost" href="#data" data-t="ctaData">Descargar los datos</a>
+  <div class="hero-wrap">
+    <div class="container hero">
+      <div class="hero-text">
+        <span class="eyebrow sun" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
+        <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
+        <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
+        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 33 productos básicos en cuatro cadenas (129 precios).</span><span data-lang="es"> Mirá cómo funciona <a href="https://www.youtube.com/shorts/njkhtUHqAQM" target="_blank" rel="noopener">acá</a>.</span></p>
+        <div class="hero-sub" id="heroSub" hidden>
+          <div id="hsFormWrap">
+            <strong><span data-lang="es">Recibí la inflación del súper <em>antes que el INDEC</em>. Gratis.</span><span data-lang="en">Get supermarket inflation <em>before INDEC</em>. Free.</span></strong>
+            <form class="hs-form" id="hsForm" style="margin-top:0.7rem">
+              <label class="sr" for="hsEmail">Email</label>
+              <input type="email" id="hsEmail" required autocomplete="email" placeholder="tu@email.com">
+              <button type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
+            </form>
+            <p class="hs-fine" style="margin-top:0.55rem"><span data-lang="es">Un email por mes, el día 1. Te das de baja cuando quieras.</span><span data-lang="en">One email a month, on the 1st. Unsubscribe any time.</span></p>
+          </div>
+          <div class="hs-ok" id="hsOk" hidden>
+            <p id="hsMsg"></p>
+            <a class="wa-btn" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-lang="es">Pasáselo por WhatsApp</span><span data-lang="en">Share it on WhatsApp</span></a>
+            <button type="button" class="sub-link2" id="hsOther"><span data-lang="es">Usar otro email</span><span data-lang="en">Use another email</span></button>
+          </div>
+        </div>
+        <p class="founder-line"><span data-lang="es">Fundado por <a href="ramon-pepa.html">Ramon Pepa</a></span><span data-lang="en">Founded by <a href="ramon-pepa.html">Ramon Pepa</a></span></p>
+        <div class="ctas">
+          <a class="btn primary" href="#index" data-t="ctaIndex">Ver el índice</a>
+          <a class="btn ghost" href="informes.html" data-t="ctaReport">Informe mensual</a>
+          <a class="btn ghost" href="#data" data-t="ctaData">Descargar los datos</a>
+        </div>
+        <div class="trust">
+          <span><span data-lang="es">Datos abiertos</span><span data-lang="en">Open data</span></span>
+          <span><span data-lang="es">Actualizado todos los días</span><span data-lang="en">Updated every day</span></span>
+          <span><span data-lang="es">Método público</span><span data-lang="en">Public method</span></span>
+        </div>
       </div>
-    </div>
-    <div class="tag-card">
-      <div class="tag" aria-live="polite">
-        <span class="small" data-t="tagLabel">Lo que se paga, desde el 24 oct 2026</span>
-        <span class="big" id="bigChange">+0.00%</span>
-        <span class="sub" id="tagSub">Updated</span>
+      <div class="today">
+        <div class="today-top">
+          <span class="live"><span data-lang="es">En vivo</span><span data-lang="en">Live</span></span>
+          <span class="eyebrow num" id="todayDate"></span>
+        </div>
+        <div class="tag" aria-live="polite">
+          <span class="small" data-t="tagLabel">Lo que se paga, desde el 24 oct 2026</span>
+          <span class="big" id="bigChange">+0.00%</span>
+          <span class="sub" id="tagSub">Updated</span>
+        </div>
+        <div class="tag-note" role="note">
+          <strong data-t="noteTitle">¿Por qué el número parece tan alto?</strong>
+          <p data-t="noteText"></p>
+        </div>
+        <div class="tag-meta">
+          <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
+          <div><span class="eyebrow" data-t="regularLabel">Sin promociones</span><strong class="num" id="regularToday">+0.00%</strong></div>
+        </div>
+        <a class="why-two" href="#dos-numeros"><span data-lang="es">¿Por qué dos números? ↓</span><span data-lang="en">Why two numbers? ↓</span></a>
       </div>
-      <div class="tag-note" role="note">
-        <strong data-t="noteTitle">¿Por qué el número parece tan alto?</strong>
-        <p data-t="noteText">La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.</p>
-      </div>
-      <div class="tag-meta">
-        <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
-        <div><span class="eyebrow" data-t="regularLabel">Sin promociones</span><strong class="num" id="regularToday">+0.00%</strong></div>
-      </div>
-      <a class="why-two" href="#dos-numeros"><span data-lang="es">¿Por qué dos números? ↓</span><span data-lang="en">Why two numbers? ↓</span></a>
     </div>
   </div>
 
@@ -376,36 +488,97 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
     </div>
   </div>
 
-  <section class="container" id="index">
+  <section class="sec container" id="index">
     <div class="head">
       <span class="eyebrow" data-t="indexEyebrow">El índice</span>
       <h2 data-t="chartTitle">Todos los días desde que empezamos</h2>
       <p data-t="chartIntro">100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.</p>
     </div>
-    <div class="panel chart-panel">
-      <div class="chart-top">
-        <div class="readout">
-          <div><span class="key" data-t="legendPaid">Precio que se paga</span><strong class="num" id="roPaid">100.00</strong></div>
-          <div><span class="key regular" data-t="legendRegular">Precio de lista</span><strong class="num" id="roReg">100.00</strong></div>
+    <div class="index-grid">
+      <div class="panel chart-panel">
+        <div class="chart-top">
+          <div class="readout">
+            <div><span class="key" data-t="legendPaid">Precio que se paga</span><strong class="num" id="roPaid">100.00</strong></div>
+            <div><span class="key regular" data-t="legendRegular">Precio de lista</span><strong class="num" id="roReg">100.00</strong></div>
+          </div>
+          <span class="eyebrow" id="roDate"></span>
         </div>
-        <span class="eyebrow" id="roDate"></span>
+        <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
       </div>
-      <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
+      <div class="panel two-nums" id="dos-numeros">
+        <h3><span data-lang="es">Dos números: ¿cuál mirar?</span><span data-lang="en">Two numbers: which one to look at?</span></h3>
+        <div class="tn-row"><span class="tn-key paid"></span><p data-lang="es"><strong>Precio pagado (el número grande).</strong> Lo que paga cualquier persona en la web del súper ese día, con las ofertas que tiene todo el mundo. Es el número principal, igual que en el INDEC.</p><p data-lang="en"><strong>Price paid (the big number).</strong> What anyone pays on the supermarket's website that day, with the offers everyone gets. It's the main number, the same as INDEC uses.</p></div>
+        <div class="tn-row"><span class="tn-key reg"></span><p data-lang="es"><strong>Sin promociones (precio de lista).</strong> El precio de la etiqueta, sin ninguna oferta.</p><p data-lang="en"><strong>Without promotions (regular price).</strong> The price on the label, with no offers at all.</p></div>
+        <div class="tn-row"><span class="tn-key gap"></span><p data-lang="es"><strong>La diferencia entre los dos es el efecto de las promociones.</strong> Las ofertas que no tiene cualquiera (tarjeta de un banco, 2x1, tarjeta del súper) no se cuentan en ninguno de los dos.</p><p data-lang="en"><strong>The gap between the two is the effect of promotions.</strong> Offers not everyone gets (a bank's card, 2-for-1, store loyalty cards) are not counted in either.</p></div>
+        <p class="tn-foot" data-lang="es">Un solo día dice muy poco: las ofertas empiezan y terminan todo el tiempo. El número que importa es el del mes completo, en el informe mensual.</p>
+        <p class="tn-foot" data-lang="en">A single day says very little: offers start and end all the time. The number that matters is the full month's, in the monthly report.</p>
+      </div>
     </div>
-    <div class="panel two-nums" id="dos-numeros">
-      <h3><span data-lang="es">Dos números: ¿cuál mirar?</span><span data-lang="en">Two numbers: which one to look at?</span></h3>
-      <div class="tn-row"><span class="tn-key paid"></span><p data-lang="es"><strong>Precio pagado (el número grande).</strong> Lo que paga cualquier persona en la web del súper ese día, con las ofertas que tiene todo el mundo. Es el número principal, igual que en el INDEC.</p><p data-lang="en"><strong>Price paid (the big number).</strong> What anyone pays on the supermarket's website that day, with the offers everyone gets. It's the main number, the same as INDEC uses.</p></div>
-      <div class="tn-row"><span class="tn-key reg"></span><p data-lang="es"><strong>Sin promociones (precio de lista).</strong> El precio de la etiqueta, sin ninguna oferta.</p><p data-lang="en"><strong>Without promotions (regular price).</strong> The price on the label, with no offers at all.</p></div>
-      <div class="tn-row"><span class="tn-key gap"></span><p data-lang="es"><strong>La diferencia entre los dos es el efecto de las promociones.</strong> Las ofertas que no tiene cualquiera (tarjeta de un banco, 2x1, tarjeta del súper) no se cuentan en ninguno de los dos.</p><p data-lang="en"><strong>The gap between the two is the effect of promotions.</strong> Offers not everyone gets (a bank's card, 2-for-1, store loyalty cards) are not counted in either.</p></div>
-      <p class="tn-foot" data-lang="es">Un solo día dice muy poco: las ofertas empiezan y terminan todo el tiempo. El número que importa es el del mes completo, en el informe mensual.</p>
-      <p class="tn-foot" data-lang="en">A single day says very little: offers start and end all the time. The number that matters is the full month's, in the monthly report.</p>
+  </section>
+
+  <section class="sec container" id="shops">
+    <div class="two-col">
+      <div>
+        <div class="head">
+          <span class="eyebrow" data-t="shopsEyebrow">Supermercados</span>
+          <h2 data-t="shopsTitle">Súper por súper</h2>
+          <p data-t="shopsIntro">Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.</p>
+        </div>
+        <div class="panel shops" id="shopList"></div>
+      </div>
+      <div class="basket-text" id="basket">
+        <div class="head" style="margin-bottom:0">
+          <span class="eyebrow" data-t="basketEyebrow">La canasta</span>
+          <h2 data-t="basketTitle">Qué hay en la canasta</h2>
+          <p data-t="basketIntro">Leche, pan, yerba, pollo, verduras, productos de limpieza y más, agrupados como los agrupa el INDEC.</p>
+        </div>
+        <ul class="legend-list">
+          <li><code>19.1%</code><span data-t="legendShare">Cuánto del gasto de un hogar representa el grupo (INDEC).</span></li>
+          <li><code>+1.0%</code><span data-t="legendChange">Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.</span></li>
+        </ul>
+        <div class="receipt" id="receipt"></div>
+        <a class="btn ghost" style="justify-self:start" href="metodo.html#canasta" data-t="seeProducts">Ver cada producto</a>
+      </div>
     </div>
+  </section>
+
+  <section class="band" id="video"><div class="container video-grid">
+    <div class="video-text">
+      <span class="eyebrow sun"><span data-lang="es">En video</span><span data-lang="en">On video</span></span>
+      <h2><span data-lang="es">Mirá cómo funciona La Canasta</span><span data-lang="en">See how La Canasta works</span></h2>
+      <p data-lang="es">De dónde salen los precios, cómo se calcula el número y cómo leer el índice.</p>
+      <p data-lang="en">Where the prices come from, how the number is calculated and how to read the index.</p>
+      <a class="yt-link" href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener"><span class="yt-ico" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M1 0.5L9.5 5L1 9.5Z" fill="#FFFFFF"/></svg></span><span data-lang="es">Ver el canal de YouTube →</span><span data-lang="en">See the YouTube channel →</span></a>
+    </div>
+    <div class="video">
+      <div data-lang="es"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/fKmu-LsOw64?rel=0" title="La Canasta: cómo funciona (video en español)" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div data-lang="en"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Sg7xwPm2cvA?rel=0" title="La Canasta: how it works (video in English)" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    </div>
+  </div></section>
+
+  <section class="sec container" id="how">
+    <div class="how-intro" style="grid-template-columns:1fr">
+      <div class="head" style="margin-bottom:0">
+        <span class="eyebrow"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></span>
+        <h2><span data-lang="es">Del súper al número, todos los días</span><span data-lang="en">From the supermarket to the number, every day</span></h2>
+      </div>
+    </div>
+    <ol class="steps" aria-label="How it works">
+      <li><h3 data-t="s1t">Recolectar</h3><p data-t="s1">Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 33 productos de todos los días en las primeras cuatro.</p></li>
+      <li><h3 data-t="s2t">Comparar</h3><p data-t="s2">Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.</p></li>
+      <li><h3 data-t="s3t">Ponderar</h3><p data-t="s3">Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.</p></li>
+    </ol>
   </section>
 
   <section class="band" id="why"><div class="container why">
     <div class="why-text">
       <span class="eyebrow" data-t="whyEyebrow">Por qué medir</span>
       <p class="quote" data-t="quote">Desde 1945, la Argentina tuvo inflación de dos dígitos o más en unos 8 de cada 10 años.</p>
+      <p data-t="why1">El índice oficial todavía pondera los precios según cómo gastaban los hogares en 2004/05, hace más de 20 años.</p>
+      <p data-t="why2">Y la inflación golpea más a quien menos tiene: cuanto más chico el ingreso, más se gasta en comida.</p>
+      <p class="closing" data-t="closing">No opinamos sobre la inflación. La medimos, todos los días, y publicamos los datos para que cualquiera pueda comprobarlo.</p>
+    </div>
+    <div>
       <ol class="timeline">
         <li><span class="yr">1975</span><span data-t="t1">El Rodrigazo: los precios se disparan casi de un día para el otro.</span></li>
         <li><span class="yr">1989</span><span data-t="t2">Hiperinflación: cerca de 200% solo en julio, unos 3.000% en el año.</span></li>
@@ -414,112 +587,86 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
         <li><span class="yr">2026</span><span data-t="t5">1,9% en septiembre y 33,4% en doce meses, según el INDEC.</span></li>
       </ol>
       <p class="src" data-t="src">Fuentes: INDEC; Fundar (Argendata).</p>
-      <p data-t="why1">El índice oficial todavía pondera los precios según cómo gastaban los hogares en 2004/05, hace más de 20 años.</p>
-      <p data-t="why2">Y la inflación golpea más a quien menos tiene: cuanto más chico el ingreso, más se gasta en comida.</p>
-      <p class="closing" data-t="closing">No opinamos sobre la inflación. La medimos, todos los días, y publicamos los datos para que cualquiera pueda comprobarlo.</p>
     </div>
-    <ol class="steps" aria-label="How it works">
-      <li><div><h3 data-t="s1t">Recolectar</h3><p data-t="s1">Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 33 productos de todos los días en las primeras cuatro.</p></div></li>
-      <li><div><h3 data-t="s2t">Comparar</h3><p data-t="s2">Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.</p></div></li>
-      <li><div><h3 data-t="s3t">Ponderar</h3><p data-t="s3">Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.</p></div></li>
-    </ol>
   </div></section>
 
-  <section class="container basket" id="basket">
-    <div class="basket-text">
-      <span class="eyebrow" data-t="basketEyebrow">La canasta</span>
-      <h2 data-t="basketTitle">Qué hay en la canasta</h2>
-      <p class="muted" data-t="basketIntro">Leche, pan, yerba, pollo, verduras, productos de limpieza y más, agrupados como los agrupa el INDEC.</p>
-      <ul class="legend-list">
-        <li><code>19.1%</code><span data-t="legendShare">Cuánto del gasto de un hogar representa el grupo (INDEC).</span></li>
-        <li><code>+1.0%</code><span data-t="legendChange">Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.</span></li>
-      </ul>
-      <a class="btn ghost" style="justify-self:start" href="metodo.html#canasta" data-t="seeProducts">Ver cada producto</a>
-    </div>
-    <div class="receipt" id="receipt"></div>
-  </section>
-
-  <section class="container" id="shops">
-    <div class="head">
-      <span class="eyebrow" data-t="shopsEyebrow">Supermercados</span>
-      <h2 data-t="shopsTitle">Súper por súper</h2>
-      <p data-t="shopsIntro">Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.</p>
-    </div>
-    <div class="panel shops" id="shopList"></div>
-  </section>
-
-  <section class="container" id="reports">
+  <section class="sec container" id="reports">
     <div class="head">
       <span class="eyebrow" data-t="repEyebrow">Informe mensual</span>
       <h2 data-t="repTitle">Cada mes, el informe completo</h2>
     </div>
-    <div class="panel report">
-      <div class="report-date" data-t="reportDate">1 dic</div>
-      <div class="report-text">
-        <span><span class="chip" data-t="reportChip">Próximamente</span></span>
-        <h3 data-t="reportTitle">Primer informe mensual</h3>
-        <p class="muted" data-t="reportText">El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.</p>
-        <span id="reportLinks" hidden style="display:flex;gap:1.2rem;flex-wrap:wrap"><a id="reportLink" href="informe.html" style="font-weight:600">Leer el informe →</a><a id="archiveLink" href="informes.html" style="font-weight:600">Todos los informes</a></span>
-      </div>
-    </div>
-    <div style="height:1rem"></div>
-    <section class="sub" id="suscribirse" hidden>
-      <div class="sub-text">
-        <h2><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></h2>
-        <p data-lang="es">Una vez por mes, el día que sale. Gratis. Te podés dar de baja cuando quieras.</p>
-        <p data-lang="en">Once a month, the day it comes out. Free. Unsubscribe any time.</p>
-      </div>
-      <div class="sub-act">
-        <form class="sub-form" id="subForm" target="subFrame" method="POST">
-          <label class="sr" for="subEmail">Email</label>
-          <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
-          <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
-          <input type="hidden" name="locale" value="es">
-          <input type="hidden" name="html_type" value="simple">
-          <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
-        </form>
-        <div id="subYes" hidden>
-          <p class="sub-ok" id="subMsg"></p>
-          <p class="sub-links">
-            <button type="button" class="sub-link" id="unsubBtn"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
-            <span aria-hidden="true">·</span>
-            <button type="button" class="sub-link" id="otherBtn"><span data-lang="es">Usar otro email</span><span data-lang="en">Use another email</span></button>
-          </p>
+    <div class="rep-grid">
+      <div class="panel report">
+        <div class="report-date" data-t="reportDate">1 dic</div>
+        <div class="report-text">
+          <span><span class="chip" data-t="reportChip">Próximamente</span></span>
+          <h3 data-t="reportTitle">Primer informe mensual</h3>
+          <p class="muted" data-t="reportText">El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.</p>
+          <span id="reportLinks" hidden style="display:flex;gap:1.2rem;flex-wrap:wrap"><a id="reportLink" href="informe.html" style="font-weight:600">Leer el informe →</a><a id="archiveLink" href="informes.html" style="font-weight:600">Todos los informes</a></span>
         </div>
-        <div id="unsubBox" hidden>
-          <p class="sub-ok" id="unsubMsg"></p>
-          <form class="sub-form" id="unsubForm" target="subFrame" method="POST" hidden>
-            <label class="sr" for="unsubEmail">Email</label>
-            <input type="email" id="unsubEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+      </div>
+      <section class="sub" id="suscribirse" hidden>
+        <div class="sub-text">
+          <h2><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></h2>
+          <p data-lang="es">Una vez por mes, el día que sale. Gratis. Te podés dar de baja cuando quieras.</p>
+          <p data-lang="en">Once a month, the day it comes out. Free. Unsubscribe any time.</p>
+        </div>
+        <div class="sub-act">
+          <form class="sub-form" id="subForm" target="subFrame" method="POST">
+            <label class="sr" for="subEmail">Email</label>
+            <input type="email" id="subEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
             <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
             <input type="hidden" name="locale" value="es">
             <input type="hidden" name="html_type" value="simple">
-            <button class="btn-a" type="submit"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+            <button class="btn-a" type="submit"><span data-lang="es">Suscribirme</span><span data-lang="en">Subscribe</span></button>
           </form>
-          <p class="sub-links"><button type="button" class="sub-link" id="unsubBack"><span data-lang="es">← Volver</span><span data-lang="en">← Back</span></button></p>
+          <div id="subYes" hidden>
+            <p class="sub-ok" id="subMsg"></p>
+            <a class="wa-btn" data-wa href="#" target="_blank" rel="noopener" style="margin:0.4rem 0"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-lang="es">Pasáselo por WhatsApp</span><span data-lang="en">Share it on WhatsApp</span></a>
+            <p class="sub-links">
+              <button type="button" class="sub-link" id="unsubBtn"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+              <span aria-hidden="true">·</span>
+              <button type="button" class="sub-link" id="otherBtn"><span data-lang="es">Usar otro email</span><span data-lang="en">Use another email</span></button>
+            </p>
+          </div>
+          <div id="unsubBox" hidden>
+            <p class="sub-ok" id="unsubMsg"></p>
+            <form class="sub-form" id="unsubForm" target="subFrame" method="POST" hidden>
+              <label class="sr" for="unsubEmail">Email</label>
+              <input type="email" id="unsubEmail" name="EMAIL" required autocomplete="email" placeholder="tu@email.com">
+              <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+              <input type="hidden" name="locale" value="es">
+              <input type="hidden" name="html_type" value="simple">
+              <button class="btn-a" type="submit"><span data-lang="es">Darme de baja</span><span data-lang="en">Unsubscribe</span></button>
+            </form>
+            <p class="sub-links"><button type="button" class="sub-link" id="unsubBack"><span data-lang="es">← Volver</span><span data-lang="en">← Back</span></button></p>
+          </div>
         </div>
-      </div>
-      <iframe name="subFrame" title="subscribe" hidden></iframe>
-    </section>
+        <iframe name="subFrame" title="subscribe" hidden></iframe>
+      </section>
+    </div>
   </section>
 
-  <section class="container" id="data">
+  <section class="sec container" id="data">
     <div class="head">
       <span class="eyebrow" data-t="dataEyebrow">Datos y método</span>
       <h2 data-t="dataTitle">Revisá cada número</h2>
     </div>
     <div class="cards">
       <a class="card-link" href="index/daily.csv" download="la-canasta-indice-diario.csv">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2B3B5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 15l4-4 3 3 5-6"/></svg></span>
         <h3 data-t="c1t">Descargar el índice</h3>
         <p data-t="c1">El índice de cada día, en total y por supermercado. Se abre en Excel o Google Sheets.</p>
         <span class="go" data-t="c1g">Descargar (CSV)</span>
       </a>
       <a class="card-link" id="latestPrices" href="#data" download>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2B3B5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>
         <h3 data-t="c2t">Todos los precios de hoy</h3>
         <p data-t="c2">Los más de 10.000 precios recolectados hoy en los cinco supermercados. Uso libre.</p>
         <span class="go" data-t="c2g">Descargar (CSV comprimido)</span>
       </a>
       <a class="card-link" href="metodo.html">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2B3B5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg></span>
         <h3 data-t="c3t">Leer el método</h3>
         <p data-t="c3">Cómo se calcula el índice, qué precio se usa, la canasta completa y los límites conocidos.</p>
         <span class="go" data-t="c3g">Leerlo</span>
@@ -530,23 +677,41 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
 
 <footer>
   <div class="container">
-    <div style="display:grid;gap:0.6rem">
-      <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="155" height="44"></a>
-      <p data-lang="es">La Canasta es un proyecto independiente de <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
-      <p data-lang="en">La Canasta is an independent project by <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.</p>
-      <p class="copy"><span data-lang="es">Contacto:</span><span data-lang="en">Contact:</span> <a href="mailto:hola@lacanastaindex.com" style="color:#FFFFFF">hola@lacanastaindex.com</a> · <a href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener" style="color:#FFFFFF">YouTube</a> · <a href="https://x.com/LaCanastaIndex" target="_blank" rel="noopener" style="color:#FFFFFF">X</a></p>
-      <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
+    <div class="foot-grid">
+      <div class="foot-col" style="gap:0.8rem">
+        <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="148" height="42"></a>
+        <p data-lang="es">La Canasta es un proyecto independiente de <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.</p>
+        <p data-lang="en">La Canasta is an independent project by <a href="ramon-pepa.html" style="color:#FFFFFF">Ramon Pepa</a>. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.</p>
+      </div>
+      <div class="foot-col">
+        <h4><span data-lang="es">El índice</span><span data-lang="en">The index</span></h4>
+        <a href="#index" data-t="navIndex">El índice</a>
+        <a href="#shops" data-t="navShops">Supermercados</a>
+        <a href="#basket" data-t="navBasket">La canasta</a>
+        <a href="#how"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></a>
+      </div>
+      <div class="foot-col">
+        <h4><span data-lang="es">Publicaciones</span><span data-lang="en">Publications</span></h4>
+        <a href="informes.html" data-t="navReport">Informes</a>
+        <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
+        <a href="metodo.html" data-t="navMethod">Metodología</a>
+        <a href="#data" data-t="navData">Datos y método</a>
+      </div>
+      <div class="foot-col">
+        <h4><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></h4>
+        <a href="mailto:hola@lacanastaindex.com">hola@lacanastaindex.com</a>
+        <a href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/LaCanastaIndex" target="_blank" rel="noopener">X</a>
+        <a href="ramon-pepa.html"><span data-lang="es">Fundador: Ramon Pepa</span><span data-lang="en">Founder: Ramon Pepa</span></a>
+      </div>
     </div>
-    <div class="foot-links">
-      <a href="#index" data-t="navIndex">El índice</a>
-      <a href="#basket" data-t="navBasket">La canasta</a>
-      <a href="#data" data-t="navData">Datos y método</a>
-      <a href="metodo.html" data-t="navMethod">Metodología</a>
-      <a href="informes.html" data-t="navReport">Informes</a>
-      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
+    <div class="foot-bottom">
+      <p class="copy">© 2026 La Canasta <a class="admin-link" href="admin.html">admin</a></p>
+      <p class="copy"><span data-lang="es">Contacto:</span><span data-lang="en">Contact:</span> <a href="mailto:hola@lacanastaindex.com" style="color:#FFFFFF">hola@lacanastaindex.com</a></p>
     </div>
   </div>
 </footer>
+<a class="sticky-sub" id="stickySub" href="#heroSub" data-gosub><span data-lang="es">Recibilo gratis por email</span><span data-lang="en">Get it free by email</span> →</a>
 
 <script>
 // Fallback copy of the data, used only if the live files can't be loaded.
@@ -958,5 +1123,98 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
     setTimeout(function () { box.scrollIntoView({ block: "center" }); }, 200);
   }
   box.hidden = false; show();
+})();
+</script>
+<script>
+// Menu, signup box at the top, WhatsApp share, phone bar, next-report line
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var isEs = function () { return document.documentElement.lang !== "en"; };
+
+  // Mobile menu
+  var mb = $("menuBtn"), mm = $("mobileMenu");
+  mb.addEventListener("click", function () { var o = mm.classList.toggle("open"); mb.setAttribute("aria-expanded", String(o)); });
+  mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { mm.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); }); });
+
+  // WhatsApp share links
+  function waHref() {
+    var t = isEs()
+      ? "Mirá La Canasta: los precios del súper en Argentina, todos los días, y la inflación del súper antes que el INDEC. Te podés suscribir gratis: https://lacanastaindex.com"
+      : "Check out La Canasta: Argentina's supermarket prices, every day, and supermarket inflation before INDEC. Subscribe for free: https://lacanastaindex.com";
+    return "https://wa.me/?text=" + encodeURIComponent(t);
+  }
+
+  // Signup box at the top: uses the same email form as the box at the bottom
+  var KEY = "lc-sub";
+  function state() { try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { return null; } }
+  function both(el, es, en) { el.textContent = ""; [["es", es], ["en", en]].forEach(function (x) { var s = document.createElement("span"); s.setAttribute("data-lang", x[0]); s.textContent = x[1]; el.appendChild(s); }); }
+  var hasForm = typeof SUBSCRIBE_ACTION === "string" && !!SUBSCRIBE_ACTION && $("subForm");
+  if (hasForm) $("heroSub").hidden = false;
+  function heroShow() {
+    var s = state();
+    $("hsFormWrap").hidden = !!s; $("hsOk").hidden = !s;
+    if (s) {
+      var who = s.email ? " (" + s.email + ")" : "";
+      if (s.state === "confirmed") both($("hsMsg"), "✓ Ya estás suscripto" + who + ". ¿Conocés a alguien a quien le sirva?", "✓ You're subscribed" + who + ". Know someone who'd find it useful?");
+      else both($("hsMsg"), "✓ Te anotaste" + who + ". Confirmá desde el email que te mandamos (mirá también en spam).", "✓ You signed up" + who + ". Confirm from the email we sent you (check spam too).");
+    }
+    document.querySelectorAll("[data-wa]").forEach(function (a) { a.href = waHref(); });
+    sticky();
+  }
+  if (hasForm) {
+    $("hsForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      $("subEmail").value = $("hsEmail").value.trim();
+      if ($("subForm").requestSubmit) $("subForm").requestSubmit(); else $("subForm").submit();
+      setTimeout(heroShow, 450);
+    });
+    $("subForm").addEventListener("submit", function () { setTimeout(heroShow, 450); });
+    $("otherBtn").addEventListener("click", function () { setTimeout(heroShow, 50); });
+    $("hsOther").addEventListener("click", function () {
+      $("otherBtn").click();
+      setTimeout(function () { $("heroSub").scrollIntoView({ block: "center" }); $("hsEmail").focus({ preventScroll: true }); }, 60);
+    });
+  }
+
+  // "Recibilo gratis" buttons jump to the top form
+  document.querySelectorAll("[data-gosub]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      if (!hasForm) return;
+      e.preventDefault();
+      $("heroSub").scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(function () { if (!$("hsFormWrap").hidden) $("hsEmail").focus({ preventScroll: true }); }, 500);
+    });
+  });
+
+  // Phone bar at the bottom: only when neither form is on screen and the person has not signed up
+  var seen = { hero: true, box: false };
+  function sticky() {
+    var bar = $("stickySub"); if (!bar) return;
+    bar.classList.toggle("show", !!hasForm && !state() && !seen.hero && !seen.box && window.scrollY > 300);
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (x) { seen[x.target.id === "heroSub" ? "hero" : "box"] = x.isIntersecting; }); sticky();
+    });
+    io.observe($("heroSub")); io.observe($("suscribirse"));
+  }
+  window.addEventListener("scroll", sticky, { passive: true });
+
+  // Keep the date in the "today" card and the WhatsApp text in the right language
+  // Report card: once a report is out, also say when the next one comes (always the 1st of next month)
+  function nextReport() {
+    if (typeof latestReport === "undefined" || !latestReport) return;
+    var MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    var MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var p = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Argentina/Buenos_Aires" }).format(new Date()).split("-");
+    var nm = (+p[1]) % 12;                                   // next month, 0-based
+    var el = $("nextRep");
+    if (!el) { el = document.createElement("p"); el.id = "nextRep"; el.className = "muted"; el.style.fontSize = "0.92rem";
+      $("reportLinks").parentNode.appendChild(el); }
+    el.textContent = isEs() ? "Próximo informe: 1 de " + MES[nm] + "." : "Next report: 1 " + MON[nm] + ".";
+  }
+  var r0 = render;
+  render = function () { r0(); var d = $("todayDate"), ro = $("roDate"); if (d && ro) d.textContent = ro.textContent; heroShow(); nextReport(); };
+  render();
 })();
 </script>

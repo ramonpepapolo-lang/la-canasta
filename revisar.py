@@ -4,7 +4,7 @@
 #   python revisar.py 2026-10-25   review a given day
 #
 # Lists every basket price that, on that day:
-#   - changed more than 25% (paid or regular price), or
+#   - changed more than 15% (paid or regular price), or
 #   - moved the whole index by more than 0.25 points on its own.
 # For each one it prints the evidence needed to decide if it is real or a data problem:
 # the last 10 days of that product, the same product type at the other shops, and any name change.
@@ -18,7 +18,7 @@ import os
 import sys
 from collections import defaultdict
 
-BIG_CHANGE = 0.25   # 25%
+BIG_CHANGE = 0.15   # 15%
 BIG_POINTS = 0.25   # index points
 
 basket, names = {}, {}
@@ -91,7 +91,7 @@ for d in dates:
 
 print(f"REVISION DE {target}: {len(flags)} movimiento(s) para revisar")
 if not flags:
-    print("Nada raro: ningun precio cambio mas de 25% ni movio el indice mas de 0,25 puntos.")
+    print("Nada raro: ningun precio cambio mas de 15% ni movio el indice mas de 0,25 puntos.")
 seen = set()
 for _, key, kind, before, now, pts in sorted(flags, reverse=True):
     print("\n" + "=" * 70)

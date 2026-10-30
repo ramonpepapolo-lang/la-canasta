@@ -1,6 +1,6 @@
 # Revisión diaria de precios dudosos
 
-Cada noche un agente corre `python revisar.py` y mira los precios que cambiaron más de 25% o que movieron
+Cada noche un agente corre `python revisar.py` y mira los precios que cambiaron más de 15% o que movieron
 el índice más de 0,25 puntos. Decide con estas reglas. **Ante la duda, NO se excluye.**
 
 ## Reglas

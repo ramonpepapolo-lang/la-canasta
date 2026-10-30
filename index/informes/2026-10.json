@@ -3,60 +3,55 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 4.33,
+ "inflation": 3.53,
  "base_date": "2026-10-24",
- "end_date": "2026-10-29",
- "days_of_data": 6,
- "prices_collected": 63059,
+ "end_date": "2026-10-30",
+ "days_of_data": 7,
+ "prices_collected": 73740,
  "headline": {
-  "end_to_end_paid": 4.33,
-  "end_to_end_regular": 0.33,
+  "end_to_end_paid": 3.53,
+  "end_to_end_regular": -0.52,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 2.74
+   "pct": 1.29
   },
   {
    "shop": "ChangoMas",
-   "pct": 12.02
+   "pct": 12.08
   },
   {
    "shop": "Dia",
-   "pct": 4.88
+   "pct": 4.26
   },
   {
    "shop": "Jumbo",
-   "pct": 0.48
+   "pct": -0.98
   }
  ],
  "groups": [
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 14.58
+   "pct": 16.24
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 7.76
-  },
-  {
-   "group": "verduras",
-   "in_headline": true,
-   "pct": 7.36
+   "pct": 8.97
   },
   {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": 6.42
+   "pct": 6.71
   },
   {
-   "group": "carne_ave",
+   "group": "verduras",
    "in_headline": true,
-   "pct": 5.69
+   "pct": 4.32
   },
   {
    "group": "alcohol",
@@ -64,19 +59,19 @@
    "pct": 4.19
   },
   {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": 4.15
+  },
+  {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": 3.83
+   "pct": 3.84
   },
   {
-   "group": "frutas",
+   "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": 3.64
-  },
-  {
-   "group": "limpieza",
-   "in_headline": true,
-   "pct": 1.74
+   "pct": 0.36
   },
   {
    "group": "azucar",
@@ -84,26 +79,40 @@
    "pct": 0.32
   },
   {
-   "group": "cafe_te_yerba",
+   "group": "carne_ave",
    "in_headline": true,
-   "pct": 0.14
+   "pct": 0.29
   },
   {
-   "group": "aceites",
+   "group": "limpieza",
    "in_headline": true,
-   "pct": 0.0
+   "pct": -1.84
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": -4.01
+   "pct": -2.88
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": -6.07
   }
  ],
  "products_compared": 129,
- "products_up": 30,
- "products_down": 14,
- "products_same": 85,
+ "products_up": 37,
+ "products_down": 22,
+ "products_same": 70,
  "top_up": [
+  {
+   "type": "manteca",
+   "type_en": "Butter, 200 g",
+   "shop": "Carrefour",
+   "name": "Manteca Tonadita calidad extra 200 g.",
+   "before": 2199.0,
+   "now": 4399.0,
+   "pct": 100.05
+  },
   {
    "type": "banana",
    "type_en": "Bananas, per kg",
@@ -139,26 +148,17 @@
    "before": 1390.0,
    "now": 2265.0,
    "pct": 62.95
-  },
-  {
-   "type": "leche",
-   "type_en": "Whole milk, 1 L",
-   "shop": "Dia",
-   "name": "Leche Larga Vida Clásica 3% La Serenisima 1 Lt.",
-   "before": 1940.0,
-   "now": 3030.0,
-   "pct": 56.19
   }
  ],
  "top_down": [
   {
-   "type": "pan_lactal",
-   "type_en": "Sliced white bread",
+   "type": "banana",
+   "type_en": "Bananas, per kg",
    "shop": "ChangoMas",
-   "name": "Pan Lactal De Mesa 315 G",
-   "before": 2347.8,
-   "now": 1264.2,
-   "pct": -46.15
+   "name": "Banana 1 Kg",
+   "before": 3299.0,
+   "now": 1799.0,
+   "pct": -45.47
   },
   {
    "type": "fideos",
@@ -170,6 +170,24 @@
    "pct": -43.24
   },
   {
+   "type": "pan_lactal",
+   "type_en": "Sliced white bread",
+   "shop": "Carrefour",
+   "name": "Pan Blanco Lactal 315 grs",
+   "before": 3600.0,
+   "now": 2340.0,
+   "pct": -35.0
+  },
+  {
+   "type": "jabon_ropa",
+   "type_en": "Laundry powder, ~800 g",
+   "shop": "Carrefour",
+   "name": "Jabón en polvo Ala Bicarbonato 800 grs",
+   "before": 3319.0,
+   "now": 2157.35,
+   "pct": -35.0
+  },
+  {
    "type": "shampoo",
    "type_en": "Shampoo, ~350-400 ml",
    "shop": "Dia",
@@ -177,24 +195,6 @@
    "before": 6380.0,
    "now": 4147.0,
    "pct": -35.0
-  },
-  {
-   "type": "dulce_de_leche",
-   "type_en": "Dulce de leche, 400 g",
-   "shop": "Dia",
-   "name": "Dulce de Leche Clásico Ilolay 400 Gr.",
-   "before": 3819.0,
-   "now": 2860.0,
-   "pct": -25.11
-  },
-  {
-   "type": "harina_000",
-   "type_en": "Flour 000, 1 kg",
-   "shop": "Dia",
-   "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
-   "before": 1300.0,
-   "now": 975.0,
-   "pct": -25.0
   }
  ],
  "series": [
@@ -227,6 +227,11 @@
    "date": "2026-10-29",
    "paid": 104.329,
    "regular": 100.33
+  },
+  {
+   "date": "2026-10-30",
+   "paid": 103.532,
+   "regular": 99.477
   }
  ]
 }

@@ -1,31 +1,31 @@
 {
  "month": "2026-10",
- "complete": false,
+ "complete": true,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 3.53,
+ "inflation": 3.83,
  "base_date": "2026-10-24",
- "end_date": "2026-10-30",
- "days_of_data": 7,
- "prices_collected": 73740,
+ "end_date": "2026-10-31",
+ "days_of_data": 8,
+ "prices_collected": 84419,
  "headline": {
-  "end_to_end_paid": 3.53,
-  "end_to_end_regular": -0.52,
+  "end_to_end_paid": 3.83,
+  "end_to_end_regular": -0.23,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.29
+   "pct": 3.22
   },
   {
    "shop": "ChangoMas",
-   "pct": 12.08
+   "pct": 10.69
   },
   {
    "shop": "Dia",
-   "pct": 4.26
+   "pct": 4.5
   },
   {
    "shop": "Jumbo",
@@ -49,9 +49,9 @@
    "pct": 6.71
   },
   {
-   "group": "verduras",
+   "group": "carne_ave",
    "in_headline": true,
-   "pct": 4.32
+   "pct": 5.18
   },
   {
    "group": "alcohol",
@@ -69,6 +69,11 @@
    "pct": 3.84
   },
   {
+   "group": "verduras",
+   "in_headline": true,
+   "pct": 2.43
+  },
+  {
    "group": "cafe_te_yerba",
    "in_headline": true,
    "pct": 0.36
@@ -79,14 +84,9 @@
    "pct": 0.32
   },
   {
-   "group": "carne_ave",
-   "in_headline": true,
-   "pct": 0.29
-  },
-  {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -1.84
+   "pct": -1.34
   },
   {
    "group": "pan_cereales",
@@ -100,9 +100,9 @@
   }
  ],
  "products_compared": 129,
- "products_up": 37,
- "products_down": 22,
- "products_same": 70,
+ "products_up": 39,
+ "products_down": 23,
+ "products_same": 67,
  "top_up": [
   {
    "type": "manteca",
@@ -232,6 +232,11 @@
    "date": "2026-10-30",
    "paid": 103.532,
    "regular": 99.477
+  },
+  {
+   "date": "2026-10-31",
+   "paid": 103.833,
+   "regular": 99.765
   }
  ]
 }

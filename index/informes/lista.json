@@ -1,10 +1,10 @@
 [
  {
   "month": "2026-10",
-  "complete": false,
-  "days_of_data": 7,
+  "complete": true,
+  "days_of_data": 8,
   "publishable": false,
-  "inflation": 3.53,
+  "inflation": 3.83,
   "method": "end_to_end"
  }
 ]

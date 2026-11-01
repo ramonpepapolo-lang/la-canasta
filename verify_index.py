@@ -31,7 +31,7 @@ def rows(path):
 
 basket = {(r["shop"], r["sku_id"]): r["type_id"] for r in rows("basket.csv")}
 starts = {(r["shop"], r["sku_id"]): (r.get("from_date") or "").strip() for r in rows("basket.csv")}
-CHANGE_DATE = "2026-11-01"  # from this day each product type counts once inside its group
+CHANGE_DATE = "2026-10-24"  # from this day each product type counts once inside its group
 grp, w = {}, {}
 for r in rows("weights.csv"):
     w[r["group"]] = float(r["spending_2004_gba"]) if r["spending_2004_gba"] else 0.0

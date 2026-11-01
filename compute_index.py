@@ -7,11 +7,11 @@
 # 4. Chain the days together. Day 1 = 100.
 # Done twice: with the price people pay (promotions included) and with the regular price.
 # Each shop is only ever compared with itself.
-# From 1 November 2026 the basket is bigger (up to 5 products of each type per shop, basket.csv
-# column from_date). From that day each type counts once inside its group, whatever the number of
-# products: first the average of each type (each shop counting the same), then the average of the
-# types in the group. Before that day nothing changes (one product per type and shop).
-# A product that starts later (from_date) is followed before that day, but not counted.
+# The basket has up to 5 products of each type per shop (567 in all). Each type counts once inside
+# its group, whatever the number of products: first the average of each type (each shop counting
+# the same), then the average of the types in the group. The bigger basket was added on 1 November
+# 2026 and the whole index was recalculated with it from the first day (24 October 2026).
+# A product added later gets a from_date in basket.csv: it is followed before that day, but not counted.
 # Doubtful prices listed in notas/excluir.csv (found by the daily review) are left out, never replaced:
 # that product is simply not compared on that day, for that kind of price.
 
@@ -23,7 +23,7 @@ import os
 from collections import defaultdict
 
 MAX_JUMP = 3.0  # a price that triples or falls to a third overnight is treated as a data error
-CHANGE_DATE = "2026-11-01"  # from this day: bigger basket, each type counts once in its group
+CHANGE_DATE = "2026-10-24"  # type-by-type averaging applies from this day (the first day of data)
 
 # ---------- Read the basket and the weights ----------
 basket = {}  # (shop, sku_id) -> type_id

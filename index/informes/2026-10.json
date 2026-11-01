@@ -3,50 +3,50 @@
  "complete": true,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 3.83,
+ "inflation": 1.13,
  "base_date": "2026-10-24",
  "end_date": "2026-10-31",
  "days_of_data": 8,
  "prices_collected": 84419,
  "headline": {
-  "end_to_end_paid": 3.83,
-  "end_to_end_regular": -0.23,
+  "end_to_end_paid": 1.13,
+  "end_to_end_regular": 1.12,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 3.22
+   "pct": 1.43
   },
   {
    "shop": "ChangoMas",
-   "pct": 10.69
+   "pct": -0.82
   },
   {
    "shop": "Dia",
-   "pct": 4.5
+   "pct": 2.74
   },
   {
    "shop": "Jumbo",
-   "pct": -0.98
+   "pct": 1.2
   }
  ],
  "groups": [
   {
-   "group": "otros_alimentos",
-   "in_headline": true,
-   "pct": 16.24
-  },
-  {
-   "group": "lacteos",
-   "in_headline": true,
-   "pct": 8.97
-  },
-  {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": 6.71
+   "pct": 5.74
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": 5.3
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 5.23
   },
   {
    "group": "carne_ave",
@@ -54,49 +54,49 @@
    "pct": 5.18
   },
   {
-   "group": "alcohol",
+   "group": "lacteos",
    "in_headline": true,
-   "pct": 4.19
+   "pct": 4.1
+  },
+  {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": 3.71
   },
   {
    "group": "aceites",
    "in_headline": true,
-   "pct": 4.15
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 3.84
+   "pct": 1.42
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": 2.43
+   "pct": 1.03
   },
   {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": 0.36
+   "pct": 0.93
   },
   {
    "group": "azucar",
    "in_headline": true,
-   "pct": 0.32
-  },
-  {
-   "group": "limpieza",
-   "in_headline": true,
-   "pct": -1.34
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": -2.88
+   "pct": -1.3
   },
   {
    "group": "frutas",
    "in_headline": true,
-   "pct": -6.07
+   "pct": -2.8
+  },
+  {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": -3.62
+  },
+  {
+   "group": "limpieza",
+   "in_headline": true,
+   "pct": -6.11
   }
  ],
  "products_compared": 563,
@@ -206,37 +206,37 @@
   {
    "date": "2026-10-25",
    "paid": 101.164,
-   "regular": 100.0
+   "regular": 100.891
   },
   {
    "date": "2026-10-26",
-   "paid": 103.217,
-   "regular": 99.947
+   "paid": 102.519,
+   "regular": 100.921
   },
   {
    "date": "2026-10-27",
-   "paid": 103.103,
-   "regular": 99.836
+   "paid": 102.919,
+   "regular": 101.004
   },
   {
    "date": "2026-10-28",
-   "paid": 103.924,
-   "regular": 100.473
+   "paid": 102.471,
+   "regular": 101.512
   },
   {
    "date": "2026-10-29",
-   "paid": 104.329,
-   "regular": 100.33
+   "paid": 102.253,
+   "regular": 101.507
   },
   {
    "date": "2026-10-30",
-   "paid": 103.532,
-   "regular": 99.917
+   "paid": 101.024,
+   "regular": 101.395
   },
   {
    "date": "2026-10-31",
-   "paid": 103.833,
-   "regular": 99.768
+   "paid": 101.129,
+   "regular": 101.118
   }
  ]
 }

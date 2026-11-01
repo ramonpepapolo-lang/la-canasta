@@ -1,7 +1,8 @@
 # La Canasta: precios diarios de supermercados en Argentina
 
 **Web:** https://lacanastaindex.com
-**Código y datos actualizados todos los días:** https://github.com/ramonpepapolo-lang/la-canasta
+**Datos actualizados todos los días:** https://lacanastaindex.com/metodo.html#datos
+**DOI:** https://doi.org/10.5281/zenodo.23856045
 **Autor:** Ramon Pepa
 **Licencia:** CC BY 4.0 (uso libre, citando la fuente: "La Canasta, lacanastaindex.com")
 
@@ -54,14 +55,15 @@ Hasta el 31/10/2026 la canasta tenía 129 productos (uno por tipo y súper); des
 
 ## Cómo citarlo
 
-Pepa, R. (2026). *La Canasta: precios diarios de supermercados en Argentina* [Dataset]. https://lacanastaindex.com
+Pepa, R. (2026). *La Canasta: precios diarios de supermercados en Argentina* [Dataset]. https://doi.org/10.5281/zenodo.23856045 · https://lacanastaindex.com
 
 ---
 
 # La Canasta: daily supermarket prices in Argentina
 
 **Website:** https://lacanastaindex.com
-**Code and data, updated every day:** https://github.com/ramonpepapolo-lang/la-canasta
+**Data, updated every day:** https://lacanastaindex.com/metodo.html#datos
+**DOI:** https://doi.org/10.5281/zenodo.23856045
 **Author:** Ramon Pepa
 **License:** CC BY 4.0 (free to use with credit: "La Canasta, lacanastaindex.com")
 
@@ -87,4 +89,4 @@ Each product's price is compared with the last day it was in stock (same shop, s
 
 ## How to cite
 
-Pepa, R. (2026). *La Canasta: daily supermarket prices in Argentina* [Dataset]. https://lacanastaindex.com
+Pepa, R. (2026). *La Canasta: daily supermarket prices in Argentina* [Dataset]. https://doi.org/10.5281/zenodo.23856045 · https://lacanastaindex.com

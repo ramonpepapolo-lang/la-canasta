@@ -310,6 +310,12 @@ pre.checks { background: var(--band); border: 1px solid var(--rule); border-radi
     </section>
 
     <section class="asec">
+      <h2>Datos abiertos</h2>
+      <p class="muted" id="dataStamp" style="margin:0 0 0.8rem;font-size:0.9rem">Cuánta gente mira y descarga los datos en Kaggle, Zenodo y la web.</p>
+      <div id="dataBox"><div class="cards"><div class="card"><span class="s">Cargando...</span></div></div></div>
+    </section>
+
+    <section class="asec">
       <h2>Estado del índice</h2>
       <div class="cards" id="status"><div class="card"><span class="s">Cargando...</span></div></div>
     </section>
@@ -418,6 +424,55 @@ async function loadVisits() {
   box.textContent = ""; box.append(cards, l);
 }
 
+// ---------- Open data: Kaggle, Zenodo and downloads from the website ----------
+const KAGGLE_URL = "https://www.kaggle.com/datasets/ramonpepa/la-canasta-argentina-daily-supermarket-prices";
+const ZENODO_ID = "23856045";
+async function loadOpenData() {
+  const box = document.getElementById("dataBox");
+  const n = x => (x == null || x === "" ? "–" : Number(x).toLocaleString("es-AR"));
+  let st = {};
+  try { const r = await fetch("index/datos-stats.json", { cache: "no-store" }); if (r.ok) st = await r.json(); } catch (e) {}
+  // Zenodo: try live first (straight from Zenodo), otherwise the daily number
+  let z = st.zenodo || null, zLive = false;
+  try {
+    const r = await fetch("https://zenodo.org/api/records/" + ZENODO_ID, { cache: "no-store" });
+    if (r.ok) { const j = await r.json(); const s = (j.stats && (j.stats.all_versions || j.stats)) || {};
+      z = { views: s.unique_views ?? s.views, downloads: s.unique_downloads ?? s.downloads }; zLive = true; }
+  } catch (e) {}
+  // Website: clicks counted by GoatCounter on the download links of metodo.html
+  const gc = (typeof GOATCOUNTER_CODE === "string" && GOATCOUNTER_CODE) ? "https://" + GOATCOUNTER_CODE + ".goatcounter.com" : "";
+  const gcCount = async path => { if (!gc) return null; try { const r = await fetch(gc + "/counter/" + encodeURIComponent(path) + ".json", { cache: "no-store" }); return r.ok ? (await r.json()).count : 0; } catch (e) { return null; } };
+  const [webZip, toKaggle, toZenodo] = await Promise.all([gcCount("descarga-zip"), gcCount("ir-a-kaggle"), gcCount("ir-a-zenodo")]);
+  const k = st.kaggle;
+  const daily = st.updated ? "Actualizado " + st.updated + " (España), una vez por día" : "Se actualiza una vez por día";
+
+  const group = (title, cards, linkText, href) => {
+    const g = el("div"); g.style.marginBottom = "1.2rem";
+    g.append(el("h3", null, title)); const c = el("div", "cards"); cards.forEach(x => c.append(x)); g.append(c);
+    if (href) { const l = el("div", "links"); l.style.marginTop = "0.6rem"; const a = el("a", "btn-b", linkText); a.href = href; a.target = "_blank"; a.rel = "noopener"; l.append(a); g.append(l); }
+    return g;
+  };
+  box.textContent = "";
+  if (k) {
+    box.append(group("Kaggle", [card("Vistas", n(k.views), daily), card("Descargas", n(k.downloads), daily),
+      card("Votos", n(k.votes), "Upvotes en Kaggle"), card("Usabilidad", k.usability != null ? (Number(k.usability) * 10).toFixed(1) + " / 10" : "–", "Nota de Kaggle")], "Abrir en Kaggle", KAGGLE_URL));
+  } else {
+    const h = el("div", "howto");
+    h.append(el("strong", null, "Kaggle todavía no está conectado (falta un permiso, 3 minutos)."));
+    const ol = el("ol");
+    ["En Kaggle: tu foto → Settings → API → Create New Token. Se baja un archivo kaggle.json con tu usuario y una clave.",
+     "En GitHub: la-canasta → Settings → Secrets and variables → Actions → New repository secret. Creá KAGGLE_USERNAME (tu usuario) y KAGGLE_KEY (la clave).",
+     "Al día siguiente aparecen acá las vistas y descargas de Kaggle."].forEach(t => ol.append(el("li", null, t)));
+    h.append(ol);
+    const g = group("Kaggle", [], "Abrir en Kaggle", KAGGLE_URL); g.insertBefore(h, g.children[1]); box.append(g);
+  }
+  box.append(group("Zenodo (DOI)", [card("Vistas", n(z && z.views), zLive ? "En vivo · personas distintas" : daily),
+    card("Descargas", n(z && z.downloads), zLive ? "En vivo · personas distintas" : daily)], "Abrir en Zenodo", "https://doi.org/10.5281/zenodo." + ZENODO_ID));
+  box.append(group("Desde la web", [card("Descargas del zip", n(webZip), "Clics en “Todo junto (.zip)” en Metodología"),
+    card("Clics a Kaggle", n(toKaggle), "Desde Metodología"), card("Clics a Zenodo", n(toZenodo), "Desde Metodología")]));
+  if (st.errors && st.errors.length) box.append(el("p", "muted", "Aviso: " + st.errors.join(" · ")));
+}
+
 async function subsCard() {
   let subs = [];
   try { const r = await fetch("index/suscriptores.csv", { cache: "no-store" }); if (r.ok) subs = parseCSV(await r.text()); } catch (e) {}
@@ -451,6 +506,7 @@ async function refreshLive() {
 
 async function load() {
   await refreshLive();
+  loadOpenData();
 
   // Index status
   const st = document.getElementById("status");

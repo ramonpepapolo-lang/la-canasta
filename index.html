@@ -206,6 +206,10 @@ main { display: grid; gap: 0; }
 .key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
 .key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
 .chart-wrap { position: relative; }
+.range { font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: 0.4rem 2rem 0.4rem 0.9rem; cursor: pointer; appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232B3B5C' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.8rem center; }
+.range:focus-visible { outline: 2px solid var(--celeste); outline-offset: 2px; }
+.chart-right { display: grid; gap: 0.5rem; justify-items: end; }
 #chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
 .tip { position: absolute; pointer-events: none; background: var(--navy); color: #FFFFFF; font-size: 0.82rem; padding: 0.45rem 0.7rem; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -120%); font-variant-numeric: tabular-nums; }
@@ -428,7 +432,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
         <span class="eyebrow sun" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
         <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
         <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
-        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="https://www.youtube.com/shorts/njkhtUHqAQM" target="_blank" rel="noopener">acá</a>.</span></p>
+        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="https://www.youtube.com/shorts/njkhtUHqAQM" target="_blank" rel="noopener">acá</a>.</span><span data-lang="en"> See how it works <a href="https://www.youtube.com/shorts/sq4QiYlzBHI" target="_blank" rel="noopener">here</a>.</span></p>
         <div class="hero-sub" id="heroSub" hidden>
           <div id="hsFormWrap">
             <strong><span data-lang="es">Recibí la inflación del súper <em>antes que el INDEC</em>. Gratis.</span><span data-lang="en">Get supermarket inflation <em>before INDEC</em>. Free.</span></strong>
@@ -502,7 +506,10 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
             <div><span class="key" data-t="legendPaid">Precio que se paga</span><strong class="num" id="roPaid">100.00</strong></div>
             <div><span class="key regular" data-t="legendRegular">Precio de lista</span><strong class="num" id="roReg">100.00</strong></div>
           </div>
-          <span class="eyebrow" id="roDate"></span>
+          <div class="chart-right">
+            <select class="range" id="range" aria-label="Período del gráfico"></select>
+            <span class="eyebrow" id="roDate"></span>
+          </div>
         </div>
         <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
       </div>
@@ -884,17 +891,49 @@ const fmtDate = (d, year = true) => new Date(d + "T12:00:00Z").toLocaleDateStrin
   Object.assign({ day: "numeric", month: "short", timeZone: "UTC" }, year ? { year: "numeric" } : {}));
 function el(tag, className, text) { const e = document.createElement(tag); if (className) e.className = className; if (text !== undefined) e.textContent = text; return e; }
 
-let geo = null;
+let geo = null, range = null, shown = [];
+// Chart period: "all" (since the start) or a month "YYYY-MM". A month also shows the last day of the
+// month before, so the line starts where that month started.
+function rangeRows() {
+  if (!range || range === "all") return daily;
+  const i0 = daily.findIndex(d => d.date.slice(0, 7) === range);
+  if (i0 < 0) return daily;
+  let i1 = i0; while (i1 + 1 < daily.length && daily[i1 + 1].date.slice(0, 7) === range) i1++;
+  return daily.slice(Math.max(0, i0 - 1), i1 + 1);
+}
+function fillRange() {
+  const sel = document.getElementById("range"); if (!sel || !daily.length) return;
+  const es = lang === "es";
+  const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const months = [...new Set(daily.map(d => d.date.slice(0, 7)))].reverse();
+  const name = m => { const i = +m.slice(5) - 1, y = m.slice(0, 4); return es ? MESES[i][0].toUpperCase() + MESES[i].slice(1) + " " + y : MONTHS[i] + " " + y; };
+  if (!range) {  // default: this month once it has a week of data, otherwise since the start
+    const cur = months[0], days = daily.filter(d => d.date.slice(0, 7) === cur).length;
+    range = days >= 7 ? cur : "all";
+  }
+  sel.textContent = "";
+  months.forEach((m, i) => {
+    const o = el("option", null, i === 0 ? (es ? `Este mes (${name(m).split(" ")[0].toLowerCase()})` : `This month (${name(m).split(" ")[0]})`) : name(m));
+    o.value = m; sel.append(o);
+  });
+  const all = el("option", null, es ? `Todo (desde el ${fmtDate(daily[0].date, false)})` : `All time (since ${fmtDate(daily[0].date, false)})`);
+  all.value = "all"; sel.append(all);
+  sel.value = range;
+  sel.setAttribute("aria-label", es ? "Período del gráfico" : "Chart period");
+}
 function drawChart() {
   const box = document.getElementById("chart");
   box.setAttribute("aria-label", T[lang].chartLabel);
+  fillRange();
+  const rows = shown = rangeRows();
   const W = 900, H = 320, L = 46, R = 18, Tp = 16, B = 32;
-  const paid = daily.map(d => +d.index_paid), reg = daily.map(d => +d.index_regular);
+  const paid = rows.map(d => +d.index_paid), reg = rows.map(d => +d.index_regular);
   let lo = Math.min(100, ...paid, ...reg), hi = Math.max(100, ...paid, ...reg);
   const span0 = hi - lo, pad = Math.max(0.5, span0 * 0.2);
   const step = span0 + 2 * pad <= 3 ? 0.5 : span0 + 2 * pad <= 8 ? 1 : span0 + 2 * pad <= 20 ? 2 : 5;
   lo = Math.floor((lo - pad) / step) * step; hi = Math.ceil((hi + pad) / step) * step;
-  const n = daily.length;
+  const n = rows.length;
   const x = i => (n === 1 ? L + (W - L - R) / 2 : L + (i * (W - L - R)) / (n - 1));
   const y = v => Tp + ((hi - v) * (H - Tp - B)) / (hi - lo);
   geo = { x, y, W, n };
@@ -905,7 +944,7 @@ function drawChart() {
     s += `<text x="${L - 10}" y="${(+yy + 4).toFixed(1)}" text-anchor="end">${num(v, step < 1 ? 1 : 0)}</text>`;
   }
   const every = Math.max(1, Math.ceil(n / 7));
-  daily.forEach((d, i) => {
+  rows.forEach((d, i) => {
     if (i % every === 0 || i === n - 1) {
       const a = n === 1 ? "middle" : i === 0 ? "start" : i === n - 1 ? "end" : "middle";
       s += `<text x="${x(i).toFixed(1)}" y="${H - 8}" text-anchor="${a}">${fmtDate(d.date, false)}</text>`;
@@ -923,13 +962,13 @@ function drawChart() {
 }
 
 function hover(evt) {
-  if (!geo || !daily.length) return;
+  if (!geo || !shown.length) return;
   const svg = document.querySelector("#chart svg"); if (!svg) return;
   const rect = svg.getBoundingClientRect();
   const sx = ((evt.clientX - rect.left) / rect.width) * geo.W;
   let best = 0, bd = Infinity;
-  daily.forEach((d, i) => { const dd = Math.abs(geo.x(i) - sx); if (dd < bd) { bd = dd; best = i; } });
-  const d = daily[best], px = geo.x(best), py = geo.y(+d.index_paid);
+  shown.forEach((d, i) => { const dd = Math.abs(geo.x(i) - sx); if (dd < bd) { bd = dd; best = i; } });
+  const d = shown[best], px = geo.x(best), py = geo.y(+d.index_paid);
   const hl = document.getElementById("hoverLine"), hd = document.getElementById("hoverDot");
   hl.setAttribute("x1", px); hl.setAttribute("x2", px); hl.setAttribute("visibility", "visible");
   hd.setAttribute("cx", px); hd.setAttribute("cy", py); hd.setAttribute("visibility", "visible");
@@ -1056,6 +1095,7 @@ function render() {
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
   lang = b.dataset.lang; try { localStorage.setItem("lc-lang", lang); } catch (e) {} render();
 }));
+document.getElementById("range").addEventListener("change", e => { range = e.target.value; drawChart(); });
 const cw = document.querySelector(".chart-wrap");
 cw.addEventListener("pointermove", hover); cw.addEventListener("pointerleave", unhover);
 

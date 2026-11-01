@@ -13,7 +13,7 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-10-24,limpieza,Cleaning products,yes,100.0,100.0
 2026-10-24,cuidado_personal,Personal care,no (weight pending),100.0,100.0
 2026-10-25,pan_cereales,Bread and cereals,yes,100.0,100.0
-2026-10-25,carne_ave,Chicken,yes,110.077,100.0
+2026-10-25,carne_ave,Chicken,yes,110.077,110.077
 2026-10-25,lacteos,Dairy and eggs,yes,100.0,100.0
 2026-10-25,aceites,Oils,yes,100.0,100.0
 2026-10-25,frutas,Fruit,yes,106.406,100.0
@@ -25,94 +25,94 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-10-25,alcohol,Alcoholic drinks,yes,100.0,100.0
 2026-10-25,limpieza,Cleaning products,yes,100.0,100.0
 2026-10-25,cuidado_personal,Personal care,no (weight pending),100.0,100.0
-2026-10-26,pan_cereales,Bread and cereals,yes,104.763,100.162
-2026-10-26,carne_ave,Chicken,yes,110.077,100.0
-2026-10-26,lacteos,Dairy and eggs,yes,101.526,100.0
+2026-10-26,pan_cereales,Bread and cereals,yes,102.403,99.95
+2026-10-26,carne_ave,Chicken,yes,110.077,110.077
+2026-10-26,lacteos,Dairy and eggs,yes,100.562,99.991
 2026-10-26,aceites,Oils,yes,100.0,100.0
-2026-10-26,frutas,Fruit,yes,104.374,98.091
-2026-10-26,verduras,Vegetables,yes,102.651,100.0
+2026-10-26,frutas,Fruit,yes,105.385,99.041
+2026-10-26,verduras,Vegetables,yes,101.206,100.0
 2026-10-26,azucar,Sugar and sweets,yes,100.0,100.0
-2026-10-26,otros_alimentos,Other food,yes,103.661,100.0
-2026-10-26,cafe_te_yerba,"Coffee, tea and yerba",yes,100.0,100.0
-2026-10-26,aguas_gaseosas,Water and soft drinks,yes,100.0,100.0
-2026-10-26,alcohol,Alcoholic drinks,yes,100.0,100.0
-2026-10-26,limpieza,Cleaning products,yes,104.742,100.0
-2026-10-26,cuidado_personal,Personal care,no (weight pending),105.912,100.0
-2026-10-27,pan_cereales,Bread and cereals,yes,104.763,100.162
-2026-10-27,carne_ave,Chicken,yes,110.077,100.0
-2026-10-27,lacteos,Dairy and eggs,yes,101.526,100.0
+2026-10-26,otros_alimentos,Other food,yes,101.698,100.246
+2026-10-26,cafe_te_yerba,"Coffee, tea and yerba",yes,100.414,100.414
+2026-10-26,aguas_gaseosas,Water and soft drinks,yes,100.434,100.434
+2026-10-26,alcohol,Alcoholic drinks,yes,101.988,100.0
+2026-10-26,limpieza,Cleaning products,yes,106.357,100.0
+2026-10-26,cuidado_personal,Personal care,no (weight pending),102.801,100.07
+2026-10-27,pan_cereales,Bread and cereals,yes,102.448,99.993
+2026-10-27,carne_ave,Chicken,yes,110.077,110.077
+2026-10-27,lacteos,Dairy and eggs,yes,102.601,100.275
 2026-10-27,aceites,Oils,yes,100.0,100.0
-2026-10-27,frutas,Fruit,yes,102.252,96.096
-2026-10-27,verduras,Vegetables,yes,102.148,99.511
+2026-10-27,frutas,Fruit,yes,103.242,97.027
+2026-10-27,verduras,Vegetables,yes,101.767,100.554
 2026-10-27,azucar,Sugar and sweets,yes,100.0,100.0
-2026-10-27,otros_alimentos,Other food,yes,103.661,100.0
-2026-10-27,cafe_te_yerba,"Coffee, tea and yerba",yes,100.0,100.0
-2026-10-27,aguas_gaseosas,Water and soft drinks,yes,100.276,100.276
-2026-10-27,alcohol,Alcoholic drinks,yes,100.0,100.0
-2026-10-27,limpieza,Cleaning products,yes,104.742,100.0
-2026-10-27,cuidado_personal,Personal care,no (weight pending),105.912,100.0
-2026-10-28,pan_cereales,Bread and cereals,yes,101.465,100.627
-2026-10-28,carne_ave,Chicken,yes,105.695,100.0
-2026-10-28,lacteos,Dairy and eggs,yes,103.879,100.437
-2026-10-28,aceites,Oils,yes,100.0,100.0
-2026-10-28,frutas,Fruit,yes,103.642,97.402
-2026-10-28,verduras,Vegetables,yes,108.962,103.6
-2026-10-28,azucar,Sugar and sweets,yes,100.324,100.324
-2026-10-28,otros_alimentos,Other food,yes,110.185,100.0
-2026-10-28,cafe_te_yerba,"Coffee, tea and yerba",yes,100.0,100.0
-2026-10-28,aguas_gaseosas,Water and soft drinks,yes,100.276,100.276
-2026-10-28,alcohol,Alcoholic drinks,yes,100.0,100.0
-2026-10-28,limpieza,Cleaning products,yes,104.742,100.0
-2026-10-28,cuidado_personal,Personal care,no (weight pending),103.828,100.889
-2026-10-29,pan_cereales,Bread and cereals,yes,95.991,100.627
-2026-10-29,carne_ave,Chicken,yes,105.695,100.0
-2026-10-29,lacteos,Dairy and eggs,yes,107.756,100.437
-2026-10-29,aceites,Oils,yes,100.0,100.0
-2026-10-29,frutas,Fruit,yes,103.642,97.402
-2026-10-29,verduras,Vegetables,yes,107.361,102.078
-2026-10-29,azucar,Sugar and sweets,yes,100.324,100.324
-2026-10-29,otros_alimentos,Other food,yes,114.577,100.0
-2026-10-29,cafe_te_yerba,"Coffee, tea and yerba",yes,100.145,100.145
-2026-10-29,aguas_gaseosas,Water and soft drinks,yes,106.418,100.276
-2026-10-29,alcohol,Alcoholic drinks,yes,104.195,100.0
-2026-10-29,limpieza,Cleaning products,yes,101.745,100.0
-2026-10-29,cuidado_personal,Personal care,no (weight pending),103.828,100.889
-2026-10-30,pan_cereales,Bread and cereals,yes,97.117,100.617
-2026-10-30,carne_ave,Chicken,yes,100.294,100.0
-2026-10-30,lacteos,Dairy and eggs,yes,108.967,100.623
-2026-10-30,aceites,Oils,yes,104.147,100.0
-2026-10-30,frutas,Fruit,yes,93.934,93.294
-2026-10-30,verduras,Vegetables,yes,104.316,99.183
-2026-10-30,azucar,Sugar and sweets,yes,100.324,100.324
-2026-10-30,otros_alimentos,Other food,yes,116.242,100.0
-2026-10-30,cafe_te_yerba,"Coffee, tea and yerba",yes,100.362,100.362
-2026-10-30,aguas_gaseosas,Water and soft drinks,yes,106.711,100.552
-2026-10-30,alcohol,Alcoholic drinks,yes,104.195,100.0
-2026-10-30,limpieza,Cleaning products,yes,98.158,100.0
-2026-10-30,cuidado_personal,Personal care,no (weight pending),103.842,100.903
-2026-10-31,pan_cereales,Bread and cereals,yes,97.117,100.617
-2026-10-31,carne_ave,Chicken,yes,105.177,100.0
-2026-10-31,lacteos,Dairy and eggs,yes,108.967,100.623
-2026-10-31,aceites,Oils,yes,104.147,100.0
-2026-10-31,frutas,Fruit,yes,93.934,93.294
-2026-10-31,verduras,Vegetables,yes,102.432,97.391
-2026-10-31,azucar,Sugar and sweets,yes,100.324,100.324
-2026-10-31,otros_alimentos,Other food,yes,116.242,100.0
-2026-10-31,cafe_te_yerba,"Coffee, tea and yerba",yes,100.362,100.362
-2026-10-31,aguas_gaseosas,Water and soft drinks,yes,106.711,100.552
-2026-10-31,alcohol,Alcoholic drinks,yes,104.195,100.0
-2026-10-31,limpieza,Cleaning products,yes,98.657,100.509
-2026-10-31,cuidado_personal,Personal care,no (weight pending),103.842,100.903
-2026-11-01,pan_cereales,Bread and cereals,yes,97.133,100.617
-2026-11-01,carne_ave,Chicken,yes,105.177,100.0
-2026-11-01,lacteos,Dairy and eggs,yes,108.449,100.623
-2026-11-01,aceites,Oils,yes,104.147,100.0
-2026-11-01,frutas,Fruit,yes,94.733,94.087
-2026-11-01,verduras,Vegetables,yes,102.432,97.391
-2026-11-01,azucar,Sugar and sweets,yes,100.324,100.324
-2026-11-01,otros_alimentos,Other food,yes,114.686,99.839
-2026-11-01,cafe_te_yerba,"Coffee, tea and yerba",yes,99.802,100.298
-2026-11-01,aguas_gaseosas,Water and soft drinks,yes,106.895,100.552
-2026-11-01,alcohol,Alcoholic drinks,yes,106.002,100.001
-2026-11-01,limpieza,Cleaning products,yes,101.947,100.509
-2026-11-01,cuidado_personal,Personal care,no (weight pending),103.865,101.025
+2026-10-27,otros_alimentos,Other food,yes,101.698,100.246
+2026-10-27,cafe_te_yerba,"Coffee, tea and yerba",yes,100.486,100.486
+2026-10-27,aguas_gaseosas,Water and soft drinks,yes,100.964,100.964
+2026-10-27,alcohol,Alcoholic drinks,yes,102.724,100.0
+2026-10-27,limpieza,Cleaning products,yes,106.506,100.139
+2026-10-27,cuidado_personal,Personal care,no (weight pending),103.23,100.127
+2026-10-28,pan_cereales,Bread and cereals,yes,99.782,100.331
+2026-10-28,carne_ave,Chicken,yes,105.695,110.077
+2026-10-28,lacteos,Dairy and eggs,yes,102.314,101.033
+2026-10-28,aceites,Oils,yes,101.138,101.138
+2026-10-28,frutas,Fruit,yes,104.61,97.402
+2026-10-28,verduras,Vegetables,yes,105.162,102.377
+2026-10-28,azucar,Sugar and sweets,yes,98.699,100.631
+2026-10-28,otros_alimentos,Other food,yes,103.408,100.694
+2026-10-28,cafe_te_yerba,"Coffee, tea and yerba",yes,100.31,100.486
+2026-10-28,aguas_gaseosas,Water and soft drinks,yes,102.215,101.184
+2026-10-28,alcohol,Alcoholic drinks,yes,102.539,99.92
+2026-10-28,limpieza,Cleaning products,yes,104.236,100.139
+2026-10-28,cuidado_personal,Personal care,no (weight pending),103.389,101.367
+2026-10-29,pan_cereales,Bread and cereals,yes,97.122,100.389
+2026-10-29,carne_ave,Chicken,yes,105.695,110.077
+2026-10-29,lacteos,Dairy and eggs,yes,104.258,101.191
+2026-10-29,aceites,Oils,yes,99.696,100.233
+2026-10-29,frutas,Fruit,yes,103.939,96.777
+2026-10-29,verduras,Vegetables,yes,104.782,102.007
+2026-10-29,azucar,Sugar and sweets,yes,98.699,100.631
+2026-10-29,otros_alimentos,Other food,yes,104.377,100.847
+2026-10-29,cafe_te_yerba,"Coffee, tea and yerba",yes,100.873,100.777
+2026-10-29,aguas_gaseosas,Water and soft drinks,yes,104.054,101.184
+2026-10-29,alcohol,Alcoholic drinks,yes,104.302,100.186
+2026-10-29,limpieza,Cleaning products,yes,99.716,100.139
+2026-10-29,cuidado_personal,Personal care,no (weight pending),103.688,101.367
+2026-10-30,pan_cereales,Bread and cereals,yes,96.377,100.388
+2026-10-30,carne_ave,Chicken,yes,100.294,110.077
+2026-10-30,lacteos,Dairy and eggs,yes,104.066,100.501
+2026-10-30,aceites,Oils,yes,101.417,101.138
+2026-10-30,frutas,Fruit,yes,97.199,95.179
+2026-10-30,verduras,Vegetables,yes,104.606,101.836
+2026-10-30,azucar,Sugar and sweets,yes,98.699,100.631
+2026-10-30,otros_alimentos,Other food,yes,103.712,101.167
+2026-10-30,cafe_te_yerba,"Coffee, tea and yerba",yes,100.931,100.835
+2026-10-30,aguas_gaseosas,Water and soft drinks,yes,105.738,101.371
+2026-10-30,alcohol,Alcoholic drinks,yes,105.301,100.186
+2026-10-30,limpieza,Cleaning products,yes,93.8,100.486
+2026-10-30,cuidado_personal,Personal care,no (weight pending),105.234,101.23
+2026-10-31,pan_cereales,Bread and cereals,yes,96.377,100.388
+2026-10-31,carne_ave,Chicken,yes,105.177,110.077
+2026-10-31,lacteos,Dairy and eggs,yes,104.098,100.912
+2026-10-31,aceites,Oils,yes,101.417,101.138
+2026-10-31,frutas,Fruit,yes,97.199,95.179
+2026-10-31,verduras,Vegetables,yes,101.026,98.35
+2026-10-31,azucar,Sugar and sweets,yes,98.699,100.631
+2026-10-31,otros_alimentos,Other food,yes,103.712,101.167
+2026-10-31,cafe_te_yerba,"Coffee, tea and yerba",yes,100.931,100.835
+2026-10-31,aguas_gaseosas,Water and soft drinks,yes,105.738,101.371
+2026-10-31,alcohol,Alcoholic drinks,yes,105.301,100.186
+2026-10-31,limpieza,Cleaning products,yes,93.895,100.588
+2026-10-31,cuidado_personal,Personal care,no (weight pending),105.234,101.23
+2026-11-01,pan_cereales,Bread and cereals,yes,96.393,100.388
+2026-11-01,carne_ave,Chicken,yes,105.177,110.077
+2026-11-01,lacteos,Dairy and eggs,yes,103.603,100.912
+2026-11-01,aceites,Oils,yes,101.417,101.138
+2026-11-01,frutas,Fruit,yes,98.026,95.989
+2026-11-01,verduras,Vegetables,yes,101.026,98.35
+2026-11-01,azucar,Sugar and sweets,yes,98.699,100.631
+2026-11-01,otros_alimentos,Other food,yes,102.323,101.004
+2026-11-01,cafe_te_yerba,"Coffee, tea and yerba",yes,100.368,100.771
+2026-11-01,aguas_gaseosas,Water and soft drinks,yes,105.92,101.371
+2026-11-01,alcohol,Alcoholic drinks,yes,107.127,100.187
+2026-11-01,limpieza,Cleaning products,yes,97.026,100.588
+2026-11-01,cuidado_personal,Personal care,no (weight pending),105.257,101.353

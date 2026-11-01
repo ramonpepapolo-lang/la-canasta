@@ -51,7 +51,7 @@ Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios)
 4. Los grupos se combinan con las ponderaciones del INDEC.
 5. Los días se encadenan. Un precio que se triplica o cae a un tercio de un día al otro se trata como error.
 
-Hasta el 31/10/2026 la canasta tenía 129 productos (uno por tipo y súper); desde el 1/11/2026 tiene 567. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
+La canasta tiene 567 productos (hasta cinco por tipo y súper). Se agregaron el 1/11/2026 y el índice se recalculó con ellos desde el primer día. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
 
 ## Cómo citarlo
 
@@ -85,7 +85,7 @@ This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 
 ## Method
 
-Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. Until 31 Oct 2026 the basket had 129 products; from 1 Nov 2026 it has 567. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
+Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. The basket has 567 products (up to five per kind and shop); they were added on 1 Nov 2026 and the index was recalculated with them from the first day. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
 
 ## How to cite
 

@@ -6,5 +6,13 @@
   "publishable": false,
   "inflation": 3.83,
   "method": "end_to_end"
+ },
+ {
+  "month": "2026-11",
+  "complete": false,
+  "days_of_data": 1,
+  "publishable": false,
+  "inflation": 0.08,
+  "method": "end_to_end"
  }
 ]

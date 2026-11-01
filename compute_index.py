@@ -7,6 +7,11 @@
 # 4. Chain the days together. Day 1 = 100.
 # Done twice: with the price people pay (promotions included) and with the regular price.
 # Each shop is only ever compared with itself.
+# From 1 November 2026 the basket is bigger (up to 5 products of each type per shop, basket.csv
+# column from_date). From that day each type counts once inside its group, whatever the number of
+# products: first the average of each type (each shop counting the same), then the average of the
+# types in the group. Before that day nothing changes (one product per type and shop).
+# A product that starts later (from_date) is followed before that day, but not counted.
 # Doubtful prices listed in notas/excluir.csv (found by the daily review) are left out, never replaced:
 # that product is simply not compared on that day, for that kind of price.
 
@@ -18,12 +23,15 @@ import os
 from collections import defaultdict
 
 MAX_JUMP = 3.0  # a price that triples or falls to a third overnight is treated as a data error
+CHANGE_DATE = "2026-11-01"  # from this day: bigger basket, each type counts once in its group
 
 # ---------- Read the basket and the weights ----------
 basket = {}  # (shop, sku_id) -> type_id
+from_date = {}  # (shop, sku_id) -> first day the product counts ("" = from the start)
 with open("basket.csv", newline="", encoding="utf-8") as f:
     for r in csv.DictReader(f):
         basket[(r["shop"], r["sku_id"])] = r["type_id"]
+        from_date[(r["shop"], r["sku_id"])] = (r.get("from_date") or "").strip()
 
 group_of, weight, group_name = {}, {}, {}
 with open("weights.csv", newline="", encoding="utf-8") as f:
@@ -80,10 +88,27 @@ last_seen = {}  # ((shop, sku), kind) -> price on the last day it was in stock (
 daily_rows, group_rows, checks = [], [], []
 n_excluded = 0
 
+def mean(xs):
+    return sum(xs) / len(xs)
+
+
+def group_change(c, scope):
+    """c: list of (type, shop, log change). Old method: plain average. New: type by type."""
+    if date < CHANGE_DATE:
+        return mean([x for _, _, x in c])
+    per_type = defaultdict(lambda: defaultdict(list))
+    for t, shop, x in c:
+        per_type[t][shop].append(x)
+    # inside a type: average per shop, then each shop counts the same (for one shop: just its average)
+    return mean([mean([mean(v) for v in shops.values()]) for shops in per_type.values()])
+
+
 for i, date in enumerate(dates):
-    changes = defaultdict(list)  # (scope, group, kind) -> list of log price changes
+    changes = defaultdict(list)  # (scope, group, kind) -> list of (type, shop, log price change)
     n_used = 0
+    n_active = sum(1 for key in days[date] if from_date[key] <= date)
     for key, now in days[date].items():
+        active = from_date[key] <= date
         usable = {}
         for kind in ("paid", "regular"):
             if (date, key[0], key[1], kind) in EXCLUDED:
@@ -96,17 +121,19 @@ for i, date in enumerate(dates):
             before = last_seen[(key, kind)]
             ratio = usable[kind] / before
             if ratio > MAX_JUMP or ratio < 1 / MAX_JUMP:
-                checks.append(f"{date} {key[0]} {basket[key]} ({kind}): {before} -> {usable[kind]}, left out")
+                if active:
+                    checks.append(f"{date} {key[0]} {basket[key]} ({kind}): {before} -> {usable[kind]}, left out")
                 ok = False
         if not ok:
             continue  # keep comparing against the last good price
-        if comparable:
+        if comparable and active:
             n_used += 1
-            g = group_of[basket[key]]
+            t = basket[key]
+            g = group_of[t]
             for kind in comparable:
                 lc = math.log(usable[kind] / last_seen[(key, kind)])
-                changes[("all", g, kind)].append(lc)
-                changes[(key[0], g, kind)].append(lc)
+                changes[("all", g, kind)].append((t, key[0], lc))
+                changes[(key[0], g, kind)].append((t, key[0], lc))
         for kind, v in usable.items():
             last_seen[(key, kind)] = v
 
@@ -115,7 +142,7 @@ for i, date in enumerate(dates):
         for kind in ("paid", "regular"):
             c = changes.get(("all", g, kind))
             if c:
-                group_level[(g, kind)] *= math.exp(sum(c) / len(c))
+                group_level[(g, kind)] *= math.exp(group_change(c, "all"))
 
     # Whole index and each shop: weighted average of group changes (only groups with an official weight)
     for s in SCOPES:
@@ -124,14 +151,14 @@ for i, date in enumerate(dates):
             for g in group_name:
                 c = changes.get((s, g, kind))
                 if c and weight[g]:
-                    num += weight[g] * sum(c) / len(c)
+                    num += weight[g] * group_change(c, s)
                     den += weight[g]
             if den:
                 level[(s, kind)] *= math.exp(num / den)
 
     row = {"date": date, "index_paid": round(level[("all", "paid")], 3),
            "index_regular": round(level[("all", "regular")], 3),
-           "products_in_stock": len(days[date]), "products_compared": n_used}
+           "products_in_stock": n_active, "products_compared": n_used}
     for s in SHOP_NAMES:
         row[f"{s}_paid"] = round(level[(s, "paid")], 3)
     daily_rows.append(row)

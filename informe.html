@@ -486,13 +486,13 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
     <section class="rsec">
       <h2><span data-lang="es">Cómo leer este informe</span><span data-lang="en">How to read this report</span></h2>
       <ul class="plain" data-lang="es">
-        <li>Mide 33 productos de supermercado en Carrefour, Jumbo, ChangoMás y Día, todos los días.</li>
+        <li>Mide 567 productos de supermercado (33 tipos) en Carrefour, Jumbo, ChangoMás y Día, todos los días.</li>
         <li>Los grupos se combinan con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).</li>
         <li>No incluye alquiler, servicios, transporte, educación ni salud: se compara sobre todo con el rubro Alimentos y bebidas del INDEC.</li>
         <li>Cuidado personal se muestra pero no cuenta en el número principal.</li>
       </ul>
       <ul class="plain" data-lang="en">
-        <li>It measures 33 supermarket products at Carrefour, Jumbo, ChangoMás and Día, every day.</li>
+        <li>It measures 567 supermarket products (33 kinds) at Carrefour, Jumbo, ChangoMás and Día, every day.</li>
         <li>Groups are combined with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).</li>
         <li>It excludes rent, utilities, transport, education and health, so it is mainly compared with INDEC's Food and drinks figure.</li>
         <li>Personal care is shown but not counted in the main number.</li>
@@ -533,7 +533,7 @@ const GROUP = { pan_cereales: ["Pan y cereales","Bread and cereals"], carne_ave:
   aceites: ["Aceites","Oils"], frutas: ["Frutas","Fruit"], verduras: ["Verduras","Vegetables"], azucar: ["Azúcar y dulces","Sugar and sweets"],
   otros_alimentos: ["Otros alimentos","Other food"], cafe_te_yerba: ["Café, té y yerba","Coffee, tea and yerba"], aguas_gaseosas: ["Aguas y gaseosas","Water and soft drinks"],
   alcohol: ["Bebidas alcohólicas","Alcoholic drinks"], limpieza: ["Limpieza","Cleaning products"], cuidado_personal: ["Cuidado personal","Personal care"] };
-const TYPE_ES = { pan_lactal:"Pan lactal blanco", harina_000:"Harina 000, 1 kg", arroz:"Arroz, 1 kg", fideos:"Fideos tallarín, 500 g", pollo_entero:"Pollo entero, por kg", leche:"Leche entera, 1 L", manteca:"Manteca, 200 g", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche, 400 g", huevos:"Huevos blancos x12", aceite_girasol:"Aceite de girasol, 1,5 L", papa:"Papa, por kg", cebolla:"Cebolla, por kg", tomate:"Tomate redondo, por kg", banana:"Banana, por kg", manzana:"Manzana roja, por kg", azucar:"Azúcar, 1 kg", yerba:"Yerba mate, 1 kg", cafe:"Café instantáneo, 170 g", te:"Té en saquitos", mayonesa:"Mayonesa, 500 g", pure_tomate:"Puré de tomate, 520 g", coca_cola:"Coca-Cola, 2,25 L", agua:"Agua mineral, 2 L", cerveza:"Cerveza rubia, 1 L", vino:"Vino tinto, 1 L", papel_higienico:"Papel higiénico 4 x 30 m", detergente:"Detergente, 500 ml", lavandina:"Lavandina, 1 L", jabon_ropa:"Jabón en polvo, 800 g", shampoo:"Shampoo", pasta_dental:"Pasta dental, 90 g", jabon_tocador:"Jabón de tocador" };
+const TYPE_ES = { pan_lactal:"Pan lactal", harina_000:"Harina 000 / 0000", arroz:"Arroz", fideos:"Fideos secos", pollo_entero:"Pollo entero", leche:"Leche", manteca:"Manteca", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche", huevos:"Huevos", aceite_girasol:"Aceite de girasol", papa:"Papa", cebolla:"Cebolla", tomate:"Tomate", banana:"Banana", manzana:"Manzana", azucar:"Azúcar", yerba:"Yerba mate", cafe:"Café", te:"Té en saquitos", mayonesa:"Mayonesa", pure_tomate:"Puré de tomate", coca_cola:"Coca-Cola", agua:"Agua mineral", cerveza:"Cerveza", vino:"Vino tinto", papel_higienico:"Papel higiénico", detergente:"Detergente", lavandina:"Lavandina", jabon_ropa:"Jabón en polvo", shampoo:"Shampoo", pasta_dental:"Pasta dental", jabon_tocador:"Jabón de tocador" };
 
 let lang = "es";
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
@@ -647,14 +647,18 @@ function render() {
   $("big").textContent = sp(rep.inflation);
   $("bigSub").textContent = rep.inflation >= 0 ? L(`Suba de los precios del súper en ${monthName(m)}`, `Rise in supermarket prices in ${monthName(m)}`)
                                                 : L(`Baja de los precios del súper en ${monthName(m)}`, `Fall in supermarket prices in ${monthName(m)}`);
-  const reg = rep.method === "average" ? rep.headline.avg_regular : rep.headline.end_to_end_regular;
+  const reg = rep.method === "average" ? rep.headline.avg_regular : rep.method === "week" ? rep.headline.week_regular : rep.headline.end_to_end_regular;
   const facts = [[L("Precio de lista", "Regular price"), sp(reg)], [L("Días de datos", "Days of data"), String(rep.days_of_data)],
     [L("Precios recolectados", "Prices collected"), Number(rep.prices_collected).toLocaleString(lang === "es" ? "es-AR" : "en-GB")],
     [L("Productos que subieron", "Products that rose"), `${rep.products_up} / ${rep.products_compared}`]];
   const fx = $("facts"); fx.textContent = ""; facts.forEach(([k, v]) => { const w = el("div"); w.append(el("dt", null, k), el("dd", null, v)); fx.append(w); });
 
   const prevName = monthName(rep.base_date.slice(0, 7));
-  $("period").textContent = rep.method === "average"
+  const wk = rep.headline.week_now, wb = rep.headline.week_before;
+  $("period").textContent = rep.method === "week"
+    ? L(`Semana contra semana: el precio promedio de cada producto del ${longDate(wk[0])} al ${longDate(wk[1])}, contra su precio promedio del ${longDate(wb[0])} al ${longDate(wb[1])}. Mismos días de la semana de los dos lados, así las promos de fin de semana no mueven el número. Se usa porque ${prevName} tiene menos de 20 días de datos; desde el mes siguiente se compara promedio contra promedio, como el INDEC.`,
+        `Week against week: each product's average price from ${longDate(wk[0])} to ${longDate(wk[1])}, against its average price from ${longDate(wb[0])} to ${longDate(wb[1])}. The same days of the week on both sides, so weekend promotions do not move the number. Used because ${prevName} has fewer than 20 days of data; from the next month on it compares average vs average, like INDEC.`)
+    : rep.method === "average"
     ? L(`Promedio de ${monthName(m)} contra promedio de ${prevName}, como el INDEC. Punta a punta (${longDate(rep.base_date)} al ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`,
         `Average of ${monthName(m)} vs average of ${prevName}, like INDEC. End to end (${longDate(rep.base_date)} to ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`)
     : L(`Variación punta a punta, del ${longDate(rep.base_date)} al ${longDate(rep.end_date)}. Se usa porque ${prevName} tiene menos de 20 días de datos; desde el mes siguiente se compara promedio contra promedio, como el INDEC.`,

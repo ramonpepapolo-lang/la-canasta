@@ -30,6 +30,8 @@ def rows(path):
 
 
 basket = {(r["shop"], r["sku_id"]): r["type_id"] for r in rows("basket.csv")}
+starts = {(r["shop"], r["sku_id"]): (r.get("from_date") or "").strip() for r in rows("basket.csv")}
+CHANGE_DATE = "2026-11-01"  # from this day each product type counts once inside its group
 grp, w = {}, {}
 for r in rows("weights.csv"):
     w[r["group"]] = float(r["spending_2004_gba"]) if r["spending_2004_gba"] else 0.0
@@ -76,7 +78,7 @@ for p, d in zip(files, dates):
                 reg = 0.0
             t[k] = {"paid": paid, "regular": reg if reg > 0 else paid}
     prices[d] = t
-    if len(t) < 100:
+    if len([k for k in t if starts[k] <= d]) < 100:
         problems.append(f"{d}: solo {len(t)} productos de la canasta con stock (mínimo 100)")
 
 # ---------- Independent recalculation (ratios, not logs) ----------
@@ -84,17 +86,35 @@ shops = sorted({s for s, _ in basket})
 level = {(s, k): 1.0 for s in ["all"] + shops for k in ("paid", "regular")}
 prev = {}
 calc = {}
+def geo(rs):
+    prod = 1.0
+    for r in rs:
+        prod *= r
+    return prod ** (1 / len(rs))
+
+
+def group_ratio(items, new):
+    """items: list of (type, shop, ratio). Old: geometric mean of all. New: shop -> type -> group."""
+    if not new:
+        return geo([r for _, _, r in items])
+    by_type = {}
+    for t, shop, r in items:
+        by_type.setdefault(t, {}).setdefault(shop, []).append(r)
+    return geo([geo([geo(rs) for rs in by_shop.values()]) for by_shop in by_type.values()])
+
+
 for d in dates:
-    ratios = defaultdict(list)  # (scope, group, kind) -> [ratio]
+    ratios = defaultdict(list)  # (scope, group, kind) -> [(type, shop, ratio)]
     for k, v in prices[d].items():
         use = {kind: v[kind] for kind in ("paid", "regular") if (d, k[0], k[1], kind) not in skip}
         comp = {kind: use[kind] / prev[(k, kind)] for kind in use if (k, kind) in prev}
         if any(r > 3 or r < 1 / 3 for r in comp.values()):
             continue
-        g = grp[basket[k]]
-        for kind, r in comp.items():
-            ratios[("all", g, kind)].append(r)
-            ratios[(k[0], g, kind)].append(r)
+        if starts[k] <= d:  # products that start later are followed but not counted
+            g = grp[basket[k]]
+            for kind, r in comp.items():
+                ratios[("all", g, kind)].append((basket[k], k[0], r))
+                ratios[(k[0], g, kind)].append((basket[k], k[0], r))
         for kind, p in use.items():
             prev[(k, kind)] = p
     for s in ["all"] + shops:
@@ -103,10 +123,7 @@ for d in dates:
             for g, wt in w.items():
                 rs = ratios.get((s, g, kind))
                 if rs and wt:
-                    prod = 1.0
-                    for r in rs:
-                        prod *= r
-                    parts.append((wt, prod ** (1 / len(rs))))
+                    parts.append((wt, group_ratio(rs, d >= CHANGE_DATE)))
             if parts:
                 total = sum(wt for wt, _ in parts)
                 f = 1.0
@@ -114,6 +131,38 @@ for d in dates:
                     f *= gm ** (wt / total)
                 level[(s, kind)] *= f
     calc[d] = {key: v * 100 for key, v in level.items()}
+
+# ---------- "Week" method of the monthly report, recalculated another way ----------
+def week_check(rep, m, prev_m):
+    """Same days of two months, every product's average price, combined type -> group -> weights.
+    Written separately from make_report.py: works on price ratios, not logs."""
+    a, b = rep["headline"]["week_now"], rep["headline"]["week_before"]
+    end_day = int(rep["end_date"][8:])
+    if a[1] != rep["end_date"]:
+        problems.append(f"Informe {m}: la semana no termina el último día ({a[1]} vs {rep['end_date']})")
+    nums = range(end_day - 6, end_day + 1)
+    now_days = [x for x in (f"{m}-{n:02d}" for n in nums) if x in prices]
+    old_days = [x for x in (f"{prev_m}-{n:02d}" for n in nums) if x in prices]
+    if [now_days[0], now_days[-1]] != a or [old_days[0], old_days[-1]] != b:
+        problems.append(f"Informe {m}: ventanas de semana distintas a las recalculadas")
+    tree = {}  # group -> type -> shop -> [ratio]
+    for k, t in basket.items():
+        if k[0] not in shops:
+            continue
+        pn = [prices[x][k]["paid"] for x in now_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
+        po = [prices[x][k]["paid"] for x in old_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
+        if len(pn) < 4 or len(po) < 4:
+            continue
+        r = (sum(pn) / len(pn)) / (sum(po) / len(po))
+        if 1 / 3 <= r <= 3:
+            tree.setdefault(grp[t], {}).setdefault(t, {}).setdefault(k[0], []).append(r)
+    total = sum(w[g] for g in tree if w.get(g))
+    f = 1.0
+    for g, types in tree.items():
+        if w.get(g):
+            f *= geo([geo([geo(rs) for rs in by_shop.values()]) for by_shop in types.values()]) ** (w[g] / total)
+    return round((f - 1) * 100, 2)
+
 
 # ---------- Compare with what is published ----------
 daily = rows("index/daily.csv")
@@ -148,7 +197,9 @@ for i, m in enumerate(ms):
         rep = json.load(open(rep_path, encoding="utf-8"))
         prev_rows = by_m[ms[i - 1]] if i > 0 else []
         full = len(by_m[m]) >= 20 and len(prev_rows) >= 20
-        if full:
+        if rep.get("method") == "week":
+            expect = week_check(rep, m, ms[i - 1])
+        elif full:
             a1 = avg
             a0 = sum(float(r["index_paid"]) for r in prev_rows) / len(prev_rows)
             expect = round((a1 / a0 - 1) * 100, 2)

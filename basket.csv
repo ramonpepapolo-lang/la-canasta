@@ -1,130 +1,568 @@
-type_id,product_type,category,shop,sku_id,ean,name
-pan_lactal,Sliced white bread,Bread and cereals,Carrefour,126927,7793890258769,Pan Blanco Lactal 315 grs
-pan_lactal,Sliced white bread,Bread and cereals,Jumbo,386821,7793890258769,Pan Blanco 315 Grs Lactal
-pan_lactal,Sliced white bread,Bread and cereals,ChangoMas,189853,7793890258769,Pan Lactal De Mesa 315 G
-pan_lactal,Sliced white bread,Bread and cereals,Dia,245474,7793890258769,Pan Blanco Lactal 315 Gr.
-harina_000,"Flour 000, 1 kg",Bread and cereals,Carrefour,171055,7790070562258,Harina de trigo 000 Favorita con vitaminas 1 kg.
-harina_000,"Flour 000, 1 kg",Bread and cereals,Jumbo,409673,7790070562258,Harina 000 1 Kg Favorita
-harina_000,"Flour 000, 1 kg",Bread and cereals,ChangoMas,221485,7790070562258,Harina De Trigo Favorita 000 1 Kg
-harina_000,"Flour 000, 1 kg",Bread and cereals,Dia,300780,7790070562258,Harina 000 con Vitaminas Favorita 1 Kg.
-arroz,"White rice, 1 kg",Bread and cereals,Carrefour,157166,7790070431509,Arroz parboil Lucchetti 1 kg.
-arroz,"White rice, 1 kg",Bread and cereals,Jumbo,403671,7790070431509,Arroz Parboil 1 Kg Lucchetti
-arroz,"White rice, 1 kg",Bread and cereals,ChangoMas,214790,7790070431509,Arroz Parboil Lucchetti 1 Kg
-arroz,"White rice, 1 kg",Bread and cereals,Dia,299061,7790070431509,Arroz Parboil Bolsa Luchetti 1 Kg.
-fideos,"Dry spaghetti, 500 g",Bread and cereals,Carrefour,157189,7790070336118,Fideos tallarin N5 Lucchetti 500 g.
-fideos,"Dry spaghetti, 500 g",Bread and cereals,Jumbo,403669,7790070336118,Fideos Tallarín N°5 500 Grs Lucchetti
-fideos,"Dry spaghetti, 500 g",Bread and cereals,ChangoMas,214730,7790070336118,Fideos Lucchetti Tallarin 500 G
-fideos,"Dry spaghetti, 500 g",Bread and cereals,Dia,299670,7790070336118,Fideos Tallarin N5 Luchetti 500 Gr.
-pollo_entero,"Whole chicken, per kg",Meat,Carrefour,105063,2507384000001,Pollo entero congelado x kg
-pollo_entero,"Whole chicken, per kg",Meat,Jumbo,24060,2582916000001,Pollo Fresco Con Menudos
-pollo_entero,"Whole chicken, per kg",Meat,ChangoMas,17013,2026200000006,Pollo Entero Fresco 2.700kg
-pollo_entero,"Whole chicken, per kg",Meat,Dia,90150,2490150000000,Pollo Fresco x Kg.
-leche,"Whole milk, 1 L",Dairy and eggs,Carrefour,144373,7790742363008,Leche La serenisima clásica 3% 1L.
-leche,"Whole milk, 1 L",Dairy and eggs,Jumbo,247387,7790787002528,Leche Entera 1 Lts Ilolay Leche  Entera Ilolay U.a.t. Brik  1 Lt
-leche,"Whole milk, 1 L",Dairy and eggs,ChangoMas,178930,7790742192301,Leche Entera Casanto 1 L
-leche,"Whole milk, 1 L",Dairy and eggs,Dia,295999,7790742363008,Leche Larga Vida Clásica 3% La Serenisima 1 Lt.
-manteca,"Butter, 200 g",Dairy and eggs,Carrefour,28722,7798060850026,Manteca Tonadita calidad extra 200 g.
-manteca,"Butter, 200 g",Dairy and eggs,Jumbo,532,7798060850026,Manteca Clásica 200 Grs Tonadita Manteca Tonadita 200 Gr
-manteca,"Butter, 200 g",Dairy and eggs,ChangoMas,191884,7798060850026,Manteca Tonadita Clásica 200 G
-manteca,"Butter, 200 g",Dairy and eggs,Dia,236478,7798060850026,Manteca Tonadita Extra calidad 200 Gr.
-queso_cremoso,"Soft cheese (cremoso), per kg",Dairy and eggs,Carrefour,204477,7791720038499,Queso cremoso Bulnez 300 grs
-queso_cremoso,"Soft cheese (cremoso), per kg",Dairy and eggs,Jumbo,20218,2593136000009,Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg
-queso_cremoso,"Soft cheese (cremoso), per kg",Dairy and eggs,ChangoMas,136640,2003880000007,Queso Cremoso Aliada 600 G
-queso_cremoso,"Soft cheese (cremoso), per kg",Dairy and eggs,Dia,90181,2406887000009,Queso Cremoso La Paulina x Kg.
-dulce_de_leche,"Dulce de leche, 400 g",Dairy and eggs,Carrefour,12946,7790787153664,Dulce de leche Ilolay clásico 400 g.
-dulce_de_leche,"Dulce de leche, 400 g",Dairy and eggs,Jumbo,70336,7790787153664,Dulce de Leche Tradicional 400 Grs Ilolay
-dulce_de_leche,"Dulce de leche, 400 g",Dairy and eggs,ChangoMas,215672,7790787153664,Dulce De Leche Ilolay Clásico 400 G
-dulce_de_leche,"Dulce de leche, 400 g",Dairy and eggs,Dia,299471,7790787153664,Dulce de Leche Clásico Ilolay 400 Gr.
-huevos,"White eggs, 12",Dairy and eggs,Carrefour,17064,7798108344821,Huevos frescos blancos Carrefour 12 u.
-huevos,"White eggs, 12",Dairy and eggs,Jumbo,342143,724751034984,Huevos de Gallina x 12 Un Huevos Blancos Doña Lala X 12u Carton
-huevos,"White eggs, 12",Dairy and eggs,ChangoMas,21816,605388342379,Huevos Blancos Check Grandes 12u
-huevos,"White eggs, 12",Dairy and eggs,Dia,48133,7798064180143,Huevo Blanco Grande 12 Ud.
-aceite_girasol,"Sunflower oil, 1.5 L",Oils and fats,Carrefour,97472,7798316700815,Aceite de girasol Legitimo 15 lt Aceite de girasol Legitimo 1.5 lt.
-aceite_girasol,"Sunflower oil, 1.5 L",Oils and fats,Jumbo,350413,7798316700815,Aceite de Girasol 1.5 Lts Legitimo
-aceite_girasol,"Sunflower oil, 1.5 L",Oils and fats,ChangoMas,216055,7798316700815,Aceite De Girasol Legítimo 1.5 L
-aceite_girasol,"Sunflower oil, 1.5 L",Oils and fats,Dia,15122,7798316700815,"Aceite de Girasol Legítimo 1,5 Lt."
-papa,"Potatoes, per kg",Vegetables,Carrefour,34549,2308124000004,Papa cepillada x kg.
-papa,"Potatoes, per kg",Vegetables,Jumbo,7380,2596617000000,Papa Cepillada Granel Por Kg
-papa,"Potatoes, per kg",Vegetables,Dia,90094,2490094000000,Papa Negra x Kg.
-cebolla,"Onions, per kg",Vegetables,Carrefour,7968,2320056000006,Cebolla x kg.
-cebolla,"Onions, per kg",Vegetables,Jumbo,167685,2596536000006,Cebolla Superior Por Kg
-cebolla,"Onions, per kg",Vegetables,ChangoMas,203195,2740930000005,Cebolla 350 G Cebolla 350g
-cebolla,"Onions, per kg",Vegetables,Dia,90063,2490063000000,Cebolla Comercial en bolsa malla x Kg.
-tomate,"Tomatoes (round), per kg",Vegetables,Carrefour,8051,2300377000008,Tomate x kg.
-tomate,"Tomatoes (round), per kg",Vegetables,Jumbo,30728,2593479000001,Tomate Redondo Por Kg
-tomate,"Tomatoes (round), per kg",Vegetables,ChangoMas,206060,2740640000005,Tomate Redondo 500 G
-tomate,"Tomatoes (round), per kg",Vegetables,Dia,90127,2490127000000,Tomate Redondo x Kg.
-banana,"Bananas, per kg",Fruit,Carrefour,185818,2508844000005,Banana selección x kg.
-banana,"Bananas, per kg",Fruit,Jumbo,10198,2999239000005,Banana Ecuador X Kg
-banana,"Bananas, per kg",Fruit,ChangoMas,204538,2740110000009,Banana 1 Kg
-banana,"Bananas, per kg",Fruit,Dia,90110,2490110000000,Banana x Kg.
-manzana,"Red apples, per kg",Fruit,Carrefour,8918,2300397000002,Manzana roja x kg.
-manzana,"Red apples, per kg",Fruit,Jumbo,10238,2571200000001,Manzana Roja por Kg
-manzana,"Red apples, per kg",Fruit,ChangoMas,209772,2740150000007,Manzana Roja 1 Kg
-manzana,"Red apples, per kg",Fruit,Dia,90111,2490111000000,Manzana Roja Comercial en bolsa malla x Kg.
-azucar,"Sugar, 1 kg",Sugar and sweets,Carrefour,73256,7792540250450,Azúcar Ledesma molida superior bolsa 1 kg.
-azucar,"Sugar, 1 kg",Sugar and sweets,Jumbo,3065721,7792540250450,Azúcar Molida 1 Kg Ledesma
-azucar,"Sugar, 1 kg",Sugar and sweets,ChangoMas,34042,7792540250450,Azúcar Ledesma Superior Refinada 1 Kg
-azucar,"Sugar, 1 kg",Sugar and sweets,Dia,129208,7792540250450,Azúcar Ledesma Refinado Superior 1 Kg.
-yerba,"Yerba mate, 1 kg",Drinks (non-alcoholic),Carrefour,3381,7792710000175,Yerba mate Amanda tradicional 1 kg.
-yerba,"Yerba mate, 1 kg",Drinks (non-alcoholic),Jumbo,28466,7792710000175,Yerba Amanda Con Palo 1 Kg
-yerba,"Yerba mate, 1 kg",Drinks (non-alcoholic),ChangoMas,23173,7792710000175,Yerba Mate Amanda Con Palo 1 Kg
-yerba,"Yerba mate, 1 kg",Drinks (non-alcoholic),Dia,164682,7792710000175,Yerba Mate Amanda Tradicional 1 Kg.
-cafe,"Instant coffee, 170 g",Drinks (non-alcoholic),Carrefour,73405,7790150100462,Café instantáneo La Virginia clásico especial dp 170 g.
-cafe,"Instant coffee, 170 g",Drinks (non-alcoholic),Jumbo,336451,7790150101476,Café Instantáneo Suave Espuma 170 Grs La Virginia
-cafe,"Instant coffee, 170 g",Drinks (non-alcoholic),ChangoMas,163691,7790150100462,Cafe Instantaneo Clasico Doy Pack La Virginia 170 Gr
-cafe,"Instant coffee, 170 g",Drinks (non-alcoholic),Dia,300737,7790150100462,Café Instantáneo Clásico La Virginia 170 Gr.
-te,"Tea bags, 25 or 50",Drinks (non-alcoholic),Carrefour,8852,7790480008254,Té negro en saquitos Green Hills clássic 25 uni
-te,"Tea bags, 25 or 50",Drinks (non-alcoholic),Jumbo,2752,7790480008254,Té Green Hills - 25 Saquitos
-te,"Tea bags, 25 or 50",Drinks (non-alcoholic),ChangoMas,14049,7790480008254,Té Clásico Green Hills 25 Saquitos
-te,"Tea bags, 25 or 50",Drinks (non-alcoholic),Dia,181243,7790480008254,Té en saquitos Green Hills 25 Ud.
-mayonesa,"Mayonnaise, ~475-500 g",Other food,Carrefour,150485,7791620187662,Mayonesa Dánica dp 500 g.
-mayonesa,"Mayonnaise, ~475-500 g",Other food,Jumbo,3079321,7791620187662,Mayonesa Tradicional 500 Ml Danica
-mayonesa,"Mayonnaise, ~475-500 g",Other food,ChangoMas,225069,7791620187662,Mayonesa Dánica 500 G
-mayonesa,"Mayonnaise, ~475-500 g",Other food,Dia,112459,7791620187662,Mayonesa Pouch Danica 500 Gr.
-pure_tomate,"Tomato puree, 520 g",Other food,Carrefour,188614,7790580146115,Puré de tomate Arcor brik 520 g.
-pure_tomate,"Tomato puree, 520 g",Other food,Jumbo,414571,7790580146115,Puré de Tomate Clásico 520 Grs Arcor Pure De Tomate Arcor X 520 Gr
-pure_tomate,"Tomato puree, 520 g",Other food,ChangoMas,221488,7790580146115,Puré De Tomate Arcor 520 G
-pure_tomate,"Tomato puree, 520 g",Other food,Dia,56121,7790580146115,Puré De Tomate Arcor 520 Gr.
-coca_cola,"Coca-Cola original, 2.25 L",Drinks (non-alcoholic),Carrefour,3807,7790895000997,"Gaseosa cola Coca Cola sabor original 2,25 lts"
-coca_cola,"Coca-Cola original, 2.25 L",Drinks (non-alcoholic),Jumbo,246613,7790895000997,Gaseosa Cola Sabor Original 2.25 Lts Coca Cola
-agua,"Still mineral water, ~2-2.25 L",Drinks (non-alcoholic),Carrefour,3937,7792799000097,Agua mineral sin gas Eco de los Andes 2 lts
-agua,"Still mineral water, ~2-2.25 L",Drinks (non-alcoholic),Jumbo,238798,7792799000097,Agua Mineral Sin Gas 2 Lts Eco de los Andes
-agua,"Still mineral water, ~2-2.25 L",Drinks (non-alcoholic),ChangoMas,495,7792799000097,Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt
-agua,"Still mineral water, ~2-2.25 L",Drinks (non-alcoholic),Dia,78445,7792799000097,Agua Mineral sin Gas Eco de los Andes 2 Lts.
-cerveza,"Lager beer, 1 L",Alcoholic drinks,Carrefour,9255,7792798007387,Cerveza rubia clásica Quilmes 1 lt
-cerveza,"Lager beer, 1 L",Alcoholic drinks,Jumbo,17780,7792798007493,Cerveza Brahma Chopp Rubia 1lt Ret
-cerveza,"Lager beer, 1 L",Alcoholic drinks,ChangoMas,545,7792798007387,Cerveza Clasica Quilmes Retornable 1 L
-cerveza,"Lager beer, 1 L",Alcoholic drinks,Dia,251417,8480017306913,Cerveza Lager Oslava 1 Lt.
-vino,"Red wine (everyday), 1 L",Alcoholic drinks,Carrefour,83621,7791540053351,Vino tinto Termidor 2021 1 lt
-vino,"Red wine (everyday), 1 L",Alcoholic drinks,Jumbo,343173,7791540053351,Vino Tinto 1 Lts Termidor
-vino,"Red wine (everyday), 1 L",Alcoholic drinks,ChangoMas,167236,7791540053351,Vino Tinto Termidor 1 L
-vino,"Red wine (everyday), 1 L",Alcoholic drinks,Dia,165431,7791540053351,Vino Tinto Termidor Tradición brik 1 Lt.
-papel_higienico,"Toilet paper, 4 rolls, 30 m",Cleaning and household,Carrefour,157073,7790250016182,Papel higiénico Higienol Fresh hoja simple 30 mts 4 uni
-papel_higienico,"Toilet paper, 4 rolls, 30 m",Cleaning and household,Jumbo,403576,7790250016182,Papel Higiénico Fresh Hoja Simple 30 Mts x 4 Un Higienol Papel Higiénico Fresh Hoja Simple 30 M X 4 Un Higienol
-papel_higienico,"Toilet paper, 4 rolls, 30 m",Cleaning and household,ChangoMas,213163,7790250016182,Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U
-papel_higienico,"Toilet paper, 4 rolls, 30 m",Cleaning and household,Dia,298664,7790250016182,Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.
-detergente,"Dish soap, ~500 ml",Cleaning and household,Carrefour,265562,7791290796706,Detergente Concentrado Cif Active Gel Original 500 ml
-detergente,"Dish soap, ~500 ml",Cleaning and household,Jumbo,3078538,7791290796706,Detergente Active Gel Original 500 Ml Cif Lavavajilla Cif Concentrado Active Gel Original 500ml
-detergente,"Dish soap, ~500 ml",Cleaning and household,ChangoMas,243267,7791290796706,Detergente Cif Active Gel 500 Ml
-detergente,"Dish soap, ~500 ml",Cleaning and household,Dia,309947,7791290796706,Detergente Concentrado Cif Active Gel Original 500 Ml.
-lavandina,"Bleach, 1 L",Cleaning and household,Carrefour,12785,7790132098459,Lavandina Ayudín original 1 l.
-lavandina,"Bleach, 1 L",Cleaning and household,Jumbo,247633,7790132098459,Lavandina Líquida 1 Lts Ayudín
-lavandina,"Bleach, 1 L",Cleaning and household,ChangoMas,4226,7790132098459,Lavandina Ayudín Original 1 Lt
-lavandina,"Bleach, 1 L",Cleaning and household,Dia,15128,7790132098459,Lavandina Ayudín Original 1 Lt.
-jabon_ropa,"Laundry powder, ~800 g",Cleaning and household,Carrefour,289899,7791290796829,Jabón en polvo Ala Bicarbonato 800 grs
-jabon_ropa,"Laundry powder, ~800 g",Cleaning and household,Jumbo,392414,7790990002230,Jabón en Polvo para Ropa 800 Grs Zorro
-jabon_ropa,"Laundry powder, ~800 g",Cleaning and household,ChangoMas,248036,7791290796829,Jabón En Polvo Ala Con Bicarbonato 800 G
-jabon_ropa,"Laundry powder, ~800 g",Cleaning and household,Dia,161161,7791290796829,Jabon en polvo ALA Bicarbonato 800 Gr.
-shampoo,"Shampoo, ~350-400 ml",Personal care,Carrefour,121867,7791293045733,Shampoo Sedal Ceramidas Botella 340 ml
-shampoo,"Shampoo, ~350-400 ml",Personal care,Jumbo,387396,7791293045733,Shampoo Sedal Ceramidas Botella 340 Ml
-shampoo,"Shampoo, ~350-400 ml",Personal care,ChangoMas,188323,7791293045733,Shampoo Sedal Ceramidas 340ml
-shampoo,"Shampoo, ~350-400 ml",Personal care,Dia,292997,7791293045733,Shampoo SEDAL Ceramidas Botella 340 Ml.
-pasta_dental,"Toothpaste, 90 g",Personal care,Carrefour,36725,7509546665979,Pasta Dental Kolynos Frescura 90 g.
-pasta_dental,"Toothpaste, 90 g",Personal care,Jumbo,322314,7509546665979,Pasta Dental Kolynos Frescura 123 90 Grs
-pasta_dental,"Toothpaste, 90 g",Personal care,ChangoMas,155870,7509546665979,Pasta Dental Kolynos Frescura 90g
-pasta_dental,"Toothpaste, 90 g",Personal care,Dia,119554,7509546665979,Pasta Dental Kolynos Frescura 123 90 Gr.
-jabon_tocador,"Bar soap, ~85-90 g",Personal care,Carrefour,131088,7891024034781,Jabón de tocador Palmolive Naturals Karite 85 grs
-jabon_tocador,"Bar soap, ~85-90 g",Personal care,Jumbo,384864,7891024034781,Jabón de Tocador Naturals Karité y Vitamina E 85 Grs Palmolive
-jabon_tocador,"Bar soap, ~85-90 g",Personal care,ChangoMas,174926,7891024034781,Jabón De Tocador Palmolive Naturals Karite 85 G
-jabon_tocador,"Bar soap, ~85-90 g",Personal care,Dia,238459,7891024034781,Jabon De Tocador Palmolive Naturals Karite 85 Gr.
+type_id,product_type,category,shop,sku_id,ean,name,from_date
+pan_lactal,Sliced bread,Bread and cereals,Carrefour,126927,7793890258769,Pan Blanco Lactal 315 grs,
+pan_lactal,Sliced bread,Bread and cereals,Jumbo,386821,7793890258769,Pan Blanco 315 Grs Lactal,
+pan_lactal,Sliced bread,Bread and cereals,ChangoMas,189853,7793890258769,Pan Lactal De Mesa 315 G,
+pan_lactal,Sliced bread,Bread and cereals,Dia,245474,7793890258769,Pan Blanco Lactal 315 Gr.,
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Carrefour,171055,7790070562258,Harina de trigo 000 Favorita con vitaminas 1 kg.,
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Jumbo,409673,7790070562258,Harina 000 1 Kg Favorita,
+harina_000,Wheat flour 000 / 0000,Bread and cereals,ChangoMas,221485,7790070562258,Harina De Trigo Favorita 000 1 Kg,
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Dia,300780,7790070562258,Harina 000 con Vitaminas Favorita 1 Kg.,
+arroz,Rice,Bread and cereals,Carrefour,157166,7790070431509,Arroz parboil Lucchetti 1 kg.,
+arroz,Rice,Bread and cereals,Jumbo,403671,7790070431509,Arroz Parboil 1 Kg Lucchetti,
+arroz,Rice,Bread and cereals,ChangoMas,214790,7790070431509,Arroz Parboil Lucchetti 1 Kg,
+arroz,Rice,Bread and cereals,Dia,299061,7790070431509,Arroz Parboil Bolsa Luchetti 1 Kg.,
+fideos,Dry pasta,Bread and cereals,Carrefour,157189,7790070336118,Fideos tallarin N5 Lucchetti 500 g.,
+fideos,Dry pasta,Bread and cereals,Jumbo,403669,7790070336118,Fideos Tallarín N°5 500 Grs Lucchetti,
+fideos,Dry pasta,Bread and cereals,ChangoMas,214730,7790070336118,Fideos Lucchetti Tallarin 500 G,
+fideos,Dry pasta,Bread and cereals,Dia,299670,7790070336118,Fideos Tallarin N5 Luchetti 500 Gr.,
+pollo_entero,Whole chicken,Meat,Carrefour,105063,2507384000001,Pollo entero congelado x kg,
+pollo_entero,Whole chicken,Meat,Jumbo,24060,2582916000001,Pollo Fresco Con Menudos,
+pollo_entero,Whole chicken,Meat,ChangoMas,17013,2026200000006,Pollo Entero Fresco 2.700kg,
+pollo_entero,Whole chicken,Meat,Dia,90150,2490150000000,Pollo Fresco x Kg.,
+leche,Milk,Dairy and eggs,Carrefour,144373,7790742363008,Leche La serenisima clásica 3% 1L.,
+leche,Milk,Dairy and eggs,Jumbo,247387,7790787002528,Leche Entera 1 Lts Ilolay Leche  Entera Ilolay U.a.t. Brik  1 Lt,
+leche,Milk,Dairy and eggs,ChangoMas,178930,7790742192301,Leche Entera Casanto 1 L,
+leche,Milk,Dairy and eggs,Dia,295999,7790742363008,Leche Larga Vida Clásica 3% La Serenisima 1 Lt.,
+manteca,Butter,Dairy and eggs,Carrefour,28722,7798060850026,Manteca Tonadita calidad extra 200 g.,
+manteca,Butter,Dairy and eggs,Jumbo,532,7798060850026,Manteca Clásica 200 Grs Tonadita Manteca Tonadita 200 Gr,
+manteca,Butter,Dairy and eggs,ChangoMas,191884,7798060850026,Manteca Tonadita Clásica 200 G,
+manteca,Butter,Dairy and eggs,Dia,236478,7798060850026,Manteca Tonadita Extra calidad 200 Gr.,
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Carrefour,204477,7791720038499,Queso cremoso Bulnez 300 grs,
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Jumbo,20218,2593136000009,Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg,
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,ChangoMas,136640,2003880000007,Queso Cremoso Aliada 600 G,
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Dia,90181,2406887000009,Queso Cremoso La Paulina x Kg.,
+dulce_de_leche,Dulce de leche,Dairy and eggs,Carrefour,12946,7790787153664,Dulce de leche Ilolay clásico 400 g.,
+dulce_de_leche,Dulce de leche,Dairy and eggs,Jumbo,70336,7790787153664,Dulce de Leche Tradicional 400 Grs Ilolay,
+dulce_de_leche,Dulce de leche,Dairy and eggs,ChangoMas,215672,7790787153664,Dulce De Leche Ilolay Clásico 400 G,
+dulce_de_leche,Dulce de leche,Dairy and eggs,Dia,299471,7790787153664,Dulce de Leche Clásico Ilolay 400 Gr.,
+huevos,Eggs,Dairy and eggs,Carrefour,17064,7798108344821,Huevos frescos blancos Carrefour 12 u.,
+huevos,Eggs,Dairy and eggs,Jumbo,342143,724751034984,Huevos de Gallina x 12 Un Huevos Blancos Doña Lala X 12u Carton,
+huevos,Eggs,Dairy and eggs,ChangoMas,21816,605388342379,Huevos Blancos Check Grandes 12u,
+huevos,Eggs,Dairy and eggs,Dia,48133,7798064180143,Huevo Blanco Grande 12 Ud.,
+aceite_girasol,Sunflower oil,Oils and fats,Carrefour,97472,7798316700815,Aceite de girasol Legitimo 15 lt Aceite de girasol Legitimo 1.5 lt.,
+aceite_girasol,Sunflower oil,Oils and fats,Jumbo,350413,7798316700815,Aceite de Girasol 1.5 Lts Legitimo,
+aceite_girasol,Sunflower oil,Oils and fats,ChangoMas,216055,7798316700815,Aceite De Girasol Legítimo 1.5 L,
+aceite_girasol,Sunflower oil,Oils and fats,Dia,15122,7798316700815,"Aceite de Girasol Legítimo 1,5 Lt.",
+papa,Potatoes,Vegetables,Carrefour,34549,2308124000004,Papa cepillada x kg.,
+papa,Potatoes,Vegetables,Jumbo,7380,2596617000000,Papa Cepillada Granel Por Kg,
+papa,Potatoes,Vegetables,Dia,90094,2490094000000,Papa Negra x Kg.,
+cebolla,Onions,Vegetables,Carrefour,7968,2320056000006,Cebolla x kg.,
+cebolla,Onions,Vegetables,Jumbo,167685,2596536000006,Cebolla Superior Por Kg,
+cebolla,Onions,Vegetables,ChangoMas,203195,2740930000005,Cebolla 350 G Cebolla 350g,
+cebolla,Onions,Vegetables,Dia,90063,2490063000000,Cebolla Comercial en bolsa malla x Kg.,
+tomate,Tomatoes,Vegetables,Carrefour,8051,2300377000008,Tomate x kg.,
+tomate,Tomatoes,Vegetables,Jumbo,30728,2593479000001,Tomate Redondo Por Kg,
+tomate,Tomatoes,Vegetables,ChangoMas,206060,2740640000005,Tomate Redondo 500 G,
+tomate,Tomatoes,Vegetables,Dia,90127,2490127000000,Tomate Redondo x Kg.,
+banana,Bananas,Fruit,Carrefour,185818,2508844000005,Banana selección x kg.,
+banana,Bananas,Fruit,Jumbo,10198,2999239000005,Banana Ecuador X Kg,
+banana,Bananas,Fruit,ChangoMas,204538,2740110000009,Banana 1 Kg,
+banana,Bananas,Fruit,Dia,90110,2490110000000,Banana x Kg.,
+manzana,Apples,Fruit,Carrefour,8918,2300397000002,Manzana roja x kg.,
+manzana,Apples,Fruit,Jumbo,10238,2571200000001,Manzana Roja por Kg,
+manzana,Apples,Fruit,ChangoMas,209772,2740150000007,Manzana Roja 1 Kg,
+manzana,Apples,Fruit,Dia,90111,2490111000000,Manzana Roja Comercial en bolsa malla x Kg.,
+azucar,Sugar,Sugar and sweets,Carrefour,73256,7792540250450,Azúcar Ledesma molida superior bolsa 1 kg.,
+azucar,Sugar,Sugar and sweets,Jumbo,3065721,7792540250450,Azúcar Molida 1 Kg Ledesma,
+azucar,Sugar,Sugar and sweets,ChangoMas,34042,7792540250450,Azúcar Ledesma Superior Refinada 1 Kg,
+azucar,Sugar,Sugar and sweets,Dia,129208,7792540250450,Azúcar Ledesma Refinado Superior 1 Kg.,
+yerba,Yerba mate,Drinks (non-alcoholic),Carrefour,3381,7792710000175,Yerba mate Amanda tradicional 1 kg.,
+yerba,Yerba mate,Drinks (non-alcoholic),Jumbo,28466,7792710000175,Yerba Amanda Con Palo 1 Kg,
+yerba,Yerba mate,Drinks (non-alcoholic),ChangoMas,23173,7792710000175,Yerba Mate Amanda Con Palo 1 Kg,
+yerba,Yerba mate,Drinks (non-alcoholic),Dia,164682,7792710000175,Yerba Mate Amanda Tradicional 1 Kg.,
+cafe,Coffee,Drinks (non-alcoholic),Carrefour,73405,7790150100462,Café instantáneo La Virginia clásico especial dp 170 g.,
+cafe,Coffee,Drinks (non-alcoholic),Jumbo,336451,7790150101476,Café Instantáneo Suave Espuma 170 Grs La Virginia,
+cafe,Coffee,Drinks (non-alcoholic),ChangoMas,163691,7790150100462,Cafe Instantaneo Clasico Doy Pack La Virginia 170 Gr,
+cafe,Coffee,Drinks (non-alcoholic),Dia,300737,7790150100462,Café Instantáneo Clásico La Virginia 170 Gr.,
+te,Tea bags,Drinks (non-alcoholic),Carrefour,8852,7790480008254,Té negro en saquitos Green Hills clássic 25 uni,
+te,Tea bags,Drinks (non-alcoholic),Jumbo,2752,7790480008254,Té Green Hills - 25 Saquitos,
+te,Tea bags,Drinks (non-alcoholic),ChangoMas,14049,7790480008254,Té Clásico Green Hills 25 Saquitos,
+te,Tea bags,Drinks (non-alcoholic),Dia,181243,7790480008254,Té en saquitos Green Hills 25 Ud.,
+mayonesa,Mayonnaise,Other food,Carrefour,150485,7791620187662,Mayonesa Dánica dp 500 g.,
+mayonesa,Mayonnaise,Other food,Jumbo,3079321,7791620187662,Mayonesa Tradicional 500 Ml Danica,
+mayonesa,Mayonnaise,Other food,ChangoMas,225069,7791620187662,Mayonesa Dánica 500 G,
+mayonesa,Mayonnaise,Other food,Dia,112459,7791620187662,Mayonesa Pouch Danica 500 Gr.,
+pure_tomate,Tomato puree,Other food,Carrefour,188614,7790580146115,Puré de tomate Arcor brik 520 g.,
+pure_tomate,Tomato puree,Other food,Jumbo,414571,7790580146115,Puré de Tomate Clásico 520 Grs Arcor Pure De Tomate Arcor X 520 Gr,
+pure_tomate,Tomato puree,Other food,ChangoMas,221488,7790580146115,Puré De Tomate Arcor 520 G,
+pure_tomate,Tomato puree,Other food,Dia,56121,7790580146115,Puré De Tomate Arcor 520 Gr.,
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Carrefour,3807,7790895000997,"Gaseosa cola Coca Cola sabor original 2,25 lts",
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Jumbo,246613,7790895000997,Gaseosa Cola Sabor Original 2.25 Lts Coca Cola,
+agua,Still mineral water,Drinks (non-alcoholic),Carrefour,3937,7792799000097,Agua mineral sin gas Eco de los Andes 2 lts,
+agua,Still mineral water,Drinks (non-alcoholic),Jumbo,238798,7792799000097,Agua Mineral Sin Gas 2 Lts Eco de los Andes,
+agua,Still mineral water,Drinks (non-alcoholic),ChangoMas,495,7792799000097,Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt,
+agua,Still mineral water,Drinks (non-alcoholic),Dia,78445,7792799000097,Agua Mineral sin Gas Eco de los Andes 2 Lts.,
+cerveza,Beer,Alcoholic drinks,Carrefour,9255,7792798007387,Cerveza rubia clásica Quilmes 1 lt,
+cerveza,Beer,Alcoholic drinks,Jumbo,17780,7792798007493,Cerveza Brahma Chopp Rubia 1lt Ret,
+cerveza,Beer,Alcoholic drinks,ChangoMas,545,7792798007387,Cerveza Clasica Quilmes Retornable 1 L,
+cerveza,Beer,Alcoholic drinks,Dia,251417,8480017306913,Cerveza Lager Oslava 1 Lt.,
+vino,Red wine,Alcoholic drinks,Carrefour,83621,7791540053351,Vino tinto Termidor 2021 1 lt,
+vino,Red wine,Alcoholic drinks,Jumbo,343173,7791540053351,Vino Tinto 1 Lts Termidor,
+vino,Red wine,Alcoholic drinks,ChangoMas,167236,7791540053351,Vino Tinto Termidor 1 L,
+vino,Red wine,Alcoholic drinks,Dia,165431,7791540053351,Vino Tinto Termidor Tradición brik 1 Lt.,
+papel_higienico,Toilet paper,Cleaning and household,Carrefour,157073,7790250016182,Papel higiénico Higienol Fresh hoja simple 30 mts 4 uni,
+papel_higienico,Toilet paper,Cleaning and household,Jumbo,403576,7790250016182,Papel Higiénico Fresh Hoja Simple 30 Mts x 4 Un Higienol Papel Higiénico Fresh Hoja Simple 30 M X 4 Un Higienol,
+papel_higienico,Toilet paper,Cleaning and household,ChangoMas,213163,7790250016182,Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U,
+papel_higienico,Toilet paper,Cleaning and household,Dia,298664,7790250016182,Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.,
+detergente,Dish soap,Cleaning and household,Carrefour,265562,7791290796706,Detergente Concentrado Cif Active Gel Original 500 ml,
+detergente,Dish soap,Cleaning and household,Jumbo,3078538,7791290796706,Detergente Active Gel Original 500 Ml Cif Lavavajilla Cif Concentrado Active Gel Original 500ml,
+detergente,Dish soap,Cleaning and household,ChangoMas,243267,7791290796706,Detergente Cif Active Gel 500 Ml,
+detergente,Dish soap,Cleaning and household,Dia,309947,7791290796706,Detergente Concentrado Cif Active Gel Original 500 Ml.,
+lavandina,Bleach,Cleaning and household,Carrefour,12785,7790132098459,Lavandina Ayudín original 1 l.,
+lavandina,Bleach,Cleaning and household,Jumbo,247633,7790132098459,Lavandina Líquida 1 Lts Ayudín,
+lavandina,Bleach,Cleaning and household,ChangoMas,4226,7790132098459,Lavandina Ayudín Original 1 Lt,
+lavandina,Bleach,Cleaning and household,Dia,15128,7790132098459,Lavandina Ayudín Original 1 Lt.,
+jabon_ropa,Laundry powder,Cleaning and household,Carrefour,289899,7791290796829,Jabón en polvo Ala Bicarbonato 800 grs,
+jabon_ropa,Laundry powder,Cleaning and household,Jumbo,392414,7790990002230,Jabón en Polvo para Ropa 800 Grs Zorro,
+jabon_ropa,Laundry powder,Cleaning and household,ChangoMas,248036,7791290796829,Jabón En Polvo Ala Con Bicarbonato 800 G,
+jabon_ropa,Laundry powder,Cleaning and household,Dia,161161,7791290796829,Jabon en polvo ALA Bicarbonato 800 Gr.,
+shampoo,Shampoo,Personal care,Carrefour,121867,7791293045733,Shampoo Sedal Ceramidas Botella 340 ml,
+shampoo,Shampoo,Personal care,Jumbo,387396,7791293045733,Shampoo Sedal Ceramidas Botella 340 Ml,
+shampoo,Shampoo,Personal care,ChangoMas,188323,7791293045733,Shampoo Sedal Ceramidas 340ml,
+shampoo,Shampoo,Personal care,Dia,292997,7791293045733,Shampoo SEDAL Ceramidas Botella 340 Ml.,
+pasta_dental,Toothpaste,Personal care,Carrefour,36725,7509546665979,Pasta Dental Kolynos Frescura 90 g.,
+pasta_dental,Toothpaste,Personal care,Jumbo,322314,7509546665979,Pasta Dental Kolynos Frescura 123 90 Grs,
+pasta_dental,Toothpaste,Personal care,ChangoMas,155870,7509546665979,Pasta Dental Kolynos Frescura 90g,
+pasta_dental,Toothpaste,Personal care,Dia,119554,7509546665979,Pasta Dental Kolynos Frescura 123 90 Gr.,
+jabon_tocador,Bar soap,Personal care,Carrefour,131088,7891024034781,Jabón de tocador Palmolive Naturals Karite 85 grs,
+jabon_tocador,Bar soap,Personal care,Jumbo,384864,7891024034781,Jabón de Tocador Naturals Karité y Vitamina E 85 Grs Palmolive,
+jabon_tocador,Bar soap,Personal care,ChangoMas,174926,7891024034781,Jabón De Tocador Palmolive Naturals Karite 85 G,
+jabon_tocador,Bar soap,Personal care,Dia,238459,7891024034781,Jabon De Tocador Palmolive Naturals Karite 85 Gr.,
+aceite_girasol,Sunflower oil,Oils and fats,Carrefour,41392,7792180001665,Aceite de girasol Cañuelas 15 l Aceite de girasol Cañuelas 1.5 l.,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Carrefour,42379,7792180001641,Aceite de girasol Cañuelas 900 cc.,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Carrefour,41078,7790060023684,Aceite de girasol Cocinero 15 l Aceite de girasol Cocinero 1.5 l.,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Carrefour,41174,7790070012050,Aceite de girasol Cocinero 900 cc.,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,ChangoMas,14810,7792180001665,Aceite De Girasol Cañuelas 1.5 L,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,ChangoMas,14809,7792180001641,Aceite De Girasol Cañuelas 900 Ml,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,ChangoMas,13289,7790060023684,Aceite De Girasol Cocinero 1.5 L,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,ChangoMas,13296,7790070012050,Aceite De Girasol Cocinero 900 Ml,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Dia,78855,7790272001005,"Aceite Girasol Natural 0,9 Lt.",2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Dia,73552,7792180001665,"Aceite de Girasol Cañuelas 1,5 Lt.",2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Dia,48604,7792180001641,Aceite de Girasol Cañuelas 900 Ml.,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Dia,25338,7790060023684,"Aceite de Girasol Cocinero 1,5 Lt.",2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Jumbo,31877,7790070012050,Aceite De Girasol 900 Ml Cocinero,2026-11-01
+aceite_girasol,Sunflower oil,Oils and fats,Jumbo,3083647,7792052097109,Aceite De Girasol 1500ml  Cuisine & Co,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Carrefour,80990,7790895647741,Agua Mineralizada Benedictino Sin Gas 600 ml,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Carrefour,4947,7798062547559,"Agua mineral sin gas Villa del Sur 2,25 lts",2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Carrefour,82627,7795930002097,Agua mineral sin gas Eco de los Andes 850 ml,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Carrefour,3965,7790315000149,"Agua mineral sin gas Villa del Sur 1,65 lts",2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),ChangoMas,358,7798062547559,Agua Mineral Sin Gas Villa Del Sur 2.25l,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),ChangoMas,165952,7790895647741,Agua Mineralizada Benedictino 600 Ml,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),ChangoMas,174022,7795930002097,Agua Mineral Eco De Los Andes Origen Pet 850 Cc,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),ChangoMas,1408,7798065730033,Agua Mineral Sin Gas Sierra De Los Padres 2 Lt,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Dia,309092,7790895647741,Agua Mineralizada Benedictino Sin Gas 600 Ml.,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Dia,54155,7798062547559,"Agua Sin Gas Mineral Villa Del Sur 2,25 Lt.",2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Dia,181247,7798065730033,Agua Mineral sin Gas Sierra de los Padres 2 Lts.,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Dia,124878,7790315000149,"Agua Sin Gas Mineral Villa Del Sur 1,65 Lt.",2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Jumbo,239418,7798062547559,Agua Mineral Sin Gas 2250 Ml Villa del Sur,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Jumbo,340426,7790895647741,Agua Mineral Sin Gas 600 Ml Benedictino,2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Jumbo,406060,7799155000180,"Agua Mineral Sin Gas 1,5 Lts Villavicencio",2026-11-01
+agua,Still mineral water,Drinks (non-alcoholic),Jumbo,320402,7790315000149,Agua Mineral Sin Gas 1.65 Lts Villa del Sur,2026-11-01
+arroz,Rice,Bread and cereals,Carrefour,157206,7790070431431,Arroz doble Gallo 500 g.,2026-11-01
+arroz,Rice,Bread and cereals,Carrefour,171418,7790070433152,Arroz integral Gallo en bolsa 500 g.,2026-11-01
+arroz,Rice,Bread and cereals,Carrefour,157178,7790070431479,Arroz integral Luccetti 1 kg.,2026-11-01
+arroz,Rice,Bread and cereals,Carrefour,53148,7790503199099,Arroz parboil Dos Hermanos bolsa 1 kg.,2026-11-01
+arroz,Rice,Bread and cereals,ChangoMas,218546,7790070433152,Arroz Gallo Integral 500 G,2026-11-01
+arroz,Rice,Bread and cereals,ChangoMas,214782,7790070431417,Arroz Gallo Parboil 1kg,2026-11-01
+arroz,Rice,Bread and cereals,ChangoMas,214786,7790070431479,Arroz Lucchetti Integral 1 Kg,2026-11-01
+arroz,Rice,Bread and cereals,ChangoMas,159850,7790503199099,Arroz Parboil Dos Hermanos 1 Kg,2026-11-01
+arroz,Rice,Bread and cereals,Jumbo,409704,7790070433152,Arroz Integral Selección 500 Grs Gallo,2026-11-01
+arroz,Rice,Bread and cereals,Jumbo,3128,7791120098888,Arroz Integral 1 Kg Molinos Ala Arroz Molinos Ala Integral X1kg,2026-11-01
+arroz,Rice,Bread and cereals,Jumbo,403672,7790070431479,Arroz Luchetti Integral X1kg,2026-11-01
+arroz,Rice,Bread and cereals,Jumbo,403657,7790070431516,Arroz Parboil 500 Grs Lucchetti,2026-11-01
+azucar,Sugar,Sugar and sweets,Carrefour,18915,7798174970016,Azúcar común Azucel tipo A bolsa 1 kg.,2026-11-01
+azucar,Sugar,Sugar and sweets,Carrefour,277106,7791720048726,Azúcar común Bulnez 1 kg,2026-11-01
+azucar,Sugar,Sugar and sweets,Carrefour,290485,7798470250010,Azúcar común tipo A La Perla 1 kg,2026-11-01
+azucar,Sugar,Sugar and sweets,ChangoMas,41373,7798174970016,Azúcar Azucel 1kg,2026-11-01
+azucar,Sugar,Sugar and sweets,ChangoMas,183793,7799120000405,Azucar Check Comun Tipo A 1kg,2026-11-01
+azucar,Sugar,Sugar and sweets,Dia,294399,8480017284402,Azucar Cuquets 500 Gr.,2026-11-01
+azucar,Sugar,Sugar and sweets,Dia,46881,7799086000389,Azúcar Común tipo A Domino 1 Kg.,2026-11-01
+azucar,Sugar,Sugar and sweets,Dia,130321,8480017298515,Azúcar Plus DIA Común tipo A 1 Kg.,2026-11-01
+azucar,Sugar,Sugar and sweets,Jumbo,3065693,7791100000481,Azúcar 1 Kg Tradicional Chango Azúcar Chango 1 Kg.,2026-11-01
+azucar,Sugar,Sugar and sweets,Jumbo,3087082,7792052099301,Azúcar Común Tipo A Cuisine  Co,2026-11-01
+banana,Bananas,Fruit,Jumbo,1368200,7798158478194,Banana X Un,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Carrefour,3826,7790550000164,Café Torrado molido La planta de Café Cabrales 500 g.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Carrefour,223809,7792360097600,Café molido torrado Bonafide Sensaciones intenso 200 grs,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Carrefour,7882,7790550000171,Café Torrado molido La Planta de Café Cabrales 1 kg.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Carrefour,8474,7790550000157,Café Torrado molido La Planta de Café Cabrales 250 g.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),ChangoMas,168710,7790150100806,Cafe Instantaneo Clasico La Virginia Pack Ahorro X 100g,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),ChangoMas,161780,7790170901971,Café Molido La Morenita Intenso 250gr,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),ChangoMas,14133,7790550000164,Café Molido La Planta De Café Torrado 500 Gr,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),ChangoMas,230117,7792360097600,Café Torrado Bonafide Intenso 200 G,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Dia,292804,7790150100806,Café Instantáneo Clásico La Virginia Clásico Doy Pack 100 Gr.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Dia,275338,7790170901971,Café Molido Morenita Intenso 250 Gr.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Dia,306496,7792360097600,Café Sensaciones Intenso Bonafide 200 Gr.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Dia,141534,7790550000164,Café Torrado Cabrales La Planta de Café 500 Gr.,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Jumbo,336452,7790150100462,Café Instantáneo Clásico con Azúcar 170 Grs La Virginia,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Jumbo,336446,7790550011290,Café En Saquitos 90 Gr Cabrales,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Jumbo,3069851,7792360097600,Café Molido Sensaciones Intenso 200 Grs Bonafide,2026-11-01
+cafe,Coffee,Drinks (non-alcoholic),Jumbo,331872,7790170901971,Café Molido Torrado Intenso 250 Grs La Morenita,2026-11-01
+cebolla,Onions,Vegetables,Carrefour,6937,7798046530393,Cebolla Sanes en red 4 uni,2026-11-01
+cebolla,Onions,Vegetables,Dia,90141,2490141000000,Cebolla Elegida Premium x Kg.,2026-11-01
+cebolla,Onions,Vegetables,Dia,263485,2405902000000,Cebolla Morada x 1 Kg.,2026-11-01
+cebolla,Onions,Vegetables,Jumbo,10393,2599300000004,Cebolla Fraccionada Por 1 Kg,2026-11-01
+cebolla,Onions,Vegetables,Jumbo,167897,2520843000008,Cebolla Morada Por Kg,2026-11-01
+cerveza,Beer,Alcoholic drinks,Carrefour,12383,7793147571283,Cerveza rubia Heineken 710 ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,Carrefour,24442,7793147570927,Cerveza rubia Warsteiner 473 ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,Carrefour,6388,7793147570866,Cerveza blanca Golsch 473 ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,Carrefour,219476,7792798014835,Cerveza blanca Qulmes 710 ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,ChangoMas,213199,7793147572853,Cerveza Rubia Amstel Lager 710 Ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,ChangoMas,135421,7793147570927,Cerveza Rubia Warsteiner 473 Ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,ChangoMas,178,7792798012923,Cerveza Clásica Quilmes 473ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,ChangoMas,261,7792798005871,Cerveza En Lata Brahma 354ml,2026-11-01
+cerveza,Beer,Alcoholic drinks,Dia,298888,7793147572853,Cerveza Amstel 710 Ml.,2026-11-01
+cerveza,Beer,Alcoholic drinks,Dia,266935,7793147571283,Cerveza Heineken lata 710 Ml.,2026-11-01
+cerveza,Beer,Alcoholic drinks,Dia,298887,7793147570927,Cerveza Warsteiner 473 Ml.,2026-11-01
+cerveza,Beer,Alcoholic drinks,Dia,310696,7792798015061,Cerveza Brahma 710 Ml.,2026-11-01
+cerveza,Beer,Alcoholic drinks,Jumbo,298372,7793147571283,Cerveza Heineken Rubia 710cc Cerveza Rubia 710 Cc Heineken,2026-11-01
+cerveza,Beer,Alcoholic drinks,Jumbo,255661,7792798002115,Cerveza Andes Origen Rubia 1lt Cerveza Rubia 1 Lts Andes,2026-11-01
+cerveza,Beer,Alcoholic drinks,Jumbo,293002,7793147572723,Cerveza Imperial Roja 473cc,2026-11-01
+cerveza,Beer,Alcoholic drinks,Jumbo,299450,7793147571412,Cerveza Imperial Rubia 710cc,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Carrefour,248002,7790895650833,Gaseosa Coca-Cola sabor original 600 ml,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Carrefour,73254,7790895007217,"Gaseosa cola Coca Cola sabor original 1,75 lts",2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Carrefour,11591,7790895000232,Gaseosa cola Coca Cola sabor original en lata 354 ml,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Carrefour,5310,7790895012266,"Gaseosa cola Coca Cola sabor original 1,25 lts",2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),ChangoMas,595,7790895000232,Gaseosa Coca Cola Original 354ml,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),ChangoMas,236924,7790895650833,Gaseosa Coca Cola Original 600 Ml,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),ChangoMas,40057,7790895642081,Gaseosa Coca-Cola Sabor Original 220 Ml,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Dia,249072,7790895007217,"Gaseosa Coca-Cola Sabor Original 1,75 Lt.",2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Dia,243985,7790895642081,Gaseosa Coca-Cola Sabor Original 220 Ml.,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Dia,124117,7790895001413,Gaseosa Coca-Cola 1 Lt.,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Dia,19359,7790895000782,Gaseosa Coca-Cola Sabor Original 500 Ml.,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Dia,101611,7790895000232,Gaseosa Coca Cola sabor original 354 Ml.,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Jumbo,245902,7790895642081,Gaseosa Cola 220 Cc Coca Cola,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Jumbo,255282,7790895012266,Gaseosa Cola Sabor Original 1.25 Lts Coca Cola,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Jumbo,3073164,7790895650833,Gaseosa Sabor Original 600 Ml Coca-cola,2026-11-01
+coca_cola,Coca-Cola,Drinks (non-alcoholic),Jumbo,254449,7790895007217,Gaseosa Cola Sabor Original 1.75 Lts Coca Cola,2026-11-01
+detergente,Dish soap,Cleaning and household,Carrefour,265598,7791290796737,Detergente Cif Activegel de limón en botella 500 ml,2026-11-01
+detergente,Dish soap,Cleaning and household,Carrefour,195342,7790990003022,Detergente Magistral Ultra Limón Botella 300 ml,2026-11-01
+detergente,Dish soap,Cleaning and household,Carrefour,195332,7790990003039,Detergente Magistral Ultra Limón Botella 500 ml,2026-11-01
+detergente,Dish soap,Cleaning and household,Carrefour,195346,7790990003046,Detergente Magistral Ultra Limón Botella 750 ml,2026-11-01
+detergente,Dish soap,Cleaning and household,ChangoMas,243264,7791290796737,Detergente Cif Active Gel Limón 500 Ml,2026-11-01
+detergente,Dish soap,Cleaning and household,ChangoMas,224770,7790990003022,Detergente Magistral Ultra Limón 300 Ml,2026-11-01
+detergente,Dish soap,Cleaning and household,ChangoMas,231694,7790990003787,Detergente Magistral Ultra Limón 450 Ml,2026-11-01
+detergente,Dish soap,Cleaning and household,ChangoMas,224771,7790990003039,Detergente Magistral Ultra Limón 500 Ml,2026-11-01
+detergente,Dish soap,Cleaning and household,Dia,309946,7791290796737,Detergente Concentrado Cif Active Gel Limon 500 Ml.,2026-11-01
+detergente,Dish soap,Cleaning and household,Dia,218650,7790990003787,Detergente Magistral Ultra De Limon Doy Pack 450 Ml.,2026-11-01
+detergente,Dish soap,Cleaning and household,Dia,8171,7790990003022,Detergente Magistral Ultra Limon Botella 300 Ml.,2026-11-01
+detergente,Dish soap,Cleaning and household,Dia,307689,7790990003039,Detergente Magistral Ultra Limon Botella 500 Ml.,2026-11-01
+detergente,Dish soap,Cleaning and household,Jumbo,3078533,7791290796737,Detergente Active Gel Limón 500 Ml Cif,2026-11-01
+detergente,Dish soap,Cleaning and household,Jumbo,400694,7791290794054,Detergente Bioactive Limón Botella 300 Ml Cif,2026-11-01
+detergente,Dish soap,Cleaning and household,Jumbo,329602,7790990999868,Detergente Lavavajilas Limón 500 Ml Zorro,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Carrefour,298134,7790742624901,Dulce de Leche Aireado La Serenísima 300 grs,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Carrefour,48891,7790742625205,Dulce de leche La Serenísima colonial 400 g.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Carrefour,48863,7790742625304,Dulce de leche clásico La Serenísima 400 g.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Carrefour,48877,7790742625106,Dulce de leche La Serenísima colonial 250 g.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,ChangoMas,248704,7790742624901,Dulce De Leche La Serenísima Aireado 300 G,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,ChangoMas,159134,7790742625304,Dulce De Leche La Serenísima Clásico 400 G,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,ChangoMas,159135,7790742625205,Dulce De Leche La Serenísima Colonial 400 G,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,ChangoMas,25725,7794820000885,Dulce De Leche Milkaut Clásico 1 Kg,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Dia,36054,7790742624901,Dulce De Leche La Serenisima 300 Gr.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Dia,273372,7790742625304,Dulce de Leche La Serenisima Clasico 400 Gr.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Dia,273373,7790742625205,Dulce de Leche La Serenisima Colonial 400 Gr.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Dia,243810,7790742625403,Dulce de Leche La Serenisima Colonial 1 Kg.,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Jumbo,322154,7790742625304,Dulce de Leche Clásico 400 Grs La Serenisima,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Jumbo,320423,7790742625205,Dulce de Leche Colonial 400 Grs La Serenisima,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Jumbo,322147,7790742625106,Dulce De Leche La Serenisima Colonial 250g,2026-11-01
+dulce_de_leche,Dulce de leche,Dairy and eggs,Jumbo,3065592,7790244941902,Dulce De Leche x 450 Gr San Ignacio,2026-11-01
+fideos,Dry pasta,Bread and cereals,Carrefour,169658,7790070336651,Fideos Rina Matarazzo spaghetti 500 g.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Carrefour,24225,7790070318398,Fideos dedalitos Lucchetti 500 g.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Carrefour,164397,7790070336309,Fideos spaghetti N3 Matarazzo 500 g.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Carrefour,169678,7790070336637,Fideos Rina Matarazzo rigatti 500 g.,2026-11-01
+fideos,Dry pasta,Bread and cereals,ChangoMas,215586,7790070336309,Fideos Matarazzo Spaghetti N°3 500g,2026-11-01
+fideos,Dry pasta,Bread and cereals,ChangoMas,218542,7790070336651,Fideos Rina Spaghetti 500g,2026-11-01
+fideos,Dry pasta,Bread and cereals,ChangoMas,13346,7790070318398,Fideos Soperos Dedalitos Lucchetti 500gr,2026-11-01
+fideos,Dry pasta,Bread and cereals,ChangoMas,215595,7790070336323,Fideos Bucattini Matarazzo 500g,2026-11-01
+fideos,Dry pasta,Bread and cereals,Dia,287522,7790070318398,Fideos Lucchetti Dedalitos 500 Gr.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Dia,38576,7790070336309,Fideos Spaghetti N3 Matarazzo 500 Gr.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Dia,270885,7790070336651,Spaghetti Rina Matarazzo 500 Gr.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Dia,66085,7790070318381,Fideos Letritas Lucchetti 500 Gr.,2026-11-01
+fideos,Dry pasta,Bread and cereals,Jumbo,3065769,7790070336651,Fideos Spaghetti 500 Grs Rina,2026-11-01
+fideos,Dry pasta,Bread and cereals,Jumbo,407198,7790070336309,Fideos Spaghetti N°3 500 Grs Matarazzo,2026-11-01
+fideos,Dry pasta,Bread and cereals,Jumbo,407332,7790070336323,Fideos Bucattini 500 Grs Matarazzo,2026-11-01
+fideos,Dry pasta,Bread and cereals,Jumbo,40184,7790070318343,Fideos Coditos 500 Grs Lucchetti,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Carrefour,126084,7792590000159,Harina de Trigo 000 Caserita x 1 kg,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Carrefour,48322,7792180139320,Harina de trigo 000 ultra refinada Cañuelas 1 kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Carrefour,28707,7792590000227,Harina de trigo 0000 Caserita 1 kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Carrefour,8814,7790199000020,Harina de trigo Morixe 0000 1 kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,ChangoMas,126650,7790199000020,Harina 0000 Morixe X 1 Kg,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,ChangoMas,135467,7792590000227,Harina De Trigo Caserita Tipo 0000 1 Kg,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,ChangoMas,218548,7790070562265,Harina De Trigo Favorita 0000 1 Kg,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,ChangoMas,126649,7790199000013,Harina 000 Morixe X 1 Kg,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Dia,273445,7792180139320,Harina 000 Cañuelas Ultra Refinada 1 Kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Dia,54870,7792590000227,Harina 0000 Caserita 1 Kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Dia,258543,7790199000020,Harina 0000 Morixe 1 Kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Dia,300779,7790070562265,Harina 0000 con Vitaminas Favorita 1 Kg.,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Jumbo,2219,7792590000159,Harina 000 1 Kg Caserita,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Jumbo,235956,7790199000020,Harina 0000 1 Kg Morixe,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Jumbo,236130,7790199000013,Harina 000 1 Kg Morixe,2026-11-01
+harina_000,Wheat flour 000 / 0000,Bread and cereals,Jumbo,28324,7792180004512,Harina 000 Ultra Refinada 1 Kg Pureza,2026-11-01
+huevos,Eggs,Dairy and eggs,Carrefour,16250,7792335000543,Huevos blancos Avicoper 30 uni,2026-11-01
+huevos,Eggs,Dairy and eggs,Carrefour,17781,7792335000321,Huevos blancos Avicoper 6 uni,2026-11-01
+huevos,Eggs,Dairy and eggs,Carrefour,6347,7792335000338,Huevos color Avicoper 6 uni,2026-11-01
+huevos,Eggs,Dairy and eggs,Carrefour,18681,7798108347105,Huevo blanco El Mercado carton 30 uni,2026-11-01
+huevos,Eggs,Dairy and eggs,ChangoMas,225565,7799120006087,Huevos Blancos Check 12 U,2026-11-01
+huevos,Eggs,Dairy and eggs,ChangoMas,214814,7799120004106,Huevos Blancos Check Extra Grandes 6u,2026-11-01
+huevos,Eggs,Dairy and eggs,ChangoMas,217754,7796746000062,Huevos Blancos La Piara 30 U,2026-11-01
+huevos,Eggs,Dairy and eggs,ChangoMas,215183,7799120004113,Huevos Check De Color 6u,2026-11-01
+huevos,Eggs,Dairy and eggs,Dia,313780,7792335001304,Huevos Frescos de Gallina Avicoper 6 Ud.,2026-11-01
+huevos,Eggs,Dairy and eggs,Dia,31921,7790235004906,Huevo Color Grande 6 Ud.,2026-11-01
+huevos,Eggs,Dairy and eggs,Dia,275462,7798064180129,Huevos Frescos Santa Rita Blanco Grande 30 Un.,2026-11-01
+huevos,Eggs,Dairy and eggs,Jumbo,31015,7792335000543,Huevos Blancos Avicoper 30 U,2026-11-01
+huevos,Eggs,Dairy and eggs,Jumbo,311510,7798092353120,Huevos Blancos 30 Un,2026-11-01
+huevos,Eggs,Dairy and eggs,Jumbo,30362,7792335000321,Huevos Blancos Avicoper 6 U - 1 Paquete,2026-11-01
+huevos,Eggs,Dairy and eggs,Jumbo,26861,7798092352055,Huevos Blancos Carnave 12 U,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Carrefour,107872,7791290793446,Jabón en polvo Skip Bio-Enzimas Baja espuma 600 grs,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Carrefour,89042,7791290792142,Jabón en Polvo Ala Matic Mañana de Sol Máxima Remoción 800 grs,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Carrefour,88988,7791290792104,Jabón en Polvo Ala Matic Máxima Remoción 3 kg,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Carrefour,89001,7791290792074,Jabón en Polvo Ala Lavado a Mano Máxima Remoción 3 kg,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,ChangoMas,248035,7791290796836,Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,ChangoMas,218854,7790990002261,Jabón En Polvo Zorro Be Clásico 800 G,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,ChangoMas,170092,7791290790728,Jabon En Polvo Ala Lavado A Mano Ecolavado 400 Gr,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,ChangoMas,170088,7791290790629,Jabon En Polvo Ala Matic  Ecolavado 3 Kg,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Dia,292038,7791290793446,Jabon En Polvo Skip Bio Enzimas Baja Espuma 600 Gr.,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Dia,283998,7791290792142,Jabon En Polvo Ala Matic Mañana De Sol Maxima Blancura 800 Gr.,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Dia,284047,7791290792104,Jabón En Polvo Ala Matic Máxima Blancura 3 Kg.,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Dia,283996,7791290792050,Jabón En Polvo Ala Lavado A Mano Máxima Blancura 800 Gr.,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Jumbo,3086166,7791290796829,Jabon En Polvo Ala Matic Dual Con Bicarbonato,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Jumbo,381676,7791290793446,Jabón en Polvo Bio-enzimas Original 600 Grs Skip Jabon En Polvo Bio-enzimas Baja Espuma 600 Gr Skip,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Jumbo,3086165,7791290796836,Jabon En Polvo Ala Matic Dual Con Bicarbonato,2026-11-01
+jabon_ropa,Laundry powder,Cleaning and household,Jumbo,346338,7791290792104,Jabón en Polvo Eco Lavado 3 Kg Ala,2026-11-01
+jabon_tocador,Bar soap,Personal care,Carrefour,4843,7891150046481,Jabón de Tocador Dove Original Multipack x3 90 grs,2026-11-01
+jabon_tocador,Bar soap,Personal care,Carrefour,23848,7891024034897,Jabón de tocador Palmolive nutrimilk 85 g.,2026-11-01
+jabon_tocador,Bar soap,Personal care,Carrefour,6366,7891150019560,Jabón de Tocador Dove Karité y Vainilla 90 grs,2026-11-01
+jabon_tocador,Bar soap,Personal care,Carrefour,5377,7891150034075,Jabón de Tocador Dove Leche de Coco 90 grs,2026-11-01
+jabon_tocador,Bar soap,Personal care,ChangoMas,31190,7898422746827,Jabón De Tocador Dove Exfoliante 90 G,2026-11-01
+jabon_tocador,Bar soap,Personal care,ChangoMas,37276,7891150046481,Jabón De Tocador Dove Original Multipack 3x90g,2026-11-01
+jabon_tocador,Bar soap,Personal care,ChangoMas,231772,7891024034897,Jabón De Tocador Palmolive Nutrimilk 85gr,2026-11-01
+jabon_tocador,Bar soap,Personal care,ChangoMas,231770,7509546697567,Jabon De Tocador Palmolive Naturals Frambuesa Y Mora 125gr,2026-11-01
+jabon_tocador,Bar soap,Personal care,Dia,238466,7891024034897,Jabon De Tocador Palmolive Nutri Milk Hidratacion Prolongada 85 Gr.,2026-11-01
+jabon_tocador,Bar soap,Personal care,Dia,28180,7898422746827,Jabon de Tocador DOVE Exfoliante 90 Gr.,2026-11-01
+jabon_tocador,Bar soap,Personal care,Dia,228572,7891150046481,Jabon de Tocador Dove Original Multipack x3 90 Gr.,2026-11-01
+jabon_tocador,Bar soap,Personal care,Dia,280043,7509546683379,Jabon De Tocador Palmolive Naturals Karite Y Vitamina E 90 G 3 Ud.,2026-11-01
+jabon_tocador,Bar soap,Personal care,Jumbo,12527,7898422746827,Jabón de Tocador Exfoliación Suave 90 Grs Dove Jabón De Tocador Exfoliante 90 Grs Dove,2026-11-01
+jabon_tocador,Bar soap,Personal care,Jumbo,3068140,7891024034897,Jabón de Tocador Nutri-Milk Humectante 85 Grs Palmolive,2026-11-01
+jabon_tocador,Bar soap,Personal care,Jumbo,38692,7891150046481,Jabón de Tocador Original 90 Grs x 3 Un Dove Jabón De Tocador Original Multipack 90 Grs X 3 Un Dove,2026-11-01
+jabon_tocador,Bar soap,Personal care,Jumbo,36305,7891150019560,Jabón De Tocador Karité Y Vainilla 90 Grs Dove,2026-11-01
+lavandina,Bleach,Cleaning and household,Carrefour,37937,7793253003777,Lavandina Ayudín anti-splash 1 l.,2026-11-01
+lavandina,Bleach,Cleaning and household,Carrefour,37924,7793253003784,Lavandina Ayudín anti-splash 2 l.,2026-11-01
+lavandina,Bleach,Cleaning and household,Carrefour,43007,7793253003715,Lavandina Ayudín triple poder lavanda 1 l.,2026-11-01
+lavandina,Bleach,Cleaning and household,Carrefour,42921,7793253003722,Lavandina Ayudín triple poder lavanda 2 l.,2026-11-01
+lavandina,Bleach,Cleaning and household,ChangoMas,230433,7793253006709,Lavandina Ayudin Original 2l,2026-11-01
+lavandina,Bleach,Cleaning and household,ChangoMas,156307,7793253003777,Lavandina Ayudín Anti-Splash 1 Lt,2026-11-01
+lavandina,Bleach,Cleaning and household,ChangoMas,156306,7793253003784,Lavandina Ayudín Anti-Splash 2 Lt,2026-11-01
+lavandina,Bleach,Cleaning and household,ChangoMas,157202,7793253003715,Lavandina Ayudín Triple Poder Lavanda 1 L,2026-11-01
+lavandina,Bleach,Cleaning and household,Dia,278330,7793253003784,Lavandina Ayudín Anti-Splash Botella 2 Lt.,2026-11-01
+lavandina,Bleach,Cleaning and household,Dia,271317,7793253003777,Lavandina Ayudín Antisplash 1 Lt.,2026-11-01
+lavandina,Bleach,Cleaning and household,Dia,274340,7793253003753,Lavandina Ayudín Pureza del Glaciar Triple Poder 2 Lt.,2026-11-01
+lavandina,Bleach,Cleaning and household,Dia,274341,7793253003715,Lavandina Ayudín Triple Acción 1 Lt.,2026-11-01
+lavandina,Bleach,Cleaning and household,Jumbo,319596,7793253003784,Lavandina Anti Splash 2 Lts Ayudín,2026-11-01
+lavandina,Bleach,Cleaning and household,Jumbo,319595,7793253003777,Lavandina Anti-splash 1 Lts Ayudín Lavandina Ayudin Anti-splash 1 L,2026-11-01
+lavandina,Bleach,Cleaning and household,Jumbo,319909,7793253003722,Lavandina Ayudin Glaciar Triple Poder La,2026-11-01
+lavandina,Bleach,Cleaning and household,Jumbo,319834,7793253003753,Lavandina Glaciar 2000 Ml Ayudín,2026-11-01
+leche,Milk,Dairy and eggs,Carrefour,144371,7790742363107,Leche La serenisima liviana 1% 1L,2026-11-01
+leche,Milk,Dairy and eggs,Carrefour,284609,7791720049686,Leche clásica UAT Bulnez 1 lt,2026-11-01
+leche,Milk,Dairy and eggs,ChangoMas,178932,7790742192103,Leche Descremada Casanto 1 L,2026-11-01
+leche,Milk,Dairy and eggs,ChangoMas,8432,7790787949656,Leche Descremada Ilolay 1 Lt,2026-11-01
+leche,Milk,Dairy and eggs,Dia,275782,7793913012996,Leche Descremada Tregar Larga Vida 1 Lt.,2026-11-01
+leche,Milk,Dairy and eggs,Dia,288870,7790742192103,Leche Fresca Parc. Descremada 1% Fortificada Casanto Sachet 1 Lt.,2026-11-01
+leche,Milk,Dairy and eggs,Dia,275781,7793913001822,Leche Entera Tregar Larga Vida 1 Lt.,2026-11-01
+leche,Milk,Dairy and eggs,Dia,288868,7790742192301,Leche Fresca Entera 3% Fortificada Casanto Sachet 1 Lt.,2026-11-01
+leche,Milk,Dairy and eggs,Jumbo,332198,7793913012996,Leche Descremada 1 L Tregar,2026-11-01
+leche,Milk,Dairy and eggs,Jumbo,352162,7790742192103,Leche Descremada 1 Lts Casanto,2026-11-01
+leche,Milk,Dairy and eggs,Jumbo,1361826,7794820903117,Leche Descremada 1 Lts Milkaut,2026-11-01
+leche,Milk,Dairy and eggs,Jumbo,331084,7790742348203,Leche Descremada La Serenísima 2sachet 1lt Leche Descremada 1 Lts x 2% La Serenisima,2026-11-01
+manteca,Butter,Dairy and eggs,Carrefour,3899,7793940054006,Manteca La Serenísima extra para untar 200 g.,2026-11-01
+manteca,Butter,Dairy and eggs,Carrefour,4936,7793940052002,Manteca La serenisima clásica 100 g.,2026-11-01
+manteca,Butter,Dairy and eggs,Carrefour,215322,7794820903292,Manteca Milkaut con vitamina D pan 100 grs,2026-11-01
+manteca,Butter,Dairy and eggs,Carrefour,215339,7794820903308,Manteca Milkaut con vitamina D pan 200 grs,2026-11-01
+manteca,Butter,Dairy and eggs,ChangoMas,11357,7790398100088,Manteca La Paulina Calidad Extra 200 G,2026-11-01
+manteca,Butter,Dairy and eggs,ChangoMas,28906,7793940052002,Manteca La Serenisima Clásica 100 G,2026-11-01
+manteca,Butter,Dairy and eggs,ChangoMas,28907,7793940054006,Manteca La Serenisima Clásica 200 G,2026-11-01
+manteca,Butter,Dairy and eggs,ChangoMas,12034,7790398100071,Manteca La Paulina Calidad Extra 100 G,2026-11-01
+manteca,Butter,Dairy and eggs,Dia,101236,7790398100088,Manteca La Paulina 200 Gr.,2026-11-01
+manteca,Butter,Dairy and eggs,Dia,60589,7793940052002,Manteca La Serenísima 100 Gr.,2026-11-01
+manteca,Butter,Dairy and eggs,Dia,14938,7793940054006,Manteca La Serenísima 200 Gr.,2026-11-01
+manteca,Butter,Dairy and eggs,Dia,306693,7790787960668,Manteca Ilolay 200 Gr.,2026-11-01
+manteca,Butter,Dairy and eggs,Jumbo,5498,7793940052002,Manteca Clásica 100 Grs La Serenisima Manteca La Serenisima 100 Gr,2026-11-01
+manteca,Butter,Dairy and eggs,Jumbo,5575,7793940054006,Manteca Clásica 200 Grs La Serenisima Manteca Ls Bienestar Animal 200 G,2026-11-01
+manteca,Butter,Dairy and eggs,Jumbo,5707,7790398100088,Manteca Tradicional 200 Grs La Paulina Manteca La Paulina 200 Gr,2026-11-01
+manteca,Butter,Dairy and eggs,Jumbo,530,7798060850019,Manteca Clásica 100 Grs Tonadita Manteca Tonadita X 100 Gr.,2026-11-01
+manzana,Apples,Fruit,Carrefour,61585,2320085000008,Manzana granny especial x kg.,2026-11-01
+manzana,Apples,Fruit,Carrefour,10910,2303522000007,Manzana roja Huella Natural x kg.,2026-11-01
+manzana,Apples,Fruit,Carrefour,9795,2303524000005,Manzana verde granny smith Huella Natural x kg.,2026-11-01
+manzana,Apples,Fruit,ChangoMas,223081,2736290000007,"Manzana En Bolsa 1,5 Kg",2026-11-01
+manzana,Apples,Fruit,ChangoMas,209773,2740170000001,Manzana Granny 1 Kg,2026-11-01
+manzana,Apples,Fruit,Dia,310381,7798171700999,Manzana Roja 1 Ud.,2026-11-01
+manzana,Apples,Fruit,Dia,90039,2490039000000,Manzana Roja x Kg.,2026-11-01
+manzana,Apples,Fruit,Dia,90112,2490112000000,Manzana Verde x Kg.,2026-11-01
+manzana,Apples,Fruit,Jumbo,391012,2567408000004,Manzana Fuji,2026-11-01
+manzana,Apples,Fruit,Jumbo,10233,2570125000004,Manzana Gran Smith X Kg,2026-11-01
+manzana,Apples,Fruit,Jumbo,7489,2514875000006,Manzana Pink Lady por Kg,2026-11-01
+mayonesa,Mayonnaise,Other food,Carrefour,4438,7791866001203,Mayonesa Natura 237 g.,2026-11-01
+mayonesa,Mayonnaise,Other food,Carrefour,297247,7794000009714,Mayonesa clásica Hellmans dp 275.5 grs,2026-11-01
+mayonesa,Mayonnaise,Other food,Carrefour,168771,7792180142009,Mayonesa Cañuelas 500 cc.,2026-11-01
+mayonesa,Mayonnaise,Other food,Carrefour,87797,7794000006072,Mayonesa Clásica Hellmanns sin tacc doypack 475 g.,2026-11-01
+mayonesa,Mayonnaise,Other food,ChangoMas,249444,7794000009714,Mayonesa Hellmanns Clásica 275.5 G,2026-11-01
+mayonesa,Mayonnaise,Other food,ChangoMas,14691,7791866001203,Mayonesa Natura 250 Cc,2026-11-01
+mayonesa,Mayonnaise,Other food,ChangoMas,14693,7791866001364,Mayonesa Natura 500 Cc,2026-11-01
+mayonesa,Mayonnaise,Other food,ChangoMas,222034,7791866000572,Mayonesa Cada Día 500 G,2026-11-01
+mayonesa,Mayonnaise,Other food,Dia,5539,7791866001203,Mayonesa Natura 250 Ml.,2026-11-01
+mayonesa,Mayonnaise,Other food,Dia,5527,7791866001364,Mayonesa Natura 500 Ml.,2026-11-01
+mayonesa,Mayonnaise,Other food,Dia,313869,7794000009714,Mayonesa Pack Ahorro Hellmanns 275 Gr.,2026-11-01
+mayonesa,Mayonnaise,Other food,Dia,299921,7792180142016,Mayonesa Cañuelas 250 Gr.,2026-11-01
+mayonesa,Mayonnaise,Other food,Jumbo,20517,7791866001203,Aderezo Mayonesa Natura 237 Gr,2026-11-01
+mayonesa,Mayonnaise,Other food,Jumbo,3088158,7794000009714,Mayonesa Clasica Pack Ahorro 275.5gr Hellman's,2026-11-01
+mayonesa,Mayonnaise,Other food,Jumbo,8823,7791866001364,Mayonesa Clásica 475 Grs Natura,2026-11-01
+mayonesa,Mayonnaise,Other food,Jumbo,1483,7791866000572,Aderezo Mayonesa 500 Gr Cada Día,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Carrefour,126921,7793890258776,Pan Salvado Lactal 330 grs,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Carrefour,312176,7793890262476,Pan blanco en rodajas finas Lactal bolsa 550 grs,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Carrefour,312177,7793890262490,Pan de salvado en rodajas finas Lactal 615 grs,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Carrefour,272908,7793890262131,Pan blanco Bimbo 580 grs,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,ChangoMas,225035,7793890259261,Pan De Mesa Lactal De Salvado Con Semillas 330 G,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,ChangoMas,138736,7791708611454,Pan Lactal Regular Veneziana 400 Gr,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,ChangoMas,251965,7793890262490,Pan Lactal Salvado 615g,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Dia,245473,7793890262476,Pan Blanco Lactal 460 Gr.,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Dia,210700,7793890258776,Pan Salvado Lactal 330 Gr.,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Dia,241835,7793890262490,Pan Salvado Lactal 560 Gr.,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Dia,263871,7793890262131,Pan Blanco Bimbo 580 Gr.,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Jumbo,3093725,7793890262490,Pan Lactal Salvado X 615 Gr,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Jumbo,386817,7793890258776,Pan Salvado 330 Grs Lactal,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Jumbo,386826,7793890258783,Pan Salvado 560 Grs Lactal,2026-11-01
+pan_lactal,Sliced bread,Bread and cereals,Jumbo,40934,7790606000391,Pan de Molde Lactal Sabor Pan blanco 600 Grs Doña Noly,2026-11-01
+papa,Potatoes,Vegetables,Carrefour,9637,2305960000007,Papa roja x kg.,2026-11-01
+papa,Potatoes,Vegetables,ChangoMas,203532,2739790000003,Papa 500 G,2026-11-01
+papa,Potatoes,Vegetables,Dia,90090,2490090000000,Papa Blanca en malla x Kg.,2026-11-01
+papa,Potatoes,Vegetables,Dia,90061,2490061000000,Papa Comercial en bolsa malla x 1 Kg.,2026-11-01
+papa,Potatoes,Vegetables,Dia,90140,2490140000000,Papa Mini con malla x Kg.,2026-11-01
+papa,Potatoes,Vegetables,Jumbo,33649,2522326000000,Papa Colorada x 1 Kg,2026-11-01
+papa,Potatoes,Vegetables,Jumbo,33302,2540690000006,Papa Malla Fraccionada 1 Kg Papín Blanco Fraccionado 1 Kg,2026-11-01
+papa,Potatoes,Vegetables,Jumbo,13396,7798294780137,Papa Mini X 1 Kg Mini Papa 1 Kg,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Carrefour,150383,7790250026075,Papel higiénico Elite Ultra Suave doble hoja 30 mts 4 uni,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Carrefour,7131,7793344000333,Papel higiénico Elegante 4 u. x 80 m.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Carrefour,98702,7793344904150,Papel higiénico Elegante hoja simple 30 mts. x 6 uni,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Carrefour,19431,7793344009503,Papel higiénico Elegante triple hoja 4 u.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,ChangoMas,212635,7790250015840,Papel Higiénico Higienol Max Hoja Simple 100 M 4 U,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,ChangoMas,213164,7790250015857,Papel Higiénico Higienol Max Hoja Simple 80 M 4 U,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,ChangoMas,166668,7793344904143,Papel Higienico Elegante Blanco Hoja Simple 4u,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,ChangoMas,191235,7793344904150,Papel Higienico Elegante Simple Hoja 30 M 6 U,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Dia,264570,7790250026075,Papel Higienico Elite Ultra Suave doble hoja 30 m 4 Ud.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Dia,297892,7790250015840,Papel Higiénico Higienol Max hoja simple 100 m 4 Ud.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Dia,7582,7790250015857,Papel Higiénico Higienol Max hoja simple 80 m 4 Ud.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Dia,301701,7790250015536,Papel Higiénico Doble Hoja Fusion Higienol 4 Ud.,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Jumbo,399595,7790250015840,Papel Higiénico Max Hoja Simple 100 Mts x 4 Un Higienol Papel Higiénico Max Hoja Simple 100 M X 4 Un Higienol,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Jumbo,399603,7790250015857,Papel Higiénico Max Hoja Simple 80 Mts x 4 Un Higienol Papel Higiénico Max Hoja Simple 80 M X 4 Un Higienol,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Jumbo,395688,7790250026075,Papel Higiénico Ultra Suave Doble Hoja 30 Mts x 4 Un Elite Papel Higienico Ultra Suave Doble Hoja 30 M X 4 Un Elite,2026-11-01
+papel_higienico,Toilet paper,Cleaning and household,Jumbo,39622,7793344904143,Papel Higienico Elegante Simple Hoja 4x30m,2026-11-01
+pasta_dental,Toothpaste,Personal care,Carrefour,24280,7891024005064,Pasta Dental Colgate Luminous White Brilliant 140 grs,2026-11-01
+pasta_dental,Toothpaste,Personal care,Carrefour,20660,7891024123027,Pasta dental Colgate Luminous White Brilliant 90 grs,2026-11-01
+pasta_dental,Toothpaste,Personal care,Carrefour,221748,7891024134610,Pasta dental Colgate máxima protección anticaries 180 grs,2026-11-01
+pasta_dental,Toothpaste,Personal care,Carrefour,23053,7891024134429,Pasta dental Colgate sensitive whitening 100 g.,2026-11-01
+pasta_dental,Toothpaste,Personal care,ChangoMas,215534,7891024123027,Pasta Dental Colgate Luminous Blanqueadora 90g,2026-11-01
+pasta_dental,Toothpaste,Personal care,ChangoMas,220117,7891024005064,Pasta Dental Colgate Luminous White Brillant 140 G,2026-11-01
+pasta_dental,Toothpaste,Personal care,ChangoMas,224415,7891024134610,Pasta Dental Colgate Máxima Protección Anticaries 180 G,2026-11-01
+pasta_dental,Toothpaste,Personal care,ChangoMas,224413,7891024134702,Pasta Dental Colgate Máxima Protección Anticaries 90 G,2026-11-01
+pasta_dental,Toothpaste,Personal care,Dia,104953,7891024005064,Pasta Dental Colgate Luminous White Brilliant 140 Gr.,2026-11-01
+pasta_dental,Toothpaste,Personal care,Dia,39541,7891024123027,Pasta Dental Colgate Luminous White Brilliant 90 Gr.,2026-11-01
+pasta_dental,Toothpaste,Personal care,Dia,294621,7891024134610,Pasta Dental Colgate Maxima Proteccion Anticaries 180 Gr.,2026-11-01
+pasta_dental,Toothpaste,Personal care,Dia,294620,7891024134702,Pasta Dental Colgate Maxima Proteccion Anticaries 90 Gr.,2026-11-01
+pasta_dental,Toothpaste,Personal care,Jumbo,43367,7891024123027,Pasta Dental Blanqueadora Luminous White Brilliant 90 Grs Colgate,2026-11-01
+pasta_dental,Toothpaste,Personal care,Jumbo,265414,7891024005064,Pasta Dental Luminous White Brilliant 140 Grs Colgate,2026-11-01
+pasta_dental,Toothpaste,Personal care,Jumbo,3065653,7891024134610,Pasta Dental Máxima Protección Anticaries 180 Grs Colgate,2026-11-01
+pasta_dental,Toothpaste,Personal care,Jumbo,3065655,7891024134702,Pasta Dental Máxima Protección Anticaries 90 Grs Colgate,2026-11-01
+pollo_entero,Whole chicken,Meat,Dia,90164,2490164000000,Pollo Entero x Kg.,2026-11-01
+pure_tomate,Tomato puree,Other food,Carrefour,24927,7798141711031,Puré de tomate Carrefour classic 520 g.,2026-11-01
+pure_tomate,Tomato puree,Other food,Carrefour,188262,7791720036273,Puré de tomates Bulnez 520 g.,2026-11-01
+pure_tomate,Tomato puree,Other food,ChangoMas,222333,7790580138868,Puré De Tomate La Campagnola 530 G,2026-11-01
+pure_tomate,Tomato puree,Other food,ChangoMas,18338,7790790019063,Pure Tomate Inca 520 Gr,2026-11-01
+pure_tomate,Tomato puree,Other food,ChangoMas,35701,7798270241492,Puré De Tomate Check 520g,2026-11-01
+pure_tomate,Tomato puree,Other food,ChangoMas,224989,7798096030850,Puré De Tomate Doña Pupa Tetra 520 G.,2026-11-01
+pure_tomate,Tomato puree,Other food,Dia,14900,7790580138868,Puré de Tomate La Campagnola 520 Gr.,2026-11-01
+pure_tomate,Tomato puree,Other food,Dia,263654,7798100661407,Puré De Tomate Canale 520 Gr.,2026-11-01
+pure_tomate,Tomato puree,Other food,Dia,263653,7790088001497,Puré de Tomate Alco 520 Gr.,2026-11-01
+pure_tomate,Tomato puree,Other food,Dia,34593,8480017299314,Puré de Tomate Dia 520 Gr.,2026-11-01
+pure_tomate,Tomato puree,Other food,Jumbo,414181,7790580138868,Puré de Tomate Clásico 530 Grs La Campagnola Pure De Tomate La Campagnola 530 Gr,2026-11-01
+pure_tomate,Tomato puree,Other food,Jumbo,1295,8001250009852,Puré de Tomate 700 Grs De Cecco,2026-11-01
+pure_tomate,Tomato puree,Other food,Jumbo,1367178,8001876003036,Pure De Tomate Colavita Passata X 680 Gr,2026-11-01
+pure_tomate,Tomato puree,Other food,Jumbo,336191,7792052998529,Puré de Tomate 520 Grs Cuisine y Co Pure De Tomate 520 Gr Cuisine & Co,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Carrefour,144303,2509005000001,Queso cremoso Classic x kg.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Carrefour,19862,2505266000002,Queso cremoso Cremac x kg.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Carrefour,204361,2920924300001,Queso cuartirolo Tremblay 300 g.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Carrefour,17378,2505271000004,Queso cuartirolo Tremblay x kg.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Dia,226999,2403866000005,Queso Cremoso Silvia x Kg.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Dia,150653,7790616000442,Queso Cremoso Vacalin 400 Gr.,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Jumbo,45158,2589518000002,Queso Cremoso Cremac-sob-kg-1,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Jumbo,178255,2514470000005,Queso Cremón Cremoso Paquete Por Kg,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Jumbo,12641,2550811000006,Queso Por Salut Tregar,2026-11-01
+queso_cremoso,Soft cheese (cremoso),Dairy and eggs,Jumbo,1360596,2578301000008,Queso Cremoso Cuisine & Co Por Kilo,2026-11-01
+shampoo,Shampoo,Personal care,Carrefour,294574,7790033342095,Shampoo Collagen Lifter 400 ml,2026-11-01
+shampoo,Shampoo,Personal care,Carrefour,265158,7501006721133,Shampoo Pantene restauración 400 ml,2026-11-01
+shampoo,Shampoo,Personal care,Carrefour,294577,7790033342101,Shampoo Collagen Lifter 200 ml,2026-11-01
+shampoo,Shampoo,Personal care,Carrefour,150438,7509552903461,Shampoo Elvive Colorvive 400 ml,2026-11-01
+shampoo,Shampoo,Personal care,ChangoMas,189944,7501006721133,Shampoo Pantene Restauración 400ml,2026-11-01
+shampoo,Shampoo,Personal care,ChangoMas,219133,7791293050324,Shampoo Dove Hidratación 400ml,2026-11-01
+shampoo,Shampoo,Personal care,ChangoMas,216511,7509552903461,Shampoo Elvive Colorvive 400ml,2026-11-01
+shampoo,Shampoo,Personal care,ChangoMas,216536,7509552890969,Shampoo Fructis Hydraliss 200ml,2026-11-01
+shampoo,Shampoo,Personal care,Dia,298657,7509552902518,Shampoo Elvive RT5 Keratin 400 Ml.,2026-11-01
+shampoo,Shampoo,Personal care,Dia,293992,7791293047003,Shampoo Regeneracion Extrema Dove 200 Ml.,2026-11-01
+shampoo,Shampoo,Personal care,Dia,313478,7791293052236,Shampoo SEDAL Mega Crecimiento 340 Ml.,2026-11-01
+shampoo,Shampoo,Personal care,Dia,313432,7790740001902,Shampoo Low Poo Metodo Curly Plusbelle 700 Ml.,2026-11-01
+shampoo,Shampoo,Personal care,Jumbo,3087174,7790033342095,Shampoo Elvive Lifter Colageno 400ml,2026-11-01
+shampoo,Shampoo,Personal care,Jumbo,136557,7501006721133,Shampoo Pantene Restauración 400 Ml,2026-11-01
+shampoo,Shampoo,Personal care,Jumbo,387395,7791293045658,Shampoo Ceramidas 190 Ml Sedal,2026-11-01
+shampoo,Shampoo,Personal care,Jumbo,394638,7791293045740,Shampoo Crema Balance 340 Ml Sedal,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Carrefour,11901,7790480008261,Té en saquitos Green Hills 50 u.,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Carrefour,31313,70177197131,Té English Break en saquitos twinings 10 uni,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Carrefour,73345,7790170914018,Té Morenita en saquitos la x 25 uni,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Carrefour,52612,7790387800142,Té clásico en saquitos diamantado Taragüi x 50 uni,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),ChangoMas,14050,7790480008261,Te En Saquitos Green Hills 50 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),ChangoMas,164223,7790170914018,Te Común La Morenita 25 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),ChangoMas,215589,7790480008285,Té Green Hills Clásico 100 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),ChangoMas,16208,7798123133264,Té Check Clásico 100 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Dia,18963,7790480008261,Té Saquitos en Sobre Green Hills 50 ud.,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Dia,285639,8480017268167,Te Negro En Saquitos Dia 25 Ud.,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Dia,276572,7790150211939,Té Común La Virginia Saquitos 50 Ud.,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Dia,164349,7790320100056,Té en saquitos Crysf 50 Ud.,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Jumbo,293851,70177197131,Te English Breakfast Twinings 10 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Jumbo,331138,7790387800142,Te Sin Filtro Diamantado Taragui 50 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Jumbo,317163,7790480089710,Te Green Hills Earl Grey X 20 Saquitos,2026-11-01
+te,Tea bags,Drinks (non-alcoholic),Jumbo,2781,7790387711929,Té Taragui  Earl Gray 25 Saquitos,2026-11-01
+tomate,Tomatoes,Vegetables,Carrefour,10114,2303326000005,Tomate redondo en racimo Huella Natural x kg.,2026-11-01
+tomate,Tomatoes,Vegetables,ChangoMas,196455,2740870000004,Tomate Perita 500 G Tomate Perita 500g,2026-11-01
+tomate,Tomatoes,Vegetables,Dia,90076,2490076000000,Tomate Comercial en bolsa malla x 1 Kg.,2026-11-01
+tomate,Tomatoes,Vegetables,Dia,90074,2490074000000,Tomate Perita x Kg.,2026-11-01
+tomate,Tomatoes,Vegetables,Jumbo,167686,2599278000006,Tomate Perita x Kg,2026-11-01
+tomate,Tomatoes,Vegetables,Jumbo,167769,2599279000005,Tomate Redondo Grande Por Kg Tomate Redondo x Kg,2026-11-01
+tomate,Tomatoes,Vegetables,Jumbo,6200,2519552000003,Tomate En Racimo Por Kg,2026-11-01
+vino,Red wine,Alcoholic drinks,Carrefour,10996,7790189021028,Vino tinto Malbec Elementos 750 ml,2026-11-01
+vino,Red wine,Alcoholic drinks,Carrefour,172303,7791843023471,Vino tinto Malbec Chacabuco 750 ml,2026-11-01
+vino,Red wine,Alcoholic drinks,Carrefour,9732,7790577006101,Vino tinto Malbec Encuentro 750 ml,2026-11-01
+vino,Red wine,Alcoholic drinks,Carrefour,20616,7790577001151,Vino tinto Malbec Rutitni 750 ml,2026-11-01
+vino,Red wine,Alcoholic drinks,ChangoMas,638,7790189021028,Vino Tinto Elementos Malbec 750 Ml,2026-11-01
+vino,Red wine,Alcoholic drinks,ChangoMas,193074,7798108833950,Vino Tinto Callia Malbec 750ml,2026-11-01
+vino,Red wine,Alcoholic drinks,ChangoMas,226863,7790189021035,Vino Tinto Elementos Syrah 750ml,2026-11-01
+vino,Red wine,Alcoholic drinks,ChangoMas,770,7790577001151,Vino Tinto Rutini Malbec 750ml,2026-11-01
+vino,Red wine,Alcoholic drinks,Dia,81294,7790189021028,Vino Tinto Elementos Malbec 750 ml.,2026-11-01
+vino,Red wine,Alcoholic drinks,Dia,104269,7790240042108,Vino Tinto Alma Mora Malbec 750 ml.,2026-11-01
+vino,Red wine,Alcoholic drinks,Dia,305423,7791670027482,"Vino Tinto Clásico Viñas 1,125 Lt.",2026-11-01
+vino,Red wine,Alcoholic drinks,Dia,267846,7798108833950,Vino Tinto Malbec Callia 750 Ml.,2026-11-01
+vino,Red wine,Alcoholic drinks,Jumbo,19110,7790189021028,Vino Tinto Malbec 750 Cc Elementos Vino Tinto Elementos Malbec 750 Cc,2026-11-01
+vino,Red wine,Alcoholic drinks,Jumbo,14041,7790240042108,Vino Alma Mora Malbec 750cc Vino Tinto Malbec 750 Cc Alma Mora,2026-11-01
+vino,Red wine,Alcoholic drinks,Jumbo,21356,7790314057014,Vino Tinto 1 Lts Resero,2026-11-01
+vino,Red wine,Alcoholic drinks,Jumbo,1365288,7790314061080,Vino Tinto Blend 1000 Cc Resero Vino Resero Tinto 1000 Cc,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Carrefour,3163,7792710000182,Yerba mate Amanda tradicional 500 grs,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Carrefour,86695,7790070509123,Yerba mate Chamigo con palo 500 g.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Carrefour,55768,7792710006436,Yerba mate suave Amanda 500 g.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Carrefour,50589,7790387014617,Yerba mate suave Unión 4flex 1 kg.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),ChangoMas,14956,7792710000182,Yerba Mate Amanda Tradicional 500 G,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),ChangoMas,169651,7790070509123,Yerba Mate Chamigo Sin Tacc 500g,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),ChangoMas,150787,7790387015317,Yerba Mate Mañanita 1 Kg,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),ChangoMas,150786,7790387015324,Yerba Mate Mañanita 500 G,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Dia,271840,7792710006436,Yerba Mate Amanda Suave 500 Gr.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Dia,164681,7792710000182,Yerba Mate Amanda Tradicional 500 Gr.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Dia,53413,7790070509123,Yerba Mate Chamigo 500 Gr.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Dia,269667,7790387015317,Yerba Mate Mañanita 4 Flex 1 Kg.,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Jumbo,28478,7792710000182,Yerba Amanda Tradicional 500 Grs,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Jumbo,314524,7790387015317,Yerba Mate 4flex Mañanita 1 Kg,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Jumbo,315800,7793704000928,Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg,2026-11-01
+yerba,Yerba mate,Drinks (non-alcoholic),Jumbo,314525,7790387015324,Yerba Mate con Palo 500 Grs Mañanita,2026-11-01

@@ -67,6 +67,9 @@ def daily_check():
     by_shop = Counter(r["shop"] for r in rows)
     basket_found = sum(1 for r in rows if r["basket_type"] and not r["basket_type"].startswith("watch"))
     watch_found = sum(1 for r in rows if r["basket_type"].startswith("watch"))
+    basket_rows = list(csv.DictReader(open("basket.csv", newline="", encoding="utf-8")))
+    n_basket = len(basket_rows)
+    n_active = sum(1 for b in basket_rows if (b.get("from_date") or "") <= today)
 
     # Average rows per shop over the previous 7 days
     past = sorted(p for p in glob.glob("data/????-??-??.csv.gz") if os.path.basename(p)[:10] < today)[-7:]
@@ -89,10 +92,10 @@ def daily_check():
             problems.append(f"{s} no devolvió ningún precio.")
         elif avg[s] and by_shop[s] < 0.7 * avg[s]:
             problems.append(f"{s} devolvió {by_shop[s]} precios, bastante menos que lo normal ({avg[s]:.0f}).")
-    if basket_found < 120:
-        problems.append(f"Solo se encontraron {basket_found} de 129 productos de la canasta.")
-    if in_stock < 110:
-        problems.append(f"Solo {in_stock} de 129 productos con stock.")
+    if basket_found < 0.93 * n_basket:
+        problems.append(f"Solo se encontraron {basket_found} de {n_basket} productos de la canasta.")
+    if in_stock < 0.85 * n_active:
+        problems.append(f"Solo {in_stock} de {n_active} productos con stock.")
     if checks:
         problems.append(f"{len(checks) // 2 or 1} precio(s) dejados afuera por parecer errores (ver index/checks.txt).")
     if os.environ.get("VERIFY") == "failure":
@@ -108,7 +111,7 @@ def daily_check():
     hora = datetime.now(ZoneInfo("Europe/Madrid")).strftime("%H:%M")
     shop_lines = "".join(f"<li>{s}: {by_shop[s]:,}".replace(",", ".") + "</li>" for s in SHOPS)
     detail = (f"<ul style='padding-left:18px'>{shop_lines}</ul>"
-              f"<p>Productos de la canasta encontrados: <b>{basket_found}/129</b> · con stock: <b>{in_stock}/129</b> · "
+              f"<p>Productos de la canasta encontrados: <b>{basket_found}/{n_basket}</b> · con stock: <b>{in_stock}/{n_active}</b> · "
               f"lista de observación: {watch_found}/31<br>Índice de hoy: <b>{last.get('index_paid', '?')}</b>{html.escape(change)}</p>")
 
     if not problems:

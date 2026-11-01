@@ -57,6 +57,8 @@ a { color: var(--navy); text-decoration-color: var(--celeste); text-decoration-t
 a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outline-offset: 3px; border-radius: 6px; }
 .eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .muted { color: var(--muted); }
+.plist { font-size: 0.82rem; line-height: 1.35; min-width: 11rem; }
+.plist div + div { margin-top: 0.3rem; padding-top: 0.3rem; border-top: 1px dashed var(--rule); }
 .num { font-variant-numeric: tabular-nums; }
 
 /* Top bar */
@@ -303,8 +305,8 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 
     <section id="que-mide">
       <h2><span data-lang="es">Qué mide</span><span data-lang="en">What it measures</span></h2>
-      <div data-lang="es"><p>La Canasta mide cuánto cambian, día a día, los precios online de 33 productos de todos los días en los principales supermercados de la Argentina. La recolección empezó el 24 de octubre de 2026.</p></div>
-      <div data-lang="en"><p>La Canasta measures how much the online prices of 33 everyday products change, day by day, in Argentina's main supermarkets. Collection started on 24 October 2026.</p></div>
+      <div data-lang="es"><p>La Canasta mide cuánto cambian, día a día, los precios online de 567 productos de todos los días, de 33 tipos (leche, pan, yerba, aceite, limpieza y más), en los principales supermercados de la Argentina. La recolección empezó el 24 de octubre de 2026. Hasta el 31 de octubre el índice seguía un producto de cada tipo por súper (129 en total); desde el 1 de noviembre sigue hasta cinco de cada tipo por súper.</p></div>
+      <div data-lang="en"><p>La Canasta measures how much the online prices of 567 everyday products, of 33 kinds (milk, bread, yerba, oil, cleaning and more), change, day by day, in Argentina's main supermarkets. Collection started on 24 October 2026. Until 31 October the index followed one product of each kind per shop (129 in all); from 1 November it follows up to five of each kind per shop.</p></div>
       <div class="tbl-wrap"><table>
         <thead><tr><th><span data-lang="es">Supermercado</span><span data-lang="en">Supermarket</span></th><th><span data-lang="es">En el índice</span><span data-lang="en">In the index</span></th></tr></thead>
         <tbody>
@@ -341,20 +343,22 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
       <h2><span data-lang="es">Cómo se calcula</span><span data-lang="en">How it's calculated</span></h2>
       <ol data-lang="es">
         <li>Cada día, el precio de cada producto de la canasta se compara con el último día en que estuvo en stock. Mismo súper, mismo producto.</li>
-        <li>Los productos se agrupan como los agrupa el INDEC (pan y cereales, lácteos y huevos, frutas...). Dentro de cada grupo, los cambios se promedian con una media geométrica.</li>
+        <li>Primero se promedian los productos de cada tipo (por ejemplo, todas las leches), con una media geométrica y con el mismo peso para cada súper. Así un tipo no pesa más por tener más productos.</li>
+<li>Los tipos se agrupan como los agrupa el INDEC (pan y cereales, lácteos y huevos, frutas...) y dentro de cada grupo se promedian.</li>
         <li>Los grupos se combinan con las <strong>ponderaciones oficiales del INDEC</strong>: cuánto gastan en cada grupo los hogares del Gran Buenos Aires, según la Encuesta de Gastos de los Hogares 2004/05, la misma que el INDEC todavía usa para la inflación oficial.</li>
         <li>Los días se encadenan. <strong>24 de octubre de 2026 = 100.</strong></li>
         <li>Un precio que se triplica o cae a un tercio de un día para el otro se trata como un error y se deja afuera.</li>
       </ol>
       <ol data-lang="en">
         <li>Every day, each basket product's price is compared with the last day it was in stock. Same shop, same product.</li>
-        <li>Products are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...). Inside each group, the changes are averaged with a geometric mean.</li>
+        <li>First, the products of each kind (for example, all the milks) are averaged, with a geometric mean and the same weight for each shop. So a kind never counts more just because it has more products.</li>
+<li>Kinds are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...) and averaged inside each group.</li>
         <li>Groups are combined using <strong>INDEC's official weights</strong>: how much households in Greater Buenos Aires spend on each group, from the 2004/05 household spending survey, the same one INDEC still uses for official inflation.</li>
         <li>Days are chained together. <strong>24 October 2026 = 100.</strong></li>
         <li>A price that triples or falls to a third overnight is treated as an error and left out.</li>
       </ol>
-      <div class="note" data-lang="es"><strong>Inflación mensual:</strong> el promedio del mes comparado con el promedio del mes anterior, como el INDEC. Como la recolección empezó el 24 de octubre, para noviembre se publica el cambio entre el 31 de octubre y el 30 de noviembre, y se aclara. La primera comparación completa es diciembre contra noviembre.</div>
-      <div class="note" data-lang="en"><strong>Monthly inflation:</strong> the month's average compared with the previous month's average, like INDEC. Because collection started on 24 October, November's figure is the change from 31 October to 30 November, and is labelled as such. The first full comparison is December vs November.</div>
+      <div class="note" data-lang="es"><strong>Inflación mensual:</strong> el promedio del mes comparado con el promedio del mes anterior, como el INDEC. Como la recolección empezó el 24 de octubre, noviembre se mide semana contra semana: el precio promedio de cada producto del 24 al 30 de noviembre contra su precio promedio del 24 al 30 de octubre. Son los mismos días de la semana de los dos lados, así las promos de fin de semana no inflan ni bajan el número. La primera comparación de mes completo es diciembre contra noviembre.</div>
+      <div class="note" data-lang="en"><strong>Monthly inflation:</strong> the month's average compared with the previous month's average, like INDEC. Because collection started on 24 October, November is measured week against week: each product's average price from 24 to 30 November against its average price from 24 to 30 October. The same days of the week are on both sides, so weekend promotions do not push the number up or down. The first full-month comparison is December vs November.</div>
     </section>
 
     <section id="ponderaciones">
@@ -369,8 +373,8 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 
     <section id="canasta">
       <h2><span data-lang="es">La canasta completa</span><span data-lang="en">The full basket</span></h2>
-      <p data-lang="es">Los productos exactos que sigue el índice en cada supermercado. 22 son el mismo producto en todos (mismo código de barras); el resto son la versión de cada súper, sobre todo frescos.</p>
-      <p data-lang="en">The exact products the index follows in each supermarket. 22 are the same product everywhere (same barcode); the rest are each shop's own version, mostly fresh food.</p>
+      <p data-lang="es">Los productos exactos que sigue el índice en cada supermercado, hasta cinco de cada tipo. Para entrar, un producto tiene que ser claramente de ese tipo (sin variantes como light, saborizados o congelados), haber tenido stock casi todos los días y no haber cambiado de nombre.</p>
+      <p data-lang="en">The exact products the index follows in each supermarket, up to five of each kind. To get in, a product has to be clearly of that kind (no variants such as light, flavoured or frozen), have been in stock almost every day, and never have changed its name.</p>
       <div class="tbl-wrap"><table>
         <thead><tr><th><span data-lang="es">Producto</span><span data-lang="en">Product</span></th><th>Carrefour</th><th>Jumbo</th><th>ChangoMás</th><th>Día</th></tr></thead>
         <tbody id="basketTable"><tr><td colspan="5" class="muted"><span data-lang="es">Cargando la canasta...</span><span data-lang="en">Loading the basket...</span></td></tr></tbody>
@@ -439,7 +443,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 </footer>
 <script>
 const SHARE = [["pan_cereales","Pan y cereales","Bread and cereals",19.1],["lacteos","Lácteos y huevos","Dairy and eggs",16.2],["otros_alimentos","Otros alimentos","Other food",11.3],["verduras","Verduras","Vegetables",9.9],["aguas_gaseosas","Aguas y gaseosas","Water and soft drinks",9.7],["carne_ave","Pollo","Chicken",9.2],["limpieza","Limpieza","Cleaning products",6.3],["azucar","Azúcar y dulces","Sugar and sweets",5.5],["frutas","Frutas","Fruit",4.4],["alcohol","Bebidas alcohólicas","Alcoholic drinks",3.8],["cafe_te_yerba","Café, té y yerba","Coffee, tea and yerba",3.0],["aceites","Aceites","Oils",1.4]];
-const TYPE_ES = { pan_lactal:"Pan lactal blanco", harina_000:"Harina 000, 1 kg", arroz:"Arroz, 1 kg", fideos:"Fideos tallarín, 500 g", pollo_entero:"Pollo entero, por kg", leche:"Leche entera, 1 L", manteca:"Manteca, 200 g", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche, 400 g", huevos:"Huevos blancos x12", aceite_girasol:"Aceite de girasol, 1,5 L", papa:"Papa, por kg", cebolla:"Cebolla, por kg", tomate:"Tomate redondo, por kg", banana:"Banana, por kg", manzana:"Manzana roja, por kg", azucar:"Azúcar, 1 kg", yerba:"Yerba mate, 1 kg", cafe:"Café instantáneo, 170 g", te:"Té en saquitos", mayonesa:"Mayonesa, 500 g", pure_tomate:"Puré de tomate, 520 g", coca_cola:"Coca-Cola, 2,25 L", agua:"Agua mineral, 2 L", cerveza:"Cerveza rubia, 1 L", vino:"Vino tinto, 1 L", papel_higienico:"Papel higiénico 4 x 30 m", detergente:"Detergente, 500 ml", lavandina:"Lavandina, 1 L", jabon_ropa:"Jabón en polvo, 800 g", shampoo:"Shampoo", pasta_dental:"Pasta dental, 90 g", jabon_tocador:"Jabón de tocador" };
+const TYPE_ES = { pan_lactal:"Pan lactal", harina_000:"Harina 000 / 0000", arroz:"Arroz", fideos:"Fideos secos", pollo_entero:"Pollo entero", leche:"Leche", manteca:"Manteca", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche", huevos:"Huevos", aceite_girasol:"Aceite de girasol", papa:"Papa", cebolla:"Cebolla", tomate:"Tomate", banana:"Banana", manzana:"Manzana", azucar:"Azúcar", yerba:"Yerba mate", cafe:"Café", te:"Té en saquitos", mayonesa:"Mayonesa", pure_tomate:"Puré de tomate", coca_cola:"Coca-Cola", agua:"Agua mineral", cerveza:"Cerveza", vino:"Vino tinto", papel_higienico:"Papel higiénico", detergente:"Detergente", lavandina:"Lavandina", jabon_ropa:"Jabón en polvo", shampoo:"Shampoo", pasta_dental:"Pasta dental", jabon_tocador:"Jabón de tocador" };
 const SHOPS = ["Carrefour","Jumbo","ChangoMas","Dia"];
 let lang = "es";
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
@@ -474,10 +478,14 @@ function drawBasket() {
   if (!basket) return;
   const tb = document.getElementById("basketTable"); tb.textContent = "";
   const types = []; const by = {};
-  basket.forEach(r => { if (!by[r.type_id]) { by[r.type_id] = { name: r.product_type, cat: r.category, shops: {} }; types.push(r.type_id); } by[r.type_id].shops[r.shop] = r.name; });
+  basket.forEach(r => { if (!by[r.type_id]) { by[r.type_id] = { name: r.product_type, cat: r.category, shops: {} }; types.push(r.type_id); } (by[r.type_id].shops[r.shop] = by[r.type_id].shops[r.shop] || []).push(r.name); });
   types.forEach(t => { const tr = document.createElement("tr");
     const first = cell(lang === "es" ? (TYPE_ES[t] || by[t].name) : by[t].name); first.style.fontWeight = "600"; tr.append(first);
-    SHOPS.forEach(s => tr.append(cell(by[t].shops[s] || (lang === "es" ? "no se sigue" : "not tracked"), by[t].shops[s] ? "" : "muted")));
+    SHOPS.forEach(s => { const names = by[t].shops[s];
+      if (!names) { tr.append(cell(lang === "es" ? "no se sigue" : "not tracked", "muted")); return; }
+      const td = document.createElement("td"); td.className = "plist";
+      names.forEach(n => { const d = document.createElement("div"); d.textContent = n; td.append(d); });
+      tr.append(td); });
     tb.append(tr); });
 }
 (async () => {

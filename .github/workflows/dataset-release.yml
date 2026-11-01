@@ -1,11 +1,14 @@
 name: Publish open dataset
 
-# Pushing a tag like datos-2026-11-01 builds datos-abiertos/la-canasta-datos.zip from the data
-# and publishes it as a GitHub release. Zenodo archives every release and gives it a DOI.
+# Builds datos-abiertos/la-canasta-datos.zip from the data and publishes it as a GitHub release
+# (tag datos-YYYY-MM-DD). Zenodo archives every release and gives it a DOI.
+# Start it from the Actions tab ("Run workflow"), or by changing datos-abiertos/VERSION on main.
 on:
+  workflow_dispatch:
   push:
-    tags:
-      - "datos-*"
+    branches: [main]
+    paths:
+      - "datos-abiertos/VERSION"
 
 permissions:
   contents: write
@@ -21,8 +24,8 @@ jobs:
       - name: Publish the release
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
         run: |
+          TAG="datos-$(TZ=America/Argentina/Buenos_Aires date +%F)"
           gh release create "$TAG" datos-abiertos/la-canasta-datos.zip \
             --title "La Canasta: datos abiertos (${TAG#datos-})" \
             --notes-file datos-abiertos/NOTAS-VERSION.md

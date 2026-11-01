@@ -99,14 +99,14 @@
    "pct": -6.07
   }
  ],
- "products_compared": 129,
- "products_up": 39,
- "products_down": 23,
- "products_same": 67,
+ "products_compared": 563,
+ "products_up": 153,
+ "products_down": 76,
+ "products_same": 334,
  "top_up": [
   {
    "type": "manteca",
-   "type_en": "Butter, 200 g",
+   "type_en": "Butter",
    "shop": "Carrefour",
    "name": "Manteca Tonadita calidad extra 200 g.",
    "before": 2199.0,
@@ -114,8 +114,17 @@
    "pct": 100.05
   },
   {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Dia",
+   "name": "Cerveza Warsteiner 473 Ml.",
+   "before": 1990.0,
+   "now": 3690.0,
+   "pct": 85.43
+  },
+  {
    "type": "banana",
-   "type_en": "Bananas, per kg",
+   "type_en": "Bananas",
    "shop": "Carrefour",
    "name": "Banana selección x kg.",
    "before": 1399.0,
@@ -123,37 +132,28 @@
    "pct": 78.63
   },
   {
-   "type": "tomate",
-   "type_en": "Tomatoes (round), per kg",
+   "type": "shampoo",
+   "type_en": "Shampoo",
    "shop": "ChangoMas",
-   "name": "Tomate Redondo 500 G",
-   "before": 2999.0,
-   "now": 4899.0,
-   "pct": 63.35
+   "name": "Shampoo Dove Hidratación 400ml",
+   "before": 6599.0,
+   "now": 11079.0,
+   "pct": 67.89
   },
   {
    "type": "jabon_tocador",
-   "type_en": "Bar soap, ~85-90 g",
+   "type_en": "Bar soap",
    "shop": "ChangoMas",
-   "name": "Jabón De Tocador Palmolive Naturals Karite 85 G",
-   "before": 636.35,
-   "now": 1039.0,
-   "pct": 63.27
-  },
-  {
-   "type": "mayonesa",
-   "type_en": "Mayonnaise, ~475-500 g",
-   "shop": "Dia",
-   "name": "Mayonesa Pouch Danica 500 Gr.",
-   "before": 1390.0,
-   "now": 2265.0,
-   "pct": 62.95
+   "name": "Jabón De Tocador Palmolive Nutrimilk 85gr",
+   "before": 1214.85,
+   "now": 1999.0,
+   "pct": 64.55
   }
  ],
  "top_down": [
   {
    "type": "banana",
-   "type_en": "Bananas, per kg",
+   "type_en": "Bananas",
    "shop": "ChangoMas",
    "name": "Banana 1 Kg",
    "before": 3299.0,
@@ -162,7 +162,7 @@
   },
   {
    "type": "fideos",
-   "type_en": "Dry spaghetti, 500 g",
+   "type_en": "Dry pasta",
    "shop": "Dia",
    "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
    "before": 1850.0,
@@ -170,31 +170,31 @@
    "pct": -43.24
   },
   {
-   "type": "pan_lactal",
-   "type_en": "Sliced white bread",
-   "shop": "Carrefour",
-   "name": "Pan Blanco Lactal 315 grs",
-   "before": 3600.0,
-   "now": 2340.0,
-   "pct": -35.0
-  },
-  {
-   "type": "jabon_ropa",
-   "type_en": "Laundry powder, ~800 g",
-   "shop": "Carrefour",
-   "name": "Jabón en polvo Ala Bicarbonato 800 grs",
-   "before": 3319.0,
-   "now": 2157.35,
-   "pct": -35.0
-  },
-  {
-   "type": "shampoo",
-   "type_en": "Shampoo, ~350-400 ml",
+   "type": "fideos",
+   "type_en": "Dry pasta",
    "shop": "Dia",
-   "name": "Shampoo SEDAL Ceramidas Botella 340 Ml.",
-   "before": 6380.0,
-   "now": 4147.0,
-   "pct": -35.0
+   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
+   "before": 1850.0,
+   "now": 1050.0,
+   "pct": -43.24
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Letritas Lucchetti 500 Gr.",
+   "before": 1850.0,
+   "now": 1050.0,
+   "pct": -43.24
+  },
+  {
+   "type": "arroz",
+   "type_en": "Rice",
+   "shop": "ChangoMas",
+   "name": "Arroz Gallo Parboil 1kg",
+   "before": 2979.0,
+   "now": 1789.0,
+   "pct": -39.95
   }
  ],
  "series": [

@@ -29,15 +29,7 @@ SHOP = {"Carrefour": "Carrefour", "Jumbo": "Jumbo", "ChangoMas": "ChangoMás", "
 GROUP = {"pan_cereales": "Pan y cereales", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos", "aceites": "Aceites", "frutas": "Frutas",
          "verduras": "Verduras", "azucar": "Azúcar y dulces", "otros_alimentos": "Otros alimentos", "cafe_te_yerba": "Café, té y yerba",
          "aguas_gaseosas": "Aguas y gaseosas", "alcohol": "Bebidas alcohólicas", "limpieza": "Limpieza", "cuidado_personal": "Cuidado personal"}
-TYPE_ES = {"pan_lactal": "Pan lactal blanco", "harina_000": "Harina 000, 1 kg", "arroz": "Arroz, 1 kg", "fideos": "Fideos tallarín, 500 g",
-           "pollo_entero": "Pollo entero, por kg", "leche": "Leche entera, 1 L", "manteca": "Manteca, 200 g", "queso_cremoso": "Queso cremoso",
-           "dulce_de_leche": "Dulce de leche, 400 g", "huevos": "Huevos blancos x12", "aceite_girasol": "Aceite de girasol, 1,5 L",
-           "papa": "Papa, por kg", "cebolla": "Cebolla, por kg", "tomate": "Tomate redondo, por kg", "banana": "Banana, por kg",
-           "manzana": "Manzana roja, por kg", "azucar": "Azúcar, 1 kg", "yerba": "Yerba mate, 1 kg", "cafe": "Café instantáneo, 170 g",
-           "te": "Té en saquitos", "mayonesa": "Mayonesa, 500 g", "pure_tomate": "Puré de tomate, 520 g", "coca_cola": "Coca-Cola, 2,25 L",
-           "agua": "Agua mineral, 2 L", "cerveza": "Cerveza rubia, 1 L", "vino": "Vino tinto, 1 L", "papel_higienico": "Papel higiénico 4 x 30 m",
-           "detergente": "Detergente, 500 ml", "lavandina": "Lavandina, 1 L", "jabon_ropa": "Jabón en polvo, 800 g", "shampoo": "Shampoo",
-           "pasta_dental": "Pasta dental, 90 g", "jabon_tocador": "Jabón de tocador"}
+TYPE_ES = {"pan_lactal": "Pan lactal", "harina_000": "Harina 000 / 0000", "arroz": "Arroz", "fideos": "Fideos secos", "pollo_entero": "Pollo entero", "leche": "Leche", "manteca": "Manteca", "queso_cremoso": "Queso cremoso", "dulce_de_leche": "Dulce de leche", "huevos": "Huevos", "aceite_girasol": "Aceite de girasol", "papa": "Papa", "cebolla": "Cebolla", "tomate": "Tomate", "banana": "Banana", "manzana": "Manzana", "azucar": "Azúcar", "yerba": "Yerba mate", "cafe": "Café", "te": "Té en saquitos", "mayonesa": "Mayonesa", "pure_tomate": "Puré de tomate", "coca_cola": "Coca-Cola", "agua": "Agua mineral", "cerveza": "Cerveza", "vino": "Vino tinto", "papel_higienico": "Papel higiénico", "detergente": "Detergente", "lavandina": "Lavandina", "jabon_ropa": "Jabón en polvo", "shampoo": "Shampoo", "pasta_dental": "Pasta dental", "jabon_tocador": "Jabón de tocador"}
 NAVY, CELESTE, MUTED, RULE, UP, DOWN = "#2B3B5C", "#7FB1C6", "#5D6A84", "#DCE4EA", "#B2462B", "#2D7A57"
 
 
@@ -59,7 +51,8 @@ def build_email(r, unsubscribe):
     m = r["month"]
     mi, y = int(m[5:]) - 1, m[:4]
     link = f"{SITE}/informe.html?m={m}"
-    reg = r["headline"]["avg_regular"] if r["method"] == "average" else r["headline"]["end_to_end_regular"]
+    reg = {"average": r["headline"].get("avg_regular"), "week": r["headline"].get("week_regular")}.get(
+        r["method"], r["headline"]["end_to_end_regular"])
     word = "Suba" if r["inflation"] >= 0 else "Baja"
     color = lambda v: UP if v > 0 else DOWN if v < 0 else MUTED
 

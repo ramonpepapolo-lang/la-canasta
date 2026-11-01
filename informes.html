@@ -460,7 +460,7 @@ function render() {
     const a = el("a", i === 0 ? "latest" : ""); a.href = "informe.html?m=" + x.month;
     a.append(el("span", "m", (lang === "es" ? MONTHS.es[mi] + " " + y : MONTHS.en[mi] + " " + y) + (i === 0 ? L(" · último", " · latest") : "")),
       el("span", "v", sp(x.inflation)),
-      el("span", "s", x.method === "average" ? L("Promedio contra promedio", "Average vs average") : L("Punta a punta", "End to end")),
+      el("span", "s", x.method === "average" ? L("Promedio contra promedio", "Average vs average") : x.method === "week" ? L("Semana contra semana", "Week vs week") : L("Punta a punta", "End to end")),
       el("span", "go", L("Leer el informe →", "Read the report →")));
     box.append(a);
   });

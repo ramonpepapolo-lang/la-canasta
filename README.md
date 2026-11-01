@@ -26,7 +26,7 @@ About **10,500 prices a day**.
 
 ## The basket
 
-The index follows **33 everyday products** (129 items across the shops), listed in [`basket.csv`](basket.csv): bread and cereals, dairy and eggs, oil, fruit and vegetables, chicken, sugar, yerba, coffee and tea, drinks, cleaning and personal care.
+The index follows **567 everyday products of 33 kinds** (up to five per kind and shop since 1 November 2026; 129 before), listed in [`basket.csv`](basket.csv): bread and cereals, dairy and eggs, oil, fruit and vegetables, chicken, sugar, yerba, coffee and tea, drinks, cleaning and personal care.
 
 - **22 products are exactly the same item in every shop** (same barcode).
 - **11 are each shop's own version** (for example fresh fruit, vegetables, eggs and milk), because these are sold under each shop's own codes.

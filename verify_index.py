@@ -133,18 +133,8 @@ for d in dates:
     calc[d] = {key: v * 100 for key, v in level.items()}
 
 # ---------- "Week" method of the monthly report, recalculated another way ----------
-def week_check(rep, m, prev_m):
-    """Same days of two months, every product's average price, combined type -> group -> weights.
-    Written separately from make_report.py: works on price ratios, not logs."""
-    a, b = rep["headline"]["week_now"], rep["headline"]["week_before"]
-    end_day = int(rep["end_date"][8:])
-    if a[1] != rep["end_date"]:
-        problems.append(f"Informe {m}: la semana no termina el último día ({a[1]} vs {rep['end_date']})")
-    nums = range(end_day - 6, end_day + 1)
-    now_days = [x for x in (f"{m}-{n:02d}" for n in nums) if x in prices]
-    old_days = [x for x in (f"{prev_m}-{n:02d}" for n in nums) if x in prices]
-    if [now_days[0], now_days[-1]] != a or [old_days[0], old_days[-1]] != b:
-        problems.append(f"Informe {m}: ventanas de semana distintas a las recalculadas")
+def direct_week(now_days, old_days):
+    """Every product's average price in two windows, combined type -> group -> weights (ratios, not logs)."""
     tree = {}  # group -> type -> shop -> [ratio]
     for k, t in basket.items():
         if k[0] not in shops:
@@ -162,6 +152,21 @@ def week_check(rep, m, prev_m):
         if w.get(g):
             f *= geo([geo([geo(rs) for rs in by_shop.values()]) for by_shop in types.values()]) ** (w[g] / total)
     return round((f - 1) * 100, 2)
+
+
+def week_check(rep, m, prev_m):
+    """Same days of two months, every product's average price, combined type -> group -> weights.
+    Written separately from make_report.py: works on price ratios, not logs."""
+    a, b = rep["headline"]["week_now"], rep["headline"]["week_before"]
+    end_day = int(rep["end_date"][8:])
+    if a[1] != rep["end_date"]:
+        problems.append(f"Informe {m}: la semana no termina el último día ({a[1]} vs {rep['end_date']})")
+    nums = range(end_day - 6, end_day + 1)
+    now_days = [x for x in (f"{m}-{n:02d}" for n in nums) if x in prices]
+    old_days = [x for x in (f"{prev_m}-{n:02d}" for n in nums) if x in prices]
+    if [now_days[0], now_days[-1]] != a or [old_days[0], old_days[-1]] != b:
+        problems.append(f"Informe {m}: ventanas de semana distintas a las recalculadas")
+    return direct_week(now_days, old_days)
 
 
 # ---------- Compare with what is published ----------
@@ -208,6 +213,16 @@ for i, m in enumerate(ms):
             expect = round((float(by_m[m][-1]["index_paid"]) / float(base["index_paid"]) - 1) * 100, 2)
         if rep.get("inflation") is not None and abs(rep["inflation"] - expect) > 0.011:
             problems.append(f"Informe {m}: dice {rep['inflation']}%, recalculado {expect}%")
+
+# The website's 7-day box (index/semana.json)
+if os.path.exists("index/semana.json"):
+    sem = json.load(open("index/semana.json", encoding="utf-8"))
+    if len(dates) >= 14:
+        expect = direct_week(dates[-7:], dates[-14:-7])
+        if not sem.get("ready") or sem.get("now") != [dates[-7], dates[-1]] or sem.get("before") != [dates[-14], dates[-8]]:
+            problems.append("index/semana.json: las semanas no son las últimas dos con datos")
+        elif sem.get("paid") is None or abs(sem["paid"] - expect) > 0.011:
+            problems.append(f"Cuadro de 7 días: dice {sem.get('paid')}%, recalculado {expect}%")
 
 # ---------- Result ----------
 out = [f"Verificación independiente del índice ({datetime.now(ZoneInfo('Europe/Madrid')):%Y-%m-%d %H:%M} España)",

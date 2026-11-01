@@ -246,6 +246,19 @@ with open("index/informes/lista.json", "w", encoding="utf-8") as f:
     json.dump(listing, f, ensure_ascii=False, indent=1)
 print("Monthly reports:", ", ".join(f"{x['month']} ({'ready' if x['publishable'] else 'draft'})" for x in listing))
 
+# The website's 7-day box: last 7 days of data vs the 7 days before, with the same direct method
+# as the "week" monthly figure (each product's average price, the whole current basket on both sides).
+data_days = sorted(prices)
+semana = {"ready": False, "days_of_data": len(data_days)}
+if len(data_days) >= 2 * WEEK:
+    now_w, before_w = data_days[-WEEK:], data_days[-2 * WEEK:-WEEK]
+    w_products, w_combine = week_compare(now_w, before_w)
+    semana = {"ready": True, "days_of_data": len(data_days), "now": [now_w[0], now_w[-1]],
+              "before": [before_w[0], before_w[-1]], "paid": w_combine("paid"),
+              "regular": w_combine("regular"), "products_compared": len(w_products)}
+with open("index/semana.json", "w", encoding="utf-8") as f:
+    json.dump(semana, f, ensure_ascii=False, indent=1)
+
 # The "week" figure also goes into index/monthly.csv (column week_paid_pct), next to the other methods
 monthly_path = "index/monthly.csv"
 if os.path.exists(monthly_path):

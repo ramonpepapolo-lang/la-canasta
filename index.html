@@ -869,7 +869,7 @@ async function load(path, fallback) {
   } catch (e) { return parseCSV(fallback); }
 }
 
-let lang = "es", daily = [], groups = [], latestReport = null;
+let lang = "es", daily = [], groups = [], latestReport = null, semana = null;
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
 
 const sep = s => (lang === "es" ? s.replace(".", ",") : s);
@@ -970,7 +970,10 @@ function render() {
   const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
   const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const avg = (rows, k) => rows.reduce((a, r) => a + +r[k], 0) / rows.length;
-  const week = k => (avg(daily.slice(-7), k) / avg(daily.slice(-14, -7), k) - 1) * 100;
+  // 7-day box: prefer index/semana.json (each product's average price, whole basket on both sides)
+  const semOk = semana && semana.ready && semana.now && semana.now[1] === last.date;
+  const week = k => semOk ? semana[k === "index_paid" ? "paid" : "regular"]
+                          : (avg(daily.slice(-7), k) / avg(daily.slice(-14, -7), k) - 1) * 100;
   const big = document.getElementById("bigChange"), label = document.querySelector('[data-t="tagLabel"]');
   const note = document.querySelector(".tag-note"); if (note) note.hidden = true;  // shown again below while collecting
   big.style.fontSize = "";
@@ -1057,6 +1060,7 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
   const [d, g] = await Promise.all([load("index/daily.csv", FALLBACK_DAILY), load("index/groups.csv", FALLBACK_GROUPS)]);
   const lastDate = g.reduce((m, r) => (r.date > m ? r.date : m), "");
   daily = d; groups = g.filter(r => r.date === lastDate); render();
+  try { const r = await fetch("index/semana.json", { cache: "no-store" }); if (r.ok) { semana = await r.json(); render(); } } catch (e) {}
   try { const r = await fetch("index/informes/lista.json", { cache: "no-store" });
     if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}
 })();

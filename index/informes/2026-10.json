@@ -10,7 +10,7 @@
  "prices_collected": 84419,
  "headline": {
   "end_to_end_paid": 1.13,
-  "end_to_end_regular": 1.12,
+  "end_to_end_regular": 0.26,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -206,37 +206,37 @@
   {
    "date": "2026-10-25",
    "paid": 101.164,
-   "regular": 100.891
+   "regular": 100.0
   },
   {
    "date": "2026-10-26",
    "paid": 102.519,
-   "regular": 100.921
+   "regular": 100.029
   },
   {
    "date": "2026-10-27",
    "paid": 102.919,
-   "regular": 101.004
+   "regular": 100.112
   },
   {
    "date": "2026-10-28",
    "paid": 102.471,
-   "regular": 101.512
+   "regular": 100.615
   },
   {
    "date": "2026-10-29",
    "paid": 102.253,
-   "regular": 101.507
+   "regular": 100.623
   },
   {
    "date": "2026-10-30",
    "paid": 101.024,
-   "regular": 101.395
+   "regular": 100.618
   },
   {
    "date": "2026-10-31",
    "paid": 101.129,
-   "regular": 101.118
+   "regular": 100.264
   }
  ]
 }

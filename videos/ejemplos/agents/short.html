@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:600;src:url(../assets/dm-sans-latin-600-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+:root{--bg:#121C30;--panel:#1B2740;--line:#2A3A5C;--cel:#7FB1C6;--sun:#E0943A;--green:#4FC08D;--red:#E0624A;--txt:#E8EDF5;--mut:#8B97AE}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";color:var(--txt);
+ background:radial-gradient(1200px 900px at 50% 30%,#1E2C4A 0%,#121C30 60%,#0D1526 100%)}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(127,177,198,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(127,177,198,.06) 1px,transparent 1px);background-size:60px 60px}
+#glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(224,148,58,.12),transparent 65%);left:90px;top:300px}
+.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace}
+#head{position:absolute;left:60px;right:60px;top:70px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+#head .logo{display:flex;align-items:center;gap:16px;font-family:Serif;font-size:44px}
+#head .logo img{width:72px;height:72px}
+#head .pill{border:2px solid rgba(224,148,58,.7);color:var(--sun);background:rgba(224,148,58,.1);border-radius:999px;padding:10px 24px;font-weight:700;font-size:24px;letter-spacing:3px}
+.s{position:absolute;left:60px;right:60px;top:200px;height:1150px;opacity:0;display:flex;flex-direction:column}
+[data-at]{opacity:0}
+#status{position:absolute;left:70px;top:1400px;font-size:28px;color:var(--mut);display:flex;align-items:center;gap:14px;z-index:5}
+#status i{width:16px;height:16px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+#status .cur{display:inline-block;width:14px;height:30px;background:var(--txt);margin-left:4px;vertical-align:middle}
+#cap{position:absolute;left:40px;right:40px;top:1520px;height:130px;line-height:130px;text-align:center;white-space:nowrap;font-weight:700;font-size:70px;letter-spacing:-.5px;z-index:5}
+#cap span{display:inline-block;margin:0 9px;padding:0 10px;border-radius:12px;line-height:1.15}
+#cap .w{background:var(--sun);color:#fff}
+#bar{position:absolute;left:0;bottom:0;height:10px;background:var(--sun);z-index:6}
+.term{background:rgba(13,21,38,.85);border:2px solid var(--line);border-radius:22px;padding:26px 30px;font-size:30px;line-height:1.6;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.term .bar3{display:flex;gap:10px;margin-bottom:16px;align-items:center;color:var(--mut);font-size:22px}
+.term .bar3 b{width:16px;height:16px;border-radius:50%;display:inline-block}
+.ok{color:var(--green)} .bad{color:var(--red)} .mut{color:var(--mut)} .sun{color:var(--sun)}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:22px;padding:24px 30px}
+.chip{display:inline-block;border-radius:999px;padding:10px 24px;font-weight:700;font-size:30px;background:var(--panel);border:2px solid var(--line)}
+.chip.on{background:var(--sun);border-color:var(--sun);color:#fff}
+.big{font-family:Serif;line-height:1;font-variant-numeric:tabular-nums}
+.lbl{font-size:28px;font-weight:700;letter-spacing:6px;color:var(--mut)}
+.trow{display:grid;grid-template-columns:1fr 330px 150px;gap:18px;align-items:center;padding:20px 26px;border-bottom:2px solid var(--line)}
+.trow b{font-size:32px;display:block}.trow small{font-size:22px;color:var(--mut);font-weight:700;letter-spacing:2px}
+.trow .pp{font-size:28px;color:var(--mut);text-align:right}.trow .pc{text-align:center;font-weight:700;font-size:28px;border-radius:12px;padding:8px 0}
+.agicon{width:150px;height:150px;border-radius:50%;border:5px solid var(--sun);display:grid;place-items:center;background:rgba(224,148,58,.12);flex:none}
+.agicon svg{width:80px;height:80px}
+.stamp{display:inline-block;border:6px solid var(--red);color:var(--red);font-weight:700;font-size:52px;padding:10px 26px;border-radius:12px;letter-spacing:2px;background:rgba(18,28,48,.85)}
+.typed{white-space:pre}
+</style></head><body>
+<div id="grid"></div><div id="glow"></div>
+<div id="head"><div class="logo"><img src="../assets/la-canasta-icon-white.svg">La Canasta</div><div class="pill">HOW LA CANASTA WORKS</div></div>
+
+<div class="s" id="s-clock" style="align-items:center">
+  <div id="robot" style="margin-top:60px"></div>
+  <div class="big" style="font-size:300px;margin-top:40px">10:23</div>
+  <div class="lbl" style="margin-top:20px;font-size:34px">BUENOS AIRES · THURSDAY 29/10</div>
+  <div class="term mono" style="width:100%;margin-top:90px" data-at="s1:0.55"><div class="bar3"><b style="background:#E0624A"></b><b style="background:#E0943A"></b><b style="background:#4FC08D"></b>&nbsp;github actions · la canasta</div><span class="typed" data-type="s1:0.65">$ python scrape_supermarkets.py</span></div>
+</div>
+
+<div class="s" id="s-shops" style="justify-content:center;gap:22px">
+  <div class="card shoprow" data-at="s2:0.25" data-left></div><div class="card shoprow" data-at="s2:0.35" data-left></div><div class="card shoprow" data-at="s2:0.45" data-left></div><div class="card shoprow" data-at="s2:0.55" data-left></div><div class="card shoprow" data-at="s2:0.65" data-left></div>
+</div>
+
+<div class="s" id="s-search">
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:20px" id="words"></div>
+  <div class="term mono" style="margin-top:40px;height:760px;overflow:hidden;font-size:24px;line-height:1.75"><div class="bar3"><b style="background:#E0624A"></b><b style="background:#E0943A"></b><b style="background:#4FC08D"></b>&nbsp;scrape_supermarkets.py</div><div style="height:680px;overflow:hidden"><div id="log"></div></div></div>
+</div>
+
+<div class="s" id="s-count" style="align-items:center">
+  <div class="big" style="font-size:250px;margin-top:60px;color:var(--sun)" data-count="10711" data-at="s4:0.05" data-dur="2.4">0</div>
+  <div class="lbl" style="margin-top:20px;font-size:36px">PRICES IN ONE DAY</div>
+  <div style="width:100%;margin-top:70px;display:grid;gap:26px" id="shopbars"></div>
+</div>
+
+<div class="s" id="s-cmp">
+  <div style="display:flex;justify-content:space-between" class="lbl"><span>SAME PRODUCT · SAME STORE</span><span>yesterday → today</span></div>
+  <div class="card" style="margin-top:24px;padding:0" id="cmp"></div>
+</div>
+
+<div class="s" id="s-rule">
+  <div class="term mono" data-at="s6:0"><div class="bar3"><b style="background:#E0624A"></b><b style="background:#E0943A"></b><b style="background:#4FC08D"></b>&nbsp;anti-error rule</div><span class="typed" data-type="s6:0.05">if price_today / price_yesterday > 3:</span><br><span class="typed sun" data-type="s6:0.25">    mark_error()</span><br><span class="typed mut" data-type="s6:0.4">    # not counted in the index</span></div>
+  <div class="lbl" style="margin-top:60px">EXAMPLE</div>
+  <div class="card" style="margin-top:20px;padding:34px 36px;position:relative;height:360px" data-at="s6:0.45">
+    <b style="font-size:42px">Any product</b><div class="mut" style="font-size:24px;letter-spacing:3px;font-weight:700;margin-top:6px">YESTERDAY → TODAY</div>
+    <div style="font-size:64px;font-weight:700;margin-top:20px"><span id="exap">$1,200 → $3,900</span></div>
+    <div style="position:absolute;right:40px;bottom:36px"><span class="stamp" data-at="s6:0.7" data-pop data-rot="-7">ERROR · NOT COUNTED</span></div>
+  </div>
+</div>
+
+<div class="s" id="s-skip" style="justify-content:center">
+  <div class="card" style="padding:34px 36px;display:flex;justify-content:space-between;align-items:center" data-at="s7:0">
+    <div><b style="font-size:44px">White eggs, 12</b><div class="mut" style="font-size:24px;letter-spacing:3px;font-weight:700;margin-top:6px">CHANGOMÁS · 29/10</div></div>
+    <span class="chip on" style="background:var(--red);border-color:var(--red)" data-at="s7:0.3" data-pop>OUT OF STOCK</span>
+  </div>
+  <div class="mono sun" style="font-size:40px;margin-top:50px;text-align:center" data-at="s7:0.5">→ skipped that day</div>
+  <div class="mono mut" style="font-size:32px;margin-top:20px;text-align:center" data-at="s7:0.75">nothing is made up</div>
+</div>
+
+<div class="s" id="s-idx">
+  <div class="lbl">INDEC WEIGHTS</div>
+  <div style="display:grid;gap:22px;margin-top:30px" id="weights"></div>
+  <div class="card" style="margin-top:50px;background:var(--sun);border-color:var(--sun);display:flex;justify-content:space-between;align-items:flex-end;padding:30px 40px" data-at="s8:0.65" data-pop>
+    <div><div style="font-weight:700;letter-spacing:4px;font-size:26px;color:rgba(255,255,255,.85)">INDEX OF THE DAY · 29/10</div><div class="big" style="font-size:150px;color:#fff;margin-top:8px">104.33</div></div>
+    <div style="text-align:right;font-weight:700;font-size:26px;color:rgba(255,255,255,.9)">price paid<br>24/10 = 100</div>
+  </div>
+</div>
+
+<div class="s" id="s-web" style="align-items:center">
+  <div style="width:560px;height:1000px;border-radius:60px;background:#0A0F1C;padding:18px;box-shadow:0 40px 80px rgba(0,0,0,.6);margin-top:20px" data-at="s9:0">
+    <div style="width:100%;height:100%;border-radius:44px;background:#fff;overflow:hidden;color:#2B3B5C;padding:40px 34px;position:relative">
+      <div style="background:#2B3B5C;color:#fff;font-size:15px;text-align:center;padding:8px;border-radius:8px;font-weight:700">Next report: 1 December</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:22px;font-family:Serif;font-size:28px"><img src="../assets/la-canasta-icon.svg" style="width:44px">La Canasta</div>
+      <div style="font-size:14px;font-weight:700;letter-spacing:2px;color:#D98A2B;margin-top:30px">DAILY SUPERMARKET PRICE INDEX · ARGENTINA</div>
+      <div style="font-family:Serif;font-size:50px;line-height:1.05;margin-top:14px">How fast are supermarket prices rising in Argentina?</div>
+      <div style="font-size:18px;color:#5D6A84;margin-top:18px;line-height:1.45">La Canasta checks the prices of everyday products every morning, and turns them into one number. Open data.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #DCE4EA;border-radius:12px;margin-top:26px">
+        <div style="padding:14px"><div style="font-size:12px;font-weight:700;letter-spacing:2px;color:#5D6A84">INDEX TODAY</div><div style="font-size:34px;font-weight:700">104.33</div></div>
+        <div style="padding:14px;border-left:1px solid #DCE4EA"><div style="font-size:12px;font-weight:700;letter-spacing:2px;color:#5D6A84">WITHOUT PROMOTIONS</div><div style="font-size:34px;font-weight:700">100.33</div></div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:60px;text-align:center"><span class="chip on" style="background:#2D7A57;border-color:#2D7A57;font-size:34px" data-at="s9:0.55" data-pop>✓ Published</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="s" id="s-net"><svg id="net" viewBox="0 0 960 1150" width="960" height="1150"></svg></div>
+
+<div id="agents"></div>
+
+<div class="s" id="s-rep" style="align-items:center;justify-content:center">
+  <div class="card" style="width:100%;background:#fff;color:#2B3B5C;padding:50px" data-at="ok:0">
+    <div style="font-weight:700;letter-spacing:4px;font-size:26px;color:#5D6A84">MONTHLY REPORT · NOVEMBER</div>
+    <div style="height:22px;background:#E6EBF1;border-radius:8px;margin-top:34px;width:90%"></div>
+    <div style="height:22px;background:#E6EBF1;border-radius:8px;margin-top:18px;width:70%"></div>
+    <div style="height:22px;background:#E6EBF1;border-radius:8px;margin-top:18px;width:80%"></div>
+    <div style="margin-top:46px;background:#E0943A;color:#fff;font-weight:700;font-size:44px;text-align:center;padding:26px;border-radius:16px" id="appr">Approve and send</div>
+  </div>
+  <div class="mono mut" style="font-size:30px;margin-top:40px" data-at="ok:0.3">only Ramon can press it</div>
+</div>
+
+<div class="s" id="s-end" style="align-items:center;justify-content:center;text-align:center">
+  <div style="display:flex;align-items:center;gap:26px;font-family:Serif;font-size:110px" data-at="end:0" data-pop><img src="../assets/la-canasta-icon-white.svg" style="width:170px">La Canasta</div>
+  <div style="margin-top:70px;background:#fff;color:#2B3B5C;font-weight:700;font-size:60px;padding:20px 46px;border-radius:999px" data-at="end:0.25" data-pop>lacanastaindex.com</div>
+  <div style="margin-top:44px;background:var(--sun);color:#fff;font-weight:700;font-size:54px;padding:18px 50px;border-radius:999px" data-at="end:0.55" data-pop id="cta">Follow me</div>
+  <div class="lbl" style="margin-top:50px;font-size:32px" data-at="end:0.1">OPEN DATA · EVERY DAY</div>
+</div>
+
+<div id="status"><i></i><span class="mono" id="stt"></span><span class="cur" id="cur"></span></div>
+<div id="cap"></div><div id="bar"></div>
+<script>
+const robotSVG=()=>`<svg viewBox="0 0 220 200" width="260" height="236"><line x1="110" y1="14" x2="110" y2="44" stroke="#7FB1C6" stroke-width="8"/><circle cx="110" cy="14" r="13" fill="#E0943A"/>
+<rect x="30" y="44" width="160" height="120" rx="40" fill="none" stroke="#7FB1C6" stroke-width="12"/><rect x="58" y="76" width="104" height="56" rx="24" fill="#1B2740"/>
+<rect class="eye" x="80" y="88" width="16" height="32" rx="8" fill="#4FC08D"/><rect class="eye" x="124" y="88" width="16" height="32" rx="8" fill="#4FC08D"/>
+<rect x="10" y="88" width="20" height="40" rx="8" fill="#7FB1C6"/><rect x="190" y="88" width="20" height="40" rx="8" fill="#7FB1C6"/><rect x="82" y="168" width="56" height="22" rx="11" fill="none" stroke="#7FB1C6" stroke-width="8"/></svg>`;
+document.getElementById("robot").innerHTML=robotSVG();
+const SH=[["Jumbo","jumbo.com.ar"],["Carrefour","carrefour.com.ar"],["ChangoMás","masonline.com.ar"],["Día","diaonline.supermercadosdia.com.ar"],["Coto","cotodigital.com.ar"]];
+document.querySelectorAll(".shoprow").forEach((e,i)=>{e.style.cssText+=";display:flex;align-items:center;justify-content:space-between;padding:30px 36px";
+  e.innerHTML=`<div><b style="font-size:46px">${SH[i][0]}</b> <span class="mono mut" style="font-size:22px;margin-left:14px">${SH[i][1]}</span></div><span class="mono" id="st${i}" style="font-size:26px"></span>`;});
+const W=["milk","yerba","bread","beef","bleach"];document.getElementById("words").innerHTML=W.map((w,i)=>`<span class="chip" id="w${i}" style="font-size:36px">${w}</span>`).join("");
+const LOG=[["Carrefour","lavandina","Lavandina Ayudín 2 l","$3.859"],["Jumbo","dulce de leche","Dulce de Leche Ilolay 400 g","$4.150"],["Día","yerba","Yerba Mate Amanda 1 kg","$5.060"],["ChangoMás","leche","Leche Entera Casanto 1 L","$2.019"],["Carrefour","asado","Asado del centro x kg","—"],["Jumbo","fideos","Fideos Spaghetti Lucchetti","$1.950"],["Día","azúcar","Azúcar Ledesma 1 kg","$1.619"],["Carrefour","yerba","Yerba Amanda Tradicional 1 kg","$4.989"],["Jumbo","manteca","Manteca Tonadita 200 g","$4.650"],["Día","fideos","Fideos Tallarín Lucchetti 500 g","$1.850"],["ChangoMás","yerba","Yerba Amanda Con Palo 1 kg","$5.089"],["Carrefour","pan","Pan Blanco Lactal 315 g","$3.600"],["Jumbo","té","Té Green Hills 25 saquitos","$1.700"],["Día","manteca","Manteca Tonadita 200 g","$4.399"],["ChangoMás","café","Café La Virginia 170 g","$8.519"],["Carrefour","harina","Harina Favorita 000 1 kg","$1.299"],["Jumbo","yerba","Yerba Amanda 1 kg","$5.150"],["Día","leche","Leche La Serenísima 1 L","$3.030"],["ChangoMás","pan","Pan Lactal De Mesa 315 g","$3.612"],["Carrefour","manteca","Manteca Tonadita 200 g","$2.199"],["Jumbo","azúcar","Azúcar Ledesma 1 kg","$1.634"],["Día","té","Té Green Hills 25 u","$1.616"],["ChangoMás","azúcar","Azúcar Ledesma 1 kg","$1.639"],["Carrefour","té","Té Green Hills 25 u","$1.569"]];
+document.getElementById("log").innerHTML=LOG.filter(l=>l[3]!=="—").map(l=>`<div><span class="mut">[${l[0]}]</span> <span class="sun">"${l[1]}"</span> → ${l[2]} <span class="ok">${l[3]}</span></div>`).join("");
+const SB=[["Coto",3597],["Jumbo",2022],["Carrefour",1972],["ChangoMás",1800],["Día",1320]];
+document.getElementById("shopbars").innerHTML=SB.map((s,i)=>`<div data-at="s4:${(0.25+i*0.08).toFixed(2)}" data-left><div style="display:flex;justify-content:space-between;font-size:30px;font-weight:700"><span>${s[0]}</span><span class="mono">${s[1].toLocaleString("en-US")}</span></div><div style="height:22px;background:#1B2740;border-radius:999px;margin-top:10px;overflow:hidden"><div style="height:100%;width:0;background:${i?"#7FB1C6":"#E0943A"};border-radius:999px" data-at="s4:${(0.25+i*0.08).toFixed(2)}" data-grow="w:${(s[1]/3597*100).toFixed(1)}"></div></div></div>`).join("");
+const CM=[["Red apple, per kg","CARREFOUR","$4,999 → $4,999",0],["Round tomato, per kg","DÍA","$3,990 → $5,590",40.1],["Arcor tomato purée 520 g","CHANGOMÁS","$899 → $1,229",36.7],["Ecuador banana, per kg","JUMBO","$3,499 → $3,499",0],["Onion, per kg","JUMBO","$4,299 → $3,999",-7.0],["Tonadita butter 200 g","CHANGOMÁS","$4,399 → $4,399",0]];
+document.getElementById("cmp").innerHTML=CM.map((c,i)=>`<div class="trow" data-at="s5:${(0.1+i*0.11).toFixed(2)}" data-left><div><b>${c[0]}</b><small>${c[1]}</small></div><span class="pp mono">${c[2]}</span><span class="pc" style="background:${c[3]>0?"rgba(224,98,74,.2)":c[3]<0?"rgba(79,192,141,.2)":"rgba(139,151,174,.15)"};color:${c[3]>0?"#E0624A":c[3]<0?"#4FC08D":"#8B97AE"}">${c[3]>0?"+":""}${c[3].toFixed(1)}%</span></div>`).join("");
+const WG=[["Bread and cereals",19.1],["Dairy and eggs",16.2],["Other food",11.3],["Vegetables",9.9],["Water and soft drinks",9.7],["Chicken",9.2]];
+document.getElementById("weights").innerHTML=WG.map((w,i)=>`<div data-at="s8:${(0.05+i*0.07).toFixed(2)}" data-left><div style="display:flex;justify-content:space-between;font-size:30px;font-weight:700"><span>${w[0]}</span><span class="mono">${w[1].toFixed(1)}%</span></div><div style="height:18px;background:#1B2740;border-radius:999px;margin-top:8px;overflow:hidden"><div style="height:100%;width:0;background:#7FB1C6;border-radius:999px" data-at="s8:${(0.05+i*0.07).toFixed(2)}" data-grow="w:${(w[1]/19.1*100).toFixed(1)}"></div></div></div>`).join("");
+const ICON={
+ shield:`<path d="M40 8 L68 20 V40 C68 58 56 70 40 76 C24 70 12 58 12 40 V20Z" fill="none" stroke="#E0943A" stroke-width="7" stroke-linejoin="round"/><path d="M27 40 L37 50 L55 31" fill="none" stroke="#E0943A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`,
+ search:`<circle cx="34" cy="34" r="22" fill="none" stroke="#E0943A" stroke-width="7"/><path d="M51 51 L70 70" stroke="#E0943A" stroke-width="8" stroke-linecap="round"/>`,
+ clip:`<rect x="14" y="12" width="52" height="62" rx="8" fill="none" stroke="#E0943A" stroke-width="7"/><rect x="28" y="6" width="24" height="14" rx="4" fill="#E0943A"/><path d="M26 36 H54 M26 50 H54 M26 62 H44" stroke="#E0943A" stroke-width="6" stroke-linecap="round"/>`,
+ eye:`<path d="M6 40 C20 16 60 16 74 40 C60 64 20 64 6 40Z" fill="none" stroke="#E0943A" stroke-width="7" stroke-linejoin="round"/><circle cx="40" cy="40" r="11" fill="#E0943A"/>`,
+ pen:`<path d="M14 66 L18 50 L54 14 L66 26 L30 62Z" fill="none" stroke="#E0943A" stroke-width="7" stroke-linejoin="round"/><path d="M46 22 L58 34" stroke="#E0943A" stroke-width="7"/>`,
+ check:`<circle cx="40" cy="40" r="30" fill="none" stroke="#E0943A" stroke-width="7"/><path d="M26 41 L36 51 L56 30" fill="none" stroke="#E0943A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`};
+const AG=[
+ ["a1","The Guardian","3 times a day","shield",[["are today's prices in?","✓ yes","ok"],["any day missing since 24/10?","✓ no","ok"],["if something is missing:",""],["  → restarts the program","",""],["  → and tells Ramon","",""]]],
+ ["a2","The Reviewer","every night","search",[["$ python revisar.py 2026-10-29",""],["price jumps over 15%",""],["other size, brand, x10","→ out","bad"],["written rules, one by one",""],["any doubt?","→ no change","ok"]]],
+ ["a3","The Auditor","every Sunday","clip",[["checking the last 7 days…",""],["did the size change?","500 g → 450 g","sun"],["did a store stop loading?","−38%","bad"]]],
+ ["a4","The INDEC Watcher","days 10 to 20 of each month","eye",[["did INDEC publish?","waiting…","mut"],["confirm: indec.gob.ar + a newspaper",""],["La Canasta ▮▮▮▮  vs  INDEC ?",""]]],
+ ["a5","The Assistant","end of the month","pen",[["draft of the report","✓","ok"],["drafts of the posts","✓","ok"],["Ramon edits and decides",""]]],
+ ["a6","The Verifier","days 1 to 5 of each month","check",[["$ python verify_index.py",""],["recalculating from zero…",""],["result:","OK","ok"],["if it doesn't add up:","⚠ DON'T SEND","bad"],["no email goes out by itself",""]]]];
+const net=document.getElementById("net"); const CX=480,CY=560,R=340;
+let s=`<text x="${CX}" y="70" text-anchor="middle" font-family="Serif" font-size="72" fill="#E8EDF5" data-at="s10:0.3">6 AI agents</text>`;
+AG.forEach((a,i)=>{const ang=-Math.PI/2+i*Math.PI/3,x=CX+R*Math.cos(ang),y=CY+R*Math.sin(ang);const fr=(0.45+i*0.08).toFixed(2);
+ s+=`<line x1="${CX}" y1="${CY}" x2="${x}" y2="${y}" stroke="#2A3A5C" stroke-width="4" stroke-dasharray="10 10" data-at="s10:${fr}"/>`;});
+s+=`<g data-at="s10:0.05" data-pop><circle cx="${CX}" cy="${CY}" r="115" fill="#1B2740" stroke="#7FB1C6" stroke-width="5"/><g transform="translate(${CX-104},${CY-100}) scale(0.8)">${robotSVG()}</g></g>`;
+AG.forEach((a,i)=>{const ang=-Math.PI/2+i*Math.PI/3,x=CX+R*Math.cos(ang),y=CY+R*Math.sin(ang);const fr=(0.45+i*0.08).toFixed(2);
+ s+=`<g data-at="s10:${fr}" data-pop><circle cx="${x}" cy="${y}" r="78" fill="#1B2740" stroke="#E0943A" stroke-width="5"/><g transform="translate(${x-40},${y-40})">${ICON[a[3]]}</g><text x="${x}" y="${y+118}" text-anchor="middle" font-family="Sans" font-weight="700" font-size="32" fill="#E8EDF5">${a[1].replace("The ","")}</text></g>`;});
+net.innerHTML=s;
+document.getElementById("agents").innerHTML=AG.map((a,i)=>`<div class="s" id="s-ag${i+1}">
+ <div class="lbl" style="color:var(--sun)">AI AGENT · ${i+1} OF 6</div>
+ <div style="display:flex;align-items:center;gap:34px;margin-top:26px"><div class="agicon"><svg viewBox="0 0 80 80">${ICON[a[3]]}</svg></div><div><div style="font-family:Serif;font-size:${a[1].length>14?80:100}px;line-height:1">${a[1]}</div><span class="chip" style="font-size:26px;margin-top:16px">${a[2]}</span></div></div>
+ <div class="term mono" style="margin-top:60px;min-height:560px;font-size:29px"><div class="bar3"><b style="background:#E0624A"></b><b style="background:#E0943A"></b><b style="background:#4FC08D"></b>&nbsp;agent · ${a[1].replace("The ","").toLowerCase()}</div>
+ ${a[4].map((l,j)=>`<div style="display:flex;justify-content:space-between;gap:20px"><span class="typed" data-type="${a[0]}:${(0.06+j*0.15).toFixed(2)}">${l[0]}</span><span class="${l[2]||""}" data-at="${a[0]}:${(0.14+j*0.15).toFixed(2)}">${l[1]}</span></div>`).join("")}
+ </div></div>`).join("");
+
+let TL; const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)); const ease=x=>1-Math.pow(1-clamp(x),3);
+const back=x=>{x=clamp(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function at(spec){const [k,fr]=spec.split(":");const l=TL.lines.find(x=>x.k===k);return l?l.start+parseFloat(fr||0)*l.dur:1e9;}
+function prep(){
+  TL.lines.forEach(l=>{const parts=l.parts||[{sub:l.sub,start:l.start,end:l.end}];l.words=[];
+    parts.forEach(p=>{const ws=p.sub.split(" ");const tot=ws.reduce((a,w)=>a+w.length+2,0);let acc=0;const d=p.end-p.start;
+      ws.forEach(w=>{const s=p.start+acc/tot*d;acc+=w.length+2;l.words.push({w,s,e:p.start+acc/tot*d});});});
+    l.chunks=[];let cur=[];l.words.forEach((x,j)=>{cur.push(j);if(cur.length===3||/[.,:;?!]$/.test(x.w)){l.chunks.push(cur);cur=[];}});if(cur.length)l.chunks.push(cur);});
+  document.querySelectorAll("[data-at]").forEach(e=>e._t=at(e.dataset.at));
+  document.querySelectorAll("[data-type]").forEach(e=>{e._t=at(e.dataset.type);e._full=e.textContent;e.textContent="";});
+  document.querySelectorAll(".s").forEach(c=>{const f=TL.lines.find(l=>l.scene===c.id.slice(2));c._t=f?f.start-0.2:1e9;});
+}
+function lineAt(t){let L=TL.lines[0];for(const l of TL.lines){if(t>=l.start-0.12)L=l;}return L;}
+function render(t){
+  const L=lineAt(t);
+  document.querySelectorAll(".s").forEach(c=>{const on=c.id==="s-"+L.scene;const p=(t-c._t)/0.4;
+    c.style.opacity=on?ease(p):0;c.style.transform=on?`translateY(${(1-ease(p))*50}px) scale(${0.97+0.03*ease(p)})`:"none";});
+  document.querySelectorAll("[data-at]").forEach(e=>{const p=(t-e._t)/0.3;const isSvg=e instanceof SVGElement;
+    if(e.hasAttribute("data-pop")){e.style.opacity=ease(p*1.6);const sc=0.4+0.6*back(p);
+      if(isSvg){if(!e._bb){try{e._bb=e.getBBox()}catch(x){e._bb={x:0,y:0,width:0,height:0}}}const cx=e._bb.x+e._bb.width/2,cy=e._bb.y+e._bb.height/2;e.setAttribute("transform",`translate(${cx},${cy}) scale(${sc}) translate(${-cx},${-cy})`);}
+      else e.style.transform=(e.dataset.rot?`rotate(${e.dataset.rot}deg) `:"")+`scale(${sc})`;}
+    else if(isSvg){e.style.opacity=ease(p);}
+    else if(e.hasAttribute("data-left")){e.style.opacity=ease(p);e.style.transform=`translateX(${(1-ease(p))*-70}px)`;}
+    else {e.style.opacity=ease(p);e.style.transform=`translateY(${(1-ease(p))*30}px)`;}
+    if(e.dataset.count!==undefined){const to=+e.dataset.count,d=+(e.dataset.dur||1.4);e.textContent=Math.round(to*ease((t-e._t)/d)).toLocaleString("en-US");}
+    if(e.dataset.grow){const v=+e.dataset.grow.split(":")[1];e.style.width=(v*ease((t-e._t-0.1)/0.9))+"%";}
+  });
+  document.querySelectorAll("[data-type]").forEach(e=>{const n=Math.floor(clamp((t-e._t)/0.7)*e._full.length);e.textContent=e._full.slice(0,n);});
+  const bl=(t%3.2)<0.13;document.querySelectorAll(".eye").forEach(e=>{e.setAttribute("height",bl?4:32);e.setAttribute("y",bl?102:88);});
+  const t2=at("s2:0"),d2=at("s2:1")-t2;SH.forEach((x,i)=>{const c=t2+(0.25+i*0.1)*d2+0.8;
+    document.getElementById("st"+i).innerHTML=t<c?'<span class="mut">○ connecting</span>':'<span class="ok">✓ 200 OK</span>';});
+  const t3=at("s3:0");W.forEach((w,i)=>document.getElementById("w"+i).className="chip"+(t>t3+0.5+i*0.45?" on":""));
+  document.getElementById("log").style.transform=`translateY(${-Math.max(0,t-t3-0.5)*60}px)`;
+  const ex=document.getElementById("exap");const ke=t>=at("s6:0.7");ex.style.textDecoration=ke?"line-through":"none";ex.style.color=ke?"#8B97AE":"#E8EDF5";
+  const ap=document.getElementById("appr");const ka=t>=at("ok:0.62");ap.textContent=ka?"✓ Approved by Ramon":"Approve and send";ap.style.background=ka?"#2D7A57":"#E0943A";
+  document.getElementById("stt").textContent=L.st||"";document.getElementById("status").style.opacity=L.st?1:0;
+  document.getElementById("cur").style.opacity=(t%1)<0.5?1:0;
+  const cap=document.getElementById("cap");cap.innerHTML="";
+  if(t<=L.end+0.15&&t>=L.start-0.05){let ci=L.chunks.findIndex(ch=>t<L.words[ch[ch.length-1]].e);if(ci<0)ci=L.chunks.length-1;
+    const ch=L.chunks[ci];const wi=L.words.findIndex(x=>t>=x.s&&t<x.e);
+    ch.forEach(j=>{const s=document.createElement("span");s.textContent=L.words[j].w;if(j===wi)s.className="w";cap.appendChild(s);});
+    const w=cap.scrollWidth;cap.style.transform=w>1000?`scale(${1000/w})`:"none";}
+  const cta=document.getElementById("cta");const k=t-cta._t-0.6;if(k>0)cta.style.transform+=` scale(${1+0.05*Math.sin(k*7)})`;
+  document.getElementById("bar").style.width=(clamp(t/TL.total)*1080)+"px";
+  document.getElementById("glow").style.transform=`translate(${Math.sin(t*0.3)*80}px,${Math.cos(t*0.25)*60}px)`;
+}
+async function init(){TL=await (await fetch("timeline.json")).json();await document.fonts.ready;prep();window.TOTAL=TL.total;window.READY=true;render(0);}
+window.render=render;init();
+</script></body></html>

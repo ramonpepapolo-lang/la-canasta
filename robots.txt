@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /videos/
 
 Sitemap: https://lacanastaindex.com/sitemap.xml

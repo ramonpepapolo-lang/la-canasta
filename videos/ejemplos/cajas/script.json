@@ -1,0 +1,14 @@
+[
+ {"k":"c0","scene":"reg","sub":"Mismo carrito, cuatro súper. ¿Cuál te cobra menos?","say":"Mismo carrito, cuatro súper. ¿Cuál te cobra menos?"},
+ {"k":"c1","scene":"reg","sub":"Pasamos 138 productos idénticos, con el mismo código de barras, por la caja de cada súper.","say":"Pasamos ciento treinta y ocho productos idénticos, con el mismo código de barras, por la caja de cada súper."},
+ {"k":"c2","scene":"reg","sub":"Precios del sábado 31 de octubre. Arranca la cuenta.","say":"Precios del sábado treinta y uno de octubre. Arranca la cuenta.","post":1.2},
+ {"k":"c3","scene":"reg","sub":"Jumbo: $600.249. Carrefour: $538.147. ChangoMás: $526.133.","say":"Jumbo: seiscientos mil pesos. Carrefour: quinientos treinta y ocho mil. ChangoMás: quinientos veintiséis mil."},
+ {"k":"c4","scene":"reg","sub":"Y Día: $501.605. El más barato.","say":"Y Día: quinientos un mil seiscientos. El más barato."},
+ {"k":"c5","scene":"dif","sub":"Entre Día y Jumbo, casi $100.000 de diferencia, por el mismo carrito.","say":"Entre Día y Jumbo, casi cien mil pesos de diferencia, por el mismo carrito."},
+ {"k":"c6","scene":"grid","sub":"Ahora, producto por producto. Cada cuadradito es uno de los 138.","say":"Ahora, producto por producto. Cada cuadradito es uno de los ciento treinta y ocho."},
+ {"k":"c7","scene":"grid","sub":"En rojo, los que en Jumbo estaban más caros que en cualquier otro súper: 127.","say":"En rojo, los que en Jumbo estaban más caros que en cualquier otro súper: ciento veintisiete."},
+ {"k":"c8","scene":"ojo","sub":"Ojo: son precios online de un solo día, con las promos del sábado. Mañana puede cambiar.","say":"Ojo: son precios online de un solo día, con las promos del sábado. Mañana puede cambiar."},
+ {"k":"e1","scene":"end","sub":"Los datos no opinan. Nosotros tampoco: medimos.","say":"Los datos no opinan. Nosotros tampoco: medimos."},
+ {"k":"e2","scene":"end","sub":"Precios del súper, todos los días, en lacanastaindex.com","say":"Precios del súper, todos los días, en la canasta index punto com."},
+ {"k":"e3","scene":"end","sub":"Gracias por mirar y suscríbanse.","say":"Gracias por mirar y suscríbanse."}
+]

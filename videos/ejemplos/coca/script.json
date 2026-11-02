@@ -1,0 +1,15 @@
+[
+ {"k":"h0","scene":"hook","pre":0.75,"sub":"Misma Coca-Cola, mismo súper, mismo día. ¿Por qué el litro cuesta casi el triple?","say":"Misma Coca-Cola, mismo súper, mismo día. ¿Por qué el litro cuesta casi el triple?"},
+ {"k":"s0","scene":"shelf","sub":"El domingo 1 de noviembre, Día tenía 10 tamaños de Coca-Cola original.","say":"El domingo primero de noviembre, Día tenía diez tamaños de Coca-Cola original."},
+ {"k":"s1","scene":"shelf","sub":"La lata: $2.700. La botella de 600: también $2.700.","say":"La lata: dos mil setecientos. La botella de seiscientos: también dos mil setecientos."},
+ {"k":"s2","scene":"shelf","sub":"Y la de 500: $1.901. Cien mililitros menos, $799 menos.","say":"Y la de quinientos: mil novecientos uno. Cien mililitros menos, setecientos noventa y nueve pesos menos."},
+ {"k":"l0","scene":"liter","sub":"Pasado a litros, la lata sale $7.627 el litro.","say":"Pasado a litros, la lata sale siete mil seiscientos veintisiete el litro."},
+ {"k":"l1","scene":"liter","sub":"La de 3 litros: $2.622. Casi tres veces menos.","say":"La de tres litros: dos mil seiscientos veintidós. Casi tres veces menos."},
+ {"k":"b0","scene":"bigger","sub":"Pero más grande no siempre es más barato.","say":"Pero más grande no siempre es más barato."},
+ {"k":"b1","scene":"bigger","sub":"La de 1,75 litros sale 18% más cara por litro que la de 1,5.","say":"La de uno setenta y cinco sale dieciocho por ciento más cara por litro que la de uno y medio."},
+ {"k":"c0","scene":"coffee","sub":"Y en ChangoMás, el café La Virginia Pack Ahorro de 100 gramos,","say":"Y en ChangoMás, el café La Virginia Pack Ahorro de cien gramos,"},
+ {"k":"c1","scene":"coffee","sub":"sale 9% más caro por kilo que el de 170.","say":"sale nueve por ciento más caro por kilo que el de ciento setenta."},
+ {"k":"t0","scene":"tip","sub":"El truco: no mires el precio del envase. Mirá el precio por litro, o por kilo.","say":"El truco: no mires el precio del envase. Mirá el precio por litro, o por kilo."},
+ {"k":"e1","scene":"end","sub":"Más de 10.000 precios por día, en lacanastaindex.com","say":"Más de diez mil precios por día, en la canasta index punto com."},
+ {"k":"e2","scene":"end","sub":"Seguinos.","say":"Seguinos."}
+]

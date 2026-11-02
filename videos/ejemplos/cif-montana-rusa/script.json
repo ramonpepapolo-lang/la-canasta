@@ -1,0 +1,14 @@
+[
+ {"k":"h0","scene":"hook","pre":0.75,"sub":"El mismo detergente, en el mismo súper, tuvo 3 precios en 3 días.","say":"El mismo detergente, en el mismo súper, tuvo tres precios en tres días."},
+ {"k":"h1","scene":"ride","sub":"Cif Active Gel de 500 ml, en Carrefour.","say":"Cif Active Gel de quinientos mililitros, en Carrefour."},
+ {"k":"r1","scene":"ride","sub":"El sábado: $3.565.","say":"El sábado: tres mil quinientos sesenta y cinco."},
+ {"k":"r2","scene":"ride","sub":"El domingo: $5.485.","say":"El domingo: cinco mil cuatrocientos ochenta y cinco."},
+ {"k":"r3","scene":"ride","sub":"El lunes: $3.017.","say":"El lunes: tres mil diecisiete."},
+ {"k":"k1","scene":"ride","sub":"Si lo compraste el domingo, pagaste 82% más que el lunes.","say":"Si lo compraste el domingo, pagaste ochenta y dos por ciento más que el lunes."},
+ {"k":"d1","scene":"twin","sub":"Y lo más raro: en Día pasó exactamente lo mismo, los mismos días.","say":"Y lo más raro: en Día pasó exactamente lo mismo, los mismos días."},
+ {"k":"d2","scene":"twin","sub":"35% de descuento hasta el sábado, precio lleno el domingo, y 45% de descuento el lunes.","say":"Treinta y cinco por ciento de descuento hasta el sábado, precio lleno el domingo, y cuarenta y cinco por ciento de descuento el lunes."},
+ {"k":"t1","scene":"tip","sub":"La enseñanza: si algo de golpe está caro, esperá unos días.","say":"La enseñanza: si algo de golpe está caro, esperá unos días."},
+ {"k":"t2","scene":"tip","sub":"Acá, la promo volvió al día siguiente.","say":"Acá, la promo volvió al día siguiente."},
+ {"k":"e1","scene":"end","sub":"Más de 10.000 precios por día, en lacanastaindex.com","say":"Más de diez mil precios por día, en la canasta index punto com."},
+ {"k":"e2","scene":"end","sub":"Seguinos.","say":"Seguinos."}
+]

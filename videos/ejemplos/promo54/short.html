@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";color:#F3F0E6;background:#5A3A22}
+#board{position:absolute;left:34px;right:34px;top:34px;bottom:34px;border-radius:18px;
+ background:radial-gradient(ellipse 600px 400px at 30% 20%,rgba(255,255,255,.06),transparent 70%),radial-gradient(ellipse 500px 500px at 75% 70%,rgba(255,255,255,.05),transparent 70%),linear-gradient(160deg,#25443A,#1C352D);
+ box-shadow:inset 0 0 80px rgba(0,0,0,.55),0 0 0 14px #7A5232,0 0 0 18px #4A2F1B}
+#dust{position:absolute;inset:34px;border-radius:18px;opacity:.18;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.5px);background-size:7px 9px;mix-blend-mode:screen}
+#ledge{position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(#8A6040,#5A3A22)}
+.chalk{font-family:Serif;color:#F3F0E6;text-shadow:0 0 2px rgba(255,255,255,.55),0 0 10px rgba(255,255,255,.12)}
+.y{color:#FFE27A}.r{color:#FF8E7A}.g{color:#9FE6B0}.b{color:#9CCBE8}
+.s{position:absolute;left:34px;right:34px;top:120px;height:1380px;opacity:0;display:flex;flex-direction:column;align-items:center}
+.tag{display:inline-block;font-weight:700;font-size:30px;letter-spacing:5px;border:3px solid rgba(243,240,230,.7);padding:8px 22px;border-radius:12px;color:#F3F0E6}
+.eq{display:flex;align-items:baseline;gap:26px;font-size:120px;line-height:1.05}
+.card{width:900px;background:#FBF7EC;color:#24332C;border-radius:22px;padding:30px 40px;box-shadow:0 18px 40px rgba(0,0,0,.45);position:relative;margin-top:36px}
+.card .n{font-weight:700;font-size:44px}.card .sh{font-weight:700;font-size:30px;color:#5B6B63;margin-top:2px}
+.card .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:22px;margin-bottom:84px}
+.card .d{font-size:28px;font-weight:700;color:#5B6B63}.card .p{font-size:84px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.card .arrow{font-size:70px;color:#9AA59F;margin:0 10px 6px}
+.stampx{position:absolute;right:40px;bottom:-44px;border:9px solid #C2452D;color:#C2452D;font-weight:700;font-size:68px;padding:2px 18px;border-radius:14px;background:rgba(251,247,236,.95);transform:rotate(-6deg)}
+.bars{display:flex;align-items:flex-end;gap:60px;height:620px;margin-top:40px}
+.bar{width:220px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .col{width:100%;border:6px solid #F3F0E6;border-bottom:none;border-radius:12px 12px 0 0;background:repeating-linear-gradient(135deg,rgba(243,240,230,.25) 0 8px,transparent 8px 20px);height:0}
+.bar .v{font-family:Serif;font-size:96px;margin-bottom:10px}
+.bar .l{font-size:38px;font-weight:700;margin-top:16px}
+.base{width:880px;height:6px;background:#F3F0E6;border-radius:3px}
+.foot{font-size:26px;color:rgba(243,240,230,.7);text-align:center;line-height:1.45;max-width:900px}
+#cap{position:absolute;left:40px;right:40px;top:1560px;height:150px;line-height:150px;text-align:center;white-space:nowrap;z-index:6}
+#cap span{display:inline-block;margin:0 9px;font-weight:700;font-size:64px;color:#fff;-webkit-text-stroke:3px #1C352D;paint-order:stroke fill}
+#cap .w{color:#FFE27A}
+#bar{position:absolute;left:0;bottom:0;height:12px;background:#FFE27A;z-index:7}
+#thumb{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#logo{position:absolute;top:70px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:14px;font-family:Serif;font-size:44px;z-index:5;opacity:.9}
+#logo img{width:62px}
+svg.ch path,svg.ch line,svg.ch circle{fill:none;stroke:#F3F0E6;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body>
+<div id="board"></div><div id="dust"></div><div id="ledge"></div>
+<div id="logo"><img src="../assets/la-canasta-icon-white.svg">La Canasta</div>
+
+<div id="thumb">
+  <div class="chalk" style="font-size:96px;line-height:1">¿POR QUÉ<br>SUBEN</div>
+  <div class="chalk y" style="font-size:430px;line-height:.95;margin-top:10px">+54%</div>
+  <svg class="ch" width="760" height="60" viewBox="0 0 760 60" style="margin-top:-10px"><path d="M20 40 Q380 5 740 30" style="stroke:#FFE27A"/></svg>
+  <div class="chalk" style="font-size:92px;margin-top:30px;line-height:1.05">de un día<br>para el otro?</div>
+  <div style="margin-top:70px;background:#C2452D;color:#fff;font-weight:700;font-size:54px;padding:16px 40px;border-radius:16px;transform:rotate(-3deg)">NO ES INFLACIÓN</div>
+  <div style="position:absolute;bottom:110px;display:flex;align-items:center;gap:16px;font-family:Serif;font-size:50px"><img src="../assets/la-canasta-icon-white.svg" style="width:76px">La Canasta</div>
+</div>
+
+<div class="s" id="s-hook" style="justify-content:center">
+  <span class="tag" data-at="h0:0" data-pop data-sfx="whoosh">PREGUNTA DEL DÍA</span>
+  <div class="chalk y" style="font-size:360px;line-height:1;margin-top:40px" data-at="h0:0.08" data-drop data-sfx="stamp">+54%</div>
+  <div class="chalk" style="font-size:84px;margin-top:10px" data-at="h0:0.6">¿por qué?</div>
+  <div style="display:flex;align-items:baseline;gap:20px;margin-top:80px" data-at="h1:0.25" data-pop data-sfx="pop">
+    <span class="chalk" style="font-size:200px;line-height:1" data-at="h1:0.25" data-count="30" data-dur="1.1">0</span>
+    <span class="chalk" style="font-size:62px;line-height:1.1;text-align:left">productos<br>en una semana</span></div>
+</div>
+
+<div class="s" id="s-math" style="justify-content:flex-start;padding-top:40px">
+  <div class="chalk" style="font-size:82px;text-align:center;line-height:1.1" data-at="m0:0"><span class="r">No es inflación.</span><br><span data-at="m0:0.55">Es matemática.</span></div>
+  <div class="eq chalk" style="margin-top:80px">
+    <span data-at="m1:0.1" data-pop data-sfx="pop">$1.000</span><span class="r" data-at="m1:0.45" data-pop data-sfx="pop">−35%</span></div>
+  <div class="eq chalk" style="margin-top:10px"><span style="font-size:90px">=</span><span class="g" data-at="m1:0.8" data-pop data-sfx="ding">$650</span><span style="font-size:44px;font-family:Sans;font-weight:700" class="g" data-at="m1:0.85">en promo</span></div>
+  <svg class="ch" width="880" height="40" viewBox="0 0 880 40" style="margin-top:30px" data-at="m2:0"><line x1="20" y1="20" x2="860" y2="20" stroke-dasharray="4 22"/></svg>
+  <div class="eq chalk" style="margin-top:20px;font-size:110px"><span class="g" data-at="m2:0.15">$650</span><span style="font-family:Sans" data-at="m2:0.3">→</span><span data-at="m2:0.45" data-pop data-sfx="pop">$1.000</span></div>
+  <div class="chalk" style="font-size:48px;margin-top:24px;color:rgba(243,240,230,.85)" data-at="m3:0.2">350 ÷ 650 = 0,54</div>
+  <div style="position:relative;margin-top:20px" data-at="m3:0.45" data-drop data-sfx="stamp">
+    <div class="chalk y" style="font-size:230px;line-height:1">+54%</div>
+    <svg class="ch" width="760" height="300" viewBox="0 0 760 300" style="position:absolute;left:-120px;top:-50px"><path d="M60 150 C40 20 700 0 720 140 C740 280 110 300 70 180" style="stroke:#FFE27A;stroke-width:8"/></svg>
+  </div>
+</div>
+
+<div class="s" id="s-cases" style="justify-content:flex-start;padding-top:110px">
+  <span class="tag" data-at="c1:0" data-pop data-sfx="whoosh">CASOS REALES</span>
+  <div class="card" data-at="c1:0.05" data-pop>
+    <div class="n">Detergente Magistral Ultra 500 ml</div><div class="sh">ChangoMás</div>
+    <div class="row"><div><div class="d">Domingo 25/10</div><div class="p" style="color:#2D7A57" data-at="c1:0.35">$3.581</div></div><div class="arrow">→</div>
+      <div style="text-align:right"><div class="d">Lunes 26/10</div><div class="p" data-at="c1:0.75" data-pop>$5.509</div></div></div>
+    <div class="stampx" data-at="c1:0.9" data-drop data-rot="-6" data-sfx="stamp">+54%</div>
+  </div>
+  <div class="card" style="margin-top:110px" data-at="c2:0" data-pop data-sfx="whoosh">
+    <div class="n">Dulce de leche La Serenísima 300 g</div><div class="sh">Día</div>
+    <div class="row"><div><div class="d">Lunes 26/10</div><div class="p" style="color:#2D7A57" data-at="c2:0.4">$3.120</div></div><div class="arrow">→</div>
+      <div style="text-align:right"><div class="d">Martes 27/10</div><div class="p" data-at="c2:0.75" data-pop>$4.800</div></div></div>
+    <div class="stampx" data-at="c2:0.9" data-drop data-rot="-6" data-sfx="stamp">+54%</div>
+  </div>
+  <div class="foot" style="margin-top:60px" data-at="c1:0.1">Precios online publicados por cada súper. En los dos casos, el precio de antes era una promo de 35% y el de después, el precio de lista.</div>
+</div>
+
+<div class="s" id="s-promos" style="justify-content:flex-start;padding-top:90px">
+  <div class="chalk" style="font-size:78px;text-align:center;line-height:1.08" data-at="p1:0">Productos en oferta<br><span class="b">en ChangoMás</span></div>
+  <div class="bars">
+    <div class="bar"><div class="v" data-at="p1:0.5" data-count="42" data-dur="0.8">0</div><div class="col" id="b0"></div></div>
+    <div class="bar"><div class="v" data-at="p1:0.7" data-count="41" data-dur="0.8">0</div><div class="col" id="b1"></div></div>
+    <div class="bar"><div class="v r" data-at="p2:0.2" data-count="17" data-dur="0.6" data-sfx="buzz">0</div><div class="col" id="b2" style="border-color:#FF8E7A"></div></div>
+  </div>
+  <div class="base"></div>
+  <div style="display:flex;gap:60px">
+    <div class="bar" style="height:auto"><div class="l">Sábado</div></div><div class="bar" style="height:auto"><div class="l">Domingo</div></div><div class="bar" style="height:auto"><div class="l r">Lunes</div></div></div>
+  <div class="foot" style="margin-top:60px" data-at="p1:0.2">Productos de la canasta de La Canasta con precio tachado en ChangoMás, 24, 25 y 26 de octubre de 2026.</div>
+</div>
+
+<div class="s" id="s-method" style="justify-content:center">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;width:940px">
+    <div style="text-align:center" data-at="w1:0.05" data-pop>
+      <div class="chalk" style="font-size:66px;line-height:1.05">Días<br>sueltos</div>
+      <svg class="ch" width="420" height="260" viewBox="0 0 420 260" style="margin-top:20px"><path d="M20 200 L80 60 L140 210 L200 40 L260 190 L320 70 L400 200" style="stroke:#FF8E7A"/></svg>
+      <div class="chalk r" style="font-size:160px;line-height:1" data-at="w1:0.35" data-drop data-sfx="buzz">✗</div>
+    </div>
+    <div style="text-align:center" data-at="w1:0.55" data-pop>
+      <div class="chalk" style="font-size:66px;line-height:1.05">Semanas<br>enteras</div>
+      <svg class="ch" width="420" height="260" viewBox="0 0 420 260" style="margin-top:20px"><path d="M20 160 C120 150 220 140 400 120" style="stroke:#9FE6B0"/></svg>
+      <div class="chalk g" style="font-size:160px;line-height:1" data-at="w1:0.85" data-drop data-sfx="ding">✓</div>
+    </div>
+  </div>
+  <div class="chalk y" style="font-size:72px;margin-top:70px;text-align:center" data-at="w2:0" data-pop>Las promos no nos engañan.</div>
+</div>
+
+<div class="s" id="s-end" style="justify-content:center;text-align:center">
+  <img src="../assets/la-canasta-icon-white.svg" style="width:230px" data-at="e1:0" data-pop data-sfx="whoosh">
+  <div class="chalk" style="font-size:86px;margin-top:30px;line-height:1.08" data-at="e1:0.1">Los precios del súper,<br><span class="y">todos los días.</span></div>
+  <div style="margin-top:60px;background:#F3F0E6;color:#1C352D;font-weight:700;font-size:58px;padding:18px 46px;border-radius:999px" data-at="e1:0.55" data-pop>lacanastaindex.com</div>
+  <div style="margin-top:36px;background:#C2452D;color:#fff;font-weight:700;font-size:52px;padding:16px 48px;border-radius:999px" data-at="e2:0" data-pop data-sfx="pop">Suscribite</div>
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<script>
+window.CAPW=990;
+const H=[42,41,17].map(v=>v/42*520);
+window.EXTRA=function(t,L){
+  const th=document.getElementById("thumb"); th.style.opacity=t<0.8?1:Math.max(0,1-(t-0.8)/0.25); th.style.visibility=t>1.1?"hidden":"visible";
+  const st=[ ["p1",0.5],["p1",0.7],["p2",0.2] ];
+  st.forEach((s,i)=>{const l=TL.lines.find(x=>x.k===s[0]);const t0=l.start+s[1]*l.dur;document.getElementById("b"+i).style.height=(H[i]*ease((t-t0)/0.8))+"px";});
+  document.getElementById("bar").style.visibility=t<1?"hidden":"visible";
+  document.getElementById("logo").style.opacity=t<0.8?0:Math.min(0.9,(t-0.8)/0.3);
+  document.getElementById("cap").style.visibility=t<1?"hidden":document.getElementById("cap").style.visibility;
+};
+</script>
+<script src="../assets/engine.js"></script>
+</body></html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";color:#fff;background:#3A0C4A}
+#sky{position:absolute;inset:0;background:linear-gradient(180deg,#FF8A4C 0%,#F0446B 38%,#8E1E78 70%,#3A0C4A 100%)}
+#sun{position:absolute;left:340px;top:1380px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#FFE07A,#FFB347 60%,rgba(255,179,71,0) 72%);opacity:.55}
+#hills{position:absolute;left:0;right:0;bottom:0;height:420px}
+.s{position:absolute;left:0;right:0;top:150px;height:1360px;opacity:0;display:flex;flex-direction:column;align-items:center}
+.h{font-weight:700;letter-spacing:-2px;line-height:1.02;text-align:center;text-shadow:0 6px 0 rgba(58,12,74,.35)}
+.y{color:#FFE07A}.c{color:#7FF3FF}
+#logo{position:absolute;top:56px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:14px;font-family:Serif;font-size:44px;z-index:5}
+#logo img{width:62px}
+.lbl{position:absolute;transform:translate(-50%,-100%);background:#fff;color:#3A0C4A;font-weight:700;border-radius:18px;padding:10px 20px;text-align:center;box-shadow:0 10px 0 rgba(58,12,74,.35);white-space:nowrap}
+.lbl .d{font-size:26px;color:#8E1E78}.lbl .p{font-size:58px;line-height:1;font-variant-numeric:tabular-nums}
+.tbl{width:960px;margin-top:40px;border-radius:28px;overflow:hidden;background:rgba(58,12,74,.55);border:4px solid rgba(255,255,255,.5)}
+.tr{display:grid;grid-template-columns:240px 1fr 1fr;align-items:center;padding:22px 30px;border-top:2px solid rgba(255,255,255,.2)}
+.tr:first-child{border-top:none;background:rgba(255,255,255,.12)}
+.tr .a{font-weight:700;font-size:38px}.tr .v{font-weight:700;font-size:56px;text-align:center;font-variant-numeric:tabular-nums}
+.tr .v small{display:block;font-size:26px;color:#FFE07A}
+.stamp{border:9px solid #FFE07A;color:#FFE07A;font-weight:700;font-size:84px;padding:4px 28px;border-radius:16px;margin-top:50px}
+#cap{position:absolute;left:40px;right:40px;top:1580px;height:150px;line-height:150px;text-align:center;white-space:nowrap;z-index:6}
+#cap span{display:inline-block;margin:0 9px;font-weight:700;font-size:64px;color:#fff;-webkit-text-stroke:10px #3A0C4A;paint-order:stroke fill}
+#cap .w{color:#FFE07A}
+#bar{position:absolute;left:0;bottom:0;height:14px;background:#FFE07A;z-index:7}
+#thumb{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+</style></head><body>
+<div id="sky"></div><div id="sun"></div>
+<svg id="hills" viewBox="0 0 1080 420" preserveAspectRatio="none"><path d="M0 260 Q180 160 360 240 T720 220 T1080 250 V420 H0Z" fill="#2A0838" opacity=".8"/><path d="M0 330 Q240 250 520 320 T1080 300 V420 H0Z" fill="#1E052A"/></svg>
+<div id="logo"><img src="../assets/la-canasta-icon-white.svg">La Canasta</div>
+
+<div id="thumb">
+  <div class="h" style="font-size:130px">3 PRECIOS<br><span class="y">EN 3 DÍAS</span></div>
+  <div style="margin-top:60px;display:grid;gap:18px;width:820px">
+    <div style="display:flex;justify-content:space-between;background:#fff;color:#3A0C4A;border-radius:22px;padding:18px 36px;font-weight:700;font-size:56px"><span>Sábado</span><span>$3.565</span></div>
+    <div style="display:flex;justify-content:space-between;background:#3A0C4A;color:#FFE07A;border:6px solid #FFE07A;border-radius:22px;padding:18px 36px;font-weight:700;font-size:56px;transform:rotate(-2deg)"><span>Domingo</span><span>$5.485</span></div>
+    <div style="display:flex;justify-content:space-between;background:#fff;color:#3A0C4A;border-radius:22px;padding:18px 36px;font-weight:700;font-size:56px"><span>Lunes</span><span>$3.017</span></div>
+  </div>
+  <div class="h" style="font-size:70px;margin-top:60px">El mismo detergente</div>
+  <div style="position:absolute;bottom:120px;display:flex;align-items:center;gap:14px;font-family:Serif;font-size:50px"><img src="../assets/la-canasta-icon-white.svg" style="width:74px">La Canasta</div>
+</div>
+
+<div class="s" id="s-hook" style="justify-content:center">
+  <div class="h" style="font-size:118px" data-at="h0:0.02" data-pop data-sfx="whoosh">Mismo<br>detergente.</div>
+  <div class="h" style="font-size:118px;margin-top:20px" data-at="h0:0.3" data-pop data-sfx="pop">Mismo súper.</div>
+  <div class="h y" style="font-size:150px;margin-top:40px" data-at="h0:0.6" data-drop data-sfx="stamp">3 precios<br>en 3 días</div>
+</div>
+
+<div class="s" id="s-ride" style="justify-content:flex-start;top:150px">
+  <div class="h" style="font-size:64px;margin-top:30px" data-at="h1:0">Cif Active Gel 500 ml</div>
+  <div style="font-size:40px;font-weight:700;color:#FFE07A" data-at="h1:0.2">Carrefour</div>
+  <div style="position:relative;width:1080px;height:1000px;margin-top:10px">
+    <svg id="track" width="1080" height="1000" viewBox="0 0 1080 1000" style="position:absolute;left:0;top:0"></svg>
+    <div class="lbl" id="L1" style="opacity:0"><div class="d">Sáb 31/10</div><div class="p">$3.565</div></div>
+    <div class="lbl" id="L2" style="opacity:0"><div class="d">Dom 1/11</div><div class="p" style="color:#C2185B">$5.485</div></div>
+    <div class="lbl" id="L3" style="opacity:0"><div class="d">Lun 2/11</div><div class="p" style="color:#1E8A4C">$3.017</div></div>
+  </div>
+  <div class="h y" style="font-size:96px;position:absolute;top:1130px;left:0;right:0" data-at="k1:0.45" data-drop data-sfx="stamp">+82% el domingo</div>
+</div>
+
+<div class="s" id="s-twin" style="justify-content:flex-start;padding-top:40px">
+  <div class="h" style="font-size:84px" data-at="d1:0" data-pop data-sfx="whoosh">En Día:<br><span class="y">igual, los mismos días</span></div>
+  <div class="tbl" data-at="d1:0.4" data-pop>
+    <div class="tr"><span class="a"></span><span class="v" style="font-size:40px">Carrefour</span><span class="v" style="font-size:40px">Día</span></div>
+    <div class="tr" data-at="d2:0.05"><span class="a">Hasta sáb</span><span class="v">$3.565<small>−35%</small></span><span class="v">$3.543<small>−35%</small></span></div>
+    <div class="tr" data-at="d2:0.35"><span class="a">Domingo</span><span class="v">$5.485<small>sin promo</small></span><span class="v">$5.450<small>sin promo</small></span></div>
+    <div class="tr" data-at="d2:0.7"><span class="a">Lunes</span><span class="v">$3.017<small>−45%</small></span><span class="v">$2.998<small>−45%</small></span></div>
+  </div>
+  <div class="stamp" data-at="d2:0.9" data-drop data-rot="-4" data-sfx="stamp">IDÉNTICO</div>
+  <div style="font-size:26px;color:rgba(255,255,255,.8);text-align:center;margin-top:40px;max-width:900px;line-height:1.45" data-at="d1:0.5">Precios online de Carrefour y Día, Cif Active Gel Original 500 ml, del 24/10 al 2/11/2026.</div>
+</div>
+
+<div class="s" id="s-tip" style="justify-content:center">
+  <div class="h" style="font-size:96px" data-at="t1:0" data-pop data-sfx="whoosh">La enseñanza</div>
+  <div style="margin-top:60px;background:#fff;color:#3A0C4A;border-radius:30px;padding:40px 50px;width:900px;text-align:center;box-shadow:0 14px 0 rgba(58,12,74,.35)" data-at="t1:0.3" data-pop>
+    <div style="font-size:60px;font-weight:700;line-height:1.1">¿De golpe está caro?</div>
+    <div style="font-size:84px;font-weight:700;color:#C2185B;margin-top:16px">Esperá unos días.</div>
+  </div>
+  <div class="h y" style="font-size:66px;margin-top:70px" data-at="t2:0.1" data-pop data-sfx="ding">La promo volvió<br>al día siguiente.</div>
+</div>
+
+<div class="s" id="s-end" style="justify-content:center;text-align:center">
+  <img src="../assets/la-canasta-icon-white.svg" style="width:230px" data-at="e1:0" data-pop data-sfx="whoosh">
+  <div class="h" style="font-size:84px;margin-top:30px" data-at="e1:0.1">+10.000 precios<br><span class="y">por día</span></div>
+  <div style="margin-top:60px;background:#fff;color:#3A0C4A;font-weight:700;font-size:58px;padding:18px 46px;border-radius:999px" data-at="e1:0.5" data-pop>lacanastaindex.com</div>
+  <div style="margin-top:36px;background:#3A0C4A;border:5px solid #FFE07A;color:#FFE07A;font-weight:700;font-size:52px;padding:14px 48px;border-radius:999px" data-at="e2:0" data-pop data-sfx="pop">Seguinos</div>
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<script>
+window.CAPW=990;
+// Carrefour price, 24/10 ... 2/11 (10 days)
+const P=[3565,3565,3565,3565,3565,3565,3565,3565,5485,3017];
+const X0=90,X1=990,Y=v=>880-(v-2500)/(6000-2500)*640;
+const pts=P.map((v,i)=>[X0+i*(X1-X0)/9,Y(v)]);
+function pathD(){let d=`M${pts[0][0]},${pts[0][1]}`;for(let i=1;i<pts.length;i++){const [x0,y0]=pts[i-1],[x1,y1]=pts[i];const mx=(x0+x1)/2;d+=` C${mx},${y0} ${mx},${y1} ${x1},${y1}`;}return d;}
+window.SETUP=function(){
+  const sv=document.getElementById("track");let s="";
+  // supports
+  for(let x=X0;x<=X1;x+=45){s+=`<line x1="${x}" y1="${0}" x2="${x}" y2="1000" stroke="rgba(255,255,255,.18)" stroke-width="6" class="sup" data-x="${x}"/>`;}
+  s+=`<path id="rail2" d="${pathD()}" fill="none" stroke="#3A0C4A" stroke-width="26" stroke-linecap="round" transform="translate(0,14)" opacity=".5"/>`;
+  s+=`<path id="rail" d="${pathD()}" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>`;
+  s+=`<path id="ties" d="${pathD()}" fill="none" stroke="#FFE07A" stroke-width="30" stroke-dasharray="6 34" opacity=".9"/>`;
+  s+=`<g id="cart"><rect x="-58" y="-74" width="116" height="62" rx="16" fill="#FFE07A" stroke="#3A0C4A" stroke-width="6"/><circle cx="-32" cy="-8" r="14" fill="#3A0C4A"/><circle cx="32" cy="-8" r="14" fill="#3A0C4A"/>
+    <rect x="-16" y="-124" width="32" height="56" rx="8" fill="#7FF3FF" stroke="#3A0C4A" stroke-width="5"/><rect x="-8" y="-138" width="16" height="16" rx="3" fill="#F0446B" stroke="#3A0C4A" stroke-width="4"/></g>`;
+  // day labels
+  ["24/10","","","","","","","31/10","1/11","2/11"].forEach((d,i)=>{if(d)s+=`<text x="${pts[i][0]}" y="960" text-anchor="middle" font-family="Sans" font-weight="700" font-size="30" fill="#fff">${d}</text>`;});
+  sv.innerHTML=s;
+  // supports only below the rail
+  const rail=document.getElementById("rail");const len=rail.getTotalLength();window._len=len;
+  document.querySelectorAll(".sup").forEach(l=>{const x=+l.dataset.x;let lo=0,hi=len;for(let k=0;k<30;k++){const m=(lo+hi)/2;if(rail.getPointAtLength(m).x<x)lo=m;else hi=m;}l.setAttribute("y1",rail.getPointAtLength(lo).y+10);});
+  [[7,"L1"],[8,"L2"],[9,"L3"]].forEach(([i,id])=>{const e=document.getElementById(id);e.style.left=Math.min(pts[i][0],930)+"px";e.style.top=(pts[i][1]-(i===8?40:150))+"px";});
+  document.getElementById("L1").style.left="640px";document.getElementById("L3").style.left="930px";document.getElementById("L3").style.top=(pts[9][1]+190)+"px";
+};
+function lenAtIndex(u){const rail=document.getElementById("rail");const x=X0+u*(X1-X0)/9;let lo=0,hi=window._len;for(let k=0;k<30;k++){const m=(lo+hi)/2;if(rail.getPointAtLength(m).x<x)lo=m;else hi=m;}return lo;}
+window.EXTRA=function(t,L){
+  const th=document.getElementById("thumb"); th.style.opacity=t<0.8?1:Math.max(0,1-(t-0.8)/0.25); th.style.visibility=t>1.1?"hidden":"visible";
+  document.getElementById("logo").style.opacity=t<0.8?0:Math.min(1,(t-0.8)/0.3);
+  const at=(k,f)=>{const l=TL.lines.find(x=>x.k===k);return l.start+f*l.dur;};
+  // cart progress along the days
+  const keys=[[at("h1",0),0],[at("h1",1),5],[at("r1",0.5),7],[at("r2",0.1),7],[at("r2",0.7),8],[at("r3",0.05),8],[at("r3",0.6),9]];
+  let u=0;for(let i=0;i<keys.length;i++){if(t>=keys[i][0])u=keys[i][1];if(i<keys.length-1&&t>=keys[i][0]&&t<keys[i+1][0]){const f=(t-keys[i][0])/(keys[i+1][0]-keys[i][0]);u=keys[i][1]+(keys[i+1][1]-keys[i][1])*(f<0.5?2*f*f:1-Math.pow(-2*f+2,2)/2);}}
+  const rail=document.getElementById("rail");if(rail&&window._len){const l=lenAtIndex(Math.max(0.001,Math.min(8.999,u)));const p=rail.getPointAtLength(l),q=rail.getPointAtLength(Math.min(window._len,l+4));
+    const a=Math.atan2(q.y-p.y,q.x-p.x)*180/Math.PI;document.getElementById("cart").setAttribute("transform",`translate(${p.x},${p.y}) rotate(${a})`);
+    document.getElementById("ties").style.strokeDasharray=`6 34`;}
+  [["L1","r1",0.2],["L2","r2",0.6],["L3","r3",0.5]].forEach(([id,k,f])=>{const e=document.getElementById(id);const p=ease((t-at(k,f))/0.3);e.style.opacity=p;e.style.transform=`translate(-50%,-100%) scale(${0.5+0.5*back(p)})`;});
+};
+</script>
+<script src="../assets/engine.js"></script>
+</body></html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";background:#E9EDF2;color:#1E2B45}
+#floor{position:absolute;inset:0;background-image:linear-gradient(rgba(30,43,69,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(30,43,69,.06) 2px,transparent 2px);background-size:120px 120px}
+.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace}
+#sign{position:absolute;left:0;right:0;top:0;height:200px;background:#1E2B45;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+#sign b{font-size:62px;letter-spacing:1px}#sign span{font-size:28px;color:#FFD45C;font-weight:700;letter-spacing:5px;margin-top:6px}
+.s{position:absolute;left:0;right:0;top:200px;height:1300px;opacity:0}
+.lane{position:absolute;left:30px;right:30px;height:270px;background:#fff;border-radius:26px;box-shadow:0 14px 30px -18px rgba(30,43,69,.6);overflow:hidden}
+.lane .tag{position:absolute;left:0;top:0;bottom:0;width:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff}
+.lane .tag small{font-size:22px;font-weight:700;letter-spacing:4px;opacity:.85}.lane .tag b{font-size:32px;margin-top:6px}
+.belt{position:absolute;left:190px;right:400px;top:150px;height:70px;background:repeating-linear-gradient(90deg,#2B3340 0 30px,#38414F 30px 60px);border-radius:8px}
+.scanner{position:absolute;right:340px;top:110px;width:60px;height:120px;background:#1E2B45;border-radius:10px}
+.scanner i{position:absolute;left:8px;right:8px;top:54px;height:6px;background:#E0624A;border-radius:3px;box-shadow:0 0 16px 4px rgba(224,98,74,.7)}
+.item{position:absolute;top:96px;width:64px;height:58px;border-radius:8px}
+.led{position:absolute;right:24px;top:30px;width:280px;height:210px;background:#0B0F14;border-radius:16px;padding:18px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.led .tot{font-size:52px;font-weight:700;color:#5CFF8F;text-shadow:0 0 14px rgba(92,255,143,.6);text-align:right;font-variant-numeric:tabular-nums}
+.led .n{font-size:24px;color:#5CFF8F;opacity:.7;text-align:right}
+.led .h{font-size:20px;color:#8B97AE;letter-spacing:3px}
+.lane .best{position:absolute;left:210px;top:28px;font-size:40px;font-weight:700;color:#fff;background:#2D7A57;border-radius:12px;padding:6px 20px}
+#cap{position:absolute;left:0;right:0;top:1560px;height:150px;line-height:150px;text-align:center;white-space:nowrap;z-index:6;background:#1E2B45}
+#cap span{display:inline-block;margin:0 9px;font-weight:700;font-size:64px;color:#fff}
+#cap .w{color:#5CFF8F}
+#bar{position:absolute;left:0;top:1710px;height:10px;background:#5CFF8F;z-index:7}
+.cell{width:62px;height:62px;border-radius:10px;background:#C9D1DC}
+.board{background:#0B0F14;border-radius:30px;padding:60px 50px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.dot{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#FFB547;text-shadow:0 0 18px rgba(255,181,71,.7);letter-spacing:4px}
+</style></head><body>
+<div id="floor"></div>
+<div id="sign"><b>4 súper · 1 mismo carrito</b><span>SÁBADO 31/10/2026</span></div>
+
+<div class="s" id="s-reg" data-still>
+  <div class="lane" style="top:40px" data-at="c0:0.2" data-left><div class="tag" style="background:#B9472F"><small>CAJA 1</small><b>Jumbo</b></div><div class="belt"></div><div class="scanner"><i></i></div><div class="led"><span class="h">TOTAL</span><span class="tot mono" id="t0">$0</span><span class="n mono" id="n0">0/138</span></div></div>
+  <div class="lane" style="top:340px" data-at="c0:0.32" data-left><div class="tag" style="background:#2B3B5C"><small>CAJA 2</small><b>Carrefour</b></div><div class="belt"></div><div class="scanner"><i></i></div><div class="led"><span class="h">TOTAL</span><span class="tot mono" id="t1">$0</span><span class="n mono" id="n1">0/138</span></div></div>
+  <div class="lane" style="top:640px" data-at="c0:0.44" data-left><div class="tag" style="background:#4C7FA0"><small>CAJA 3</small><b>ChangoMás</b></div><div class="belt"></div><div class="scanner"><i></i></div><div class="led"><span class="h">TOTAL</span><span class="tot mono" id="t2">$0</span><span class="n mono" id="n2">0/138</span></div></div>
+  <div class="lane" style="top:940px" data-at="c0:0.56" data-left id="lane3"><div class="tag" style="background:#2D7A57"><small>CAJA 4</small><b>Día</b></div><div class="belt"></div><div class="scanner"><i></i></div><div class="led"><span class="h">TOTAL</span><span class="tot mono" id="t3">$0</span><span class="n mono" id="n3">0/138</span></div>
+    <span class="best" data-at="c4:0.55" data-pop data-sfx="win">EL MÁS BARATO</span></div>
+  <div style="position:absolute;left:0;right:0;top:1230px;text-align:center"><span class="mono" style="background:#1E2B45;color:#FFD45C;font-weight:700;font-size:30px;padding:10px 26px;border-radius:999px" data-at="c1:0.15" data-pop data-sfx="pop">138 productos · mismo código de barras</span></div>
+</div>
+
+<div class="s" id="s-dif" style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <div class="board" style="width:960px;text-align:center" data-at="c5:0" data-pop data-sfx="whoosh">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+      <div><div class="mono" style="color:#8B97AE;font-size:28px;letter-spacing:4px">DÍA</div><div class="mono" style="color:#5CFF8F;font-size:72px;font-weight:700;text-shadow:0 0 14px rgba(92,255,143,.6)">$501.605</div></div>
+      <div><div class="mono" style="color:#8B97AE;font-size:28px;letter-spacing:4px">JUMBO</div><div class="mono" style="color:#FF7A5C;font-size:72px;font-weight:700;text-shadow:0 0 14px rgba(255,122,92,.6)">$600.249</div></div>
+    </div>
+    <div style="height:3px;background:#2A3340;margin:44px 0"></div>
+    <div class="mono" style="color:#8B97AE;font-size:30px;letter-spacing:6px">DIFERENCIA</div>
+    <div class="mono" style="color:#FFB547;font-size:150px;font-weight:700;text-shadow:0 0 22px rgba(255,181,71,.6)" data-count="98644" data-fmt="money" data-at="c5:0.2" data-dur="1.6">$0</div>
+    <div class="mono" style="color:#FF7A5C;font-size:56px;font-weight:700;margin-top:10px" data-at="c5:0.6" data-pop data-sfx="stamp">+19,7 %</div>
+  </div>
+</div>
+
+<div class="s" id="s-grid" style="display:flex;flex-direction:column;align-items:center">
+  <div style="font-size:40px;font-weight:700;margin-top:40px" data-at="c6:0.05">Los 138 productos, uno por uno</div>
+  <div id="cells" style="display:grid;grid-template-columns:repeat(12,62px);gap:12px;margin-top:40px"></div>
+  <div style="display:flex;align-items:baseline;gap:20px;margin-top:46px" data-at="c7:0.3">
+    <span class="mono" style="font-size:120px;font-weight:700;color:#C2452D"><span data-count="127" data-at="c7:0.3" data-dur="2.2">0</span><span style="font-size:60px;color:#8B97AE">/138</span></span>
+  </div>
+  <div style="font-size:38px;font-weight:700;color:#C2452D" data-at="c7:0.4">en Jumbo, el precio más alto</div>
+</div>
+
+<div class="s" id="s-ojo" style="display:flex;align-items:center;justify-content:center">
+  <div class="board" style="width:960px;height:700px;overflow:hidden;position:relative">
+    <div class="dot" style="font-size:40px;color:#8B97AE;text-shadow:none">OJO</div>
+    <div class="dot" style="font-size:66px;line-height:1.25;margin-top:40px" data-at="c8:0.05">PRECIOS ONLINE<br>DE UN SOLO DÍA</div>
+    <div class="dot" style="font-size:44px;line-height:1.3;margin-top:40px;color:#5CFF8F;text-shadow:0 0 14px rgba(92,255,143,.6)" data-at="c8:0.45">CON LAS PROMOS<br>DEL SÁBADO 31/10</div>
+    <div class="dot" style="font-size:44px;margin-top:40px;color:#FF7A5C;text-shadow:0 0 14px rgba(255,122,92,.6)" data-at="c8:0.8">MAÑANA PUEDE CAMBIAR</div>
+  </div>
+</div>
+
+<div class="s" id="s-end" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+  <img src="../assets/la-canasta-icon.svg" style="width:230px" data-at="e1:0" data-pop data-sfx="pop">
+  <div style="font-family:Serif;font-size:82px;line-height:1.08;margin-top:30px" data-at="e1:0.1">Los datos no opinan.</div>
+  <div style="font-family:Serif;font-size:82px;line-height:1.08;color:#D98A2B" data-at="e1:0.5">Nosotros tampoco: medimos.</div>
+  <div class="board" style="margin-top:60px;padding:30px 50px" data-at="e2:0.2" data-pop><span class="dot" style="font-size:56px;color:#5CFF8F;text-shadow:0 0 14px rgba(92,255,143,.6)">lacanastaindex.com</span></div>
+  <div style="margin-top:40px;background:#D98A2B;color:#fff;font-weight:700;font-size:50px;padding:18px 48px;border-radius:999px" data-at="e3:0" data-pop>Suscribite</div>
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<script>
+window.CAPW=1000;
+const TOT=[600249,538147,526133,501605];
+const COLORS=["#E0943A","#7FB1C6","#C2452D","#4FC08D","#F2C14E","#9B7BD1","#5B8DEF","#E86F9C"];
+let R=1;const rnd=()=>{R=(R*16807)%2147483647;return R/2147483647;};
+// 138 cells: 127 red (Jumbo the most expensive), in a shuffled order
+const order=[...Array(138).keys()].sort(()=>rnd()-0.5);const red=new Set(order.slice(0,127));
+const cells=document.getElementById("cells");for(let i=0;i<138;i++){const c=document.createElement("div");c.className="cell";cells.appendChild(c);}
+// items on the belts
+document.querySelectorAll(".belt").forEach((b,li)=>{for(let k=0;k<5;k++){const it=document.createElement("div");it.className="item";it.style.background=COLORS[(k*3+li)%8];b.parentNode.appendChild(it);}});
+window.EXTRA=function(t,L){
+  const s0=at("c2:0.8"), dur=at("c3:0")-s0+0.2;   // scanning runs from "Arranca la cuenta" to the first total
+  const p=clamp((t-s0)/dur), pe=1-Math.pow(1-p,1.6);
+  TOT.forEach((v,i)=>{document.getElementById("t"+i).textContent="$"+Math.round(v*pe).toLocaleString("es-AR");document.getElementById("n"+i).textContent=Math.round(138*pe)+"/138";});
+  // moving items + belt
+  document.querySelectorAll(".lane").forEach((ln,li)=>{const running=t>s0&&p<1; const its=ln.querySelectorAll(".item");
+    its.forEach((it,k)=>{const sp=running?520:0; const base=((t-s0)*sp+k*130+li*40); const x=running?(base%480):(-200); it.style.left=(190+x)+"px"; it.style.opacity=running&&x<420?1:0;});
+    ln.querySelector(".belt").style.backgroundPosition=running?`${(t*400)%60}px 0`:"0 0";
+    ln.querySelector(".scanner i").style.opacity=running?((t*8)%1<.5?1:.3):.25;});
+  // highlight the lane being read
+  const hl=[["c3:0.0","c3:0.33",0],["c3:0.33","c3:0.66",1],["c3:0.66","c4:0",2],["c4:0","c5:0",3]];
+  document.querySelectorAll(".lane").forEach((ln,i)=>{const h=hl[i];const on=t>=at(h[0])&&t<at(h[1]); ln.style.boxShadow=on?"0 0 0 8px #FFD45C, 0 20px 40px -10px rgba(30,43,69,.6)":"";});
+  const win=t>=at("c4:0.4"); document.getElementById("lane3").style.background=win?"#E7F6EE":"#fff";
+  // grid
+  const g0=at("c7:0.3"),gd=2.2; [...cells.children].forEach((c,i)=>{const k=order.indexOf(i); const tt=g0+k/138*gd; const on=red.has(i)&&t>=tt;
+    c.style.background=on?"#C2452D":(t>=at("c6:0.3")?"#9AA8BA":"#C9D1DC"); c.style.transform=on&&t-tt<0.2?`scale(${1.25-1.25*(t-tt)})`:"none";});
+};
+</script>
+<script src="../assets/engine.js"></script>
+</body></html>

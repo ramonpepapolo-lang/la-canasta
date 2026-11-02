@@ -1,0 +1,2 @@
+# sh mix2.sh <folder> <name> : voice (in raw.mp4) + music bed + sound effects
+ffmpeg -y -loglevel error -i $1/raw.mp4 -i $1/bed.wav -i $1/sfx.wav -filter_complex "[1:a]volume=0.10[b];[2:a]volume=0.8[s];[0:a][b][s]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-15:TP=-1.5:LRA=11[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 160k -ar 48000 -movflags +faststart $1/$2.tmp.mp4 && mv $1/$2.tmp.mp4 $1/$2.mp4 && ffprobe -v error -show_entries format=duration -of csv=p=0 $1/$2.mp4

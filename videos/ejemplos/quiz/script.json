@@ -1,0 +1,14 @@
+[
+ {"k":"q0","scene":"intro","sub":"El mismo producto, en cuatro súper. ¿Dónde está más barato? Tenés tres segundos.","say":"El mismo producto, en cuatro súper. ¿Dónde está más barato? Tenés tres segundos."},
+ {"k":"r1q","scene":"r1","sub":"Primera: harina leudante Caserita, de un kilo.","say":"Primera: harina leudante Caserita, de un kilo.","post":3.0},
+ {"k":"r1a","scene":"r1","sub":"¡En Día! $890, con promo. En Jumbo, $1.850: más del doble.","say":"¡En Día! Ochocientos noventa pesos, con promo. En Jumbo, mil ochocientos cincuenta: más del doble."},
+ {"k":"r2q","scene":"r2","sub":"Segunda: Nesquik en polvo, de 300 gramos.","say":"Segunda: Nesquik en polvo, de trescientos gramos.","post":3.0},
+ {"k":"r2a","scene":"r2","sub":"Otra vez Día: $5.298, y sin promo. En Jumbo, $9.600: 81% más.","say":"Otra vez Día: cinco mil doscientos noventa y ocho, y sin promo. En Jumbo, nueve mil seiscientos: ochenta y uno por ciento más."},
+ {"k":"r3q","scene":"r3","sub":"Última: lavandina Ayudín, de dos litros.","say":"Última: lavandina Ayudín, de dos litros.","post":3.0},
+ {"k":"r3a","scene":"r3","sub":"¡ChangoMás! $2.315, con promo. En Jumbo, $4.200.","say":"¡ChangoMás! Dos mil trescientos quince, con promo. En Jumbo, cuatro mil doscientos."},
+ {"k":"sc","scene":"score","sub":"¿Cuántas acertaste? Contalo en los comentarios.","say":"¿Cuántas acertaste? Contalo en los comentarios."},
+ {"k":"ojo","scene":"score","sub":"Precios online del sábado 31 de octubre, mismo código de barras en los cuatro súper.","say":"Precios online del sábado treinta y uno de octubre, mismo código de barras en los cuatro súper."},
+ {"k":"e1","scene":"end","sub":"Los datos no opinan. Nosotros tampoco: medimos.","say":"Los datos no opinan. Nosotros tampoco: medimos."},
+ {"k":"e2","scene":"end","sub":"Precios del súper, todos los días, en lacanastaindex.com","say":"Precios del súper, todos los días, en la canasta index punto com."},
+ {"k":"e3","scene":"end","sub":"Gracias por mirar y suscríbanse.","say":"Gracias por mirar y suscríbanse."}
+]

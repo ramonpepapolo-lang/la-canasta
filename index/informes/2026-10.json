@@ -10,7 +10,7 @@
  "prices_collected": 84419,
  "headline": {
   "end_to_end_paid": 1.13,
-  "end_to_end_regular": 0.26,
+  "end_to_end_regular": 0.3,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -231,12 +231,12 @@
   {
    "date": "2026-10-30",
    "paid": 101.024,
-   "regular": 100.618
+   "regular": 100.655
   },
   {
    "date": "2026-10-31",
    "paid": 101.129,
-   "regular": 100.264
+   "regular": 100.301
   }
  ]
 }

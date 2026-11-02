@@ -1,0 +1,52 @@
+name: Publicar videos del día
+
+# Ramon approves the day's Shorts by opening an issue titled "publicar AAAA-MM-DD" (or "... 1" / "... 2")
+# from the link in the daily email. ONLY issues opened by Ramon's account do anything.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    if: github.event.issue.user.login == 'ramonpepapolo-lang' && startsWith(github.event.issue.title, 'publicar')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get the day's videos
+        run: git clone --depth 1 --branch videos-dia "https://github.com/${{ github.repository }}" vd
+      - name: Install
+        run: pip install --quiet tweepy google-api-python-client google-auth
+      - name: Publish
+        id: pub
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python3 videos/publicar.py > report.txt 2>&1 || true
+          cat report.txt
+      - name: Save what was published
+        run: |
+          git config user.name "La Canasta bot"; git config user.email "actions@users.noreply.github.com"
+          if [ -f notas/publicados.txt ]; then git add notas/publicados.txt; git commit -m "Published videos" || true
+            for i in 1 2 3; do git pull --rebase --quiet origin main && git push --quiet && break; sleep 10; done; fi
+      - name: Tell Ramon
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body-file report.txt
+          gh issue close ${{ github.event.issue.number }}
+          python3 alert_email.py --msg "📤 La Canasta: resultado de publicar" "$(cat report.txt)" || true

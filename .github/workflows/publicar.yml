@@ -25,6 +25,7 @@ jobs:
         id: pub
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
+          X_REPLY: ${{ vars.X_REPLY }}
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}

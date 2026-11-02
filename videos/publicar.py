@@ -33,7 +33,9 @@ def post_x(v):
                       access_token=os.environ["X_ACCESS_TOKEN"], access_token_secret=os.environ["X_ACCESS_SECRET"])
     t = c.create_tweet(text=v["x_text"], media_ids=[media.media_id])
     tid = t.data["id"]
-    if v.get("x_reply"):
+    # X charges about 13 times more for a post with a link ($0.20 vs $0.015), so the reply with the link
+    # is only posted if the repo variable X_REPLY is "si". The link is in the profile anyway.
+    if v.get("x_reply") and os.environ.get("X_REPLY") == "si":
         c.create_tweet(text=v["x_reply"], in_reply_to_tweet_id=tid)
     return f"https://x.com/LaCanastaIndex/status/{tid}"
 

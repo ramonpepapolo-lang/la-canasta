@@ -1,0 +1,87 @@
+[
+ {
+  "k": "h0",
+  "scene": "hook",
+  "pre": 0.75,
+  "sub": "¿Por qué tantos precios del súper suben exactamente 54%?",
+  "say": "¿Por qué tantos precios del súper suben exactamente cincuenta y cuatro por ciento?"
+ },
+ {
+  "k": "h1",
+  "scene": "hook",
+  "sub": "La semana pasada, 30 productos subieron 54% de un día para el otro.",
+  "say": "La semana pasada, treinta productos subieron cincuenta y cuatro por ciento de un día para el otro."
+ },
+ {
+  "k": "m0",
+  "scene": "math",
+  "sub": "Pero no es inflación. Es matemática.",
+  "say": "Pero no es inflación. Es matemática."
+ },
+ {
+  "k": "m1",
+  "scene": "math",
+  "sub": "Algo de $1.000 con 35% de descuento, cuesta $650.",
+  "say": "Algo de mil pesos con treinta y cinco por ciento de descuento, cuesta seiscientos cincuenta."
+ },
+ {
+  "k": "m2",
+  "scene": "math",
+  "sub": "Cuando termina la promo, vuelve a $1.000.",
+  "say": "Cuando termina la promo, vuelve a mil."
+ },
+ {
+  "k": "m3",
+  "scene": "math",
+  "sub": "Y de $650 a $1.000, es 54% más.",
+  "say": "Y de seiscientos cincuenta a mil, es cincuenta y cuatro por ciento más."
+ },
+ {
+  "k": "c1",
+  "scene": "cases",
+  "sub": "Detergente Magistral en ChangoMás: el domingo, $3.581. El lunes, $5.509.",
+  "say": "Detergente Magistral en ChangoMás: el domingo, tres mil quinientos ochenta y uno. El lunes, cinco mil quinientos nueve."
+ },
+ {
+  "k": "c2",
+  "scene": "cases",
+  "sub": "Dulce de leche La Serenísima en Día: de $3.120, a $4.800.",
+  "say": "Dulce de leche La Serenísima en Día: de tres mil ciento veinte, a cuatro mil ochocientos."
+ },
+ {
+  "k": "p1",
+  "scene": "promos",
+  "sub": "El sábado, ChangoMás tenía 42 de nuestros productos en oferta.",
+  "say": "El sábado, ChangoMás tenía cuarenta y dos de nuestros productos en oferta."
+ },
+ {
+  "k": "p2",
+  "scene": "promos",
+  "sub": "El lunes, solo 17.",
+  "say": "El lunes, solo diecisiete."
+ },
+ {
+  "k": "w1",
+  "scene": "method",
+  "sub": "Por eso no comparamos días sueltos: comparamos semanas enteras.",
+  "say": "Por eso no comparamos días sueltos: comparamos semanas enteras."
+ },
+ {
+  "k": "w2",
+  "scene": "method",
+  "sub": "Así las promos no nos engañan.",
+  "say": "Así las promos no nos engañan."
+ },
+ {
+  "k": "e1",
+  "scene": "end",
+  "sub": "Los precios del súper, todos los días, en lacanastaindex.com",
+  "say": "Los precios del súper, todos los días, en la canasta index punto com."
+ },
+ {
+  "k": "e2",
+  "scene": "end",
+  "sub": "Suscribite.",
+  "say": "Suscribite."
+ }
+]

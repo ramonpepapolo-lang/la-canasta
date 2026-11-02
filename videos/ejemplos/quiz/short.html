@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";color:#fff;background:#1A1036}
+#rays{position:absolute;left:-540px;top:-700px;width:2160px;height:2160px;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.05) 0 8deg,transparent 8deg 18deg);border-radius:50%}
+#spot{position:absolute;inset:0;background:radial-gradient(ellipse 700px 900px at 50% 45%,rgba(140,90,255,.35),transparent 70%),linear-gradient(180deg,rgba(26,16,54,0) 60%,#120B26 100%)}
+#logo{position:absolute;left:70px;right:70px;top:70px;height:170px;border-radius:30px;background:#2A1A5E;border:6px solid #FFD447;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:4;box-shadow:0 0 40px rgba(255,212,71,.35)}
+#logo b{font-size:56px;color:#FFD447;letter-spacing:1px}#logo span{font-size:24px;font-weight:700;letter-spacing:6px;color:#C9B8FF}
+#bulbs{position:absolute;inset:-6px;border-radius:30px;pointer-events:none}
+.s{position:absolute;left:0;right:0;top:270px;height:1250px;opacity:0;display:flex;flex-direction:column;align-items:center}
+.round{font-weight:700;font-size:30px;letter-spacing:6px;background:#FF4FA3;padding:10px 28px;border-radius:999px;margin-top:20px}
+.prod{margin-top:30px;width:400px;height:400px;display:grid;place-items:center;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);border-radius:50%}
+.pname{font-size:52px;font-weight:700;text-align:center;margin-top:6px;line-height:1.15}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:980px;margin-top:44px}
+.op{background:#2A1A5E;border:5px solid #5B47A8;border-radius:28px;padding:24px 28px;display:grid;grid-template-columns:62px 1fr;grid-template-rows:auto auto;gap:6px 18px;align-items:center;position:relative;min-height:210px}
+.op .l{width:62px;height:62px;border-radius:50%;background:#5B47A8;display:grid;place-items:center;font-weight:700;font-size:34px;flex:none}
+.op .nm{font-size:40px;font-weight:700}
+.op .pr{grid-column:1/3;font-size:80px;font-weight:700;font-variant-numeric:tabular-nums;text-align:right;line-height:1}
+.op.win{background:#1E7A4F;border-color:#5CFF8F;box-shadow:0 0 30px rgba(92,255,143,.5)}
+.op.lose{background:#7A1E33;border-color:#FF5C7A}
+.op .pm{position:absolute;right:22px;top:-24px;background:#FFD447;color:#2A1A5E;font-weight:700;font-size:26px;padding:4px 14px;border-radius:999px}
+.timer{position:absolute;right:60px;top:40px;width:150px;height:150px}
+#cap{position:absolute;left:30px;right:30px;top:1560px;height:150px;line-height:150px;text-align:center;white-space:nowrap;z-index:6}
+#cap span{display:inline-block;margin:0 9px;font-weight:700;font-size:66px;color:#fff;-webkit-text-stroke:3px #2A1A5E;paint-order:stroke fill}
+#cap .w{color:#FFD447}
+#bar{position:absolute;left:0;bottom:0;height:12px;background:#FFD447;z-index:7}
+.big{font-family:Serif;line-height:1}
+</style></head><body>
+<div id="rays"></div><div id="spot"></div>
+<div id="logo"><svg id="bulbs"></svg><b>¿Dónde está más barato?</b><span>EL MISMO PRODUCTO · 4 SÚPER</span></div>
+
+<div class="s" id="s-intro" style="justify-content:center">
+  <div class="big" style="font-size:120px;text-align:center;line-height:1.05" data-at="q0:0.05" data-pop data-sfx="whoosh">Mismo producto.<br><span style="color:#FFD447">¿Dónde está<br>más barato?</span></div>
+  <div style="margin-top:70px;display:flex;align-items:center;gap:26px" data-at="q0:0.7" data-pop data-sfx="ding">
+    <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="#FF4FA3" stroke-width="12"/><path d="M60 30 V62 L80 74" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/></svg>
+    <span style="font-size:60px;font-weight:700">3 segundos</span></div>
+</div>
+
+<div id="rounds"></div>
+
+<div class="s" id="s-score" style="justify-content:center">
+  <div class="big" style="font-size:110px;text-align:center" data-at="sc:0" data-pop data-sfx="whoosh">¿Cuántas<br><span style="color:#FFD447">acertaste?</span></div>
+  <div style="display:flex;gap:30px;margin-top:60px">
+    <div style="width:180px;height:180px;border-radius:50%;border:8px solid #FF4FA3;display:grid;place-items:center;font-size:64px;font-weight:700" data-at="sc:0.3" data-pop data-sfx="pop">1/3</div>
+    <div style="width:180px;height:180px;border-radius:50%;border:8px solid #FFD447;display:grid;place-items:center;font-size:64px;font-weight:700" data-at="sc:0.45" data-pop data-sfx="pop">2/3</div>
+    <div style="width:180px;height:180px;border-radius:50%;border:8px solid #5CFF8F;display:grid;place-items:center;font-size:64px;font-weight:700" data-at="sc:0.6" data-pop data-sfx="pop">3/3</div>
+  </div>
+  <div style="font-size:40px;font-weight:700;margin-top:50px;color:#C9B8FF" data-at="sc:0.75">💬 Contalo en los comentarios</div>
+  <div style="font-size:28px;color:#C9B8FF;margin-top:60px;text-align:center;line-height:1.5;max-width:880px" data-at="ojo:0.05">Precios online del sábado 31/10/2026, publicados por cada súper.<br>Mismo código de barras en los 4. Cálculo propio.</div>
+</div>
+
+<div class="s" id="s-end" style="justify-content:center;text-align:center">
+  <img src="../assets/la-canasta-icon-white.svg" style="width:220px" data-at="e1:0" data-pop>
+  <div class="big" style="font-size:84px;margin-top:30px;line-height:1.08" data-at="e1:0.1">Los datos no opinan.</div>
+  <div class="big" style="font-size:84px;color:#FFD447;line-height:1.08" data-at="e1:0.5">Nosotros tampoco: medimos.</div>
+  <div style="margin-top:60px;background:#fff;color:#2A1A5E;font-weight:700;font-size:56px;padding:18px 44px;border-radius:999px" data-at="e2:0.2" data-pop>lacanastaindex.com</div>
+  <div style="margin-top:36px;background:#FF4FA3;color:#fff;font-weight:700;font-size:50px;padding:16px 46px;border-radius:999px" data-at="e3:0" data-pop data-sfx="pop">Suscribite</div>
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<script>
+window.CAPW=1010;
+const SHOPS=["Carrefour","Jumbo","ChangoMás","Día"];
+const ILL={
+ flour:`<svg viewBox="0 0 200 220" width="300" height="330"><path d="M40 40 Q100 20 160 40 L172 200 Q100 214 28 200Z" fill="#F4EFE4" stroke="#C9B89A" stroke-width="5"/><path d="M40 40 L48 20 L152 20 L160 40" fill="#E7DCC6" stroke="#C9B89A" stroke-width="5"/><rect x="52" y="90" width="96" height="62" rx="10" fill="#3B6FB6"/><text x="100" y="118" text-anchor="middle" font-family="Sans" font-weight="700" font-size="20" fill="#fff">HARINA</text><text x="100" y="142" text-anchor="middle" font-family="Sans" font-weight="700" font-size="16" fill="#fff">LEUDANTE</text><text x="100" y="185" text-anchor="middle" font-family="Sans" font-weight="700" font-size="22" fill="#8A7A5C">1 kg</text></svg>`,
+ cacao:`<svg viewBox="0 0 200 220" width="300" height="330"><rect x="40" y="40" width="120" height="160" rx="16" fill="#E5B931"/><rect x="34" y="26" width="132" height="30" rx="10" fill="#C2452D"/><rect x="52" y="86" width="96" height="70" rx="12" fill="#6B3A1E"/><text x="100" y="116" text-anchor="middle" font-family="Sans" font-weight="700" font-size="20" fill="#fff">CACAO</text><text x="100" y="140" text-anchor="middle" font-family="Sans" font-weight="700" font-size="16" fill="#fff">EN POLVO</text><text x="100" y="186" text-anchor="middle" font-family="Sans" font-weight="700" font-size="22" fill="#6B3A1E">300 g</text></svg>`,
+ bleach:`<svg viewBox="0 0 200 220" width="300" height="330"><rect x="82" y="10" width="36" height="26" rx="6" fill="#2D7A57"/><path d="M70 36 H130 L150 70 V200 Q100 212 50 200 V70Z" fill="#EAF4FB" stroke="#9CC3DD" stroke-width="5"/><path d="M150 80 Q182 90 170 130 Q160 150 150 140" fill="none" stroke="#9CC3DD" stroke-width="10"/><rect x="62" y="96" width="76" height="62" rx="10" fill="#7E57C2"/><text x="100" y="124" text-anchor="middle" font-family="Sans" font-weight="700" font-size="15" fill="#fff">LAVANDINA</text><text x="100" y="146" text-anchor="middle" font-family="Sans" font-weight="700" font-size="20" fill="#fff">2 L</text></svg>`};
+const R=[
+ {k:"r1",n:"1 DE 3",ill:"flour",name:"Harina leudante Caserita · 1 kg",p:["$1.699","$1.850","$1.699","$890"],promo:[0,0,0,1],win:3,lose:1,tag:"+108%"},
+ {k:"r2",n:"2 DE 3",ill:"cacao",name:"Nesquik en polvo · 300 g",p:["$8.339","$9.600","$5.621","$5.298"],promo:[0,0,0,0],win:3,lose:1,tag:"+81%"},
+ {k:"r3",n:"3 DE 3",ill:"bleach",name:"Lavandina Ayudín · 2 L",p:["$3.859","$4.200","$2.315","$3.890"],promo:[0,0,1,0],win:2,lose:1,tag:"+81%"}];
+document.getElementById("rounds").innerHTML=R.map(r=>`<div class="s" id="s-${r.k}">
+ <svg class="timer" viewBox="0 0 150 150" id="tm-${r.k}"><circle cx="75" cy="75" r="62" fill="#2A1A5E" stroke="#3D2B7A" stroke-width="12"/><circle class="arc" cx="75" cy="75" r="62" fill="none" stroke="#FF4FA3" stroke-width="12" stroke-linecap="round" transform="rotate(-90 75 75)" stroke-dasharray="389.6" stroke-dashoffset="0"/><text class="num" x="75" y="96" text-anchor="middle" font-family="Sans" font-weight="700" font-size="62" fill="#fff">3</text></svg>
+ <span class="round" data-at="${r.k}q:0" data-pop data-sfx="whoosh">PREGUNTA ${r.n}</span>
+ <div class="prod" data-at="${r.k}q:0.1" data-pop>${ILL[r.ill]}</div>
+ <div class="pname" data-at="${r.k}q:0.25">${r.name}</div>
+ <div class="ans">${SHOPS.map((s,i)=>`<div class="op" id="${r.k}o${i}" data-at="${r.k}q:${(0.45+i*0.08).toFixed(2)}" data-pop><span class="l">${"ABCD"[i]}</span><span class="nm">${s}</span><span class="pr" id="${r.k}p${i}">?</span>${r.promo[i]?`<span class="pm" id="${r.k}m${i}" style="opacity:0">PROMO</span>`:""}</div>`).join("")}</div>
+ <div style="margin-top:40px;font-size:64px;font-weight:700;color:#FF5C7A" data-at="${r.k}a:0.6" data-pop>Jumbo: ${r.tag}</div>
+</div>`).join("");
+// marquee bulbs
+(function(){const sv=document.getElementById("bulbs");const W=952,H=182;let s="";for(let i=0;i<34;i++){const x=12+i*(W-24)/33;s+=`<circle cx="${x}" cy="8" r="6"/><circle cx="${x}" cy="${H-8}" r="6"/>`;}sv.setAttribute("viewBox",`0 0 ${W} ${H}`);sv.innerHTML=s;})();
+window.EXTRA=function(t,L){
+  document.getElementById("rays").style.transform=`rotate(${t*6}deg)`;
+  document.querySelectorAll("#bulbs circle").forEach((c,i)=>c.setAttribute("fill",((i>>1)+Math.floor(t*4))%2?"#FFD447":"#7A5C10"));
+  R.forEach(r=>{const q=TL.lines.find(l=>l.k===r.k+"q"),a=TL.lines.find(l=>l.k===r.k+"a");
+    const c0=q.end+0.1,c1=a.start; const p=clamp((t-c0)/(c1-c0)); const tm=document.getElementById("tm-"+r.k);
+    tm.querySelector(".arc").setAttribute("stroke-dashoffset",389.6*p); tm.querySelector(".num").textContent=t<c0?"3":Math.max(1,3-Math.floor((t-c0)/((c1-c0)/3)));
+    tm.style.opacity=t<c1?1:0.25; tm.style.transform=t>=c0&&t<c1?`scale(${1+0.06*Math.sin((t-c0)*Math.PI*2*3/(c1-c0))})`:"none";
+    const rev=t>=c1;
+    SHOPS.forEach((s,i)=>{const o=document.getElementById(r.k+"o"+i);document.getElementById(r.k+"p"+i).textContent=rev?r.p[i]:"?";
+      o.className="op"+(rev&&i===r.win?" win":"")+(rev&&i===r.lose?" lose":"");
+      const m=document.getElementById(r.k+"m"+i); if(m) m.style.opacity=rev?1:0;});
+  });
+};
+</script>
+<script src="../assets/engine.js"></script>
+</body></html>

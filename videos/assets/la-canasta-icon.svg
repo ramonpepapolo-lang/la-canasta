@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="218.0 186.0 534 534" width="534" height="534" role="img" aria-label="La Canasta">
+<title>La Canasta</title>
+<path d="M288.5 452V430A196 196 0 0 1 680.5 430V452" fill="none" stroke="#2B3B5C" stroke-width="23"/>
+<rect x="344.5" y="362.5" width="72" height="77.5" fill="#2B3B5C" stroke="#FFFFFF" stroke-width="10" paint-order="stroke"/>
+<rect x="448.5" y="289.5" width="72" height="150.5" fill="#2B3B5C" stroke="#FFFFFF" stroke-width="10" paint-order="stroke"/>
+<rect x="552.5" y="216.5" width="72" height="223.5" fill="#2B3B5C" stroke="#FFFFFF" stroke-width="10" paint-order="stroke"/>
+<rect x="242" y="436" width="486" height="32" fill="#2B3B5C"/>
+<path d="M314 661H655L646.5 690H322.5Z" fill="#2B3B5C"/>
+<clipPath id="lc-body"><path d="M261 488H708L661.5 642H307.5Z"/></clipPath>
+<g clip-path="url(#lc-body)"><rect x="250" y="488" width="470" height="51.33" fill="#7FB1C6"/><rect x="250" y="539.33" width="470" height="51.33" fill="#FFFFFF"/><rect x="250" y="590.67" width="470" height="52.33" fill="#7FB1C6"/></g>
+<path d="M261 488H708L661.5 642H307.5Z" fill="none" stroke="#2B3B5C" stroke-width="6" stroke-linejoin="round"/>
+<path d="M499.00 565.00L507.00 565.00M497.90 570.55L502.52 572.46M494.75 575.25L500.41 580.91M490.05 578.40L491.96 583.02M484.50 579.50L484.50 587.50M478.95 578.40L477.04 583.02M474.25 575.25L468.59 580.91M471.10 570.55L466.48 572.46M470.00 565.00L462.00 565.00M471.10 559.45L466.48 557.54M474.25 554.75L468.59 549.09M478.95 551.60L477.04 546.98M484.50 550.50L484.50 542.50M490.05 551.60L491.96 546.98M494.75 554.75L500.41 549.09M497.90 559.45L502.52 557.54" stroke="#D98A2B" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="484.5" cy="565.00" r="11" fill="#D98A2B"/>
+</svg>

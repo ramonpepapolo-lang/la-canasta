@@ -1,0 +1,80 @@
+[
+ {
+  "k": "t0",
+  "scene": "tk",
+  "sub": "Sábado 31 de octubre. Fuimos a ver qué estaba en promo en el súper.",
+  "say": "Sábado treinta y uno de octubre. Fuimos a ver qué estaba en promo en el súper."
+ },
+ {
+  "k": "t1",
+  "scene": "tk",
+  "sub": "De 94 productos que seguimos en Carrefour, ChangoMás y Día, 21 tenían el precio tachado.",
+  "say": "De noventa y cuatro productos que seguimos en Carrefour, ChangoMás y Día, veintiuno tenían el precio tachado."
+ },
+ {
+  "k": "t2",
+  "scene": "tk",
+  "sub": "Día tenía 9, Carrefour 8, y ChangoMás 4.",
+  "say": "Día tenía nueve, Carrefour ocho, y ChangoMás cuatro."
+ },
+ {
+  "k": "t3",
+  "scene": "tk",
+  "sub": "La más grande: los fideos Lucchetti en Día. De $1.850, a $1.050. 43% menos.",
+  "say": "La más grande: los fideos Lucchetti en Día. De mil ochocientos cincuenta, a mil cincuenta pesos. Cuarenta y tres por ciento menos."
+ },
+ {
+  "k": "t4",
+  "scene": "tk",
+  "sub": "El detergente Cif en ChangoMás: 40% menos.",
+  "say": "El detergente Cif en ChangoMás: cuarenta por ciento menos."
+ },
+ {
+  "k": "t5",
+  "scene": "tk",
+  "sub": "El agua en Día, y la banana en ChangoMás: 36% menos.",
+  "say": "El agua en Día, y la banana en ChangoMás: treinta y seis por ciento menos."
+ },
+ {
+  "k": "t6",
+  "scene": "tk",
+  "sub": "Y el pan lactal en Carrefour: 35% menos.",
+  "say": "Y el pan lactal en Carrefour: treinta y cinco por ciento menos."
+ },
+ {
+  "k": "t7",
+  "scene": "tk",
+  "sub": "Comprando estos cinco, cada uno donde estaba en promo, te ahorrabas casi $6.400.",
+  "say": "Comprando estos cinco, cada uno donde estaba en promo, te ahorrabas casi seis mil cuatrocientos pesos."
+ },
+ {
+  "k": "t8",
+  "scene": "ojo",
+  "sub": "Ojo: Jumbo no muestra precio tachado en su web, así que no entra en esta cuenta.",
+  "say": "Ojo: Jumbo no muestra precio tachado en su web, así que no entra en esta cuenta."
+ },
+ {
+  "k": "t9",
+  "scene": "ojo",
+  "sub": "Y las promos cambian todos los días. Por eso medimos todos los días.",
+  "say": "Y las promos cambian todos los días. Por eso medimos todos los días."
+ },
+ {
+  "k": "e1",
+  "scene": "end",
+  "sub": "Los datos no opinan. Nosotros tampoco: medimos.",
+  "say": "Los datos no opinan. Nosotros tampoco: medimos."
+ },
+ {
+  "k": "e2",
+  "scene": "end",
+  "sub": "Precios del súper, todos los días, en lacanastaindex.com",
+  "say": "Precios del súper, todos los días, en la canasta index punto com."
+ },
+ {
+  "k": "e3",
+  "scene": "end",
+  "sub": "Gracias por mirar y suscríbanse.",
+  "say": "Gracias por mirar y suscríbanse."
+ }
+]

@@ -1,0 +1,69 @@
+[
+ {
+  "k": "h0",
+  "scene": "hook",
+  "pre": 0.75,
+  "sub": "¿Aumento o promo? Cómo darte cuenta en 5 segundos.",
+  "say": "¿Aumento o promo? Cómo darte cuenta en cinco segundos."
+ },
+ {
+  "k": "h1",
+  "scene": "hook",
+  "sub": "Mirá el precio tachado: el precio sin descuento.",
+  "say": "Mirá el precio tachado: el precio sin descuento."
+ },
+ {
+  "k": "p1",
+  "scene": "promo",
+  "sub": "Caso 1: detergente Cif en Carrefour. El domingo costaba $5.485, y el lunes $3.017.",
+  "say": "Caso uno: detergente Cif en Carrefour. El domingo costaba cinco mil cuatrocientos ochenta y cinco, y el lunes tres mil diecisiete."
+ },
+ {
+  "k": "p2",
+  "scene": "promo",
+  "sub": "Pero el precio tachado no se movió: $5.485. Eso es una promo.",
+  "say": "Pero el precio tachado no se movió: cinco mil cuatrocientos ochenta y cinco. Eso es una promo."
+ },
+ {
+  "k": "a1",
+  "scene": "rise",
+  "sub": "Caso 2: lavandina Ayudín en Día. 9 días a $1.369, sin promo.",
+  "say": "Caso dos: lavandina Ayudín en Día. Nueve días a mil trescientos sesenta y nueve, sin promo."
+ },
+ {
+  "k": "a2",
+  "scene": "rise",
+  "sub": "Hoy: $1.650. Subió el precio de etiqueta, 21%. Eso es un aumento.",
+  "say": "Hoy: mil seiscientos cincuenta. Subió el precio de etiqueta, veintiuno por ciento. Eso es un aumento."
+ },
+ {
+  "k": "a3",
+  "scene": "rise",
+  "sub": "Lo mismo la pasta Colgate Máxima Protección en Día: de $3.700, a $3.955.",
+  "say": "Lo mismo la pasta Colgate Máxima Protección en Día: de tres mil setecientos, a tres mil novecientos cincuenta y cinco."
+ },
+ {
+  "k": "r1",
+  "scene": "rule",
+  "sub": "La regla: si el precio sin descuento no cambia, es una promo que va y viene.",
+  "say": "La regla: si el precio sin descuento no cambia, es una promo que va y viene."
+ },
+ {
+  "k": "r2",
+  "scene": "rule",
+  "sub": "Si ese precio sube, es aumento de verdad.",
+  "say": "Si ese precio sube, es aumento de verdad."
+ },
+ {
+  "k": "e1",
+  "scene": "end",
+  "sub": "Por eso La Canasta mide los dos, todos los días, en lacanastaindex.com",
+  "say": "Por eso La Canasta mide los dos, todos los días, en la canasta index punto com."
+ },
+ {
+  "k": "e2",
+  "scene": "end",
+  "sub": "Seguinos.",
+  "say": "Seguinos."
+ }
+]

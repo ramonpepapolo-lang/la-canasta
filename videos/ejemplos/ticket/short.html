@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";
+ background:linear-gradient(180deg,#B88A5E 0%,#A97B50 40%,#9B6E46 100%)}
+#wood{position:absolute;inset:0;opacity:.35;background:repeating-linear-gradient(92deg,rgba(80,45,20,.18) 0 3px,transparent 3px 41px),repeating-linear-gradient(88deg,rgba(255,230,190,.12) 0 2px,transparent 2px 67px)}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 50%,rgba(40,20,5,.45) 100%)}
+.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace}
+#printer{position:absolute;left:110px;right:110px;top:90px;height:190px;border-radius:34px;background:linear-gradient(180deg,#3A3F48,#23272E);box-shadow:0 24px 40px rgba(0,0,0,.45);z-index:4}
+#printer .slot{position:absolute;left:60px;right:60px;bottom:26px;height:18px;border-radius:9px;background:#0E1014}
+#printer .led{position:absolute;right:44px;top:34px;width:18px;height:18px;border-radius:50%;background:#4FC08D;box-shadow:0 0 14px #4FC08D}
+#printer .lbl{position:absolute;left:44px;top:28px;color:#C9CED8;font-weight:700;font-size:28px;letter-spacing:4px}
+#clip{position:absolute;left:95px;right:95px;top:250px;bottom:420px;overflow:hidden;z-index:3}
+#paper{position:absolute;left:0;right:0;top:0;background:#FBFAF5;color:#1C1C1C;padding:36px 40px 70px;font-size:36px;line-height:1.35;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+#paper::after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:24px;background:linear-gradient(-45deg,transparent 16px,#FBFAF5 0),linear-gradient(45deg,transparent 16px,#FBFAF5 0);background-size:32px 24px;background-repeat:repeat-x}
+.ln{overflow:hidden;white-space:pre;position:relative}
+.c{text-align:center}.b{font-weight:700}.r{color:#B3261E}.g{color:#2D7A57}.dim{color:#777}
+.strike{position:relative;display:inline-block}
+.strike::after{content:"";position:absolute;left:-3%;right:-3%;top:50%;height:5px;background:#B3261E;transform:scaleX(var(--s,0));transform-origin:left}
+.stamp{position:absolute;border:7px solid rgba(179,38,30,.85);color:rgba(179,38,30,.9);font-weight:700;font-family:Sans;font-size:52px;padding:4px 20px;border-radius:12px;letter-spacing:2px;mix-blend-mode:multiply;z-index:2}
+.stamp.gr{border-color:rgba(45,122,87,.9);color:rgba(45,122,87,.95)}
+#cap{position:absolute;left:40px;right:40px;top:1560px;height:150px;text-align:center;white-space:nowrap;z-index:6}
+#cap span{display:inline-block;margin:0 8px;font-weight:700;font-size:66px;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.35),0 0 30px rgba(0,0,0,.4)}
+#cap .w{color:#FFD45C}
+.s{position:absolute;inset:0;opacity:0}
+.note{position:absolute;left:150px;width:780px;top:430px;background:#FFE680;padding:70px 64px;box-shadow:0 30px 50px rgba(0,0,0,.35);transform:rotate(-2deg)}
+.note::before{content:"";position:absolute;left:330px;top:-26px;width:120px;height:50px;background:rgba(255,255,255,.55);transform:rotate(3deg)}
+#bar{position:absolute;left:0;bottom:0;height:12px;background:#FFD45C;z-index:7}
+</style></head><body>
+<div id="wood"></div><div id="vig"></div>
+
+<div class="s" id="s-tk" data-still style="opacity:1">
+  <div id="printer"><div class="lbl">LA CANASTA · TICKET</div><div class="led"></div><div class="slot"></div></div>
+  <div id="clip"><div id="paper" class="mono">
+    <div data-sfx="print" class="ln c b" data-ln="t0:0.02" style="font-family:Serif;font-size:56px">La Canasta</div>
+    <div data-sfx="print" class="ln c" data-ln="t0:0.12">Precios del súper · Argentina</div>
+    <div data-sfx="print" class="ln c b" data-ln="t0:0.22">SÁBADO 31/10/2026</div>
+    <div data-sfx="print" class="ln" data-ln="t0:0.32">--------------------------------</div>
+    <div data-sfx="print" class="ln" data-ln="t1:0.2">PRODUCTOS SEGUIDOS          94</div>
+    <div data-sfx="print" class="ln dim" data-ln="t1:0.35">Carrefour · ChangoMás · Día</div>
+    <div data-sfx="print" class="ln b r" data-ln="t1:0.78">CON PRECIO TACHADO          21</div>
+    <div data-sfx="print" class="ln" data-ln="t2:0.1"> Día         9  █████████</div>
+    <div data-sfx="print" class="ln" data-ln="t2:0.4"> Carrefour   8  ████████</div>
+    <div data-sfx="print" class="ln" data-ln="t2:0.7"> ChangoMás   4  ████</div>
+    <div data-sfx="print" class="ln" data-ln="t3:0.0">--------------------------------</div>
+    <div data-sfx="print" class="ln b" data-ln="t3:0.05">LAS PROMOS MÁS GRANDES</div>
+    <div data-sfx="print" class="ln" data-ln="t3:0.22">Fideos Lucchetti 500 g    DÍA</div>
+    <div data-sfx="print" class="ln" data-ln="t3:0.4"> <span class="strike" data-sfx="scratch" data-strike="t3:0.62">$1.850</span>  →  <b class="g">$1.050</b>     <b class="r">-43%</b></div>
+    <div data-sfx="print" class="ln" data-ln="t4:0.05">Detergente Cif 500 ml  CHANGO</div>
+    <div data-sfx="print" class="ln" data-ln="t4:0.25"> <span class="strike" data-sfx="scratch" data-strike="t4:0.55">$5.489</span>  →  <b class="g">$3.293</b>     <b class="r">-40%</b></div>
+    <div data-sfx="print" class="ln" data-ln="t5:0.0">Agua Eco de los Andes 2 L DÍA</div>
+    <div data-sfx="print" class="ln" data-ln="t5:0.15"> <span class="strike" data-sfx="scratch" data-strike="t5:0.3">$3.187</span>  →  <b class="g">$2.050</b>     <b class="r">-36%</b></div>
+    <div data-sfx="print" class="ln" data-ln="t5:0.45">Banana 1 kg            CHANGO</div>
+    <div data-sfx="print" class="ln" data-ln="t5:0.6"> <span class="strike" data-sfx="scratch" data-strike="t5:0.75">$2.799</span>  →  <b class="g">$1.799</b>     <b class="r">-36%</b></div>
+    <div data-sfx="print" class="ln" data-ln="t6:0.1">Pan lactal 315 g    CARREFOUR</div>
+    <div data-sfx="print" class="ln" data-ln="t6:0.3"> <span class="strike" data-sfx="scratch" data-strike="t6:0.55">$3.600</span>  →  <b class="g">$2.340</b>     <b class="r">-35%</b></div>
+    <div data-sfx="print" class="ln" data-ln="t7:0.0">--------------------------------</div>
+    <div data-sfx="print" class="ln" data-ln="t7:0.1">SIN PROMO              $16.925</div>
+    <div data-sfx="print" class="ln b" data-ln="t7:0.3">TOTAL                  $10.532</div>
+    <div data-sfx="print" class="ln b g" data-ln="t7:0.5" style="font-size:40px">AHORRO              $6.393</div>
+    <div data-sfx="print" class="ln" data-ln="t7:0.7">--------------------------------</div>
+    <div data-sfx="print" class="ln dim" data-ln="t7:0.78" style="font-size:24px">* Ticket ilustrativo: cada producto,</div>
+    <div data-sfx="print" class="ln dim" data-ln="t7:0.82" style="font-size:24px">  en el súper donde estaba en promo.</div>
+    <div data-sfx="print" class="ln dim" data-ln="t7:0.86" style="font-size:24px">  Precio de lista vs precio pagado.</div>
+    <div data-sfx="print" class="ln c" data-ln="t7:0.9" style="font-size:60px;letter-spacing:-6px">▌▍▌▌▍▏▌▍▌▏▌▌▍▌▏▌▍▌</div>
+    <div data-sfx="print" class="ln c b" data-ln="t7:0.95">lacanastaindex.com</div>
+    <span class="stamp" style="right:30px;top:0" id="st1" data-sfx="stamp" data-pop data-rot="-12" data-at="t3:0.8">PROMO −43%</span>
+    <span class="stamp gr" style="right:20px;top:0" id="st2" data-sfx="chaching" data-pop data-rot="-8" data-at="t7:0.6">AHORRÁS 38%</span>
+  </div></div>
+</div>
+
+<div class="s" id="s-ojo">
+  <div class="note">
+    <div style="font-family:Serif;font-size:110px;color:#B3261E">Ojo</div>
+    <div style="font-family:Serif;font-size:62px;line-height:1.15;color:#2B2B2B;margin-top:30px" data-at="t8:0.15">Jumbo no muestra precio tachado en su web.</div>
+    <div style="font-size:40px;color:#4A4A4A;margin-top:24px;font-weight:700" data-at="t8:0.55">Por eso no entra en esta cuenta.</div>
+    <div style="font-family:Serif;font-size:62px;line-height:1.15;color:#2B2B2B;margin-top:60px" data-at="t9:0.1">Las promos cambian todos los días.</div>
+  </div>
+</div>
+
+<div class="s" id="s-end">
+  <div style="position:absolute;left:170px;right:170px;top:330px;height:900px;background:#FBFAF5;box-shadow:0 30px 50px rgba(0,0,0,.35);transform:rotate(1.5deg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:50px">
+    <img src="../assets/la-canasta-icon.svg" style="width:200px" data-at="e1:0" data-pop>
+    <div style="font-family:Serif;font-size:66px;line-height:1.1;margin-top:30px;color:#2B3B5C" data-at="e1:0.1">Los datos no opinan.</div>
+    <div style="font-family:Serif;font-size:66px;line-height:1.1;color:#D98A2B" data-at="e1:0.5">Nosotros tampoco: medimos.</div>
+    <div style="font-weight:700;font-size:52px;margin-top:50px;color:#2B3B5C" data-at="e2:0.3">lacanastaindex.com</div>
+    <div style="margin-top:34px;background:#D98A2B;color:#fff;font-weight:700;font-size:46px;padding:16px 44px;border-radius:999px" data-at="e3:0" data-pop>Suscribite</div>
+  </div>
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<script>
+window.CAPW=980;
+let LNS=[],H=[];
+window.SETUP=function(){LNS=[...document.querySelectorAll(".ln")];H=LNS.map(e=>e.getBoundingClientRect().height);LNS.forEach(e=>{e._t=at(e.dataset.ln);});};
+window.EXTRA=function(t,L){
+  let y=36, last=0; const tops=[];
+  LNS.forEach((e,i)=>{const p=clamp((t-e._t)/0.18);e.style.height=(H[i]*p)+"px";e.style.opacity=p>0?1:0;tops.push(y);y+=H[i]*p;});
+  // keep the newest printed line around the middle of the screen
+  const visible=1250; const shift=Math.max(0,y-visible+80);
+  document.getElementById("paper").style.transform=`translateY(${-shift}px)`;
+  // stamps sit on their lines
+  const st1=document.getElementById("st1"),st2=document.getElementById("st2");
+  st1.style.top=(tops[11]-22)+"px"; st2.style.top=(tops[27]-6)+"px";
+  document.querySelector("#printer .led").style.opacity=(L.scene==="tk"&&(t*6)%2<1)?1:0.4;
+  // the receipt slides away for the next scene
+  const tk=document.getElementById("s-tk"); const off=t-at("t8:0")+0.3; tk.style.opacity=1; tk.style.transform=off>0?`translateY(${-ease(off/0.7)*2200}px)`:"none";
+};
+</script>
+<script src="../assets/engine.js"></script>
+</body></html>

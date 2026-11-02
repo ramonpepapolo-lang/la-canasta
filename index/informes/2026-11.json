@@ -3,29 +3,29 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 0.08,
+ "inflation": 0.48,
  "base_date": "2026-10-31",
- "end_date": "2026-11-01",
- "days_of_data": 1,
- "prices_collected": 10678,
+ "end_date": "2026-11-02",
+ "days_of_data": 2,
+ "prices_collected": 21365,
  "headline": {
-  "end_to_end_paid": 0.08,
-  "end_to_end_regular": -0.02,
+  "end_to_end_paid": 0.48,
+  "end_to_end_regular": -0.11,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 0.05
+   "pct": -1.06
   },
   {
    "shop": "ChangoMas",
-   "pct": -0.08
+   "pct": 3.89
   },
   {
    "shop": "Dia",
-   "pct": 0.53
+   "pct": -0.67
   },
   {
    "shop": "Jumbo",
@@ -34,19 +34,14 @@
  ],
  "groups": [
   {
-   "group": "limpieza",
+   "group": "carne_ave",
    "in_headline": true,
-   "pct": 3.33
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": 1.73
+   "pct": 8.35
   },
   {
    "group": "frutas",
    "in_headline": true,
-   "pct": 0.85
+   "pct": 6.58
   },
   {
    "group": "aguas_gaseosas",
@@ -59,21 +54,6 @@
    "pct": 0.02
   },
   {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 0.02
-  },
-  {
-   "group": "carne_ave",
-   "in_headline": true,
-   "pct": 0.0
-  },
-  {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": 0.0
-  },
-  {
    "group": "verduras",
    "in_headline": true,
    "pct": 0.0
@@ -84,9 +64,9 @@
    "pct": 0.0
   },
   {
-   "group": "lacteos",
+   "group": "aceites",
    "in_headline": true,
-   "pct": -0.48
+   "pct": -0.5
   },
   {
    "group": "cafe_te_yerba",
@@ -94,107 +74,127 @@
    "pct": -0.56
   },
   {
+   "group": "lacteos",
+   "in_headline": true,
+   "pct": -0.76
+  },
+  {
    "group": "otros_alimentos",
    "in_headline": true,
    "pct": -1.34
+  },
+  {
+   "group": "limpieza",
+   "in_headline": true,
+   "pct": -1.35
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": -3.29
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": -4.45
   }
  ],
- "products_compared": 501,
- "products_up": 14,
- "products_down": 6,
- "products_same": 481,
+ "products_compared": 557,
+ "products_up": 13,
+ "products_down": 30,
+ "products_same": 514,
  "top_up": [
   {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Carrefour",
-   "name": "Detergente Concentrado Cif Active Gel Original 500 ml",
-   "before": 3565.25,
-   "now": 5485.0,
-   "pct": 53.85
+   "type": "banana",
+   "type_en": "Bananas",
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "before": 1799.0,
+   "now": 2799.0,
+   "pct": 55.59
   },
   {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Dia",
-   "name": "Detergente Concentrado Cif Active Gel Original 500 Ml.",
-   "before": 3542.5,
-   "now": 5450.0,
-   "pct": 53.85
-  },
-  {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Carrefour",
-   "name": "Detergente Cif Activegel de limón en botella 500 ml",
-   "before": 3565.25,
-   "now": 5485.0,
-   "pct": 53.85
-  },
-  {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Dia",
-   "name": "Detergente Concentrado Cif Active Gel Limon 500 Ml.",
-   "before": 3542.5,
-   "now": 5450.0,
-   "pct": 53.85
-  },
-  {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Dia",
-   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
-   "before": 2963.35,
-   "now": 4559.0,
-   "pct": 53.85
-  }
- ],
- "top_down": [
-  {
-   "type": "huevos",
-   "type_en": "Eggs",
-   "shop": "Carrefour",
-   "name": "Huevos blancos Avicoper 30 uni",
-   "before": 9499.0,
-   "now": 5899.0,
-   "pct": -37.9
-  },
-  {
-   "type": "mayonesa",
-   "type_en": "Mayonnaise",
-   "shop": "Dia",
-   "name": "Mayonesa Pouch Danica 500 Gr.",
-   "before": 2265.0,
-   "now": 1510.0,
-   "pct": -33.33
+   "type": "pollo_entero",
+   "type_en": "Whole chicken",
+   "shop": "ChangoMas",
+   "name": "Pollo Entero Fresco 2.700kg",
+   "before": 2749.0,
+   "now": 3789.0,
+   "pct": 37.83
   },
   {
    "type": "pure_tomate",
    "type_en": "Tomato puree",
    "shop": "Dia",
-   "name": "Puré de Tomate La Campagnola 520 Gr.",
-   "before": 1405.0,
-   "now": 1055.0,
-   "pct": -24.91
+   "name": "Puré De Tomate Arcor 520 Gr.",
+   "before": 915.0,
+   "now": 1220.0,
+   "pct": 33.33
   },
   {
-   "type": "yerba",
-   "type_en": "Yerba mate",
-   "shop": "Dia",
-   "name": "Yerba Mate Amanda Tradicional 500 Gr.",
-   "before": 2675.0,
-   "now": 2080.0,
-   "pct": -22.24
-  },
-  {
-   "type": "lavandina",
-   "type_en": "Bleach",
+   "type": "jabon_tocador",
+   "type_en": "Bar soap",
    "shop": "ChangoMas",
-   "name": "Lavandina Ayudin Original 2l",
-   "before": 3129.0,
-   "now": 2599.0,
-   "pct": -16.94
+   "name": "Jabón De Tocador Dove Exfoliante 90 G",
+   "before": 2054.25,
+   "now": 2739.0,
+   "pct": 33.33
+  },
+  {
+   "type": "manzana",
+   "type_en": "Apples",
+   "shop": "Dia",
+   "name": "Manzana Roja Comercial en bolsa malla x Kg.",
+   "before": 2890.0,
+   "now": 3790.0,
+   "pct": 31.14
+  }
+ ],
+ "top_down": [
+  {
+   "type": "shampoo",
+   "type_en": "Shampoo",
+   "shop": "Dia",
+   "name": "Shampoo Elvive RT5 Keratin 400 Ml.",
+   "before": 11990.0,
+   "now": 6594.5,
+   "pct": -45.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "name": "Cerveza rubia Warsteiner 473 ml",
+   "before": 3485.0,
+   "now": 2091.0,
+   "pct": -40.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "name": "Cerveza blanca Golsch 473 ml",
+   "before": 3925.0,
+   "now": 2355.0,
+   "pct": -40.0
+  },
+  {
+   "type": "papel_higienico",
+   "type_en": "Toilet paper",
+   "shop": "Carrefour",
+   "name": "Papel higiénico Elegante triple hoja 4 u.",
+   "before": 6729.0,
+   "now": 4037.4,
+   "pct": -40.0
+  },
+  {
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
+   "shop": "Carrefour",
+   "name": "Pasta dental Colgate Luminous White Brilliant 90 grs",
+   "before": 7585.0,
+   "now": 4551.0,
+   "pct": -40.0
   }
  ],
  "series": [
@@ -207,6 +207,11 @@
    "date": "2026-11-01",
    "paid": 101.213,
    "regular": 100.281
+  },
+  {
+   "date": "2026-11-02",
+   "paid": 101.614,
+   "regular": 100.189
   }
  ]
 }

@@ -96,6 +96,12 @@ for shop, base in SHOPS.items():
                     "basket_type": "",
                     "extra": "",
                 }
+                if shop == "Jumbo":
+                    # Jumbo's ListPrice is not a list price (it is the price without VAT, times 100): left empty,
+                    # with the raw fields kept in extra to find Jumbo's real regular price later
+                    prices[(shop, item.get("itemId"))]["list_price"] = ""
+                    prices[(shop, item.get("itemId"))]["extra"] = json.dumps(
+                        {"ListPrice_raw": offer.get("ListPrice"), "PriceWithoutDiscount": offer.get("PriceWithoutDiscount")})
         time.sleep(2)  # be polite: wait 2 seconds between searches
     print(f"{shop}: {len(prices) - before} prices")
 
@@ -156,8 +162,10 @@ def vtex_row(shop, p, item, term):
         "ean": item.get("ean"), "name": item.get("nameComplete") or p.get("productName"),
         "brand": p.get("brand"), "category": (p.get("categories") or [""])[0],
         "unit": item.get("measurementUnit"), "unit_multiplier": item.get("unitMultiplier"),
-        "price": offer.get("Price"), "list_price": offer.get("ListPrice"),
-        "available": offer.get("IsAvailable"), "basket_type": "", "extra": "",
+        "price": offer.get("Price"), "list_price": "" if shop == "Jumbo" else offer.get("ListPrice"),
+        "available": offer.get("IsAvailable"), "basket_type": "",
+        "extra": json.dumps({"ListPrice_raw": offer.get("ListPrice"), "PriceWithoutDiscount": offer.get("PriceWithoutDiscount")})
+                 if shop == "Jumbo" else "",
     }
 
 

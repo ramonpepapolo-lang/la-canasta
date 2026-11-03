@@ -10,7 +10,7 @@
  "prices_collected": 84419,
  "headline": {
   "end_to_end_paid": 1.13,
-  "end_to_end_regular": 0.3,
+  "end_to_end_regular": 0.0,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -200,43 +200,43 @@
  "series": [
   {
    "date": "2026-10-24",
-   "paid": 100.0,
-   "regular": 100.0
+   "paid": 98.266,
+   "regular": 99.808
   },
   {
    "date": "2026-10-25",
-   "paid": 101.164,
-   "regular": 100.0
+   "paid": 99.41,
+   "regular": 99.808
   },
   {
    "date": "2026-10-26",
-   "paid": 102.519,
-   "regular": 100.029
+   "paid": 100.742,
+   "regular": 99.895
   },
   {
    "date": "2026-10-27",
-   "paid": 102.919,
-   "regular": 100.112
+   "paid": 101.135,
+   "regular": 99.776
   },
   {
    "date": "2026-10-28",
-   "paid": 102.471,
-   "regular": 100.615
+   "paid": 100.694,
+   "regular": 100.252
   },
   {
    "date": "2026-10-29",
-   "paid": 102.253,
-   "regular": 100.623
+   "paid": 100.48,
+   "regular": 100.175
   },
   {
    "date": "2026-10-30",
-   "paid": 101.024,
-   "regular": 100.655
+   "paid": 99.272,
+   "regular": 100.286
   },
   {
    "date": "2026-10-31",
-   "paid": 101.129,
-   "regular": 100.301
+   "paid": 99.376,
+   "regular": 99.812
   }
  ]
 }

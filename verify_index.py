@@ -76,7 +76,8 @@ for p, d in zip(files, dates):
                 reg = float(r["list_price"])
             except (TypeError, ValueError):
                 reg = 0.0
-            t[k] = {"paid": paid, "regular": reg if reg > 0 else paid}
+            # Jumbo has no real list price (its field is the price without VAT x 100): no regular price
+            t[k] = {"paid": paid} if k[0] == "Jumbo" else {"paid": paid, "regular": reg if reg > 0 else paid}
     prices[d] = t
     if len([k for k in t if starts[k] <= d]) < 100:
         problems.append(f"{d}: solo {len(t)} productos de la canasta con stock (mínimo 100)")
@@ -106,7 +107,7 @@ def group_ratio(items, new):
 for d in dates:
     ratios = defaultdict(list)  # (scope, group, kind) -> [(type, shop, ratio)]
     for k, v in prices[d].items():
-        use = {kind: v[kind] for kind in ("paid", "regular") if (d, k[0], k[1], kind) not in skip}
+        use = {kind: v[kind] for kind in v if (d, k[0], k[1], kind) not in skip}
         comp = {kind: use[kind] / prev[(k, kind)] for kind in use if (k, kind) in prev}
         if any(r > 3 or r < 1 / 3 for r in comp.values()):
             continue
@@ -130,7 +131,18 @@ for d in dates:
                 for wt, gm in parts:
                     f *= gm ** (wt / total)
                 level[(s, kind)] *= f
-    calc[d] = {key: v * 100 for key, v in level.items()}
+    calc[d] = dict(level)
+
+# Base: each series divided by its own average over the first full week (24 to 30 October 2026), times 100
+base_days = [d for d in dates if "2026-10-24" <= d <= "2026-10-30"]
+if len(base_days) == 7:
+    for key in level:
+        b = sum(calc[d][key] for d in base_days) / 7
+        for d in dates:
+            calc[d][key] = calc[d][key] / b * 100
+else:
+    for d in dates:
+        calc[d] = {key: v * 100 for key, v in calc[d].items()}
 
 # ---------- "Week" method of the monthly report, recalculated another way ----------
 def direct_week(now_days, old_days):

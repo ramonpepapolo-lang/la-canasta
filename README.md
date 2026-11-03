@@ -51,7 +51,7 @@ Coto's website search system still contains **old prices for some products** (fo
 1. Every day, each basket product's price is compared with the last day it was in stock. Same shop, same product.
 2. The products of each kind are averaged (geometric mean, each shop counting the same), then the kinds are averaged inside each INDEC group (bread and cereals, dairy and eggs, fruit...).
 3. Groups are combined using **INDEC's official weights**: how much households in Greater Buenos Aires spend on each group, from INDEC's 2004/05 household spending survey (the same one INDEC still uses for official inflation).
-4. The days are chained together. **24 October 2026 = 100.**
+4. The days are chained together. **The average of the first full week (24 to 30 October 2026) = 100**, not a single day: 24 October was a Saturday full of weekend promotions.
 5. A price that triples or falls to a third overnight is treated as a data error and left out. Every case is listed in [`index/checks.txt`](index/checks.txt).
 
 **Monthly inflation:** the average of the month compared with the average of the month before, like INDEC. Because collection started on 24 October, the first full comparison is December vs November. For November only, each product's average price in the last 7 days of the month (24 to 30 November) is compared with the same days of October (24 to 30 October), so both sides have the same weekdays. Full method: https://lacanastaindex.com/metodo.html
@@ -76,7 +76,7 @@ Every day's prices are in the [`data`](data) folder, one file per day (`YYYY-MM-
 | `ean` | Barcode (not available for Coto) |
 | `name`, `brand` | Product |
 | `price` | Price on the website that day, in Argentine pesos (promotions open to everyone included) |
-| `list_price` | Regular price, before promotions |
+| `list_price` | Regular price, before promotions. Empty for Jumbo from 4 Nov 2026; in older files Jumbo's value is NOT a list price (it is the price without VAT, times 100), so do not use it |
 | `available` | In stock or not |
 | `basket_type` | Which basket product this is (empty if not in the basket) |
 

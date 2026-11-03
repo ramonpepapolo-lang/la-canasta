@@ -467,7 +467,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
           <span class="eyebrow num" id="todayDate"></span>
         </div>
         <div class="tag" aria-live="polite">
-          <span class="small" data-t="tagLabel">Lo que se paga, desde el 24 oct 2026</span>
+          <span class="small" data-t="tagLabel">Lo que se paga</span>
           <span class="big" id="bigChange">+0.00%</span>
           <span class="sub" id="tagSub">Updated</span>
         </div>
@@ -487,7 +487,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
   <div class="container">
     <div class="stats">
       <div><strong id="statDays">1</strong><span data-t="statDays">días de datos</span></div>
-      <div><strong>5</strong><span data-t="statShops">cadenas de supermercados</span></div>
+      <div><strong>5</strong><span data-t="statShops">cadenas recolectadas, 4 en el índice</span></div>
       <div><strong>567</strong><span data-t="statProducts">productos en la canasta</span></div>
       <div><strong>12</strong><span data-t="statDaily">grupos de gasto, ponderados como el INDEC</span></div>
     </div>
@@ -497,7 +497,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
     <div class="head">
       <span class="eyebrow" data-t="indexEyebrow">El índice</span>
       <h2 data-t="chartTitle">Todos los días desde que empezamos</h2>
-      <p data-t="chartIntro">100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.</p>
+      <p data-t="chartIntro">100 es lo que costaba en promedio la canasta en su primera semana completa (24 al 30 de octubre de 2026). 101 significa que cuesta 1% más que esa semana.</p>
     </div>
     <div class="index-grid">
       <div class="panel chart-panel">
@@ -530,7 +530,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
         <div class="head">
           <span class="eyebrow" data-t="shopsEyebrow">Supermercados</span>
           <h2 data-t="shopsTitle">Súper por súper</h2>
-          <p data-t="shopsIntro">Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.</p>
+          <p data-t="shopsIntro">Cada supermercado se compara solo consigo mismo. Promedio de los últimos 7 días contra la primera semana (24 al 30 de octubre de 2026).</p>
         </div>
         <div class="panel shops" id="shopList"></div>
       </div>
@@ -542,7 +542,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
         </div>
         <ul class="legend-list">
           <li><code>19.1%</code><span data-t="legendShare">Cuánto del gasto de un hogar representa el grupo (INDEC).</span></li>
-          <li><code>+1.0%</code><span data-t="legendChange">Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.</span></li>
+          <li><code>+1.0%</code><span data-t="legendChange">Promedio de los últimos 7 días contra la primera semana (24 al 30 de octubre de 2026).</span></li>
         </ul>
         <div class="receipt" id="receipt"></div>
         <a class="btn ghost" style="justify-self:start" href="metodo.html#canasta" data-t="seeProducts">Ver cada producto</a>
@@ -723,22 +723,161 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
 <script>
 // Fallback copy of the data, used only if the live files can't be loaded.
 const FALLBACK_DAILY = `date,index_paid,index_regular,products_in_stock,products_compared,Carrefour_paid,ChangoMas_paid,Dia_paid,Jumbo_paid
-2026-10-24,100.0,100.0,563,0,100.0,100.0,100.0,100.0
-2026-10-25,101.164,100.891,565,561,101.087,100.0,103.613,100.0`;
+2026-10-24,98.266,99.808,563,0,98.917,97.665,97.066,99.417
+2026-10-25,99.41,99.808,565,561,99.992,97.665,100.573,99.417
+2026-10-26,100.742,99.895,563,563,100.157,102.84,100.712,99.275
+2026-10-27,101.135,99.776,560,560,100.157,102.473,101.958,99.958
+2026-10-28,100.694,100.252,561,561,100.964,100.922,100.337,100.536
+2026-10-29,100.48,100.175,561,561,101.323,100.034,99.751,100.803
+2026-10-30,99.272,100.286,562,562,98.489,98.399,99.604,100.594
+2026-10-31,99.376,99.812,560,560,100.33,96.864,99.729,100.609
+2026-11-01,99.458,99.792,501,501,100.383,96.789,100.254,100.609
+2026-11-02,99.853,99.669,553,553,99.263,100.637,99.064,100.609
+2026-11-03,101.191,99.889,545,545,98.424,101.06,105.042,100.503`;
 const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,index_regular
-2026-10-25,pan_cereales,Bread and cereals,yes,100.0,100.0
-2026-10-25,carne_ave,Chicken,yes,110.077,110.077
-2026-10-25,lacteos,Dairy and eggs,yes,100.0,100.0
-2026-10-25,aceites,Oils,yes,100.0,100.0
-2026-10-25,frutas,Fruit,yes,106.406,100.0
-2026-10-25,verduras,Vegetables,yes,100.0,100.0
-2026-10-25,azucar,Sugar and sweets,yes,100.0,100.0
-2026-10-25,otros_alimentos,Other food,yes,100.0,100.0
-2026-10-25,cafe_te_yerba,"Coffee, tea and yerba",yes,100.0,100.0
-2026-10-25,aguas_gaseosas,Water and soft drinks,yes,100.0,100.0
-2026-10-25,alcohol,Alcoholic drinks,yes,100.0,100.0
-2026-10-25,limpieza,Cleaning products,yes,100.0,100.0
-2026-10-25,cuidado_personal,Personal care,no (weight pending),100.0,100.0`;
+2026-10-24,pan_cereales,Bread and cereals,yes,100.268,100.057
+2026-10-24,carne_ave,Chicken,yes,94.35,100.0
+2026-10-24,lacteos,Dairy and eggs,yes,98.067,99.54
+2026-10-24,aceites,Oils,yes,99.679,99.616
+2026-10-24,frutas,Fruit,yes,97.117,102.145
+2026-10-24,verduras,Vegetables,yes,97.558,99.123
+2026-10-24,azucar,Sugar and sweets,yes,100.561,100.0
+2026-10-24,otros_alimentos,Other food,yes,97.917,99.511
+2026-10-24,cafe_te_yerba,"Coffee, tea and yerba",yes,99.571,99.494
+2026-10-24,aguas_gaseosas,Water and soft drinks,yes,98.121,99.429
+2026-10-24,alcohol,Alcoholic drinks,yes,97.649,100.046
+2026-10-24,limpieza,Cleaning products,yes,98.506,99.934
+2026-10-24,cuidado_personal,Personal care,no (weight pending),97.447,99.436
+2026-10-25,pan_cereales,Bread and cereals,yes,100.268,100.057
+2026-10-25,carne_ave,Chicken,yes,103.858,100.0
+2026-10-25,lacteos,Dairy and eggs,yes,98.067,99.54
+2026-10-25,aceites,Oils,yes,99.679,99.616
+2026-10-25,frutas,Fruit,yes,103.338,102.145
+2026-10-25,verduras,Vegetables,yes,97.558,99.123
+2026-10-25,azucar,Sugar and sweets,yes,100.561,100.0
+2026-10-25,otros_alimentos,Other food,yes,97.917,99.511
+2026-10-25,cafe_te_yerba,"Coffee, tea and yerba",yes,99.571,99.494
+2026-10-25,aguas_gaseosas,Water and soft drinks,yes,98.121,99.429
+2026-10-25,alcohol,Alcoholic drinks,yes,97.649,100.046
+2026-10-25,limpieza,Cleaning products,yes,98.506,99.934
+2026-10-25,cuidado_personal,Personal care,no (weight pending),97.447,99.436
+2026-10-26,pan_cereales,Bread and cereals,yes,102.677,99.946
+2026-10-26,carne_ave,Chicken,yes,103.858,100.0
+2026-10-26,lacteos,Dairy and eggs,yes,98.618,99.528
+2026-10-26,aceites,Oils,yes,99.679,99.616
+2026-10-26,frutas,Fruit,yes,102.347,102.145
+2026-10-26,verduras,Vegetables,yes,98.735,99.123
+2026-10-26,azucar,Sugar and sweets,yes,100.561,100.0
+2026-10-26,otros_alimentos,Other food,yes,99.58,99.838
+2026-10-26,cafe_te_yerba,"Coffee, tea and yerba",yes,99.984,100.044
+2026-10-26,aguas_gaseosas,Water and soft drinks,yes,98.547,100.005
+2026-10-26,alcohol,Alcoholic drinks,yes,99.59,100.046
+2026-10-26,limpieza,Cleaning products,yes,104.769,99.934
+2026-10-26,cuidado_personal,Personal care,no (weight pending),100.176,99.528
+2026-10-27,pan_cereales,Bread and cereals,yes,102.722,99.946
+2026-10-27,carne_ave,Chicken,yes,103.858,100.0
+2026-10-27,lacteos,Dairy and eggs,yes,100.617,99.528
+2026-10-27,aceites,Oils,yes,99.679,99.616
+2026-10-27,frutas,Fruit,yes,100.266,99.385
+2026-10-27,verduras,Vegetables,yes,99.282,99.123
+2026-10-27,azucar,Sugar and sweets,yes,100.561,100.0
+2026-10-27,otros_alimentos,Other food,yes,99.58,99.838
+2026-10-27,cafe_te_yerba,"Coffee, tea and yerba",yes,100.055,100.044
+2026-10-27,aguas_gaseosas,Water and soft drinks,yes,99.067,100.005
+2026-10-27,alcohol,Alcoholic drinks,yes,100.309,100.046
+2026-10-27,limpieza,Cleaning products,yes,104.915,99.934
+2026-10-27,cuidado_personal,Personal care,no (weight pending),100.594,99.528
+2026-10-28,pan_cereales,Bread and cereals,yes,100.049,99.947
+2026-10-28,carne_ave,Chicken,yes,99.723,100.0
+2026-10-28,lacteos,Dairy and eggs,yes,100.336,100.482
+2026-10-28,aceites,Oils,yes,100.814,100.512
+2026-10-28,frutas,Fruit,yes,101.594,98.622
+2026-10-28,verduras,Vegetables,yes,102.594,101.654
+2026-10-28,azucar,Sugar and sweets,yes,99.252,100.0
+2026-10-28,otros_alimentos,Other food,yes,101.254,100.434
+2026-10-28,cafe_te_yerba,"Coffee, tea and yerba",yes,99.88,100.044
+2026-10-28,aguas_gaseosas,Water and soft drinks,yes,100.294,100.295
+2026-10-28,alcohol,Alcoholic drinks,yes,100.128,99.939
+2026-10-28,limpieza,Cleaning products,yes,102.679,99.934
+2026-10-28,cuidado_personal,Personal care,no (weight pending),100.75,100.751
+2026-10-29,pan_cereales,Bread and cereals,yes,97.382,100.024
+2026-10-29,carne_ave,Chicken,yes,99.723,100.0
+2026-10-29,lacteos,Dairy and eggs,yes,102.243,100.691
+2026-10-29,aceites,Oils,yes,99.376,100.512
+2026-10-29,frutas,Fruit,yes,100.942,97.779
+2026-10-29,verduras,Vegetables,yes,102.223,100.637
+2026-10-29,azucar,Sugar and sweets,yes,99.252,100.0
+2026-10-29,otros_alimentos,Other food,yes,102.203,100.434
+2026-10-29,cafe_te_yerba,"Coffee, tea and yerba",yes,100.44,100.43
+2026-10-29,aguas_gaseosas,Water and soft drinks,yes,102.099,100.295
+2026-10-29,alcohol,Alcoholic drinks,yes,101.849,99.939
+2026-10-29,limpieza,Cleaning products,yes,98.227,99.934
+2026-10-29,cuidado_personal,Personal care,no (weight pending),101.04,100.751
+2026-10-30,pan_cereales,Bread and cereals,yes,96.635,100.022
+2026-10-30,carne_ave,Chicken,yes,94.628,100.0
+2026-10-30,lacteos,Dairy and eggs,yes,102.054,100.691
+2026-10-30,aceites,Oils,yes,101.092,100.512
+2026-10-30,frutas,Fruit,yes,94.397,97.779
+2026-10-30,verduras,Vegetables,yes,102.051,101.218
+2026-10-30,azucar,Sugar and sweets,yes,99.252,100.0
+2026-10-30,otros_alimentos,Other food,yes,101.551,100.434
+2026-10-30,cafe_te_yerba,"Coffee, tea and yerba",yes,100.498,100.449
+2026-10-30,aguas_gaseosas,Water and soft drinks,yes,103.751,100.542
+2026-10-30,alcohol,Alcoholic drinks,yes,102.825,99.939
+2026-10-30,limpieza,Cleaning products,yes,92.399,100.395
+2026-10-30,cuidado_personal,Personal care,no (weight pending),102.547,100.57
+2026-10-31,pan_cereales,Bread and cereals,yes,96.635,100.022
+2026-10-31,carne_ave,Chicken,yes,99.235,100.0
+2026-10-31,lacteos,Dairy and eggs,yes,102.085,100.691
+2026-10-31,aceites,Oils,yes,101.092,100.512
+2026-10-31,frutas,Fruit,yes,94.397,97.779
+2026-10-31,verduras,Vegetables,yes,98.559,96.424
+2026-10-31,azucar,Sugar and sweets,yes,99.252,100.0
+2026-10-31,otros_alimentos,Other food,yes,101.551,100.434
+2026-10-31,cafe_te_yerba,"Coffee, tea and yerba",yes,100.498,100.449
+2026-10-31,aguas_gaseosas,Water and soft drinks,yes,103.751,100.542
+2026-10-31,alcohol,Alcoholic drinks,yes,102.825,99.939
+2026-10-31,limpieza,Cleaning products,yes,92.492,100.531
+2026-10-31,cuidado_personal,Personal care,no (weight pending),102.547,100.57
+2026-11-01,pan_cereales,Bread and cereals,yes,96.651,100.022
+2026-11-01,carne_ave,Chicken,yes,99.235,100.0
+2026-11-01,lacteos,Dairy and eggs,yes,101.6,100.691
+2026-11-01,aceites,Oils,yes,101.092,100.512
+2026-11-01,frutas,Fruit,yes,95.2,97.779
+2026-11-01,verduras,Vegetables,yes,98.559,96.424
+2026-11-01,azucar,Sugar and sweets,yes,99.252,100.0
+2026-11-01,otros_alimentos,Other food,yes,100.192,100.272
+2026-11-01,cafe_te_yerba,"Coffee, tea and yerba",yes,99.938,100.386
+2026-11-01,aguas_gaseosas,Water and soft drinks,yes,103.93,100.542
+2026-11-01,alcohol,Alcoholic drinks,yes,104.608,99.94
+2026-11-01,limpieza,Cleaning products,yes,95.577,100.531
+2026-11-01,cuidado_personal,Personal care,no (weight pending),102.569,100.732
+2026-11-02,pan_cereales,Bread and cereals,yes,96.651,100.022
+2026-11-02,carne_ave,Chicken,yes,107.523,98.3
+2026-11-02,lacteos,Dairy and eggs,yes,101.305,100.751
+2026-11-02,aceites,Oils,yes,100.582,100.512
+2026-11-02,frutas,Fruit,yes,100.608,97.779
+2026-11-02,verduras,Vegetables,yes,98.559,96.424
+2026-11-02,azucar,Sugar and sweets,yes,99.252,100.0
+2026-11-02,otros_alimentos,Other food,yes,100.192,100.272
+2026-11-02,cafe_te_yerba,"Coffee, tea and yerba",yes,99.938,100.386
+2026-11-02,aguas_gaseosas,Water and soft drinks,yes,103.93,100.542
+2026-11-02,alcohol,Alcoholic drinks,yes,98.247,99.939
+2026-11-02,limpieza,Cleaning products,yes,91.247,100.949
+2026-11-02,cuidado_personal,Personal care,no (weight pending),99.169,101.114
+2026-11-03,pan_cereales,Bread and cereals,yes,101.003,100.069
+2026-11-03,carne_ave,Chicken,yes,107.523,98.3
+2026-11-03,lacteos,Dairy and eggs,yes,103.037,100.955
+2026-11-03,aceites,Oils,yes,100.582,100.512
+2026-11-03,frutas,Fruit,yes,96.642,98.353
+2026-11-03,verduras,Vegetables,yes,99.654,98.201
+2026-11-03,azucar,Sugar and sweets,yes,101.38,100.244
+2026-11-03,otros_alimentos,Other food,yes,99.942,99.938
+2026-11-03,cafe_te_yerba,"Coffee, tea and yerba",yes,100.114,100.386
+2026-11-03,aguas_gaseosas,Water and soft drinks,yes,105.083,100.542
+2026-11-03,alcohol,Alcoholic drinks,yes,98.17,99.835
+2026-11-03,limpieza,Cleaning products,yes,92.433,100.949
+2026-11-03,cuidado_personal,Personal care,no (weight pending),99.626,100.872`;
 
 // Share of household spending (INDEC, Greater Buenos Aires, 2004/05 survey), among the groups in the index.
 const SHARE = { pan_cereales: 19.1, lacteos: 16.2, otros_alimentos: 11.3, verduras: 9.9, aguas_gaseosas: 9.7,
@@ -758,10 +897,10 @@ const T = {
     ledePoint: "Every day, an automated program reads more than 10,000 prices across five supermarkets, and 6 AI agents watch over it: making sure no day is missed, auditing the data, reviewing every doubtful price, tracking INDEC, and checking the monthly report before it is sent. From those prices, this number tracks 567 everyday products of 33 basic kinds (milk, bread, yerba and more) at four chains.",
     noteTitle: "Why does the number look so high?",
     noteText: "La Canasta started measuring on a weekend (24 Oct), when many supermarkets were running promotions. When those offers ended, prices went back to normal, and that shows up as a rise. The data should settle in about 8 days, and the number will then reflect real inflation much better.",
-    tagLabel: "What shoppers pay, since 24 Oct 2026", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
-    statDays: "days of data", statShops: "supermarket chains tracked", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
+    tagLabel: "What shoppers pay", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
+    statDays: "days of data", statShops: "chains collected, 4 in the index", statProducts: "everyday products in the basket", statDaily: "spending groups, weighted like INDEC",
     indexEyebrow: "The index", chartTitle: "Every day since we started",
-    chartIntro: "100 is what the basket cost on 24 October 2026. 101 means it costs 1% more than that day.",
+    chartIntro: "100 is what the basket cost on average in its first full week (24 to 30 October 2026). 101 means it costs 1% more than that week.",
     legendPaid: "Price people pay", legendRegular: "Regular price",
     early: "One day's move says very little. The number to watch is the monthly one, published on the 1st of every month.",
     whyEyebrow: "Why measure it",
@@ -781,13 +920,13 @@ const T = {
     basketEyebrow: "The basket", basketTitle: "What's in the basket",
     basketIntro: "Milk, bread, yerba, chicken, vegetables, cleaning products and more, grouped the way INDEC groups them.",
     legendShare: "How much of a household's spending the group represents (INDEC).",
-    legendChange: "How much the group's prices have changed since 24 October 2026.",
+    legendChange: "Average of the last 7 days compared with the first week (24 to 30 October 2026).",
     seeProducts: "See every product",
-    receiptHead: "LA CANASTA", receiptSub: "Prices since 24/10/2026", total: "TOTAL BASKET",
+    receiptHead: "LA CANASTA", receiptSub: "Last 7 days vs week of 24-30/10", total: "TOTAL BASKET",
     personal: "Personal care", pending: "not counted yet",
     receiptFoot: "Personal care is collected but not counted until INDEC's official weight for it is found.",
     shopsEyebrow: "Supermarkets", shopsTitle: "Shop by shop",
-    shopsIntro: "Each supermarket is only ever compared with itself. Change since 24 October 2026.",
+    shopsIntro: "Each supermarket is only ever compared with itself. Average of the last 7 days vs the first week (24 to 30 October 2026).",
     coto: "collected, not counted yet",
     navReport: "Reports", repEyebrow: "Monthly report", repTitle: "Every month, the full report", reportDate: "1 Dec", reportChip: "Coming", reportTitle: "First monthly report",
     reportText: "November's result, in English and Spanish, with the biggest risers and fallers and a comparison with INDEC.",
@@ -807,10 +946,10 @@ const T = {
     ledePoint: "Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.",
     noteTitle: "¿Por qué el número parece tan alto?",
     noteText: "La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.",
-    tagLabel: "Lo que se paga, desde el 24 oct 2026", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
-    statDays: "días de datos", statShops: "cadenas de supermercados", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
+    tagLabel: "Lo que se paga", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
+    statDays: "días de datos", statShops: "cadenas recolectadas, 4 en el índice", statProducts: "productos en la canasta", statDaily: "grupos de gasto, ponderados como el INDEC",
     indexEyebrow: "El índice", chartTitle: "Todos los días desde que empezamos",
-    chartIntro: "100 es lo que costaba la canasta el 24 de octubre de 2026. 101 significa que cuesta 1% más que ese día.",
+    chartIntro: "100 es lo que costaba en promedio la canasta en su primera semana completa (24 al 30 de octubre de 2026). 101 significa que cuesta 1% más que esa semana.",
     legendPaid: "Precio que se paga", legendRegular: "Precio de lista",
     early: "El movimiento de un día dice muy poco. El número que importa es el mensual, que se publica el 1 de cada mes.",
     whyEyebrow: "Por qué medir",
@@ -830,13 +969,13 @@ const T = {
     basketEyebrow: "La canasta", basketTitle: "Qué hay en la canasta",
     basketIntro: "Leche, pan, yerba, pollo, verduras, productos de limpieza y más, agrupados como los agrupa el INDEC.",
     legendShare: "Cuánto del gasto de un hogar representa el grupo (INDEC).",
-    legendChange: "Cuánto cambiaron los precios del grupo desde el 24 de octubre de 2026.",
+    legendChange: "Promedio de los últimos 7 días contra la primera semana (24 al 30 de octubre de 2026).",
     seeProducts: "Ver cada producto",
-    receiptHead: "LA CANASTA", receiptSub: "Precios desde el 24/10/2026", total: "TOTAL CANASTA",
+    receiptHead: "LA CANASTA", receiptSub: "7 días vs semana del 24 al 30/10", total: "TOTAL CANASTA",
     personal: "Cuidado personal", pending: "todavía no cuenta",
     receiptFoot: "Cuidado personal se recolecta pero no se cuenta hasta encontrar la ponderación oficial del INDEC.",
     shopsEyebrow: "Supermercados", shopsTitle: "Súper por súper",
-    shopsIntro: "Cada supermercado se compara solo consigo mismo. Cambio desde el 24 de octubre de 2026.",
+    shopsIntro: "Cada supermercado se compara solo consigo mismo. Promedio de los últimos 7 días contra la primera semana (24 al 30 de octubre de 2026).",
     coto: "se recolecta, todavía no cuenta",
     navReport: "Informes", repEyebrow: "Informe mensual", repTitle: "Cada mes, el informe completo", reportDate: "1 dic", reportChip: "Próximamente", reportTitle: "Primer informe mensual",
     reportText: "El resultado de noviembre, en español e inglés, con las mayores subas y bajas y una comparación con el INDEC.",
@@ -1008,7 +1147,10 @@ function render() {
   //   fewer than 14 days of data -> "collecting data, day N of 14"
   //   14+ days                   -> average of the last 7 days vs the 7 days before
   //   a published monthly report -> that month's inflation (the official figure)
-  const change = +last.index_paid - 100;  // since 24 Oct, still used by the receipt below
+  // Receipt, groups and shops: average of the last 7 days vs the first full week (24-30 Oct = 100 on average),
+  // so one day's promotions do not decide the number
+  const last7 = daily.slice(-7);
+  const change = last7.reduce((a, r) => a + +r.index_paid, 0) / last7.length - 100;
   const es = lang === "es", n = daily.length;
   const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
   const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -1062,12 +1204,13 @@ function render() {
   drawChart();
 
   // Receipt
-  const latest = {}; groups.forEach(g => { latest[g.group] = g; });
+  const latest = {}, gsum = {}, gdays = new Set(last7.map(r => r.date));
+  groups.forEach(g => { latest[g.group] = g; if (gdays.has(g.date)) (gsum[g.group] = gsum[g.group] || []).push(+g.index_paid); });
   const rc = document.getElementById("receipt"); rc.textContent = "";
   const head = el("div", "rhead"); const ic = el("img"); ic.src = "la-canasta-logo/la-canasta-icon.svg"; ic.alt = ""; head.append(ic, el("strong", "", t.receiptHead), el("span", "", t.receiptSub)); rc.append(head);
   Object.keys(SHARE).forEach(k => {
     const g = latest[k]; if (!g) return;
-    const ch = +g.index_paid - 100, r = el("div", "row");
+    const gs = gsum[k] || [+g.index_paid], ch = gs.reduce((a, x) => a + x, 0) / gs.length - 100, r = el("div", "row");
     r.append(el("span", "name", lang === "es" ? ES_GROUPS[k] : g.group_name), el("span", "dots"),
       el("span", "w", num(SHARE[k], 1) + "%"), el("span", "chg " + cls(ch), pct(ch, 1)));
     rc.append(r);
@@ -1079,7 +1222,7 @@ function render() {
 
   // Shops
   const list = document.getElementById("shopList"); list.textContent = "";
-  const vals = SHOPS.map(([name, col]) => [name, +last[col] - 100]);
+  const vals = SHOPS.map(([name, col]) => [name, last7.reduce((a, r) => a + +r[col], 0) / last7.length - 100]);
   const maxAbs = Math.max(1, ...vals.map(v => Math.abs(v[1])));
   vals.sort((a, b) => b[1] - a[1]).forEach(([name, v]) => {
     const row = el("div", "shop"), track = el("div", "bar-track"), bar = el("div", "bar");
@@ -1102,8 +1245,8 @@ cw.addEventListener("pointermove", hover); cw.addEventListener("pointerleave", u
 daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
 (async () => {
   const [d, g] = await Promise.all([load("index/daily.csv", FALLBACK_DAILY), load("index/groups.csv", FALLBACK_GROUPS)]);
-  const lastDate = g.reduce((m, r) => (r.date > m ? r.date : m), "");
-  daily = d; groups = g.filter(r => r.date === lastDate); render();
+  const keep = new Set(d.slice(-7).map(r => r.date));  // the receipt uses each group's last 7 days
+  daily = d; groups = g.filter(r => keep.has(r.date)).sort((x, y) => (x.date < y.date ? -1 : 1)); render();
   try { const r = await fetch("index/semana.json", { cache: "no-store" }); if (r.ok) { semana = await r.json(); render(); } } catch (e) {}
   try { const r = await fetch("index/informes/lista.json", { cache: "no-store" });
     if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}

@@ -4,8 +4,11 @@
 # 1. For every basket product, compare today's price with the last day it was collected (in stock both days).
 # 2. Inside each INDEC group (e.g. "Dairy and eggs"), average those changes (geometric mean).
 # 3. Combine the groups using INDEC's official weights (how much Buenos Aires households spend on each).
-# 4. Chain the days together. Day 1 = 100.
+# 4. Chain the days together. The first full week (24 to 30 October 2026, one of each weekday) = 100 on
+#    average, so the start does not depend on one day's offers (24 October was a Saturday full of promotions).
 # Done twice: with the price people pay (promotions included) and with the regular price.
+# Jumbo is left out of the regular-price index: its list_price field is not a real list price
+# (it is the price paid without VAT, times 100), so it would carry Jumbo's promotions.
 # Each shop is only ever compared with itself.
 # The basket has up to 5 products of each type per shop (567 in all). Each type counts once inside
 # its group, whatever the number of products: first the average of each type (each shop counting
@@ -24,6 +27,8 @@ from collections import defaultdict
 
 MAX_JUMP = 3.0  # a price that triples or falls to a third overnight is treated as a data error
 CHANGE_DATE = "2026-10-24"  # type-by-type averaging applies from this day (the first day of data)
+BASE_WEEK = ("2026-10-24", "2026-10-30")  # the average of these 7 days = 100
+NO_REGULAR = {"Jumbo"}  # shops without a real list price: not in the regular-price index
 
 # ---------- Read the basket and the weights ----------
 basket = {}  # (shop, sku_id) -> type_id
@@ -62,7 +67,7 @@ for path in sorted(glob.glob("data/????-??-??.csv.gz")):
                 continue  # not in the basket, or out of stock: skipped, never guessed
             paid, regular = number(r["price"]), number(r["list_price"])
             if paid:
-                today[key] = {"paid": paid, "regular": regular or paid}
+                today[key] = {"paid": paid} if key[0] in NO_REGULAR else {"paid": paid, "regular": regular or paid}
     days[date] = today
 
 dates = sorted(days)
@@ -110,7 +115,7 @@ for i, date in enumerate(dates):
     for key, now in days[date].items():
         active = from_date[key] <= date
         usable = {}
-        for kind in ("paid", "regular"):
+        for kind in now:
             if (date, key[0], key[1], kind) in EXCLUDED:
                 n_excluded += 1
             else:
@@ -156,17 +161,35 @@ for i, date in enumerate(dates):
             if den:
                 level[(s, kind)] *= math.exp(num / den)
 
-    row = {"date": date, "index_paid": round(level[("all", "paid")], 3),
-           "index_regular": round(level[("all", "regular")], 3),
+    row = {"date": date, "index_paid": level[("all", "paid")],
+           "index_regular": level[("all", "regular")],
            "products_in_stock": n_active, "products_compared": n_used}
     for s in SHOP_NAMES:
-        row[f"{s}_paid"] = round(level[(s, "paid")], 3)
+        row[f"{s}_paid"] = level[(s, "paid")]
     daily_rows.append(row)
     for g in group_name:
         group_rows.append({"date": date, "group": g, "group_name": group_name[g],
                            "in_headline_index": "yes" if weight[g] else "no (weight pending)",
-                           "index_paid": round(group_level[(g, "paid")], 3),
-                           "index_regular": round(group_level[(g, "regular")], 3)})
+                           "index_paid": group_level[(g, "paid")],
+                           "index_regular": group_level[(g, "regular")]})
+
+# ---------- Base: the average of the first full week = 100 (each series on its own) ----------
+in_base = lambda r: BASE_WEEK[0] <= r["date"] <= BASE_WEEK[1]
+if sum(1 for r in daily_rows if in_base(r)) == 7:
+    for col in [c for c in daily_rows[0] if c.startswith("index_") or c.endswith("_paid")]:
+        b = mean([r[col] for r in daily_rows if in_base(r)])
+        for r in daily_rows:
+            r[col] = r[col] / b * 100
+    for g in group_name:
+        rows_g = [r for r in group_rows if r["group"] == g]
+        for col in ("index_paid", "index_regular"):
+            b = mean([r[col] for r in rows_g if in_base(r)])
+            for r in rows_g:
+                r[col] = r[col] / b * 100
+for r in daily_rows + group_rows:
+    for col in r:
+        if col.startswith("index_") or col.endswith("_paid"):
+            r[col] = round(r[col], 3)
 
 # ---------- Monthly inflation: average of the month vs average of the month before ----------
 months = defaultdict(list)

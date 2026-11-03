@@ -89,7 +89,8 @@ for path in sorted(glob.glob("data/????-??-??.csv.gz")):
                     lp = float(r["list_price"])
                 except (TypeError, ValueError):
                     lp = 0.0
-                if (date, key[0], key[1]) not in EXCL_REG:
+                # Jumbo has no real list price (the field is the price without VAT x 100): not in the regular figures
+                if (date, key[0], key[1]) not in EXCL_REG and key[0] != "Jumbo":
                     regular[date][key] = lp if lp > 0 else p
 
 

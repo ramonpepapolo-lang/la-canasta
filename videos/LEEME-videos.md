@@ -46,8 +46,11 @@ Revisar ANTES de filmar: `node frames.js d-... 0.3 5 12 20 ...` (cuadros sueltos
     BPM=... python3 bed.py d-.../bed.wav <duración+0.7>   # música
     sh mix2.sh d-... NOMBRE         # d-.../NOMBRE.mp4 final
 
-Música: cambiá el estilo y el tono en cada video. Opciones: `STYLE=` (vacío: house), `dembow`, `lofi`;
-`BPM=` 80 a 132; `MINOR=1` tono menor; `TR=` de -5 a 7 transpone.
+Música: 8 estilos. `STYLE=` (vacío: house, BPM 118-128), `dembow` (95-105), `lofi` (75-85), `cumbia` (90-105),
+`trap` (130-150), `disco` (112-124), `synthwave` (84-100), `chiptune` (120-150). Además `MINOR=1` tono menor
+y `TR=` de -5 a 7 transpone.
+**Un estilo no se repite hasta que pasen 6 videos** (mirá la columna de música en `notas/videos-hechos.txt`),
+y nunca el mismo estilo en los 2 videos del mismo día. Cambiá también BPM, tono y TR cada vez.
 
 ## Reglas de contenido (Ramon)
 
@@ -55,4 +58,9 @@ Música: cambiá el estilo y el tono en cada video. Opciones: `STYLE=` (vacío: 
 - Un cambio diario o semanal NO es inflación. La inflación es solo la del informe mensual publicado.
 - Neutral: nada de política, ni ataques a súper, marcas, el INDEC ni nadie.
 - Siempre la fecha de los precios en pantalla, y una nota chica con la fuente ("Precios online de ... , fecha").
-- NUNCA se publica nada: los videos se le mandan a Ramon y él los sube.
+- Siempre voz en español argentino (Piper es_AR "daniela"), con voseo y palabras de acá. Nunca otra voz ni otro idioma.
+- Cada video distinto y creativo: **ni el formato visual ni la música se repiten hasta que pasen 6 videos**.
+  Antes de empezar, leé las últimas 6 líneas de `notas/videos-hechos.txt`.
+- Al terminar, anotá cada video en `notas/videos-hechos.txt`:
+  `fecha | título | formato visual | música (STYLE BPM MINOR TR) | números usados`.
+- NUNCA se publica nada sin Ramon: los videos le llegan por email y solo se publican cuando él aprieta el botón de aprobar.

@@ -3,33 +3,33 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 0.48,
+ "inflation": 1.83,
  "base_date": "2026-10-31",
- "end_date": "2026-11-02",
- "days_of_data": 2,
- "prices_collected": 21365,
+ "end_date": "2026-11-03",
+ "days_of_data": 3,
+ "prices_collected": 32077,
  "headline": {
-  "end_to_end_paid": 0.48,
-  "end_to_end_regular": -0.11,
+  "end_to_end_paid": 1.83,
+  "end_to_end_regular": 0.03,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -1.06
+   "pct": -1.9
   },
   {
    "shop": "ChangoMas",
-   "pct": 3.89
+   "pct": 4.33
   },
   {
    "shop": "Dia",
-   "pct": -0.67
+   "pct": 5.33
   },
   {
    "shop": "Jumbo",
-   "pct": 0.0
+   "pct": -0.11
   }
  ],
  "groups": [
@@ -39,29 +39,44 @@
    "pct": 8.35
   },
   {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 6.58
-  },
-  {
-   "group": "aguas_gaseosas",
-   "in_headline": true,
-   "pct": 0.17
-  },
-  {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": 0.02
+   "pct": 4.52
   },
   {
-   "group": "verduras",
+   "group": "frutas",
    "in_headline": true,
-   "pct": 0.0
+   "pct": 2.38
   },
   {
    "group": "azucar",
    "in_headline": true,
-   "pct": 0.0
+   "pct": 2.14
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": 1.28
+  },
+  {
+   "group": "verduras",
+   "in_headline": true,
+   "pct": 1.11
+  },
+  {
+   "group": "lacteos",
+   "in_headline": true,
+   "pct": 0.93
+  },
+  {
+   "group": "limpieza",
+   "in_headline": true,
+   "pct": -0.06
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": -0.38
   },
   {
    "group": "aceites",
@@ -69,85 +84,70 @@
    "pct": -0.5
   },
   {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": -0.56
-  },
-  {
-   "group": "lacteos",
-   "in_headline": true,
-   "pct": -0.76
-  },
-  {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": -1.34
-  },
-  {
-   "group": "limpieza",
-   "in_headline": true,
-   "pct": -1.35
+   "pct": -1.59
   },
   {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": -3.29
+   "pct": -2.85
   },
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.45
+   "pct": -4.53
   }
  ],
- "products_compared": 557,
- "products_up": 13,
- "products_down": 30,
- "products_same": 514,
+ "products_compared": 559,
+ "products_up": 39,
+ "products_down": 36,
+ "products_same": 484,
  "top_up": [
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Letritas Lucchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1749.0,
+   "pct": 66.57
+  },
   {
    "type": "banana",
    "type_en": "Bananas",
    "shop": "ChangoMas",
    "name": "Banana 1 Kg",
    "before": 1799.0,
-   "now": 2799.0,
-   "pct": 55.59
+   "now": 2899.0,
+   "pct": 61.15
   },
   {
-   "type": "pollo_entero",
-   "type_en": "Whole chicken",
-   "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "before": 2749.0,
-   "now": 3789.0,
-   "pct": 37.83
-  },
-  {
-   "type": "pure_tomate",
-   "type_en": "Tomato puree",
+   "type": "manteca",
+   "type_en": "Butter",
    "shop": "Dia",
-   "name": "Puré De Tomate Arcor 520 Gr.",
-   "before": 915.0,
-   "now": 1220.0,
-   "pct": 33.33
-  },
-  {
-   "type": "jabon_tocador",
-   "type_en": "Bar soap",
-   "shop": "ChangoMas",
-   "name": "Jabón De Tocador Dove Exfoliante 90 G",
-   "before": 2054.25,
-   "now": 2739.0,
-   "pct": 33.33
-  },
-  {
-   "type": "manzana",
-   "type_en": "Apples",
-   "shop": "Dia",
-   "name": "Manzana Roja Comercial en bolsa malla x Kg.",
-   "before": 2890.0,
-   "now": 3790.0,
-   "pct": 31.14
+   "name": "Manteca La Serenísima 200 Gr.",
+   "before": 3250.0,
+   "now": 5210.0,
+   "pct": 60.31
   }
  ],
  "top_down": [
@@ -212,6 +212,11 @@
    "date": "2026-11-02",
    "paid": 101.614,
    "regular": 100.189
+  },
+  {
+   "date": "2026-11-03",
+   "paid": 102.976,
+   "regular": 100.328
   }
  ]
 }

@@ -227,7 +227,7 @@ for bar in range(bars):
 # final chord
 for m in (60,64,67,72): add(pluck(m,2.5,1)*1,DUR-2.2,0.2)
 out=np.tanh(out*0.7); out*=0.85/np.max(np.abs(out))
-rms=np.sqrt(np.mean(out**2)); out*=0.08/rms  # every style the same loudness: about 16 dB under the voice in mix2.sh
+rms=np.sqrt(np.mean(out**2)); out*=0.05/rms  # every style the same loudness: about 20 dB under the voice in mix2.sh (Ramon: quiet, the voice first)
 out*=min(1,0.99/np.max(np.abs(out)))
 fade=int(0.8*SR); out[-fade:]*=np.linspace(1,0,fade)
 with wave.open(sys.argv[1],'wb') as w:

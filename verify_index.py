@@ -145,7 +145,7 @@ else:
         calc[d] = {key: v * 100 for key, v in calc[d].items()}
 
 # ---------- "Week" method of the monthly report, recalculated another way ----------
-def direct_week(now_days, old_days):
+def direct_week(now_days, old_days, min_stock=4):
     """Every product's average price in two windows, combined type -> group -> weights (ratios, not logs)."""
     tree = {}  # group -> type -> shop -> [ratio]
     for k, t in basket.items():
@@ -153,7 +153,7 @@ def direct_week(now_days, old_days):
             continue
         pn = [prices[x][k]["paid"] for x in now_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
         po = [prices[x][k]["paid"] for x in old_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
-        if len(pn) < 4 or len(po) < 4:
+        if len(pn) < min_stock or len(po) < min_stock:
             continue
         r = (sum(pn) / len(pn)) / (sum(po) / len(po))
         if 1 / 3 <= r <= 3:
@@ -235,6 +235,61 @@ if os.path.exists("index/semana.json"):
             problems.append("index/semana.json: las semanas no son las últimas dos con datos")
         elif sem.get("paid") is None or abs(sem["paid"] - expect) > 0.011:
             problems.append(f"Cuadro de 7 días: dice {sem.get('paid')}%, recalculado {expect}%")
+
+# Weekly reports (index/semanas/AAAA-MM-DD.json): the same 7-day method, recalculated here, and the
+# supermarket ranking (identical barcodes at the 4 shops) recalculated from the raw files.
+week_files = sorted(p for p in glob.glob("index/semanas/????-??-??.json"))
+listed = json.load(open("index/semanas/lista.json", encoding="utf-8")) if os.path.exists("index/semanas/lista.json") else []
+if sorted(x["id"] for x in listed) != sorted(os.path.basename(p)[:10] for p in week_files):
+    problems.append("index/semanas/lista.json no coincide con los informes semanales guardados")
+for p in week_files:
+    wr = json.load(open(p, encoding="utf-8"))
+    n = len(wr["days_now"]) and (date.fromisoformat(wr["end"]) - date.fromisoformat(wr["start"])).days + 1
+    shift = lambda d: (date.fromisoformat(d) - timedelta(days=7)).isoformat()
+    if wr["before_start"] != shift(wr["start"]) or wr["before_end"] != shift(wr["end"]):
+        problems.append(f"Informe semanal {wr['id']}: la semana anterior no son los mismos días 7 días antes")
+    now_ok = [d for d in dates if wr["start"] <= d <= wr["end"]]
+    old_ok = [d for d in dates if wr["before_start"] <= d <= wr["before_end"]]
+    if now_ok != wr["days_now"] or old_ok != wr["days_before"]:
+        problems.append(f"Informe semanal {wr['id']}: los días usados no coinciden con los archivos de datos")
+    expect = direct_week(now_ok, old_ok, wr["min_in_stock"])
+    if wr.get("paid") is None or abs(wr["paid"] - expect) > 0.011:
+        problems.append(f"Informe semanal {wr['id']}: dice {wr.get('paid')}%, recalculado {expect}%")
+
+rk_path = "index/semanas/ranking.json"
+if os.path.exists(rk_path):
+    RS = ["Carrefour", "Jumbo", "ChangoMas", "Dia"]
+    eprice = {}  # date -> {(ean, shop): price}
+    for p_, d_ in zip(files, dates):
+        t = {}
+        with gzip.open(p_, "rt", newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r["shop"] in RS and r.get("ean") and r.get("available") == "True"
+                        and (r.get("unit") or "").lower() == "un" and str(r.get("unit_multiplier")) in ("1", "1.0")):
+                    try:
+                        v = float(r["price"])
+                    except (TypeError, ValueError):
+                        continue
+                    if v > 0:
+                        t[(r["ean"], r["shop"])] = v
+        eprice[d_] = t
+    for wk in json.load(open(rk_path, encoding="utf-8")):
+        have = [d_ for d_ in dates if wk["start"] <= d_ <= wk["end"]]
+        need = -(-len(have) // 2)
+        tot, n_ok = {s_: 0.0 for s_ in RS}, 0
+        for e in {e for d_ in have for (e, _s) in eprice[d_]}:
+            avgs = {}
+            for s_ in RS:
+                ps = [eprice[d_][(e, s_)] for d_ in have if (e, s_) in eprice[d_]]
+                if len(ps) >= need:
+                    avgs[s_] = sum(ps) / len(ps)
+            if len(avgs) == 4 and max(avgs.values()) <= 3 * min(avgs.values()):
+                n_ok += 1
+                for s_ in RS:
+                    tot[s_] += avgs[s_]
+        pub = {x["shop"]: x["total"] for x in wk["shops"]}
+        if n_ok != wk["n_products"] or any(abs(pub[s_] - tot[s_]) > 0.05 for s_ in RS):
+            problems.append(f"Ranking de súper {wk['id']}: no coincide con el recálculo ({n_ok} productos)")
 
 # ---------- Result ----------
 out = [f"Verificación independiente del índice ({datetime.now(ZoneInfo('Europe/Madrid')):%Y-%m-%d %H:%M} España)",

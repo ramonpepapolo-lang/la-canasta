@@ -341,6 +341,13 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
   .rsec, .note-box { break-inside: avoid; }
   body { font-size: 11pt; }
 }
+.kind-pick { margin-top: 1.2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; color: var(--muted); }
+.kind-pick select { font: inherit; font-weight: 600; color: var(--navy); border: 1px solid var(--rule); border-radius: 999px; padding: 0.45rem 2rem 0.45rem 0.95rem; background: #FFFFFF; }
+.rlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+.rlist li { font-size: 1.05rem; }
+.rlist a { color: var(--navy); font-weight: 600; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.rlist a:hover { text-decoration-color: var(--navy); }
+.rlist .soon { color: var(--muted); }
 .arch { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
 .arch a { display: grid; gap: 0.3rem; border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.3rem 1.4rem; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
 .arch a:hover { border-color: var(--celeste); box-shadow: 0 6px 18px rgba(43, 59, 92, 0.08); }
@@ -375,14 +382,19 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
   </div>
   <section class="rep-hero">
     <p class="eyebrow">La Canasta</p>
-    <h1><span data-lang="es">Informes mensuales</span><span data-lang="en">Monthly reports</span></h1>
-    <p class="lede" data-lang="es">Cada mes, cuánto subieron los precios del súper en la Argentina, publicado antes que el dato oficial del INDEC. Elegí un mes para leer el informe.</p>
-    <p class="lede" data-lang="en">Every month, how much supermarket prices rose in Argentina, published before INDEC's official figure. Pick a month to read the report.</p>
+    <h1><span data-lang="es">Informes</span><span data-lang="en">Reports</span></h1>
+    <p class="lede" data-lang="es">Cada mes, cuánto subieron los precios del súper en la Argentina, publicado antes que el dato oficial del INDEC. Cada informe se abre en PDF.</p>
+    <p class="lede" data-lang="en">Every month, how much supermarket prices rose in Argentina, published before INDEC's official figure. Each report opens as a PDF.</p>
+    <p class="kind-pick"><label for="kind" id="kindText"></label>
+      <select id="kind">
+        <option value="m" data-es="Informes mensuales" data-en="Monthly reports">Informes mensuales</option>
+        <option value="w" data-es="Informes semanales" data-en="Weekly reports">Informes semanales</option>
+      </select></p>
   </section>
 
   <section class="rsec">
-    <div class="arch" id="arch"></div>
-    <p class="muted" id="archEmpty" hidden><span data-lang="es">El primer informe sale el 1 de diciembre de 2026.</span><span data-lang="en">The first report comes out on 1 December 2026.</span></p>
+    <ul class="rlist" id="arch"></ul>
+    <p class="muted" id="weekNote" hidden><span data-lang="es">Cada semana comparada con los mismos días de la semana anterior. No es la inflación del mes: esa sale en el informe mensual.</span><span data-lang="en">Each week compared with the same days of the week before. It is not the month's inflation: that comes in the monthly report.</span></p>
   </section>
     <section class="sub" id="suscribirse" hidden>
       <div class="sub-text">
@@ -446,31 +458,43 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
 <script>
 const MONTHS = { es: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
   en: ["January","February","March","April","May","June","July","August","September","October","November","December"] };
-let lang = "es", list = [];
+let lang = "es", list = [], weeks = [], kind = /[?&#]semanal/.test(location.href) ? "w" : "m";
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
 const L = (es, en) => lang === "es" ? es : en;
 function el(tag, cls, text) { const x = document.createElement(tag); if (cls) x.className = cls; if (text != null) x.textContent = text; return x; }
-function sp(v) { return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toLocaleString(lang === "es" ? "es-AR" : "en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "%"; }
+function monthName(m) { const mi = +m.slice(5) - 1, y = m.slice(0, 4); return lang === "es" ? `${MONTHS.es[mi]} ${y}` : `${MONTHS.en[mi]} ${y}`; }
+function nextMonth(m) { let y = +m.slice(0, 4), mo = +m.slice(5) + 1; if (mo > 12) { mo = 1; y++; } return `${y}-${String(mo).padStart(2, "0")}`; }
+function link(text, href) { const a = el("a", "", text); a.href = href; a.target = "_blank"; a.rel = "noopener"; return a; }
 function render() {
   const box = document.getElementById("arch"); box.textContent = "";
-  const ready = list.filter(x => x.publishable).reverse();
-  document.getElementById("archEmpty").hidden = ready.length > 0;
-  ready.forEach((x, i) => {
-    const mi = +x.month.slice(5) - 1, y = x.month.slice(0, 4);
-    const a = el("a", i === 0 ? "latest" : ""); a.href = "informe.html?m=" + x.month;
-    a.append(el("span", "m", (lang === "es" ? MONTHS.es[mi] + " " + y : MONTHS.en[mi] + " " + y) + (i === 0 ? L(" · último", " · latest") : "")),
-      el("span", "v", sp(x.inflation)),
-      el("span", "s", x.method === "average" ? L("Promedio contra promedio", "Average vs average") : x.method === "week" ? L("Semana contra semana", "Week vs week") : L("Punta a punta", "End to end")),
-      el("span", "go", L("Leer el informe →", "Read the report →")));
-    box.append(a);
-  });
+  const sel = document.getElementById("kind"); sel.value = kind;
+  sel.querySelectorAll("option").forEach(o => { o.textContent = o.dataset[lang]; });
+  document.getElementById("weekNote").hidden = kind !== "w";
+  document.getElementById("kindText").textContent = kind === "m"
+    ? L("Estás viendo los informes mensuales. Para ver los semanales, cambiá acá:", "You are looking at the monthly reports. To see the weekly ones, switch here:")
+    : L("Estás viendo los informes semanales. Para volver a los mensuales, cambiá acá:", "You are looking at the weekly reports. To go back to the monthly ones, switch here:");
+  if (kind === "m") {
+    const ready = list.filter(x => x.publishable).reverse();
+    ready.forEach(x => { const li = el("li"); li.append(link(L(`Informe de ${monthName(x.month)}`, `${monthName(x.month)} report`), `informes/mensuales/${x.month}-${lang}.pdf`)); box.append(li); });
+    const open = list.filter(x => !x.publishable && x.days_of_data >= 1 && x.month >= "2026-11").pop();
+    if (open) {
+      const nm = nextMonth(open.month), li = el("li", "soon");
+      li.textContent = L(`Informe de ${monthName(open.month)} · sale el 1 de ${MONTHS.es[+nm.slice(5) - 1]}`, `${monthName(open.month)} report · out on 1 ${MONTHS.en[+nm.slice(5) - 1]}`);
+      box.append(li);
+    }
+  } else {
+    weeks.forEach(w => { const li = el("li"); li.append(link(lang === "es" ? w.label_es : w.label_en, `informes/semanas/${w.id}-${lang}.pdf`)); box.append(li); });
+    if (!weeks.length) box.append(el("li", "soon", L("El primer informe semanal sale el 7 de noviembre de 2026 (semana del 1 al 7 de noviembre).", "The first weekly report comes out on 7 November 2026 (week of 1 to 7 November).")));
+  }
 }
+document.getElementById("kind").addEventListener("change", e => { kind = e.target.value; history.replaceState(null, "", kind === "w" ? "#semanal" : location.pathname); render(); });
 function setLang(l) {
   lang = l; document.documentElement.lang = l;
   document.getElementById("btn-es").setAttribute("aria-pressed", String(l === "es")); document.getElementById("btn-en").setAttribute("aria-pressed", String(l === "en"));
   try { localStorage.setItem("lc-lang", l); } catch (e) {} render();
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
+(async () => { try { const r = await fetch("index/semanas/lista.json", { cache: "no-store" }); if (r.ok) weeks = await r.json(); } catch (e) {} render(); })();
 (async () => { try { const r = await fetch("index/informes/lista.json", { cache: "no-store" }); if (r.ok) list = await r.json(); } catch (e) {} render(); })();
 setLang(lang);
 </script>

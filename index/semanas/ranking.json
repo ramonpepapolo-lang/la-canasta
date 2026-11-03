@@ -1,0 +1,215 @@
+[
+ {
+  "id": "2026-11-01",
+  "start": "2026-11-01",
+  "end": "2026-11-07",
+  "label_es": "Semana del 1 al 7 de noviembre de 2026",
+  "label_en": "Week of 1 to 7 November 2026",
+  "complete": false,
+  "days": [
+   "2026-11-01",
+   "2026-11-03"
+  ],
+  "days_of_data": 3,
+  "n_products": 131,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 475843.1,
+    "pct": 0.0
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 489915.36,
+    "pct": 2.96
+   },
+   {
+    "shop": "Carrefour",
+    "total": 494314.15,
+    "pct": 3.88
+   },
+   {
+    "shop": "Jumbo",
+    "total": 560944.0,
+    "pct": 17.88
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 43,
+   "Jumbo": 1,
+   "ChangoMas": 61,
+   "Dia": 52
+  },
+  "examples": [
+   {
+    "ean": "7792590001064",
+    "name": "Harina Caserita Leudante 1 Kg",
+    "low_shop": "Dia",
+    "low": 989.17,
+    "high_shop": "Jumbo",
+    "high": 1850.0,
+    "pct": 87.0
+   },
+   {
+    "ean": "7791290796706",
+    "name": "Detergente Cif Active Gel 500 Ml",
+    "low_shop": "ChangoMas",
+    "low": 3201.92,
+    "high_shop": "Jumbo",
+    "high": 5850.0,
+    "pct": 82.7
+   },
+   {
+    "ean": "7791290793446",
+    "name": "Jabón en polvo Skip Bio-Enzimas Baja espuma 600 grs",
+    "low_shop": "ChangoMas",
+    "low": 2609.4,
+    "high_shop": "Jumbo",
+    "high": 4750.0,
+    "pct": 82.0
+   }
+  ]
+ },
+ {
+  "id": "2026-10-29",
+  "start": "2026-10-29",
+  "end": "2026-10-31",
+  "label_es": "Semana del 29 al 31 de octubre de 2026",
+  "label_en": "Week of 29 to 31 October 2026",
+  "complete": true,
+  "days": [
+   "2026-10-29",
+   "2026-10-31"
+  ],
+  "days_of_data": 3,
+  "n_products": 136,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 480475.52,
+    "pct": 0.0
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 503958.58,
+    "pct": 4.89
+   },
+   {
+    "shop": "Carrefour",
+    "total": 514510.89,
+    "pct": 7.08
+   },
+   {
+    "shop": "Jumbo",
+    "total": 578090.33,
+    "pct": 20.32
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 52,
+   "Jumbo": 0,
+   "ChangoMas": 52,
+   "Dia": 59
+  },
+  "examples": [
+   {
+    "ean": "7792590001064",
+    "name": "Harina Caserita Leudante 1 Kg",
+    "low_shop": "Dia",
+    "low": 890.25,
+    "high_shop": "Jumbo",
+    "high": 1850.0,
+    "pct": 107.8
+   },
+   {
+    "ean": "7793890258769",
+    "name": "Pan Lactal De Mesa 315 G",
+    "low_shop": "ChangoMas",
+    "low": 1986.6,
+    "high_shop": "Jumbo",
+    "high": 3850.0,
+    "pct": 93.8
+   },
+   {
+    "ean": "7793890258806",
+    "name": "Pan para Hamburguesa Lactal 4 Ud.",
+    "low_shop": "ChangoMas",
+    "low": 1535.67,
+    "high_shop": "Jumbo",
+    "high": 2950.0,
+    "pct": 92.1
+   }
+  ]
+ },
+ {
+  "id": "2026-10-22",
+  "start": "2026-10-22",
+  "end": "2026-10-28",
+  "label_es": "Semana del 22 al 28 de octubre de 2026",
+  "label_en": "Week of 22 to 28 October 2026",
+  "complete": true,
+  "days": [
+   "2026-10-24",
+   "2026-10-28"
+  ],
+  "days_of_data": 5,
+  "n_products": 142,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 531737.02,
+    "pct": 0.0
+   },
+   {
+    "shop": "Carrefour",
+    "total": 543982.29,
+    "pct": 2.3
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 552754.26,
+    "pct": 3.95
+   },
+   {
+    "shop": "Jumbo",
+    "total": 609120.8,
+    "pct": 14.55
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 48,
+   "Jumbo": 3,
+   "ChangoMas": 57,
+   "Dia": 52
+  },
+  "examples": [
+   {
+    "ean": "7798060850026",
+    "name": "Manteca Tonadita Clásica 200 G",
+    "low_shop": "Carrefour",
+    "low": 2199.0,
+    "high_shop": "Jumbo",
+    "high": 4650.0,
+    "pct": 111.5
+   },
+   {
+    "ean": "7793890258806",
+    "name": "Pan para Hamburguesa Lactal 4 Ud.",
+    "low_shop": "Dia",
+    "low": 1750.0,
+    "high_shop": "Jumbo",
+    "high": 2950.0,
+    "pct": 68.6
+   },
+   {
+    "ean": "7793890258790",
+    "name": "Pan de Pancho Lactal 6 Ud.",
+    "low_shop": "Dia",
+    "low": 1750.0,
+    "high_shop": "Jumbo",
+    "high": 2950.0,
+    "pct": 68.6
+   }
+  ]
+ }
+]

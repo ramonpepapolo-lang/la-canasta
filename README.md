@@ -28,8 +28,7 @@ About **10,500 prices a day**.
 
 The index follows **567 everyday products of 33 kinds** (up to five per kind and shop; added on 1 November 2026 and recalculated from the first day), listed in [`basket.csv`](basket.csv): bread and cereals, dairy and eggs, oil, fruit and vegetables, chicken, sugar, yerba, coffee and tea, drinks, cleaning and personal care.
 
-- **22 products are exactly the same item in every shop** (same barcode).
-- **11 are each shop's own version** (for example fresh fruit, vegetables, eggs and milk), because these are sold under each shop's own codes.
+Each product is followed in its own shop, with its own code. Many are exactly the same item in every shop (same barcode); fresh fruit, vegetables, eggs and some milks are each shop's own version.
 
 Each shop is only ever compared **with itself, over time**.
 
@@ -50,12 +49,12 @@ Coto's website search system still contains **old prices for some products** (fo
 ## How the index is calculated
 
 1. Every day, each basket product's price is compared with the last day it was in stock. Same shop, same product.
-2. Products are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...). Inside each group, the price changes are averaged (geometric mean).
+2. The products of each kind are averaged (geometric mean, each shop counting the same), then the kinds are averaged inside each INDEC group (bread and cereals, dairy and eggs, fruit...).
 3. Groups are combined using **INDEC's official weights**: how much households in Greater Buenos Aires spend on each group, from INDEC's 2004/05 household spending survey (the same one INDEC still uses for official inflation).
 4. The days are chained together. **24 October 2026 = 100.**
 5. A price that triples or falls to a third overnight is treated as a data error and left out. Every case is listed in [`index/checks.txt`](index/checks.txt).
 
-**Monthly inflation:** the average of the month compared with the average of the month before, like INDEC. Because collection started on 24 October, the first full comparison is December vs November. For November only, the change from 31 October to 30 November is published instead, and labelled as such.
+**Monthly inflation:** the average of the month compared with the average of the month before, like INDEC. Because collection started on 24 October, the first full comparison is December vs November. For November only, each product's average price in the last 7 days of the month (24 to 30 November) is compared with the same days of October (24 to 30 October), so both sides have the same weekdays. Full method: https://lacanastaindex.com/metodo.html
 
 **Results** are in the [`index`](index) folder: `daily.csv` (the index every day, overall and per shop), `groups.csv` (each group), `monthly.csv` (monthly inflation).
 
@@ -92,11 +91,12 @@ For Coto, which prices each store separately, `price` is the typical (median) pr
 
 ## Status
 
-- ✅ Daily collection from all 5 chains
-- ✅ Basket chosen
-- 🔜 The index (method will be published here)
-- 🔜 Website
-- 🔜 First monthly report: **1 December 2026**
+- ✅ Daily collection from all 5 chains (since 24 October 2026)
+- ✅ Daily index with 567 products, checked every day by an independent recalculation
+- ✅ Website: https://lacanastaindex.com
+- ✅ Open data on Kaggle and Zenodo (DOI [10.5281/zenodo.23856045](https://doi.org/10.5281/zenodo.23856045))
+- 🔜 First monthly report: **1 December 2026** (November)
+- ⏳ Coto: collected, not in the index yet
 
 ## Notes
 

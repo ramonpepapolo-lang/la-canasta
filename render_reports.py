@@ -479,6 +479,13 @@ def main():
     render(jobs)
     os.makedirs("informes", exist_ok=True)
     json.dump(hashes, open(hashes_path, "w", encoding="utf-8"), indent=1, sort_keys=True)
+    # Every report PDF goes into sitemap.xml, so Google (and the AI search tools that use it) can find it
+    if os.path.exists("sitemap.xml"):
+        sm = open("sitemap.xml", encoding="utf-8").read()
+        new = [f"https://lacanastaindex.com/{p}" for p in sorted(hashes) if os.path.exists(p)]
+        add = "".join(f"  <url><loc>{u}</loc><priority>0.6</priority></url>\n" for u in new if f"<loc>{u}</loc>" not in sm)
+        if add:
+            open("sitemap.xml", "w", encoding="utf-8").write(sm.replace("</urlset>", add + "</urlset>"))
     print(f"{len(jobs)} PDF(s) made.")
 
 

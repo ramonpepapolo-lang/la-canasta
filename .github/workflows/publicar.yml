@@ -51,4 +51,5 @@ jobs:
         run: |
           gh issue comment ${{ github.event.issue.number }} --body-file report.txt
           gh issue close ${{ github.event.issue.number }}
-          python3 alert_email.py --msg "📤 La Canasta: resultado de publicar" "$(cat report.txt)" || true
+          SUBJ="$(cat subject.txt 2>/dev/null || echo "⚠️ Revisá la publicación | La Canasta")"
+          python3 alert_email.py --msg "$SUBJ" "$(cat report.txt)" || true

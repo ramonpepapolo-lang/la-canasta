@@ -11,11 +11,13 @@ title = os.environ.get("ISSUE_TITLE", "")
 m = re.match(r"\s*publicar\s+(\d{4}-\d{2}-\d{2})(?:\s+(\d))?\s*$", title, re.I)
 report = []
 if not m:
-    print("Título no reconocido. Usá: publicar AAAA-MM-DD o publicar AAAA-MM-DD 1"); sys.exit(0)
+    open("subject.txt", "w").write("⚠️ No se publicó nada | La Canasta")
+    print("Ramon, ojo: no se publicó nada, ni en X ni en YouTube. Título no reconocido. Usá: publicar AAAA-MM-DD o publicar AAAA-MM-DD 1"); sys.exit(0)
 day, only = m.group(1), m.group(2)
 posts = json.load(open("vd/posts.json", encoding="utf-8"))
 if posts.get("date") != day:
-    print(f"Los videos guardados son del {posts.get('date')}, no del {day}. No se publicó nada."); sys.exit(0)
+    open("subject.txt", "w").write(f"⚠️ No se publicó nada | La Canasta {day}")
+    print(f"Ramon, ojo: no se publicó nada, ni en X ni en YouTube. Los videos guardados son del {posts.get('date')}, no del {day}."); sys.exit(0)
 done_path = "notas/publicados.txt"
 done = open(done_path, encoding="utf-8").read() if os.path.exists(done_path) else ""
 new_lines = []
@@ -79,4 +81,22 @@ for i, v in enumerate(posts["videos"], 1):
 if new_lines:
     with open(done_path, "a", encoding="utf-8") as f:
         f.write("\n".join(new_lines) + "\n")
-print("\n".join(report))
+
+# One clear line on top for Ramon: where it was published (X, YouTube, both or nowhere)
+n = len([v for i, v in enumerate(posts["videos"], 1) if not only or str(i) == only])
+# counts both new uploads and ones already published by an earlier approval
+sites = {s: sum(1 for l in report if l.startswith(f"  {s}: ") and ("publicado ✅" in l or "ya estaba publicado" in l))
+         for s in ("X", "YouTube")}
+videos = "el video" if n == 1 else f"los {n} videos"
+if sites["X"] and sites["YouTube"]:
+    head, subj = f"Ramon, todo bien: se publicaron {videos} en X y en YouTube.", "✅ Publicados en X y YouTube"
+elif sites["X"]:
+    head, subj = f"Ramon, todo bien: se publicaron {videos} solo en X. YouTube no (mirá abajo por qué).", "✅ Publicados en X (YouTube no)"
+elif sites["YouTube"]:
+    head, subj = f"Ramon, ojo: se publicaron {videos} solo en YouTube. En X no (mirá abajo por qué).", "⚠️ Publicados solo en YouTube"
+else:
+    head, subj = "Ramon, ojo: no se publicó nada, ni en X ni en YouTube. Mirá abajo por qué.", "⚠️ No se publicó nada"
+if sites["X"] and sites["X"] < n or sites["YouTube"] and sites["YouTube"] < n:
+    head += " Alguno no salió en todos lados, mirá el detalle."
+open("subject.txt", "w", encoding="utf-8").write(f"{subj} | La Canasta {day}")
+print(head + "\n\n" + "\n".join(report))

@@ -21,7 +21,7 @@ Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios)
 | `precios_diarios.csv` | Todos los precios recolectados, todos los días, en todos los súper. |
 | `canasta.csv` | Los productos que sigue el índice, con su código de barras (EAN) y desde qué día cuentan. |
 | `ponderaciones.csv` | Los grupos del INDEC, su gasto en la ENGHo 2004/05 y qué tipos de producto incluye cada uno. |
-| `indice_diario.csv` | El índice de cada día (24/10/2026 = 100), en total y por supermercado, con precio pagado y precio de lista. |
+| `indice_diario.csv` | El índice de cada día (promedio del 24 al 30/10/2026 = 100), en total y por supermercado, con precio pagado y precio de lista. |
 | `indice_por_grupo.csv` | El índice de cada grupo de productos, cada día. |
 | `inflacion_mensual.csv` | Promedios mensuales y la variación de cada mes. |
 | `precios_excluidos.csv` | Precios que la revisión diaria dejó afuera del índice, con el motivo. |
@@ -38,7 +38,7 @@ Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios)
 | `name`, `brand`, `category` | Nombre, marca y categoría, tal como los muestra el súper. |
 | `unit`, `unit_multiplier` | Unidad de venta y multiplicador (por ejemplo, productos por kg). |
 | `price` | Precio que paga cualquiera en la web ese día, con las promociones abiertas a todos. Sin descuentos bancarios ni de tarjetas. |
-| `list_price` | Precio de lista (sin promoción). Vacío en Jumbo, porque su web no muestra un precio de lista real. |
+| `list_price` | Precio de lista (sin promoción). Vacío en Jumbo, porque su web no muestra un precio de lista real; por eso el índice sin promociones usa Carrefour, ChangoMás y Día. |
 | `available` | True si había stock. |
 | `basket_type` | Tipo de producto si está en la canasta del índice; "watch:..." si está en observación. |
 | `extra` | Datos adicionales de algunos súper (JSON). |
@@ -78,7 +78,7 @@ This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 - `precios_diarios.csv`: every price collected, every day, at every shop (columns explained above: `price` is the price anyone pays online that day with open promotions; `list_price` is the regular price, empty for Jumbo because its site shows no real list price; `ean` is the barcode).
 - `canasta.csv`: the products the index follows, with barcode and the day they start counting.
 - `ponderaciones.csv`: INDEC groups, their 2004/05 spending and the product kinds in each.
-- `indice_diario.csv`: daily index (24 Oct 2026 = 100), overall and per shop, price paid and regular price.
+- `indice_diario.csv`: daily index (average of 24 to 30 Oct 2026 = 100), overall and per shop, price paid and regular price.
 - `indice_por_grupo.csv`: each group's index, every day.
 - `inflacion_mensual.csv`: monthly averages and each month's change.
 - `precios_excluidos.csv`: prices the daily review left out of the index, with the reason.

@@ -10,7 +10,7 @@
  "prices_collected": 32077,
  "headline": {
   "end_to_end_paid": 1.83,
-  "end_to_end_regular": 0.03,
+  "end_to_end_regular": 0.08,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -86,7 +86,7 @@
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": -1.59
+   "pct": -1.58
   },
   {
    "group": "cuidado_personal",
@@ -200,23 +200,23 @@
  "series": [
   {
    "date": "2026-10-31",
-   "paid": 101.129,
-   "regular": 100.301
+   "paid": 99.376,
+   "regular": 99.812
   },
   {
    "date": "2026-11-01",
-   "paid": 101.213,
-   "regular": 100.281
+   "paid": 99.458,
+   "regular": 99.792
   },
   {
    "date": "2026-11-02",
-   "paid": 101.614,
-   "regular": 100.189
+   "paid": 99.853,
+   "regular": 99.669
   },
   {
    "date": "2026-11-03",
-   "paid": 102.976,
-   "regular": 100.328
+   "paid": 101.191,
+   "regular": 99.889
   }
  ]
 }

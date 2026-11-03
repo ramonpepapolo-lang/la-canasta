@@ -346,7 +346,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
         <li>Primero se promedian los productos de cada tipo (por ejemplo, todas las leches), con una media geométrica y con el mismo peso para cada súper. Así un tipo no pesa más por tener más productos.</li>
 <li>Los tipos se agrupan como los agrupa el INDEC (pan y cereales, lácteos y huevos, frutas...) y dentro de cada grupo se promedian.</li>
         <li>Los grupos se combinan con las <strong>ponderaciones oficiales del INDEC</strong>: cuánto gastan en cada grupo los hogares del Gran Buenos Aires, según la Encuesta de Gastos de los Hogares 2004/05, la misma que el INDEC todavía usa para la inflación oficial.</li>
-        <li>Los días se encadenan. <strong>24 de octubre de 2026 = 100.</strong></li>
+        <li>Los días se encadenan. <strong>Promedio de la primera semana completa (24 al 30 de octubre de 2026) = 100.</strong> Se usa una semana entera, con un día de cada tipo, y no un solo día: el 24 de octubre fue sábado y tenía muchas promociones de fin de semana.</li>
         <li>Un precio que se triplica o cae a un tercio de un día para el otro se trata como un error y se deja afuera.</li>
       </ol>
       <ol data-lang="en">
@@ -354,7 +354,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
         <li>First, the products of each kind (for example, all the milks) are averaged, with a geometric mean and the same weight for each shop. So a kind never counts more just because it has more products.</li>
 <li>Kinds are grouped the way INDEC groups them (bread and cereals, dairy and eggs, fruit...) and averaged inside each group.</li>
         <li>Groups are combined using <strong>INDEC's official weights</strong>: how much households in Greater Buenos Aires spend on each group, from the 2004/05 household spending survey, the same one INDEC still uses for official inflation.</li>
-        <li>Days are chained together. <strong>24 October 2026 = 100.</strong></li>
+        <li>Days are chained together. <strong>Average of the first full week (24 to 30 October 2026) = 100.</strong> A whole week, with one of each weekday, is used instead of a single day: 24 October was a Saturday full of weekend promotions.</li>
         <li>A price that triples or falls to a third overnight is treated as an error and left out.</li>
       </ol>
       <div class="note" data-lang="es"><strong>Inflación mensual:</strong> el promedio del mes comparado con el promedio del mes anterior, como el INDEC. Como la recolección empezó el 24 de octubre, noviembre se mide semana contra semana: el precio promedio de cada producto del 24 al 30 de noviembre contra su precio promedio del 24 al 30 de octubre. Son los mismos días de la semana de los dos lados, así las promos de fin de semana no inflan ni bajan el número. La primera comparación de mes completo es diciembre contra noviembre.</div>
@@ -390,7 +390,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
         <li><strong>Ponderaciones nuevas:</strong> se agregará una segunda versión con la encuesta 2017/18 del INDEC cuando estén las cifras oficiales.</li>
         <li><strong>Solo precios online</strong> de grandes cadenas, sobre todo del Gran Buenos Aires.</li>
         <li><strong>Revisión diaria:</strong> cada noche se revisan los precios que cambiaron mucho. Si un precio es un error de dato, o una promo que el súper no marcó, se deja afuera ese día (nunca se inventa ni se reemplaza). Cada caso queda registrado con su motivo en <a href="https://github.com/ramonpepapolo-lang/la-canasta/blob/main/notas/excluir.csv">notas/excluir.csv</a>.</li>
-        <li><strong>Jumbo</strong> no muestra un precio de lista separado, así que en el índice sin promociones Jumbo cuenta con el precio pagado.</li>
+        <li><strong>Jumbo</strong> no muestra un precio de lista real (el campo list_price de su web es el precio sin IVA, multiplicado por 100), así que el índice sin promociones se calcula con Carrefour, ChangoMás y Día. En los archivos de precios diarios, no uses el list_price de Jumbo.</li>
         <li><strong>Solo productos de supermercado:</strong> no incluye alquiler, servicios, transporte, educación ni salud. Por eso se compara sobre todo con el rubro Alimentos y bebidas del INDEC.</li>
       </ul>
       <ul data-lang="en">
@@ -401,7 +401,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
         <li><strong>Online prices only</strong>, from large chains, mostly in Greater Buenos Aires.</li>
         <li><strong>Supermarket goods only:</strong> no rent, utilities, transport, education or health. So it is mainly compared with INDEC's Food and drinks figure.</li>
         <li><strong>Daily review:</strong> every night, prices that changed a lot are reviewed. If a price is a data error, or a promotion the shop did not mark, it is left out that day (never made up or replaced). Each case is logged with its reason in <a href="https://github.com/ramonpepapolo-lang/la-canasta/blob/main/notas/excluir.csv">notas/excluir.csv</a>.</li>
-        <li><strong>Jumbo</strong> does not show a separate list price, so in the index without promotions Jumbo counts at the price paid.</li>
+        <li><strong>Jumbo</strong> shows no real list price (the list_price field on its site is the price without VAT, times 100), so the index without promotions uses Carrefour, ChangoMás and Día. In the daily price files, do not use Jumbo's list_price.</li>
       </ul>
     </section>
 

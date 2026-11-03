@@ -1,0 +1,66 @@
+name: Check code changes
+
+# Runs only when code or basket files change (never on the daily data commits).
+# Recalculates the whole index from the raw prices and checks it independently.
+# Fails if: a script has a syntax error, verify_index.py finds a problem, or the
+# recalculated index differs from the published one (the code would change published numbers).
+# Commits nothing. If it fails on main, Ramon gets one email.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - "basket.csv"
+      - "weights.csv"
+      - "watch.csv"
+      - "notas/excluir.csv"
+      - ".github/workflows/check.yml"
+  pull_request:
+    paths:
+      - "**.py"
+      - "basket.csv"
+      - "weights.csv"
+      - "watch.csv"
+      - "notas/excluir.csv"
+      - ".github/workflows/check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Every script compiles
+        run: |
+          for f in $(git ls-files '*.py'); do python -m py_compile "$f"; done
+          echo "All scripts compile."
+      - name: Recalculate the index from the raw prices
+        run: python compute_index.py
+      - name: Independent check of every published number
+        run: python verify_index.py
+      - name: The recalculated index must match the published one
+        run: |
+          if git diff --quiet -- index ':!index/verificacion.txt' ':!index/datos-stats.json' ':!index/datos-stats.csv' ':!index/suscriptores.csv'; then
+            echo "OK: the code gives exactly the published index."
+          else
+            echo "PROBLEM: with this code the index would change. Files that differ:"
+            git diff --stat -- index ':!index/verificacion.txt' ':!index/datos-stats.json' ':!index/datos-stats.csv' ':!index/suscriptores.csv'
+            echo "If the change is on purpose, run compute_index.py and commit index/ together with the code."
+            exit 1
+          fi
+      - name: Email Ramon if the check failed on main
+        if: failure() && github.event_name == 'push'
+        run: |
+          python3 alert_email.py --msg "⚠️ La Canasta: un cambio de código no pasó el chequeo" "Se subió un cambio al código y el chequeo automático falló. Los datos de cada día se siguen guardando igual. Detalle: $RUN_URL . Decíselo a Claude en un chat." || true
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

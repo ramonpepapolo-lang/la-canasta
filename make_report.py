@@ -345,7 +345,7 @@ def ranking(days):
         return None
     need = max(1, math.ceil(len(have) / 2))  # in stock at least half the days at every shop
     avg = {}
-    for e in {e for d in have for (e, _s) in ean_price[d]}:
+    for e in sorted({e for d in have for (e, _s) in ean_price[d]}):
         row = {}
         for s_ in RANK_SHOPS:
             ps = [ean_price[d][(e, s_)] for d in have if (e, s_) in ean_price[d]]
@@ -360,8 +360,8 @@ def ranking(days):
     shops_ = sorted(({"shop": s_, "total": round(total[s_], 2), "pct": round((total[s_] / low - 1) * 100, 2)}
                      for s_ in RANK_SHOPS), key=lambda x: x["total"])
     cheapest = {s_: sum(1 for r in avg.values() if r[s_] == min(r.values())) for s_ in RANK_SHOPS}
-    gaps = sorted(avg.items(), key=lambda kv: -max(kv[1].values()) / min(kv[1].values()))[:3]
-    examples = [{"ean": e, "name": min(set(ean_name.get(e, [e])) - {""} or {e}, key=len),
+    gaps = sorted(avg.items(), key=lambda kv: (-round(max(kv[1].values()) / min(kv[1].values()), 9), kv[0]))[:3]
+    examples = [{"ean": e, "name": min(set(ean_name.get(e, [e])) - {""} or {e}, key=lambda x: (len(x), x)),
                  "low_shop": min(r, key=r.get), "low": round(min(r.values()), 2),
                  "high_shop": max(r, key=r.get), "high": round(max(r.values()), 2),
                  "pct": round((max(r.values()) / min(r.values()) - 1) * 100, 1)} for e, r in gaps]

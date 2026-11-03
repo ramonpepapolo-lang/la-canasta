@@ -1,0 +1,74 @@
+name: Report PDFs
+
+# Turns the weekly and monthly report numbers into PDFs (Spanish and English), after each daily
+# collection run and whenever the numbers change. Only PDFs whose numbers changed are made again.
+# Nothing is emailed. The numbers themselves are checked by verify_index.py before they are saved.
+on:
+  workflow_run:
+    workflows: ["Daily supermarket prices"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "index/semanas/**"
+      - "index/informes/**"
+      - "render_reports.py"
+      - "notas/*-es.txt"
+      - "notas/*-en.txt"
+  schedule:
+    - cron: "23 3 * * *"   # after the nightly data review, in case it changed a week's numbers
+  workflow_dispatch:
+    inputs:
+      test_week:
+        description: "Only for checking: build a test PDF for these days (AAAA-MM-DD,AAAA-MM-DD). Nothing is saved."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: report-pdfs
+  cancel-in-progress: false
+
+jobs:
+  pdfs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the PDF maker
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+      - name: Test PDF (only when asked, nothing is saved)
+        if: inputs.test_week != ''
+        run: |
+          mkdir -p /tmp/test-pdf
+          LC_TEST_WEEK="${{ inputs.test_week }}" LC_TEST_OUT=/tmp/test-pdf python make_report.py
+          rm -f /tmp/test-pdf/lista.json /tmp/test-pdf/ranking.json
+          python render_reports.py --test /tmp/test-pdf
+      - uses: actions/upload-artifact@v4
+        if: inputs.test_week != ''
+        with:
+          name: test-pdf
+          path: /tmp/test-pdf/*.pdf
+      - name: Make the PDFs that are new or changed
+        if: inputs.test_week == ''
+        run: python render_reports.py
+      - name: Save them
+        if: inputs.test_week == ''
+        run: |
+          git config user.name "la-canasta-bot"
+          git config user.email "la-canasta-bot@users.noreply.github.com"
+          git add informes
+          git commit -m "Report PDFs" || { echo "Nothing new"; exit 0; }
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet && break
+            echo "Push failed, trying again in 15 seconds"; sleep 15
+          done

@@ -341,6 +341,12 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
   .rsec, .note-box { break-inside: avoid; }
   body { font-size: 11pt; }
 }
+.alist { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+.alist li { font-size: 1.08rem; }
+.alist a.alink { color: var(--navy); font-weight: 600; text-decoration: underline; text-decoration-color: var(--celeste); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.alist a.alink:hover { text-decoration-color: var(--navy); }
+.alist .art-soon { color: var(--navy); font-weight: 600; }
+.alist .soon { color: var(--muted); font-size: 0.92rem; }
 .arts { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1rem; }
 .art { display: grid; gap: 0.45rem; align-content: start; border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.5rem 1.6rem; text-decoration: none; color: var(--navy); transition: border-color 0.15s, box-shadow 0.15s; }
 .art:hover { border-color: var(--celeste); box-shadow: 0 6px 18px rgba(43, 59, 92, 0.08); }
@@ -388,22 +394,14 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
     <p class="lede" data-lang="en">Articles and research on inflation and supermarket prices in Argentina, written by Ramon Pepa. Each one opens as a PDF.</p>
   </section>
   <section class="rsec">
-    <div class="arts">
-      <a class="art" href="articulos/que-es-la-inflacion.pdf" target="_blank" rel="noopener" data-en-href="articulos/what-is-inflation.pdf">
-        <span class="chip"><span data-lang="es">Próximamente</span><span data-lang="en">Coming soon</span></span>
-        <span class="m"><span data-lang="es">Artículo 1</span><span data-lang="en">Article 1</span></span>
-        <span class="t"><span data-lang="es">¿Qué es la inflación?</span><span data-lang="en">What is inflation?</span></span>
-        <span class="s"><span data-lang="es">La idea básica, cómo se mide y qué es la inflación del supermercado.</span><span data-lang="en">The basic idea, how it is measured, and what supermarket inflation is.</span></span>
-        <span class="go"><span data-lang="es">Abrir PDF →</span><span data-lang="en">Open PDF →</span></span>
-      </a>
-      <a class="art" href="articulos/por-que-importa.pdf" target="_blank" rel="noopener" data-en-href="articulos/why-it-matters.pdf">
-        <span class="chip"><span data-lang="es">Próximamente</span><span data-lang="en">Coming soon</span></span>
-        <span class="m"><span data-lang="es">Artículo 2</span><span data-lang="en">Article 2</span></span>
-        <span class="t"><span data-lang="es">¿Por qué importa medir la inflación?</span><span data-lang="en">Why measuring inflation matters</span></span>
-        <span class="s"><span data-lang="es">Quién pierde cuando suben los precios, y por qué el dato tiene que ser rápido y abierto.</span><span data-lang="en">Who loses when prices rise, and why the number has to be fast and open.</span></span>
-        <span class="go"><span data-lang="es">Abrir PDF →</span><span data-lang="en">Open PDF →</span></span>
-      </a>
-    </div>
+    <ul class="alist">
+      <li><a class="alink" href="articulos/que-es-la-inflacion.pdf" target="_blank" rel="noopener" data-en-href="articulos/what-is-inflation.pdf"><span data-lang="es">Artículo: ¿Qué es la inflación?</span><span data-lang="en">Article: What is inflation?</span></a>
+        <span class="soon"><span data-lang="es">· próximamente</span><span data-lang="en">· coming soon</span></span></li>
+      <li><a class="alink" href="articulos/por-que-importa.pdf" target="_blank" rel="noopener" data-en-href="articulos/why-it-matters.pdf"><span data-lang="es">Artículo: ¿Por qué importa medir la inflación?</span><span data-lang="en">Article: Why measuring inflation matters</span></a>
+        <span class="soon"><span data-lang="es">· próximamente</span><span data-lang="en">· coming soon</span></span></li>
+      <li><span class="art-soon"><span data-lang="es">Artículo: Promociones del súper: cuánto ahorrás de verdad (y el truco del 54%)</span><span data-lang="en">Article: Supermarket promotions: how much you really save (and the 54% trick)</span></span>
+        <span class="soon"><span data-lang="es">· próximamente</span><span data-lang="en">· coming soon</span></span></li>
+    </ul>
   </section>
     <section class="sub" id="suscribirse" hidden>
       <div class="sub-text">
@@ -467,11 +465,11 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
 <script>
 let lang = "es";
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}
-document.querySelectorAll("a.art").forEach(a => { a.dataset.esHref = a.getAttribute("href"); });
+document.querySelectorAll("a.alink").forEach(a => { a.dataset.esHref = a.getAttribute("href"); });
 function setLang(l) {
   lang = l; document.documentElement.lang = l;
   document.getElementById("btn-es").setAttribute("aria-pressed", String(l === "es")); document.getElementById("btn-en").setAttribute("aria-pressed", String(l === "en"));
-  document.querySelectorAll("a.art").forEach(a => a.setAttribute("href", l === "en" ? a.dataset.enHref : a.dataset.esHref));
+  document.querySelectorAll("a.alink").forEach(a => a.setAttribute("href", l === "en" ? a.dataset.enHref : a.dataset.esHref));
   try { localStorage.setItem("lc-lang", l); } catch (e) {}
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));

@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+videos/presentacion/*/*.wav
+videos/presentacion/*/*.mp4
+videos/presentacion/**/*.png
+videos/presentacion/shots/
+videos/presentacion/render.log

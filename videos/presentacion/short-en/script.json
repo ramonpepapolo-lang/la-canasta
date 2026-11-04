@@ -1,0 +1,51 @@
+[
+ {
+  "k": "s1",
+  "scene": "open",
+  "sub": "How much did supermarket prices rise today? Nobody tells you. Until now.",
+  "say": "How much did supermarket prices rise today? Nobody tells you. Until now.",
+  "pre": 0.75
+ },
+ {
+  "k": "s2",
+  "scene": "logo",
+  "sub": "This is La Canasta: a supermarket price index for Argentina, measured every day.",
+  "say": "This is La Canasta: a supermarket price index for Argentina, measured every day."
+ },
+ {
+  "k": "s3",
+  "scene": "shops",
+  "sub": "Every morning, a program goes into Carrefour, Jumbo, ChangoMás, Día and Coto, and saves over 10,000 prices.",
+  "say": "Every morning, a program goes into Carrefour, Jumbo, Chango Mas, Dia and Coto, and saves over ten thousand prices."
+ },
+ {
+  "k": "s4",
+  "scene": "products",
+  "sub": "It follows 567 everyday products: milk, yerba, bread, oil, bleach. And compares each one with itself, in the same shop.",
+  "say": "It follows five hundred and sixty seven everyday products: milk, yerba, bread, oil, bleach. And compares each one with itself, in the same shop."
+ },
+ {
+  "k": "s5",
+  "scene": "index",
+  "sub": "It groups them like INDEC, with the official weights, and publishes the number on lacanastaindex.com.",
+  "say": "It groups them like in-deck, with the official weights, and publishes the number on la canasta index dot com."
+ },
+ {
+  "k": "s6",
+  "scene": "web",
+  "sub": "There you get the index of the day, the cheapest supermarket, the price of every product, and weekly and monthly reports.",
+  "say": "There you get the index of the day, the cheapest supermarket, the price of every product, and weekly and monthly reports."
+ },
+ {
+  "k": "s7",
+  "scene": "agents",
+  "sub": "Seven AI agents look after it: the Guardian, the Reviewer, the Auditor, the INDEC Watcher, the Assistant, the Verifier and the Filmmaker.",
+  "say": "Seven A I agents look after it: the Guardian, the Reviewer, the Auditor, the in-deck Watcher, the Assistant, the Verifier and the Filmmaker."
+ },
+ {
+  "k": "s8",
+  "scene": "end",
+  "sub": "Open data, free for everyone. Founded by Ramon Pepa. La Canasta. lacanastaindex.com.",
+  "say": "Open data, free for everyone. Founded by Ramon Pepa. La Canasta. la canasta index dot com."
+ }
+]

@@ -1,0 +1,54 @@
+name: Publicar en X (videos especiales)
+
+# Publishes a one-off set of videos on X, from a branch that holds the mp4 files and a posts.json.
+# Used only after Ramon gives his OK in a chat with Claude (for example the presentation videos).
+# The daily Shorts keep their own path (publicar.yml, approval issue opened by Ramon).
+on:
+  workflow_dispatch:
+    inputs:
+      rama:
+        description: "Branch with the videos and posts.json"
+        required: true
+        default: "videos-presentacion"
+      cual:
+        description: "Which video: todos, 1 or 2"
+        required: false
+        default: "todos"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get the videos
+        run: git clone --depth 1 --branch "${{ inputs.rama }}" "https://github.com/${{ github.repository }}" vd
+      - name: Install
+        run: pip install --quiet tweepy
+      - name: Publish on X
+        env:
+          WHICH: ${{ inputs.cual }}
+          X_REPLY: ${{ vars.X_REPLY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          python3 videos/publicar_x.py > report.txt 2>&1 || true
+          cat report.txt
+      - name: Save what was published
+        run: |
+          git config user.name "La Canasta bot"; git config user.email "actions@users.noreply.github.com"
+          if [ -f notas/publicados.txt ]; then git add notas/publicados.txt; git commit -m "Published videos on X" || true
+            for i in 1 2 3; do git pull --rebase --quiet origin main && git push --quiet && break; sleep 10; done; fi
+      - name: Tell Ramon
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
+          ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}
+        run: |
+          SUBJ="$(cat subject.txt 2>/dev/null || echo "⚠️ Revisá la publicación en X | La Canasta")"
+          python3 alert_email.py --msg "$SUBJ" "$(cat report.txt)" || true

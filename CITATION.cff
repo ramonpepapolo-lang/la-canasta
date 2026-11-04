@@ -5,6 +5,7 @@ type: dataset
 authors:
   - family-names: Pepa
     given-names: Ramon
+    orcid: "https://orcid.org/0009-0006-0194-3360"
 url: "https://lacanastaindex.com"
 doi: "10.5281/zenodo.23856045"
 license: CC-BY-4.0

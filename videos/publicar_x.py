@@ -12,14 +12,42 @@ have_x = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_
 report, new_lines = [], []
 
 
+def upload_video(path):
+    """Chunked upload (INIT, APPEND, FINALIZE, STATUS) done by hand, so every X answer is in the report."""
+    import time, requests
+    from requests_oauthlib import OAuth1
+    auth = OAuth1(os.environ["X_API_KEY"], os.environ["X_API_SECRET"], os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
+    U = "https://upload.twitter.com/1.1/media/upload.json"
+    size = os.path.getsize(path)
+    r = requests.post(U, auth=auth, data={"command": "INIT", "media_type": "video/mp4", "total_bytes": size, "media_category": "tweet_video"})
+    report.append(f"  INIT {r.status_code}: {r.text[:200]}")
+    r.raise_for_status(); mid = r.json()["media_id_string"]
+    with open(path, "rb") as f:
+        i = 0
+        while True:
+            chunk = f.read(4 * 1024 * 1024)
+            if not chunk: break
+            r = requests.post(U, auth=auth, data={"command": "APPEND", "media_id": mid, "segment_index": i}, files={"media": chunk})
+            if r.status_code >= 300: report.append(f"  APPEND {i} {r.status_code}: {r.text[:200]}"); r.raise_for_status()
+            i += 1
+    r = requests.post(U, auth=auth, data={"command": "FINALIZE", "media_id": mid})
+    report.append(f"  FINALIZE {r.status_code}: {r.text[:300]}")
+    r.raise_for_status(); info = r.json().get("processing_info")
+    while info and info.get("state") in ("pending", "in_progress"):
+        time.sleep(info.get("check_after_secs", 5))
+        r = requests.get(U, auth=auth, params={"command": "STATUS", "media_id": mid}); info = r.json().get("processing_info")
+    report.append(f"  STATUS: {json.dumps(info)[:300]}")
+    if info and info.get("state") == "failed":
+        raise RuntimeError(f"X rechazó el video: {info.get('error')}")
+    return mid
+
+
 def post_x(v):
     import tweepy
-    auth = tweepy.OAuth1UserHandler(os.environ["X_API_KEY"], os.environ["X_API_SECRET"],
-                                    os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
-    media = tweepy.API(auth).media_upload("vd/" + v["file"], chunked=True, media_category="tweet_video")
+    mid = upload_video("vd/" + v["file"])
     c = tweepy.Client(consumer_key=os.environ["X_API_KEY"], consumer_secret=os.environ["X_API_SECRET"],
                       access_token=os.environ["X_ACCESS_TOKEN"], access_token_secret=os.environ["X_ACCESS_SECRET"])
-    t = c.create_tweet(text=v["x_text"], media_ids=[media.media_id])
+    t = c.create_tweet(text=v["x_text"], media_ids=[mid])
     tid = t.data["id"]
     if v.get("x_reply") and os.environ.get("X_REPLY") == "si":
         c.create_tweet(text=v["x_reply"], in_reply_to_tweet_id=tid)

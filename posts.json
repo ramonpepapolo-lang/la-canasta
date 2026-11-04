@@ -1,0 +1,19 @@
+{
+ "date": "presentacion",
+ "videos": [
+  {
+   "name": "Presentación de La Canasta (español)",
+   "file": "la-canasta-presentacion-wide-es.mp4",
+   "x_text": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días en la Argentina 🛒\n\nMás de 10.000 precios por día, 567 productos, 5 supermercados y 7 agentes de IA que lo cuidan. Todo explicado en 3 minutos.\n\nDatos abiertos y gratis. Fundado por Ramon Pepa.",
+   "x_reply": "Entrá, mirá el índice de hoy y descargá los datos: lacanastaindex.com",
+   "lang": "es"
+  },
+  {
+   "name": "La Canasta presentation (English)",
+   "file": "la-canasta-presentacion-wide-en.mp4",
+   "x_text": "What is La Canasta? Argentina's supermarket price index, measured every single day 🛒\n\nOver 10,000 prices a day, 567 products, 5 supermarkets and 7 AI agents looking after it. Everything explained in 3 minutes.\n\nOpen data, free for everyone. Founded by Ramon Pepa.",
+   "x_reply": "See today's index and download the data: lacanastaindex.com",
+   "lang": "en"
+  }
+ ]
+}

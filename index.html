@@ -1306,7 +1306,7 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
     if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}
 })();
 </script>
-<script src="counter.js"></script>
+<script src="counter.js?v=2"></script>
 <script>
 (function () {
   // Email sign-up box. This browser remembers if you signed up (only on this device).

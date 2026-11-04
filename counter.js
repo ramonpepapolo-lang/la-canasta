@@ -90,3 +90,37 @@ var UNSUBSCRIBE_ACTION = "";
     if (ready.length) { latest = ready[ready.length - 1].month; render(); }
   }).catch(function () {});
 })();
+
+// Top menu always fits: if the links do not fit next to the language buttons, the least important ones
+// are hidden first; on the homepage the whole menu then turns into the menu button. Works at any width,
+// in Spanish and English.
+(function () {
+  var tb = document.querySelector("header.topbar"); if (!tb) return;
+  var nav = tb.querySelector("nav"); if (!nav) return;
+  var hasMenu = !!tb.querySelector(".menu-btn");
+  var st = document.createElement("style");
+  st.textContent = ".lc-hide{display:none!important}" +
+    "header.topbar nav{min-width:0;overflow:hidden}" +
+    ".topbar.lc-compact .mainnav,.topbar.lc-compact .btn-sub{display:none!important}" +
+    ".topbar.lc-compact .head-actions{margin-left:auto}" +
+    ".topbar.lc-compact .menu-btn{display:inline-flex!important}";
+  document.head.appendChild(st);
+  var order = hasMenu ? ["#how", "#data"] :
+    ["#basket", "#data", "articulos.html", "#index", "informes.html"];
+  function links() { return Array.prototype.slice.call(nav.querySelectorAll("a")); }
+  function over() { return nav.scrollWidth > nav.clientWidth + 1; }
+  function fit() {
+    tb.classList.remove("lc-compact");
+    links().forEach(function (a) { a.classList.remove("lc-hide"); });
+    if (getComputedStyle(nav).display === "none") return;
+    for (var i = 0; i < order.length && over(); i++) {
+      links().forEach(function (a) { var h = a.getAttribute("href") || ""; if (h.slice(-order[i].length) === order[i]) a.classList.add("lc-hide"); });
+    }
+    if (over() && hasMenu) tb.classList.add("lc-compact");
+  }
+  fit();
+  window.addEventListener("resize", fit);
+  window.addEventListener("load", fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  try { new MutationObserver(fit).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] }); } catch (e) {}
+})();

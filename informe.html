@@ -12,7 +12,13 @@
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://lacanastaindex.com/informe.html">
 
-<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
+<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}
+/* Fit every screen (phone, tablet, laptop): nothing may be wider than the window */
+body { overflow-x: clip; }
+img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
+.container > *, main > *, section > *, article > * { min-width: 0; }
+.sub-form input[type=email], .hs-form input { width: 0; }
+</style>
 <link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
 <link rel="apple-touch-icon" href="la-canasta-logo/la-canasta-icon-180.png">
@@ -246,6 +252,7 @@ footer p { color: rgba(255, 255, 255, 0.78); font-size: 0.93rem; }
 .doc-body ol, .doc-body ul { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.55rem; max-width: 62ch; }
 .note { background: var(--band); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.98rem; max-width: 62ch; }
 .tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; }
+.tbl-wrap { max-width: 100%; }
 table { border-collapse: collapse; width: 100%; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
 th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { background: var(--band); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
@@ -296,7 +303,8 @@ nav a.nav-rep:hover { background: var(--navy); color: #FFFFFF; }
 .big-row { display: flex; gap: 2.5rem 4rem; align-items: end; flex-wrap: wrap; margin-top: 0.5rem; }
 .big { font-family: var(--display); font-size: clamp(4.5rem, 12vw, 7.5rem); line-height: 0.95; margin: 0; font-variant-numeric: tabular-nums; }
 .big-sub { margin: 0.5rem 0 0; color: var(--muted); font-size: 1.05rem; }
-.facts { display: grid; grid-template-columns: repeat(2, minmax(9rem, auto)); gap: 1rem 2.5rem; margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, auto)); gap: 1rem 2.5rem; margin: 0; }
+@media (max-width: 420px) { .facts { gap: 0.8rem 1.4rem; } .facts dd { font-size: 1.5rem; } }
 .facts div { display: grid; gap: 0.1rem; }
 .facts dt { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .facts dd { margin: 0; font-family: var(--display); font-size: 1.8rem; line-height: 1.15; font-variant-numeric: tabular-nums; }

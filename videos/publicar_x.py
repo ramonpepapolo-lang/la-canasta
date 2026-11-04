@@ -43,14 +43,16 @@ def upload_video(path):
 
 
 def post_x(v):
-    import tweepy
+    import requests
+    from requests_oauthlib import OAuth1
+    auth = OAuth1(os.environ["X_API_KEY"], os.environ["X_API_SECRET"], os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
     mid = upload_video("vd/" + v["file"])
-    c = tweepy.Client(consumer_key=os.environ["X_API_KEY"], consumer_secret=os.environ["X_API_SECRET"],
-                      access_token=os.environ["X_ACCESS_TOKEN"], access_token_secret=os.environ["X_ACCESS_SECRET"])
-    t = c.create_tweet(text=v["x_text"], media_ids=[mid])
-    tid = t.data["id"]
+    r = requests.post("https://api.twitter.com/2/tweets", auth=auth, json={"text": v["x_text"], "media": {"media_ids": [mid]}})
+    if r.status_code >= 300:
+        raise RuntimeError(f"X contestó {r.status_code}: {r.text[:400]}")
+    tid = r.json()["data"]["id"]
     if v.get("x_reply") and os.environ.get("X_REPLY") == "si":
-        c.create_tweet(text=v["x_reply"], in_reply_to_tweet_id=tid)
+        requests.post("https://api.twitter.com/2/tweets", auth=auth, json={"text": v["x_reply"], "reply": {"in_reply_to_tweet_id": tid}})
     return f"https://x.com/LaCanastaIndex/status/{tid}"
 
 

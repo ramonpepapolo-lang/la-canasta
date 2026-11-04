@@ -39,7 +39,12 @@ for i, v in enumerate(posts["videos"], 1):
         url = post_x(v)
         report.append(f"  X: publicado ✅ {url}"); new_lines.append(f"{key} {url}")
     except Exception as e:
-        report.append(f"  X: ERROR, no se publicó: {str(e)[:400]}")
+        det = ""
+        for k in ("api_messages", "api_errors", "api_codes"):
+            if getattr(e, k, None): det += f" {k}={getattr(e, k)}"
+        r = getattr(e, "response", None)
+        if r is not None and getattr(r, "text", None): det += f" body={r.text[:300]}"
+        report.append(f"  X: ERROR, no se publicó: {str(e)[:200]}{det}"[:700])
 
 if new_lines:
     with open(done_path, "a", encoding="utf-8") as f:

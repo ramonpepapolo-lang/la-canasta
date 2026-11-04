@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
 <title>Metodología: cómo se mide la inflación del súper · La Canasta</title>
 <meta name="description" content="Cómo La Canasta mide cada día los precios de 567 productos en Carrefour, Jumbo, ChangoMás y Día, con las ponderaciones oficiales del INDEC. Explicado en palabras simples.">
 <meta property="og:title" content="Metodología: cómo se mide la inflación del súper · La Canasta">
@@ -14,7 +14,9 @@
 
 <style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}
 /* Fit every screen (phone, tablet, laptop): nothing may be wider than the window */
+html { overflow-x: hidden; }
 body { overflow-x: clip; }
+.tip { max-width: calc(100vw - 32px); }
 img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
 .container > *, main > *, section > *, article > * { min-width: 0; }
 .sub-form input[type=email], .hs-form input { width: 0; }

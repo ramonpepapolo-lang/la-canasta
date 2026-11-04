@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
 <title>Informe mensual de precios del supermercado · La Canasta</title>
 <meta name="description" content="Cuánto subieron los precios del súper en Argentina en el mes: por grupo, por supermercado y los productos que más subieron y bajaron.">
 <meta property="og:title" content="Informe mensual de precios del supermercado · La Canasta">
@@ -14,7 +14,9 @@
 
 <style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}
 /* Fit every screen (phone, tablet, laptop): nothing may be wider than the window */
+html { overflow-x: hidden; }
 body { overflow-x: clip; }
+.tip { max-width: calc(100vw - 32px); }
 img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
 .container > *, main > *, section > *, article > * { min-width: 0; }
 .sub-form input[type=email], .hs-form input { width: 0; }
@@ -627,7 +629,7 @@ function chart() {
     cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("opacity", 0.35);
     dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(d.paid)); dot.setAttribute("opacity", 1);
     tip.textContent = ""; tip.append(el("strong", null, longDate(d.date)), el("br"), document.createTextNode(L("Pagado ", "Paid ") + num(d.paid, 2) + " · " + L("Lista ", "Regular ") + num(d.regular, 2)));
-    tip.hidden = false; tip.style.left = (X(i) * r.width / W) + "px"; tip.style.top = (Y(d.paid) * r.height / H) + "px"; };
+    tip.hidden = false; { const half = tip.offsetWidth / 2 + 4; tip.style.left = Math.min(Math.max(X(i) * r.width / W, half), Math.max(half, r.width - half)) + "px"; } tip.style.top = Math.max(Y(d.paid) * r.height / H, tip.offsetHeight * 1.2) + "px"; };
   hit.addEventListener("pointermove", move); hit.addEventListener("pointerleave", () => { tip.hidden = true; cross.setAttribute("opacity", 0); dot.setAttribute("opacity", 0); });
   box.append(svg, tip);
 }

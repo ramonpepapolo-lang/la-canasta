@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
 <title>La Canasta · Índice diario de precios de supermercados en Argentina</title>
 <meta name="description" content="Índice diario de precios de supermercados en Argentina: cuánto suben los alimentos cada día y cada semana, y qué súper es más barato (Carrefour, Día, Jumbo y ChangoMás). Datos abiertos, publicados antes que el INDEC.">
 <meta name="msvalidate.01" content="7F044100708482C5EBAE0833BCAAC3BD" />
@@ -45,7 +45,9 @@
 </script>
 <style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}
 /* Fit every screen (phone, tablet, laptop): nothing may be wider than the window */
+html { overflow-x: hidden; }
 body { overflow-x: clip; }
+.tip { max-width: calc(100vw - 32px); }
 img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
 .container > *, main > *, section > *, article > * { min-width: 0; }
 .sub-form input[type=email], .hs-form input { width: 0; }
@@ -238,6 +240,8 @@ svg text { font-family: var(--body); font-size: 12px; fill: var(--muted); }
 .yt-ico svg { width: 0.62rem; height: 0.62rem; margin-left: 2px; }
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: var(--deep); box-shadow: var(--shadow); border: 1px solid var(--rule); }
 .video > div, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.video iframe { width: 1px; min-width: 100%; max-width: 100%; }  /* iPhone: an iframe must never grow wider than its box */
+.video { contain: layout paint; }
 .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
 .video .play span { width: 84px; height: 60px; border-radius: 16px; background: #E2453C; display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
 .video .play svg { width: 26px; height: 26px; margin-left: 4px; }
@@ -1132,9 +1136,11 @@ function hover(evt) {
   const tip = document.getElementById("tip");
   tip.textContent = `${fmtDate(d.date)} · ${num(+d.index_paid)} / ${num(+d.index_regular)}`;
   const k = rect.width / geo.W;
-  tip.style.left = Math.min(Math.max(px * k, 90), rect.width - 90) + "px";
-  tip.style.top = py * (rect.height / 320) + "px";
   tip.hidden = false;
+  // keep the whole label inside the chart, so it never sticks out of the screen on a phone
+  const half = tip.offsetWidth / 2 + 4;
+  tip.style.left = Math.min(Math.max(px * k, half), Math.max(half, rect.width - half)) + "px";
+  tip.style.top = Math.max(py * (rect.height / 320), tip.offsetHeight * 1.2) + "px";
 }
 function unhover() {
   ["hoverLine", "hoverDot"].forEach(id => { const e = document.getElementById(id); if (e) e.setAttribute("visibility", "hidden"); });

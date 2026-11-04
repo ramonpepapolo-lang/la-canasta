@@ -26,7 +26,13 @@
   "founder": {"@type": "Organization", "name": "La Canasta", "url": "https://lacanastaindex.com/"},
   "subjectOf": {"@type": "Dataset", "name": "La Canasta: precios diarios de supermercados en Argentina", "url": "https://doi.org/10.5281/zenodo.23856045"}}}
 </script>
-<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}</style>
+<style>body{margin:0} [hidden]{display:none!important} img{max-width:100%}
+/* Fit every screen (phone, tablet, laptop): nothing may be wider than the window */
+body { overflow-x: clip; }
+img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
+.container > *, main > *, section > *, article > * { min-width: 0; }
+.sub-form input[type=email], .hs-form input { width: 0; }
+</style>
 <link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
 <link rel="apple-touch-icon" href="la-canasta-logo/la-canasta-icon-180.png">

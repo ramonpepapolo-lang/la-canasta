@@ -8,56 +8,56 @@
   "complete": false,
   "days": [
    "2026-11-01",
-   "2026-11-03"
+   "2026-11-04"
   ],
-  "days_of_data": 3,
-  "n_products": 131,
+  "days_of_data": 4,
+  "n_products": 151,
   "shops": [
    {
     "shop": "Dia",
-    "total": 475843.1,
+    "total": 545630.33,
     "pct": 0.0
    },
    {
-    "shop": "ChangoMas",
-    "total": 489915.36,
-    "pct": 2.96
+    "shop": "Carrefour",
+    "total": 565557.92,
+    "pct": 3.65
    },
    {
-    "shop": "Carrefour",
-    "total": 494314.15,
-    "pct": 3.88
+    "shop": "ChangoMas",
+    "total": 566511.1,
+    "pct": 3.83
    },
    {
     "shop": "Jumbo",
-    "total": 560944.0,
-    "pct": 17.88
+    "total": 644168.92,
+    "pct": 18.06
    }
   ],
   "cheapest_count": {
-   "Carrefour": 43,
+   "Carrefour": 49,
    "Jumbo": 1,
-   "ChangoMas": 61,
-   "Dia": 52
+   "ChangoMas": 66,
+   "Dia": 62
   },
   "examples": [
    {
-    "ean": "7792590001064",
-    "name": "Harina Caserita Leudante 1 Kg",
-    "low_shop": "Dia",
-    "low": 989.17,
+    "ean": "8445291395961",
+    "name": "Leche Chocolotada 200ml Nesquik",
+    "low_shop": "Carrefour",
+    "low": 1095.0,
     "high_shop": "Jumbo",
-    "high": 1850.0,
-    "pct": 87.0
+    "high": 2350.0,
+    "pct": 114.6
    },
    {
     "ean": "7791290796706",
     "name": "Detergente Cif Active Gel 500 Ml",
     "low_shop": "ChangoMas",
-    "low": 3201.92,
+    "low": 3156.18,
     "high_shop": "Jumbo",
     "high": 5850.0,
-    "pct": 82.7
+    "pct": 85.4
    },
    {
     "ean": "7791290793446",

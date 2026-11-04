@@ -3,80 +3,65 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 1.83,
+ "inflation": -0.89,
  "base_date": "2026-10-31",
- "end_date": "2026-11-03",
- "days_of_data": 3,
- "prices_collected": 32077,
+ "end_date": "2026-11-04",
+ "days_of_data": 4,
+ "prices_collected": 42788,
  "headline": {
-  "end_to_end_paid": 1.83,
-  "end_to_end_regular": 0.08,
+  "end_to_end_paid": -0.89,
+  "end_to_end_regular": -0.77,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -1.9
+   "pct": -3.14
   },
   {
    "shop": "ChangoMas",
-   "pct": 4.33
+   "pct": 0.59
   },
   {
    "shop": "Dia",
-   "pct": 5.33
+   "pct": -0.72
   },
   {
    "shop": "Jumbo",
-   "pct": -0.11
+   "pct": -0.1
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 8.35
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 4.52
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 2.38
+   "pct": 4.04
   },
   {
    "group": "azucar",
    "in_headline": true,
-   "pct": 2.14
+   "pct": 2.58
   },
   {
-   "group": "aguas_gaseosas",
+   "group": "frutas",
    "in_headline": true,
-   "pct": 1.28
-  },
-  {
-   "group": "verduras",
-   "in_headline": true,
-   "pct": 1.11
+   "pct": 0.3
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.93
+   "pct": 0.19
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": 0.17
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -0.06
-  },
-  {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": -0.38
+   "pct": -0.17
   },
   {
    "group": "aceites",
@@ -84,25 +69,40 @@
    "pct": -0.5
   },
   {
-   "group": "otros_alimentos",
+   "group": "pan_cereales",
    "in_headline": true,
-   "pct": -1.58
+   "pct": -1.1
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": -1.12
   },
   {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": -2.85
+   "pct": -2.82
+  },
+  {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": -3.46
   },
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.53
+   "pct": -5.37
+  },
+  {
+   "group": "verduras",
+   "in_headline": true,
+   "pct": -5.81
   }
  ],
- "products_compared": 559,
+ "products_compared": 562,
  "products_up": 39,
- "products_down": 36,
- "products_same": 484,
+ "products_down": 64,
+ "products_same": 459,
  "top_up": [
   {
    "type": "fideos",
@@ -144,10 +144,10 @@
    "type": "manteca",
    "type_en": "Butter",
    "shop": "Dia",
-   "name": "Manteca La Serenísima 200 Gr.",
-   "before": 3250.0,
-   "now": 5210.0,
-   "pct": 60.31
+   "name": "Manteca La Serenísima 100 Gr.",
+   "before": 1840.0,
+   "now": 2945.0,
+   "pct": 60.05
   }
  ],
  "top_down": [
@@ -159,6 +159,24 @@
    "before": 11990.0,
    "now": 6594.5,
    "pct": -45.0
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
+   "before": 2200.0,
+   "now": 1240.0,
+   "pct": -43.64
+  },
+  {
+   "type": "pure_tomate",
+   "type_en": "Tomato puree",
+   "shop": "ChangoMas",
+   "name": "Puré De Tomate Arcor 520 G",
+   "before": 1229.0,
+   "now": 699.0,
+   "pct": -43.12
   },
   {
    "type": "cerveza",
@@ -176,24 +194,6 @@
    "name": "Cerveza blanca Golsch 473 ml",
    "before": 3925.0,
    "now": 2355.0,
-   "pct": -40.0
-  },
-  {
-   "type": "papel_higienico",
-   "type_en": "Toilet paper",
-   "shop": "Carrefour",
-   "name": "Papel higiénico Elegante triple hoja 4 u.",
-   "before": 6729.0,
-   "now": 4037.4,
-   "pct": -40.0
-  },
-  {
-   "type": "pasta_dental",
-   "type_en": "Toothpaste",
-   "shop": "Carrefour",
-   "name": "Pasta dental Colgate Luminous White Brilliant 90 grs",
-   "before": 7585.0,
-   "now": 4551.0,
    "pct": -40.0
   }
  ],
@@ -217,6 +217,11 @@
    "date": "2026-11-03",
    "paid": 101.191,
    "regular": 99.889
+  },
+  {
+   "date": "2026-11-04",
+   "paid": 98.487,
+   "regular": 99.042
   }
  ]
 }

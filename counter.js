@@ -78,14 +78,14 @@ var UNSUBSCRIBE_ACTION = "";
     var nw = document.createElement("span"); nw.style.whiteSpace = "nowrap"; nw.textContent = "(" + when + ")";
     bar.append(es ? "Próximo informe: 1 de " + MES[nm] + " " : "Next report: 1 " + MON[nm] + " ", nw);
     var dot = document.createElement("span"); dot.className = "dot"; dot.textContent = "·"; bar.append(dot);
-    a.href = "informes.html#suscribirse";
+    a.href = "/informes.html#suscribirse";
     a.textContent = es ? "Recibilo por email →" : "Get it by email →";
     bar.append(a);
   }
 
   render();
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
-  fetch("index/informes/lista.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).then(function (l) {
+  fetch("/index/informes/lista.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).then(function (l) {
     var ready = (l || []).filter(function (x) { return x.publishable; });
     if (ready.length) { latest = ready[ready.length - 1].month; render(); }
   }).catch(function () {});

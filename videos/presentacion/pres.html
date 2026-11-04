@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:600;src:url(../../assets/dm-sans-latin-600-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../../assets/dm-sans-latin-700-normal.woff2)}
+:root{--navy:#2B3B5C;--deep:#0E1930;--deep2:#1A2A48;--cel:#7FB1C6;--sun:#E09A3A;--cream:#F6F1E7;--txt:#F4F7FB;--mut:#9FB0C8;--green:#4FC08D;--red:#E0624A;--line:rgba(127,177,198,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:"Sans";color:var(--txt);background:var(--deep)}
+body.wide,body.wide html{width:1920px;height:1080px}
+html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!important}
+/* world */
+#sky{position:absolute;inset:0;background:radial-gradient(1400px 1000px at 50% 25%,#243A62 0%,#152542 45%,#0E1930 100%)}
+#floor{position:absolute;left:50%;top:62%;width:5000px;height:5000px;margin-left:-2500px;transform-origin:50% 0;transform:perspective(900px) rotateX(74deg);
+ background-image:linear-gradient(rgba(127,177,198,.22) 2px,transparent 2px),linear-gradient(90deg,rgba(127,177,198,.22) 2px,transparent 2px);background-size:140px 140px;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 100%)}
+.wide #floor{top:68%}
+#haze{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(14,25,48,.75) 100%)}
+.ptag{position:absolute;font-weight:700;color:rgba(127,177,198,.16);white-space:nowrap;font-variant-numeric:tabular-nums;border:3px solid rgba(127,177,198,.14);border-radius:14px;padding:6px 22px}
+/* stage */
+#st{position:absolute;left:60px;top:220px;width:960px;height:1220px;perspective:1600px}
+.wide #st{left:80px;top:90px;width:1760px;height:800px}
+.s{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;text-align:center}
+.wide .s{gap:26px}
+[data-at]{opacity:0}
+.serif{font-family:"Serif"}
+.h1{font-family:"Serif";font-size:110px;line-height:1.02;letter-spacing:-1px;text-wrap:balance}
+.wide .h1{font-size:96px}
+.h2{font-family:"Serif";font-size:76px;line-height:1.06}
+.wide .h2{font-size:66px}
+.sun{color:var(--sun)} .cel{color:var(--cel)} .mut{color:var(--mut)} .grn{color:var(--green)} .red{color:var(--red)}
+.chip{display:inline-flex;align-items:center;gap:14px;border:3px solid var(--line);background:rgba(14,25,48,.55);border-radius:999px;padding:14px 34px;font-weight:700;font-size:34px;color:var(--txt);white-space:nowrap}
+.chip.sunb{border-color:var(--sun);color:var(--sun);background:rgba(224,154,58,.12)}
+.chip.celb{border-color:var(--cel);color:var(--cel);background:rgba(127,177,198,.12)}
+.chip.fill{background:var(--sun);border-color:var(--sun);color:#1A1206}
+.lbl{font-size:28px;font-weight:700;letter-spacing:6px;color:var(--mut);text-transform:uppercase}
+.card{background:rgba(246,241,231,.97);color:var(--navy);border-radius:28px;box-shadow:0 40px 80px rgba(0,0,0,.45);padding:40px 46px}
+.dark{background:rgba(26,42,72,.92);color:var(--txt);border:3px solid var(--line);border-radius:28px;box-shadow:0 40px 80px rgba(0,0,0,.45);padding:40px 46px}
+.row{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.big{font-weight:700;font-size:200px;line-height:1;letter-spacing:-6px;font-variant-numeric:tabular-nums}
+.wide .big{font-size:170px}
+.tag3{display:inline-block;background:var(--navy);color:#fff;border-radius:10px 40px 40px 10px;padding:26px 50px 26px 76px;position:relative;font-weight:700;font-size:54px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.tag3::before{content:"";position:absolute;left:28px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--deep);box-shadow:0 0 0 5px var(--sun)}
+.tag3 small{display:block;font-size:26px;font-weight:600;color:var(--cel);letter-spacing:2px;text-transform:uppercase}
+/* captions */
+#cap{position:absolute;left:40px;right:40px;top:1520px;height:140px;line-height:140px;text-align:center;white-space:nowrap;font-weight:700;font-size:64px;letter-spacing:-.5px;z-index:9}
+.wide #cap{top:928px;height:110px;line-height:110px;font-size:54px}
+#cap span{display:inline-block;margin:0 8px;padding:2px 12px;border-radius:14px;line-height:1.2;background:rgba(14,25,48,.78)}
+#cap .w{background:var(--sun);color:#1A1206}
+#bar{position:absolute;left:0;bottom:0;height:10px;background:var(--sun);z-index:9}
+#brand{position:absolute;left:60px;top:60px;display:flex;align-items:center;gap:18px;font-family:Serif;font-size:46px;z-index:8;opacity:.95}
+#brand img{width:74px;height:74px}
+.wide #brand{left:80px;top:28px}
+#src{position:absolute;right:60px;bottom:40px;font-size:22px;color:var(--mut);z-index:8}
+.wide #src{right:80px;top:48px;bottom:auto}
+/* thumb */
+#thumb{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;background:radial-gradient(1200px 900px at 50% 30%,#2B4470 0%,#152542 55%,#0E1930 100%)}
+#thumb .t1{font-family:Serif;font-size:150px;line-height:1;color:#fff;text-align:center;text-wrap:balance}
+#thumb .t2{font-family:Serif;font-size:168px;line-height:1;color:var(--sun);text-align:center;letter-spacing:-2px}
+#thumb .t3{font-size:34px;font-weight:700;color:var(--cel);letter-spacing:3px;text-transform:uppercase;text-align:center;max-width:900px;line-height:1.4}
+.wide #thumb .t1{font-size:120px}.wide #thumb .t2{font-size:170px}
+/* open */
+#s-open .h1{font-size:132px}
+.wide #s-open .h1{font-size:118px}
+/* logo */
+#logo3d{width:560px;height:560px;transform-style:preserve-3d}
+.wide #logo3d{width:340px;height:340px}
+#logo3d svg{width:100%;height:100%;overflow:visible}
+#logo3d g{transform-box:fill-box;transform-origin:center}
+.word{font-family:Serif;font-size:150px;line-height:1;letter-spacing:-1px}
+.wide .word{font-size:110px}
+/* shops */
+#arc{position:relative;width:100%;height:780px;transform-style:preserve-3d;perspective:1400px}
+.wide #arc{height:420px}
+.shop{position:absolute;left:50%;top:50%;width:300px;height:330px;margin:-165px 0 0 -150px;background:var(--cream);color:var(--navy);border-radius:22px;box-shadow:0 40px 80px rgba(0,0,0,.5);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:30px;font-weight:700;font-size:40px}
+.wide .shop{width:280px;height:330px;margin:-165px 0 0 -140px}
+.shop .nm{position:absolute;left:0;right:0;bottom:0;height:78px;display:flex;align-items:center;justify-content:center;background:#fff;border-top:4px solid var(--navy)}
+.shop .aw{position:absolute;left:-10px;right:-10px;top:0;height:70px;background:repeating-linear-gradient(90deg,var(--sun) 0 36px,#fff 36px 72px);border-radius:0 0 22px 22px}
+.shop .aw.b{background:repeating-linear-gradient(90deg,var(--cel) 0 36px,#fff 36px 72px)}
+.shop .aw.g{background:repeating-linear-gradient(90deg,var(--green) 0 36px,#fff 36px 72px)}
+.shop .aw.r{background:repeating-linear-gradient(90deg,var(--red) 0 36px,#fff 36px 72px)}
+.shop .aw.n{background:repeating-linear-gradient(90deg,var(--navy) 0 36px,#fff 36px 72px)}
+.shop .win{position:absolute;left:34px;right:34px;top:96px;height:120px;background:#DCE6EE;border-radius:14px;border:6px solid var(--navy)}
+.shop .door{position:absolute;left:50%;top:160px;width:60px;height:92px;margin-left:-30px;background:var(--navy);border-radius:10px 10px 0 0}
+/* products */
+#pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;width:100%}
+.wide #pgrid{grid-template-columns:repeat(8,1fr);gap:18px}
+.prod{background:var(--cream);color:var(--navy);border-radius:22px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:28px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.wide .prod{height:170px;font-size:24px}
+.prod svg{width:90px;height:90px}
+.wide .prod svg{width:74px;height:74px}
+/* compare */
+.cmpwrap{display:flex;gap:40px;align-items:center;justify-content:center;width:100%}
+.wide .cmpwrap{gap:60px}
+.pc{background:var(--cream);color:var(--navy);border-radius:26px;padding:30px 36px;width:380px;box-shadow:0 30px 60px rgba(0,0,0,.45);text-align:left}
+.pc .d{font-size:26px;font-weight:700;color:var(--mut);letter-spacing:3px}
+.pc .n{font-size:34px;font-weight:700;margin-top:6px;line-height:1.15}
+.pc .p{font-size:86px;font-weight:700;letter-spacing:-2px;margin-top:10px;font-variant-numeric:tabular-nums}
+.pc.off{opacity:.55;filter:grayscale(1)}
+.arrowb{font-size:90px;font-weight:700}
+/* groups */
+#gbars{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:1fr;gap:24px;align-items:end;width:100%;height:640px}
+.wide #gbars{grid-template-columns:repeat(12,1fr);height:430px;gap:16px}
+.gb{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:12px}
+.gb .col{width:100%;position:relative;transform-style:preserve-3d}
+.gb .face{width:100%;background:linear-gradient(180deg,var(--cel),#4F86A0);border-radius:8px 8px 0 0;position:absolute;left:0;bottom:0}
+.gb .side{position:absolute;left:100%;bottom:0;width:26px;background:#345E74;transform:skewY(-45deg);transform-origin:0 100%;border-radius:0 8px 0 0}
+.gb .pct{font-weight:700;font-size:30px;font-variant-numeric:tabular-nums}
+.gb .nm{font-size:22px;color:var(--mut);font-weight:600;line-height:1.1;height:52px}
+.wide .gb .nm{font-size:19px}
+/* chart */
+#chartbox{width:100%;background:rgba(26,42,72,.92);border:3px solid var(--line);border-radius:28px;padding:34px 40px;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+#chartbox svg{width:100%;height:auto;display:block}
+#chartbox text{font-family:Sans;font-size:22px;fill:var(--mut);font-weight:600}
+.legend{display:flex;gap:30px;justify-content:center;font-weight:700;font-size:28px}
+.legend span::before{content:"";display:inline-block;width:40px;height:8px;border-radius:4px;background:var(--sun);margin-right:12px;vertical-align:middle}
+.legend span.l2::before{background:var(--cel)}
+/* browser */
+.browser{position:relative;width:1300px;height:812px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 60px 120px rgba(0,0,0,.6);transform-style:preserve-3d}
+.browser .tb{height:62px;background:#E9EEF3;display:flex;align-items:center;gap:12px;padding:0 24px;font-size:24px;color:#5D6A84;font-weight:600}
+.browser .tb i{width:18px;height:18px;border-radius:50%;background:#C8D2DC;display:inline-block}
+.browser .tb b{margin-left:20px;background:#fff;border-radius:999px;padding:8px 26px;font-weight:600;color:var(--navy)}
+.browser .shot{position:absolute;left:0;top:62px;width:1300px;height:750px;overflow:hidden}
+.browser .shot img{width:1300px;display:block}
+.bwrap{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;perspective:2200px}
+.bwrap .browser{transform:scale(.78) rotateY(-14deg) rotateX(5deg)}
+.wide .bwrap .browser{transform:translateX(-120px) scale(.9) rotateY(-16deg) rotateX(4deg)}
+.over{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);display:flex;flex-direction:column;gap:12px;align-items:center;z-index:3;width:100%}
+.over .chip{font-size:33px;padding:14px 34px}
+.wide .over{left:auto;bottom:auto;width:auto;align-items:flex-start;gap:18px}
+.wide .over{right:40px;top:50%;transform:translateY(-50%)}
+.bwrap{align-items:flex-start;padding-top:30px}
+.wide .bwrap{align-items:center}
+.wide .over .chip{font-size:34px}
+/* agents */
+#agrow{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;width:100%;perspective:1800px}
+.wide #agrow{grid-template-columns:repeat(7,1fr);gap:18px}
+.ag{background:var(--cream);color:var(--navy);border-radius:24px;padding:26px 14px 22px;display:flex;flex-direction:column;align-items:center;gap:12px;box-shadow:0 30px 60px rgba(0,0,0,.45);transform-style:preserve-3d}
+.ag .ic{width:110px;height:110px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.ag .ic svg{width:60px;height:60px}
+.ag b{font-family:Serif;font-size:34px;line-height:1.05;font-weight:400}
+.wide .ag b{font-size:30px}
+.wide .ag{padding:40px 14px 34px;gap:16px}
+.wide .ag .ic{width:130px;height:130px}
+.wide .ag .ic svg{width:70px;height:70px}
+.ag small{font-size:20px;font-weight:700;color:var(--mut);letter-spacing:2px;text-transform:uppercase}
+.agbig{display:flex;flex-direction:column;align-items:center;gap:16px;background:var(--cream);color:var(--navy);border-radius:30px;padding:44px 50px;box-shadow:0 40px 80px rgba(0,0,0,.5);width:560px;flex:none}
+.agbig .ic{width:170px;height:170px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.agbig .ic svg{width:96px;height:96px}
+.agbig b{font-family:Serif;font-size:64px;line-height:1;font-weight:400}
+.agbig .chip{font-size:26px;padding:10px 26px;border-color:var(--navy);color:var(--navy);background:transparent}
+.agsc{display:flex;flex-direction:column;align-items:center;gap:40px;width:100%}
+.wide .agsc{flex-direction:row;justify-content:center;gap:60px}
+.demo{width:100%;max-width:880px;background:rgba(26,42,72,.92);border:3px solid var(--line);border-radius:28px;padding:36px 44px;text-align:left;font-size:34px;line-height:1.5;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.wide .demo{width:980px;font-size:32px}
+.demo .ln{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:2px solid var(--line)}
+.demo .ln:last-child{border-bottom:0}
+.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace}
+.stamp{display:inline-block;border:8px solid var(--green);color:var(--green);font-weight:700;font-size:70px;padding:14px 40px;border-radius:16px;letter-spacing:3px;background:rgba(14,25,48,.6);transform:rotate(-6deg)}
+.stamp.r{border-color:var(--red);color:var(--red)}
+.stamp.s{border-color:var(--sun);color:var(--sun)}
+.sig{font-family:Serif;font-size:64px;color:var(--sun);font-style:italic}
+/* end */
+#s-end .word{font-size:170px}
+.wide #s-end .word{font-size:140px}
+.soc{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
+.cal{background:var(--cream);color:var(--navy);border-radius:24px;width:380px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.cal .ch{background:var(--red);color:#fff;font-weight:700;font-size:30px;padding:14px;letter-spacing:4px}
+.cal .cb{font-family:Serif;font-size:150px;line-height:1.1;padding:20px 0 26px}
+.cal .cf{font-size:26px;font-weight:700;color:var(--mut);padding-bottom:26px}
+.pdf{background:#fff;color:var(--navy);width:200px;height:260px;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:28px;position:relative;overflow:hidden}
+.pdf::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:var(--cel)}
+.pdf i{display:block;width:120px;height:8px;background:#DCE4EA;border-radius:4px}
+.badge{background:var(--cream);color:var(--navy);border-radius:20px;padding:30px 44px;font-weight:700;font-size:44px;min-width:300px;text-align:left;box-shadow:0 30px 60px rgba(0,0,0,.45);display:flex;align-items:center;gap:18px}
+.badge small{display:block;font-size:22px;color:var(--mut);letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.three{display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+.three .h2{padding:30px 50px;border:4px solid var(--line);border-radius:30px;background:rgba(26,42,72,.85)}
+</style></head><body>
+<div id="sky"></div><div id="floor"></div><div id="haze"></div><div id="tags"></div>
+<div id="brand"><img src="../../assets/la-canasta-icon-white.svg">La Canasta</div>
+<div id="src"><span class="es">lacanastaindex.com · Carrefour, Jumbo, ChangoMás, Día y Coto · datos abiertos</span><span class="en">lacanastaindex.com · Carrefour, Jumbo, ChangoMás, Día and Coto · open data</span></div>
+
+<div id="st">
+
+<div class="s" id="s-open">
+  <div class="h1" data-at="s1:0.0" data-pop><span class="es">¿Cuánto subió<br>el súper hoy?</span><span class="en">How much did<br>prices rise today?</span></div>
+  <div class="h2 mut" data-at="s1:0.5"><span class="es">Nadie te lo dice.</span><span class="en">Nobody tells you.</span></div>
+  <div class="h2 sun" data-at="s1:0.8" data-pop><span class="es">Hasta ahora.</span><span class="en">Until now.</span></div>
+</div>
+
+<div class="s" id="s-logo">
+  <div id="logo3d"></div>
+  <div class="word" data-at="s2:0.12" data-pop>La Canasta</div>
+  <div class="chip celb" data-at="s2:0.35"><span class="es">Índice de precios de supermercado · Argentina</span><span class="en">Supermarket price index · Argentina</span></div>
+  <div class="row" data-at="s2:0.62"><span class="chip sunb"><span class="es">Todos los días</span><span class="en">Every day</span></span><span class="chip"><span class="es">Desde el 24 de octubre de 2026</span><span class="en">Since 24 October 2026</span></span></div>
+  <div class="chip fill" data-at="s2:0.88" data-pop><span class="es">Fundado por Ramon Pepa</span><span class="en">Founded by Ramon Pepa</span></div>
+</div>
+
+<div class="s" id="s-problem">
+  <div class="row" style="gap:70px;align-items:center">
+    <div class="cal" data-at="p1:0.05" data-pop><div class="ch">INDEC</div><div class="cb">1</div><div class="cf"><span class="es">VEZ POR MES</span><span class="en">ONCE A MONTH</span></div></div>
+    <div class="h2 mut" data-at="p1:0.55" style="max-width:420px"><span class="es">← mira para atrás</span><span class="en">← looks backwards</span></div>
+  </div>
+  <div class="row" style="margin-top:20px">
+    <span class="tag3" data-at="p2:0.02" data-pop><small class="es">todos los días</small><small class="en">every day</small><span class="es">promo que termina</span><span class="en">promotion ends</span></span>
+    <span class="tag3" data-at="p2:0.35" data-pop style="background:var(--red)"><small class="es">todos los días</small><small class="en">every day</small><span class="es">aumento de lista</span><span class="en">list price up</span></span>
+    <span class="tag3" data-at="p2:0.62" data-pop style="background:#345E74"><small class="es">todos los días</small><small class="en">every day</small><span class="es">fin de semana</span><span class="en">weekend</span></span>
+  </div>
+</div>
+
+<div class="s" id="s-what">
+  <div class="lbl" data-at="w1:0.0"><span class="es">Qué es</span><span class="en">What it is</span></div>
+  <div class="h1" data-at="w1:0.05" data-pop><span class="es">Todos los días</span><span class="en">Every single day</span></div>
+  <div class="h2 mut" data-at="w1:0.3"><span class="es">cuánto cuestan los productos básicos<br>en los principales súper del país</span><span class="en">what everyday products cost<br>in the country's main supermarkets</span></div>
+  <div class="chip sunb" data-at="w1:0.72" data-pop><span class="es">Desde el 24 de octubre de 2026</span><span class="en">Since 24 October 2026</span></div>
+  <div class="row" style="margin-top:20px">
+    <span class="chip" data-at="w2:0.1"><span class="red">✕</span><span class="es">supermercados</span><span class="en">supermarkets</span></span>
+    <span class="chip" data-at="w2:0.4"><span class="red">✕</span> INDEC</span>
+    <span class="chip" data-at="w2:0.65"><span class="red">✕</span><span class="es">gobierno</span><span class="en">government</span></span>
+  </div>
+  <div class="lbl" data-at="w2:0.3" style="letter-spacing:3px;text-transform:none;font-size:30px"><span class="es">Independiente. Sin vínculo con nadie.</span><span class="en">Independent. No links to anyone.</span></div>
+</div>
+
+<div class="s" id="s-shops">
+  <div class="row" data-at="g1:0.0"><span class="chip celb">⏰ 10:23 · Buenos Aires</span><span class="chip"><span class="es">todas las mañanas</span><span class="en">every morning</span></span></div>
+  <div id="arc"></div>
+  <div class="big sun" data-cnt="10712" data-at="g1:0.78" data-dur="2.2">0</div>
+  <div class="lbl" data-at="g1:0.8"><span class="es">precios guardados el 4/11/2026</span><span class="en">prices saved on 4 Nov 2026</span></div>
+</div>
+
+<div class="s" id="s-products">
+  <div class="row" style="align-items:baseline;gap:30px"><div class="big sun" data-cnt="567" data-at="g2:0.02" data-dur="1.6">0</div><div class="h2" data-at="g2:0.02"><span class="es">productos</span><span class="en">products</span></div></div>
+  <div class="row" data-at="g2:0.2"><span class="chip celb"><span class="es">33 tipos</span><span class="en">33 kinds</span></span><span class="chip"><span class="es">hasta 5 por tipo y súper</span><span class="en">up to 5 per kind and shop</span></span></div>
+  <div id="pgrid"></div>
+</div>
+
+<div class="s" id="s-compare">
+  <div class="lbl" data-at="c1:0.0"><span class="es">mismo producto · mismo súper</span><span class="en">same product · same shop</span></div>
+  <div class="cmpwrap">
+    <div class="pc" data-at="c1:0.1" data-pop><div class="d"><span class="es">AYER · 27/10</span><span class="en">YESTERDAY · 27/10</span></div><div class="n"><span class="es">Leche clásica 1 L<br>Carrefour</span><span class="en">Whole milk 1 L<br>Carrefour</span></div><div class="p"><span class="es">$2.915</span><span class="en">$2,915</span></div></div>
+    <div class="arrowb sun" data-at="c1:0.5">→</div>
+    <div class="pc" data-at="c1:0.6" data-pop><div class="d"><span class="es">HOY · 28/10</span><span class="en">TODAY · 28/10</span></div><div class="n"><span class="es">Leche clásica 1 L<br>Carrefour</span><span class="en">Whole milk 1 L<br>Carrefour</span></div><div class="p"><span class="es">$3.030</span><span class="en">$3,030</span></div></div>
+  </div>
+  <div class="chip fill" data-at="c1:0.85" data-pop><span class="es">+3,9%</span><span class="en">+3.9%</span></div>
+  <div class="row" style="margin-top:10px">
+    <div class="pc off" data-at="c2:0.05" data-pop style="width:460px"><div class="d"><span class="es">SIN STOCK</span><span class="en">OUT OF STOCK</span></div><div class="n"><span class="es">Se saltea.</span><span class="en">Skipped.</span></div><div class="p" style="font-size:60px">—</div></div>
+    <div class="h2" data-at="c2:0.55" data-pop><span class="es">Nunca se inventa<br>un precio.</span><span class="en">A price is never<br>made up.</span></div>
+  </div>
+</div>
+
+<div class="s" id="s-rules">
+  <div class="cmpwrap">
+    <div class="pc" data-at="c3:0.05" data-pop><div class="d"><span class="es">AYER</span><span class="en">YESTERDAY</span></div><div class="n"><span class="es">Cualquier producto</span><span class="en">Any product</span></div><div class="p"><span class="es">$1.200</span><span class="en">$1,200</span></div></div>
+    <div class="arrowb red" data-at="c3:0.3">×3</div>
+    <div class="pc" data-at="c3:0.35" data-pop><div class="d"><span class="es">HOY</span><span class="en">TODAY</span></div><div class="n"><span class="es">Cualquier producto</span><span class="en">Any product</span></div><div class="p red"><span class="es">$3.900</span><span class="en">$3,900</span></div></div>
+  </div>
+  <div class="stamp r" data-at="c3:0.72" data-pop data-sfx="stamp"><span class="es">ERROR · NO CUENTA</span><span class="en">ERROR · NOT COUNTED</span></div>
+</div>
+
+<div class="s" id="s-groups">
+  <div class="lbl" data-at="i1:0.0"><span class="es">ponderaciones INDEC · ENGHo</span><span class="en">INDEC weights · household survey</span></div>
+  <div id="gbars"></div>
+  <div class="chip sunb" data-at="i1:0.8" data-pop><span class="es">= el índice del día</span><span class="en">= the index of the day</span></div>
+</div>
+
+<div class="s" id="s-index">
+  <div class="row" data-at="i2:0.0"><span class="chip celb"><span class="es">semana del 24 al 30 de octubre = 100</span><span class="en">week of 24 to 30 October = 100</span></span></div>
+  <div id="chartbox" data-at="i2:0.05"></div>
+  <div class="legend" data-at="i2:0.5"><span><span class="es">precio pagado (con promos)</span><span class="en">price paid (with promotions)</span></span><span class="l2"><span class="es">precio de lista (sin promos)</span><span class="en">list price (without promotions)</span></span></div>
+  <div class="chip fill" data-at="s5:0.7" data-pop>lacanastaindex.com</div>
+</div>
+
+<div class="s" id="s-web">
+  <div class="bwrap">
+    <div class="browser" data-at="b1:0.0"><div class="tb"><i></i><i></i><i></i><b>lacanastaindex.com</b></div><div class="shot" id="shot-web"><img src="../shots/home.jpg"></div></div>
+    <div class="over" id="over-web"></div>
+  </div>
+</div>
+<div class="s" id="s-rank">
+  <div class="bwrap">
+    <div class="browser" data-at="b2:0.0"><div class="tb"><i></i><i></i><i></i><b>lacanastaindex.com/#shops</b></div><div class="shot"><img src="../shots/rank.jpg"></div></div>
+    <div class="over"><span class="chip sunb" data-at="b2:0.2" data-pop><span class="es">mismo código de barras</span><span class="en">same barcode</span></span><span class="chip" data-at="b2:0.5" data-pop><span class="es">en los 4 súper</span><span class="en">in the 4 shops</span></span><span class="chip fill" data-at="b2:0.75" data-pop><span class="es">¿cuál es más barato?</span><span class="en">which is cheapest?</span></span></div>
+  </div>
+</div>
+<div class="s" id="s-prices">
+  <div class="bwrap">
+    <div class="browser" data-at="b3:0.0"><div class="tb"><i></i><i></i><i></i><b>lacanastaindex.com/precios/leche.html</b></div><div class="shot" id="shot-prices"><img src="../shots/leche.jpg"></div></div>
+    <div class="over"><span class="chip sunb" data-at="b3:0.15" data-pop><span class="es">leche · yerba · aceite · arroz</span><span class="en">milk · yerba · oil · rice</span></span><span class="chip" data-at="b3:0.5" data-pop><span class="es">precio de hoy, por litro o kilo</span><span class="en">today's price, per litre or kilo</span></span><span class="chip fill" data-at="b3:0.75" data-pop><span class="es">en qué súper conviene</span><span class="en">which shop is the best deal</span></span></div>
+  </div>
+</div>
+<div class="s" id="s-reports">
+  <div class="row" style="gap:40px">
+    <div class="pdf" data-at="b4:0.05" data-pop><span class="es">Semanal</span><span class="en">Weekly</span><i></i><i style="width:80px"></i><small>PDF · ES</small></div>
+    <div class="pdf" data-at="b4:0.15" data-pop><span class="es">Mensual</span><span class="en">Monthly</span><i></i><i style="width:80px"></i><small>PDF · ES</small></div>
+    <div class="pdf" data-at="b4:0.25" data-pop><span class="es">Semanal</span><span class="en">Weekly</span><i></i><i style="width:80px"></i><small>PDF · EN</small></div>
+    <div class="pdf" data-at="b4:0.35" data-pop><span class="es">Mensual</span><span class="en">Monthly</span><i></i><i style="width:80px"></i><small>PDF · EN</small></div>
+  </div>
+  <div class="row" data-at="b4:0.6" data-pop><span class="chip sunb" style="font-size:40px">✉ <span class="es">El informe de cada mes, por email</span><span class="en">Each month's report, by email</span></span></div>
+  <div class="chip" data-at="b4:0.8"><span class="es">suscribite en lacanastaindex.com</span><span class="en">subscribe at lacanastaindex.com</span></div>
+</div>
+<div class="s" id="s-data">
+  <div class="lbl" data-at="b5:0.0"><span class="es">datos abiertos</span><span class="en">open data</span></div>
+  <div class="row" style="gap:30px">
+    <div class="badge" data-at="b5:0.08" data-pop><div><small>CSV</small><span class="es">todos los precios</span><span class="en">every price</span></div></div>
+    <div class="badge" data-at="b5:0.25" data-pop><div><small><span class="es">desde el primer día</span><span class="en">since day one</span></small>24/10/2026 →</div></div>
+  </div>
+  <div class="row" style="gap:30px">
+    <div class="badge" data-at="b5:0.55" data-pop><div><small>Kaggle</small>dataset</div></div>
+    <div class="badge" data-at="b5:0.68" data-pop><div><small>Zenodo</small>DOI</div></div>
+    <div class="badge" data-at="b5:0.85" data-pop><div><small><span class="es">licencia</span><span class="en">licence</span></small>CC BY 4.0</div></div>
+  </div>
+</div>
+
+<div class="s" id="s-agents">
+  <div class="row" style="align-items:baseline;gap:26px"><div class="big sun" data-at="s7:0.02" data-pop>7</div><div class="h2" data-at="s7:0.02"><span class="es">agentes de IA</span><span class="en">AI agents</span></div></div>
+  <div id="agrow"></div>
+  <div class="chip" data-at="a0:0.75"><span class="es">trabajan todos los días</span><span class="en">work every day</span></div>
+</div>
+<div class="s" id="s-ag1"><div class="agsc"><div class="agbig" id="agb1"></div><div class="demo" data-at="a1:0.25">
+  <div class="ln"><span class="es">¿Llegaron los precios de hoy?</span><span class="en">Did today's prices arrive?</span><b class="grn" data-at="a1:0.35">✓ 14:33</b></div>
+  <div class="ln"><span class="es">¿Falta algún día desde el 24/10?</span><span class="en">Any day missing since 24/10?</span><b class="grn" data-at="a1:0.45">✓ no</b></div>
+  <div class="ln"><span class="es">Si falta algo:</span><span class="en">If something is missing:</span><b class="sun" data-at="a1:0.7"><span class="es">reinicia + avisa</span><span class="en">restart + alert</span></b></div>
+  <div class="ln mut"><span class="es">3 veces por día</span><span class="en">3 times a day</span><span>15:13 · 18:13 · 21:13</span></div></div></div></div>
+<div class="s" id="s-ag2"><div class="agsc"><div class="agbig" id="agb2"></div><div class="demo" data-at="a2:0.2">
+  <div class="ln"><span class="es">Saltos de precio más grandes</span><span class="en">Biggest price jumps</span><b class="mut">01:41</b></div>
+  <div class="ln"><span class="es">Pollo x kg · Día · 2.990 → 4.390</span><span class="en">Chicken per kg · Día · 2,990 → 4,390</span><b class="sun" data-at="a2:0.4"><span class="es">promo sin marcar</span><span class="en">unmarked promo</span></b></div>
+  <div class="ln"><span class="es">Cif 500 ml · Carrefour · 3.565 → 5.485</span><span class="en">Cif 500 ml · Carrefour · 3,565 → 5,485</span><b class="grn" data-at="a2:0.5"><span class="es">real</span><span class="en">real</span></b></div>
+  <div class="ln"><span class="es">Si tiene dudas</span><span class="en">If in doubt</span><b class="cel" data-at="a2:0.85"><span class="es">no toca nada</span><span class="en">touches nothing</span></b></div></div></div></div>
+<div class="s" id="s-ag3"><div class="agsc"><div class="agbig" id="agb3"></div><div class="demo" data-at="a3:0.2">
+  <div class="ln"><span class="es">Revisando los últimos 7 días…</span><span class="en">Checking the last 7 days…</span><b class="mut"><span class="es">domingo</span><span class="en">Sunday</span></b></div>
+  <div class="ln"><span class="es">¿Cambió el tamaño?</span><span class="en">Did the size change?</span><b class="sun" data-at="a3:0.55">500 g → 450 g</b></div>
+  <div class="ln"><span class="es">¿Un súper dejó de cargar?</span><span class="en">Did a shop stop loading?</span><b class="red" data-at="a3:0.8">−38%</b></div></div></div></div>
+<div class="s" id="s-ag4"><div class="agsc"><div class="agbig" id="agb4"></div><div class="demo" data-at="a4:0.2">
+  <div class="ln"><span>INDEC · <span class="es">alimentos y bebidas</span><span class="en">food and drinks</span></span><b class="mut" data-at="a4:0.3"><span class="es">esperando el dato…</span><span class="en">waiting for the figure…</span></b></div>
+  <div class="ln"><span>La Canasta · <span class="es">supermercados</span><span class="en">supermarkets</span></span><b class="sun" data-at="a4:0.3"><span class="es">listo el día 1</span><span class="en">ready on the 1st</span></b></div>
+  <div class="ln"><span class="es">Los pone uno al lado del otro</span><span class="en">Puts them side by side</span><b class="grn" data-at="a4:0.75"><span class="es">para comparar</span><span class="en">to compare</span></b></div></div></div></div>
+<div class="s" id="s-ag5"><div class="agsc"><div class="agbig" id="agb5"></div><div class="demo" data-at="a5:0.2">
+  <div class="ln"><b class="es">Borrador · informe de noviembre</b><b class="en">Draft · November report</b><b class="mut">28–31</b></div>
+  <div class="ln mut"><span data-type="a5:0.35" data-tdur="1.4" class="es">Las promos empujaron el precio pagado…</span><span data-type="a5:0.35" data-tdur="1.4" class="en">Promotions pushed the price paid…</span></div>
+  <div class="ln mut"><span data-type="a5:0.6" data-tdur="1.2" class="es">El grupo que más subió fue…</span><span data-type="a5:0.6" data-tdur="1.2" class="en">The group that rose most was…</span></div></div></div></div>
+<div class="s" id="s-ag6"><div class="agsc"><div class="agbig" id="agb6"></div><div class="demo mono" data-at="a6:0.15" style="font-size:30px">
+  <div class="ln"><span>$ python verify_index.py</span></div>
+  <div class="ln"><span class="es">recalculando desde cero…</span><span class="en">recalculating from zero…</span><b class="grn" data-at="a6:0.4">OK</b></div>
+  <div class="ln"><span class="es">567 productos · 12 días</span><span class="en">567 products · 12 days</span><b class="grn" data-at="a6:0.5">OK</b></div>
+  <div class="ln"><span class="es">si algo no cierra:</span><span class="en">if something is off:</span><b class="red" data-at="a6:0.8"><span class="es">NO MANDAR</span><span class="en">DO NOT SEND</span></b></div></div></div></div>
+<div class="s" id="s-ag7"><div class="agsc"><div class="agbig" id="agb7"></div><div class="demo" data-at="a7:0.2">
+  <div class="ln"><span class="es">Datos del día</span><span class="en">Day's data</span><b class="grn" data-at="a7:0.3">14:41</b></div>
+  <div class="ln"><span class="es">Guion + voz + música</span><span class="en">Script + voice + music</span><b class="sun" data-at="a7:0.5">🎬 ×2</b></div>
+  <div class="ln"><span class="es">YouTube Shorts y X</span><span class="en">YouTube Shorts and X</span><b class="cel" data-at="a7:0.8">@LaCanastaIndex</b></div></div></div></div>
+
+<div class="s" id="s-ok">
+  <div class="lbl" data-at="ok:0.0"><span class="es">y al final</span><span class="en">and in the end</span></div>
+  <div class="stamp" data-at="ok:0.3" data-pop data-sfx="stamp"><span class="es">VISTO BUENO</span><span class="en">APPROVED</span></div>
+  <div class="sig" data-at="ok:0.6" data-pop>Ramon Pepa</div>
+  <div class="chip fill" data-at="ok:0.8"><span class="es">fundador</span><span class="en">founder</span></div>
+</div>
+
+<div class="s" id="s-close">
+  <div class="three">
+    <div class="h2" data-at="e1:0.05" data-pop><span class="es">Independiente</span><span class="en">Independent</span></div>
+    <div class="h2" data-at="e1:0.18" data-pop><span class="es">Abierta</span><span class="en">Open</span></div>
+    <div class="h2 sun" data-at="e1:0.3" data-pop><span class="es">Gratis</span><span class="en">Free</span></div>
+  </div>
+  <div class="row" style="margin-top:20px">
+    <span class="chip" data-at="e1:0.5"><span class="es">periodistas</span><span class="en">journalists</span></span>
+    <span class="chip" data-at="e1:0.62"><span class="es">investigadores</span><span class="en">researchers</span></span>
+    <span class="chip sunb" data-at="e1:0.78"><span class="es">y vos</span><span class="en">and you</span></span>
+  </div>
+</div>
+
+<div class="s" id="s-end">
+  <img src="../../assets/la-canasta-icon-white.svg" style="width:300px" data-at="s8:0.0" data-pop>
+  <div class="word" data-at="s8:0.0">La Canasta</div>
+  <div class="chip fill" data-at="s8:0.15" data-pop style="font-size:46px">lacanastaindex.com</div>
+  <div class="soc" data-at="s8:0.35"><span class="chip celb">▶ YouTube · @LaCanastaIndex</span><span class="chip celb">𝕏 · @LaCanastaIndex</span></div>
+  <div class="chip" data-at="s8:0.55" data-pop><span class="es">Fundado por Ramon Pepa</span><span class="en">Founded by Ramon Pepa</span></div>
+</div>
+
+</div>
+
+<div id="cap"></div><div id="bar"></div>
+<div id="thumb">
+  <img src="../../assets/la-canasta-icon-white.svg" style="width:240px">
+  <div class="t1"><span class="es">¿Qué es</span><span class="en">What is</span></div>
+  <div class="t2">La Canasta?</div>
+  <div class="t3"><span class="es">el índice de precios del súper · todos los días</span><span class="en">the supermarket price index · every day</span></div>
+</div>
+
+<script>
+const LANG = location.pathname.includes("-en") ? "en" : "es";
+const WIDE = location.pathname.includes("wide-");
+document.documentElement.lang = LANG; if (WIDE) document.body.classList.add("wide");
+window.CAPW = WIDE ? 1700 : 1000; window.CHUNK = WIDE ? 4 : 3;
+const T = (es, en) => LANG === "en" ? en : es;
+const fmt = n => Math.round(n).toLocaleString(LANG === "en" ? "en-US" : "es-AR");
+const S = { "s-end": "s8", };
+// scene keys differ between the short and the long script: alias the long keys to the short ones when needed
+const ALIAS = { g1: "s3", g2: "s4", i1: "s5", i2: "s5", b1: "s6", b2: "s6", b3: "s6", b4: "s6", b5: "s6", a0: "s7", e2: "s8", s7: "a0", s8: "e2", s5: "i2", s3: "g1", s4: "g2", s6: "b1" };
+
+const ICON = {
+ shield: '<path d="M40 8 L68 18 V40 C68 58 54 70 40 74 C26 70 12 58 12 40 V18 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M28 40 L37 49 L54 31" fill="none" stroke="#E09A3A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>',
+ glass: '<circle cx="34" cy="34" r="20" fill="none" stroke="#fff" stroke-width="6"/><path d="M49 49 L70 70" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M24 34 H44" stroke="#E09A3A" stroke-width="5" stroke-linecap="round"/>',
+ clip: '<rect x="16" y="14" width="48" height="58" rx="6" fill="none" stroke="#fff" stroke-width="6"/><rect x="30" y="8" width="20" height="12" rx="3" fill="#fff"/><path d="M26 42 L35 51 L54 32" fill="none" stroke="#E09A3A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>',
+ eye: '<path d="M8 40 C20 20 60 20 72 40 C60 60 20 60 8 40 Z" fill="none" stroke="#fff" stroke-width="6"/><circle cx="40" cy="40" r="11" fill="#E09A3A"/>',
+ pen: '<path d="M18 62 L22 48 L52 18 L62 28 L32 58 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M14 70 H66" stroke="#E09A3A" stroke-width="6" stroke-linecap="round"/>',
+ calc: '<rect x="18" y="10" width="44" height="60" rx="6" fill="none" stroke="#fff" stroke-width="6"/><rect x="26" y="18" width="28" height="12" rx="2" fill="#E09A3A"/><circle cx="30" cy="42" r="4" fill="#fff"/><circle cx="40" cy="42" r="4" fill="#fff"/><circle cx="50" cy="42" r="4" fill="#fff"/><circle cx="30" cy="56" r="4" fill="#fff"/><circle cx="40" cy="56" r="4" fill="#fff"/><circle cx="50" cy="56" r="4" fill="#fff"/>',
+ clap: '<path d="M12 32 H68 V66 a4 4 0 0 1 -4 4 H16 a4 4 0 0 1 -4 -4 Z" fill="none" stroke="#fff" stroke-width="6"/><path d="M12 32 L20 14 L66 22 L62 32" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M28 16 L36 30 M44 19 L52 32" stroke="#E09A3A" stroke-width="5"/>'
+};
+const AG = [
+ ["ag1", T("El Guardián","The Guardian"), T("3 veces por día","3 times a day"), "shield"],
+ ["ag2", T("El Revisor","The Reviewer"), T("cada noche","every night"), "glass"],
+ ["ag3", T("El Auditor","The Auditor"), T("cada domingo","every Sunday"), "clip"],
+ ["ag4", T("El Vigía del INDEC","The INDEC Watcher"), T("del 10 al 20","10th to 20th"), "eye"],
+ ["ag5", T("El Asistente","The Assistant"), T("fin de mes","month end"), "pen"],
+ ["ag6", T("El Verificador","The Verifier"), T("antes del informe","before the report"), "calc"],
+ ["ag7", T("El Realizador","The Filmmaker"), T("2 videos por día","2 videos a day"), "clap"]
+];
+const PROD = [
+ [T("Leche","Milk"), '<rect x="26" y="26" width="38" height="56" rx="4" fill="#fff" stroke="#2B3B5C" stroke-width="5"/><path d="M26 34 L34 14 H56 L64 34" fill="#7FB1C6" stroke="#2B3B5C" stroke-width="5" stroke-linejoin="round"/><rect x="34" y="48" width="22" height="18" fill="#7FB1C6"/>'],
+ [T("Pan","Bread"), '<path d="M14 54 C14 34 30 26 45 26 C60 26 76 34 76 54 V66 H14 Z" fill="#E09A3A" stroke="#2B3B5C" stroke-width="5"/><path d="M30 38 L36 46 M44 36 L50 44 M58 38 L64 46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'],
+ [T("Yerba","Yerba"), '<rect x="20" y="18" width="50" height="64" rx="6" fill="#2D7A57" stroke="#2B3B5C" stroke-width="5"/><rect x="28" y="30" width="34" height="30" rx="4" fill="#fff"/><path d="M34 48 C40 36 50 36 56 48" fill="none" stroke="#2D7A57" stroke-width="4"/>'],
+ [T("Aceite","Oil"), '<path d="M36 12 H54 V26 C64 30 66 40 66 50 V76 a6 6 0 0 1 -6 6 H30 a6 6 0 0 1 -6 -6 V50 C24 40 26 30 36 26 Z" fill="#E8C35A" stroke="#2B3B5C" stroke-width="5" stroke-linejoin="round"/><rect x="32" y="48" width="26" height="18" rx="3" fill="#fff"/>'],
+ [T("Pollo","Chicken"), '<ellipse cx="38" cy="40" rx="24" ry="20" fill="#E8B38A" stroke="#2B3B5C" stroke-width="5"/><path d="M58 50 L74 66" stroke="#2B3B5C" stroke-width="8" stroke-linecap="round"/><circle cx="76" cy="68" r="6" fill="#fff" stroke="#2B3B5C" stroke-width="4"/>'],
+ [T("Tomate","Tomato"), '<circle cx="45" cy="50" r="26" fill="#E0624A" stroke="#2B3B5C" stroke-width="5"/><path d="M45 24 C40 14 50 10 54 18 M45 24 C50 14 36 10 36 20" fill="none" stroke="#2D7A57" stroke-width="5" stroke-linecap="round"/>'],
+ [T("Lavandina","Bleach"), '<path d="M34 12 H56 V24 L64 32 V78 a4 4 0 0 1 -4 4 H30 a4 4 0 0 1 -4 -4 V32 L34 24 Z" fill="#fff" stroke="#2B3B5C" stroke-width="5" stroke-linejoin="round"/><rect x="34" y="44" width="22" height="22" rx="3" fill="#7FB1C6"/>'],
+ [T("Arroz","Rice"), '<path d="M22 22 H68 L64 82 H26 Z" fill="#fff" stroke="#2B3B5C" stroke-width="5" stroke-linejoin="round"/><ellipse cx="45" cy="52" rx="14" ry="18" fill="#E09A3A"/>']
+];
+const SHOPS = [["Carrefour","b"],["Jumbo","g"],["ChangoMás","n"],["Día","r"],["Coto","aw"]];
+const GROUPS = [["pan_cereales",T("Pan y cereales","Bread, cereals"),19.1],["lacteos",T("Lácteos y huevos","Dairy, eggs"),16.2],["otros",T("Otros alimentos","Other food"),11.3],["verduras",T("Verduras","Vegetables"),9.9],["gaseosas",T("Aguas y gaseosas","Drinks"),9.7],["pollo",T("Pollo","Chicken"),9.2],["limpieza",T("Limpieza","Cleaning"),6.3],["azucar",T("Azúcar y dulces","Sugar, sweets"),5.5],["frutas",T("Frutas","Fruit"),4.4],["alcohol",T("Bebidas alcohólicas","Alcohol"),3.8],["cafe",T("Café, té y yerba","Coffee, tea, yerba"),3.0],["aceites",T("Aceites","Oils"),1.4]];
+const DAILY = [["24/10",98.266,99.808],["25/10",99.41,99.808],["26/10",100.742,99.895],["27/10",101.135,99.776],["28/10",100.694,100.252],["29/10",100.48,100.175],["30/10",99.272,100.286],["31/10",99.376,99.812],["1/11",99.458,99.792],["2/11",99.853,99.669],["3/11",101.191,99.889],["4/11",98.487,99.042]];
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+window.SETUP = function () {
+  const keys = new Set(TL.lines.map(l => l.k));
+  // floating price tags in the background
+  const tags = LANG === "en" ? ["$2,019", "−35%", "+3.9%", "$5,060", "$1,240", "+0.8%", "$3,030", "−44%", "$17,299", "+1.2%", "$999", "−25%", "$4,390", "+2.3%"] : ["$2.019", "−35%", "+3,9%", "$5.060", "$1.240", "+0,8%", "$3.030", "−44%", "$17.299", "+1,2%", "$999", "−25%", "$4.390", "+2,3%"];
+  const W = WIDE ? 1920 : 1080, H = WIDE ? 1080 : 1920;
+  const tg = document.getElementById("tags");
+  tags.forEach((t, i) => { const d = document.createElement("div"); d.className = "ptag"; d.textContent = t;
+    const z = 0.4 + (i % 5) * 0.2; d.style.fontSize = (34 * z) + "px"; d._x = (i * 173) % W; d._y = (i * 419) % H; d._z = z; tg.appendChild(d); });
+  // logo in pieces (the official icon)
+  document.getElementById("logo3d").innerHTML = `<svg viewBox="218 186 534 534">
+   <g id="lg-handle"><path d="M288.5 452V430A196 196 0 0 1 680.5 430V452" fill="none" stroke="#F4F7FB" stroke-width="23"/></g>
+   <g id="lg-b1"><rect x="344.5" y="362.5" width="72" height="77.5" fill="#F4F7FB"/></g>
+   <g id="lg-b2"><rect x="448.5" y="289.5" width="72" height="150.5" fill="#F4F7FB"/></g>
+   <g id="lg-b3"><rect x="552.5" y="216.5" width="72" height="223.5" fill="#F4F7FB"/></g>
+   <g id="lg-rim"><rect x="242" y="436" width="486" height="32" fill="#F4F7FB"/></g>
+   <g id="lg-body"><clipPath id="lcb"><path d="M261 488H708L661.5 642H307.5Z"/></clipPath><g clip-path="url(#lcb)"><rect x="250" y="488" width="470" height="51.33" fill="#7FB1C6"/><rect x="250" y="539.33" width="470" height="51.33" fill="#FFFFFF"/><rect x="250" y="590.67" width="470" height="52.33" fill="#7FB1C6"/></g><path d="M261 488H708L661.5 642H307.5Z" fill="none" stroke="#F4F7FB" stroke-width="8" stroke-linejoin="round"/><path d="M314 661H655L646.5 690H322.5Z" fill="#F4F7FB"/></g>
+   <g id="lg-sun"><circle cx="484.5" cy="565" r="13" fill="#E09A3A"/><g stroke="#E09A3A" stroke-width="4" stroke-linecap="round">${[...Array(12)].map((_, i) => { const a = i * Math.PI / 6; return `<path d="M${484.5 + 18 * Math.cos(a)} ${565 + 18 * Math.sin(a)} L${484.5 + 26 * Math.cos(a)} ${565 + 26 * Math.sin(a)}"/>` }).join("")}</g></g>
+  </svg>`;
+  // shops arc
+  const arc = document.getElementById("arc");
+  SHOPS.forEach(([n, c], i) => { const d = document.createElement("div"); d.className = "shop"; d.innerHTML = `<div class="aw ${c}"></div><div class="win"></div><div class="door"></div><div class="nm">${n}</div>`; d.dataset.at = `g1:${0.28 + i * 0.1}`; d._i = i; arc.appendChild(d); });
+  // products
+  const pg = document.getElementById("pgrid");
+  PROD.forEach(([n, svg], i) => { const d = document.createElement("div"); d.className = "prod"; d.innerHTML = `<svg viewBox="0 0 90 90">${svg}</svg>${n}`; d.dataset.at = `g2:${0.22 + i * 0.07}`; d.setAttribute("data-pop", ""); pg.appendChild(d); });
+  // groups bars
+  const gb = document.getElementById("gbars"); const maxv = 19.1; const hmax = WIDE ? 300 : 210;
+  GROUPS.forEach(([id, n, v], i) => { const d = document.createElement("div"); d.className = "gb";
+    d.innerHTML = `<div class="pct" data-at="i1:${0.12 + i * 0.055}">${LANG === "en" ? v.toFixed(1) : v.toFixed(1).replace(".", ",")}%</div><div class="col" style="height:${hmax * v / maxv}px"><div class="face" data-grow="h:${Math.round(hmax * v / maxv)}" data-at="i1:${0.1 + i * 0.055}" data-fade></div></div><div class="nm">${n}</div>`; gb.appendChild(d); });
+  // chart
+  const cw = WIDE ? 1600 : 880, ch = WIDE ? 420 : 520, L = 90, R = 30, Tp = 30, B = 50; const lo = 97.5, hi = 102;
+  const x = i => L + (cw - L - R) * i / (DAILY.length - 1), y = v => Tp + (ch - Tp - B) * (1 - (v - lo) / (hi - lo));
+  let svg = `<svg viewBox="0 0 ${cw} ${ch}"><rect x="${x(0)}" y="${Tp}" width="${x(6) - x(0)}" height="${ch - Tp - B}" fill="rgba(127,177,198,.12)"/>`;
+  for (const v of [98, 99, 100, 101, 102]) svg += `<line x1="${L}" x2="${cw - R}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 100 ? 'rgba(255,255,255,.5)' : 'rgba(127,177,198,.25)'}" stroke-width="${v === 100 ? 3 : 2}"/><text x="${L - 14}" y="${y(v) + 8}" text-anchor="end">${v}</text>`;
+  DAILY.forEach(([d], i) => { if (i % (WIDE ? 1 : 2) === 0 || i === DAILY.length - 1) svg += `<text x="${x(i)}" y="${ch - 14}" text-anchor="middle">${d}</text>`; });
+  const path = k => DAILY.map((r, i) => `${i ? "L" : "M"}${x(i)},${y(r[k])}`).join(" ");
+  svg += `<path id="ln2" d="${path(2)}" fill="none" stroke="#7FB1C6" stroke-width="6" stroke-linejoin="round"/><path id="ln1" d="${path(1)}" fill="none" stroke="#E09A3A" stroke-width="8" stroke-linejoin="round"/>`;
+  svg += `<text x="${x(3)}" y="${Tp + 26}" text-anchor="middle" fill="#F4F7FB" style="font-size:24px">${T("semana base = 100", "base week = 100")}</text></svg>`;
+  document.getElementById("chartbox").innerHTML = svg;
+  for (const id of ["ln1", "ln2"]) { const p = document.getElementById(id); const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len; p._len = len; }
+  // agents row and big cards
+  const ar = document.getElementById("agrow");
+  AG.forEach(([id, n, when, ic], i) => { const d = document.createElement("div"); d.className = "ag"; d.innerHTML = `<div class="ic"><svg viewBox="0 0 80 80">${ICON[ic]}</svg></div><b>${n}</b><small>${when}</small>`;
+    d.dataset.part = `s7:${i + 1}`; d.dataset.alt = `a0:${0.45 + i * 0.07}`; ar.appendChild(d);
+    const b = document.getElementById("agb" + (i + 1)); if (b) { b.innerHTML = `<div class="ic"><svg viewBox="0 0 80 80">${ICON[ic]}</svg></div><b>${n}</b><span class="chip">${when}</span>`; b.dataset.at = `a${i + 1}:0.0`; b.setAttribute("data-pop", ""); } });
+  // 4 screenshots cycling in the short's single web scene
+  const ov = document.getElementById("over-web");
+  if (!keys.has("b2")) { ov.innerHTML = [[T("el índice del día", "the index of the day"), 0.0], [T("qué súper es más barato", "the cheapest supermarket"), 0.3], [T("el precio de cada producto", "the price of every product"), 0.55], [T("informes semanales y mensuales", "weekly and monthly reports"), 0.8]].map(([t, f], i) => `<span class="chip ${i % 2 ? 'sunb' : 'celb'}" data-at="s6:${f}" data-pop>${t}</span>`).join(""); }
+  else ov.innerHTML = `<span class="chip sunb" data-at="b1:0.45" data-pop>${T("el índice del día", "the index of the day")}</span><span class="chip" data-at="b1:0.7" data-pop>${T("con su gráfico", "with its chart")}</span>`;
+  // data-part: anchor to the start of a spoken part (split by punctuation) of a line
+  document.querySelectorAll("[data-part]").forEach(e => { const [k, i] = e.dataset.part.split(":"); const l = TL.lines.find(x => x.k === k);
+    if (l && l.parts) { const P = l.parts; const p = P[+i] || P[P.length - 1]; const st = P[+i] ? p.start : p.start + 0.55 * (p.end - p.start); e.dataset.at = `${k}:${((st - l.start) / l.dur).toFixed(3)}`; }
+    else if (e.dataset.alt) e.dataset.at = e.dataset.alt; e.setAttribute("data-pop", ""); });
+  if (keys.has("b2")) document.querySelector("#s-index .chip.fill").remove();
+  // keys differ between the short and the long script: map the missing ones
+  document.querySelectorAll("[data-at],[data-type]").forEach(e => {
+    for (const a of ["at", "type"]) { const v = e.dataset[a]; if (!v) continue; const k = v.split(":")[0];
+      if (!keys.has(k) && ALIAS[k] && keys.has(ALIAS[k])) e.dataset[a] = ALIAS[k] + ":" + v.split(":")[1]; }
+  });
+};
+const ez = x => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const at2 = spec => { const [k, fr] = spec.split(":"); const l = TL.lines.find(x => x.k === k); return l ? l.start + parseFloat(fr || 0) * l.dur : 1e9; };
+let ST = {};
+window.EXTRA = function (t, L) {
+  // thumbnail
+  const th = document.getElementById("thumb"); th.style.opacity = t < 0.8 ? 1 : 1 - cl((t - 0.8) / 0.25); th.style.visibility = t > 1.1 ? "hidden" : "visible";
+  // floor flythrough + tags parallax
+  document.getElementById("floor").style.backgroundPosition = `0 ${(t * 60) % 140}px`;
+  const H = WIDE ? 1080 : 1920;
+  document.querySelectorAll(".ptag").forEach(d => { d.style.left = d._x + "px"; d.style.top = (((d._y - t * 40 * d._z) % H) + H) % H - 60 + "px"; });
+  // logo pieces fly in
+  if (!ST.lg) { ST.lg = at2("s2:0.0"); }
+  const parts = ["lg-body", "lg-rim", "lg-b1", "lg-b2", "lg-b3", "lg-handle", "lg-sun"];
+  parts.forEach((id, i) => { const g = document.getElementById(id); if (!g) return; const p = ez((t - ST.lg - i * 0.12) / 0.5);
+    const rot = id === "lg-sun" ? `rotate(${(1 - p) * 180}deg)` : `rotateY(${(1 - p) * 90}deg) translateZ(${(1 - p) * 300}px)`;
+    g.style.opacity = p; g.style.transform = `${rot} scale(${0.6 + 0.4 * p})`; });
+  const lg = document.getElementById("logo3d"); const pl = cl((t - ST.lg) / 2); lg.style.transform = `rotateY(${Math.sin(t * 0.8) * 10}deg) rotateX(${Math.cos(t * 0.6) * 5}deg)`;
+  // shops arc
+  document.querySelectorAll(".shop").forEach(d => { const i = d._i; const p = ez((t - d._t) / 0.5); d.style.opacity = p;
+    if (WIDE) { const a2 = (i - 2) * 21, r = 1250; d.style.transform = `translateX(${Math.sin(a2 * Math.PI / 180) * r}px) translateZ(${(Math.cos(a2 * Math.PI / 180) * r - r) * 0.5 + (1 - p) * -600}px) rotateY(${-a2 * 0.6}deg) translateY(${(1 - p) * 80}px)`; }
+    else { const pos = [[-320, -190], [0, -190], [320, -190], [-165, 190], [165, 190]][i]; const ry = pos[0] === 0 ? 0 : (pos[0] < 0 ? 14 : -14);
+      d.style.transform = `translateX(${pos[0]}px) translateY(${pos[1] + (1 - p) * 80}px) translateZ(${(1 - p) * -600}px) rotateY(${ry}deg)`; } });
+  // counters
+  document.querySelectorAll("[data-cnt]").forEach(e => { if (e._t === undefined) e._t = at2(e.dataset.at); const d = +(e.dataset.dur || 1.5); e.textContent = fmt(+e.dataset.cnt * ez((t - e._t) / d)); });
+  // chart lines draw
+  if (!ST.ch) ST.ch = at2(document.getElementById("chartbox").dataset.at);
+  for (const id of ["ln1", "ln2"]) { const p = document.getElementById(id); if (p) p.style.strokeDashoffset = p._len * (1 - ez((t - ST.ch - 0.2) / 2.2)); }
+  // browser screenshot pans
+  const pan = (sel, from, to, k) => { const s = document.querySelector(sel); if (!s) return; const l = TL.lines.find(x => x.k === k); if (!l) return; const p = cl((t - l.start) / l.dur); s.firstElementChild.style.transform = `translateY(${-(from + (to - from) * p)}px)`; };
+  if (TL.lines.find(x => x.k === "b1")) pan("#shot-web", 0, 500, "b1");
+  else { const l = TL.lines.find(x => x.k === "s6"); if (l) { const p = cl((t - l.start) / l.dur); const img = document.querySelector("#shot-web img");
+    const src = p < 0.3 ? "home-chart" : p < 0.55 ? "rank" : p < 0.8 ? "leche" : "informes"; if (!img.src.includes(src + ".jpg")) img.src = `../shots/${src}.jpg`;
+    const q = (p % 0.25) / 0.25; img.style.transform = `translateY(${-q * 120}px)`; } }
+  pan("#shot-prices", 0, 420, "b3");
+  // 3D flip of agent cards
+  document.querySelectorAll("#agrow .ag").forEach(d => { if (d._t === undefined) return; const p = ez((t - d._t) / 0.45); d.style.transform = `rotateY(${(1 - p) * 90}deg)`; d.style.opacity = p; });
+  // browser gentle float
+  document.querySelectorAll(".browser").forEach(b => { b.style.transform = (WIDE ? `translateX(-120px) scale(.9) rotateY(${-16 + Math.sin(t * 0.7) * 2}deg) rotateX(4deg)` : `scale(.78) rotateY(${-14 + Math.sin(t * 0.7) * 2}deg) rotateX(5deg)`); });
+};
+</script>
+<script src="../../assets/engine.js"></script>
+</body></html>

@@ -1,0 +1,51 @@
+[
+ {
+  "k": "s1",
+  "scene": "open",
+  "sub": "¿Cuánto subió el súper hoy? Nadie te lo dice. Hasta ahora.",
+  "say": "¿Cuánto subió el súper hoy? Nadie te lo dice. Hasta ahora.",
+  "pre": 0.75
+ },
+ {
+  "k": "s2",
+  "scene": "logo",
+  "sub": "Esto es La Canasta: un índice de precios de supermercado que se mide todos los días, en la Argentina. Empezó el 24 de octubre de 2026.",
+  "say": "Esto es La Canasta: un índice de precios de supermercado que se mide todos los días, en la Argentina. Empezó el veinticuatro de octubre de dos mil veintiséis."
+ },
+ {
+  "k": "s3",
+  "scene": "shops",
+  "sub": "Cada mañana, un programa entra a Carrefour, Jumbo, ChangoMás, Día y Coto, y guarda más de 10.000 precios.",
+  "say": "Cada mañana, un programa entra a Carrefour, Jumbo, ChangoMás, Día y Coto, y guarda más de diez mil precios."
+ },
+ {
+  "k": "s4",
+  "scene": "products",
+  "sub": "Sigue 567 productos de todos los días: leche, yerba, pan, aceite, lavandina. Y compara cada uno consigo mismo, en el mismo súper.",
+  "say": "Sigue quinientos sesenta y siete productos de todos los días: leche, yerba, pan, aceite, lavandina. Y compara cada uno consigo mismo, en el mismo súper."
+ },
+ {
+  "k": "s5",
+  "scene": "index",
+  "sub": "Los agrupa como el INDEC, con sus mismas ponderaciones, y publica el número en lacanastaindex.com.",
+  "say": "Los agrupa como el indec, con sus mismas ponderaciones, y publica el número en la canasta index punto com."
+ },
+ {
+  "k": "s6",
+  "scene": "web",
+  "sub": "Ahí tenés el índice del día, qué súper es más barato, el precio de cada producto, e informes semanales y mensuales.",
+  "say": "Ahí tenés el índice del día, qué súper es más barato, el precio de cada producto, e informes semanales y mensuales."
+ },
+ {
+  "k": "s7",
+  "scene": "agents",
+  "sub": "Siete agentes de inteligencia artificial lo cuidan: el Guardián, el Revisor, el Auditor, el Vigía del INDEC, el Asistente, el Verificador y el Realizador.",
+  "say": "Siete agentes de inteligencia artificial lo cuidan: el Guardián, el Revisor, el Auditor, el Vigía del indec, el Asistente, el Verificador y el Realizador."
+ },
+ {
+  "k": "s8",
+  "scene": "end",
+  "sub": "Datos abiertos y gratis para todos. Fundado por Ramon Pepa. La Canasta. lacanastaindex.com.",
+  "say": "Datos abiertos y gratis para todos. Fundado por Ramón Pepa. La Canasta. la canasta index punto com."
+ }
+]

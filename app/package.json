@@ -1,0 +1,20 @@
+{
+  "name": "la-canasta-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "La Canasta for iPhone and Android: the shopping assistant (where to buy an asado, a healthy week...) with today's prices.",
+  "scripts": {
+    "build": "node build-www.js",
+    "sync": "node build-www.js && npx cap sync",
+    "ios": "node build-www.js && npx cap sync ios && npx cap open ios",
+    "android": "node build-www.js && npx cap sync android && npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.0",
+    "@capacitor/core": "8.6.0",
+    "@capacitor/ios": "8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0"
+  }
+}

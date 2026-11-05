@@ -48,6 +48,9 @@ jobs:
           KAGGLE_API_TOKEN="$(echo "$KAGGLE_API_TOKEN" | sed 's/.*=//; s/[[:space:]]//g')"; export KAGGLE_API_TOKEN
           echo "token: ${#KAGGLE_API_TOKEN} characters, starts with ${KAGGLE_API_TOKEN:0:5}"
           kaggle datasets list -m --max-size 1 >/dev/null && echo "Kaggle login OK" || { echo "Kaggle login FAILED: the token is not valid"; exit 1; }
+          kaggle datasets metadata -p /tmp ramonpepa/la-canasta-argentina-daily-supermarket-prices && cat /tmp/dataset-metadata.json || true
+          kaggle datasets files ramonpepa/la-canasta-argentina-daily-supermarket-prices || true
+          kaggle datasets status ramonpepa/la-canasta-argentina-daily-supermarket-prices || true
           rm -rf kg && mkdir kg && cd kg && unzip -q ../datos-abiertos/la-canasta-datos.zip
           echo '{"id": "ramonpepa/la-canasta-argentina-daily-supermarket-prices"}' > dataset-metadata.json
           kaggle datasets version -p . -m "Datos al $(TZ=America/Argentina/Buenos_Aires date +%F)"

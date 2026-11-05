@@ -14,7 +14,7 @@ import requests
 
 ZENODO_ID = "23856045"   # concept record: all versions of the dataset
 KAGGLE_OWNER = "ramonpepa"
-KAGGLE_SLUG = "la-canasta-argentina-daily-supermarket-prices"
+KAGGLE_SLUG = "la-canasta-daily-supermarket-prices"
 
 out = {"updated": datetime.now(ZoneInfo("Europe/Madrid")).strftime("%Y-%m-%d %H:%M"),
        "zenodo": None, "kaggle": None, "errors": []}

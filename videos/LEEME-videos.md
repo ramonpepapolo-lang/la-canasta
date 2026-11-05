@@ -52,6 +52,13 @@ y `TR=` de -5 a 7 transpone.
 **Un estilo no se repite hasta que pasen 6 videos** (mirá la columna de música en `notas/videos-hechos.txt`),
 y nunca el mismo estilo en los 2 videos del mismo día. Cambiá también BPM, tono y TR cada vez.
 
+## 4. Thumbnail oficial (obligatorio)
+
+    node thumb.js d-.../NOMBRE.mp4 d-.../NOMBRE-thumbnail.jpg AAAA-MM-DD
+
+Toma la tapa del video (segundo 0,3) y le pone arriba el logo oficial de La Canasta y abajo lacanastaindex.com,
+@LaCanastaIndex y la fecha de los precios. Va en la rama videos-dia junto al mp4 y en el email de los Shorts.
+
 ## Reglas de contenido (Ramon)
 
 - Cada número sale de los datos del repo (`data/*.csv.gz`, `basket.csv`, `index/`) y se revisa dos veces. Nunca inventar.

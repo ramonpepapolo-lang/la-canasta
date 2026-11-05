@@ -10,6 +10,10 @@ on:
       text:
         description: "Email text"
         required: true
+      attach:
+        description: "Optional: public https links to attach, separated by commas (e.g. the day's thumbnails)"
+        required: false
+        default: ""
 
 jobs:
   alert:
@@ -22,6 +26,7 @@ jobs:
         env:
           SUBJECT: ${{ inputs.subject }}
           TEXT: ${{ inputs.text }}
+          ATTACH: ${{ inputs.attach }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_SENDER: ${{ secrets.BREVO_SENDER }}
           ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}

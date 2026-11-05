@@ -36,9 +36,13 @@ def send(subject, body_html):
     page = (f'<div style="font-family:Helvetica,Arial,sans-serif;color:{NAVY};font-size:15px;line-height:1.55;max-width:560px">'
             f'{body_html}<p style="color:{MUTED};font-size:12px;margin-top:24px">La Canasta · aviso automático · '
             f'<a href="{SITE}/admin.html" style="color:{MUTED}">admin</a></p></div>')
-    data = json.dumps({"sender": {"name": "La Canasta", "email": sender},
-                       "to": [{"email": e} for e in to],
-                       "subject": subject, "htmlContent": page}).encode()
+    msg = {"sender": {"name": "La Canasta", "email": sender}, "to": [{"email": e} for e in to],
+           "subject": subject, "htmlContent": page}
+    # optional attachments: ATTACH="https://...jpg,https://...jpg" (public links, e.g. the day's thumbnails)
+    att = [u.strip() for u in os.environ.get("ATTACH", "").split(",") if u.strip().startswith("https://")]
+    if att:
+        msg["attachment"] = [{"url": u, "name": u.rsplit("/", 1)[-1]} for u in att]
+    data = json.dumps(msg).encode()
     req = urllib.request.Request("https://api.brevo.com/v3/smtp/email", data=data, method="POST",
                                  headers={"api-key": key, "content-type": "application/json", "accept": "application/json"})
     try:
@@ -143,6 +147,9 @@ if __name__ == "__main__":
             i = sys.argv.index("--msg")
             subject, text = sys.argv[i + 1], sys.argv[i + 2] if len(sys.argv) > i + 2 else ""
             paras = "".join(f"<p>{html.escape(p)}</p>" for p in text.split("\n") if p.strip())
+            imgs = [u.strip() for u in os.environ.get("ATTACH", "").split(",") if u.strip().startswith("https://") and u.strip().lower().endswith((".jpg", ".jpeg", ".png"))]
+            if imgs:  # thumbnails shown at the top of the email too
+                paras = "<p>" + "".join(f'<img src="{html.escape(u)}" alt="" style="width:46%;max-width:240px;margin:0 2% 8px 0;border-radius:8px;vertical-align:top">' for u in imgs) + "</p>" + paras
             send(subject, paras)
     except Exception as e:  # an alert must never break the daily run
         print(f"WARNING: alert step failed: {e}")

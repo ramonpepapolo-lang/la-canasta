@@ -44,6 +44,8 @@ jobs:
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
           pip install --quiet kaggle
+          # accept the token even if the whole "export KAGGLE_API_TOKEN=..." line was pasted into the secret
+          KAGGLE_API_TOKEN="$(echo "$KAGGLE_API_TOKEN" | sed 's/.*=//; s/[[:space:]]//g')"; export KAGGLE_API_TOKEN
           echo "token: ${#KAGGLE_API_TOKEN} characters, starts with ${KAGGLE_API_TOKEN:0:5}"
           kaggle datasets list -m --max-size 1 >/dev/null && echo "Kaggle login OK" || { echo "Kaggle login FAILED: the token is not valid"; exit 1; }
           rm -rf kg && mkdir kg && cd kg && unzip -q ../datos-abiertos/la-canasta-datos.zip

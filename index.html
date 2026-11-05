@@ -51,6 +51,7 @@ body { overflow-x: clip; }
 img, svg, video, iframe, canvas, select, input, textarea, table { max-width: 100%; }
 .container > *, main > *, section > *, article > * { min-width: 0; }
 .sub-form input[type=email], .hs-form input { width: 0; }
+.rank-more { margin-top: 0.4rem; } .rank-more a { font-weight: 700; }
 </style>
 <link rel="icon" type="image/svg+xml" href="la-canasta-logo/la-canasta-icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="la-canasta-logo/la-canasta-icon-32.png">
@@ -557,6 +558,8 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
           <p data-t="shopsIntro">¿Qué súper es más barato? Los mismos productos, con el mismo código de barras, en los 4 súper del índice. Cada precio es el promedio de la semana.</p>
           <p class="week-pick"><label for="rankWeek" id="rankWeekLabel">Semana:</label> <select id="rankWeek"></select></p>
           <p class="rank-note" id="rankNote"></p>
+          <p class="rank-more"><a href="precios/"><span data-lang="es">Precio de cada producto hoy: leche, yerba, aceite y más →</span><span data-lang="en">Today's price of each product: milk, yerba, oil and more →</span></a></p>
+          <p class="rank-more"><a href="canastas/"><span data-lang="es">¿Asado este finde? Decile para cuántos y te dice dónde conviene ir →</span><span data-lang="en">Asado this weekend? Say how many people and it tells you where to go →</span></a></p>
         </div>
         <div class="panel shops" id="shopList"></div>
       </div>

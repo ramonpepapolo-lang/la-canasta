@@ -452,7 +452,8 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
   const es = () => document.documentElement.lang !== "en";
   const money = x => "$" + Math.round(x).toLocaleString(es() ? "es-AR" : "en-US");
   const SHOP = { Carrefour: "Carrefour", Jumbo: "Jumbo", ChangoMas: "ChangoMás", Dia: "Día" };
-  const QUERY = { Carrefour: "Supermercado Carrefour", Jumbo: "Supermercado Jumbo", ChangoMas: "Supermercado ChangoMás", Dia: "Supermercado Día" };
+  // always Argentina: Carrefour and Día also exist in Spain, and the page is opened from abroad too
+  const QUERY = { Carrefour: "Supermercado Carrefour, Argentina", Jumbo: "Supermercado Jumbo, Argentina", ChangoMas: "Supermercado ChangoMás, Argentina", Dia: "Supermercado Día, Argentina" };
   let D = null, basket = "asado", people = 4, fromVoice = false;
   const $ = id => document.getElementById(id);
   const NUM = { uno: 1, una: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12, trece: 13, catorce: 14, quince: 15, veinte: 20, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12, fifteen: 15, twenty: 20 };

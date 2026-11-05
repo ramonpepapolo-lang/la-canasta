@@ -454,7 +454,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
         <span class="eyebrow sun" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
         <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
         <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
-        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="https://www.youtube.com/shorts/njkhtUHqAQM" target="_blank" rel="noopener">acá</a>.</span><span data-lang="en"> See how it works <a href="https://www.youtube.com/shorts/sq4QiYlzBHI" target="_blank" rel="noopener">here</a>.</span></p>
+        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="https://www.youtube.com/shorts/njkhtUHqAQM" target="_blank" rel="noopener">acá</a>.</span><span data-lang="en"> See how it works <a href="https://www.youtube.com/shorts/sq4QiYlzBHI" target="_blank" rel="noopener">here</a>.</span></p>
         <div class="hero-sub" id="heroSub" hidden>
           <div id="hsFormWrap">
             <strong><span data-lang="es">Recibí la inflación del súper <em>antes que el INDEC</em>. Gratis.</span><span data-lang="en">Get supermarket inflation <em>before INDEC</em>. Free.</span></strong>
@@ -919,7 +919,7 @@ const T = {
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
     ctaIndex: "See the index", ctaData: "Download the data", ctaReport: "Monthly report",
-    ledePoint: "Every day, an automated program reads more than 10,000 prices across five supermarkets, and 6 AI agents watch over it: making sure no day is missed, auditing the data, reviewing every doubtful price, tracking INDEC, and checking the monthly report before it is sent. From those prices, this number tracks 567 everyday products of 33 basic kinds (milk, bread, yerba and more) at four chains.",
+    ledePoint: "Every day, an automated program reads more than 10,000 prices across five supermarkets, and 7 AI agents look after it: making sure no day is missed, auditing the data, reviewing every doubtful price, tracking INDEC, checking the monthly report before it is sent, and making two short videos a day with the day's data. From those prices, this number tracks 567 everyday products of 33 basic kinds (milk, bread, yerba and more) at four chains.",
     noteTitle: "Why does the number look so high?",
     noteText: "La Canasta started measuring on a weekend (24 Oct), when many supermarkets were running promotions. When those offers ended, prices went back to normal, and that shows up as a rise. The data should settle in about 8 days, and the number will then reflect real inflation much better.",
     tagLabel: "What shoppers pay", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
@@ -968,7 +968,7 @@ const T = {
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
     ctaIndex: "Ver el índice", ctaData: "Descargar los datos", ctaReport: "Informe mensual",
-    ledePoint: "Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 6 agentes de IA lo vigilan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, y que el informe mensual se verifique antes de enviarse. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.",
+    ledePoint: "Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.",
     noteTitle: "¿Por qué el número parece tan alto?",
     noteText: "La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.",
     tagLabel: "Lo que se paga", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
@@ -1197,7 +1197,16 @@ function render() {
   } else if (n >= 14) {
     label.textContent = es ? "Últimos 7 días contra la semana anterior" : "Last 7 days vs the week before";
     big.textContent = pct(week("index_paid"));
-    document.getElementById("tagSub").textContent = es ? `Promedio de 7 días · datos al ${fmtDate(last.date)}` : `7-day average · data to ${fmtDate(last.date)}`;
+    document.getElementById("tagSub").textContent = es ? `Promedio de 7 días · precio que se paga · datos al ${fmtDate(last.date)}` : `7-day average · price paid · data to ${fmtDate(last.date)}`;
+    if (note) {
+      const dm = x => { const [y, m, d] = x.split("-"); return `${+d}/${+m}`; };
+      const d0 = dm(daily[Math.max(0, n - 14)].date), d1 = dm(daily[n - 8].date), d2 = dm(daily[n - 7].date), d3 = dm(last.date);
+      note.querySelector("strong").textContent = es ? "¿Qué es este número? Todavía no es la inflación" : "What is this number? Not inflation yet";
+      note.querySelector("p").textContent = es
+        ? `La Canasta es muy nueva: empezó el 24 de octubre de 2026. Por ahora comparamos los últimos 7 días (${d2} al ${d3}) contra los 7 anteriores (${d0} al ${d1}): el precio promedio de cada producto en las dos semanas, en el mismo súper. Es un cambio semanal, no el del mes. Usa el precio que se paga, con las promos que cualquiera puede aprovechar, como hace el INDEC; el precio de lista va al lado. La inflación del súper de noviembre, medida con precisión, sale el 1 de diciembre.`
+        : `La Canasta is very new: it started on 24 October 2026. For now we compare the last 7 days (${d2} to ${d3}) with the 7 before (${d0} to ${d1}): each product's average price in the two weeks, in the same shop. It is a weekly change, not the month's. It uses the price paid, with the promotions anyone can take, as INDEC does; the list price is shown next to it. November's supermarket inflation, measured precisely, comes out on 1 December.`;
+      note.hidden = false;
+    }
   } else {
     const first = new Date(daily[0].date + "T12:00:00Z"); first.setUTCDate(first.getUTCDate() + 13);
     const ready = first.toISOString().slice(0, 10);
@@ -1208,8 +1217,8 @@ function render() {
     if (note) {
       note.querySelector("strong").textContent = es ? `¿Por qué dice "Día ${n} de 14"?` : `Why does it say "Day ${n} of 14"?`;
       note.querySelector("p").textContent = es
-        ? `Para comparar de forma justa hacen falta 2 semanas completas: las ofertas de fin de semana y los productos frescos hacen que comparar días sueltos engañe. Por eso, estos primeros números todavía no son la inflación. La inflación del mes sale en el informe del 1 de diciembre.`
-        : `A fair comparison needs 2 full weeks: weekend offers and fresh food make comparing single days misleading. So these first numbers are not inflation yet. The month's inflation comes out in the report on 1 December.`;
+        ? `La Canasta es muy nueva: empezó el 24 de octubre de 2026. Para comparar de forma justa hacen falta 2 semanas completas: las ofertas de fin de semana y los productos frescos hacen que comparar días sueltos engañe. A partir del día 14 (${fmtDate(ready)}) comparamos la segunda semana contra la primera: el precio promedio de cada producto del 31 de octubre al 6 de noviembre contra el del 24 al 30 de octubre. Eso es un cambio semanal, todavía no es la inflación. La inflación del súper de noviembre, medida con precisión, sale el 1 de diciembre.`
+        : `La Canasta is very new: it started on 24 October 2026. A fair comparison needs 2 full weeks: weekend offers and fresh food make comparing single days misleading. From day 14 (${fmtDate(ready)}) we compare the second week with the first: each product's average price from 31 October to 6 November against 24 to 30 October. That is a weekly change, not inflation yet. November's supermarket inflation, measured precisely, comes out on 1 December.`;
       note.hidden = false;
     }
   }

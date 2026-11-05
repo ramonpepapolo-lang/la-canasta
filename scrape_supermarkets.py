@@ -35,6 +35,9 @@ SEARCHES = [
     "papel higienico", "detergente", "lavandina", "jabon en polvo",
     "shampoo", "pasta dental", "jabon de tocador",
     "coca cola", "chimichurri", "asado", "nalga", "vacio", "milanesa",
+    # for the ready-made baskets (asado, healthy week, student week): lacanastaindex.com/canastas/
+    "chorizo", "morcilla", "carbon", "pan frances", "provoleta", "sal gruesa", "lechuga",
+    "avena", "lentejas", "atun", "zanahoria", "naranja", "pechuga",
 ]
 
 COLUMNS = ["date", "shop", "search", "sku_id", "ean", "name", "brand", "category",

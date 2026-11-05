@@ -19,6 +19,10 @@ BODY = r"""
     <div class="chat" id="chat" hidden aria-live="polite"></div>
     <p class="heard" id="heard" hidden></p>
     <form class="typed" id="typed"><label for="q" class="es">O escribilo:</label><label for="q" class="en">Or type it:</label><input id="q" type="text" placeholder="quiero hacer un asado para 5 personas, sin alcohol" autocomplete="off"><button type="submit"><span class="es">Enviar</span><span class="en">Send</span></button></form>
+    <div class="install" id="install" hidden>
+      <button type="button" id="installBtn" class="install-btn"><img src="/app-icons/icon-192.png" alt="" width="28" height="28"><span class="es">Instalá la app en tu celular</span><span class="en">Install the app on your phone</span></button>
+      <p class="install-ios" id="installIos" hidden><span class="es">En iPhone: tocá <b>Compartir</b> (el cuadrado con la flecha) y después <b>Agregar a inicio</b>.</span><span class="en">On iPhone: tap <b>Share</b> (the square with the arrow), then <b>Add to Home Screen</b>.</span></p>
+    </div>
     <p class="examples"><span class="es">Ejemplos: «quiero hacer un asado para 6», «una semana saludable para mi abuela», «comida barata de estudiante».</span><span class="en">Examples: "an asado for 6 people", "a healthy week for my grandmother", "cheap student food".</span></p>
   </section>
 
@@ -255,6 +259,15 @@ BODY = r"""
   $("say").addEventListener("click", () => { const r = understand(""); r.basket = basket; started = true; speak(reply(r)); });
   document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setTimeout(() => { buildTabs(); render(); }, 0)));
   function buildTabs() { const t = $("tabs"); t.textContent = ""; D.baskets.forEach(B => { const b = document.createElement("button"); b.type = "button"; b.role = "tab"; b.dataset.id = B.id; b.textContent = es() ? B.es : B.en; b.addEventListener("click", () => { basket = B.id; render(); }); t.appendChild(b); }); }
+  // install: Android/Chrome gives a prompt; iPhone needs Share > Add to Home Screen
+  (function () {
+    if (document.documentElement.classList.contains("lc-app")) return;
+    const box = $("install"), btn = $("installBtn"), ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+    let ev = null;
+    window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); ev = e; box.hidden = false; });
+    if (ios) box.hidden = false;
+    btn.addEventListener("click", async () => { if (ev) { ev.prompt(); await ev.userChoice; ev = null; box.hidden = true; } else if (ios) $("installIos").hidden = false; });
+  })();
   fetch("datos.json", { cache: "no-store" }).then(r => r.json()).then(d => { D = d; buildTabs(); const h = location.hash.replace("#", ""); if (D.baskets.some(b => b.id === h)) basket = h; render(); });
 })();
 </script>
@@ -282,6 +295,13 @@ EXTRA_CSS = """<style>
 .typed label { grid-column: 1 / -1; font-size: 0.9rem; color: var(--muted); font-weight: 600; text-align: left; }
 .typed input { min-width: 0; width: 100%; font: 1rem var(--body); padding: 0.7rem 0.9rem; border: 1.5px solid var(--rule); border-radius: 10px; }
 .typed button { font: 700 0.95rem var(--body); background: var(--bg); border: 1.5px solid var(--navy); color: var(--navy); border-radius: 10px; padding: 0.7rem 1rem; cursor: pointer; }
+.install { display: grid; gap: 0.5rem; justify-items: center; }
+.install-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #fff; border: 1.5px solid var(--navy); color: var(--navy); border-radius: 999px; padding: 0.45rem 1rem 0.45rem 0.5rem; font: 700 0.95rem var(--body); cursor: pointer; }
+.install-btn img { border-radius: 7px; }
+.install-ios { font-size: 0.9rem; max-width: 40ch; }
+html.lc-app .cn { padding-top: 1rem; gap: 1.6rem; }
+html.lc-app .cn-head .lede { display: none; }
+html.lc-app .cn h1 { font-size: 2rem; }
 .examples { font-size: 0.88rem; color: var(--muted); max-width: 60ch; }
 .pick { display: grid; gap: 1rem; }
 .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; }

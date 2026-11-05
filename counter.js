@@ -124,3 +124,38 @@ var UNSUBSCRIBE_ACTION = "";
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   try { new MutationObserver(fit).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] }); } catch (e) {}
 })();
+
+// App mode: when La Canasta is opened from the phone's home screen (or the App Store app), it looks like an app:
+// no website bar or footer, a tab bar at the bottom, and it works offline with the last prices.
+(function () {
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });
+  }
+  var app = /[?&]app=1\b/.test(location.search) || (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+  try { if (app) sessionStorage.setItem("lc-app", "1"); else if (sessionStorage.getItem("lc-app") === "1") app = true; } catch (e) {}
+  if (!app) return;
+  document.documentElement.classList.add("lc-app");
+  var st = document.createElement("style");
+  st.textContent =
+    "html.lc-app .lc-bar,html.lc-app footer,html.lc-app .crumbs,html.lc-app header.topbar nav,html.lc-app .btn-sub,html.lc-app .menu-btn,html.lc-app .lang-label,html.lc-app .admin-link{display:none!important}" +
+    "html.lc-app header.topbar{padding-top:env(safe-area-inset-top,0px)}" +
+    "html.lc-app body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}" +
+    ".lc-tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,.97);border-top:1px solid #DCE4EA;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}" +
+    ".lc-tabs a{display:grid;justify-items:center;gap:2px;text-decoration:none;color:#5D6A84;font:600 0.72rem 'DM Sans',system-ui,sans-serif;padding:6px 0;border-radius:12px}" +
+    ".lc-tabs a svg{width:24px;height:24px}.lc-tabs a.on{color:#2B3B5C}.lc-tabs a.on svg{color:#D98A2B}";
+  document.head.appendChild(st);
+  function tabs() {
+    var es = document.documentElement.lang !== "en", p = location.pathname;
+    var T = [
+      ["/canastas/?app=1", es ? "Asistente" : "Assistant", /^\/canastas/.test(p), '<path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="10.5" r="1.2" fill="currentColor"/><circle cx="12" cy="10.5" r="1.2" fill="currentColor"/><circle cx="15" cy="10.5" r="1.2" fill="currentColor"/>'],
+      ["/precios/?app=1", es ? "Precios" : "Prices", /^\/precios/.test(p), '<path d="M3 12l9-9h7v7l-9 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.6" fill="currentColor"/>'],
+      ["/?app=1#index", es ? "Índice" : "Index", p === "/" || /index\.html$/.test(p), '<path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>']
+    ];
+    var nav = document.querySelector(".lc-tabs") || document.createElement("nav");
+    nav.className = "lc-tabs"; nav.setAttribute("aria-label", "App");
+    nav.innerHTML = T.map(function (x) { return '<a href="' + x[0] + '"' + (x[2] ? ' class="on" aria-current="page"' : "") + '><svg viewBox="0 0 24 24">' + x[3] + "</svg>" + x[1] + "</a>"; }).join("");
+    if (!nav.parentNode) document.body.appendChild(nav);
+  }
+  if (document.body) tabs(); else document.addEventListener("DOMContentLoaded", tabs);
+  new MutationObserver(tabs).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+})();

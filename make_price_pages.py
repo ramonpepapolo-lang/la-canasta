@@ -526,7 +526,7 @@ function setLang(l) {
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
 setLang(lang);
 </script>
-<script src="../counter.js?v=2"></script>"""
+<script src="../counter.js?v=3"></script>"""
     def chrome(title, desc, path, body, ld):
         url = f"{SITE}/{path}"
         return f"""<!doctype html>
@@ -542,6 +542,13 @@ setLang(lang);
 <meta property="og:url" content="{url}">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="{url}">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#2B3B5C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="La Canasta">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" sizes="180x180" href="/app-icons/icon-180.png">
 {ld}
 {head_assets}
 {extra}

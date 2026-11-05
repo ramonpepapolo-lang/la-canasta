@@ -50,11 +50,10 @@ jobs:
           kaggle datasets list -m --max-size 1 >/dev/null && echo "Kaggle login OK" || { echo "Kaggle login FAILED: the token is not valid"; exit 1; }
           rm -rf kg && mkdir kg && cd kg && unzip -q ../datos-abiertos/la-canasta-datos.zip
           cp ../datos-abiertos/kaggle-metadata.json dataset-metadata.json
-          rm -f dataset-metadata.json
-          pip install --quiet kagglehub
-          python3 - <<'PY'
-          import os, kagglehub
-          from datetime import date
-          kagglehub.dataset_upload("ramonpepa/la-canasta-argentina-daily-supermarket-prices", ".", version_notes="Datos al " + date.today().isoformat())
-          print("Kaggle updated")
-          PY
+          SLUG=ramonpepa/la-canasta-daily-supermarket-prices
+          if kaggle datasets status "$SLUG" >/dev/null 2>&1; then
+            kaggle datasets version -p . -m "Datos al $(TZ=America/Argentina/Buenos_Aires date +%F)" 2>&1 | tee ../kaggle.log
+          else
+            kaggle datasets create -p . -u 2>&1 | tee ../kaggle.log
+          fi
+          grep -qi "error" ../kaggle.log && { echo "Kaggle did not accept it"; exit 1; } || echo "Kaggle updated"

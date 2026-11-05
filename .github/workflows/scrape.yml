@@ -71,6 +71,10 @@ jobs:
         if: steps.check.outputs.done == 'no'
         continue-on-error: true
         run: python make_price_pages.py
+      - name: Update the ready-made baskets (never stops the prices being saved)
+        if: steps.check.outputs.done == 'no'
+        continue-on-error: true
+        run: python make_canastas.py && python make_canastas_page.py
       - name: Check the index independently (never stops the prices being saved)
         id: verify
         if: steps.check.outputs.done == 'no'
@@ -89,7 +93,7 @@ jobs:
         run: |
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
-          git add data index precios sitemap.xml
+          git add data index precios canastas sitemap.xml
           git commit -m "Prices and index for ${{ steps.check.outputs.ar_date }}" || echo "Nothing new"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && break

@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-04 15:50",
+ "updated": "2026-11-05 15:56",
  "zenodo": {
-  "views": 4,
+  "views": 5,
   "downloads": 2,
   "url": "https://doi.org/10.5281/zenodo.23856045"
  },
  "kaggle": {
-  "views": 16,
-  "downloads": 5,
+  "views": 28,
+  "downloads": 14,
   "votes": 0,
   "usability": 0.8235294,
   "url": "https://www.kaggle.com/datasets/ramonpepa/la-canasta-argentina-daily-supermarket-prices"

@@ -2,7 +2,7 @@ name: Publish open dataset
 
 # Builds la-canasta-datos.zip from the data and publishes it as a GitHub release (tag datos-YYYY-MM-DD).
 # Zenodo archives every release as a new version of the dataset (same concept DOI). If the Kaggle
-# secrets exist (KAGGLE_USERNAME, KAGGLE_KEY), the same files are uploaded to Kaggle as a new version.
+# token exists (secret KAGGLE_API_TOKEN, or the older KAGGLE_USERNAME + KAGGLE_KEY), the same files are uploaded to Kaggle as a new version.
 # Runs every Sunday night, and whenever it is started from the Actions tab or datos-abiertos/VERSION changes.
 on:
   workflow_dispatch:
@@ -36,9 +36,10 @@ jobs:
               --title "La Canasta: datos abiertos (${TAG#datos-})" \
               --notes-file datos-abiertos/NOTAS-VERSION.md
           fi
-      - name: Update Kaggle (only when the Kaggle secrets exist)
-        if: ${{ env.KAGGLE_KEY != '' }}
+      - name: Update Kaggle (only when the Kaggle token exists)
+        if: ${{ env.KAGGLE_API_TOKEN != '' || env.KAGGLE_KEY != '' }}
         env:
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |

@@ -1,0 +1,24 @@
+{
+ "name": "La Canasta: ¿dónde conviene comprar?",
+ "short_name": "La Canasta",
+ "description": "Decile qué querés hacer (un asado, una semana saludable) y te dice a qué súper ir, cuánto sale y cómo llegar. Precios de hoy en Carrefour, Jumbo, ChangoMás y Día.",
+ "id": "/canastas/?app=1",
+ "start_url": "/canastas/?app=1",
+ "scope": "/",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#FFFFFF",
+ "theme_color": "#2B3B5C",
+ "lang": "es-AR",
+ "categories": ["shopping", "food", "finance"],
+ "icons": [
+  {"src": "/app-icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+  {"src": "/app-icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+  {"src": "/app-icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+ ],
+ "shortcuts": [
+  {"name": "Asado", "url": "/canastas/?app=1#asado", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]},
+  {"name": "Semana saludable", "url": "/canastas/?app=1#saludable", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]},
+  {"name": "Precios de hoy", "url": "/precios/?app=1", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]}
+ ]
+}

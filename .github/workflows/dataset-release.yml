@@ -1,10 +1,13 @@
 name: Publish open dataset
 
-# Builds datos-abiertos/la-canasta-datos.zip from the data and publishes it as a GitHub release
-# (tag datos-YYYY-MM-DD). Zenodo archives every release and gives it a DOI.
-# Start it from the Actions tab ("Run workflow"), or by changing datos-abiertos/VERSION on main.
+# Builds la-canasta-datos.zip from the data and publishes it as a GitHub release (tag datos-YYYY-MM-DD).
+# Zenodo archives every release as a new version of the dataset (same concept DOI). If the Kaggle
+# secrets exist (KAGGLE_USERNAME, KAGGLE_KEY), the same files are uploaded to Kaggle as a new version.
+# Runs every Sunday night, and whenever it is started from the Actions tab or datos-abiertos/VERSION changes.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "41 21 * * 0"   # Sundays 21:41 UTC, after the day's prices
   push:
     branches: [main]
     paths:
@@ -16,16 +19,30 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - name: Build the dataset
         run: python3 build_dataset.py
-      - name: Publish the release
+      - name: Publish the release (Zenodo picks it up)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="datos-$(TZ=America/Argentina/Buenos_Aires date +%F)"
-          gh release create "$TAG" datos-abiertos/la-canasta-datos.zip \
-            --title "La Canasta: datos abiertos (${TAG#datos-})" \
-            --notes-file datos-abiertos/NOTAS-VERSION.md
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" datos-abiertos/la-canasta-datos.zip --clobber
+          else
+            gh release create "$TAG" datos-abiertos/la-canasta-datos.zip \
+              --title "La Canasta: datos abiertos (${TAG#datos-})" \
+              --notes-file datos-abiertos/NOTAS-VERSION.md
+          fi
+      - name: Update Kaggle (only when the Kaggle secrets exist)
+        if: ${{ env.KAGGLE_KEY != '' }}
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          pip install --quiet kaggle
+          rm -rf kg && mkdir kg && cd kg && unzip -q ../datos-abiertos/la-canasta-datos.zip
+          echo '{"id": "ramonpepa/la-canasta-argentina-daily-supermarket-prices"}' > dataset-metadata.json
+          kaggle datasets version -p . -m "Datos al $(TZ=America/Argentina/Buenos_Aires date +%F)" --dir-mode zip

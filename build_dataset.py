@@ -1,5 +1,5 @@
 # La Canasta: builds the open dataset (datos-abiertos/la-canasta-datos.zip) for Kaggle and Zenodo.
-# Run by hand when a new version should be published (for example, after each monthly report).
+# Run by the "Publish open dataset" workflow every Sunday (and on demand). The zip is not committed: it is a release asset.
 # Everything comes from the files the index already uses; nothing is changed or recalculated here.
 
 import csv

@@ -113,13 +113,19 @@ def candidates(rows, ing):
     return out
 
 
-def pick(rows, ing_id):
-    """Cheapest fitting product per shop, with the outlier guard across shops."""
+def pick(rows, ing_id, quality=False):
+    """Cheapest fitting product per shop, with the outlier guard across shops.
+    quality=True: the cheapest product of a leading brand (the ingredient's "quality" rule), for "primera marca"."""
     ing = CFG["ingredients"][ing_id]
     cands = candidates(rows, ing)
     if not cands:
         return {}
     med = statistics.median([c[0] for c in cands])
+    if quality:
+        if not ing.get("quality"):
+            return {}
+        q = re.compile(ing["quality"], re.I)
+        cands = [c for c in cands if q.search((c[1].get("name") or "") + " " + (c[1].get("brand") or ""))]
     best = {}
     for up, r in sorted(cands, key=lambda c: (c[0], c[1]["shop"], c[1]["sku_id"])):
         if not (0.4 * med <= up <= 2.5 * med):
@@ -176,6 +182,21 @@ def main():
     os.makedirs(os.path.join(ROOT, "canastas"), exist_ok=True)
     with open(os.path.join(ROOT, "canastas", "datos.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
+    # "Armá la tuya": every product, every shop, the cheapest option and the leading-brand option
+    catalog = {}
+    for k, ing in CFG["ingredients"].items():
+        qual = pick(rows, k, quality=True)
+        shops = {}
+        for s in SHOPS:
+            c, q = picks[k].get(s), qual.get(s)
+            if c or q:
+                shops[s] = {"cheap": c and {x: c[x] for x in ("name", "unit_price", "promo")}, "quality": q and {x: q[x] for x in ("name", "unit_price", "promo")}}
+        catalog[k] = {"es": ing["es"], "en": ing["en"], "unit": ing["unit"], "cat": ing.get("cat", "almacen"), "q": ing.get("q", 1),
+                      "has_quality": bool(ing.get("quality")), "shops": shops}
+    with open(os.path.join(ROOT, "canastas", "catalogo.json"), "w", encoding="utf-8") as f:
+        json.dump({"date": date, "shops": SHOPS, "categories": CFG.get("categories", []), "items": catalog}, f, ensure_ascii=False, indent=1)
+    print("catalog:", sum(1 for v in catalog.values() if len(v["shops"]) == len(SHOPS)), "of", len(catalog), "products at all 4 shops;",
+          sum(1 for v in catalog.values() if any(x.get("quality") for x in v["shops"].values())), "with a leading-brand option")
     for b in out["baskets"]:
         print(f"{b['id']:11} cheapest={b['cheapest']} " + "  ".join(f"{s}:{b['shops'][s]['total']:.0f}{'' if b['shops'][s]['complete'] else '*'}" for s in SHOPS)
               + (f"  missing everywhere: {b['missing_everywhere']}" if b["missing_everywhere"] else ""))

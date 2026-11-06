@@ -1,0 +1,2280 @@
+{
+ "date": "2026-11-05",
+ "shops": [
+  "Carrefour",
+  "Jumbo",
+  "ChangoMas",
+  "Dia"
+ ],
+ "categories": [
+  [
+   "carnes",
+   "Carnes",
+   "Meat"
+  ],
+  [
+   "lacteos",
+   "Lácteos y huevos",
+   "Dairy and eggs"
+  ],
+  [
+   "almacen",
+   "Almacén",
+   "Pantry"
+  ],
+  [
+   "verduleria",
+   "Verdulería",
+   "Fruit and veg"
+  ],
+  [
+   "bebidas",
+   "Bebidas",
+   "Drinks"
+  ],
+  [
+   "limpieza",
+   "Limpieza y cuidado personal",
+   "Cleaning and personal care"
+  ]
+ ],
+ "items": {
+  "asado_tira": {
+   "es": "Asado de tira",
+   "en": "Beef short ribs (asado)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Asado de Novillo x kg",
+      "unit_price": 12990.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Asado de Novillo x kg",
+      "unit_price": 12990.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Asado Del Centro Novillito",
+      "unit_price": 19965.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Asado Del Centro Novillito",
+      "unit_price": 19965.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Asado De Tira Congelado 1,2 Kg",
+      "unit_price": 14109.15,
+      "promo": true
+     },
+     "quality": {
+      "name": "Asado De Tira De Novillito 1 Kg",
+      "unit_price": 14704.15,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Asado x Kg.",
+      "unit_price": 15900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Asado de Novillito Envasado al Vacío x 1 Kg.",
+      "unit_price": 19300.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "vacio": {
+   "es": "Vacío",
+   "en": "Beef flank (vacío)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Vacio x kg",
+      "unit_price": 16990.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Vacio de Novillo x kg",
+      "unit_price": 19600.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Vacio Novillito",
+      "unit_price": 22289.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vacio Novillito",
+      "unit_price": 22289.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
+      "unit_price": 18019.15,
+      "promo": true
+     },
+     "quality": {
+      "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
+      "unit_price": 18019.15,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Vacío Envasado al Vacío x Kg.",
+      "unit_price": 19900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vacio de Novillo X Kg.",
+      "unit_price": 19990.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "chorizo": {
+   "es": "Chorizo",
+   "en": "Chorizo",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Chorizo super al vacio La Divisa 400 grs",
+      "unit_price": 24975.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Chorizo super al vacio La Divisa 400 grs",
+      "unit_price": 24975.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Chorizo Puro Cerdo Al Vacio- 4 U - 400grs- Catter Meat",
+      "unit_price": 16247.5,
+      "promo": false
+     },
+     "quality": {
+      "name": "Chorizo Puro Cerdo Al Vacio X400 Grs- La Divisa",
+      "unit_price": 26997.5,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
+      "unit_price": 10700.65,
+      "promo": true
+     },
+     "quality": {
+      "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
+      "unit_price": 10700.65,
+      "promo": true
+     }
+    }
+   }
+  },
+  "morcilla": {
+   "es": "Morcilla",
+   "en": "Morcilla (blood sausage)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Morcilla copetín al vacio La Divisa 400 grs",
+      "unit_price": 19975.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Morcilla Al Vacio - 4u - X Kg - Campo Austral",
+      "unit_price": 8799.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Morcilla Tradicional Campo Austral Al Vacío 400 Gr",
+      "unit_price": 9425.65,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "pan": {
+   "es": "Pan francés o flauta",
+   "en": "French bread (flauta)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "carbon": {
+   "es": "Carbón",
+   "en": "Charcoal",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 4,
+   "has_quality": false,
+   "shops": {}
+  },
+  "provoleta": {
+   "es": "Provoleta",
+   "en": "Provoleta cheese",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 0.25,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Queso provolone Vaquero fraccionado",
+      "unit_price": 31590.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Provoleta Mini Sabor Chimichurri 120 Grs x 1 Un Wapi",
+      "unit_price": 84916.67,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Provoleta Dia 190 Gr.",
+      "unit_price": 36789.47,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "tomate": {
+   "es": "Tomate",
+   "en": "Tomatoes",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Tomate x kg.",
+      "unit_price": 4999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+      "unit_price": 6999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Tomate Redondo 500 G",
+      "unit_price": 4899.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Tomate Redondo x Kg.",
+      "unit_price": 5490.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "cebolla": {
+   "es": "Cebolla",
+   "en": "Onions",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Cebolla x kg.",
+      "unit_price": 2699.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Cebolla Superior Por Kg",
+      "unit_price": 3999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cebolla 350 G Cebolla 350g",
+      "unit_price": 2799.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Cebolla Comercial en bolsa malla x Kg.",
+      "unit_price": 2690.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "lechuga": {
+   "es": "Lechuga",
+   "en": "Lettuce",
+   "unit": "un",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "vino": {
+   "es": "Vino tinto (botella 750 ml)",
+   "en": "Red wine (750 ml bottle)",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 1.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Vino tinto Don Valentín Lacrado 750 ml",
+      "unit_price": 6052.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vino tinto Malbec Benjamín 750 ml",
+      "unit_price": 8933.33,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Vino Tinto 750 Cc Toro",
+      "unit_price": 4200.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vino Tinto Malbec 750 Cc Trapiche Vino Trapiche Reserva Malbec 750cc",
+      "unit_price": 17666.67,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Vino Tinto Nampe Malbec 750 Ml",
+      "unit_price": 6172.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vino Tinto Benjamin Malbec 750 Ml",
+      "unit_price": 8933.33,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Vino Tinto Suter Malbec 750 Ml.",
+      "unit_price": 4181.67,
+      "promo": true
+     },
+     "quality": {
+      "name": "Vino Tinto Cosecha Tardía Norton 750 ml.",
+      "unit_price": 7320.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "cerveza": {
+   "es": "Cerveza rubia",
+   "en": "Lager beer",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Cerveza rubia Budweiser 473 ml",
+      "unit_price": 3772.52,
+      "promo": true
+     },
+     "quality": {
+      "name": "Cerveza rubia Brahma 473 ml",
+      "unit_price": 3893.13,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Cerveza Rubia 1000 Ml Schneider",
+      "unit_price": 4900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Cerveza Rubia 340 Cc Quilmes Cerveza Clasica 340 Cc Retornable Quilmes",
+      "unit_price": 5000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cerveza Rubia Quilmes Bajocero 473 Ml",
+      "unit_price": 3528.54,
+      "promo": false
+     },
+     "quality": {
+      "name": "Cerveza Rubia Quilmes Bajocero 473 Ml",
+      "unit_price": 3528.54,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Cerveza Rubia St. Wendeler 500 ml.",
+      "unit_price": 2580.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Cerveza Bajo Cero Quilmes 473 Ml.",
+      "unit_price": 2807.61,
+      "promo": true
+     }
+    }
+   }
+  },
+  "gaseosa": {
+   "es": "Coca-Cola",
+   "en": "Coca-Cola",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 2.25,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Gaseosa cola Coca Cola sabor original 2,25 lts",
+      "unit_price": 2711.11,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
+      "unit_price": 2711.11,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Gaseosa Coca Cola Original 600 Ml",
+      "unit_price": 4498.33,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Gaseosa Coca-Cola Sabor Original 1,5 Lt.",
+      "unit_price": 2622.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "chimichurri": {
+   "es": "Chimichurri",
+   "en": "Chimichurri",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Especias parrilla chimichurri Alicante 25 grs",
+      "unit_price": 1575.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Especias parrilla chimichurri Alicante 25 grs",
+      "unit_price": 1575.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Condimento para Chimichurri 25 Grs La Campagnola Condimento P/chimichurri La Campagnola",
+      "unit_price": 1450.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Chimichurri Condimento 25 Grs Alicante Chimichurri Alicante 25 Gr",
+      "unit_price": 1650.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Condimento Chimichurri Alicante 25gr",
+      "unit_price": 1499.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Condimento Chimichurri Alicante 25gr",
+      "unit_price": 1499.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Condimento Chimichurri Alicante 25 Gr.",
+      "unit_price": 1544.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Condimento Chimichurri Alicante 25 Gr.",
+      "unit_price": 1544.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "sal_gruesa": {
+   "es": "Sal gruesa",
+   "en": "Coarse salt",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Sal gruesa Dos Anclas paquete 500 grs",
+      "unit_price": 1495.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Sal gruesa Dos Anclas paquete 500 grs",
+      "unit_price": 1495.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "leche": {
+   "es": "Leche",
+   "en": "Milk",
+   "unit": "l",
+   "cat": "lacteos",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Leche clásica UAT Bulnez 1 lt",
+      "unit_price": 1790.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Leche La serenisima clásica 3% 1L.",
+      "unit_price": 2269.0,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Leche Entera Ilolay U.a.t. Brik 1 Lt",
+      "unit_price": 2600.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Leche Entera Ilolay U.a.t. Brik 1 Lt",
+      "unit_price": 2600.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Leche Entera Casanto 1 L",
+      "unit_price": 2019.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Leche Fresca Entera 3% Fortificada Casanto Sachet 1 Lt.",
+      "unit_price": 2019.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Leche Entera Tregar Larga Vida 1 Lt.",
+      "unit_price": 2650.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "yogur": {
+   "es": "Yogur",
+   "en": "Yoghurt",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Yogur entero Milkaut frutilla sachet 900 g.",
+      "unit_price": 5143.33,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Yogur Frutilla Sachet X 900 Gr Ilolay",
+      "unit_price": 4833.33,
+      "promo": false
+     },
+     "quality": {
+      "name": "Yogur Frutilla Sachet X 900 Gr Ilolay",
+      "unit_price": 4833.33,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Yogur Descrenadi La Serenísima Frutilla 900g",
+      "unit_price": 3321.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Yogur Descrenadi La Serenísima Frutilla 900g",
+      "unit_price": 3321.5,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Yogur Entero Milkaut Sachet Sabor Frutilla 900 Gr.",
+      "unit_price": 4366.67,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "huevos": {
+   "es": "Huevos",
+   "en": "Eggs",
+   "unit": "un",
+   "cat": "lacteos",
+   "q": 12,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Huevo blanco El Mercado carton 30 uni",
+      "unit_price": 287.99,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Huevos Blancos Avicoper 30 U",
+      "unit_price": 310.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Huevos Blancos La Piara 30 U",
+      "unit_price": 296.63,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Huevos Frescos Santa Rita Blanco Grande 30 Un.",
+      "unit_price": 233.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "pollo": {
+   "es": "Pollo entero",
+   "en": "Whole chicken",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pollo entero congelado x kg",
+      "unit_price": 3979.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Pollo Fresco Con Menudos",
+      "unit_price": 4499.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pollo Fresco Con Menudos",
+      "unit_price": 4499.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Pollo Entero Fresco 2.700kg",
+      "unit_price": 3220.65,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pollo Entero Fresco 2.700kg",
+      "unit_price": 3220.65,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Pollo Fresco x Kg.",
+      "unit_price": 4390.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pollo Fresco x Kg.",
+      "unit_price": 4390.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "pechuga": {
+   "es": "Pechuga de pollo",
+   "en": "Chicken breast",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pechuga de pollo al vacio Que Rico x kg",
+      "unit_price": 18500.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "atun": {
+   "es": "Atún en lata",
+   "en": "Canned tuna",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Atún Desmenuzado En Agua Y En Aceite 120 Gr Maxima Mp",
+      "unit_price": 1772.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "lentejas": {
+   "es": "Lentejas",
+   "en": "Lentils",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "arroz": {
+   "es": "Arroz",
+   "en": "Rice",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Arroz parboil Dos Hermanos bolsa 1 kg.",
+      "unit_price": 2300.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Arroz integral Luccetti 1 kg.",
+      "unit_price": 2339.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Arroz Luchetti Integral X1kg",
+      "unit_price": 2650.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Arroz Luchetti Integral X1kg",
+      "unit_price": 2650.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Arroz Parboil Dos Hermanos 1 Kg",
+      "unit_price": 2309.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Arroz Lucchetti Integral 1 Kg",
+      "unit_price": 2339.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
+      "unit_price": 2490.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
+      "unit_price": 2490.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "avena": {
+   "es": "Avena",
+   "en": "Oats",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "pan_lactal": {
+   "es": "Pan lactal",
+   "en": "Sliced bread",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pan Blanco Lactal 315 grs",
+      "unit_price": 2340.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan Blanco Lactal 315 grs",
+      "unit_price": 2340.0,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Pan Blanco 315 Grs Lactal",
+      "unit_price": 3850.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pan Blanco 315 Grs Lactal",
+      "unit_price": 3850.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Pan De Mesa Lactal De Salvado Con Semillas 330 G",
+      "unit_price": 2935.4,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan De Mesa Lactal De Salvado Con Semillas 330 G",
+      "unit_price": 2935.4,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Pan Blanco Lactal 315 Gr.",
+      "unit_price": 2340.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan Blanco Lactal 315 Gr.",
+      "unit_price": 2340.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "banana": {
+   "es": "Banana",
+   "en": "Bananas",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Banana selección x kg.",
+      "unit_price": 1749.0,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Banana Ecuador X Kg",
+      "unit_price": 2899.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Banana Ecuador X Kg",
+      "unit_price": 2899.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Banana 1 Kg",
+      "unit_price": 2899.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Banana x Kg.",
+      "unit_price": 2890.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "manzana": {
+   "es": "Manzana",
+   "en": "Apples",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Manzana granny especial x kg.",
+      "unit_price": 4999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Manzana Pink Lady por Kg",
+      "unit_price": 2999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Manzana Roja 1 Kg",
+      "unit_price": 2999.0,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Manzana Roja Comercial en bolsa malla x Kg.",
+      "unit_price": 2890.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "naranja": {
+   "es": "Naranja",
+   "en": "Oranges",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 2,
+   "has_quality": false,
+   "shops": {}
+  },
+  "zanahoria": {
+   "es": "Zanahoria",
+   "en": "Carrots",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "papa": {
+   "es": "Papa",
+   "en": "Potatoes",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 2,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Papa cepillada x kg.",
+      "unit_price": 2999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Papa Cepillada Granel Por Kg",
+      "unit_price": 2999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Papa 500 G",
+      "unit_price": 2999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Papa Negra x Kg.",
+      "unit_price": 2990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "queso": {
+   "es": "Queso cremoso",
+   "en": "Soft cheese (cremoso)",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Queso cuartirolo Tremblay x kg.",
+      "unit_price": 9900.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Cremoso Cremac-sob-kg-1",
+      "unit_price": 11900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg",
+      "unit_price": 16500.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Queso Cremoso Aliada 600 G",
+      "unit_price": 12499.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Cremoso Vacalin 400 Gr.",
+      "unit_price": 14975.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Queso Cremoso La Paulina x Kg.",
+      "unit_price": 17490.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "aceite": {
+   "es": "Aceite de girasol",
+   "en": "Sunflower oil",
+   "unit": "l",
+   "cat": "almacen",
+   "q": 1.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Aceite de girasol Legitimo 1.5 lts",
+      "unit_price": 4543.33,
+      "promo": false
+     },
+     "quality": {
+      "name": "Aceite de girasol Legitimo 1.5 lts",
+      "unit_price": 4543.33,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Aceite De Girasol 1500ml Cuisine & Co",
+      "unit_price": 4666.67,
+      "promo": false
+     },
+     "quality": {
+      "name": "Aceite Girasol Legitimo 1.5 L",
+      "unit_price": 4833.33,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Aceite De Girasol Legítimo 1.5 L",
+      "unit_price": 4546.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Aceite De Girasol Legítimo 1.5 L",
+      "unit_price": 4546.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Aceite de Girasol Legítimo 1,5 Lt.",
+      "unit_price": 4543.33,
+      "promo": false
+     },
+     "quality": {
+      "name": "Aceite de Girasol Legítimo 1,5 Lt.",
+      "unit_price": 4543.33,
+      "promo": false
+     }
+    }
+   }
+  },
+  "yerba": {
+   "es": "Yerba mate",
+   "en": "Yerba mate",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Yerba mate Chamigo con palo 500 g.",
+      "unit_price": 3900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Yerba mate Amanda tradicional 1 kg.",
+      "unit_price": 5069.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg",
+      "unit_price": 5208.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg",
+      "unit_price": 5208.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Yerba Mate Chamigo Sin Tacc 500g",
+      "unit_price": 3898.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Yerba Mate Amanda Tradicional 500 G",
+      "unit_price": 4792.3,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Yerba Mate Chamigo 500 Gr.",
+      "unit_price": 2535.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Yerba Mate Amanda Tradicional 1 Kg.",
+      "unit_price": 3245.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "fideos": {
+   "es": "Fideos",
+   "en": "Dry pasta",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Fideos tallarin N5 Lucchetti 500 g.",
+      "unit_price": 3492.3,
+      "promo": false
+     },
+     "quality": {
+      "name": "Fideos tallarin N5 Lucchetti 500 g.",
+      "unit_price": 3492.3,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Fideos Coditos 500 Grs Lucchetti",
+      "unit_price": 3900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Fideos Coditos 500 Grs Lucchetti",
+      "unit_price": 3900.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
+      "unit_price": 3698.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
+      "unit_price": 3698.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
+      "unit_price": 2480.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
+      "unit_price": 2480.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "pure_tomate": {
+   "es": "Puré de tomate",
+   "en": "Tomato purée",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Puré de tomates Bulnez 520 g.",
+      "unit_price": 809.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Puré de tomate Arcor brik 520 g.",
+      "unit_price": 890.0,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Puré de Tomate 520 Grs Cuisine y Co Pure De Tomate 520 Gr Cuisine & Co",
+      "unit_price": 900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Puré de Tomate Clásico 520 Grs Arcor Pure De Tomate Arcor X 520 Gr",
+      "unit_price": 1220.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Puré De Tomate Arcor 520 G",
+      "unit_price": 674.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Puré De Tomate Arcor 520 G",
+      "unit_price": 674.0,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Puré de Tomate Dia 520 Gr.",
+      "unit_price": 990.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Puré de Tomate La Campagnola 520 Gr.",
+      "unit_price": 1055.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "azucar": {
+   "es": "Azúcar",
+   "en": "Sugar",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Azúcar común Bulnez 1 kg",
+      "unit_price": 1390.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Azúcar Ledesma molida superior bolsa 1 kg.",
+      "unit_price": 1619.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Azúcar 1 Kg Tradicional Chango Azúcar Chango 1 Kg.",
+      "unit_price": 1700.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Azúcar 1 Kg Tradicional Chango Azúcar Chango 1 Kg.",
+      "unit_price": 1700.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Azucar Check Comun Tipo A 1kg",
+      "unit_price": 1469.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Azúcar Ledesma Superior Refinada 1 Kg",
+      "unit_price": 1639.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Azúcar Plus DIA Común tipo A 1 Kg.",
+      "unit_price": 1136.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Azúcar Ledesma Refinado Superior 1 Kg.",
+      "unit_price": 1450.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "carne_picada": {
+   "es": "Carne picada",
+   "en": "Minced beef",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Picada Comun Novillito",
+      "unit_price": 7499.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Picada Especial",
+      "unit_price": 12999.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Carne Picada Magra 800g",
+      "unit_price": 13939.15,
+      "promo": true
+     },
+     "quality": {
+      "name": "Carne Picada Magra 800g",
+      "unit_price": 13939.15,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Carne Picada común Atmósfera Modificada 600 Gr.",
+      "unit_price": 14000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Picada De Nalga Catte Meat 500 Gr.",
+      "unit_price": 19980.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "galletitas": {
+   "es": "Galletitas",
+   "en": "Biscuits",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Galletitas sandwich Traviata 108 g.",
+      "unit_price": 829.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas sandwich Traviata 108 g.",
+      "unit_price": 829.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Galletitas Traviata 108g",
+      "unit_price": 900.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas Traviata 108g",
+      "unit_price": 900.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Galletitas Traviata Clásicas 108g",
+      "unit_price": 829.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas Traviata Clásicas 108g",
+      "unit_price": 829.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Galletitas Macucas 110 Gr.",
+      "unit_price": 850.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Galletitas Macucas 110 Gr.",
+      "unit_price": 850.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "mayonesa": {
+   "es": "Mayonesa",
+   "en": "Mayonnaise",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Mayonesa Natura 237 g.",
+      "unit_price": 1549.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mayonesa Natura 237 g.",
+      "unit_price": 1549.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Aderezo Mayonesa Natura 237 Gr",
+      "unit_price": 1750.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Aderezo Mayonesa Natura 237 Gr",
+      "unit_price": 1750.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Mayonesa Natura 250 Cc",
+      "unit_price": 1549.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mayonesa Natura 250 Cc",
+      "unit_price": 1549.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Mayonesa Cañuelas 250 Gr.",
+      "unit_price": 1471.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mayonesa Natura 250 Ml.",
+      "unit_price": 1628.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "cafe": {
+   "es": "Café",
+   "en": "Coffee",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.25,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Café Torrado molido La Planta de Café Cabrales 1 kg.",
+      "unit_price": 30925.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Café Torrado molido La Planta de Café Cabrales 1 kg.",
+      "unit_price": 30925.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Café Molido Torrado Intenso 250 Grs La Morenita",
+      "unit_price": 30000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Café Molido Torrado Intenso 250 Grs La Morenita",
+      "unit_price": 30000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Café Molido La Morenita Intenso 250gr",
+      "unit_price": 28276.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Café Molido La Morenita Intenso 250gr",
+      "unit_price": 28276.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Café Molido Morenita Intenso 250 Gr.",
+      "unit_price": 28280.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Café Molido Morenita Intenso 250 Gr.",
+      "unit_price": 28280.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "te": {
+   "es": "Té en saquitos (caja)",
+   "en": "Tea bags (box)",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Té Morenita en saquitos la x 25 uni",
+      "unit_price": 1019.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Té negro en saquitos Green Hills clássic 25 uni",
+      "unit_price": 1569.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Té Green Hills - 25 Saquitos",
+      "unit_price": 1700.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Té Green Hills - 25 Saquitos",
+      "unit_price": 1700.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Te Común La Morenita 25 Saquitos",
+      "unit_price": 1019.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Té Clásico Green Hills 25 Saquitos",
+      "unit_price": 1569.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Té en saquitos Green Hills 25 Ud.",
+      "unit_price": 1616.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Té en saquitos Green Hills 25 Ud.",
+      "unit_price": 1616.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "harina": {
+   "es": "Harina",
+   "en": "Flour",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Harina de Trigo 000 Caserita x 1 kg",
+      "unit_price": 1150.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina de Trigo 000 Caserita x 1 kg",
+      "unit_price": 1150.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Harina 000 1 Kg Caserita",
+      "unit_price": 1150.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina 000 1 Kg Caserita",
+      "unit_price": 1150.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Harina De Trigo Caserita Tipo 0000 1 Kg",
+      "unit_price": 919.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Harina De Trigo Caserita Tipo 0000 1 Kg",
+      "unit_price": 919.0,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
+      "unit_price": 780.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
+      "unit_price": 780.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "manteca": {
+   "es": "Manteca",
+   "en": "Butter",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Manteca Tonadita calidad extra 200 g.",
+      "unit_price": 21995.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Manteca La Serenísima extra para untar 200 g.",
+      "unit_price": 26050.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Manteca Clásica 200 Grs Tonadita Manteca Tonadita 200 Gr",
+      "unit_price": 23250.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Manteca Clásica 200 Grs La Serenisima Manteca Ls Bienestar Animal 200 G",
+      "unit_price": 26055.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Manteca Tonadita Clásica 200 G",
+      "unit_price": 21995.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Manteca La Paulina Calidad Extra 200 G",
+      "unit_price": 24245.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Manteca Tonadita Extra calidad 200 Gr.",
+      "unit_price": 16450.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Manteca La Serenísima 200 Gr.",
+      "unit_price": 19500.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "dulce_de_leche": {
+   "es": "Dulce de leche",
+   "en": "Dulce de leche",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 0.4,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Dulce de leche Ilolay clásico 400 g.",
+      "unit_price": 7637.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Dulce de leche Ilolay clásico 400 g.",
+      "unit_price": 7637.5,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Dulce de Leche Tradicional 400 Grs Ilolay",
+      "unit_price": 10375.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Dulce de Leche Tradicional 400 Grs Ilolay",
+      "unit_price": 10375.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Dulce De Leche Ilolay Clásico 400 G",
+      "unit_price": 7573.12,
+      "promo": true
+     },
+     "quality": {
+      "name": "Dulce De Leche Ilolay Clásico 400 G",
+      "unit_price": 7573.12,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Dulce de Leche La Serenisima Colonial 1 Kg.",
+      "unit_price": 8160.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Dulce de Leche La Serenisima Colonial 1 Kg.",
+      "unit_price": 8160.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "agua": {
+   "es": "Agua mineral",
+   "en": "Mineral water",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Agua mineral sin gas Eco de los Andes 2 lts",
+      "unit_price": 1112.65,
+      "promo": true
+     },
+     "quality": {
+      "name": "Agua mineral sin gas Eco de los Andes 2 lts",
+      "unit_price": 1112.65,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Agua Mineral Sin Gas 2250 Ml Villa del Sur",
+      "unit_price": 1244.44,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua Mineral Sin Gas 2250 Ml Villa del Sur",
+      "unit_price": 1244.44,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Agua Mineral Sin Gas Sierra De Los Padres 2 Lt",
+      "unit_price": 1049.5,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt",
+      "unit_price": 1116.15,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Agua Mineral sin Gas Sierra de los Padres 2 Lts.",
+      "unit_price": 675.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Agua Mineral sin Gas Eco de los Andes 2 Lts.",
+      "unit_price": 1025.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "detergente": {
+   "es": "Detergente",
+   "en": "Dish soap",
+   "unit": "l",
+   "cat": "limpieza",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Detergente Concentrado Cif Active Gel Original 500 ml",
+      "unit_price": 6033.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Detergente Concentrado Cif Active Gel Original 500 ml",
+      "unit_price": 6033.5,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Detergente Lavavajilas Limón 500 Ml Zorro",
+      "unit_price": 6600.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Detergente Bioactive Limón Botella 300 Ml Cif",
+      "unit_price": 9833.33,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Detergente Cif Active Gel Limón 500 Ml",
+      "unit_price": 6586.8,
+      "promo": true
+     },
+     "quality": {
+      "name": "Detergente Cif Active Gel Limón 500 Ml",
+      "unit_price": 6586.8,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+      "unit_price": 5470.8,
+      "promo": true
+     },
+     "quality": {
+      "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+      "unit_price": 5470.8,
+      "promo": true
+     }
+    }
+   }
+  },
+  "lavandina": {
+   "es": "Lavandina",
+   "en": "Bleach",
+   "unit": "l",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Lavandina Ayudín triple poder lavanda 1 l.",
+      "unit_price": 1329.25,
+      "promo": true
+     },
+     "quality": {
+      "name": "Lavandina Ayudín triple poder lavanda 1 l.",
+      "unit_price": 1329.25,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Lavandina Líquida 1 Lts Ayudín",
+      "unit_price": 1551.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Lavandina Líquida 1 Lts Ayudín",
+      "unit_price": 1551.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Lavandina Ayudin Original 2l",
+      "unit_price": 1299.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Lavandina Ayudin Original 2l",
+      "unit_price": 1299.5,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Lavandina Ayudín Original 1 Lt.",
+      "unit_price": 1650.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Lavandina Ayudín Original 1 Lt.",
+      "unit_price": 1650.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "jabon_ropa": {
+   "es": "Jabón para la ropa",
+   "en": "Laundry powder",
+   "unit": "kg",
+   "cat": "limpieza",
+   "q": 3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Jabón en polvo Ala Bicarbonato 800 grs",
+      "unit_price": 2696.69,
+      "promo": true
+     },
+     "quality": {
+      "name": "Jabón en polvo Ala Bicarbonato 800 grs",
+      "unit_price": 2696.69,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Jabón en Polvo para Ropa 800 Grs Zorro",
+      "unit_price": 4437.5,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabón en Polvo Eco Lavado 3 Kg Ala",
+      "unit_price": 4950.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
+      "unit_price": 2305.8,
+      "promo": true
+     },
+     "quality": {
+      "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
+      "unit_price": 2305.8,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Jabon en polvo ALA Bicarbonato 800 Gr.",
+      "unit_price": 4150.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabon en polvo ALA Bicarbonato 800 Gr.",
+      "unit_price": 4150.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "shampoo": {
+   "es": "Shampoo",
+   "en": "Shampoo",
+   "unit": "l",
+   "cat": "limpieza",
+   "q": 0.4,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Shampoo Sedal Ceramidas Botella 340 ml",
+      "unit_price": 18778.29,
+      "promo": false
+     },
+     "quality": {
+      "name": "Shampoo Sedal Ceramidas Botella 340 ml",
+      "unit_price": 18778.29,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Shampoo Crema Balance 340 Ml Sedal",
+      "unit_price": 20000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Shampoo Crema Balance 340 Ml Sedal",
+      "unit_price": 20000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Shampoo Sedal Ceramidas 340ml",
+      "unit_price": 18791.18,
+      "promo": false
+     },
+     "quality": {
+      "name": "Shampoo Sedal Ceramidas 340ml",
+      "unit_price": 18791.18,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Shampoo Elvive RT5 Keratin 400 Ml.",
+      "unit_price": 16486.25,
+      "promo": true
+     },
+     "quality": {
+      "name": "Shampoo Elvive RT5 Keratin 400 Ml.",
+      "unit_price": 16486.25,
+      "promo": true
+     }
+    }
+   }
+  },
+  "pasta_dental": {
+   "es": "Pasta dental",
+   "en": "Toothpaste",
+   "unit": "kg",
+   "cat": "limpieza",
+   "q": 0.09,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pasta Dental Kolynos Frescura 90 g.",
+      "unit_price": 26322.22,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pasta Dental Kolynos Frescura 90 g.",
+      "unit_price": 26322.22,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Pasta Dental Kolynos Frescura 123 90 Grs",
+      "unit_price": 29444.44,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pasta Dental Kolynos Frescura 123 90 Grs",
+      "unit_price": 29444.44,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Pasta Dental Kolynos Frescura 90g",
+      "unit_price": 28322.22,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pasta Dental Kolynos Frescura 90g",
+      "unit_price": 28322.22,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Pasta Dental Kolynos Frescura 123 90 Gr.",
+      "unit_price": 19833.33,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pasta Dental Kolynos Frescura 123 90 Gr.",
+      "unit_price": 19833.33,
+      "promo": true
+     }
+    }
+   }
+  }
+ }
+}

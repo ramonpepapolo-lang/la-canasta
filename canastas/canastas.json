@@ -15,7 +15,10 @@
    "include": "\\basado\\b",
    "exclude": "tapa|plancha|cordero|cerdo|pollo|kit|sal\\b|repasador|tabla|cuchill|salsa|parrill|condimento|carb|banana|papel|bandeja|plato|fuente|pincel|pinza|delantal|cuchara|hamburg|vegetal|vegano|soja|milanesa|matambre|bife|lomo|peceto|paleta|tortuguita|roast|cuadril|colita|entra[ñn]a|nalga|bola|osobuco|falda",
    "unit_required": "kg",
-   "kcal": 2900
+   "kcal": 2900,
+   "cat": "carnes",
+   "q": 1,
+   "quality": "novill"
   },
   "vacio": {
    "es": "Vacío",
@@ -25,7 +28,10 @@
    "include": "^\\s*vac[ií]o\\b",
    "exclude": "cerdo|pollo|bolsa|porcionado|cerdo|wagyu|horno|rostiz|congelado",
    "unit_required": "kg",
-   "kcal": 2200
+   "kcal": 2200,
+   "cat": "carnes",
+   "q": 1,
+   "quality": "novill"
   },
   "chorizo": {
    "es": "Chorizo",
@@ -34,7 +40,10 @@
    "search": "chorizo",
    "include": "chorizo",
    "exclude": "colorado|seco|ahumado|calabr|cantimpalo|pizza|espa[ñn]ol|parmesano|pan de|vegano|vegetal|soja|sandwich|bife|entra[ñn]a|lomo",
-   "kcal": 3000
+   "kcal": 3000,
+   "cat": "carnes",
+   "q": 0.5,
+   "quality": "paladini|campo austral|cagnoli|la divisa|santa rita|bierwiese"
   },
   "morcilla": {
    "es": "Morcilla",
@@ -43,7 +52,9 @@
    "search": "morcilla",
    "include": "morcilla",
    "exclude": "vasca|dulce|pizza",
-   "kcal": 2400
+   "kcal": 2400,
+   "cat": "carnes",
+   "q": 0.5
   },
   "pan": {
    "es": "Pan francés o flauta",
@@ -52,7 +63,9 @@
    "search": "pan frances",
    "include": "pan (franc|flauta|de campo|baguette|criollo|mignon|felipe)|baguette|flauta",
    "exclude": "lactal|rallado|integral|dulce|tostad|salvado|hamburg|pancho|pebete|congel|premezcla|harina",
-   "kcal": 2650
+   "kcal": 2650,
+   "cat": "almacen",
+   "q": 1
   },
   "carbon": {
    "es": "Carbón",
@@ -61,7 +74,9 @@
    "search": "carbon",
    "include": "carb[oó]n",
    "exclude": "activad|dental|filtro|cepillo|lapiz|l[aá]piz|carbonara|carbonatad|pasta|jab[oó]n|mascar|papel|encend|lata",
-   "kcal": 0
+   "kcal": 0,
+   "cat": "almacen",
+   "q": 4
   },
   "provoleta": {
    "es": "Provoleta",
@@ -70,7 +85,10 @@
    "search": "provoleta",
    "include": "provol",
    "exclude": "rallad|fetead|pizza|untable",
-   "kcal": 3500
+   "kcal": 3500,
+   "cat": "lacteos",
+   "q": 0.25,
+   "quality": "la serenísima|la serenisima|tregar|ilolay|la paulina|sancor"
   },
   "tomate": {
    "es": "Tomate",
@@ -78,7 +96,9 @@
    "unit": "kg",
    "basket_type": "tomate",
    "unit_required": "kg",
-   "kcal": 180
+   "kcal": 180,
+   "cat": "verduleria",
+   "q": 1
   },
   "cebolla": {
    "es": "Cebolla",
@@ -86,7 +106,9 @@
    "unit": "kg",
    "basket_type": "cebolla",
    "unit_required": "kg",
-   "kcal": 400
+   "kcal": 400,
+   "cat": "verduleria",
+   "q": 1
   },
   "lechuga": {
    "es": "Lechuga",
@@ -95,7 +117,9 @@
    "search": "lechuga",
    "include": "lechuga",
    "exclude": "semilla|mix|ensalada|hidrop",
-   "kcal": 50
+   "kcal": 50,
+   "cat": "verduleria",
+   "q": 1
   },
   "vino": {
    "es": "Vino tinto (botella 750 ml)",
@@ -105,7 +129,10 @@
    "include": "(?=.*\\b750\\b)(?=.*(malbec|cabernet|tinto|blend|bonarda|syrah))",
    "exclude": "sidra|espumante|blanco|rosado|lata|sin alcohol|vinagre|dulce|gin|jugo|vermut|fernet|aperitivo|tetra|caja|bag|damajuana",
    "size_required": true,
-   "kcal": 850
+   "kcal": 850,
+   "cat": "bebidas",
+   "q": 1.5,
+   "quality": "trapiche|norton|el esteco|alamos|santa julia|portillo|nieto senetiner|luigi bosca|rutini|catena|benjam[ií]n|fond de cave"
   },
   "cerveza": {
    "es": "Cerveza rubia",
@@ -115,7 +142,10 @@
    "include": "cerveza",
    "exclude": "pomelo|lim[oó]n|negra|stout|ipa|sin alcohol|0,0|0\\.0|roja|honey|pack|x ?6|x ?12|barril|vaso|copa|radler|frutad|michelada|trigo|apa\\b|session|blanca|weiss|weizen|ale\\b|porter|amber|roja|dorada premium|ret\\b",
    "size_required": true,
-   "kcal": 430
+   "kcal": 430,
+   "cat": "bebidas",
+   "q": 3,
+   "quality": "quilmes|stella|corona|heineken|brahma|andes|patagonia"
   },
   "gaseosa": {
    "es": "Coca-Cola",
@@ -125,7 +155,9 @@
    "include": "coca.?cola",
    "exclude": "zero|light|liviano|sin az|caf|lata|vaso|copa|pack|x ?6|x ?4|x ?12|menos az",
    "size_required": true,
-   "kcal": 420
+   "kcal": 420,
+   "cat": "bebidas",
+   "q": 2.25
   },
   "chimichurri": {
    "es": "Chimichurri",
@@ -134,7 +166,10 @@
    "search": "chimichurri",
    "include": "chimichurri",
    "exclude": "mayonesa|mostaza|papas|snack|aderezo|ketchup|mani|man[ií]\\b",
-   "kcal": 50
+   "kcal": 50,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "alicante|dos anclas|la parmesana"
   },
   "sal_gruesa": {
    "es": "Sal gruesa",
@@ -143,7 +178,10 @@
    "search": "sal gruesa",
    "include": "sal gruesa|sal parrillera",
    "exclude": "ajo|saborizada|pimienta",
-   "kcal": 0
+   "kcal": 0,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "celusal|dos anclas"
   },
   "leche": {
    "es": "Leche",
@@ -153,7 +191,10 @@
    "size_required": true,
    "kcal": 610,
    "include": "entera|cl[aá]sica",
-   "exclude": "2 ?sachet|x ?2\\b|x ?3\\b|pack|chocolat|vainilla|deslact"
+   "exclude": "2 ?sachet|x ?2\\b|x ?3\\b|pack|chocolat|vainilla|deslact",
+   "cat": "lacteos",
+   "q": 2,
+   "quality": "la seren[ií]sima|sancor|ilolay|tregar"
   },
   "yogur": {
    "es": "Yogur",
@@ -164,7 +205,10 @@
    "exclude": "bebible|griego|pote x|pack|x ?4|x ?6|x ?8|helado|cereal|postre|petit|firme con|con cereales",
    "size_required": true,
    "kcal": 600,
-   "min_size": 0.5
+   "min_size": 0.5,
+   "cat": "lacteos",
+   "q": 1,
+   "quality": "la seren[ií]sima|ilolay|sancor|danone|yogurísimo|yogurisimo"
   },
   "huevos": {
    "es": "Huevos",
@@ -172,7 +216,9 @@
    "unit": "un",
    "basket_type": "huevos",
    "count_required": true,
-   "kcal": 78
+   "kcal": 78,
+   "cat": "lacteos",
+   "q": 12
   },
   "pollo": {
    "es": "Pollo entero",
@@ -180,7 +226,10 @@
    "unit": "kg",
    "basket_type": "pollo_entero",
    "unit_required": "kg",
-   "kcal": 1650
+   "kcal": 1650,
+   "cat": "carnes",
+   "q": 2,
+   "quality": "fresco"
   },
   "pechuga": {
    "es": "Pechuga de pollo",
@@ -190,7 +239,9 @@
    "include": "pechuga",
    "exclude": "milanesa|rebozad|congelad|hamburg|nugget|fiambre|pavo|ahumad|fetead|jam[oó]n",
    "unit_required": "kg",
-   "kcal": 1650
+   "kcal": 1650,
+   "cat": "carnes",
+   "q": 1
   },
   "atun": {
    "es": "Atún en lata",
@@ -199,7 +250,10 @@
    "search": "atun",
    "include": "at[uú]n",
    "exclude": "pat[eé]|ensalada|lomitos|untable|gato|perro|mascota|x ?3|x ?6|pack",
-   "kcal": 180
+   "kcal": 180,
+   "cat": "almacen",
+   "q": 2,
+   "quality": "la campagnola|gomes da costa|caricia"
   },
   "lentejas": {
    "es": "Lentejas",
@@ -209,7 +263,9 @@
    "include": "lentej",
    "exclude": "lata|guiso|hamburg|harina|germin|conserva|sopa|remojad|milanesa|medall|snack|pasta|fideo",
    "size_required": true,
-   "kcal": 3530
+   "kcal": 3530,
+   "cat": "almacen",
+   "q": 0.5
   },
   "arroz": {
    "es": "Arroz",
@@ -217,7 +273,10 @@
    "unit": "kg",
    "basket_type": "arroz",
    "size_required": true,
-   "kcal": 3650
+   "kcal": 3650,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "gallo|lucchetti|luchetti"
   },
   "avena": {
    "es": "Avena",
@@ -227,14 +286,20 @@
    "include": "avena",
    "exclude": "leche|bebida|galletit|barra|granola|cookie|yogur|shampoo|crema|jab[oó]n|cereal mix",
    "size_required": true,
-   "kcal": 3890
+   "kcal": 3890,
+   "cat": "almacen",
+   "q": 0.5,
+   "quality": "quaker|granix"
   },
   "pan_lactal": {
    "es": "Pan lactal",
    "en": "Sliced bread",
    "unit": "un",
    "basket_type": "pan_lactal",
-   "kcal": 850
+   "kcal": 850,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "fargo|bimbo|lactal|la perla"
   },
   "banana": {
    "es": "Banana",
@@ -242,7 +307,10 @@
    "unit": "kg",
    "basket_type": "banana",
    "unit_required": "kg",
-   "kcal": 890
+   "kcal": 890,
+   "cat": "verduleria",
+   "q": 1,
+   "quality": "ecuador"
   },
   "manzana": {
    "es": "Manzana",
@@ -250,7 +318,9 @@
    "unit": "kg",
    "basket_type": "manzana",
    "unit_required": "kg",
-   "kcal": 520
+   "kcal": 520,
+   "cat": "verduleria",
+   "q": 1
   },
   "naranja": {
    "es": "Naranja",
@@ -260,7 +330,9 @@
    "include": "naranja",
    "exclude": "jugo|gaseosa|mermelada|dulce|exprimid|esencia|saboriz|galletit|caramelo|t[eé]\\b",
    "unit_required": "kg",
-   "kcal": 470
+   "kcal": 470,
+   "cat": "verduleria",
+   "q": 2
   },
   "zanahoria": {
    "es": "Zanahoria",
@@ -270,7 +342,9 @@
    "include": "zanahoria",
    "exclude": "jugo|pur[eé]|lata|congel|baby|rallad|torta|budín|budin",
    "unit_required": "kg",
-   "kcal": 410
+   "kcal": 410,
+   "cat": "verduleria",
+   "q": 1
   },
   "papa": {
    "es": "Papa",
@@ -278,14 +352,19 @@
    "unit": "kg",
    "basket_type": "papa",
    "unit_required": "kg",
-   "kcal": 770
+   "kcal": 770,
+   "cat": "verduleria",
+   "q": 2
   },
   "queso": {
    "es": "Queso cremoso",
    "en": "Soft cheese (cremoso)",
    "unit": "kg",
    "basket_type": "queso_cremoso",
-   "kcal": 3000
+   "kcal": 3000,
+   "cat": "lacteos",
+   "q": 0.5,
+   "quality": "la seren[ií]sima|la paulina|tregar|sancor|ilolay|milkaut"
   },
   "aceite": {
    "es": "Aceite de girasol",
@@ -293,7 +372,10 @@
    "unit": "l",
    "basket_type": "aceite_girasol",
    "size_required": true,
-   "kcal": 8840
+   "kcal": 8840,
+   "cat": "almacen",
+   "q": 1.5,
+   "quality": "natura|cocinero|legítimo|legitimo|cañuelas"
   },
   "yerba": {
    "es": "Yerba mate",
@@ -301,7 +383,10 @@
    "unit": "kg",
    "basket_type": "yerba",
    "size_required": true,
-   "kcal": 0
+   "kcal": 0,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "playadito|tarag[uü]i|rosamonte|amanda|uni[oó]n|cruz de malta|la merced|canarias"
   },
   "fideos": {
    "es": "Fideos",
@@ -309,14 +394,20 @@
    "unit": "kg",
    "basket_type": "fideos",
    "size_required": true,
-   "kcal": 3600
+   "kcal": 3600,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "lucchetti|luchetti|matarazzo|don vicente|barilla|terrabusi"
   },
   "pure_tomate": {
    "es": "Puré de tomate",
    "en": "Tomato purée",
    "unit": "un",
    "basket_type": "pure_tomate",
-   "kcal": 160
+   "kcal": 160,
+   "cat": "almacen",
+   "q": 2,
+   "quality": "arcor|la campagnola|mol[ií]to|knorr|alco|canale"
   },
   "azucar": {
    "es": "Azúcar",
@@ -324,7 +415,10 @@
    "unit": "kg",
    "basket_type": "azucar",
    "size_required": true,
-   "kcal": 3870
+   "kcal": 3870,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "ledesma|chango"
   },
   "carne_picada": {
    "es": "Carne picada",
@@ -334,7 +428,10 @@
    "include": "picada",
    "exclude": "cerdo|pollo|pavo|soja|vegetal|hamburg|congel|especial.*cerdo|cebolla|ajo|verdura|mix",
    "kcal": 2500,
-   "size_required": true
+   "size_required": true,
+   "cat": "carnes",
+   "q": 1,
+   "quality": "especial|magra|nalga"
   },
   "galletitas": {
    "es": "Galletitas",
@@ -343,14 +440,140 @@
    "search": "galletitas",
    "include": "galletita",
    "exclude": "arroz|sin tacc|pack|x ?3|perro|gato|surtid",
-   "kcal": 1300
+   "kcal": 1300,
+   "cat": "almacen",
+   "q": 3,
+   "quality": "terrabusi|bagley|arcor|oreo|criollitas|traviata|express|pepitos|tita"
   },
   "mayonesa": {
    "es": "Mayonesa",
    "en": "Mayonnaise",
    "unit": "un",
    "basket_type": "mayonesa",
-   "kcal": 1600
+   "kcal": 1600,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "hellmann|natura|fanacoa"
+  },
+  "cafe": {
+   "es": "Café",
+   "en": "Coffee",
+   "unit": "kg",
+   "basket_type": "cafe",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "almacen",
+   "q": 0.25,
+   "quality": "la virginia|cabrales|bonafide|nescaf|dolca|la morenita"
+  },
+  "te": {
+   "es": "Té en saquitos (caja)",
+   "en": "Tea bags (box)",
+   "unit": "un",
+   "basket_type": "te",
+   "kcal": 0,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "la virginia|taragui|taragüi|green hills|crysf"
+  },
+  "harina": {
+   "es": "Harina",
+   "en": "Flour",
+   "unit": "kg",
+   "basket_type": "harina_000",
+   "size_required": true,
+   "kcal": 3640,
+   "cat": "almacen",
+   "q": 1,
+   "quality": "blancaflor|pureza|favorita|morixe|caserita"
+  },
+  "manteca": {
+   "es": "Manteca",
+   "en": "Butter",
+   "unit": "kg",
+   "basket_type": "manteca",
+   "size_required": true,
+   "kcal": 7170,
+   "cat": "lacteos",
+   "q": 0.2,
+   "quality": "la seren[ií]sima|sancor|la paulina|tregar"
+  },
+  "dulce_de_leche": {
+   "es": "Dulce de leche",
+   "en": "Dulce de leche",
+   "unit": "kg",
+   "basket_type": "dulce_de_leche",
+   "size_required": true,
+   "kcal": 3150,
+   "cat": "lacteos",
+   "q": 0.4,
+   "quality": "la seren[ií]sima|sancor|ilolay|chimbote|havanna|milkaut"
+  },
+  "agua": {
+   "es": "Agua mineral",
+   "en": "Mineral water",
+   "unit": "l",
+   "basket_type": "agua",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "bebidas",
+   "q": 3,
+   "quality": "villavicencio|eco de los andes|glaciar|villa del sur"
+  },
+  "detergente": {
+   "es": "Detergente",
+   "en": "Dish soap",
+   "unit": "l",
+   "basket_type": "detergente",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "limpieza",
+   "q": 0.5,
+   "quality": "magistral|cif|ala\\b"
+  },
+  "lavandina": {
+   "es": "Lavandina",
+   "en": "Bleach",
+   "unit": "l",
+   "basket_type": "lavandina",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "limpieza",
+   "q": 1,
+   "quality": "ayud[ií]n|vim"
+  },
+  "jabon_ropa": {
+   "es": "Jabón para la ropa",
+   "en": "Laundry powder",
+   "unit": "kg",
+   "basket_type": "jabon_ropa",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "limpieza",
+   "q": 3,
+   "quality": "skip|ala\\b|ariel|drive"
+  },
+  "shampoo": {
+   "es": "Shampoo",
+   "en": "Shampoo",
+   "unit": "l",
+   "basket_type": "shampoo",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "limpieza",
+   "q": 0.4,
+   "quality": "dove|sedal|pantene|head & shoulders|elvive|tresemm"
+  },
+  "pasta_dental": {
+   "es": "Pasta dental",
+   "en": "Toothpaste",
+   "unit": "kg",
+   "basket_type": "pasta_dental",
+   "size_required": true,
+   "kcal": 0,
+   "cat": "limpieza",
+   "q": 0.09,
+   "quality": "colgate|oral-b|sensodyne|kolynos"
   }
  },
  "baskets": [
@@ -440,5 +663,37 @@
    },
    "fixed": {}
   }
+ ],
+ "categories": [
+  [
+   "carnes",
+   "Carnes",
+   "Meat"
+  ],
+  [
+   "lacteos",
+   "Lácteos y huevos",
+   "Dairy and eggs"
+  ],
+  [
+   "almacen",
+   "Almacén",
+   "Pantry"
+  ],
+  [
+   "verduleria",
+   "Verdulería",
+   "Fruit and veg"
+  ],
+  [
+   "bebidas",
+   "Bebidas",
+   "Drinks"
+  ],
+  [
+   "limpieza",
+   "Limpieza y cuidado personal",
+   "Cleaning and personal care"
+  ]
  ]
 }

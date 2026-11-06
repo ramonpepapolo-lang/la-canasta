@@ -59,6 +59,29 @@ html.lc-app .cn h1 { font-size: 2rem; }
 .stepper input { width: 4rem; border: 0; text-align: center; font: 700 1.2rem var(--body); color: var(--navy); -moz-appearance: textfield; }
 .stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .bdesc { color: var(--muted); max-width: 62ch; }
+.editb { justify-self: start; font: 700 0.92rem var(--body); background: var(--bg); color: var(--navy); border: 1.5px dashed var(--celeste); border-radius: 12px; padding: 0.6rem 0.9rem; cursor: pointer; text-align: left; }
+.builder { display: grid; gap: 1rem; }
+.modeall { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-weight: 600; font-size: 0.92rem; }
+.modeall button { font: 700 0.88rem var(--body); border: 1.5px solid var(--navy); background: var(--bg); color: var(--navy); border-radius: 999px; padding: 0.45rem 0.85rem; cursor: pointer; }
+.modeall button.ghost { border-color: var(--rule); color: var(--muted); }
+.addbox input { width: 100%; font: 1rem var(--body); padding: 0.75rem 0.95rem; border: 1.5px solid var(--rule); border-radius: 12px; }
+.addres { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+.addres button, .catg button { font: 600 0.88rem var(--body); background: var(--band); border: 1px solid var(--rule); color: var(--navy); border-radius: 999px; padding: 0.4rem 0.75rem; cursor: pointer; }
+.cats { display: grid; gap: 0.7rem; }
+.catg { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.catg b { width: 100%; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.mylist-h { font-family: var(--body); font-size: 1.15rem; font-weight: 700; }
+.mylist { display: grid; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; }
+.li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.8rem; align-items: center; padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--rule); background: var(--bg); }
+.li:last-child { border-bottom: 0; }
+.li-n { display: grid; gap: 0.35rem; min-width: 0; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; justify-self: start; }
+.seg button { font: 600 0.76rem var(--body); border: 0; background: var(--bg); color: var(--muted); padding: 0.32rem 0.6rem; cursor: pointer; white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.seg button:disabled { opacity: 0.4; cursor: not-allowed; }
+.stepper.sm { align-items: center; }
+.stepper.sm button { width: 2.4rem; height: 2.4rem; font-size: 1.1rem; }
+.stepper.sm span { min-width: 3.6rem; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
 .result { display: grid; gap: 1.2rem; }
 .win { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 1.6rem 1.6rem 1.4rem; display: grid; gap: 0.35rem; box-shadow: 0 30px 60px -36px rgba(43,59,92,.8); }
 .win .lbl { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
@@ -445,6 +468,17 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     <div class="tabs" id="tabs" role="tablist"></div>
     <div class="people" id="people"><label for="n"><span class="es">¿Para cuántas personas?</span><span class="en">For how many people?</span></label><div class="stepper"><button type="button" id="minus" aria-label="Menos">−</button><input id="n" type="number" min="1" max="40" value="4"><button type="button" id="plus" aria-label="Más">+</button></div></div>
     <p class="bdesc" id="bdesc"></p>
+    <button type="button" class="editb" id="editB"><span class="es">✏️ Editar esta canasta: cambiá cosas, cantidades y marcas</span><span class="en">✏️ Edit this basket: change items, quantities and brands</span></button>
+    <div class="builder" id="builder" hidden>
+      <div class="modeall"><span class="es">Para todo:</span><span class="en">For everything:</span>
+        <button type="button" data-all="cheap"><span class="es">💸 Lo más barato</span><span class="en">💸 Cheapest</span></button>
+        <button type="button" data-all="quality"><span class="es">⭐ Primera marca</span><span class="en">⭐ Leading brand</span></button>
+        <button type="button" id="clearL" class="ghost"><span class="es">Vaciar</span><span class="en">Clear</span></button></div>
+      <div class="addbox"><input id="addq" type="search" autocomplete="off" placeholder="Agregá: yerba, asado, leche, detergente…"><div class="addres" id="addres"></div></div>
+      <div class="cats" id="cats"></div>
+      <h3 class="mylist-h"><span class="es">Tu canasta</span><span class="en">Your basket</span> <span id="lcount" class="muted"></span></h3>
+      <div class="mylist" id="mylist"></div>
+    </div>
   </section>
 
   <section class="result" id="result" hidden>
@@ -478,7 +512,36 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
   const SHOP = { Carrefour: "Carrefour", Jumbo: "Jumbo", ChangoMas: "ChangoMás", Dia: "Día" };
   // always Argentina: Carrefour and Día also exist in Spain, and the page is opened from abroad too
   const QUERY = { Carrefour: "Supermercado Carrefour, Argentina", Jumbo: "Supermercado Jumbo, Argentina", ChangoMas: "Supermercado ChangoMás, Argentina", Dia: "Supermercado Día, Argentina" };
-  let D = null, basket = "asado", people = 4, fromVoice = false, excluded = new Set(), started = false;
+  let D = null, C = null, basket = "asado", people = 4, fromVoice = false, excluded = new Set(), started = false;
+  // "Armá la tuya": the person's own list, kept on this phone: {ingredient: {qty, mode: "cheap" | "quality"}}
+  let custom = null;
+  const STARTER = { leche: 2, yerba: 1, pan_lactal: 1, arroz: 1, fideos: 1, aceite: 1.5, huevos: 12, azucar: 1 };
+  try { custom = JSON.parse(localStorage.getItem("lc-lista") || "null"); } catch (e) {}
+  if (!custom || typeof custom !== "object") { custom = {}; for (const k in STARTER) custom[k] = { qty: STARTER[k], mode: "cheap" }; }
+  const saveL = () => { try { localStorage.setItem("lc-lista", JSON.stringify(custom)); } catch (e) {} };
+  const CUSTOM = { id: "custom", es: "✨ Creá tu canasta", en: "✨ Create your basket" };
+  function customB() {
+    const ks = Object.keys(custom).filter(k => C && C.items[k]);
+    const B = { id: "custom", per: "lista", es: "Tu canasta personalizada", en: "Your custom basket", ingredients: {}, shops: {}, ranking: [], common: [], missing_everywhere: [],
+      desc_es: "Creá tu canasta personalizada: elegí qué llevás, cuánto, y si querés lo más barato o primera marca. Te decimos en qué súper te sale menos.", desc_en: "Create your custom basket: pick what you buy, how much, and whether you want the cheapest or a leading brand. We tell you where it costs least." };
+    ks.forEach(k => { const it = C.items[k]; B.ingredients[k] = { es: it.es, en: it.en, unit: it.unit }; });
+    (C ? C.shops : []).forEach(sh => {
+      const items = ks.map(k => {
+        const e = C.items[k].shops[sh] || {}, want = custom[k].mode === "quality" ? e.quality : e.cheap, opt = want || e.cheap;
+        if (!opt) return { ing: k, qty: custom[k].qty, fixed: false, missing: true };
+        return { ing: k, qty: custom[k].qty, fixed: false, unit_price: opt.unit_price, cost: opt.unit_price * custom[k].qty, name: opt.name, promo: opt.promo, fallback: custom[k].mode === "quality" && !want };
+      });
+      B.shops[sh] = { items, kcal: 0, lacks: [], complete: true };
+    });
+    const shops = C ? C.shops : [];
+    B.missing_everywhere = ks.filter(k => shops.every(sh => B.shops[sh].items.find(i => i.ing === k).missing));
+    B.common = ks.filter(k => shops.every(sh => !B.shops[sh].items.find(i => i.ing === k).missing));
+    shops.forEach(sh => { B.shops[sh].lacks = ks.filter(k => B.shops[sh].items.find(i => i.ing === k).missing && !B.missing_everywhere.includes(k)); B.shops[sh].complete = !B.shops[sh].lacks.length; });
+    const tt = sh => B.shops[sh].items.reduce((a, i) => a + (B.common.includes(i.ing) ? i.cost : 0), 0);
+    B.ranking = shops.slice().sort((a, b) => tt(a) - tt(b));
+    return B;
+  }
+  const getB = () => basket === "custom" ? customB() : D.baskets.find(x => x.id === basket);
   const $ = id => document.getElementById(id);
   const NUM = { uno: 1, una: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12, trece: 13, catorce: 14, quince: 15, veinte: 20, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12, fifteen: 15, twenty: 20 };
   function parse(text) {
@@ -496,10 +559,13 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
   }
   function render() {
     if (!D) return;
-    const B = D.baskets.find(x => x.id === basket); if (!B) return;
+    const B = getB(); if (!B) return;
     document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.id === basket)));
     $("people").hidden = B.per !== "persona";
     $("bdesc").textContent = es() ? B.desc_es : B.desc_en;
+    $("builder").hidden = basket !== "custom"; $("editB").hidden = basket === "custom";
+    if (basket === "custom") drawBuilder();
+    if (basket === "custom" && !B.common.length) { $("result").hidden = true; return; }
     const mult = B.per === "persona" ? people : 1;
     const common = new Set(B.common);
     const tot = s => { const S = B.shops[s]; return S.items.reduce((a, it) => a + (it.missing || !common.has(it.ing) || excluded.has(it.ing) ? 0 : it.cost * (it.fixed ? 1 : mult)), 0); };
@@ -509,6 +575,7 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     $("winTotal").textContent = money(tot(win));
     $("winSub").textContent = B.per === "persona"
       ? (es() ? `para ${people} persona${people > 1 ? "s" : ""} · ${money(tot(win) / people)} por persona · precios del ${fmtDate(D.date)}` : `for ${people} ${people > 1 ? "people" : "person"} · ${money(tot(win) / people)} per person · prices of ${fmtDate(D.date)}`)
+      : B.per === "lista" ? (es() ? `tu canasta, ${B.common.length} productos · precios del ${fmtDate(D.date)}` : `your basket, ${B.common.length} items · prices of ${fmtDate(D.date)}`)
       : (es() ? `una persona, 7 días · precios del ${fmtDate(D.date)}` : `one person, 7 days · prices of ${fmtDate(D.date)}`);
     $("gmaps").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(QUERY[win]);
     $("amaps").href = "https://maps.apple.com/?q=" + encodeURIComponent(QUERY[win]);
@@ -537,7 +604,8 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     W.items.filter(it => !excluded.has(it.ing)).forEach(it => {
       const ing = B.ingredients[it.ing], q = it.qty * (it.fixed ? 1 : mult), tr = document.createElement("tr");
       const qty = ing.unit === "un" ? `${Math.round(q * 100) / 100} ${q === 1 ? (es() ? "unidad" : "unit") : (es() ? "unidades" : "units")}` : ing.unit === "kg" ? (q < 1 ? `${Math.round(q * 1000)} g` : `${Math.round(q * 100) / 100} kg`) : (q < 1 ? `${Math.round(q * 1000)} ml` : `${Math.round(q * 100) / 100} L`);
-      const extra = !it.missing && !common.has(it.ing) ? `<br><small>${es() ? "no entra en la comparación: otro súper no lo tiene hoy" : "not in the comparison: another shop lacks it today"}</small>` : "";
+      const fb = it.fallback ? `<br><small>${es() ? "acá no hay primera marca: va la más barata" : "no leading brand here: cheapest instead"}</small>` : "";
+      const extra = fb + (!it.missing && !common.has(it.ing) ? `<br><small>${es() ? "no entra en la comparación: otro súper no lo tiene hoy" : "not in the comparison: another shop lacks it today"}</small>` : "");
       tr.innerHTML = it.missing
         ? `<td>${es() ? ing.es : ing.en}</td><td class="r">${qty}</td><td class="muted">${es() ? "sin precio hoy" : "no price today"}</td><td class="r">—</td>`
         : `<td>${es() ? ing.es : ing.en}</td><td class="r">${qty}</td><td>${it.name}${it.promo ? ' <span class="promo">promo</span>' : ""}<br><small>${money(it.unit_price)} ${ing.unit === "un" ? (es() ? "c/u" : "each") : (es() ? "por " : "per ") + (ing.unit === "kg" ? "kg" : es() ? "litro" : "litre")}</small>${extra}</td><td class="r"><strong>${money(it.cost * (it.fixed ? 1 : mult))}</strong></td>`;
@@ -574,12 +642,15 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     if (/(d[oó]nde queda|c[oó]mo llego|m[aá]s cerca|direcci[oó]n|mapa|where is|how do i get|nearest)/.test(t)) r.ask = "where";
     if (/(qu[eé] (llevo|compro|incluye|tiene|hay)|lista|what('s| is) in|shopping list)/.test(t)) r.ask = "list";
     if (/(empez[aá] de nuevo|de cero|reset|start over|borr[aá])/.test(t)) r.reset = true;
+    if (/(arm[aá]r?( mi| la| una)? (lista|canasta|compra)|cre[aá]r?( mi| la| una)? canasta|personalizad|mi lista|mi canasta|mi changuito|changuito|compra del mes|build (my|your) own|create (my|a|your) basket|my list|my basket)/.test(t)) r.basket = "custom";
+    if (/(primera marca|primeras marcas|calidad|buena marca|mejor marca|marcas buenas|de marca|quality|premium|leading brand)/.test(t)) r.mode = "quality";
+    else if (/(lo m[aá]s barato|cualquier marca|la m[aá]s barata|lo mas economico|lo m[aá]s econ[oó]mico|cheapest|any brand)/.test(t) && !r.basket) r.mode = "cheap";
     if (/^\s*(hola|buenas|buen d[ií]a|hello|hi|hey)\b/.test(t)) r.greet = true;
     if (/(gracias|genial|perfecto|b[aá]rbaro|thanks|thank you|great)/.test(t)) r.thanks = true;
     return r;
   }
   function state() {
-    const B = D.baskets.find(x => x.id === basket), mult = B.per === "persona" ? people : 1, common = new Set(B.common);
+    const B = getB(), mult = B.per === "persona" ? people : 1, common = new Set(B.common);
     const tot = s => B.shops[s].items.reduce((a, it) => a + (it.missing || !common.has(it.ing) || excluded.has(it.ing) ? 0 : it.cost * (it.fixed ? 1 : mult)), 0);
     const order = D.shops.slice().sort((a, b) => tot(a) - tot(b));
     return { B, mult, tot, order, win: order[0] };
@@ -589,7 +660,7 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
   const told = new Set();
   function reply(r) {
     const { B, mult, tot, order, win } = state();
-    const E = es(), what = B.id === "asado" ? (E ? `el asado para ${people}` : `the asado for ${people}`) : B.id === "saludable" ? (E ? "la semana saludable" : "the healthy week") : (E ? "la semana de estudiante" : "the student week");
+    const E = es(), what = B.id === "custom" ? (E ? "tu canasta" : "your basket") : B.id === "asado" ? (E ? `el asado para ${people}` : `the asado for ${people}`) : B.id === "saludable" ? (E ? "la semana saludable" : "the healthy week") : (E ? "la semana de estudiante" : "the student week");
     const second = order[1], save = tot(second) - tot(win);
     const main = E ? `Te conviene ir a ${SHOP[win]}: ${what} sale ${say0(tot(win))}${B.per === "persona" ? `, unos ${say0(tot(win) / people)} por persona` : ""}. Te ahorrás ${say0(save)} contra ${SHOP[second]}, que es el segundo.`
                    : `Your best bet is ${SHOP[win]}: ${what} costs ${say0(tot(win))}${B.per === "persona" ? `, about ${say0(tot(win) / people)} per person` : ""}. You save ${say0(save)} compared with ${SHOP[second]}, the runner-up.`;
@@ -597,7 +668,8 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     if (r.greet && !r.basket && !r.people) return E ? "¡Hola! Decime qué querés hacer: un asado, una semana saludable o comida barata de estudiante, y para cuántas personas." : "Hi! Tell me what you want to do: an asado, a healthy week or cheap student food, and for how many people.";
     if (r.thanks && !r.basket && !r.people && !r.remove.length && !r.add.length && !r.ask) return E ? "¡De nada! Si querés cambiar algo, decime, por ejemplo: «sin alcohol» o «somos 8»." : "You're welcome! If you want to change something, tell me, for example: \"no alcohol\" or \"we are 8\".";
     if (r.remove.length) parts.push(E ? `Listo, saqué ${[...new Set(r.remove)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.` : `Done, I took out ${[...new Set(r.remove)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.`);
-    if (r.add.length) parts.push(E ? `Listo, volví a poner ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.` : `Done, I put back ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.`);
+    if (r.mode && B.id === "custom") parts.push(E ? (r.mode === "quality" ? "Listo, puse primera marca en todo." : "Listo, puse lo más barato en todo.") : (r.mode === "quality" ? "Done, leading brands for everything." : "Done, cheapest for everything."));
+    if (r.add.length) parts.push(B.id === "custom" ? (E ? `Listo, agregué ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.` : `Done, I added ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.`) : E ? `Listo, volví a poner ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.` : `Done, I put back ${[...new Set(r.add)].map(k => ingName(B, k)).filter(Boolean).join(", ")}.`);
     if (r.shop) {
       const d = (tot(r.shop) / tot(win) - 1) * 100;
       parts.push(r.shop === win ? (E ? `${SHOP[r.shop]} es justamente el más barato: ${say0(tot(r.shop))}.` : `${SHOP[r.shop]} is the cheapest: ${say0(tot(r.shop))}.`)
@@ -616,7 +688,8 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
       const items = B.shops[win].items.filter(it => !it.missing && !excluded.has(it.ing)).map(it => ingName(B, it.ing));
       return (E ? `En ${SHOP[win]} llevás: ${items.join(", ")}. Tenés el detalle con cantidades y precios acá abajo.` : `At ${SHOP[win]} you buy: ${items.join(", ")}. The detail with quantities and prices is below.`);
     }
-    if (!r.basket && !r.people && !r.remove.length && !r.add.length && !r.reset) {
+    if (B.id === "custom" && !B.common.length) return E ? "Tu canasta está vacía. Decime qué querés llevar, por ejemplo: «agregá yerba, leche y asado»." : "Your basket is empty. Tell me what to add, for example: \"add yerba, milk and asado\".";
+    if (!r.basket && !r.people && !r.remove.length && !r.add.length && !r.reset && !r.mode) {
       return E ? "Perdón, no te entendí bien. ¿Querés hacer un asado, armar una semana saludable o comida barata de estudiante? Y decime para cuántos." : "Sorry, I did not quite get that. Do you want an asado, a healthy week or cheap student food? And tell me for how many.";
     }
     parts.push(main);
@@ -644,7 +717,12 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     if (r.reset) { excluded = new Set(); people = 4; $("n").value = 4; }
     if (r.basket && r.basket !== basket) { basket = r.basket; excluded = new Set(); }
     if (r.people) { people = Math.min(40, Math.max(1, r.people)); $("n").value = people; }
-    r.remove.forEach(k => excluded.add(k)); r.add.forEach(k => excluded.delete(k));
+    if (basket === "custom") {
+      r.remove.forEach(k => delete custom[k]);
+      r.add.forEach(k => { if (C && C.items[k] && !custom[k]) custom[k] = { qty: C.items[k].q, mode: r.mode || "cheap" }; });
+      if (r.mode) Object.keys(custom).forEach(k => custom[k].mode = r.mode);
+      saveL();
+    } else { r.remove.forEach(k => excluded.add(k)); r.add.forEach(k => excluded.delete(k)); }
     render();
     const ans = reply(r); started = true;
     bubble("bot", ans);
@@ -652,6 +730,57 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     listenAfter = !!voice && /\?$/.test(ans.trim());
     if (voice) speak(ans);
   }
+  // ---------- "Armá la tuya": add, remove, quantities, cheapest or leading brand ----------
+  const fmtQ = (u, q) => u === "un" ? `${Math.round(q * 100) / 100}` : u === "kg" ? (q < 1 ? `${Math.round(q * 1000)} g` : `${Math.round(q * 100) / 100} kg`) : (q < 1 ? `${Math.round(q * 1000)} ml` : `${Math.round(q * 100) / 100} L`);
+  const stepOf = (u, q0) => u === "un" ? 1 : q0 >= 1 ? 0.5 : q0 >= 0.2 ? 0.1 : 0.05;
+  const nm = k => (es() ? C.items[k].es : C.items[k].en);
+  function addItem(k) { if (!custom[k]) { custom[k] = { qty: C.items[k].q, mode: "cheap" }; saveL(); render(); } }
+  function drawBuilder() {
+    if (!C) { $("mylist").textContent = es() ? "Cargando productos…" : "Loading products…"; return; }
+    const cats = $("cats"); cats.textContent = "";
+    (C.categories || []).forEach(([id, ces, cen]) => {
+      const ks = Object.keys(C.items).filter(k => C.items[k].cat === id && !custom[k] && Object.keys(C.items[k].shops).length);
+      if (!ks.length) return;
+      const g = document.createElement("div"); g.className = "catg";
+      g.innerHTML = `<b>${es() ? ces : cen}</b>`;
+      ks.forEach(k => { const b = document.createElement("button"); b.type = "button"; b.textContent = "+ " + nm(k).replace(/\s*\(.*\)/, ""); b.addEventListener("click", () => addItem(k)); g.appendChild(b); });
+      cats.appendChild(g);
+    });
+    const ml = $("mylist"); ml.textContent = "";
+    const ks = Object.keys(custom).filter(k => C.items[k]);
+    $("lcount").textContent = `(${ks.length})`;
+    if (!ks.length) { ml.innerHTML = `<p class="muted">${es() ? "Todavía no agregaste nada. Tocá un producto de arriba o buscalo." : "Nothing added yet. Tap a product above or search for it."}</p>`; }
+    ks.forEach(k => {
+      const it = C.items[k], c = custom[k], st = stepOf(it.unit, it.q), row = document.createElement("div"); row.className = "li";
+      row.innerHTML = `<div class="li-n"><b>${nm(k)}</b><div class="seg">
+          <button type="button" data-m="cheap" aria-pressed="${c.mode !== "quality"}">${es() ? "Más barata" : "Cheapest"}</button>
+          <button type="button" data-m="quality" aria-pressed="${c.mode === "quality"}" ${it.has_quality ? "" : "disabled title='" + (es() ? "Sin primera marca para este producto" : "No leading brand for this item") + "'"}>${es() ? "Primera marca" : "Leading brand"}</button></div></div>
+        <div class="stepper sm"><button type="button" data-d="-1" aria-label="−">${c.qty <= st + 1e-9 ? "🗑" : "−"}</button><span>${fmtQ(it.unit, c.qty)}</span><button type="button" data-d="1" aria-label="+">+</button></div>`;
+      row.querySelectorAll("[data-m]").forEach(b => b.addEventListener("click", () => { c.mode = b.dataset.m; saveL(); render(); }));
+      row.querySelectorAll("[data-d]").forEach(b => b.addEventListener("click", () => {
+        if (+b.dataset.d < 0 && c.qty <= st + 1e-9) delete custom[k];
+        else c.qty = Math.max(st, Math.round((c.qty + st * +b.dataset.d) * 100) / 100);
+        saveL(); render(); }));
+      ml.appendChild(row);
+    });
+  }
+  $("addq").addEventListener("input", () => {
+    const q = $("addq").value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""), box = $("addres"); box.textContent = "";
+    if (!q || !C) return;
+    Object.keys(C.items).filter(k => (C.items[k].es + " " + C.items[k].en).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q)).slice(0, 8).forEach(k => {
+      const b = document.createElement("button"); b.type = "button"; b.textContent = (custom[k] ? "✓ " : "+ ") + nm(k);
+      b.addEventListener("click", () => { addItem(k); $("addq").value = ""; box.textContent = ""; }); box.appendChild(b); });
+    if (!box.children.length) box.innerHTML = `<span class="muted">${es() ? "Todavía no seguimos ese producto. Lo sumamos pronto." : "We do not track that product yet."}</span>`;
+  });
+  document.querySelectorAll("[data-all]").forEach(b => b.addEventListener("click", () => { Object.keys(custom).forEach(k => custom[k].mode = b.dataset.all); saveL(); render(); }));
+  $("clearL").addEventListener("click", () => { custom = {}; saveL(); render(); });
+  $("editB").addEventListener("click", () => {
+    const B = D.baskets.find(x => x.id === basket), mult = B.per === "persona" ? people : 1;
+    custom = {};
+    Object.keys(B.ingredients).forEach(k => { if (excluded.has(k) || !C || !C.items[k]) return; const it = B.shops[B.ranking[0]].items.find(i => i.ing === k); custom[k] = { qty: Math.round((it ? it.qty : 1) * (it && it.fixed ? 1 : mult) * 100) / 100, mode: "cheap" }; });
+    saveL(); basket = "custom"; render(); $("builder").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   // voice
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const mic = $("mic");
@@ -673,7 +802,7 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
   $("n").addEventListener("change", () => { people = Math.min(40, Math.max(1, +$("n").value || 1)); $("n").value = people; render(); });
   $("say").addEventListener("click", () => { const r = understand(""); r.basket = basket; started = true; speak(reply(r)); });
   document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setTimeout(() => { buildTabs(); render(); }, 0)));
-  function buildTabs() { const t = $("tabs"); t.textContent = ""; D.baskets.forEach(B => { const b = document.createElement("button"); b.type = "button"; b.role = "tab"; b.dataset.id = B.id; b.textContent = es() ? B.es : B.en; b.addEventListener("click", () => { basket = B.id; render(); }); t.appendChild(b); }); }
+  function buildTabs() { const t = $("tabs"); t.textContent = ""; D.baskets.concat([CUSTOM]).forEach(B => { const b = document.createElement("button"); b.type = "button"; b.role = "tab"; b.dataset.id = B.id; b.textContent = es() ? B.es : B.en; b.addEventListener("click", () => { basket = B.id; render(); }); t.appendChild(b); }); }
   // install: Android/Chrome gives a prompt; iPhone needs Share > Add to Home Screen
   (function () {
     if (document.documentElement.classList.contains("lc-app")) return;
@@ -683,7 +812,8 @@ html:not([lang=en]) .en{display:none!important} html[lang=en] .es{display:none!i
     if (ios) box.hidden = false;
     btn.addEventListener("click", async () => { if (ev) { ev.prompt(); await ev.userChoice; ev = null; box.hidden = true; } else if (ios) $("installIos").hidden = false; });
   })();
-  fetch("datos.json", { cache: "no-store" }).then(r => r.json()).then(d => { D = d; buildTabs(); const h = location.hash.replace("#", ""); if (D.baskets.some(b => b.id === h)) basket = h; render(); });
+  fetch("catalogo.json", { cache: "no-store" }).then(r => r.json()).then(c => { C = c; if (D) render(); }).catch(() => {});
+  fetch("datos.json", { cache: "no-store" }).then(r => r.json()).then(d => { D = d; buildTabs(); const h = location.hash.replace("#", ""); if (D.baskets.some(b => b.id === h) || h === "custom") basket = h; render(); });
 })();
 </script>
 

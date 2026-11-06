@@ -93,12 +93,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 22341.58,
+     "total": 15090.64,
      "complete": false,
      "missing": [
-      "pan"
+      "pan",
+      "gaseosa"
      ],
-     "kcal": 2696,
+     "kcal": 2528,
      "items": [
       {
        "ing": "asado_tira",
@@ -150,10 +151,10 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 11900.0,
-       "cost": 7140.0,
-       "name": "Bicarbonato de sodio s TACC Pergola 50 g.",
-       "sku_id": "12562",
+       "unit_price": 1622.5,
+       "cost": 973.5,
+       "name": "Carbón de leña 4 kg.",
+       "sku_id": "17650",
        "promo": false
       },
       {
@@ -220,11 +221,7 @@
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "unit_price": 2711.11,
-       "cost": 1084.44,
-       "name": "Gaseosa cola Coca Cola sabor original 2,25 lts",
-       "sku_id": "3807",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "chimichurri",
@@ -248,12 +245,13 @@
       }
      ],
      "lacks": [
-      "pan"
+      "pan",
+      "gaseosa"
      ],
      "fixed_total": 3070.0
     },
     "Jumbo": {
-     "total": 24806.81,
+     "total": 18157.22,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -312,10 +310,10 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 11600.0,
-       "cost": 6960.0,
-       "name": "Bicarbonato De Sodio I Love Bicarbonato 500g",
-       "sku_id": "1371076",
+       "unit_price": 2324.75,
+       "cost": 1394.85,
+       "name": "Carbón 4 Kg Apunto",
+       "sku_id": "3083084",
        "promo": false
       },
       {
@@ -382,10 +380,10 @@
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "unit_price": 2711.11,
-       "cost": 1084.44,
-       "name": "Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
-       "sku_id": "246613",
+       "unit_price": 7627.12,
+       "cost": 3050.85,
+       "name": "Gaseosa Coca-cola Sabor Original 354 Ml Gaseosa Sabor Original 354 Ml Coca Cola",
+       "sku_id": "31542",
        "promo": false
       },
       {
@@ -413,7 +411,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 22201.04,
+     "total": 14922.53,
      "complete": false,
      "missing": [
       "lechuga"
@@ -474,11 +472,11 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 10598.0,
-       "cost": 6358.8,
-       "name": "Limpiador En Polvo Bicarbonato I Love Bicarbonato 500g",
-       "sku_id": "231698",
-       "promo": false
+       "unit_price": 1466.04,
+       "cost": 879.62,
+       "name": "Carbón La Taba 4 Kg",
+       "sku_id": "185957",
+       "promo": true
       },
       {
        "ing": "provoleta",
@@ -573,7 +571,7 @@
      "fixed_total": 3198.0
     },
     "Dia": {
-     "total": 21579.93,
+     "total": 16737.13,
      "complete": false,
      "missing": [
       "pan"
@@ -630,10 +628,10 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 8320.0,
-       "cost": 4992.0,
-       "name": "Bicarbonato I Love Bicarbonato 100 Gr.",
-       "sku_id": "6305",
+       "unit_price": 1996.67,
+       "cost": 1198.0,
+       "name": "Carbón Vegetal 3 Kg.",
+       "sku_id": "267480",
        "promo": false
       },
       {
@@ -734,12 +732,12 @@
     }
    },
    "ranking": [
-    "Dia",
     "ChangoMas",
     "Carrefour",
+    "Dia",
     "Jumbo"
    ],
-   "cheapest": "Dia",
+   "cheapest": "ChangoMas",
    "common": [
     "asado_tira",
     "vacio",
@@ -751,7 +749,6 @@
     "cebolla",
     "vino",
     "cerveza",
-    "gaseosa",
     "chimichurri",
     "sal_gruesa"
    ],
@@ -1064,7 +1061,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 62278.46,
+     "total": 61336.46,
      "complete": false,
      "missing": [
       "naranja"
@@ -1125,10 +1122,10 @@
        "ing": "atun",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1772.0,
-       "cost": 3544.0,
-       "name": "Atún Desmenuzado Al Natural 120 Grs Maxima",
-       "sku_id": "298379",
+       "unit_price": 1301.0,
+       "cost": 2602.0,
+       "name": "Atún Desmenuzado En Aceite Y Agua 120 Grs Maxima",
+       "sku_id": "294510",
        "promo": false
       },
       {
@@ -1795,12 +1792,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 49656.84,
+     "total": 43556.84,
      "complete": false,
      "missing": [
-      "carne_picada"
+      "carne_picada",
+      "gaseosa"
      ],
-     "kcal": 27406,
+     "kcal": 26461,
      "items": [
       {
        "ing": "fideos",
@@ -1972,20 +1970,17 @@
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "unit_price": 2711.11,
-       "cost": 6100.0,
-       "name": "Gaseosa cola Coca Cola sabor original 2,25 lts",
-       "sku_id": "3807",
-       "promo": false
+       "missing": true
       }
      ],
      "lacks": [
-      "carne_picada"
+      "carne_picada",
+      "gaseosa"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 56402.34,
+     "total": 50302.34,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2164,10 +2159,10 @@
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "unit_price": 2711.11,
-       "cost": 6100.0,
-       "name": "Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
-       "sku_id": "246613",
+       "unit_price": 7627.12,
+       "cost": 17161.02,
+       "name": "Gaseosa Coca-cola Sabor Original 354 Ml Gaseosa Sabor Original 354 Ml Coca Cola",
+       "sku_id": "31542",
        "promo": false
       }
      ],
@@ -2175,7 +2170,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 56015.55,
+     "total": 45894.31,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2365,7 +2360,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 49660.41,
+     "total": 43760.91,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2578,8 +2573,7 @@
     "galletitas",
     "aceite",
     "queso",
-    "mayonesa",
-    "gaseosa"
+    "mayonesa"
    ],
    "all_complete": false,
    "missing_everywhere": []

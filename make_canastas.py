@@ -17,7 +17,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.path.join(ROOT, "canastas", "canastas.json"), encoding="utf-8"))
 SHOPS = CFG["shops"]
 SIZE_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(kg|kilo|kilos|grs|gr|g|lts|lt|l|ml|cc)\b", re.I)
-COUNT_RE = re.compile(r"(?:x\s*|por\s+)(\d{1,3})\s*(?:un|u\b|unid|huevos|uds)|(\d{1,3})\s*(?:un|u\b|unid|huevos|uds)", re.I)
+COUNT_RE = re.compile(r"(?:x\s*|por\s+)(\d{1,3})\s*(?:un|u\b|unid|huevos|uds|ud\b)|(\d{1,3})\s*(?:un|u\b|unid|huevos|uds|ud\b)", re.I)
 
 
 def size_of(name):

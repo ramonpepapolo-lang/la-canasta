@@ -7,6 +7,14 @@ from make_price_pages import make_chrome, add_to_sitemap, SITE
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 BODY = r"""
+<div class="appsoon" role="note">
+  <div class="container appsoon-in">
+    <img src="/app-icons/icon-192.png" alt="" width="52" height="52">
+    <div class="appsoon-t"><b><span class="es">La app de La Canasta</span><span class="en">The La Canasta app</span> <span class="soon"><span class="es">PRÓXIMAMENTE</span><span class="en">COMING SOON</span></span></b>
+      <span><span class="es">Para iPhone y Android. Mientras tanto, usala acá gratis.</span><span class="en">For iPhone and Android. Meanwhile, use it here for free.</span></span></div>
+    <div class="stores" aria-hidden="true"><span>App Store</span><span>Google Play</span></div>
+  </div>
+</div>
 <main class="container cn">
   <nav class="crumbs" aria-label="Ruta"><a href="../index.html">La Canasta</a> › <span class="es">Canastas</span><span class="en">Baskets</span></nav>
   <header class="cn-head">
@@ -381,6 +389,16 @@ BODY = r"""
 """
 
 EXTRA_CSS = """<style>
+.appsoon { background: linear-gradient(90deg, #2B3B5C, #34507a); color: #fff; }
+.appsoon-in { display: flex; align-items: center; gap: 0.9rem; padding-block: 0.8rem; flex-wrap: wrap; }
+.appsoon img { border-radius: 12px; flex: none; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+.appsoon-t { display: grid; gap: 0.15rem; flex: 1 1 14rem; min-width: 0; font-size: 0.92rem; color: rgba(255,255,255,.85); }
+.appsoon-t b { color: #fff; font-size: 1.02rem; }
+.soon { display: inline-block; background: var(--sun); color: #1A1206; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; border-radius: 999px; padding: 0.15rem 0.55rem; margin-left: 0.3rem; vertical-align: middle; }
+.stores { display: flex; gap: 0.5rem; flex: none; }
+.stores span { border: 1.5px solid rgba(255,255,255,.55); border-radius: 10px; padding: 0.35rem 0.7rem; font-weight: 700; font-size: 0.82rem; white-space: nowrap; }
+html.lc-app .appsoon { display: none; }
+@media (max-width: 520px) { .stores { display: none; } }
 .cn { display: grid; gap: 2.4rem; padding-block: 2rem 0; max-width: 60rem; }
 .cn h1 { font-size: clamp(2.3rem, 5.5vw, 3.6rem); }
 .cn h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }

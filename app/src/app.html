@@ -68,6 +68,7 @@ img.lg-d { display: none !important; }
 .pad { padding-inline: 18px; }
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 18px 12px; }
 .topbar .logo { height: 30px; width: auto; }
+.topbar .home { display: block; line-height: 0; }
 .pill { font-size: 12px; font-weight: 700; color: var(--muted); background: var(--card); box-shadow: var(--shadow); border-radius: 999px; padding: 7px 11px; white-space: nowrap; }
 .pill i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--down); margin-right: 6px; vertical-align: 1px; }
 .h1 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.05; margin: 0; letter-spacing: -.2px; text-wrap: balance; }
@@ -82,6 +83,9 @@ img.lg-d { display: none !important; }
 
 /* ---------- the voice card ---------- */
 .voice { margin: 2px 18px 0; padding: 18px 16px 14px; border-radius: 24px; background: var(--hero); color: var(--heroink); display: grid; gap: 12px; }
+.voice { grid-template-columns: minmax(0, 1fr); }
+.voice > * { min-width: 0; }
+.vrow input { width: 100%; }
 .voice h1 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.05; margin: 0; }
 .voice .hint { margin: -6px 0 0; color: var(--heromuted); font-size: 13.5px; }
 .vrow { display: flex; gap: 10px; align-items: center; }
@@ -285,8 +289,7 @@ img.lg-d { display: none !important; }
     <!-- MI CANASTA -->
     <section class="view" id="v-canasta" aria-label="Mi canasta">
       <div class="topbar">
-        <img class="logo lg-l" src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="105" height="30">
-        <img class="logo lg-d" src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="105" height="30">
+        <a class="home" id="homeLink" aria-label="La Canasta"><img class="logo lg-l" src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="105" height="30"><img class="logo lg-d" src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="105" height="30"></a>
         <span class="pill" id="datePill"><i></i>Cargando precios</span>
       </div>
       <div class="voice">
@@ -372,7 +375,7 @@ img.lg-d { display: none !important; }
   const LIVE = window.LC_NATIVE ? "https://lacanastaindex.com/" : null;
   async function get(p) {
     if (LIVE) { try { const r = await fetch(LIVE + p, { cache: "no-store" }); if (r.ok) return await r.json(); } catch (e) {} }
-    const r = await fetch(p, { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json();
+    const r = await fetch((window.LC_BASE || "") + p, { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json();
   }
   // the same Brevo sign-up form as the website (counter.js): the subscriber lands in the same list
   const SUBSCRIBE = "https://d0cbcf18.sibforms.com/serve/MUIFAJ2G9E2LSize80XqnowNm0uTBtzGxHXvyjc-SAI7JFpiIQG6y87uWRfmx3HR-aY8PlhwirhDb24roU7jCNV7w2Mfn5pcMNsHKNMtMloBhR23hvaKlU-n-_e_ajxlSANVbDurWVa2n5jmejSZwn4CTPWOKBfHHh_vXy1pgmeyN8PeTQBEJYGNOHxIzu8R_K-vBf41nqpE9dKDdg==";
@@ -435,7 +438,7 @@ img.lg-d { display: none !important; }
 
   // nearest shop: the phone's location when it allows it (only inside Argentina), otherwise a search in Argentina
   const AR = (lat, lng) => lat > -55.2 && lat < -21.7 && lng > -73.7 && lng < -53.5;
-  let here = null;
+  let here = null, askedHere = false;
   function mapsLinks(shop) {
     const q = `Supermercado ${SHOP[shop]}`;
     if (here) return { g: `https://www.google.com/maps/search/${encodeURIComponent(q)}/@${here[0]},${here[1]},15z`, a: `https://maps.apple.com/?q=${encodeURIComponent(q)}&sll=${here[0]},${here[1]}&z=15` };
@@ -457,7 +460,7 @@ img.lg-d { display: none !important; }
     const who = base && base.per && base.people > 1 ? ` · ${money(tot(win) / base.people)} por persona` : "";
     let h = `<div class="top"><span class="eyebrow">Te conviene ir a</span><div class="line"><span class="shop">${SHOP[win]}</span><span class="tot num">${money(tot(win))}</span></div>
       <span class="sub">${R.common.length < R.ks.length ? `Compara ${R.common.length} de ${R.ks.length} productos, los que hay en los 4 súper` : `${R.common.length} productos`}${who} · precios del ${fdate(C.date)}</span>${saving > 1 ? `<span class="save">Ahorrás hasta ${money(saving)} contra ${SHOP[order[order.length - 1]]}</span>` : ""}</div>
-      <div class="go"><a class="btn pri" target="_blank" rel="noopener" href="${L.g}">${IC.pin}Ir al ${SHOP[win]} más cercano</a>
+      <div class="go"><a class="btn pri" id="goMap" target="_blank" rel="noopener" href="${L.g}">${IC.pin}Ir al ${SHOP[win]} más cercano</a>
       <span class="alt"><a target="_blank" rel="noopener" href="${L.a}">Abrir en Apple Maps</a></span></div>
       <details><summary>Los otros súper</summary>`;
     order.slice(1).forEach(s => {
@@ -469,6 +472,13 @@ img.lg-d { display: none !important; }
     if (C.shops.some(s => R.lacks[s].length)) warn.push("El total compara solo lo que tienen los 4 súper.");
     if (warn.length) h += `<div class="warn">${warn.join(" ")}</div>`;
     box.appendChild(el("div", "card res", h));
+    // on the website, the first tap asks the phone for its location (only used if it is inside Argentina)
+    const gm = $("goMap");
+    if (gm && window.LC_WEB && !here && navigator.geolocation && !askedHere) gm.addEventListener("click", ev => {
+      ev.preventDefault(); askedHere = true;
+      const open = () => { location.href = mapsLinks(win).g; };
+      try { navigator.geolocation.getCurrentPosition(p => { if (AR(p.coords.latitude, p.coords.longitude)) here = [p.coords.latitude.toFixed(4), p.coords.longitude.toFixed(4)]; open(); }, open, { timeout: 6000, maximumAge: 600000 }); } catch (e) { open(); }
+    }, { once: true });
   }
   const stepOf = (u, q) => u === "un" ? 1 : q >= 1 ? 0.5 : q >= 0.2 ? 0.1 : 0.05;
   const fmtQ = (u, q) => u === "un" ? dec(q) : u === "kg" ? (q < 1 ? `${Math.round(q * 1000)} g` : `${dec(q)} kg`) : (q < 1 ? `${Math.round(q * 1000)} ml` : `${dec(q)} L`);
@@ -931,8 +941,8 @@ CANASTA ACTUAL DE LA PERSONA: ${cur}`;
     e.preventDefault();
     const email = $("subEmail").value.trim(); if (!email) return;
     const done = () => { store.set("lc-sub", { email }); $("subForm").hidden = true; $("subOk").hidden = false; $("subOk").textContent = `✓ Anotado con ${email}. Confirmá desde el email que te mandamos (mirá también en spam).`; };
-    if (window.LC_NATIVE) {
-      // the app sends it to Brevo, the same list as the website
+    if (window.LC_NATIVE || window.LC_WEB) {
+      // the app and the website send it to Brevo, the same list as the website
       fetch(SUBSCRIBE, { method: "POST", mode: "no-cors", body: new URLSearchParams({ EMAIL: email, email_address_check: "", locale: "es", html_type: "simple" }) }).then(done, () => toast("No hay conexión. Probá de nuevo."));
     } else { done(); toast("Vista previa: en la app se anota de verdad en la lista del informe."); }
   });
@@ -970,6 +980,7 @@ CANASTA ACTUAL DE LA PERSONA: ${cur}`;
     draw(); drawPrecios(); drawInforme();
     go(location.hash.slice(1) || "canasta", true);
     if (window.LC_NATIVE) locate();
+    if (window.LC_WEB) $("homeLink").href = "/";
     setTimeout(() => $("splash").classList.add("off"), Math.max(0, 1000 - (Date.now() - t0)));
   }).catch(() => { $("splash").querySelector("small").textContent = "Sin conexión. Probá de nuevo en un rato."; });
 })();

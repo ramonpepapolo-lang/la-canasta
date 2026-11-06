@@ -4,6 +4,8 @@
 // Run: node build-www.js   (then: npx cap sync)
 const fs = require("fs"), path = require("path");
 const ROOT = path.join(__dirname, ".."), WWW = path.join(__dirname, "www");
+// the AI assistant (app/ai-worker.js on Cloudflare): its address once it is set up; empty = the built-in assistant answers
+const AI_URL = "";
 fs.rmSync(WWW, { recursive: true, force: true });
 const cp = (from, to) => { const t = path.join(WWW, to || from); fs.mkdirSync(path.dirname(t), { recursive: true }); fs.copyFileSync(path.join(ROOT, from), t); };
 // data the app reads (fallback copy) and the logo
@@ -25,7 +27,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#FFFFFF">
-<script>window.LC_NATIVE = true;</script>
+<script>window.LC_NATIVE = true;${AI_URL ? " window.LC_AI_URL = " + JSON.stringify(AI_URL) + ";" : ""}</script>
 <style>[hidden]{display:none!important}</style>
 ${app}
 </html>

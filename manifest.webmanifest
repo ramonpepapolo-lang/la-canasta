@@ -8,17 +8,61 @@
  "display": "standalone",
  "orientation": "portrait",
  "background_color": "#FFFFFF",
- "theme_color": "#2B3B5C",
+ "theme_color": "#F3F7F9",
  "lang": "es-AR",
- "categories": ["shopping", "food", "finance"],
+ "categories": [
+  "shopping",
+  "food",
+  "finance"
+ ],
  "icons": [
-  {"src": "/app-icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
-  {"src": "/app-icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
-  {"src": "/app-icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  {
+   "src": "/app-icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/app-icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/app-icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
  ],
  "shortcuts": [
-  {"name": "Asado", "url": "/canastas/?app=1#asado", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]},
-  {"name": "Semana saludable", "url": "/canastas/?app=1#saludable", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]},
-  {"name": "Precios de hoy", "url": "/precios/?app=1", "icons": [{"src": "/app-icons/icon-192.png", "sizes": "192x192"}]}
+  {
+   "name": "Mi canasta",
+   "url": "/canastas/?app=1#canasta",
+   "icons": [
+    {
+     "src": "/app-icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Precios",
+   "url": "/canastas/?app=1#precios",
+   "icons": [
+    {
+     "src": "/app-icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Informe",
+   "url": "/canastas/?app=1#informe",
+   "icons": [
+    {
+     "src": "/app-icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
  ]
 }

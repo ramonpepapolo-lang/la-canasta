@@ -1,6 +1,6 @@
 # La Canasta: proposes extra products for the basket (run by hand, not every day).
 #
-# The scraper already collects ~10,000 prices a day. This script looks in those files for more
+# The scraper already collects ~20,000 prices a day. This script looks in those files for more
 # products of the basket types (the 33 first ones and the ones in NEW_INFO), up to MAX_PER per type and supermarket.
 # A product is only proposed if it is clearly that type (strict name + category rules), it was
 # in stock almost every day, its name never changed, and its price never jumped 3x in a day.

@@ -17,6 +17,7 @@ var UNSUBSCRIBE_ACTION = "";
 
 (function () {
   if (!GOATCOUNTER_CODE) return;
+  if (window.top !== window.self) return; // the app shown inside the "Creá tu canasta" page: the page already counts the visit
   if (/admin\.html$/.test(location.pathname)) return; // don't count your own admin visits
   var s = document.createElement("script");
   s.async = true;

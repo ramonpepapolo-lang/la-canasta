@@ -980,7 +980,7 @@ CANASTA ACTUAL DE LA PERSONA: ${cur}`;
     draw(); drawPrecios(); drawInforme();
     go(location.hash.slice(1) || "canasta", true);
     if (window.LC_NATIVE) locate();
-    if (window.LC_WEB) $("homeLink").href = "/";
+    if (window.LC_WEB) { $("homeLink").href = "/"; $("homeLink").target = "_top"; }
     setTimeout(() => $("splash").classList.add("off"), Math.max(0, 1000 - (Date.now() - t0)));
   }).catch(() => { $("splash").querySelector("small").textContent = "Sin conexión. Probá de nuevo en un rato."; });
 })();

@@ -1,0 +1,316 @@
+{
+ "date": "2026-11-05",
+ "previous": "2026-11-04",
+ "index": {
+  "date": "2026-11-05",
+  "paid": 98.067,
+  "regular": 99.012,
+  "day_change": -0.43,
+  "days_of_data": 13,
+  "series": [
+   [
+    "2026-10-24",
+    98.266,
+    99.808
+   ],
+   [
+    "2026-10-25",
+    99.41,
+    99.808
+   ],
+   [
+    "2026-10-26",
+    100.742,
+    99.895
+   ],
+   [
+    "2026-10-27",
+    101.135,
+    99.776
+   ],
+   [
+    "2026-10-28",
+    100.694,
+    100.252
+   ],
+   [
+    "2026-10-29",
+    100.48,
+    100.175
+   ],
+   [
+    "2026-10-30",
+    99.272,
+    100.286
+   ],
+   [
+    "2026-10-31",
+    99.376,
+    99.812
+   ],
+   [
+    "2026-11-01",
+    99.458,
+    99.792
+   ],
+   [
+    "2026-11-02",
+    99.853,
+    99.669
+   ],
+   [
+    "2026-11-03",
+    101.191,
+    99.889
+   ],
+   [
+    "2026-11-04",
+    98.487,
+    99.042
+   ],
+   [
+    "2026-11-05",
+    98.067,
+    99.012
+   ]
+  ],
+  "mode": "base",
+  "base_paid": -1.93,
+  "base_regular": -0.99
+ },
+ "ranking": {
+  "label_es": "Semana del 1 al 7 de noviembre de 2026",
+  "label_en": "Week of 1 to 7 November 2026",
+  "days": [
+   "2026-11-01",
+   "2026-11-05"
+  ],
+  "n_products": 130,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 460158.23,
+    "pct": 0.0
+   },
+   {
+    "shop": "Carrefour",
+    "total": 484536.12,
+    "pct": 5.3
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 489243.09,
+    "pct": 6.32
+   },
+   {
+    "shop": "Jumbo",
+    "total": 550456.9,
+    "pct": 19.62
+   }
+  ]
+ },
+ "down": [
+  {
+   "shop": "ChangoMas",
+   "name": "Jabon En Polvo Ala Lavado A Mano Ecolavado 400 Gr",
+   "type": "jabon_ropa",
+   "before": 2059.0,
+   "now": 1235.4,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Jabon En Polvo Ala Matic  Ecolavado 3 Kg",
+   "type": "jabon_ropa",
+   "before": 13559.0,
+   "now": 8135.4,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Jabón En Polvo Ala Con Bicarbonato 800 G",
+   "type": "jabon_ropa",
+   "before": 3329.0,
+   "now": 1997.4,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
+   "type": "jabon_ropa",
+   "before": 11529.0,
+   "now": 6917.4,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Harina De Trigo Caserita Tipo 0000 1 Kg",
+   "type": "harina_000",
+   "before": 1459.0,
+   "now": 919.0,
+   "pct": -37.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 300 Ml.",
+   "type": "detergente",
+   "before": 3400.0,
+   "now": 2210.0,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Jabon En Polvo Skip Bio Enzimas Baja Espuma 600 Gr.",
+   "type": "jabon_ropa",
+   "before": 4340.0,
+   "now": 2821.0,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Yerba Mate Chamigo 500 Gr.",
+   "type": "yerba",
+   "before": 1950.0,
+   "now": 1267.5,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt",
+   "type": "agua",
+   "before": 3189.0,
+   "now": 2232.3,
+   "pct": -30.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Agua Mineral Eco De Los Andes Origen Pet 850 Cc",
+   "type": "agua",
+   "before": 2489.0,
+   "now": 1742.3,
+   "pct": -30.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 3489.0,
+   "now": 2616.75,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Dulce De Leche Ilolay Clásico 400 G",
+   "type": "dulce_de_leche",
+   "before": 4039.0,
+   "now": 3029.25,
+   "pct": -25.0,
+   "why": "promo_start"
+  }
+ ],
+ "up": [
+  {
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudín Anti-Splash 1 Lt",
+   "type": "lavandina",
+   "before": 1433.4,
+   "now": 2389.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudín Anti-Splash 2 Lt",
+   "type": "lavandina",
+   "before": 2771.4,
+   "now": 4619.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Shampoo Dove Hidratación 400ml",
+   "type": "shampoo",
+   "before": 6647.4,
+   "now": 11079.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Arroz Gallo Parboil 1kg",
+   "type": "arroz",
+   "before": 1789.0,
+   "now": 2979.0,
+   "pct": 66.5,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cerveza Clásica Quilmes 473ml",
+   "type": "cerveza",
+   "before": 1747.85,
+   "now": 2689.0,
+   "pct": 53.8,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Magistral Ultra Limón 500 Ml",
+   "type": "detergente",
+   "before": 3580.85,
+   "now": 5509.0,
+   "pct": 53.8,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Dulce De Leche Milkaut Clásico 1 Kg",
+   "type": "dulce_de_leche",
+   "before": 6644.25,
+   "now": 8859.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Jabón De Tocador Dove Original Multipack 3x90g",
+   "type": "jabon_tocador",
+   "before": 5744.25,
+   "now": 7659.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Active Gel 500 Ml",
+   "type": "detergente",
+   "before": 3018.95,
+   "now": 3293.4,
+   "pct": 9.1,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Arroz parboil Dos Hermanos bolsa 1 kg.",
+   "type": "arroz",
+   "before": 2129.0,
+   "now": 2300.0,
+   "pct": 8.0,
+   "why": "list_up"
+  }
+ ],
+ "n_down": 16,
+ "n_up": 10
+}

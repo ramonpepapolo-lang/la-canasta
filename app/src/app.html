@@ -1,0 +1,996 @@
+<title>La Canasta App</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+/* Layout: a phone app. On a computer it sits inside an iPhone frame; on a phone (and inside the real app) it fills the screen.
+   Five tabs at the bottom: Inicio, Asistente, Mi canasta, Precios, Alertas. The brand is the website's: navy, celeste, sun. */
+:root {
+  --bg: #F3F7F9; --card: #FFFFFF; --ink: #1E2B45; --navy: #2B3B5C; --onnavy: #FFFFFF; --muted: #5D6A84; --rule: #DCE4EA;
+  --celeste: #7FB1C6; --sky: #E4EFF4; --sun: #D98A2B; --suntint: #FBEFDF; --down: #2D7A57; --downtint: #E2F1E9;
+  --up: #B2462B; --uptint: #F7E5DF; --hero: #2B3B5C; --heroink: #FFFFFF; --heromuted: #B9C8DA; --backdrop: #E3EAEF;
+  --frame: #11161F; --shadow: 0 1px 2px rgba(30,43,69,.06), 0 6px 18px rgba(30,43,69,.07);
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sat: 0px; --sab: 0px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0E1524; --card: #172238; --ink: #EDF2F8; --navy: #9CC6D8; --onnavy: #0E1524; --muted: #9AA8BF; --rule: #263451;
+  --celeste: #7FB1C6; --sky: #1B2E45; --sun: #E6A452; --suntint: #382813; --down: #5DC291; --downtint: #133127;
+  --up: #E5806A; --uptint: #3A1E18; --hero: #24375C; --heroink: #FFFFFF; --heromuted: #A9B9CE; --backdrop: #070B13;
+  --frame: #000000; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0E1524; --card: #172238; --ink: #EDF2F8; --navy: #9CC6D8; --onnavy: #0E1524; --muted: #9AA8BF; --rule: #263451;
+  --celeste: #7FB1C6; --sky: #1B2E45; --sun: #E6A452; --suntint: #382813; --down: #5DC291; --downtint: #133127;
+  --up: #E5806A; --uptint: #3A1E18; --hero: #24375C; --heroink: #FFFFFF; --heromuted: #A9B9CE; --backdrop: #070B13;
+  --frame: #000000; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25); color-scheme: dark }
+.native { --sat: env(safe-area-inset-top, 0px); --sab: env(safe-area-inset-bottom, 0px); }
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { height: 100%; box-sizing: border-box; }
+body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.4; -webkit-font-smoothing: antialiased; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; padding: 0; }
+:focus-visible { outline: 2px solid var(--celeste); outline-offset: 2px; border-radius: 8px; }
+.num { font-variant-numeric: tabular-nums; }
+.ico { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+img.lg-d { display: none !important; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) img.lg-l { display: none !important; } :root:not([data-theme="light"]) img.lg-d { display: block !important; } }
+:root[data-theme="dark"] img.lg-l { display: none !important; } :root[data-theme="dark"] img.lg-d { display: block !important; }
+
+/* ---------- device ---------- */
+.stage { height: 100%; }
+.device { position: relative; height: 100%; width: 100%; overflow: hidden; background: var(--bg); }
+.statusbar, .island, .homebar, .side { display: none; }
+@media (min-width: 640px) and (min-height: 700px) {
+  html:not(.native) body { background: var(--backdrop); }
+  html:not(.native) .stage { min-height: 100%; height: auto; display: flex; align-items: center; justify-content: center; gap: 56px; padding-block: 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); flex-wrap: wrap; }
+  html:not(.native) .device { --sat: 54px; --sab: 22px; width: 393px; height: 852px; flex: none; border-radius: 58px; border: 12px solid var(--frame);
+    box-shadow: 0 0 0 1.5px #3A4152, 0 40px 80px rgba(17,22,31,.28); height: min(852px, calc(100vh - 64px)); }
+  html:not(.native) .island { display: block; position: absolute; z-index: 60; top: 11px; left: 50%; transform: translateX(-50%); width: 122px; height: 35px; border-radius: 20px; background: #000; }
+  html:not(.native) .statusbar { display: flex; position: absolute; z-index: 55; top: 0; left: 0; right: 0; height: 54px; align-items: center; justify-content: space-between; padding: 4px 30px 0 40px; font-weight: 600; font-size: 16px; pointer-events: none; }
+  html:not(.native) .statusbar .sb-r { display: flex; gap: 6px; align-items: center; }
+  html:not(.native) .statusbar svg { fill: currentColor; }
+  html:not(.native) .homebar { display: block; position: absolute; z-index: 60; bottom: 8px; left: 50%; transform: translateX(-50%); width: 136px; height: 5px; border-radius: 3px; background: var(--ink); opacity: .85; }
+  html:not(.native) .side { display: grid; gap: 14px; max-width: 300px; }
+}
+.side h1 { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.05; margin: 0; text-wrap: balance; color: var(--ink); }
+.side p { margin: 0; color: var(--muted); line-height: 1.5; }
+.side .side-logo { height: 46px; width: auto; }
+.side ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.side li button { display: flex; gap: 10px; align-items: center; width: 100%; padding: 10px 12px; border-radius: 12px; background: var(--card); box-shadow: var(--shadow); font-weight: 600; text-align: left; }
+.side li button[aria-current="true"] { outline: 2px solid var(--navy); }
+.side small { color: var(--muted); font-size: 12px; }
+
+/* ---------- views ---------- */
+.view { position: absolute; inset: 0 0 calc(64px + var(--sab)) 0; overflow-y: auto; overflow-x: hidden; padding-top: calc(var(--sat) + 4px); scrollbar-width: none; overscroll-behavior: contain; }
+.view::-webkit-scrollbar { display: none; }
+.view[hidden] { display: none !important; }
+.pad { padding-inline: 18px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 6px 18px 10px; }
+.topbar .logo { height: 30px; width: auto; display: block; }
+.round { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--card); box-shadow: var(--shadow); color: var(--ink); position: relative; }
+.round .dot { position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); border: 2px solid var(--card); }
+.h1 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.05; margin: 0; letter-spacing: -.2px; text-wrap: balance; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.sec { display: grid; gap: 10px; margin-top: 22px; }
+.sec-h { display: flex; align-items: baseline; justify-content: space-between; padding-inline: 18px; }
+.sec-h h2 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -.2px; }
+.sec-h .link { font-size: 13px; font-weight: 600; color: var(--navy); }
+.card { background: var(--card); border-radius: 18px; box-shadow: var(--shadow); }
+.muted { color: var(--muted); }
+.tiny { font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+/* hero: today's index */
+.hero { margin: 4px 18px 0; padding: 18px 18px 14px; border-radius: 22px; background: var(--hero); color: var(--heroink); display: grid; gap: 4px; position: relative; overflow: hidden; }
+.hero .eyebrow { color: var(--heromuted); }
+.hero .big { display: flex; align-items: baseline; gap: 10px; }
+.hero .big b { font-family: var(--display); font-weight: 400; font-size: 54px; line-height: 1; letter-spacing: -1px; }
+.hero .chip { font-size: 13px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.12); }
+.hero .chip.dn { color: #8FE0B5; } .hero .chip.upc { color: #FFB49E; }
+.hero p { margin: 0; color: var(--heromuted); font-size: 13px; }
+.hero p b { color: var(--heroink); font-weight: 600; }
+.hero svg.spark { width: 100%; height: auto; display: block; margin-top: 8px; overflow: visible; }
+.hero .progress { display: flex; gap: 3px; margin-top: 10px; }
+.hero .progress i { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,.16); }
+.hero .progress i.on { background: var(--celeste); }
+.hero .pnote { font-size: 12px; color: var(--heromuted); margin-top: 6px; }
+
+/* ask bar */
+.ask { margin: 14px 18px 0; display: flex; align-items: center; gap: 10px; padding: 8px 8px 8px 16px; border-radius: 999px; background: var(--card); box-shadow: var(--shadow); text-align: left; width: calc(100% - 36px); }
+.ask > span:first-child { flex: 1; color: var(--muted); min-width: 0; }
+.ask span b { color: var(--ink); font-weight: 600; display: block; font-size: 15px; }
+.ask span small { font-size: 12.5px; }
+.micbtn { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--sun); color: #fff; flex: none; box-shadow: 0 6px 16px rgba(217,138,43,.35); }
+.micbtn .ico { width: 24px; height: 24px; }
+
+/* basket cards */
+.hscroll { display: flex; gap: 12px; overflow-x: auto; padding: 2px 18px 8px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.hscroll::-webkit-scrollbar { display: none; }
+.bcard { flex: none; width: 216px; scroll-snap-align: start; padding: 14px; display: grid; gap: 8px; text-align: left; }
+.bcard .bi { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font-size: 21px; background: var(--sky); }
+.bcard b.t { font-size: 16px; }
+.bcard .w { font-size: 13px; color: var(--muted); }
+.bcard .w strong { color: var(--ink); }
+.bcard .p { font-size: 22px; font-weight: 700; letter-spacing: -.4px; }
+.bcard .save { font-size: 12px; font-weight: 700; color: var(--down); background: var(--downtint); border-radius: 999px; padding: 3px 8px; justify-self: start; }
+
+/* ranking */
+.rank { margin-inline: 18px; padding: 6px 14px; }
+.rrow { display: grid; grid-template-columns: 22px 1fr 104px; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.rrow:last-child { border-bottom: 0; }
+.rrow .pos { font-weight: 700; color: var(--muted); font-size: 13px; }
+.rrow .nm { display: grid; gap: 5px; }
+.rrow .bar { height: 6px; border-radius: 3px; background: var(--sky); overflow: hidden; }
+.rrow .bar i { display: block; height: 100%; border-radius: 3px; background: var(--celeste); }
+.rrow.first .bar i { background: var(--down); }
+.rrow .pc { font-weight: 700; font-size: 14px; justify-self: end; }
+.rrow .pc.best { color: var(--down); font-size: 12px; background: var(--downtint); padding: 3px 8px; border-radius: 999px; }
+
+/* segmented */
+.seg { display: inline-flex; background: var(--sky); border-radius: 999px; padding: 3px; gap: 2px; }
+.seg button { padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.seg button:disabled { opacity: .4; cursor: default; }
+.seg.sm button { padding: 4px 9px; font-size: 12px; }
+
+/* movers */
+.moves { margin-inline: 18px; padding: 4px 14px; }
+.mv { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.mv:last-child { border-bottom: 0; }
+.mv .n { font-weight: 600; font-size: 14px; line-height: 1.3; min-width: 0; }
+.mv .s { font-size: 12px; color: var(--muted); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.mv .pct { font-weight: 700; font-size: 15px; text-align: right; }
+.mv .pr { font-size: 12px; color: var(--muted); text-align: right; white-space: nowrap; }
+.tag { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 999px; letter-spacing: .01em; }
+.tag.promo { background: var(--suntint); color: var(--sun); }
+.tag.list { background: var(--sky); color: var(--navy); }
+.dn { color: var(--down); } .upc { color: var(--up); }
+
+/* ---------- assistant ---------- */
+.chathead { display: flex; align-items: center; gap: 12px; padding: 6px 18px 12px; border-bottom: 1px solid var(--rule); }
+.chathead .av { width: 42px; height: 42px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow); display: grid; place-items: center; }
+.chathead .av img { width: 28px; height: 28px; }
+.chathead b { display: block; font-size: 17px; }
+.chathead small { color: var(--down); font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+.chathead small i { width: 7px; height: 7px; border-radius: 50%; background: var(--down); }
+#v-asistente { bottom: calc(64px + var(--sab) + 74px); }
+.msgs { display: flex; flex-direction: column; gap: 10px; padding: 14px 14px 18px; }
+.msg { max-width: 84%; padding: 10px 14px; border-radius: 20px; font-size: 15px; line-height: 1.42; }
+.msg.bot { align-self: flex-start; background: var(--card); box-shadow: var(--shadow); border-bottom-left-radius: 6px; }
+.msg.you { align-self: flex-end; background: var(--navy); color: var(--onnavy); border-bottom-right-radius: 6px; }
+.msg .spk { margin-top: 6px; display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--navy); }
+.msg .spk .ico { width: 15px; height: 15px; }
+.typing { display: inline-flex; gap: 4px; padding: 14px 16px; }
+.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); opacity: .4; animation: blink 1.2s infinite; }
+.typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }
+@keyframes blink { 50% { opacity: 1; } }
+.sugg { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 14px 6px; }
+.sugg button { padding: 8px 13px; border-radius: 999px; background: var(--card); border: 1px solid var(--rule); font-size: 13.5px; font-weight: 600; color: var(--navy); }
+.composer { position: absolute; left: 0; right: 0; bottom: calc(64px + var(--sab)); height: 74px; display: flex; gap: 10px; align-items: center; padding: 0 14px; background: var(--bg); border-top: 1px solid var(--rule); z-index: 5; }
+.composer[hidden] { display: none; }
+.composer form { flex: 1; display: flex; align-items: center; background: var(--card); border-radius: 999px; border: 1px solid var(--rule); padding: 4px 4px 4px 16px; min-width: 0; }
+.composer input { flex: 1; border: 0; background: none; outline: none; padding: 8px 0; min-width: 0; font-size: 15px; }
+.composer input::placeholder { color: var(--muted); }
+.composer .send { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--onnavy); display: grid; place-items: center; }
+.composer .send .ico { width: 18px; height: 18px; }
+.micbtn.on { background: var(--up); animation: pulse 1.2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(178,70,43,.45); } 100% { box-shadow: 0 0 0 16px rgba(178,70,43,0); } }
+
+/* result card (chat and Mi canasta) */
+.res { align-self: stretch; max-width: 100%; padding: 0; overflow: hidden; }
+.res .top { padding: 14px 16px 12px; display: grid; gap: 2px; background: var(--downtint); }
+.res .top .eyebrow { color: var(--down); }
+.res .top .shop { font-family: var(--display); font-size: 28px; line-height: 1.05; }
+.res .top .tot { font-size: 26px; font-weight: 700; letter-spacing: -.5px; }
+.res .top .sub { font-size: 12.5px; color: var(--muted); }
+.res .others { padding: 6px 16px; }
+.res .orow { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 14px; align-items: baseline; }
+.res .orow:last-child { border-bottom: 0; }
+.res .orow .d { font-size: 12.5px; color: var(--up); font-weight: 700; min-width: 54px; text-align: right; }
+.res .orow small { grid-column: 1 / -1; font-size: 11.5px; color: var(--muted); margin-top: -4px; }
+.res .maps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 4px 16px 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 12px; border-radius: 12px; font-weight: 700; font-size: 14px; text-decoration: none; }
+.btn.pri { background: var(--navy); color: var(--onnavy); }
+.btn.sec2 { background: var(--sky); color: var(--navy); }
+.btn .ico { width: 18px; height: 18px; }
+.res details { border-top: 1px solid var(--rule); }
+.res summary { list-style: none; padding: 11px 16px; font-weight: 700; font-size: 14px; color: var(--navy); display: flex; justify-content: space-between; cursor: pointer; }
+.res summary::-webkit-details-marker { display: none; }
+.res summary::after { content: "+"; font-size: 18px; line-height: 1; }
+.res details[open] summary::after { content: "−"; }
+.li2 { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 9px 16px; border-top: 1px solid var(--rule); font-size: 13.5px; }
+.li2 .q { color: var(--muted); font-size: 12px; }
+.li2 .pn { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+.res .warn { padding: 10px 16px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); background: var(--bg); }
+
+/* ---------- Mi canasta ---------- */
+.saved { display: flex; gap: 8px; overflow-x: auto; padding: 0 18px 4px; scrollbar-width: none; }
+.saved::-webkit-scrollbar { display: none; }
+.saved .sv { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 7px 8px 7px 13px; border-radius: 999px; background: var(--card); border: 1px solid var(--rule); font-size: 13px; font-weight: 600; }
+.saved .sv[aria-pressed="true"] { border-color: var(--navy); color: var(--navy); }
+.saved .sv .x { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; color: var(--muted); font-size: 15px; }
+.mylist { margin-inline: 18px; padding: 2px 14px; }
+.lrow { display: grid; grid-template-columns: 1fr auto; gap: 8px 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.lrow:last-child { border-bottom: 0; }
+.lrow b { font-size: 15px; font-weight: 600; }
+.lrow .lp { font-size: 12px; color: var(--muted); }
+.lrow .seg { justify-self: start; }
+.stepper { display: inline-flex; align-items: center; background: var(--sky); border-radius: 999px; }
+.stepper button { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-size: 18px; font-weight: 600; color: var(--navy); }
+.stepper span { min-width: 54px; text-align: center; font-weight: 700; font-size: 13.5px; }
+.addbtn { margin: 10px 18px 0; width: calc(100% - 36px); padding: 13px; border-radius: 14px; border: 1.5px dashed var(--celeste); color: var(--navy); font-weight: 700; display: flex; gap: 8px; justify-content: center; align-items: center; background: transparent; }
+.rowbtns { display: flex; gap: 8px; padding: 12px 18px 0; }
+.rowbtns .btn { flex: 1; }
+.saveform { display: flex; gap: 8px; padding: 10px 18px 0; }
+.saveform input { flex: 1; min-width: 0; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--rule); background: var(--card); outline: none; }
+.empty { padding: 24px 16px; text-align: center; display: grid; gap: 6px; justify-items: center; }
+.empty .bi { font-size: 30px; }
+
+/* ---------- Precios ---------- */
+.search { margin: 4px 18px 0; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-radius: 14px; background: var(--card); box-shadow: var(--shadow); }
+.search input { flex: 1; border: 0; background: none; outline: none; padding: 13px 0; font-size: 15px; min-width: 0; }
+.chips { display: flex; gap: 8px; overflow-x: auto; padding: 12px 18px 2px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chips button { flex: none; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--rule); background: var(--card); font-size: 13px; font-weight: 600; color: var(--muted); }
+.chips button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--onnavy); }
+.plist { margin: 10px 18px 0; padding: 0 14px; }
+.prow { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; padding: 12px 0; border-bottom: 1px solid var(--rule); width: 100%; text-align: left; align-items: center; }
+.prow:last-child { border-bottom: 0; }
+.prow b { font-size: 15px; font-weight: 600; }
+.prow .w { font-size: 12.5px; color: var(--muted); }
+.prow .pp { text-align: right; font-weight: 700; font-size: 15px; }
+.prow .pu { text-align: right; font-size: 11.5px; color: var(--muted); }
+.dots { display: flex; gap: 3px; margin-top: 4px; }
+.dots i { width: 22px; height: 4px; border-radius: 2px; background: var(--rule); }
+.dots i.min { background: var(--down); }
+
+/* sheet */
+.scrim { position: absolute; inset: 0; background: rgba(10,16,28,.42); z-index: 70; opacity: 0; pointer-events: none; transition: opacity .25s; }
+.scrim.on { opacity: 1; pointer-events: auto; }
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; z-index: 71; background: var(--card); border-radius: 26px 26px 0 0; max-height: 86%; overflow-y: auto; transform: translateY(105%); transition: transform .32s cubic-bezier(.2,.8,.2,1); padding-bottom: calc(18px + var(--sab)); scrollbar-width: none; }
+.sheet.on { transform: none; }
+.sheet .grab { width: 40px; height: 5px; border-radius: 3px; background: var(--rule); margin: 9px auto 4px; }
+.sheet .sh { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 8px 18px 6px; }
+.sheet .sh .h1 { font-size: 26px; }
+.close { width: 34px; height: 34px; border-radius: 50%; background: var(--sky); display: grid; place-items: center; color: var(--ink); flex: none; }
+.close .ico { width: 18px; height: 18px; }
+.sbody { padding: 0 18px; display: grid; gap: 12px; }
+.shoprow { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.shoprow:last-child { border-bottom: 0; }
+.shoprow .snm { font-weight: 700; display: flex; gap: 6px; align-items: center; }
+.shoprow .spr { font-weight: 700; font-size: 17px; text-align: right; }
+.shoprow .spn { font-size: 12px; color: var(--muted); grid-column: 1 / -1; }
+.shoprow .sbar { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--sky); overflow: hidden; }
+.shoprow .sbar i { display: block; height: 100%; background: var(--celeste); border-radius: 3px; }
+.shoprow.best .sbar i { background: var(--down); }
+.best-tag { font-size: 11px; font-weight: 700; color: var(--down); background: var(--downtint); padding: 2px 7px; border-radius: 999px; }
+.addlist { display: grid; gap: 14px; }
+.addlist .cg b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 7px; }
+.addlist .cg div { display: flex; flex-wrap: wrap; gap: 7px; }
+.addlist .cg button { padding: 8px 12px; border-radius: 999px; background: var(--sky); color: var(--navy); font-weight: 600; font-size: 13.5px; }
+.addlist .cg button[aria-pressed="true"] { background: var(--navy); color: var(--onnavy); }
+
+/* ---------- Alertas ---------- */
+.group { margin: 10px 18px 0; padding: 2px 16px; }
+.trow { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--rule); }
+.trow:last-child { border-bottom: 0; }
+.trow .tt { flex: 1; min-width: 0; }
+.trow .tt b { display: block; font-size: 15px; font-weight: 600; }
+.trow .tt span { font-size: 12.5px; color: var(--muted); }
+.trow .tic { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--sky); color: var(--navy); flex: none; }
+.trow .tic .ico { width: 19px; height: 19px; }
+.switch { width: 51px; height: 31px; border-radius: 16px; background: var(--rule); position: relative; flex: none; transition: background .2s; }
+.switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; border-radius: 50%; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.2); transition: transform .2s; }
+.switch[aria-checked="true"] { background: var(--down); }
+.switch[aria-checked="true"]::after { transform: translateX(20px); }
+.about { margin: 22px 18px 0; padding: 18px; display: grid; gap: 10px; justify-items: start; }
+.about img { height: 34px; width: auto; }
+.about p { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+.about .links { display: flex; flex-wrap: wrap; gap: 8px; }
+.about .links a { font-size: 13px; font-weight: 700; color: var(--navy); background: var(--sky); padding: 7px 12px; border-radius: 999px; text-decoration: none; }
+.foot { text-align: center; padding: 22px 18px 26px; font-size: 12px; color: var(--muted); }
+
+/* ---------- tab bar ---------- */
+.tabbar { position: absolute; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(5, 1fr); padding: 6px 4px calc(4px + var(--sab)); background: var(--card); border-top: 1px solid var(--rule); height: calc(64px + var(--sab)); }
+.tabbar button { display: grid; justify-items: center; align-content: center; gap: 3px; font-size: 10.5px; font-weight: 600; color: var(--muted); position: relative; }
+.tabbar button[aria-current="page"] { color: var(--navy); }
+.tabbar button[aria-current="page"]::before { content: ""; position: absolute; top: -7px; width: 26px; height: 3px; border-radius: 0 0 3px 3px; background: var(--sun); }
+.tabbar .ico { width: 24px; height: 24px; }
+.tabbar .mid .mb { width: 30px; height: 30px; border-radius: 10px; background: var(--sun); color: #fff; display: grid; place-items: center; }
+.tabbar .mid .mb .ico { width: 19px; height: 19px; }
+
+/* splash + toast */
+.splash { position: absolute; inset: 0; z-index: 90; background: #FFFFFF; display: grid; place-items: center; transition: opacity .45s, visibility .45s; }
+.splash.off { opacity: 0; visibility: hidden; }
+.splash div { display: grid; gap: 18px; justify-items: center; }
+.splash img { width: 210px; height: auto; }
+.splash small { font-family: var(--body); color: #5D6A84; font-size: 13px; letter-spacing: .02em; }
+.toast { position: absolute; left: 50%; bottom: calc(80px + var(--sab)); transform: translate(-50%, 20px); z-index: 80; background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-size: 13.5px; font-weight: 600; opacity: 0; transition: .25s; pointer-events: none; width: max-content; max-width: 86%; text-align: center; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="stage">
+  <aside class="side" aria-label="Sobre esta vista previa">
+    <img class="side-logo lg-l" src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta">
+    <img class="side-logo lg-d" src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta">
+    <h1>La app de La Canasta</h1>
+    <p>Así se ve en el iPhone. Funciona de verdad: tocá, escribí y armá tu canasta con los precios reales del índice.</p>
+    <ul id="sideNav"></ul>
+    <small id="sideDate"></small>
+  </aside>
+
+  <div class="device" id="device">
+    <div class="island" aria-hidden="true"></div>
+    <div class="statusbar" aria-hidden="true"><span>9:41</span><span class="sb-r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.3 10.3 0 0 0 8 .4C5.2.4 2.7 1.5.8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.7 6.7 0 0 0 8 4c-1.8 0-3.4.7-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.6c-.6 0-1.1.2-1.5.6L8 11.6l1.5-1.6c-.4-.4-.9-.6-1.5-.6Z"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="18" height="9" rx="2"/><path d="M25 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" opacity=".4"/></svg>
+    </span></div>
+
+    <!-- INICIO -->
+    <section class="view" id="v-inicio" aria-label="Inicio">
+      <div class="topbar">
+        <img class="logo lg-l" src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="105" height="30">
+        <img class="logo lg-d" src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta" width="105" height="30">
+        <button class="round" type="button" data-go="alertas" aria-label="Alertas"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg><i class="dot"></i></button>
+      </div>
+      <div class="hero" id="hero">
+        <span class="eyebrow">Índice La Canasta · cargando</span>
+        <div class="big"><b class="num">…</b></div>
+      </div>
+      <button class="ask" type="button" id="askHome">
+        <span><b>¿Qué querés comprar?</b><small>«Asado para 6» · «¿Dónde está más barata la yerba?»</small></span>
+        <span class="micbtn" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></span>
+      </button>
+      <div class="sec">
+        <div class="sec-h"><h2>Canastas listas</h2><button class="link" type="button" data-go="canasta">Armá la tuya</button></div>
+        <div class="hscroll" id="bcards"></div>
+      </div>
+      <div class="sec">
+        <div class="sec-h"><h2>Súper más barato de la semana</h2></div>
+        <div class="card rank" id="rank"></div>
+        <p class="tiny pad" id="rankNote"></p>
+      </div>
+      <div class="sec">
+        <div class="sec-h"><h2 id="mvTitle">Cambios de hoy</h2><div class="seg sm" id="mvSeg"><button type="button" data-k="down" aria-pressed="true">Bajaron</button><button type="button" data-k="up" aria-pressed="false">Subieron</button></div></div>
+        <div class="card moves" id="moves"></div>
+        <p class="tiny pad">Precio que pagás hoy contra ayer, mismo producto y mismo súper. «Promo» quiere decir que el precio de lista no cambió: empezó o terminó una oferta.</p>
+      </div>
+      <p class="foot">Datos abiertos de lacanastaindex.com<br>Fundado por Ramon Pepa</p>
+    </section>
+
+    <!-- ASISTENTE -->
+    <section class="view" id="v-asistente" aria-label="Asistente" hidden>
+      <div class="chathead">
+        <div class="av"><img src="la-canasta-logo/la-canasta-icon.svg" alt=""></div>
+        <div><b>Asistente de La Canasta</b><small><i></i>Precios de hoy en 4 súper</small></div>
+      </div>
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+      <div class="sugg" id="sugg"></div>
+    </section>
+    <div class="composer" id="composer" hidden>
+      <form id="typed" autocomplete="off"><input id="q" type="text" placeholder="Escribí o tocá el micrófono" aria-label="Mensaje"><button class="send" type="submit" aria-label="Enviar"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
+      <button class="micbtn" id="mic" type="button" aria-label="Hablar"><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></button>
+    </div>
+
+    <!-- MI CANASTA -->
+    <section class="view" id="v-canasta" aria-label="Mi canasta" hidden>
+      <div class="topbar"><div><span class="eyebrow" id="cDate">Tu canasta</span><h1 class="h1">Mi canasta</h1></div>
+        <div class="seg" id="modeAll"><button type="button" data-all="cheap" aria-pressed="false">Barata</button><button type="button" data-all="quality" aria-pressed="false">Marca</button></div></div>
+      <div class="saved" id="saved"></div>
+      <div id="cResult" style="margin: 12px 18px 0"></div>
+      <div class="sec">
+        <div class="sec-h"><h2>Lo que llevás <span class="muted" id="cCount"></span></h2><button class="link" type="button" id="clearL">Vaciar</button></div>
+        <div class="card mylist" id="mylist"></div>
+      </div>
+      <button class="addbtn" type="button" id="openAdd"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Agregar productos</button>
+      <div class="rowbtns"><button class="btn sec2" type="button" id="saveB"><svg class="ico" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Guardar canasta</button><button class="btn sec2" type="button" id="askB"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Preguntar</button></div>
+      <form class="saveform" id="saveForm" hidden><input id="saveName" type="text" maxlength="28" placeholder="Nombre, por ejemplo: Compra del mes" aria-label="Nombre de la canasta"><button class="btn pri" type="submit">Guardar</button></form>
+      <p class="tiny pad" style="margin-top:14px">Para cada producto tomamos el más barato que hay hoy en la web de cada súper (o el más barato de una primera marca, si lo elegís). El total compara solo lo que tienen los 4, para que sea parejo.</p>
+      <p class="foot"></p>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="view" id="v-precios" aria-label="Precios" hidden>
+      <div class="topbar"><div><span class="eyebrow" id="pDate">Precios de hoy</span><h1 class="h1">Precios</h1></div></div>
+      <label class="search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="pq" type="search" placeholder="Buscá: yerba, leche, aceite…" aria-label="Buscar producto"></label>
+      <div class="chips" id="pcats"></div>
+      <div class="card plist" id="plist"></div>
+      <p class="tiny pad" style="margin-top:12px">El precio más barato de hoy por kilo, litro o unidad, en Carrefour, Jumbo, ChangoMás y Día. Las barritas muestran en qué súper está.</p>
+      <p class="foot"></p>
+    </section>
+
+    <!-- ALERTAS -->
+    <section class="view" id="v-alertas" aria-label="Alertas" hidden>
+      <div class="topbar"><div><span class="eyebrow">Notificaciones</span><h1 class="h1">Alertas</h1></div></div>
+      <div class="card group">
+        <div class="trow"><span class="tic"><svg class="ico" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg></span><span class="tt"><b>El índice de cada día</b><span>Cuando sale el número, a la tarde</span></span><button class="switch" type="button" role="switch" data-al="daily" aria-label="El índice de cada día"></button></div>
+        <div class="trow"><span class="tic"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9h18l-2 11H5z"/><path d="M8 9l4-6 4 6"/></svg></span><span class="tt"><b>Mi canasta bajó</b><span>Si tu canasta guardada sale menos que ayer</span></span><button class="switch" type="button" role="switch" data-al="mine" aria-label="Mi canasta bajó"></button></div>
+        <div class="trow"><span class="tic"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></span><span class="tt"><b>Promos nuevas</b><span>Bajas de 20% o más en productos de la canasta</span></span><button class="switch" type="button" role="switch" data-al="promos" aria-label="Promos nuevas"></button></div>
+        <div class="trow"><span class="tic"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="tt"><b>Informe del mes</b><span>La inflación del súper, el 1 de cada mes</span></span><button class="switch" type="button" role="switch" data-al="monthly" aria-label="Informe del mes"></button></div>
+      </div>
+      <div class="sec">
+        <div class="sec-h"><h2>Avisame si baja</h2></div>
+        <div class="card group" id="watch"></div>
+      </div>
+      <div class="card about">
+        <img class="lg-l" src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta">
+        <img class="lg-d" src="la-canasta-logo/la-canasta-logo-horizontal-white.svg" alt="La Canasta">
+        <p>La Canasta mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina. Es independiente: sin vínculo con ningún súper, el INDEC ni el gobierno. Fundado por Ramon Pepa.</p>
+        <div class="links">
+          <a href="https://lacanastaindex.com/" target="_blank" rel="noopener">La web</a>
+          <a href="https://lacanastaindex.com/metodo.html" target="_blank" rel="noopener">Cómo se calcula</a>
+          <a href="https://lacanastaindex.com/informes.html" target="_blank" rel="noopener">Informes</a>
+          <a href="https://www.youtube.com/@LaCanastaIndex" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/LaCanastaIndex" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+      <p class="foot">La Canasta 1.0 · lacanastaindex.com</p>
+    </section>
+
+    <nav class="tabbar" id="tabbar" aria-label="Secciones">
+      <button type="button" data-tab="inicio"><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg>Inicio</button>
+      <button type="button" data-tab="asistente"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/></svg>Asistente</button>
+      <button type="button" data-tab="canasta" class="mid"><span class="mb"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9.5h18l-2 10.5H5z"/><path d="M8 9.5l4-6 4 6"/></svg></span>Mi canasta</button>
+      <button type="button" data-tab="precios"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg>Precios</button>
+      <button type="button" data-tab="alertas"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>Alertas</button>
+    </nav>
+
+    <div class="scrim" id="scrim"></div>
+    <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Detalle"><div class="grab"></div><div id="sheetBody"></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <div class="splash" id="splash"><div><img src="la-canasta-logo/la-canasta-logo-stacked.svg" alt="La Canasta"><small>Precios de hoy en el súper</small></div></div>
+    <div class="homebar" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  // ---------- data: live from lacanastaindex.com inside the app, bundled copy as fallback ----------
+  const LIVE = window.LC_NATIVE ? "https://lacanastaindex.com/" : null;
+  async function get(p) {
+    if (LIVE) { try { const r = await fetch(LIVE + p, { cache: "no-store" }); if (r.ok) return await r.json(); } catch (e) {} }
+    const r = await fetch(p, { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json();
+  }
+  const store = {
+    get(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v == null ? d : v; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  const $ = id => document.getElementById(id);
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const money = x => "$" + Math.round(x).toLocaleString("es-AR");
+  const pct = (x, d = 1) => (x > 0.004 ? "+" : x < -0.004 ? "−" : "") + Math.abs(x).toFixed(d).replace(".", ",") + "%";
+  const SHOP = { Carrefour: "Carrefour", Jumbo: "Jumbo", ChangoMas: "ChangoMás", Dia: "Día" };
+  // always Argentina: Carrefour and Día also exist in Spain
+  const QUERY = { Carrefour: "Supermercado Carrefour, Argentina", Jumbo: "Supermercado Jumbo, Argentina", ChangoMas: "Supermercado ChangoMás, Argentina", Dia: "Supermercado Día, Argentina" };
+  const MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const fdate = d => { const [y, m, dd] = d.split("-"); return `${+dd} de ${MES[+m - 1]}`; };
+  const UNIT = { kg: "el kilo", l: "el litro", un: "c/u" };
+  const PAGES = { leche: "leche", yerba: "yerba", aceite: "aceite-de-girasol", arroz: "arroz", fideos: "fideos", azucar: "azucar", harina: "harina", cafe: "cafe", gaseosa: "coca-cola", dulce_de_leche: "dulce-de-leche" };
+  const ICON = { asado: "🔥", saludable: "🥗", estudiante: "🎒", custom: "🧺" };
+  const IC = {
+    pin: '<svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+    spk: '<svg class="ico" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>',
+    x: '<svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+    bell: '<svg class="ico" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>',
+    chart: '<svg class="ico" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>'
+  };
+  let A = null, D = null, C = null;
+
+  // ---------- state ----------
+  let basket = "asado", people = 4, excluded = new Set();
+  const STARTER = { leche: 2, yerba: 1, pan_lactal: 1, arroz: 1, fideos: 1, aceite: 1.5, huevos: 12, azucar: 1 };
+  let custom = store.get("lc-lista", null);
+  if (!custom || typeof custom !== "object") { custom = {}; for (const k in STARTER) custom[k] = { qty: STARTER[k], mode: "cheap" }; }
+  const saveL = () => store.set("lc-lista", custom);
+  let saved = store.get("lc-guardadas", []); if (!Array.isArray(saved)) saved = [];
+  let alerts = store.get("lc-alertas", { daily: true, mine: true, promos: false, monthly: true, watch: ["yerba", "aceite"] });
+
+  // ---------- baskets (same rules as the website: fair comparison on items all 4 shops have) ----------
+  function customB() {
+    const ks = Object.keys(custom).filter(k => C && C.items[k]);
+    const B = { id: "custom", per: "lista", es: "Mi canasta", ingredients: {}, shops: {}, ranking: [], common: [], missing_everywhere: [] };
+    ks.forEach(k => { const it = C.items[k]; B.ingredients[k] = { es: it.es, en: it.en, unit: it.unit }; });
+    const shops = C ? C.shops : [];
+    shops.forEach(sh => {
+      const items = ks.map(k => {
+        const e = C.items[k].shops[sh] || {}, want = custom[k].mode === "quality" ? e.quality : e.cheap, opt = want || e.cheap;
+        if (!opt) return { ing: k, qty: custom[k].qty, fixed: false, missing: true };
+        return { ing: k, qty: custom[k].qty, fixed: false, unit_price: opt.unit_price, cost: opt.unit_price * custom[k].qty, name: opt.name, promo: opt.promo, fallback: custom[k].mode === "quality" && !want };
+      });
+      B.shops[sh] = { items, kcal: 0, lacks: [], complete: true };
+    });
+    B.missing_everywhere = ks.filter(k => shops.every(sh => B.shops[sh].items.find(i => i.ing === k).missing));
+    B.common = ks.filter(k => shops.every(sh => !B.shops[sh].items.find(i => i.ing === k).missing));
+    shops.forEach(sh => { B.shops[sh].lacks = ks.filter(k => B.shops[sh].items.find(i => i.ing === k).missing && !B.missing_everywhere.includes(k)); B.shops[sh].complete = !B.shops[sh].lacks.length; });
+    return B;
+  }
+  const getB = id => (id || basket) === "custom" ? customB() : D.baskets.find(x => x.id === (id || basket));
+  function calc(B, ppl, excl) {
+    const mult = B.per === "persona" ? ppl : 1, common = new Set(B.common);
+    const tot = s => B.shops[s].items.reduce((a, it) => a + (it.missing || !common.has(it.ing) || excl.has(it.ing) ? 0 : it.cost * (it.fixed ? 1 : mult)), 0);
+    const order = D.shops.slice().sort((a, b) => tot(a) - tot(b));
+    return { B, mult, tot, order, win: order[0] };
+  }
+  const ingName = (B, k) => (((B.ingredients[k] || {}).es) || (C && C.items[k] && C.items[k].es) || k).replace(/\s*\(.*\)/, "").toLowerCase();
+  const dec = n => String(Math.round(n * 100) / 100).replace(".", ",");
+  const fmtQ = (u, q) => u === "un" ? `${dec(q)} ${q === 1 ? "unidad" : "unidades"}` : u === "kg" ? (q < 1 ? `${Math.round(q * 1000)} g` : `${dec(q)} kg`) : (q < 1 ? `${Math.round(q * 1000)} ml` : `${dec(q)} L`);
+  const fmtQs = (u, q) => u === "un" ? dec(q) : fmtQ(u, q);
+
+  // result card: winner, the others, maps, the shopping list
+  function resultCard(B, ppl, excl, opts = {}) {
+    const { mult, tot, order, win } = calc(B, ppl, excl);
+    const card = el("div", "card res" + (opts.cls ? " " + opts.cls : ""));
+    if (!B.common.length) { card.innerHTML = `<div class="empty"><span class="bi">🧺</span><b>Todavía no hay nada para comparar</b><span class="tiny">Agregá productos y te digo dónde te sale menos.</span></div>`; return card; }
+    const sub = B.per === "persona" ? `para ${ppl} persona${ppl > 1 ? "s" : ""} · ${money(tot(win) / ppl)} por persona` : B.per === "lista" ? `${B.common.length} productos · precios del ${fdate(D.date)}` : `una persona, 7 días · precios del ${fdate(D.date)}`;
+    let h = `<div class="top"><span class="eyebrow">Te conviene ir a</span><span class="shop">${SHOP[win]}</span><span class="tot num">${money(tot(win))}</span><span class="sub">${sub}</span></div><div class="others">`;
+    order.slice(1).forEach(s => {
+      const d = (tot(s) / tot(win) - 1) * 100, S = B.shops[s];
+      h += `<div class="orow"><b>${SHOP[s]}</b><span class="num">${money(tot(s))}</span><span class="d num">${pct(d)}</span>${S.lacks.length ? `<small>hoy no tiene ${S.lacks.map(k => ingName(B, k)).join(", ")}</small>` : ""}</div>`;
+    });
+    h += `</div><div class="maps"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(QUERY[win])}">${IC.pin}Google Maps</a><a class="btn sec2" target="_blank" rel="noopener" href="https://maps.apple.com/?q=${encodeURIComponent(QUERY[win])}">${IC.pin}Apple Maps</a></div>`;
+    const W = B.shops[win];
+    let list = "";
+    W.items.filter(it => !excl.has(it.ing)).forEach(it => {
+      const ing = B.ingredients[it.ing], q = it.qty * (it.fixed ? 1 : mult);
+      list += it.missing ? `<div class="li2"><span>${esc(ing.es)} <span class="q">${fmtQ(ing.unit, q)}</span></span><span class="muted">sin precio hoy</span></div>`
+        : `<div class="li2"><span>${esc(ing.es.replace(/\s*\(.*\)/, ""))} <span class="q">${fmtQ(ing.unit, q)}</span></span><b class="num">${money(it.cost * (it.fixed ? 1 : mult))}</b><span class="pn">${esc(it.name)}${it.promo ? ' · <span class="tag promo">promo</span>' : ""}${it.fallback ? " · sin primera marca acá, va la más barata" : ""}${!B.common.includes(it.ing) ? " · no entra en la comparación" : ""}</span></div>`;
+    });
+    h += `<details${opts.open ? " open" : ""}><summary>Lista de compras en ${SHOP[win]}</summary>${list}</details>`;
+    const warn = [];
+    if (B.missing_everywhere.length) warn.push(`Hoy no hay precio de ${B.missing_everywhere.map(k => ingName(B, k)).join(", ")}: no están en el total.`);
+    if (D.shops.some(s => B.shops[s].lacks.length)) warn.push("El total compara solo lo que tienen los 4 súper hoy.");
+    if (warn.length) h += `<div class="warn">${warn.join(" ")}</div>`;
+    card.innerHTML = h;
+    return card;
+  }
+
+  // ---------- INICIO ----------
+  function drawHome() {
+    const I = A.index;
+    const hero = $("hero");
+    const ch = I.day_change;
+    let line = "", chip = "";
+    if (I.mode === "week") {
+      chip = `<span class="chip ${I.week_paid <= 0 ? "dn" : "upc"}">${pct(I.week_paid, 2)}</span>`;
+      line = `<p>Últimos 7 días contra los 7 anteriores, precio que pagás. Precio de lista: <b>${pct(I.week_regular, 2)}</b>.</p>`;
+    } else {
+      chip = `<span class="chip ${I.base_paid <= 0 ? "dn" : "upc"}">${pct(I.base_paid, 2)}</span>`;
+      line = `<p>Precio que pagás contra la semana base (24 al 30 de octubre = 100). Precio de lista: <b>${I.regular.toFixed(2).replace(".", ",")}</b>.</p>`;
+    }
+    const s = I.series, W = 340, H = 74, vals = s.map(r => r[1]).concat([100]);
+    const lo = Math.min(...vals) - 0.4, hi = Math.max(...vals) + 0.4;
+    const x = i => 6 + i * (W - 12) / Math.max(1, s.length - 1), y = v => 6 + (hi - v) * (H - 12) / (hi - lo);
+    const pts = s.map((r, i) => `${x(i).toFixed(1)},${y(r[1]).toFixed(1)}`).join(" ");
+    const lastX = x(s.length - 1), lastY = y(s[s.length - 1][1]);
+    const days = Math.min(14, I.days_of_data);
+    hero.innerHTML = `<span class="eyebrow">Índice La Canasta · ${fdate(I.date)}</span>
+      <div class="big"><b class="num">${I.paid.toFixed(2).replace(".", ",")}</b>${chip}</div>${line}
+      <svg class="spark" viewBox="0 0 ${W} ${H}" aria-label="Índice día por día">
+        <defs><linearGradient id="gF" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7FB1C6" stop-opacity=".45"/><stop offset="1" stop-color="#7FB1C6" stop-opacity="0"/></linearGradient></defs>
+        <line x1="0" x2="${W}" y1="${y(100)}" y2="${y(100)}" stroke="#FFFFFF" stroke-opacity=".28" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+        <text x="${W - 2}" y="${y(100) - 4}" fill="#B9C8DA" font-size="10" text-anchor="end" font-family="DM Sans, sans-serif">100</text>
+        <polygon points="${x(0)},${H} ${pts} ${lastX},${H}" fill="url(#gF)"/>
+        <polyline points="${pts}" fill="none" stroke="#7FB1C6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <circle cx="${lastX}" cy="${lastY}" r="4.5" fill="#D98A2B" stroke="#FFFFFF" stroke-width="2"/>
+      </svg>
+      ${I.mode === "week" ? "" : `<div class="progress">${Array.from({ length: 14 }, (_, i) => `<i class="${i < days ? "on" : ""}"></i>`).join("")}</div>
+      <span class="pnote">Día ${days} de 14. Desde el día 14 comparamos semana contra semana, como el INDEC.</span>`}
+      <span class="pnote">Hoy contra ayer: ${pct(ch, 2)}</span>`;
+    // ready-made baskets
+    const bc = $("bcards"); bc.textContent = "";
+    D.baskets.forEach(B => {
+      const ppl = B.per === "persona" ? 4 : 1, { tot, order, win } = calc(B, ppl, new Set());
+      const save = tot(order[order.length - 1]) - tot(win);
+      const b = el("button", "card bcard");
+      b.type = "button";
+      b.innerHTML = `<span class="bi">${ICON[B.id] || "🧺"}</span><b class="t">${esc(B.es)}</b><span class="w">${B.per === "persona" ? "Para 4 personas" : "Una persona, 7 días"} · más barato en <strong>${SHOP[win]}</strong></span><span class="p num">${money(tot(win))}</span><span class="save">Ahorrás hasta ${money(save)}</span>`;
+      b.addEventListener("click", () => { go("asistente"); ask(B.id === "asado" ? "Quiero hacer un asado para 4" : B.id === "saludable" ? "Una semana saludable" : "Semana de estudiante, lo más barato"); });
+      bc.appendChild(b);
+    });
+    const myB = el("button", "card bcard"); myB.type = "button";
+    myB.innerHTML = `<span class="bi">🧺</span><b class="t">Mi canasta</b><span class="w">Elegí productos, cantidades y marcas</span><span class="p" style="font-size:16px;color:var(--navy)">Crear la mía →</span>`;
+    myB.addEventListener("click", () => go("canasta"));
+    bc.appendChild(myB);
+    // weekly ranking
+    const rk = $("rank"); rk.textContent = "";
+    if (A.ranking) {
+      const mx = Math.max(...A.ranking.shops.map(s => s.total));
+      A.ranking.shops.forEach((s, i) => {
+        const r = el("div", "rrow" + (i === 0 ? " first" : ""));
+        r.innerHTML = `<span class="pos">${i + 1}</span><span class="nm"><b>${SHOP[s.shop] || s.shop}</b><span class="bar"><i style="width:${(s.total / mx * 100).toFixed(1)}%"></i></span></span>${i === 0 ? '<span class="pc best">el más barato</span>' : `<span class="pc upc num">${pct(s.pct)}</span>`}`;
+        rk.appendChild(r);
+      });
+      $("rankNote").textContent = `${A.ranking.label_es}. Los mismos ${A.ranking.n_products} productos, mismo código de barras, en los 4 súper. El porcentaje es cuánto más caro sale todo junto.`;
+    }
+    drawMoves();
+  }
+  let mvKind = "down";
+  function drawMoves() {
+    const box = $("moves"); box.textContent = "";
+    const list = (mvKind === "down" ? A.down : A.up).slice(0, 6);
+    $("mvTitle").textContent = mvKind === "down" ? `Bajaron hoy (${A.n_down})` : `Subieron hoy (${A.n_up})`;
+    if (!list.length) { box.innerHTML = `<p class="tiny" style="padding:12px 0">Hoy no hubo cambios grandes.</p>`; return; }
+    list.forEach(m => {
+      const tag = m.why === "promo_start" ? '<span class="tag promo">Promo nueva</span>' : m.why === "promo_end" ? '<span class="tag promo">Terminó la promo</span>' : m.why === "list_down" ? '<span class="tag list">Bajó el precio de lista</span>' : m.why === "list_up" ? '<span class="tag list">Subió el precio de lista</span>' : "";
+      const r = el("div", "mv");
+      r.innerHTML = `<span class="n">${esc(m.name)}</span><span class="pct num ${m.pct < 0 ? "dn" : "upc"}">${pct(m.pct, 0)}</span><span class="s">${SHOP[m.shop]} ${tag}</span><span class="pr num">${money(m.before)} → <b>${money(m.now)}</b></span>`;
+      box.appendChild(r);
+    });
+  }
+  $("mvSeg").querySelectorAll("button").forEach(b => b.addEventListener("click", () => { mvKind = b.dataset.k; $("mvSeg").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); drawMoves(); }));
+  $("askHome").addEventListener("click", () => { go("asistente"); setTimeout(() => $("q").focus(), 50); });
+
+  // ---------- ASISTENTE ----------
+  const NUM = { uno: 1, una: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12, trece: 13, catorce: 14, quince: 15, veinte: 20 };
+  const ALIASES = {
+    alcohol: ["vino", "cerveza"], vino: ["vino"], cerveza: ["cerveza"], birra: ["cerveza"], gaseosa: ["gaseosa"], coca: ["gaseosa"], bebida: ["vino", "cerveza", "gaseosa"],
+    carb: ["carbon"], pan: ["pan", "pan_lactal"], provoleta: ["provoleta"], queso: ["provoleta", "queso"], ensalada: ["tomate", "cebolla", "lechuga"],
+    verdura: ["tomate", "cebolla", "lechuga", "zanahoria"], chorizo: ["chorizo"], morcilla: ["morcilla"], achura: ["chorizo", "morcilla"], "vacío": ["vacio"], vacio: ["vacio"],
+    "asado de tira": ["asado_tira"], chimichurri: ["chimichurri"], "sal ": ["sal_gruesa"], yerba: ["yerba"], leche: ["leche"], huevo: ["huevos"], pollo: ["pollo", "pechuga"],
+    atun: ["atun"], "atún": ["atun"], fruta: ["banana", "manzana", "naranja"], banana: ["banana"], manzana: ["manzana"], gallet: ["galletitas"], mayonesa: ["mayonesa"],
+    carne: ["asado_tira", "vacio", "carne_picada"], picada: ["carne_picada"], azucar: ["azucar"], "azúcar": ["azucar"], aceite: ["aceite"], arroz: ["arroz"], fideo: ["fideos"],
+    "café": ["cafe"], cafe: ["cafe"], harina: ["harina"], manteca: ["manteca"], "dulce de leche": ["dulce_de_leche"], yogur: ["yogur"], agua: ["agua"], detergente: ["detergente"],
+    lavandina: ["lavandina"], jabon: ["jabon_ropa"], "jabón": ["jabon_ropa"], shampoo: ["shampoo"], "pasta dental": ["pasta_dental"], papa: ["papa"], tomate: ["tomate"], cebolla: ["cebolla"],
+    "té ": ["te"], "pure": ["pure_tomate"], "puré": ["pure_tomate"]
+  };
+  function ingsIn(t) { const out = new Set(); for (const k in ALIASES) if (t.includes(k)) ALIASES[k].forEach(x => out.add(x)); if (out.has("dulce_de_leche")) out.delete("leche"); return [...out]; }
+  function understand(text) {
+    const t = " " + text.toLowerCase().normalize("NFC") + " ";
+    const r = { basket: null, people: null, remove: [], add: [], shop: null, ask: null, mode: null, greet: false, thanks: false, reset: false, items: [] };
+    if (/asado|parrill|choriz/.test(t) && !/(cu[aá]nto (sale|cuesta|est[aá]|vale)) (el |la )?(asado de tira|chorizo)/.test(t)) r.basket = "asado";
+    else if (/salud|sano|sana|abuel|jubil|dieta|viej|mayor/.test(t)) r.basket = "saludable";
+    else if (/estudiant|universi|poca plata|econ[oó]mic/.test(t)) r.basket = "estudiante";
+    let m = t.match(/(\d{1,2})\s*(personas?|amigos?|invitados?|pibes|chicos|gente|comensales)?/);
+    if (m && !/(\d{1,2})\s*(kg|kilo|l\b|lt|litro|g\b|gr|%)/.test(t)) r.people = +m[1];
+    if (!r.people && /(para|somos|seremos|personas|amigos|invitados)/.test(t)) { for (const w in NUM) { if (new RegExp("\\b" + w + "\\b").test(t)) { r.people = NUM[w]; break; } } }
+    const neg = /(?:^|\s)(?:sin|no quiero|sac[aá](?:le)?|quit[aá](?:le)?|ya tengo|no hace falta)\s([^.,;?!]*)/g;
+    while ((m = neg.exec(t))) r.remove.push(...ingsIn(m[1] || ""));
+    const pos = /(?:^|\s)(?:con|agreg[aá](?:le)?|pon[eé](?:le)?|sum[aá](?:le)?)\s([^.,;?!]*)/g;
+    while ((m = pos.exec(t))) r.add.push(...ingsIn(m[1] || ""));
+    if (/(en|y|sale|precio)\s+d[ií]a\b/.test(t)) r.shop = "Dia";
+    if (/carrefour|carre\b/.test(t)) r.shop = "Carrefour"; if (/jumbo/.test(t)) r.shop = "Jumbo"; if (/chango/.test(t)) r.shop = "ChangoMas";
+    if (/(lo que m[aá]s|qu[eé] pesa|lo m[aá]s caro de)/.test(t)) r.ask = "priciest";
+    if (/(por qu[eé]|c[oó]mo sab|de d[oó]nde sac)/.test(t)) r.ask = "why";
+    if (/(calor|kcal|nutri)/.test(t)) r.ask = "kcal";
+    if (/(d[oó]nde queda|c[oó]mo llego|m[aá]s cerca|direcci[oó]n|mapa)/.test(t)) r.ask = "where";
+    if (/(qu[eé] (llevo|compro|incluye)|la lista)/.test(t)) r.ask = "list";
+    if (/(inflaci|[ií]ndice|subieron los precios|aumentos?)/.test(t)) r.ask = "index";
+    if (/(qu[eé] baj[oó]|ofertas?|promos?\b|descuentos?|qu[eé] est[aá] barato hoy)/.test(t)) r.ask = "deals";
+    if (/(qu[eé] s[uú]per|cu[aá]l es el (s[uú]per|supermercado) m[aá]s barato|ranking|el m[aá]s barato de todos)/.test(t)) r.ask = "ranking";
+    const wantsPrice = /(cu[aá]nto (sale|cuesta|est[aá]|vale)|precio de|d[oó]nde (est[aá]|hay|compro|conviene)[^?]*(barat|menos))/.test(t);
+    if (/(empez[aá] de nuevo|de cero|borr[aá] todo)/.test(t)) r.reset = true;
+    if (/(mi canasta|mi lista|personalizad|changuito|compra del mes)/.test(t)) r.basket = "custom";
+    if (/(primera marca|primeras marcas|calidad|buena marca|mejor marca|de marca)/.test(t)) r.mode = "quality";
+    else if (/(cualquier marca|la m[aá]s barata|lo m[aá]s barato|lo m[aá]s econ[oó]mico)/.test(t)) r.mode = "cheap";
+    if (/^\s*(hola|buenas|buen d[ií]a|qu[eé] tal)\b/.test(t)) r.greet = true;
+    if (/(gracias|genial|perfecto|b[aá]rbaro|joya|dale)/.test(t)) r.thanks = true;
+    r.items = ingsIn(t);
+    if (wantsPrice && r.items.length && !r.basket) r.ask = "price";
+    return r;
+  }
+  const told = new Set();
+  function reply(r) {
+    const parts = [], E = true;
+    let card = null;
+    if (r.greet && !r.basket && !r.people && !r.ask) return { text: "¡Hola! Soy el asistente de La Canasta. Decime qué querés comprar y te digo en qué súper te sale menos. Por ejemplo: «asado para 6» o «¿dónde está más barata la yerba?»." };
+    if (r.ask === "price" && C) {
+      const out = r.items.filter(k => C.items[k]).slice(0, 3).map(k => {
+        const it = C.items[k], opts = Object.entries(it.shops).map(([s, v]) => [s, v.cheap]).filter(x => x[1]).sort((a, b) => a[1].unit_price - b[1].unit_price);
+        if (!opts.length) return `De ${it.es.toLowerCase()} todavía no tengo precio hoy.`;
+        const [s, v] = opts[0], last = opts[opts.length - 1];
+        return `${it.es.replace(/\s*\(.*\)/, "")}: lo más barato hoy está en ${SHOP[s]}, ${money(v.unit_price)} ${UNIT[it.unit]} (${v.name}). ${opts.length > 1 ? `En ${SHOP[last[0]]}, el más caro, sale ${money(last[1].unit_price)} ${UNIT[it.unit]}.` : ""}`;
+      });
+      return { text: out.join(" "), item: r.items.find(k => C.items[k]) };
+    }
+    if (r.ask === "index" && !r.basket) {
+      const I = A.index;
+      if (I.mode === "week") return { text: `En los últimos 7 días, lo que pagás en el súper cambió ${pct(I.week_paid, 2)} contra los 7 anteriores. Es la misma forma de comparar que usa el INDEC.` };
+      return { text: `Hoy el índice está en ${I.paid.toFixed(2).replace(".", ",")}: lo que pagás en el súper está ${Math.abs(I.base_paid).toFixed(2).replace(".", ",")}% ${I.base_paid <= 0 ? "más barato" : "más caro"} que en la semana base (24 al 30 de octubre). Llevamos ${I.days_of_data} días de datos. Desde el día 14 comparamos semana contra semana, como el INDEC.`, chart: true };
+    }
+    if (r.ask === "deals" && !r.basket) {
+      const d = A.down.slice(0, 3).map(m => `${m.name} en ${SHOP[m.shop]} (${pct(m.pct, 0)})`);
+      return { text: d.length ? `Hoy bajaron ${A.n_down} productos de la canasta. Los que más: ${d.join("; ")}. Tenés la lista en Inicio.` : "Hoy no hubo bajas grandes." };
+    }
+    if (r.ask === "ranking" && !r.basket && A.ranking) {
+      const s = A.ranking.shops;
+      return { text: `Esta semana el súper más barato es ${SHOP[s[0].shop]}. Con los mismos ${A.ranking.n_products} productos, ${SHOP[s[1].shop]} sale ${pct(s[1].pct)} más, ${SHOP[s[2].shop]} ${pct(s[2].pct)} y ${SHOP[s[3].shop]} ${pct(s[3].pct)}.` };
+    }
+    const st = calc(getB(), people, excluded), { B, tot, order, win } = st;
+    const what = B.id === "custom" ? "tu canasta" : B.id === "asado" ? `el asado para ${people}` : B.id === "saludable" ? "la semana saludable" : "la semana de estudiante";
+    if (r.thanks && !r.basket && !r.people && !r.remove.length && !r.add.length && !r.ask) return { text: "¡De nada! Si querés cambiar algo, decime, por ejemplo: «sin alcohol» o «somos 8»." };
+    if (r.remove.length) parts.push(`Listo, saqué ${[...new Set(r.remove)].map(k => ingName(B, k)).join(", ")}.`);
+    if (r.mode && B.id === "custom") parts.push(r.mode === "quality" ? "Listo, puse primera marca en todo." : "Listo, puse lo más barato en todo.");
+    if (r.add.length) parts.push(B.id === "custom" ? `Listo, agregué ${[...new Set(r.add)].map(k => ingName(B, k)).join(", ")}.` : `Listo, volví a poner ${[...new Set(r.add)].map(k => ingName(B, k)).join(", ")}.`);
+    if (B.id === "custom" && !B.common.length) return { text: "Tu canasta está vacía. Decime qué querés llevar, por ejemplo: «agregá yerba, leche y aceite»." };
+    if (r.shop) {
+      const d = (tot(r.shop) / tot(win) - 1) * 100;
+      parts.push(r.shop === win ? `${SHOP[r.shop]} es justamente el más barato: ${money(tot(r.shop))}.` : `En ${SHOP[r.shop]}, ${what} sale ${money(tot(r.shop))}, un ${d.toFixed(0)}% más que en ${SHOP[win]}.`);
+      return { text: parts.join(" ") };
+    }
+    if (r.ask === "priciest") {
+      const its = B.shops[win].items.filter(it => !it.missing && !excluded.has(it.ing) && B.common.includes(it.ing)).map(it => [it.ing, it.cost * (it.fixed ? 1 : st.mult)]).sort((a, b) => b[1] - a[1]);
+      return { text: its.length ? `Lo que más pesa es ${ingName(B, its[0][0])}: ${money(its[0][1])} de ${money(tot(win))}.` : "No tengo nada en la lista todavía." };
+    }
+    if (r.ask === "why") return { text: `Porque para cada cosa de la lista tomé el producto más barato que hay hoy en la web de cada súper, y sumé. Con los precios de hoy, ${SHOP[win]} da el total más bajo. Comparo solo lo que tienen los 4, así es parejo.` };
+    if (r.ask === "kcal") { const k = B.shops[win].kcal; return { text: k ? `Aporta unas ${Math.round(B.per === "semana" ? k / 7 : k).toLocaleString("es-AR")} calorías ${B.per === "semana" ? "por día" : "por persona"}, aproximado.` : "Para esta canasta no tengo las calorías todavía." }; }
+    if (r.ask === "where") return { text: `Tocá Google Maps o Apple Maps en la tarjeta y te muestra el ${SHOP[win]} más cerca tuyo.`, card: true };
+    if (r.ask === "list") return { text: `En ${SHOP[win]} llevás: ${B.shops[win].items.filter(it => !it.missing && !excluded.has(it.ing)).map(it => ingName(B, it.ing)).join(", ")}.`, card: true, open: true };
+    if (!r.basket && !r.people && !r.remove.length && !r.add.length && !r.reset && !r.mode) {
+      return { text: "Perdón, no te entendí bien. Puedo armarte un asado, una semana saludable, comida barata de estudiante o tu propia canasta. También te digo cuánto sale un producto o qué bajó hoy." };
+    }
+    const second = order[1], save = tot(second) - tot(win);
+    parts.push(`Te conviene ir a ${SHOP[win]}: ${what} sale ${money(tot(win))}${B.per === "persona" ? `, unos ${money(tot(win) / people)} por persona` : ""}. Te ahorrás ${money(save)} contra ${SHOP[second]}, que es el segundo.`);
+    if (B.missing_everywhere.length && !told.has("miss" + B.id) && told.add("miss" + B.id)) parts.push(`Ojo: hoy todavía no tengo precio de ${B.missing_everywhere.map(k => ingName(B, k)).join(", ")}.`);
+    if (B.id === "asado" && !r.people && !told.has("people") && told.add("people")) parts.push("¿Para cuántos es?");
+    return { text: parts.join(" "), card: true };
+  }
+  function bubble(who, text, extra) {
+    const box = $("msgs");
+    const d = el("div", "msg " + who); d.textContent = text;
+    if (who === "bot" && "speechSynthesis" in window) {
+      const b = el("button", "spk", IC.spk + "Escuchar"); b.type = "button";
+      b.addEventListener("click", () => speak(text)); d.appendChild(el("br")); d.appendChild(b);
+    }
+    box.appendChild(d);
+    if (extra) box.appendChild(extra);
+    while (box.children.length > 40) box.removeChild(box.firstChild);
+    scrollChat();
+  }
+  const scrollChat = () => { const v = $("v-asistente"); requestAnimationFrame(() => v.scrollTo({ top: v.scrollHeight, behavior: "smooth" })); };
+  function speak(text) {
+    if (!("speechSynthesis" in window)) return;
+    const u = new SpeechSynthesisUtterance(text); u.lang = "es-AR"; u.rate = 1.02;
+    u.onend = () => { if (listenAfter) { listenAfter = false; startListening(); } };
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }
+  let listenAfter = false;
+  function ask(text, voice) {
+    if (!D) return;
+    bubble("you", text);
+    const r = understand(text);
+    if (r.reset) { excluded = new Set(); people = 4; }
+    if (r.basket && r.basket !== basket) { basket = r.basket; excluded = new Set(); }
+    if (r.people) people = Math.min(40, Math.max(1, r.people));
+    if (basket === "custom") {
+      r.remove.forEach(k => delete custom[k]);
+      r.add.forEach(k => { if (C && C.items[k] && !custom[k]) custom[k] = { qty: C.items[k].q, mode: r.mode || "cheap" }; });
+      if (r.mode) Object.keys(custom).forEach(k => custom[k].mode = r.mode);
+      saveL(); drawCanasta();
+    } else { r.remove.forEach(k => excluded.add(k)); r.add.forEach(k => excluded.delete(k)); }
+    const typing = el("div", "msg bot typing", "<i></i><i></i><i></i>"); $("msgs").appendChild(typing); scrollChat();
+    setTimeout(() => {
+      typing.remove();
+      const ans = reply(r);
+      let extra = null;
+      if (ans.card) extra = resultCard(getB(), people, excluded, { open: ans.open });
+      if (ans.item) { extra = el("button", "btn sec2", `${IC.chart}Ver ${esc(C.items[ans.item].es.replace(/\s*\(.*\)/, "").toLowerCase())} en los 4 súper`); extra.type = "button"; extra.style.alignSelf = "flex-start"; const k = ans.item; extra.addEventListener("click", () => openItem(k)); }
+      bubble("bot", ans.text, extra);
+      drawSugg();
+      listenAfter = !!voice && /\?$/.test(ans.text.trim());
+      if (voice) speak(ans.text);
+    }, 520);
+  }
+  function drawSugg() {
+    const s = $("sugg"); s.textContent = "";
+    const list = basket === "asado" ? ["Somos 8", "Sin alcohol", "¿Qué es lo más caro?", "¿Y en Jumbo?", "¿Dónde queda?"]
+      : basket === "custom" ? ["Todo primera marca", "Agregá café", "¿Qué llevo?", "¿Por qué ese súper?"]
+      : ["Asado para 6", "¿Cuánto sale la yerba?", "¿Qué bajó hoy?", "¿Qué súper es el más barato?", "¿Cómo viene la inflación?"];
+    list.forEach(q => { const b = el("button", null, esc(q)); b.type = "button"; b.addEventListener("click", () => ask(q)); s.appendChild(b); });
+  }
+  $("typed").addEventListener("submit", e => { e.preventDefault(); const t = $("q").value.trim(); if (t) { $("q").value = ""; ask(t); } });
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let rec = null;
+  function startListening() {
+    if (!SR || rec) return;
+    try { rec = new SR(); } catch (e) { rec = null; return noVoice(); }
+    rec.lang = "es-AR"; rec.interimResults = false; rec.maxAlternatives = 1;
+    $("mic").classList.add("on"); $("q").placeholder = "Te escucho…";
+    rec.onresult = e => ask(e.results[0][0].transcript, true);
+    rec.onerror = e => { if (e.error === "not-allowed" || e.error === "service-not-allowed") noVoice(); };
+    rec.onend = () => { rec = null; $("mic").classList.remove("on"); $("q").placeholder = "Escribí o tocá el micrófono"; };
+    try { rec.start(); } catch (err) { rec = null; }
+  }
+  function noVoice() { toast("En esta vista no hay micrófono. En la app del iPhone hablás directo. Escribilo acá abajo."); $("q").focus(); }
+  $("mic").addEventListener("click", () => { if (rec) { rec.stop(); return; } if ("speechSynthesis" in window) speechSynthesis.cancel(); if (!SR) return noVoice(); startListening(); });
+
+  // ---------- MI CANASTA ----------
+  const stepOf = (u, q0) => u === "un" ? 1 : q0 >= 1 ? 0.5 : q0 >= 0.2 ? 0.1 : 0.05;
+  let activeSaved = -1;
+  function drawCanasta() {
+    if (!C || !D) return;
+    $("cDate").textContent = `Precios del ${fdate(C.date)}`;
+    const ks = Object.keys(custom).filter(k => C.items[k]);
+    const modes = new Set(ks.map(k => custom[k].mode));
+    $("modeAll").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(modes.size === 1 && modes.has(b.dataset.all))));
+    // saved baskets
+    const sv = $("saved"); sv.textContent = "";
+    saved.forEach((s, i) => {
+      const b = el("span", "sv"); b.setAttribute("aria-pressed", String(i === activeSaved));
+      b.innerHTML = `<button type="button">${esc(s.name)}</button><button type="button" class="x" aria-label="Borrar ${esc(s.name)}">×</button>`;
+      b.firstChild.addEventListener("click", () => { custom = JSON.parse(JSON.stringify(s.items)); activeSaved = i; saveL(); drawCanasta(); toast(`Cargaste «${s.name}»`); });
+      b.lastChild.addEventListener("click", () => { saved.splice(i, 1); store.set("lc-guardadas", saved); if (activeSaved === i) activeSaved = -1; drawCanasta(); toast("Canasta borrada"); });
+      sv.appendChild(b);
+    });
+    sv.hidden = !saved.length;
+    const res = $("cResult"); res.textContent = ""; res.appendChild(resultCard(customB(), 1, new Set()));
+    $("cCount").textContent = `(${ks.length})`;
+    const ml = $("mylist"); ml.textContent = "";
+    if (!ks.length) ml.innerHTML = `<div class="empty"><span class="bi">🧺</span><b>Tu canasta está vacía</b><span class="tiny">Tocá «Agregar productos» para empezar.</span></div>`;
+    const B = customB(), win = calc(B, 1, new Set()).win;
+    ks.forEach(k => {
+      const it = C.items[k], c = custom[k], st = stepOf(it.unit, it.q), row = el("div", "lrow");
+      const line = B.shops[win] && B.shops[win].items.find(i => i.ing === k);
+      const lp = line && !line.missing ? `${money(line.unit_price)} ${UNIT[it.unit]} en ${SHOP[win]}${line.promo ? " · promo" : ""}` : "sin precio en este súper hoy";
+      row.innerHTML = `<span style="min-width:0"><b>${esc(it.es)}</b><br><span class="lp">${esc(lp)}</span></span>
+        <span class="stepper"><button type="button" data-d="-1" aria-label="Menos">${c.qty <= st + 1e-9 ? '<svg class="ico" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M5 7h14M10 11v6M14 11v6M7 7l1 13h8l1-13M9 7V4h6v3"/></svg>' : "−"}</button><span class="num">${fmtQs(it.unit, c.qty)}</span><button type="button" data-d="1" aria-label="Más">+</button></span>
+        <span class="seg sm"><button type="button" data-m="cheap" aria-pressed="${c.mode !== "quality"}">Más barata</button><button type="button" data-m="quality" aria-pressed="${c.mode === "quality"}"${it.has_quality ? "" : " disabled"}>Primera marca</button></span>`;
+      row.querySelectorAll("[data-m]").forEach(b => b.addEventListener("click", () => { c.mode = b.dataset.m; saveL(); drawCanasta(); }));
+      row.querySelectorAll("[data-d]").forEach(b => b.addEventListener("click", () => {
+        if (+b.dataset.d < 0 && c.qty <= st + 1e-9) delete custom[k];
+        else c.qty = Math.max(st, Math.round((c.qty + st * +b.dataset.d) * 100) / 100);
+        saveL(); drawCanasta();
+      }));
+      ml.appendChild(row);
+    });
+  }
+  $("modeAll").querySelectorAll("button").forEach(b => b.addEventListener("click", () => { Object.keys(custom).forEach(k => custom[k].mode = b.dataset.all); saveL(); drawCanasta(); toast(b.dataset.all === "quality" ? "Todo en primera marca" : "Todo lo más barato"); }));
+  $("clearL").addEventListener("click", () => { custom = {}; activeSaved = -1; saveL(); drawCanasta(); });
+  $("saveB").addEventListener("click", () => { $("saveForm").hidden = !$("saveForm").hidden; if (!$("saveForm").hidden) $("saveName").focus(); });
+  $("saveForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const n = $("saveName").value.trim() || `Canasta ${saved.length + 1}`;
+    if (!Object.keys(custom).length) return toast("Agregá algo antes de guardar");
+    saved.push({ name: n, items: JSON.parse(JSON.stringify(custom)) }); activeSaved = saved.length - 1;
+    store.set("lc-guardadas", saved); $("saveName").value = ""; $("saveForm").hidden = true; drawCanasta();
+    toast(`Guardada: «${n}». Te avisamos si baja.`);
+  });
+  $("askB").addEventListener("click", () => { go("asistente"); basket = "custom"; ask("¿Dónde me conviene comprar mi canasta?"); });
+  $("openAdd").addEventListener("click", () => openAdd());
+  function openAdd() {
+    const body = el("div");
+    body.innerHTML = `<div class="sh"><h2 class="h1">Agregar productos</h2><button class="close" type="button" aria-label="Cerrar">${IC.x}</button></div>
+      <div class="sbody"><label class="search" style="margin:0;box-shadow:none;background:var(--bg)"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="addq" type="search" placeholder="Buscá un producto" aria-label="Buscar producto"></label><div class="addlist" id="addlist"></div></div>`;
+    sheet(body);
+    const draw = () => {
+      const q = norm(body.querySelector("#addq").value), box = body.querySelector("#addlist"); box.textContent = "";
+      (C.categories || []).forEach(([id, ces]) => {
+        const ks = Object.keys(C.items).filter(k => C.items[k].cat === id && Object.keys(C.items[k].shops).length && (!q || norm(C.items[k].es).includes(q)));
+        if (!ks.length) return;
+        const g = el("div", "cg", `<b>${esc(ces)}</b><div></div>`);
+        ks.forEach(k => {
+          const b = el("button", null, (custom[k] ? "✓ " : "+ ") + esc(C.items[k].es.replace(/\s*\(.*\)/, ""))); b.type = "button"; b.setAttribute("aria-pressed", String(!!custom[k]));
+          b.addEventListener("click", () => { if (custom[k]) delete custom[k]; else custom[k] = { qty: C.items[k].q, mode: "cheap" }; saveL(); drawCanasta(); draw(); });
+          g.lastChild.appendChild(b);
+        });
+        box.appendChild(g);
+      });
+      if (!box.children.length) box.innerHTML = `<p class="tiny">Todavía no seguimos ese producto. Lo sumamos pronto.</p>`;
+    };
+    body.querySelector("#addq").addEventListener("input", draw); draw();
+  }
+
+  // ---------- PRECIOS ----------
+  const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
+  let pcat = "all";
+  function drawPrecios() {
+    if (!C) return;
+    $("pDate").textContent = `Precios del ${fdate(C.date)}`;
+    const cats = $("pcats");
+    if (!cats.children.length) {
+      [["all", "Todo"]].concat((C.categories || []).map(c => [c[0], c[1].split(" y ")[0]])).forEach(([id, n]) => {
+        const b = el("button", null, esc(n)); b.type = "button"; b.dataset.c = id;
+        b.addEventListener("click", () => { pcat = id; drawPrecios(); }); cats.appendChild(b);
+      });
+    }
+    cats.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.c === pcat)));
+    const q = norm($("pq").value), box = $("plist"); box.textContent = "";
+    const ks = Object.keys(C.items).filter(k => Object.keys(C.items[k].shops).length && (pcat === "all" || C.items[k].cat === pcat) && (!q || norm(C.items[k].es).includes(q)));
+    if (!ks.length) { box.innerHTML = `<p class="tiny" style="padding:14px 0">Todavía no seguimos ese producto.</p>`; return; }
+    ks.forEach(k => {
+      const it = C.items[k], opts = C.shops.map(s => [s, it.shops[s] && it.shops[s].cheap]).filter(x => x[1]);
+      const srt = opts.slice().sort((a, b) => a[1].unit_price - b[1].unit_price), best = srt[0], worst = srt[srt.length - 1];
+      const r = el("button", "prow"); r.type = "button";
+      r.innerHTML = `<span style="min-width:0"><b>${esc(it.es.replace(/\s*\(.*\)/, ""))}</b><br><span class="w">más barato en <b style="font-size:inherit;color:var(--down)">${SHOP[best[0]]}</b>${best[1].promo ? ' <span class="tag promo">promo</span>' : ""}</span>${worst && worst[0] !== best[0] ? `<br><span class="w">en ${SHOP[worst[0]]} sale ${Math.round((worst[1].unit_price / best[1].unit_price - 1) * 100)}% más</span>` : ""}</span>
+        <span><span class="pp num" style="display:block">${money(best[1].unit_price)}</span><span class="pu" style="display:block">${UNIT[it.unit]}</span></span>`;
+      r.addEventListener("click", () => openItem(k));
+      box.appendChild(r);
+    });
+  }
+  $("pq").addEventListener("input", drawPrecios);
+  function openItem(k) {
+    const it = C.items[k];
+    let mode = "cheap";
+    const body = el("div");
+    const draw = () => {
+      const opts = C.shops.map(s => [s, it.shops[s] && (mode === "quality" ? it.shops[s].quality : it.shops[s].cheap)]).filter(x => x[1]).sort((a, b) => a[1].unit_price - b[1].unit_price);
+      const mx = opts.length ? opts[opts.length - 1][1].unit_price : 1;
+      const watching = alerts.watch.includes(k);
+      body.innerHTML = `<div class="sh"><div><span class="eyebrow">Precio ${UNIT[it.unit]} · ${fdate(C.date)}</span><h2 class="h1">${esc(it.es)}</h2></div><button class="close" type="button" aria-label="Cerrar">${IC.x}</button></div>
+        <div class="sbody">
+          ${it.has_quality ? `<div class="seg"><button type="button" data-m="cheap" aria-pressed="${mode === "cheap"}">La más barata</button><button type="button" data-m="quality" aria-pressed="${mode === "quality"}">Primera marca</button></div>` : ""}
+          <div>${opts.map(([s, v], i) => `<div class="shoprow${i === 0 ? " best" : ""}"><span class="snm">${SHOP[s]}${i === 0 ? ' <span class="best-tag">el más barato</span>' : ""}${v.promo ? ' <span class="tag promo">promo</span>' : ""}</span><span class="spr num">${money(v.unit_price)}</span><span class="sbar"><i style="width:${(v.unit_price / mx * 100).toFixed(1)}%"></i></span><span class="spn">${esc(v.name)}${i > 0 ? ` · ${Math.round((v.unit_price / opts[0][1].unit_price - 1) * 100)}% más caro` : ""}</span></div>`).join("") + C.shops.filter(s => !opts.some(o => o[0] === s)).map(s => `<div class="shoprow"><span class="snm">${SHOP[s]}</span><span class="spr muted" style="font-size:13px;font-weight:600">hoy no lo tiene</span></div>`).join("") || '<p class="tiny">Sin precio de primera marca hoy.</p>'}</div>
+          <div class="rowbtns" style="padding:0"><button class="btn ${custom[k] ? "sec2" : "pri"}" type="button" data-act="add">${custom[k] ? "✓ En mi canasta" : "+ A mi canasta"}</button><button class="btn sec2" type="button" data-act="watch">${IC.bell}${watching ? "Te aviso si baja ✓" : "Avisame si baja"}</button></div>
+          ${PAGES[k] ? `<a class="btn sec2" href="https://lacanastaindex.com/precios/${PAGES[k]}.html" target="_blank" rel="noopener">${IC.chart}Ver cómo cambió día por día</a>` : ""}
+          <p class="tiny">Precio de hoy en la web de cada súper, por ${it.unit === "kg" ? "kilo" : it.unit === "l" ? "litro" : "unidad"}, para que se pueda comparar aunque los envases sean distintos.</p>
+        </div>`;
+      body.querySelectorAll("[data-m]").forEach(b => b.addEventListener("click", () => { mode = b.dataset.m; draw(); }));
+      body.querySelector('[data-act="add"]').addEventListener("click", () => { if (!custom[k]) { custom[k] = { qty: it.q, mode }; saveL(); drawCanasta(); toast(`${it.es.replace(/\s*\(.*\)/, "")} está en tu canasta`); draw(); } });
+      body.querySelector('[data-act="watch"]').addEventListener("click", () => { if (watching) alerts.watch = alerts.watch.filter(x => x !== k); else alerts.watch.push(k); store.set("lc-alertas", alerts); drawAlertas(); toast(watching ? "Ya no te aviso" : "Listo, te avisamos cuando baje"); draw(); });
+      body.querySelector(".close").addEventListener("click", closeSheet);
+    };
+    draw(); sheet(body, true);
+  }
+
+  // ---------- ALERTAS ----------
+  function drawAlertas() {
+    document.querySelectorAll("[data-al]").forEach(s => s.setAttribute("aria-checked", String(!!alerts[s.dataset.al])));
+    const w = $("watch"); w.textContent = "";
+    if (!C) return;
+    const ks = alerts.watch.filter(k => C.items[k]);
+    if (!ks.length) w.innerHTML = `<p class="tiny" style="padding:14px 0">En Precios, tocá un producto y «Avisame si baja».</p>`;
+    ks.forEach(k => {
+      const it = C.items[k], opts = Object.entries(it.shops).map(([s, v]) => [s, v.cheap]).filter(x => x[1]).sort((a, b) => a[1].unit_price - b[1].unit_price);
+      const r = el("div", "trow");
+      r.innerHTML = `<span class="tic">${IC.bell}</span><span class="tt"><b>${esc(it.es.replace(/\s*\(.*\)/, ""))}</b><span>Hoy ${opts[0] ? `${money(opts[0][1].unit_price)} ${UNIT[it.unit]} en ${SHOP[opts[0][0]]}` : "sin precio"}</span></span><button class="close" type="button" aria-label="Dejar de avisar">${IC.x}</button>`;
+      r.querySelector("button").addEventListener("click", () => { alerts.watch = alerts.watch.filter(x => x !== k); store.set("lc-alertas", alerts); drawAlertas(); });
+      r.querySelector(".tt").style.cursor = "pointer"; r.querySelector(".tt").addEventListener("click", () => openItem(k));
+      w.appendChild(r);
+    });
+  }
+  document.querySelectorAll("[data-al]").forEach(s => s.addEventListener("click", () => {
+    alerts[s.dataset.al] = !alerts[s.dataset.al]; store.set("lc-alertas", alerts); drawAlertas();
+    toast(alerts[s.dataset.al] ? "Alerta activada" : "Alerta desactivada");
+  }));
+
+  // ---------- sheet, toast, tabs ----------
+  function sheet(body) {
+    const b = $("sheetBody"); b.textContent = ""; b.appendChild(body);
+    const c = body.querySelector(".close"); if (c) c.addEventListener("click", closeSheet);
+    $("scrim").classList.add("on"); $("sheet").classList.add("on"); $("sheet").scrollTop = 0;
+  }
+  function closeSheet() { $("scrim").classList.remove("on"); $("sheet").classList.remove("on"); }
+  $("scrim").addEventListener("click", closeSheet);
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
+  let tt = null;
+  function toast(t) { const x = $("toast"); x.textContent = t; x.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => x.classList.remove("on"), 2400); }
+  const TABS = ["inicio", "asistente", "canasta", "precios", "alertas"];
+  const TNAME = { inicio: "Inicio", asistente: "Asistente", canasta: "Mi canasta", precios: "Precios", alertas: "Alertas" };
+  let cur = null;
+  function go(t, fromHash) {
+    if (!TABS.includes(t)) t = "inicio";
+    closeSheet();
+    TABS.forEach(x => { $("v-" + x).hidden = x !== t; });
+    $("composer").hidden = t !== "asistente";
+    document.querySelectorAll("#tabbar button").forEach(b => { if (b.dataset.tab === t) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+    document.querySelectorAll("#sideNav button").forEach(b => b.setAttribute("aria-current", String(b.dataset.tab === t)));
+    if (t !== cur) $("v-" + t).scrollTop = 0;
+    cur = t;
+    if (t === "asistente") scrollChat();
+    if (!fromHash && location.hash !== "#" + t) { try { history.replaceState(null, "", "#" + t); } catch (e) { location.hash = t; } }
+  }
+  document.querySelectorAll("#tabbar button").forEach(b => b.addEventListener("click", () => go(b.dataset.tab)));
+  document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => go(b.dataset.go)));
+  const sn = $("sideNav");
+  TABS.forEach(t => { const li = el("li"), b = el("button", null, esc(TNAME[t])); b.type = "button"; b.dataset.tab = t; b.addEventListener("click", () => go(t)); li.appendChild(b); sn.appendChild(li); });
+  window.addEventListener("hashchange", () => go(location.hash.slice(1), true));
+
+  // ---------- start ----------
+  const t0 = Date.now();
+  Promise.all([get("app-datos/datos.json"), get("canastas/datos.json"), get("canastas/catalogo.json")]).then(([a, d, c]) => {
+    A = a; D = d; C = c;
+    $("sideDate").textContent = `Precios reales del ${fdate(A.date)} de 2026, de lacanastaindex.com`;
+    drawHome(); drawCanasta(); drawPrecios(); drawAlertas(); drawSugg();
+    bubble("bot", `¡Hola! Soy el asistente de La Canasta. Tengo los precios del ${fdate(D.date)} en Carrefour, Jumbo, ChangoMás y Día. Decime qué querés comprar y te digo dónde te sale menos.`);
+    go(location.hash.slice(1) || "inicio", true);
+    setTimeout(() => $("splash").classList.add("off"), Math.max(0, 1100 - (Date.now() - t0)));
+  }).catch(() => {
+    $("splash").querySelector("small").textContent = "Sin conexión. Probá de nuevo en un rato.";
+  });
+})();
+</script>

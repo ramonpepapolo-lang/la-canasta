@@ -1,26 +1,34 @@
-// Builds app/www (what goes inside the iPhone and Android app) from the website's assistant page.
-// The app keeps the page inside it, so it opens instantly and offline; prices come from lacanastaindex.com
-// every time there is signal, with the copy bundled at build time as a fallback.
+// Builds app/www (what goes inside the iPhone and Android app) from app/src/app.html, the app's own screens.
+// The app keeps everything inside it (screens, logo, fonts), so it opens instantly and offline. Prices come
+// from lacanastaindex.com every time there is signal (window.LC_NATIVE), with the copy bundled here as a fallback.
+// Run: node build-www.js   (then: npx cap sync)
 const fs = require("fs"), path = require("path");
-const ROOT = path.join(__dirname, ".."), WWW = path.join(__dirname, "www"), SITE = "https://lacanastaindex.com";
+const ROOT = path.join(__dirname, ".."), WWW = path.join(__dirname, "www");
 fs.rmSync(WWW, { recursive: true, force: true });
-fs.mkdirSync(path.join(WWW, "canastas"), { recursive: true });
-const cp = (from, to) => { fs.mkdirSync(path.dirname(path.join(WWW, to)), { recursive: true }); fs.copyFileSync(path.join(ROOT, from), path.join(WWW, to)); };
-// assets used by the page
-["la-canasta-logo/la-canasta-logo-horizontal.svg", "la-canasta-logo/la-canasta-logo-horizontal-white.svg", "la-canasta-logo/la-canasta-icon.svg",
- "la-canasta-logo/la-canasta-icon-32.png", "app-icons/icon-180.png", "app-icons/icon-192.png", "counter.js", "canastas/datos.json", "canastas/catalogo.json"].forEach(f => cp(f, f));
-let html = fs.readFileSync(path.join(ROOT, "canastas", "index.html"), "utf8");
-// links to other pages of the site open the live website; local assets stay local
-html = html.replace(/(href)="\.\.\/((?!la-canasta-logo|app-icons|counter\.js)[^"]*)"/g, (m, a, p) => `${a}="${SITE}/${p}"`);
-html = html.replace(/href="\/(informes\.html[^"]*)"/g, `href="${SITE}/$1"`);
-html = html.replace('<link rel="manifest" href="/manifest.webmanifest">', "");
-// app mode from the first frame, and today's prices from the website (bundled copy if offline)
-html = html.replace("<head>", `<head>\n<script>try{sessionStorage.setItem("lc-app","1")}catch(e){}document.documentElement.classList.add("lc-app");window.LC_NATIVE=true;</script>`);
-html = html.replace('fetch("datos.json", { cache: "no-store" }).then(r => r.json())',
-  `fetch("${SITE}/canastas/datos.json", { cache: "no-store" }).then(r => { if (!r.ok) throw 0; return r.json(); }).catch(() => fetch("datos.json").then(r => r.json()))`);
-html = html.replace('fetch("catalogo.json", { cache: "no-store" }).then(r => r.json())',
-  `fetch("${SITE}/canastas/catalogo.json", { cache: "no-store" }).then(r => { if (!r.ok) throw 0; return r.json(); }).catch(() => fetch("catalogo.json").then(r => r.json()))`);
-if (!html.includes(`${SITE}/canastas/datos.json`)) throw new Error("datos.json fetch not found: update build-www.js");
-fs.writeFileSync(path.join(WWW, "canastas", "index.html"), html);
-fs.writeFileSync(path.join(WWW, "index.html"), '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=canastas/index.html"><script>location.replace("canastas/index.html")</script>');
-console.log("app/www built from canastas/index.html, data of", JSON.parse(fs.readFileSync(path.join(ROOT, "canastas/datos.json"))).date);
+const cp = (from, to) => { const t = path.join(WWW, to || from); fs.mkdirSync(path.dirname(t), { recursive: true }); fs.copyFileSync(path.join(ROOT, from), t); };
+// data the app reads (fallback copy) and the logo
+["app-datos/datos.json", "canastas/datos.json", "canastas/catalogo.json",
+ "la-canasta-logo/la-canasta-logo-horizontal.svg", "la-canasta-logo/la-canasta-logo-horizontal-white.svg",
+ "la-canasta-logo/la-canasta-logo-stacked.svg", "la-canasta-logo/la-canasta-icon.svg"].forEach(f => cp(f));
+// fonts inside the app, so it looks the same without signal
+const FONTS = { "400": "dm-sans-latin-400-normal.woff2", "500 600": "dm-sans-latin-600-normal.woff2", "700": "dm-sans-latin-700-normal.woff2" };
+Object.values(FONTS).concat(["dm-serif-display-latin-400-normal.woff2"]).forEach(f => cp(path.join("videos", "assets", f), path.join("fonts", f)));
+const face = Object.entries(FONTS).map(([w, f]) => `@font-face{font-family:"DM Sans";font-weight:${w};font-display:swap;src:url(fonts/${f}) format("woff2")}`).join("\n")
+  + `\n@font-face{font-family:"DM Serif Display";font-weight:400;font-display:swap;src:url(fonts/dm-serif-display-latin-400-normal.woff2) format("woff2")}`;
+let app = fs.readFileSync(path.join(__dirname, "src", "app.html"), "utf8");
+const before = app.length;
+app = app.replace(/<link rel="preconnect"[^>]*>\s*<link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com[^>]*>/, `<style>\n${face}\n</style>`);
+if (app.length === before) throw new Error("Google Fonts link not found in app/src/app.html: update build-www.js");
+const html = `<!doctype html>
+<html lang="es" class="native">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#FFFFFF">
+<script>window.LC_NATIVE = true;</script>
+<style>[hidden]{display:none!important}</style>
+${app}
+</html>
+`;
+fs.writeFileSync(path.join(WWW, "index.html"), html);
+console.log("app/www built from app/src/app.html, data of", JSON.parse(fs.readFileSync(path.join(ROOT, "app-datos/datos.json"))).date);

@@ -1,4 +1,4 @@
-# Tries new searches without saving anything: the result is a file you download from the run (probe.csv.gz).
+# Tries new searches without touching main: the result (probe.csv.gz) goes to the separate branch "probe".
 name: Probar búsquedas
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         required: false
         default: ""
 permissions:
-  contents: read
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -20,8 +20,10 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - run: python probe_searches.py "${{ github.event.inputs.terms }}"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: probe
-          path: probe.csv.gz
-          retention-days: 3
+      - name: Save the result on the "probe" branch (never on main)
+        run: |
+          mkdir /tmp/out && mv probe.csv.gz /tmp/out/
+          cd /tmp/out && git init -q && git checkout -q -b probe
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          git add probe.csv.gz && git commit -q -m "Probe of searches"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" probe

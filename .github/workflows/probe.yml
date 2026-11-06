@@ -1,0 +1,27 @@
+# Tries new searches without saving anything: the result is a file you download from the run (probe.csv.gz).
+name: Probar búsquedas
+on:
+  workflow_dispatch:
+    inputs:
+      terms:
+        description: "Searches separated by commas (empty = the EXTRA_SEARCHES list)"
+        required: false
+        default: ""
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python probe_searches.py "${{ github.event.inputs.terms }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe
+          path: probe.csv.gz
+          retention-days: 3

@@ -39,6 +39,30 @@ SEARCHES = [
     "chorizo", "morcilla", "carbon", "pan frances", "provoleta", "sal gruesa", "lechuga",
     "avena", "lentejas", "atun", "zanahoria", "naranja", "pechuga",
 ]
+# More products for the app's "Mi canasta" (lacanastaindex.com/canastas/ and the La Canasta app). Only Jumbo,
+# Carrefour, ChangoMas and Dia, 1 second apart. They never change the index: the index only uses basket.csv.
+EXTRA_SEARCHES = [
+    # meat, chicken, fish
+    "matambre", "osobuco", "bife de chorizo", "bife ancho", "lomo", "entraña", "cuadril", "colita de cuadril",
+    "peceto", "roast beef", "falda", "paleta", "bola de lomo", "molleja", "chinchulin", "costilla de cerdo",
+    "bondiola", "carre de cerdo", "pata muslo", "suprema", "milanesa de pollo", "alitas de pollo",
+    "hamburguesas", "salchichas", "merluza", "filet de merluza",
+    # deli, cheese, fresh pasta
+    "jamon cocido", "queso en fetas", "salame", "mortadela", "muzzarella", "queso rallado", "ricota",
+    "queso untable", "crema de leche", "tapas de empanadas", "tapas de tarta", "prepizza", "ravioles", "ñoquis",
+    # fruit and veg
+    "zapallo", "zapallito", "calabaza", "morron", "ajo", "limon", "palta", "espinaca", "acelga", "choclo",
+    "batata", "pera", "mandarina", "frutilla", "uva", "pepino", "berenjena", "brocoli",
+    # pantry
+    "polenta", "garbanzos", "porotos", "arvejas", "caballa", "sal fina", "pimienta", "vinagre", "aceite de oliva",
+    "ketchup", "mostaza", "mermelada", "miel", "cacao", "tostadas", "pan rallado", "cereales", "alfajor",
+    "papas fritas", "dulce de membrillo", "leche en polvo", "galletitas de agua", "tomate perita", "caldo",
+    "edulcorante", "aceitunas", "pan de hamburguesa", "pan de pancho", "harina leudante", "maizena",
+    # drinks
+    "jugo en polvo", "jugo", "soda", "agua saborizada", "sprite", "fernet", "vino blanco",
+    # cleaning and personal care
+    "suavizante", "rollo de cocina", "limpiador de piso", "esponja", "bolsas de residuos", "desodorante", "pañales",
+]
 
 COLUMNS = ["date", "shop", "search", "sku_id", "ean", "name", "brand", "category",
            "unit", "unit_multiplier", "price", "list_price", "available", "basket_type", "extra"]
@@ -68,7 +92,7 @@ def get_json(url, want=list):
 # ---------- Part 1: Jumbo, Carrefour, ChangoMas, Dia ----------
 for shop, base in SHOPS.items():
     before = len(prices)
-    for term in SEARCHES:
+    for term in SEARCHES + EXTRA_SEARCHES:
         url = f"{base}/api/catalog_system/pub/products/search?ft={quote(term)}&_from=0&_to=49"
         products = get_json(url)
 
@@ -105,7 +129,7 @@ for shop, base in SHOPS.items():
                     prices[(shop, item.get("itemId"))]["list_price"] = ""
                     prices[(shop, item.get("itemId"))]["extra"] = json.dumps(
                         {"ListPrice_raw": offer.get("ListPrice"), "PriceWithoutDiscount": offer.get("PriceWithoutDiscount")})
-        time.sleep(2)  # be polite: wait 2 seconds between searches
+        time.sleep(2 if term in SEARCHES else 1)  # be polite: wait between searches
     print(f"{shop}: {len(prices) - before} prices")
 
 

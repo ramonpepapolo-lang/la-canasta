@@ -3,7 +3,7 @@
  "short_name": "La Canasta",
  "description": "Decile qué querés hacer (un asado, una semana saludable) y te dice a qué súper ir, cuánto sale y cómo llegar. Precios de hoy en Carrefour, Jumbo, ChangoMás y Día.",
  "id": "/canastas/?app=1",
- "start_url": "/canastas/?app=1",
+ "start_url": "/canastas/app.html?app=1",
  "scope": "/",
  "display": "standalone",
  "orientation": "portrait",
@@ -36,7 +36,7 @@
  "shortcuts": [
   {
    "name": "Mi canasta",
-   "url": "/canastas/?app=1#canasta",
+   "url": "/canastas/app.html?app=1#canasta",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",
@@ -46,7 +46,7 @@
   },
   {
    "name": "Precios",
-   "url": "/canastas/?app=1#precios",
+   "url": "/canastas/app.html?app=1#precios",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",
@@ -56,7 +56,7 @@
   },
   {
    "name": "Informe",
-   "url": "/canastas/?app=1#informe",
+   "url": "/canastas/app.html?app=1#informe",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",

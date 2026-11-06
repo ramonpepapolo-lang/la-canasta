@@ -3,85 +3,85 @@
  "previous": "2026-11-05",
  "index": {
   "date": "2026-11-06",
-  "paid": 98.58,
-  "regular": 98.991,
-  "day_change": 0.52,
+  "paid": 98.429,
+  "regular": 99.088,
+  "day_change": 0.15,
   "days_of_data": 14,
   "series": [
    [
     "2026-10-24",
-    98.266,
-    99.808
+    98.617,
+    99.785
    ],
    [
     "2026-10-25",
-    99.41,
-    99.808
+    99.2,
+    99.785
    ],
    [
     "2026-10-26",
-    100.742,
-    99.895
+    100.894,
+    99.903
    ],
    [
     "2026-10-27",
-    101.135,
-    99.776
+    101.218,
+    99.804
    ],
    [
     "2026-10-28",
-    100.694,
-    100.252
+    100.295,
+    100.269
    ],
    [
     "2026-10-29",
-    100.48,
-    100.175
+    100.129,
+    100.197
    ],
    [
     "2026-10-30",
-    99.272,
-    100.286
+    99.648,
+    100.258
    ],
    [
     "2026-10-31",
-    99.376,
-    99.812
+    99.552,
+    99.866
    ],
    [
     "2026-11-01",
-    99.458,
-    99.792
+    99.69,
+    99.895
    ],
    [
     "2026-11-02",
-    99.853,
-    99.669
+    100.415,
+    99.858
    ],
    [
     "2026-11-03",
-    101.191,
-    99.889
+    101.347,
+    100.034
    ],
    [
     "2026-11-04",
-    98.487,
-    99.042
+    98.573,
+    99.32
    ],
    [
     "2026-11-05",
-    98.067,
-    99.012
+    98.277,
+    99.325
    ],
    [
     "2026-11-06",
-    98.58,
-    98.991
+    98.429,
+    99.088
    ]
   ],
   "mode": "week",
-  "week_paid": -0.65,
-  "week_regular": -0.52,
+  "week_paid": -0.45,
+  "week_regular": -0.35,
   "now": [
    "2026-10-31",
    "2026-11-06"
@@ -124,6 +124,15 @@
  },
  "down": [
   {
+   "shop": "Dia",
+   "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
+   "type": "carne_picada",
+   "before": 11000.0,
+   "now": 5490.0,
+   "pct": -50.1,
+   "why": "list_down"
+  },
+  {
    "shop": "ChangoMas",
    "name": "Tomate Redondo 500 G",
    "type": "tomate",
@@ -131,6 +140,24 @@
    "now": 3299.0,
    "pct": -32.7,
    "why": "promo_start"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Suprema De Pollo Granel Fresca",
+   "type": "suprema",
+   "before": 12449.0,
+   "now": 8999.0,
+   "pct": -27.7,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
+   "type": "vacio",
+   "before": 22289.0,
+   "now": 17999.0,
+   "pct": -19.2,
+   "why": "price"
   },
   {
    "shop": "Jumbo",
@@ -143,12 +170,39 @@
   },
   {
    "shop": "ChangoMas",
+   "name": "Asado De Tira De Novillito 1 Kg",
+   "type": "asado",
+   "before": 14704.15,
+   "now": 12299.0,
+   "pct": -16.4,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
    "name": "Agua Mineral Sin Gas Villa Del Sur 2.25l",
    "type": "agua",
    "before": 2699.0,
    "now": 2294.15,
    "pct": -15.0,
    "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
+   "type": "vacio",
+   "before": 18019.15,
+   "now": 16499.0,
+   "pct": -8.4,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Nalga x kg",
+   "type": "nalga",
+   "before": 16990.0,
+   "now": 17990.0,
+   "pct": 5.9,
+   "why": "promo_end"
   },
   {
    "shop": "Carrefour",
@@ -176,42 +230,6 @@
    "now": 4440.0,
    "pct": 10.0,
    "why": "list_up"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Manzana Pink Lady por Kg",
-   "type": "manzana",
-   "before": 2999.0,
-   "now": 3499.0,
-   "pct": 16.7,
-   "why": "price"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Pan Lactal Regular Veneziana 400 Gr",
-   "type": "pan_lactal",
-   "before": 2991.15,
-   "now": 3519.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "type": "pollo_entero",
-   "before": 3220.65,
-   "now": 3789.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Banana selección x kg.",
-   "type": "banana",
-   "before": 1749.0,
-   "now": 2499.0,
-   "pct": 42.9,
-   "why": "promo_end"
   }
  ],
  "up": [
@@ -226,6 +244,78 @@
   },
   {
    "shop": "ChangoMas",
+   "name": "Bife De Vacio Envasado Al Vacío 800 G",
+   "type": "vacio",
+   "before": 24224.15,
+   "now": 28499.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Bola De Lomo Feteada De Novillito Envasado Al Vacío 1 Kg",
+   "type": "cortes_magros",
+   "before": 17169.15,
+   "now": 20199.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Carne Picada Magra 800g",
+   "type": "carne_picada",
+   "before": 13939.15,
+   "now": 16399.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 21504.15,
+   "now": 25299.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cuadrada Feteada De Novillito Envasado Al Vacío 800g",
+   "type": "cortes_magros",
+   "before": 17339.15,
+   "now": 20399.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 21419.15,
+   "now": 25199.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Nalga Feteada Envasado Al Vacío 1 Kg",
+   "type": "nalga",
+   "before": 18189.15,
+   "now": 21399.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Paleta De Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "roast_paleta",
+   "before": 15044.15,
+   "now": 17699.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
    "name": "Pan Lactal Regular Veneziana 400 Gr",
    "type": "pan_lactal",
    "before": 2991.15,
@@ -235,50 +325,23 @@
   },
   {
    "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "type": "pollo_entero",
-   "before": 3220.65,
-   "now": 3789.0,
+   "name": "Peceto Entero De Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cortes_magros",
+   "before": 21164.15,
+   "now": 24899.0,
    "pct": 17.6,
    "why": "promo_end"
   },
   {
-   "shop": "Jumbo",
-   "name": "Manzana Pink Lady por Kg",
-   "type": "manzana",
-   "before": 2999.0,
-   "now": 3499.0,
-   "pct": 16.7,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Papel higiénico Elegante triple hoja 4 u.",
-   "type": "papel_higienico",
-   "before": 4037.4,
-   "now": 4440.0,
-   "pct": 10.0,
-   "why": "list_up"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Queso Cremoso Cuisine & Co Por Kilo",
-   "type": "queso_cremoso",
-   "before": 12900.0,
-   "now": 13900.0,
-   "pct": 7.8,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Pasta Dental Kolynos Frescura 90 g.",
-   "type": "pasta_dental",
-   "before": 2369.0,
-   "now": 2549.0,
-   "pct": 7.6,
-   "why": "list_up"
+   "shop": "ChangoMas",
+   "name": "Peceto Feteado De Novillito Envasado Al Vacío 800 G",
+   "type": "cortes_magros",
+   "before": 21164.15,
+   "now": 24899.0,
+   "pct": 17.6,
+   "why": "promo_end"
   }
  ],
- "n_down": 3,
- "n_up": 7
+ "n_down": 8,
+ "n_up": 20
 }

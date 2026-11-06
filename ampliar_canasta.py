@@ -1,7 +1,7 @@
 # La Canasta: proposes extra products for the basket (run by hand, not every day).
 #
 # The scraper already collects ~10,000 prices a day. This script looks in those files for more
-# products of the SAME 33 types, so each type has up to MAX_PER products per supermarket instead of 1.
+# products of the basket types (the 33 first ones and the ones in NEW_INFO), up to MAX_PER per type and supermarket.
 # A product is only proposed if it is clearly that type (strict name + category rules), it was
 # in stock almost every day, its name never changed, and its price never jumped 3x in a day.
 # Usage: python ampliar_canasta.py            -> writes notas/canasta-propuesta.csv and prints a report
@@ -21,6 +21,7 @@ def norm(s):
 
 
 # type -> (must match in name, must NOT match in name, category must contain one of)
+BEEF_NO = r"cerdo|porcin|pollo|cordero|lechon|chivit|wagyu|congel|cocid|rotiser|horno|rostiz|marinad|condiment|ternera|kobe|cerdito"
 RULES = {
  "pan_lactal": (r"\blactal\b|pan de molde|pan blanco", r"rallad|pancho|hambur|tostad|budin|sin tacc|sin gluten|brioche|chip|grisin|tapa|pizza|arabe|baguet|artesan|masa madre", ["pan"]),
  "harina_000": (r"\bharina\b.*\b0{3,4}\b|\b0{3,4}\b.*\bharina\b", r"maiz|integral|leudante|pizza|premezcla|mandioca|arroz|almendra|garbanzo|avena|bizcochuel|polenta|coco|sin tacc|sin gluten|leche|pan\b", ["harina"]),
@@ -55,6 +56,29 @@ RULES = {
  "pasta_dental": (r"pasta dental|crema dental|dentifrico", r"cepillo|kit|enjuague|hilo|infantil|kids|niño|bebe|blanqueador gel|harry|potter|disney|frozen", ["dental", "bucal", "oral"]),
  "jabon_tocador": (r"^jabon\b.*(tocador|barra)|^jabon de tocador|^jabon\b", r"polvo|ropa|liquido|lavarropas|manos liquido|intimo|bebe|repuesto|en barra para ropa|blanco para ropa|federal", ["jabon", "tocador", "higiene"]),
  "papel_higienico": (r"papel higienico", r"humedo|toallita|pañuelo|rollo de cocina|servilleta", ["papel", "higien"]),
+ # ---- added 6 November 2026: beef (INDEC 112100), yoghurt, biscuits and chicken supremas ----
+ # Beef: fresh cuts only (the "carne vacuna" or butcher's aisle, never frozen, cooked, pork, lamb or wagyu).
+ "asado": (r"^asado\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "vacio": (r"^(bife de )?vacio\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "nalga": (r"^(tapa de )?nalga\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "carne_picada": (r"^(carne )?picada\b", BEEF_NO + r"|hamburg|mix", ["carne vacuna", "carniceria", "carnes/"]),
+ "milanesa_carne": (r"^milanesas? (de )?(nalga|cuadrada|bola de lomo|peceto|carne|novill)", BEEF_NO + r"|pollo|soja|merluza|pescado|vegetal|legumbre|sin gluten|sin tacc|not|lenteja|arveja|calabaza", ["carne vacuna", "carniceria", "carnes/", "milanesas"]),
+ "cuadril": (r"^(colita de )?cuadril\b|^colita\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "cortes_magros": (r"^(bola de lomo|cuadrada|peceto)\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "bifes": (r"^bife (de chorizo|angosto|ancho)\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
+ "roast_paleta": (r"^(roast beef|paleta)\b", BEEF_NO + r"|cocida|jamon", ["carne vacuna", "carniceria", "carnes/"]),
+ "yogur": (r"^yogur", r"helado|congel|postre|cereal|granola|alfajor|barra|galleta|snack|chocolate|bocadito|fruta seca|sin lactosa|vegetal|almendra|coco|soja|kefir|mascota|perro|gato", ["yogur", "lacteo"]),
+ "galletitas": (r"^galletitas?\b", r"perro|gato|mascota|sin tacc|sin gluten|arroz|surtid|pack|x ?\d+ ?(u|un|paq)|caja|lata|navide|regalo|helado", ["galletit", "desayuno", "almacen"]),
+ "suprema": (r"^supremas? (de )?pollo\b", r"rebozad|congel|milanesa|napolitana|rellen|cocid|nugget|apanad|empanad", ["pollo", "carniceria", "carnes/", "milanesas"]),
+}
+FRESH = {"asado", "vacio", "nalga", "carne_picada", "milanesa_carne", "cuadril", "cortes_magros", "bifes", "roast_paleta", "suprema"}
+# product type and category for the types that are new to the basket
+NEW_INFO = {
+ "asado": ("Beef ribs (asado)", "Beef"), "vacio": ("Beef flank (vacío)", "Beef"), "nalga": ("Beef round (nalga)", "Beef"),
+ "carne_picada": ("Minced beef", "Beef"), "milanesa_carne": ("Beef milanesas", "Beef"), "cuadril": ("Beef rump (cuadril)", "Beef"),
+ "cortes_magros": ("Lean cuts (bola de lomo, cuadrada, peceto)", "Beef"), "bifes": ("Beef steaks (bife de chorizo, ancho)", "Beef"),
+ "roast_paleta": ("Roast beef and paleta", "Beef"), "yogur": ("Yoghurt", "Dairy and eggs"), "galletitas": ("Biscuits", "Bread and cereals"),
+ "suprema": ("Chicken breast fillet (suprema)", "Chicken"),
 }
 
 
@@ -75,6 +99,8 @@ def main():
     for r in basket:
         count[(r["type_id"], r["shop"])] += 1
         info[r["type_id"]] = (r["product_type"], r["category"])
+    for t, v in NEW_INFO.items():
+        info.setdefault(t, v)
     days = load_days(); dates = sorted(days)
     # every product seen in the period
     seen = {}
@@ -93,6 +119,8 @@ def main():
                    if re.search(inc, name) and not re.search(exc, name) and any(c in cat for c in cats)]
         if len(matches) != 1:
             continue  # unclear: fits no type or more than one
+        if matches[0] in FRESH and matches[0] != "suprema" and re.search(r"cerdo|porcin|pollo|cordero|lechon|congel|rotiser|elaboracion|especiales", cat):
+            continue  # beef only from the beef aisle (Dia sells "vacio" of pork in its pork aisle)
         for t in matches:
             hist = [days[d].get(k) for d in dates]
             inst = [h for h in hist if h and h["available"] == "True" and float(h["price"] or 0) > 0]
@@ -103,8 +131,8 @@ def main():
             ps = [float(h["price"]) for h in inst]
             if any(b / a > 3 or b / a < 1 / 3 for a, b in zip(ps, ps[1:])):
                 continue
-            if not r["ean"] or not r["ean"].isdigit():
-                continue
+            if (not r["ean"] or not r["ean"].isdigit()) and t not in FRESH:
+                continue  # packaged goods need a barcode; fresh meat sold by weight often has none (the shop's own code is enough)
             # how many supermarkets carry the same barcode (popular products first)
             shops_with = sum(1 for s in SHOPS if any(kk[0] == s and vv["ean"] == r["ean"] for kk, vv in seen.items()))
             cands[(t, k[0])].append((len(inst), shops_with, r))

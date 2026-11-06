@@ -27,7 +27,7 @@
 {"@context": "https://schema.org", "@type": "Dataset",
  "name": "La Canasta: índice diario de precios de supermercados en Argentina",
  "alternateName": "La Canasta Index",
- "description": "Índice diario de precios de 567 productos básicos (33 tipos) en los principales supermercados de la Argentina (Carrefour, Jumbo, ChangoMás y Día), ponderado con las ponderaciones oficiales del INDEC. Datos abiertos, actualizados todos los días desde el 24 de octubre de 2026. Daily supermarket price index for Argentina, open data.",
+ "description": "Índice diario de precios de 672 productos básicos (45 tipos) en los principales supermercados de la Argentina (Carrefour, Jumbo, ChangoMás y Día), ponderado con las ponderaciones oficiales del INDEC. Datos abiertos, actualizados todos los días desde el 24 de octubre de 2026. Daily supermarket price index for Argentina, open data.",
  "url": "https://lacanastaindex.com/",
  "keywords": ["inflación", "Argentina", "precios", "supermercados", "índice de precios", "inflation", "food prices"],
  "creator": {"@type": "Person", "@id": "https://lacanastaindex.com/ramon-pepa.html#ramon", "name": "Ramon Pepa", "url": "https://lacanastaindex.com/ramon-pepa.html"},
@@ -460,7 +460,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
         <span class="eyebrow sun" data-t="eyebrow">Índice diario de precios de supermercados · Argentina</span>
         <h1 data-t="title">¿Qué tan rápido suben los precios del súper en Argentina?</h1>
         <p class="lede" data-t="lede">La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.</p>
-        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="#video">acá</a>.</span><span data-lang="en"> See how it works <a href="#video">here</a>.</span></p>
+        <p class="hero-point"><span data-t="ledePoint">Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 672 productos de 45 tipos básicos (carne, leche, pan, yerba y más) en cuatro cadenas.</span><span data-lang="es"> Mirá cómo funciona <a href="#video">acá</a>.</span><span data-lang="en"> See how it works <a href="#video">here</a>.</span></p>
         <div class="hero-sub" id="heroSub" hidden>
           <div id="hsFormWrap">
             <strong><span data-lang="es">Recibí la inflación del súper <em>antes que el INDEC</em>. Gratis.</span><span data-lang="en">Get supermarket inflation <em>before INDEC</em>. Free.</span></strong>
@@ -516,7 +516,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
     <div class="stats">
       <div><strong id="statDays">1</strong><span data-t="statDays">días de datos</span></div>
       <div><strong>5</strong><span data-t="statShops">cadenas recolectadas, 4 en el índice</span></div>
-      <div><strong>567</strong><span data-t="statProducts">productos en la canasta</span></div>
+      <div><strong>672</strong><span data-t="statProducts">productos en la canasta</span></div>
       <div><strong>12</strong><span data-t="statDaily">grupos de gasto, ponderados como el INDEC</span></div>
     </div>
   </div>
@@ -604,7 +604,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
       </div>
     </div>
     <ol class="steps" aria-label="How it works">
-      <li><h3 data-t="s1t">Recolectar</h3><p data-t="s1">Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 567 productos de todos los días (33 tipos) en las primeras cuatro.</p></li>
+      <li><h3 data-t="s1t">Recolectar</h3><p data-t="s1">Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 672 productos de todos los días (45 tipos) en las primeras cuatro.</p></li>
       <li><h3 data-t="s2t">Comparar</h3><p data-t="s2">Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.</p></li>
       <li><h3 data-t="s3t">Ponderar</h3><p data-t="s3">Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.</p></li>
     </ol>
@@ -757,21 +757,25 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
 <script>
 // Fallback copy of the data, used only if the live files can't be loaded.
 const FALLBACK_DAILY = `date,index_paid,index_regular,products_in_stock,products_compared,Carrefour_paid,ChangoMas_paid,Dia_paid,Jumbo_paid
-2026-10-24,98.266,99.808,563,0,98.917,97.665,97.066,99.417
-2026-10-25,99.41,99.808,565,561,99.992,97.665,100.573,99.417
-2026-10-26,100.742,99.895,563,563,100.157,102.84,100.712,99.275
-2026-10-27,101.135,99.776,560,560,100.157,102.473,101.958,99.958
-2026-10-28,100.694,100.252,561,561,100.964,100.922,100.337,100.536
-2026-10-29,100.48,100.175,561,561,101.323,100.034,99.751,100.803
-2026-10-30,99.272,100.286,562,562,98.489,98.399,99.604,100.594
-2026-10-31,99.376,99.812,560,560,100.33,96.864,99.729,100.609
-2026-11-01,99.458,99.792,501,501,100.383,96.789,100.254,100.609
-2026-11-02,99.853,99.669,553,553,99.263,100.637,99.064,100.609
-2026-11-03,101.191,99.889,545,545,98.424,101.06,105.042,100.503`;
+2026-10-24,98.617,99.785,611,0,98.661,98.574,98.704,98.862
+2026-10-25,99.2,99.785,670,609,99.733,98.574,100.162,98.862
+2026-10-26,100.894,99.903,668,668,100.223,103.175,100.277,99.972
+2026-10-27,101.218,99.804,664,664,100.223,102.87,101.275,100.563
+2026-10-28,100.295,100.269,666,666,100.861,99.125,100.276,101.01
+2026-10-29,100.129,100.197,665,665,101.131,98.467,99.791,101.232
+2026-10-30,99.648,100.258,667,667,99.168,99.216,99.514,99.499
+2026-10-31,99.552,99.866,665,665,99.959,97.935,99.618,99.517
+2026-11-01,99.69,99.895,604,604,100.046,97.872,100.29,99.517
+2026-11-02,100.415,99.858,658,658,99.123,101.583,99.535,102.011
+2026-11-03,101.347,100.034,650,650,98.429,101.937,103.737,101.922
+2026-11-04,98.573,99.32,645,645,97.41,96.217,99.507,101.924
+2026-11-05,98.277,99.325,651,651,97.434,95.66,98.936,101.851
+2026-11-06,98.429,99.088,643,643,98.11,98.118,98.496,99.361`;
 const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,index_regular
-2026-10-24,pan_cereales,Bread and cereals,yes,100.268,100.057
-2026-10-24,carne_ave,Chicken,yes,94.35,100.0
-2026-10-24,lacteos,Dairy and eggs,yes,98.067,99.54
+2026-10-24,pan_cereales,Bread and cereals,yes,100.029,99.858
+2026-10-24,carne_vacuna,Beef,yes,100.422,99.806
+2026-10-24,carne_ave,Chicken,yes,94.136,100.0
+2026-10-24,lacteos,Dairy and eggs,yes,98.307,99.603
 2026-10-24,aceites,Oils,yes,99.679,99.616
 2026-10-24,frutas,Fruit,yes,97.117,102.145
 2026-10-24,verduras,Vegetables,yes,97.558,99.123
@@ -782,9 +786,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-24,alcohol,Alcoholic drinks,yes,97.649,100.046
 2026-10-24,limpieza,Cleaning products,yes,98.506,99.934
 2026-10-24,cuidado_personal,Personal care,no (weight pending),97.447,99.436
-2026-10-25,pan_cereales,Bread and cereals,yes,100.268,100.057
-2026-10-25,carne_ave,Chicken,yes,103.858,100.0
-2026-10-25,lacteos,Dairy and eggs,yes,98.067,99.54
+2026-10-25,pan_cereales,Bread and cereals,yes,100.029,99.858
+2026-10-25,carne_vacuna,Beef,yes,100.422,99.806
+2026-10-25,carne_ave,Chicken,yes,98.765,100.0
+2026-10-25,lacteos,Dairy and eggs,yes,98.307,99.603
 2026-10-25,aceites,Oils,yes,99.679,99.616
 2026-10-25,frutas,Fruit,yes,103.338,102.145
 2026-10-25,verduras,Vegetables,yes,97.558,99.123
@@ -795,9 +800,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-25,alcohol,Alcoholic drinks,yes,97.649,100.046
 2026-10-25,limpieza,Cleaning products,yes,98.506,99.934
 2026-10-25,cuidado_personal,Personal care,no (weight pending),97.447,99.436
-2026-10-26,pan_cereales,Bread and cereals,yes,102.677,99.946
-2026-10-26,carne_ave,Chicken,yes,103.858,100.0
-2026-10-26,lacteos,Dairy and eggs,yes,98.618,99.528
+2026-10-26,pan_cereales,Bread and cereals,yes,102.152,100.036
+2026-10-26,carne_vacuna,Beef,yes,101.794,99.806
+2026-10-26,carne_ave,Chicken,yes,104.254,100.0
+2026-10-26,lacteos,Dairy and eggs,yes,98.767,99.593
 2026-10-26,aceites,Oils,yes,99.679,99.616
 2026-10-26,frutas,Fruit,yes,102.347,102.145
 2026-10-26,verduras,Vegetables,yes,98.735,99.123
@@ -808,9 +814,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-26,alcohol,Alcoholic drinks,yes,99.59,100.046
 2026-10-26,limpieza,Cleaning products,yes,104.769,99.934
 2026-10-26,cuidado_personal,Personal care,no (weight pending),100.176,99.528
-2026-10-27,pan_cereales,Bread and cereals,yes,102.722,99.946
-2026-10-27,carne_ave,Chicken,yes,103.858,100.0
-2026-10-27,lacteos,Dairy and eggs,yes,100.617,99.528
+2026-10-27,pan_cereales,Bread and cereals,yes,102.273,100.036
+2026-10-27,carne_vacuna,Beef,yes,101.794,99.806
+2026-10-27,carne_ave,Chicken,yes,104.254,100.0
+2026-10-27,lacteos,Dairy and eggs,yes,100.674,99.593
 2026-10-27,aceites,Oils,yes,99.679,99.616
 2026-10-27,frutas,Fruit,yes,100.266,99.385
 2026-10-27,verduras,Vegetables,yes,99.282,99.123
@@ -821,9 +828,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-27,alcohol,Alcoholic drinks,yes,100.309,100.046
 2026-10-27,limpieza,Cleaning products,yes,104.915,99.934
 2026-10-27,cuidado_personal,Personal care,no (weight pending),100.594,99.528
-2026-10-28,pan_cereales,Bread and cereals,yes,100.049,99.947
-2026-10-28,carne_ave,Chicken,yes,99.723,100.0
-2026-10-28,lacteos,Dairy and eggs,yes,100.336,100.482
+2026-10-28,pan_cereales,Bread and cereals,yes,100.138,100.037
+2026-10-28,carne_vacuna,Beef,yes,97.183,100.317
+2026-10-28,carne_ave,Chicken,yes,102.158,100.0
+2026-10-28,lacteos,Dairy and eggs,yes,100.471,100.419
 2026-10-28,aceites,Oils,yes,100.814,100.512
 2026-10-28,frutas,Fruit,yes,101.594,98.622
 2026-10-28,verduras,Vegetables,yes,102.594,101.654
@@ -834,9 +842,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-28,alcohol,Alcoholic drinks,yes,100.128,99.939
 2026-10-28,limpieza,Cleaning products,yes,102.679,99.934
 2026-10-28,cuidado_personal,Personal care,no (weight pending),100.75,100.751
-2026-10-29,pan_cereales,Bread and cereals,yes,97.382,100.024
-2026-10-29,carne_ave,Chicken,yes,99.723,100.0
-2026-10-29,lacteos,Dairy and eggs,yes,102.243,100.691
+2026-10-29,pan_cereales,Bread and cereals,yes,97.99,100.088
+2026-10-29,carne_vacuna,Beef,yes,97.183,100.317
+2026-10-29,carne_ave,Chicken,yes,102.158,100.0
+2026-10-29,lacteos,Dairy and eggs,yes,101.815,100.593
 2026-10-29,aceites,Oils,yes,99.376,100.512
 2026-10-29,frutas,Fruit,yes,100.942,97.779
 2026-10-29,verduras,Vegetables,yes,102.223,100.637
@@ -847,9 +856,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-29,alcohol,Alcoholic drinks,yes,101.849,99.939
 2026-10-29,limpieza,Cleaning products,yes,98.227,99.934
 2026-10-29,cuidado_personal,Personal care,no (weight pending),101.04,100.751
-2026-10-30,pan_cereales,Bread and cereals,yes,96.635,100.022
-2026-10-30,carne_ave,Chicken,yes,94.628,100.0
-2026-10-30,lacteos,Dairy and eggs,yes,102.054,100.691
+2026-10-30,pan_cereales,Bread and cereals,yes,97.388,100.087
+2026-10-30,carne_vacuna,Beef,yes,101.202,100.141
+2026-10-30,carne_ave,Chicken,yes,94.274,100.0
+2026-10-30,lacteos,Dairy and eggs,yes,101.66,100.595
 2026-10-30,aceites,Oils,yes,101.092,100.512
 2026-10-30,frutas,Fruit,yes,94.397,97.779
 2026-10-30,verduras,Vegetables,yes,102.051,101.218
@@ -860,9 +870,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-30,alcohol,Alcoholic drinks,yes,102.825,99.939
 2026-10-30,limpieza,Cleaning products,yes,92.399,100.395
 2026-10-30,cuidado_personal,Personal care,no (weight pending),102.547,100.57
-2026-10-31,pan_cereales,Bread and cereals,yes,96.635,100.022
-2026-10-31,carne_ave,Chicken,yes,99.235,100.0
-2026-10-31,lacteos,Dairy and eggs,yes,102.085,100.691
+2026-10-31,pan_cereales,Bread and cereals,yes,97.388,100.087
+2026-10-31,carne_vacuna,Beef,yes,101.202,100.141
+2026-10-31,carne_ave,Chicken,yes,96.542,100.0
+2026-10-31,lacteos,Dairy and eggs,yes,101.686,100.595
 2026-10-31,aceites,Oils,yes,101.092,100.512
 2026-10-31,frutas,Fruit,yes,94.397,97.779
 2026-10-31,verduras,Vegetables,yes,98.559,96.424
@@ -873,9 +884,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-10-31,alcohol,Alcoholic drinks,yes,102.825,99.939
 2026-10-31,limpieza,Cleaning products,yes,92.492,100.531
 2026-10-31,cuidado_personal,Personal care,no (weight pending),102.547,100.57
-2026-11-01,pan_cereales,Bread and cereals,yes,96.651,100.022
-2026-11-01,carne_ave,Chicken,yes,99.235,100.0
-2026-11-01,lacteos,Dairy and eggs,yes,101.6,100.691
+2026-11-01,pan_cereales,Bread and cereals,yes,97.531,100.047
+2026-11-01,carne_vacuna,Beef,yes,101.43,100.442
+2026-11-01,carne_ave,Chicken,yes,96.542,100.0
+2026-11-01,lacteos,Dairy and eggs,yes,101.283,100.595
 2026-11-01,aceites,Oils,yes,101.092,100.512
 2026-11-01,frutas,Fruit,yes,95.2,97.779
 2026-11-01,verduras,Vegetables,yes,98.559,96.424
@@ -886,9 +898,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-11-01,alcohol,Alcoholic drinks,yes,104.608,99.94
 2026-11-01,limpieza,Cleaning products,yes,95.577,100.531
 2026-11-01,cuidado_personal,Personal care,no (weight pending),102.569,100.732
-2026-11-02,pan_cereales,Bread and cereals,yes,96.651,100.022
-2026-11-02,carne_ave,Chicken,yes,107.523,98.3
-2026-11-02,lacteos,Dairy and eggs,yes,101.305,100.751
+2026-11-02,pan_cereales,Bread and cereals,yes,97.531,100.047
+2026-11-02,carne_vacuna,Beef,yes,102.799,100.442
+2026-11-02,carne_ave,Chicken,yes,106.078,99.146
+2026-11-02,lacteos,Dairy and eggs,yes,101.425,100.644
 2026-11-02,aceites,Oils,yes,100.582,100.512
 2026-11-02,frutas,Fruit,yes,100.608,97.779
 2026-11-02,verduras,Vegetables,yes,98.559,96.424
@@ -899,9 +912,10 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-11-02,alcohol,Alcoholic drinks,yes,98.247,99.939
 2026-11-02,limpieza,Cleaning products,yes,91.247,100.949
 2026-11-02,cuidado_personal,Personal care,no (weight pending),99.169,101.114
-2026-11-03,pan_cereales,Bread and cereals,yes,101.003,100.069
-2026-11-03,carne_ave,Chicken,yes,107.523,98.3
-2026-11-03,lacteos,Dairy and eggs,yes,103.037,100.955
+2026-11-03,pan_cereales,Bread and cereals,yes,101.029,100.085
+2026-11-03,carne_vacuna,Beef,yes,102.799,100.442
+2026-11-03,carne_ave,Chicken,yes,106.078,99.146
+2026-11-03,lacteos,Dairy and eggs,yes,102.868,100.814
 2026-11-03,aceites,Oils,yes,100.582,100.512
 2026-11-03,frutas,Fruit,yes,96.642,98.353
 2026-11-03,verduras,Vegetables,yes,99.654,98.201
@@ -911,12 +925,53 @@ const FALLBACK_GROUPS = `date,group,group_name,in_headline_index,index_paid,inde
 2026-11-03,aguas_gaseosas,Water and soft drinks,yes,105.083,100.542
 2026-11-03,alcohol,Alcoholic drinks,yes,98.17,99.835
 2026-11-03,limpieza,Cleaning products,yes,92.433,100.949
-2026-11-03,cuidado_personal,Personal care,no (weight pending),99.626,100.872`;
+2026-11-03,cuidado_personal,Personal care,no (weight pending),99.626,100.872
+2026-11-04,pan_cereales,Bread and cereals,yes,96.66,100.087
+2026-11-04,carne_vacuna,Beef,yes,97.698,100.401
+2026-11-04,carne_ave,Chicken,yes,103.945,99.146
+2026-11-04,lacteos,Dairy and eggs,yes,102.235,100.985
+2026-11-04,aceites,Oils,yes,100.582,100.512
+2026-11-04,frutas,Fruit,yes,94.684,98.353
+2026-11-04,verduras,Vegetables,yes,92.831,89.341
+2026-11-04,azucar,Sugar and sweets,yes,101.817,100.346
+2026-11-04,otros_alimentos,Other food,yes,98.042,100.374
+2026-11-04,cafe_te_yerba,"Coffee, tea and yerba",yes,99.375,100.354
+2026-11-04,aguas_gaseosas,Water and soft drinks,yes,103.93,100.542
+2026-11-04,alcohol,Alcoholic drinks,yes,97.305,99.835
+2026-11-04,limpieza,Cleaning products,yes,92.339,100.949
+2026-11-04,cuidado_personal,Personal care,no (weight pending),99.656,100.873
+2026-11-05,pan_cereales,Bread and cereals,yes,96.722,100.263
+2026-11-05,carne_vacuna,Beef,yes,97.769,100.498
+2026-11-05,carne_ave,Chicken,yes,103.945,99.146
+2026-11-05,lacteos,Dairy and eggs,yes,102.342,100.62
+2026-11-05,aceites,Oils,yes,100.582,100.512
+2026-11-05,frutas,Fruit,yes,94.684,98.353
+2026-11-05,verduras,Vegetables,yes,92.619,89.341
+2026-11-05,azucar,Sugar and sweets,yes,100.406,100.346
+2026-11-05,otros_alimentos,Other food,yes,97.991,100.427
+2026-11-05,cafe_te_yerba,"Coffee, tea and yerba",yes,98.397,100.354
+2026-11-05,aguas_gaseosas,Water and soft drinks,yes,102.093,100.542
+2026-11-05,alcohol,Alcoholic drinks,yes,97.759,99.943
+2026-11-05,limpieza,Cleaning products,yes,90.647,100.949
+2026-11-05,cuidado_personal,Personal care,no (weight pending),100.817,100.873
+2026-11-06,pan_cereales,Bread and cereals,yes,97.957,100.263
+2026-11-06,carne_vacuna,Beef,yes,99.726,99.213
+2026-11-06,carne_ave,Chicken,yes,100.493,99.146
+2026-11-06,lacteos,Dairy and eggs,yes,102.421,100.508
+2026-11-06,aceites,Oils,yes,102.554,100.512
+2026-11-06,frutas,Fruit,yes,99.482,98.353
+2026-11-06,verduras,Vegetables,yes,89.277,89.341
+2026-11-06,azucar,Sugar and sweets,yes,100.406,100.346
+2026-11-06,otros_alimentos,Other food,yes,97.991,100.427
+2026-11-06,cafe_te_yerba,"Coffee, tea and yerba",yes,98.397,100.354
+2026-11-06,aguas_gaseosas,Water and soft drinks,yes,101.576,100.542
+2026-11-06,alcohol,Alcoholic drinks,yes,97.759,99.943
+2026-11-06,limpieza,Cleaning products,yes,90.647,100.949
+2026-11-06,cuidado_personal,Personal care,no (weight pending),101.059,101.196`;
 
 // Share of household spending (INDEC, Greater Buenos Aires, 2004/05 survey), among the groups in the index.
-const SHARE = { pan_cereales: 19.1, lacteos: 16.2, otros_alimentos: 11.3, verduras: 9.9, aguas_gaseosas: 9.7,
-  carne_ave: 9.2, limpieza: 6.3, azucar: 5.5, frutas: 4.4, alcohol: 3.8, cafe_te_yerba: 3.0, aceites: 1.4 };
-const ES_GROUPS = { pan_cereales: "Pan y cereales", carne_ave: "Pollo", lacteos: "Lácteos y huevos", aceites: "Aceites",
+const SHARE = { carne_vacuna: 17.3, pan_cereales: 15.8, lacteos: 13.4, otros_alimentos: 9.3, verduras: 8.2, aguas_gaseosas: 8.1, carne_ave: 7.6, limpieza: 5.2, azucar: 4.6, frutas: 3.6, alcohol: 3.2, cafe_te_yerba: 2.5, aceites: 1.2 };
+const ES_GROUPS = { pan_cereales: "Pan y cereales", carne_vacuna: "Carne vacuna", carne_ave: "Pollo", lacteos: "Lácteos y huevos", aceites: "Aceites",
   frutas: "Frutas", verduras: "Verduras", azucar: "Azúcar y dulces", otros_alimentos: "Otros alimentos",
   cafe_te_yerba: "Café, té y yerba", aguas_gaseosas: "Aguas y gaseosas", alcohol: "Bebidas alcohólicas", limpieza: "Limpieza" };
 const SHOPS = [["Carrefour", "Carrefour_paid"], ["Jumbo", "Jumbo_paid"], ["ChangoMás", "ChangoMas_paid"], ["Día", "Dia_paid"]];
@@ -928,7 +983,7 @@ const T = {
     title: "How fast are supermarket prices rising in Argentina?",
     lede: "La Canasta checks the prices of everyday products in Argentina's biggest supermarkets every morning, and turns them into one number. Open data, published before the official figure.",
     ctaIndex: "See the index", ctaData: "Download the data", ctaReport: "Monthly report",
-    ledePoint: "Every day, an automated program reads more than 10,000 prices across five supermarkets, and 7 AI agents look after it: making sure no day is missed, auditing the data, reviewing every doubtful price, tracking INDEC, checking the monthly report before it is sent, and making two short videos a day with the day's data. From those prices, this number tracks 567 everyday products of 33 basic kinds (milk, bread, yerba and more) at four chains.",
+    ledePoint: "Every day, an automated program reads more than 10,000 prices across five supermarkets, and 7 AI agents look after it: making sure no day is missed, auditing the data, reviewing every doubtful price, tracking INDEC, checking the monthly report before it is sent, and making two short videos a day with the day's data. From those prices, this number tracks 672 everyday products of 45 basic kinds (beef, milk, bread, yerba and more) at four chains.",
     noteTitle: "Why does the number look so high?",
     noteText: "La Canasta started measuring on a weekend (24 Oct), when many supermarkets were running promotions. When those offers ended, prices went back to normal, and that shows up as a rise. The data should settle in about 8 days, and the number will then reflect real inflation much better.",
     tagLabel: "What shoppers pay", tagSub: "Prices from", indexLabel: "Index today", regularLabel: "Without promotions",
@@ -948,7 +1003,7 @@ const T = {
     why1: "The official index still weighs prices by how households spent in 2004/05, more than 20 years ago.",
     why2: "And inflation hits hardest those who have least: the lower the income, the bigger the share spent on food.",
     closing: "We don't give opinions on inflation. We measure it, every day, and publish the data so anyone can check it.",
-    s1t: "Collect", s1: "Every morning, a program reads more than 10,000 online prices at Carrefour, Jumbo, ChangoMás, Día and Coto. For the index it uses 567 everyday products (33 kinds) at the first four.",
+    s1t: "Collect", s1: "Every morning, a program reads more than 10,000 online prices at Carrefour, Jumbo, ChangoMás, Día and Coto. For the index it uses 672 everyday products (45 kinds) at the first four.",
     s2t: "Compare", s2: "Each price is compared with the day before. Same shop, same product. Out of stock means skipped, never guessed.",
     s3t: "Weigh", s3: "The changes are combined using INDEC's official weights, so what families spend more on counts more.",
     basketEyebrow: "The basket", basketTitle: "What's in the basket",
@@ -977,7 +1032,7 @@ const T = {
     title: "¿Qué tan rápido suben los precios del súper en Argentina?",
     lede: "La Canasta revisa todas las mañanas los precios de productos de todos los días en los supermercados más grandes de Argentina, y los convierte en un solo número. Datos abiertos, publicados antes que la cifra oficial.",
     ctaIndex: "Ver el índice", ctaData: "Descargar los datos", ctaReport: "Informe mensual",
-    ledePoint: "Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 567 productos de 33 tipos básicos (leche, pan, yerba y más) en cuatro cadenas.",
+    ledePoint: "Todos los días, un programa automático lee más de 10.000 precios en cinco supermercados, y 7 agentes de IA lo cuidan: que no falte ningún día, que los datos estén limpios, que cada precio dudoso se revise, la comparación con el INDEC, que el informe mensual se verifique antes de enviarse, y dos videos cortos por día con los datos del día. De esos precios, este número sigue 672 productos de 45 tipos básicos (carne, leche, pan, yerba y más) en cuatro cadenas.",
     noteTitle: "¿Por qué el número parece tan alto?",
     noteText: "La Canasta empezó a medir un fin de semana (24 oct), cuando muchos supermercados tenían promociones. Cuando esas ofertas terminaron, los precios volvieron a lo normal y eso aparece como una suba. En unos 8 días los datos se estabilizan y el número va a reflejar mejor la inflación real.",
     tagLabel: "Lo que se paga", tagSub: "Precios del", indexLabel: "Índice hoy", regularLabel: "Sin promociones",
@@ -997,7 +1052,7 @@ const T = {
     why1: "El índice oficial todavía pondera los precios según cómo gastaban los hogares en 2004/05, hace más de 20 años.",
     why2: "Y la inflación golpea más a quien menos tiene: cuanto más chico el ingreso, más se gasta en comida.",
     closing: "No opinamos sobre la inflación. La medimos, todos los días, y publicamos los datos para que cualquiera pueda comprobarlo.",
-    s1t: "Recolectar", s1: "Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 567 productos de todos los días (33 tipos) en las primeras cuatro.",
+    s1t: "Recolectar", s1: "Todas las mañanas, un programa lee más de 10.000 precios online en Carrefour, Jumbo, ChangoMás, Día y Coto. Para el índice usa 672 productos de todos los días (45 tipos) en las primeras cuatro.",
     s2t: "Comparar", s2: "Cada precio se compara con el del día anterior. Mismo súper, mismo producto. Si no hay stock, se saltea; nunca se inventa.",
     s3t: "Ponderar", s3: "Los cambios se combinan con las ponderaciones oficiales del INDEC, así lo que más gastan las familias pesa más.",
     basketEyebrow: "La canasta", basketTitle: "Qué hay en la canasta",

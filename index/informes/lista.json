@@ -4,7 +4,7 @@
   "complete": true,
   "days_of_data": 8,
   "publishable": false,
-  "inflation": 1.13,
+  "inflation": 0.95,
   "method": "end_to_end"
  },
  {
@@ -12,7 +12,7 @@
   "complete": false,
   "days_of_data": 6,
   "publishable": false,
-  "inflation": -0.8,
+  "inflation": -1.13,
   "method": "end_to_end"
  }
 ]

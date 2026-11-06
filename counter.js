@@ -30,6 +30,7 @@ var UNSUBSCRIBE_ACTION = "";
 // In the first days of a month, once the new report is out: "Nuevo: informe de noviembre 2026 →"
 (function () {
   if (/admin\.html$/.test(location.pathname)) return;
+  if (document.documentElement.hasAttribute("data-own-app")) return; // the "Mi canasta" page is the app itself: no bar
   var MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
   var MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   var latest = null;
@@ -133,7 +134,7 @@ var UNSUBSCRIBE_ACTION = "";
   }
   var app = /[?&]app=1\b/.test(location.search) || (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
   try { if (app) sessionStorage.setItem("lc-app", "1"); else if (sessionStorage.getItem("lc-app") === "1") app = true; } catch (e) {}
-  if (!app) return;
+  if (!app || document.documentElement.hasAttribute("data-own-app")) return; // the app page has its own tab bar
   document.documentElement.classList.add("lc-app");
   var st = document.createElement("style");
   st.textContent =

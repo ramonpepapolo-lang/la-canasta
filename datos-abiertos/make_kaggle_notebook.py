@@ -11,7 +11,7 @@ cells = [
 md("""# La Canasta: Argentine supermarket prices, day by day
 *Precios de supermercados en Argentina, día por día*
 
-**La Canasta** is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of **Carrefour, Jumbo, ChangoMás, Día and Coto**, and turns 672 everyday products (beef, milk, bread, yerba, oil, cleaning products and more) into one index, weighted with INDEC's official household spending weights.
+**La Canasta** is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of **Carrefour, Jumbo, ChangoMás, Día and Coto**, and turns 1,111 everyday products (beef, milk, bread, yerba, oil, cleaning products and more) into one index, weighted with INDEC's official household spending weights.
 
 This notebook shows what you can do with the data:
 

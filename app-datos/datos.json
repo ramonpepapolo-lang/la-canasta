@@ -3,85 +3,85 @@
  "previous": "2026-11-05",
  "index": {
   "date": "2026-11-06",
-  "paid": 98.429,
-  "regular": 99.088,
-  "day_change": 0.15,
+  "paid": 98.236,
+  "regular": 99.038,
+  "day_change": 0.13,
   "days_of_data": 14,
   "series": [
    [
     "2026-10-24",
-    98.617,
-    99.785
+    98.658,
+    99.822
    ],
    [
     "2026-10-25",
-    99.2,
-    99.785
+    99.241,
+    99.822
    ],
    [
     "2026-10-26",
-    100.894,
-    99.903
+    100.914,
+    99.916
    ],
    [
     "2026-10-27",
-    101.218,
-    99.804
+    101.157,
+    99.818
    ],
    [
     "2026-10-28",
-    100.295,
-    100.269
+    100.273,
+    100.236
    ],
    [
     "2026-10-29",
-    100.129,
-    100.197
+    100.023,
+    100.149
    ],
    [
     "2026-10-30",
-    99.648,
-    100.258
+    99.734,
+    100.237
    ],
    [
     "2026-10-31",
-    99.552,
-    99.866
+    99.627,
+    99.838
    ],
    [
     "2026-11-01",
-    99.69,
-    99.895
+    99.849,
+    99.893
    ],
    [
     "2026-11-02",
-    100.415,
-    99.858
+    100.481,
+    99.841
    ],
    [
     "2026-11-03",
-    101.347,
-    100.034
+    101.294,
+    100.003
    ],
    [
     "2026-11-04",
-    98.573,
-    99.32
+    98.459,
+    99.26
    ],
    [
     "2026-11-05",
-    98.277,
-    99.325
+    98.113,
+    99.274
    ],
    [
     "2026-11-06",
-    98.429,
-    99.088
+    98.236,
+    99.038
    ]
   ],
   "mode": "week",
-  "week_paid": -0.45,
-  "week_regular": -0.35,
+  "week_paid": -0.5,
+  "week_regular": -0.38,
   "now": [
    "2026-10-31",
    "2026-11-06"
@@ -188,6 +188,24 @@
   },
   {
    "shop": "ChangoMas",
+   "name": "Agua Mineral Villa Del Sur Sin Gas 600ml",
+   "type": "agua",
+   "before": 1949.0,
+   "now": 1656.65,
+   "pct": -15.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Té clásico en saquitos Carrefour Classic sin TACC 50 uni",
+   "type": "te",
+   "before": 1850.0,
+   "now": 1646.5,
+   "pct": -11.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
    "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
    "type": "vacio",
    "before": 18019.15,
@@ -211,24 +229,6 @@
    "before": 2369.0,
    "now": 2549.0,
    "pct": 7.6,
-   "why": "list_up"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Queso Cremoso Cuisine & Co Por Kilo",
-   "type": "queso_cremoso",
-   "before": 12900.0,
-   "now": 13900.0,
-   "pct": 7.8,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Papel higiénico Elegante triple hoja 4 u.",
-   "type": "papel_higienico",
-   "before": 4037.4,
-   "now": 4440.0,
-   "pct": 10.0,
    "why": "list_up"
   }
  ],
@@ -342,6 +342,6 @@
    "why": "promo_end"
   }
  ],
- "n_down": 8,
+ "n_down": 10,
  "n_up": 20
 }

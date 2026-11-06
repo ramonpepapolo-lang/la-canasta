@@ -10,7 +10,7 @@
 import csv, glob, gzip, os, re, sys, unicodedata
 from collections import defaultdict
 
-MAX_PER = 5          # products per type and supermarket (the original one included)
+MAX_PER = 10         # products per type and supermarket (the original one included); 5 until 6 Nov 2026
 MIN_DAYS_SHARE = 0.85  # in stock on at least 85% of the days
 SHOPS = ["Carrefour", "Jumbo", "ChangoMas", "Dia"]
 
@@ -28,7 +28,7 @@ RULES = {
  "arroz": (r"^arroz\b", r"harina|galle|snack|leche|bebida|listo|instant|risott|preparad|barra|alfajor|tortita|crocante|sopa|con |sabor|salsa|integral premium", ["arroz"]),
  "fideos": (r"\bfideo|spaghetti|tallarin|mostachol|tirabuzon|codito|monito|dedalito|penne|moño|mono\b|letrita|cabello de angel|vermicelli|tiburon", r"arroz|sopa|instant|rellen|noqui|lasag|ravio|sorrent|capelet|fresco|integral|sin tacc|sin gluten|legumbre|lenteja|garbanzo|con salsa|vegetal", ["fideo", "pasta", "seca"]),
  "pollo_entero": (r"pollo entero|pollo fresco|^pollo x kg", r"trozad|suprema|pata|muslo|ala\b|pechuga|milanesa|hamburg|nugget|medallon|rebozad|marinad|condiment|caldo|sopa|salchicha|congel", ["pollo", "ave"]),
- "leche": (r"^leche\b", r"polvo|chocolat|cacao|condensad|dulce|vegetal|almendra|coco|soja|avena|lactosa|deslactos|bebe|infantil|crecimiento|fermentad|cultivo|nido|nutri|vitalcrem|proteina|sabor|frutilla|vainilla|banana|cafe|chai|kefir|zero|mas proteina|chocolotad|nesquik|protein|barista|200 ?ml|\b200\b|prebiot", ["leche"]),
+ "leche": (r"^leche\b", r"polvo|chocolat|cacao|condensad|dulce|vegetal|almendra|coco|soja|avena|lactosa|deslactos|bebe|infantil|crecimiento|fermentad|cultivo|nido|nutri|vitalcrem|proteina|sabor|frutilla|vainilla|banana|cafe|chai|kefir|zero|mas proteina|chocolotad|nesquik|protein|barista|200 ?ml|\b200\b|prebiot|200 ?cc", ["leche"]),
  "manteca": (r"^manteca\b", r"mani|cacao|untable|light|sin sal|ghee|clarificad|vegetal|margarina", ["manteca", "lacteo"]),
  "queso_cremoso": (r"\bcremoso\b|\bcremon\b|port salut|por salut|cuartirolo", r"untable|rallado|crema de queso|azul|light|sin sal|pizza|fundido|lonchas|feteado", ["queso"]),
  "dulce_de_leche": (r"^dulce de leche\b", r"alfajor|galle|helado|bizcoch|oblea|budin|torta|bocadito|tableta|barra|relleno|bombon|chocolate|repostero|light|sin azucar|0%|cero|lactosa", ["dulce"]),
@@ -40,12 +40,12 @@ RULES = {
  "cebolla": (r"^cebolla", r"frita|deshidrat|crisp|aros|polvo|salsa|sopa|caramel|en escabeche|pickle|picad|escama|congel|verdeo", ["verdu", "fruta"]),
  "tomate": (r"^tomate", r"pure|triturad|salsa|pelad|seco|cubetead|lata|extracto|deshidrat|ketchup|jugo|perita en|en conserva|tetra|cherry|cocktail|coctel|amarillo|morado|\braf\b", ["verdu", "fruta"]),
  "azucar": (r"^azucar\b", r"impalpable|mascabo|rubia|edulcor|stevia|sin azucar|light|glas|negra|organica|sobre|sobrecito|terron|caña|morena|integral", ["azucar", "endulz"]),
- "mayonesa": (r"\bmayonesa\b", r"vegana|ketchup|mostaza|savora|aderezo de|alioli|ajo|limon|light|0%|sin huevo|picante|dip|tasty|liviana|oliva|sabor", ["aderezo", "mayonesa", "salsa"]),
+ "mayonesa": (r"\bmayonesa\b", r"vegana|ketchup|mostaza|savora|aderezo de|alioli|ajo|limon|light|0%|sin huevo|picante|dip|tasty|liviana|oliva|sabor|asado|pesto", ["aderezo", "mayonesa", "salsa"]),
  "pure_tomate": (r"pure de tomate|pure tomate", r"salsa|pizza|con ", ["tomate", "pure", "conserva", "salsa"]),
  "yerba": (r"^yerba", r"cocido|saquit|compuesta|hierb|sabor|naranja|limon|menta|pomelo|serrana|boldo|peperina|energ|mate listo|frutal|cedron|tilo", ["yerba", "infusion"]),
  "cafe": (r"^cafe\b", r"capsula|capuch|capuc|latte|mocca|moka|bombon|leche|chocolat|cafetera|taza|dolce gusto|nespresso|sabor|vainilla|caramel|helado|licor|descafeinado|cappu|frappe|mix|instant 3", ["cafe", "infusion"]),
- "te": (r"^te\b", r"verde|frut|hierb|manzanilla|boldo|tilo|herbal|cedron|peperina|menta|mate cocido|helado|chai|frutos|rojo|limon|jengibre|naranja|canela|durazno|digest|relax|hebras|blend|detox|vainilla|dulce|sueno|zen|bee", ["te", "infusion"]),
- "agua": (r"^agua\b", r"sabor|saboriz|tonica|micelar|oxigenad|rosas|colonia|destilad|lavanda|limpia|perfum|termal|bebible|de coco|soda|gasificad|con gas|jabon|desmaquill", ["agua", "bebida"]),
+ "te": (r"^te\b", r"verde|frut|hierb|manzanilla|boldo|tilo|herbal|cedron|peperina|menta|mate cocido|helado|chai|frutos|rojo|limon|jengibre|naranja|canela|durazno|digest|relax|hebras|blend|detox|vainilla|dulce|sueno|zen|bee|ivoty", ["te", "infusion"]),
+ "agua": (r"^agua\b", r"sabor|saboriz|tonica|micelar|oxigenad|rosas|colonia|destilad|lavanda|limpia|perfum|termal|bebible|de coco|soda|gasificad|con gas|jabon|desmaquill|levite|manzana|naranja|pomelo|limon", ["agua", "bebida"]),
  "coca_cola": (r"coca.?cola", r"zero|light|sin azucar|cafe|lima|cereza|vainilla|fanta|sprite|liviano|menos azucar", ["gaseosa", "bebida"]),
  "cerveza": (r"^cerveza\b", r"sin alcohol|0,0|0.0|vaso|kit|pack de vasos|copa|gift|caja regalo", ["cerveza", "bebida"]),
  "vino": (r"^vino\b", r"blanco|rosado|espumante|vinagre|cocina|dulce|naranja|cosecha tardia|frizzante|sangria|gasificado|bag in box", ["vino", "bebida"]),

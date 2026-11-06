@@ -535,7 +535,7 @@ async function load() {
     st.append(card("Último dato", last.date, ageDays <= 0 ? "Al día" : (ageDays === 1 ? "Falta el dato de hoy: GitHub puede venir atrasado, hay respaldos a las 16:17, 17:47, 21:11 y 00:07 (hora de España)" : "Faltan " + ageDays + " días: revisá GitHub Actions"), ageDays <= 0 ? "ok" : "bad"));
     st.append(card("Índice (precio pagado)", fmt(last.index_paid), "Precio de lista: " + fmt(last.index_regular)));
     const inStock = Number(last.products_in_stock);
-    const nBasket = 672;
+    const nBasket = 1111;
     const okStock = inStock >= 0.85 * nBasket;
     st.append(card("Productos en stock", inStock + " / " + nBasket, okStock ? "Normal" : "Bajo: puede faltar un súper", okStock ? "ok" : "bad"));
     st.append(card("Días de datos", String(d.length), "Desde el 24/10/2026"));

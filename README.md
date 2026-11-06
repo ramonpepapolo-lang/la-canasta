@@ -26,7 +26,7 @@ About **10,500 prices a day**.
 
 ## The basket
 
-The index follows **567 everyday products of 33 kinds** (up to five per kind and shop; added on 1 November 2026 and recalculated from the first day), listed in [`basket.csv`](basket.csv): bread and cereals, dairy and eggs, oil, fruit and vegetables, chicken, sugar, yerba, coffee and tea, drinks, cleaning and personal care.
+The index follows **672 everyday products of 45 kinds** (up to five per kind and shop; widened on 1 and 6 November 2026, each time recalculated from the first day with the saved prices), listed in [`basket.csv`](basket.csv): beef, bread and cereals, dairy and eggs, oil, fruit and vegetables, chicken, sugar, yerba, coffee and tea, drinks, cleaning and personal care.
 
 Each product is followed in its own shop, with its own code. Many are exactly the same item in every shop (same barcode); fresh fruit, vegetables, eggs and some milks are each shop's own version.
 
@@ -92,7 +92,7 @@ For Coto, which prices each store separately, `price` is the typical (median) pr
 ## Status
 
 - ✅ Daily collection from all 5 chains (since 24 October 2026)
-- ✅ Daily index with 567 products, checked every day by an independent recalculation
+- ✅ Daily index with 672 products, checked every day by an independent recalculation
 - ✅ Website: https://lacanastaindex.com
 - ✅ Open data on Kaggle and Zenodo (DOI [10.5281/zenodo.23856045](https://doi.org/10.5281/zenodo.23856045))
 - 🔜 First monthly report: **1 December 2026** (November)

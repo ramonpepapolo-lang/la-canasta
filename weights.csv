@@ -1,7 +1,8 @@
 group,group_name,indec_code,indec_name,spending_2004_gba,basket_types
-pan_cereales,Bread and cereals,111000,Pan y cereales,12646584094,pan_lactal;harina_000;arroz;fideos
-carne_ave,Chicken,112200,"Carne de ave, fresca, congelada o semipreparadas",6120216785,pollo_entero
-lacteos,Dairy and eggs,115000,"Leche, productos lácteos y huevos",10759834724,leche;manteca;queso_cremoso;dulce_de_leche;huevos
+pan_cereales,Bread and cereals,111000,Pan y cereales,12646584094,pan_lactal;harina_000;arroz;fideos;galletitas
+carne_vacuna,Beef,112100,"Carne vacuna, fresca, congelada o semipreparadas",13891931680,asado;vacio;nalga;carne_picada;milanesa_carne;cuadril;cortes_magros;bifes;roast_paleta
+carne_ave,Chicken,112200,"Carne de ave, fresca, congelada o semipreparadas",6120216785,pollo_entero;suprema
+lacteos,Dairy and eggs,115000,"Leche, productos lácteos y huevos",10759834724,leche;manteca;queso_cremoso;dulce_de_leche;huevos;yogur
 aceites,Oils,114000,Aceites y grasas,937711154,aceite_girasol
 frutas,Fruit,116000,Frutas,2882421824,banana;manzana
 verduras,Vegetables,117000,"Verduras, tubérculos y legumbres",6581133344,papa;cebolla;tomate

@@ -302,7 +302,7 @@ MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
        "noviembre", "diciembre"]
 MONTH_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
             "November", "December"]
-GROUP_ES = {"pan_cereales": "Pan y cereales", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos",
+GROUP_ES = {"pan_cereales": "Pan y cereales", "carne_vacuna": "Carne vacuna", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos",
             "aceites": "Aceites", "frutas": "Frutas", "verduras": "Verduras", "azucar": "Azúcar y dulces",
             "otros_alimentos": "Otros alimentos", "cafe_te_yerba": "Café, té y yerba",
             "aguas_gaseosas": "Aguas y gaseosas", "alcohol": "Bebidas alcohólicas", "limpieza": "Limpieza",

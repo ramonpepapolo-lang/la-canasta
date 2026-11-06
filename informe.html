@@ -498,13 +498,13 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
     <section class="rsec">
       <h2><span data-lang="es">Cómo leer este informe</span><span data-lang="en">How to read this report</span></h2>
       <ul class="plain" data-lang="es">
-        <li>Mide 567 productos de supermercado (33 tipos) en Carrefour, Jumbo, ChangoMás y Día, todos los días.</li>
+        <li>Mide 672 productos de supermercado (45 tipos) en Carrefour, Jumbo, ChangoMás y Día, todos los días.</li>
         <li>Los grupos se combinan con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).</li>
         <li>No incluye alquiler, servicios, transporte, educación ni salud: se compara sobre todo con el rubro Alimentos y bebidas del INDEC.</li>
         <li>Cuidado personal se muestra pero no cuenta en el número principal.</li>
       </ul>
       <ul class="plain" data-lang="en">
-        <li>It measures 567 supermarket products (33 kinds) at Carrefour, Jumbo, ChangoMás and Día, every day.</li>
+        <li>It measures 672 supermarket products (45 kinds) at Carrefour, Jumbo, ChangoMás and Día, every day.</li>
         <li>Groups are combined with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).</li>
         <li>It excludes rent, utilities, transport, education and health, so it is mainly compared with INDEC's Food and drinks figure.</li>
         <li>Personal care is shown but not counted in the main number.</li>
@@ -543,11 +543,11 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
 const MONTHS = { es: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
   en: ["January","February","March","April","May","June","July","August","September","October","November","December"] };
 const SHOP = { Carrefour: "Carrefour", Jumbo: "Jumbo", ChangoMas: "ChangoMás", Dia: "Día", Coto: "Coto" };
-const GROUP = { pan_cereales: ["Pan y cereales","Bread and cereals"], carne_ave: ["Pollo","Chicken"], lacteos: ["Lácteos y huevos","Dairy and eggs"],
+const GROUP = { pan_cereales: ["Pan y cereales","Bread and cereals"], carne_vacuna: ["Carne vacuna","Beef"], carne_ave: ["Pollo","Chicken"], lacteos: ["Lácteos y huevos","Dairy and eggs"],
   aceites: ["Aceites","Oils"], frutas: ["Frutas","Fruit"], verduras: ["Verduras","Vegetables"], azucar: ["Azúcar y dulces","Sugar and sweets"],
   otros_alimentos: ["Otros alimentos","Other food"], cafe_te_yerba: ["Café, té y yerba","Coffee, tea and yerba"], aguas_gaseosas: ["Aguas y gaseosas","Water and soft drinks"],
   alcohol: ["Bebidas alcohólicas","Alcoholic drinks"], limpieza: ["Limpieza","Cleaning products"], cuidado_personal: ["Cuidado personal","Personal care"] };
-const TYPE_ES = { pan_lactal:"Pan lactal", harina_000:"Harina 000 / 0000", arroz:"Arroz", fideos:"Fideos secos", pollo_entero:"Pollo entero", leche:"Leche", manteca:"Manteca", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche", huevos:"Huevos", aceite_girasol:"Aceite de girasol", papa:"Papa", cebolla:"Cebolla", tomate:"Tomate", banana:"Banana", manzana:"Manzana", azucar:"Azúcar", yerba:"Yerba mate", cafe:"Café", te:"Té en saquitos", mayonesa:"Mayonesa", pure_tomate:"Puré de tomate", coca_cola:"Coca-Cola", agua:"Agua mineral", cerveza:"Cerveza", vino:"Vino tinto", papel_higienico:"Papel higiénico", detergente:"Detergente", lavandina:"Lavandina", jabon_ropa:"Jabón en polvo", shampoo:"Shampoo", pasta_dental:"Pasta dental", jabon_tocador:"Jabón de tocador" };
+const TYPE_ES = { pan_lactal:"Pan lactal", harina_000:"Harina 000 / 0000", arroz:"Arroz", fideos:"Fideos secos", pollo_entero:"Pollo entero", asado:"Asado", vacio:"Vacío", nalga:"Nalga", carne_picada:"Carne picada", milanesa_carne:"Milanesas de carne", cuadril:"Cuadril", cortes_magros:"Bola de lomo, cuadrada y peceto", bifes:"Bifes", roast_paleta:"Roast beef y paleta", yogur:"Yogur", galletitas:"Galletitas", suprema:"Suprema de pollo", leche:"Leche", manteca:"Manteca", queso_cremoso:"Queso cremoso", dulce_de_leche:"Dulce de leche", huevos:"Huevos", aceite_girasol:"Aceite de girasol", papa:"Papa", cebolla:"Cebolla", tomate:"Tomate", banana:"Banana", manzana:"Manzana", azucar:"Azúcar", yerba:"Yerba mate", cafe:"Café", te:"Té en saquitos", mayonesa:"Mayonesa", pure_tomate:"Puré de tomate", coca_cola:"Coca-Cola", agua:"Agua mineral", cerveza:"Cerveza", vino:"Vino tinto", papel_higienico:"Papel higiénico", detergente:"Detergente", lavandina:"Lavandina", jabon_ropa:"Jabón en polvo", shampoo:"Shampoo", pasta_dental:"Pasta dental", jabon_tocador:"Jabón de tocador" };
 
 let lang = "es";
 try { if (localStorage.getItem("lc-lang") === "en") lang = "en"; } catch (e) {}

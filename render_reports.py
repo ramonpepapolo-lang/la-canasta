@@ -26,7 +26,7 @@ MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
 MONTH_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
             "November", "December"]
 TYPE_ES = {"pan_lactal": "Pan lactal", "harina_000": "Harina", "arroz": "Arroz", "fideos": "Fideos secos",
-           "pollo_entero": "Pollo entero", "leche": "Leche", "manteca": "Manteca", "queso_cremoso": "Queso",
+           "pollo_entero": "Pollo entero", "asado": "Asado", "vacio": "Vacío", "nalga": "Nalga", "carne_picada": "Carne picada", "milanesa_carne": "Milanesas de carne", "cuadril": "Cuadril", "cortes_magros": "Bola de lomo, cuadrada y peceto", "bifes": "Bifes", "roast_paleta": "Roast beef y paleta", "yogur": "Yogur", "galletitas": "Galletitas", "suprema": "Suprema de pollo", "leche": "Leche", "manteca": "Manteca", "queso_cremoso": "Queso",
            "dulce_de_leche": "Dulce de leche", "huevos": "Huevos", "aceite_girasol": "Aceite", "papa": "Papa",
            "cebolla": "Cebolla", "tomate": "Tomate", "banana": "Banana", "manzana": "Manzana", "azucar": "Azúcar",
            "yerba": "Yerba mate", "cafe": "Café", "te": "Té", "mayonesa": "Mayonesa", "pure_tomate": "Puré de tomate",
@@ -357,11 +357,11 @@ def monthly(r, lang, comment=""):
            f'<div class="v" style="color:{color(reg)}">{pct(reg, lang)}</div><div class="n">Carrefour, ChangoMás {"y" if es else "and"} Día</div></div></div>')
     gs = [g for g in r["groups"] if g["in_headline"]]
     gname = {g: n for g, n in ((x, None) for x in [])}
-    names_es = {"pan_cereales": "Pan y cereales", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos", "aceites": "Aceites",
+    names_es = {"pan_cereales": "Pan y cereales", "carne_vacuna": "Carne vacuna", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos", "aceites": "Aceites",
                 "frutas": "Frutas", "verduras": "Verduras", "azucar": "Azúcar y dulces", "otros_alimentos": "Otros alimentos",
                 "cafe_te_yerba": "Café, té y yerba", "aguas_gaseosas": "Aguas y gaseosas", "alcohol": "Bebidas alcohólicas",
                 "limpieza": "Limpieza"}
-    names_en = {"pan_cereales": "Bread and cereals", "carne_ave": "Chicken", "lacteos": "Dairy and eggs", "aceites": "Oils",
+    names_en = {"pan_cereales": "Bread and cereals", "carne_vacuna": "Beef", "carne_ave": "Chicken", "lacteos": "Dairy and eggs", "aceites": "Oils",
                 "frutas": "Fruit", "verduras": "Vegetables", "azucar": "Sugar and sweets", "otros_alimentos": "Other food",
                 "cafe_te_yerba": "Coffee, tea and yerba", "aguas_gaseosas": "Water and soft drinks", "alcohol": "Alcoholic drinks",
                 "limpieza": "Cleaning products"}

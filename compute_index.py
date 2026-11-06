@@ -10,10 +10,11 @@
 # Jumbo is left out of the regular-price index: its list_price field is not a real list price
 # (it is the price paid without VAT, times 100), so it would carry Jumbo's promotions.
 # Each shop is only ever compared with itself.
-# The basket has up to 5 products of each type per shop (567 in all). Each type counts once inside
+# The basket has up to 5 products of each type per shop (672 in all, 45 types). Each type counts once inside
 # its group, whatever the number of products: first the average of each type (each shop counting
 # the same), then the average of the types in the group. The bigger basket was added on 1 November
-# 2026 and the whole index was recalculated with it from the first day (24 October 2026).
+# 2026 and the whole index was recalculated with it from the first day (24 October 2026). On 6 November 2026
+# beef (9 types, INDEC group 112100), yoghurt, biscuits and chicken fillets were added the same way.
 # A product added later gets a from_date in basket.csv: it is followed before that day, but not counted.
 # Doubtful prices listed in notas/excluir.csv (found by the daily review) are left out, never replaced:
 # that product is simply not compared on that day, for that kind of price.

@@ -10,7 +10,7 @@
 
 ## Qué es
 
-La Canasta es un índice diario e independiente de precios de supermercados en Argentina. Todos los días, un programa lee los precios online de Carrefour, Jumbo, ChangoMás, Día y Coto. Con 567 productos de 33 tipos básicos (leche, pan, yerba, aceite, limpieza y más) calcula un índice ponderado con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).
+La Canasta es un índice diario e independiente de precios de supermercados en Argentina. Todos los días, un programa lee los precios online de Carrefour, Jumbo, ChangoMás, Día y Coto. Con 672 productos de 45 tipos básicos (carne, leche, pan, yerba, aceite, limpieza y más) calcula un índice ponderado con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).
 
 Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios).
 
@@ -51,7 +51,7 @@ Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios)
 4. Los grupos se combinan con las ponderaciones del INDEC.
 5. Los días se encadenan. Un precio que se triplica o cae a un tercio de un día al otro se trata como error.
 
-La canasta tiene 567 productos (hasta cinco por tipo y súper). Se agregaron el 1/11/2026 y el índice se recalculó con ellos desde el primer día. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
+La canasta tiene 672 productos de 45 tipos (hasta cinco por tipo y súper). Se ampliaron el 1/11/2026 y el 6/11/2026 (carne vacuna, yogur, galletitas, suprema de pollo) y cada vez el índice se recalculó desde el primer día con los precios guardados. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
 
 ## Cómo citarlo
 
@@ -69,7 +69,7 @@ Pepa, R. (2026). *La Canasta: precios diarios de supermercados en Argentina* [Da
 
 ## What it is
 
-La Canasta is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of Carrefour, Jumbo, ChangoMás, Día and Coto. Using 567 products of 33 basic kinds (milk, bread, yerba, oil, cleaning and more) it calculates an index weighted with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).
+La Canasta is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of Carrefour, Jumbo, ChangoMás, Día and Coto. Using 672 products of 45 basic kinds (beef, milk, bread, yerba, oil, cleaning and more) it calculates an index weighted with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).
 
 This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 
@@ -85,7 +85,7 @@ This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 
 ## Method
 
-Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. The basket has 567 products (up to five per kind and shop); they were added on 1 Nov 2026 and the index was recalculated with them from the first day. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
+Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. The basket has 672 products of 45 kinds (up to five per kind and shop); it was widened on 1 Nov 2026 and 6 Nov 2026 (beef, yoghurt, biscuits, chicken fillets) and each time the index was recalculated from the first day with the saved prices. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
 
 ## How to cite
 

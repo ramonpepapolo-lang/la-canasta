@@ -107,6 +107,10 @@ img.lg-d { display: none !important; }
 .saveform input { flex: 1; min-width: 0; padding: 11px 13px; border-radius: 12px; border: 1px solid var(--rule); background: var(--bg); outline: none; font-size: 15px; }
 .saveform .sugs { display: flex; gap: 6px; flex-wrap: wrap; }
 .saveform .sugs button { padding: 5px 10px; border-radius: 999px; background: var(--sky); color: var(--navy); font-size: 12.5px; font-weight: 600; }
+.own { justify-self: start; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: #FFFFFF; color: #2B3B5C; font-weight: 700; font-size: 14px; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.own .ico { width: 18px; height: 18px; }
+.answer .calc { font-size: 13.5px; font-weight: 600; color: var(--down); background: var(--downtint); border-radius: 10px; padding: 8px 10px; }
+.answer .who { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--down); }
 .answer { display: grid; gap: 6px; padding: 12px 14px; border-radius: 16px; background: var(--card); color: var(--ink); }
 .answer .you { font-size: 12.5px; color: var(--muted); font-weight: 600; }
 .answer p { margin: 0; font-size: 15px; line-height: 1.42; }
@@ -287,12 +291,13 @@ img.lg-d { display: none !important; }
       </div>
       <div class="voice">
         <h1>¿Qué querés comprar?</h1>
-        <p class="hint">Hablá o escribí. Te armo la canasta y te digo dónde sale menos.</p>
+        <p class="hint">Hablá o escribí lo que quieras, como a una persona. Te armo la canasta y te digo dónde sale menos.</p>
         <div class="vrow">
           <form id="typed" autocomplete="off"><input id="q" type="text" placeholder="Ej: asado para 6" aria-label="Qué querés comprar"><button class="send" type="submit" aria-label="Enviar"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
           <button class="micbtn" id="mic" type="button" aria-label="Hablar"><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></button>
         </div>
         <p class="quick" id="quick">Por ejemplo: </p>
+        <button class="own" type="button" id="ownB"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Creá tu propia canasta</button>
         <div class="answer" id="answer" hidden></div>
       </div>
       <div id="res"></div>
@@ -605,7 +610,8 @@ img.lg-d { display: none !important; }
     else if (/estudiant|universi|poca plata|econ[oó]mic/.test(t)) r.basket = "estudiante";
     let m = t.match(/ (\d{1,2}) (?!kg|kilo|l |lt|litro|g |gr|ml|%)/);
     if (m && (/(para|somos|seremos|person|amig|invitad|gente|pibes|comensal)/.test(t) || r.basket === "asado")) r.people = +m[1];
-    if (!r.people && /(para|somos|seremos|personas|amigos|invitados)/.test(t)) { for (const w in NUM) if (new RegExp(" " + w + " ").test(t)) { r.people = NUM[w]; break; } }
+    if (!r.people) { for (const w in NUM) if (new RegExp("(somos|seremos) " + w + " | " + w + " (personas?|amigos|invitados|pibes|comensales) |para " + w + " $").test(t)) { r.people = NUM[w]; break; } }
+    if (!r.basket && /(semana|semanal|del mes|compra grande|un poco de todo|de todo)/.test(t)) r.basket = "saludable";
     const neg = / (?:sin|no quiero|sac[aá](?:le)?|quit[aá](?:le)?|ya tengo|no hace falta) (.*)/;
     const negM = t.match(neg); if (negM) r.remove = ingsIn(" " + negM[1] + " ");
     if (!r.basket && !priceQ) r.add = r.items.filter(k => !r.remove.includes(k));
@@ -707,22 +713,117 @@ img.lg-d { display: none !important; }
     return { text: parts.join(" ") };
   }
   let listenAfter = false;
-  function ask(text, voice) {
+  // ---------- the AI: Claude reads the message, today's catalogue and prices, the basket and the index ----------
+  // It changes the basket however the person asks; the app works out totals and the cheapest shop from the real
+  // prices (the AI never writes totals). Without the AI (no connection, not allowed), the rules below answer.
+  let SAMPLE = null, aiOff = false;
+  (async () => { try { if (window.claude && window.claude.use) SAMPLE = await window.claude.use("sample"); } catch (e) { SAMPLE = null; } })();
+  const AI_URL = window.LC_AI_URL || null; // inside the iPhone/Android app: La Canasta's own AI endpoint
+  const turns = []; // the conversation the app keeps: [{role, content}]
+  function catalogText() {
+    return Object.entries(C.items).filter(([k, it]) => Object.keys(it.shops).length).map(([k, it]) => {
+      const o = C.shops.map(s => [s, it.shops[s] && it.shops[s].cheap]).filter(x => x[1]).sort((a, b) => a[1].unit_price - b[1].unit_price);
+      const q = it.has_quality ? " (hay primera marca)" : "";
+      return `${k} | ${short(it.es)} | ${it.unit} | ${o.map(([s, v]) => SHOP[s] + " " + Math.round(v.unit_price)).join(" · ")}${q}`;
+    }).join("\n");
+  }
+  function basketsText() {
+    return D.baskets.map(B => `${B.id} (${B.per === "persona" ? "cantidades por persona" : "una persona, 7 días"}): ` + B.shops[B.ranking[0]].items.map(i => `${i.ing} ${i.qty}${i.fixed ? " (fijo)" : ""}`).join(", ")).join("\n");
+  }
+  function contextText() {
+    const I = A.index, rk = A.ranking;
+    return `ÍNDICE: ${I.paid.toFixed(2)} el ${I.date} (semana base 24-30 oct = 100). ${I.mode === "week" ? `Últimos 7 días contra los 7 anteriores: ${I.week_paid}%.` : `Contra la semana base: ${I.base_paid}%.`}
+` + (rk ? `SÚPER MÁS BARATO DE LA SEMANA (${rk.label_es}, mismos ${rk.n_products} productos): ` + rk.shops.map(s => `${SHOP[s.shop]} ${s.pct ? "+" + s.pct + "%" : "el más barato"}`).join(", ") + "\n" : "")
+      + `BAJARON HOY: ` + A.down.slice(0, 5).map(m => `${m.name} en ${SHOP[m.shop]} ${m.pct}%`).join("; ");
+  }
+  const RULES = `Sos el asistente de La Canasta, una app argentina que compara precios de supermercado con los precios reales de hoy en Carrefour, Jumbo, ChangoMás y Día. Hablás en español rioplatense, cálido y directo, con frases cortas. Ayudás a cualquier persona a armar sus compras: lo que pida (la semana entera, un asado, el desayuno, comida para la familia, un presupuesto, comer sano), para cuántas personas, qué sacar o agregar, primera marca o lo más barato. También respondés sobre precios, el índice y qué súper conviene.
+REGLAS:
+1. Solo usás productos del CATÁLOGO, por su id exacto. Si piden algo que no está, decilo y ofrecé lo más parecido.
+2. Cantidades en la unidad del producto (kg, l o un) y realistas para las personas y los días.
+3. NUNCA escribas totales ni digas en qué súper conviene la canasta: eso lo calcula la app con los precios reales y lo muestra debajo de tu respuesta. Sí podés citar precios por unidad del catálogo.
+4. Si falta un dato (por ejemplo para cuántas personas), armá igual con un supuesto razonable, decilo en una frase y preguntá al final.
+5. No inventes datos. Si no sabés algo, decilo.
+RESPONDÉ SOLO con un objeto JSON, sin texto antes ni después:
+{"reply": "lo que le decís, máximo 3 frases", "list": {"id": cantidad} o null, "add": {"id": cantidad}, "remove": ["id"], "mode": "cheap" | "quality" | null, "show": "id" | "informe" | null}
+- list: la canasta COMPLETA nueva cuando arma una canasta nueva (reemplaza la actual). null si solo cambia algo.
+- add / remove: cambios chicos sobre la canasta actual.
+- mode: si pide primera marca o lo más barato para todo.
+- show: un producto para mostrar su precio en los 4 súper, o "informe".
+Ejemplo: {"reply": "Te armé una semana para dos con un poco de todo: carne, pollo, verduras, lácteos y almacén. ¿Querés que agregue limpieza?", "list": {"leche": 3, "pollo": 2}, "add": {}, "remove": [], "mode": null, "show": null}`;
+  function promptFor(text) {
+    const cur = Object.keys(list).filter(k => C.items[k]).map(k => `${k} ${list[k].qty}${list[k].mode === "quality" ? " (primera marca)" : ""}`).join(", ") || "vacía";
+    const data = `${RULES}
+
+CATÁLOGO (id | producto | unidad | precio más barato por unidad hoy en cada súper, en pesos):
+${catalogText()}
+
+CANASTAS LISTAS (para tomar de referencia):
+${basketsText()}
+
+${contextText()}
+
+CANASTA ACTUAL DE LA PERSONA: ${cur}`;
+    return [{ role: "user", content: data }].concat(turns.slice(-8), [{ role: "user", content: text }]);
+  }
+  async function aiCall(text) {
+    const input = promptFor(text);
+    if (AI_URL) {
+      const r = await fetch(AI_URL, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ messages: input }) });
+      if (!r.ok) throw { code: "upstream_error" };
+      return r.json();
+    }
+    if (!SAMPLE || aiOff) throw { code: "not_available" };
+    return SAMPLE.json(input, { modelTier: "quick", cache: false });
+  }
+  function applyAI(o) {
+    const ok = k => typeof k === "string" && C.items[k];
+    const qty = (k, q) => { q = Number(q); if (!isFinite(q) || q <= 0) return null; const max = C.items[k].unit === "un" ? 200 : 40; return Math.min(max, Math.round(q * 100) / 100); };
+    let changed = false;
+    if (o.list && typeof o.list === "object" && Object.keys(o.list).length) {
+      keepLast(); list = {}; base = null;
+      for (const [k, q] of Object.entries(o.list)) if (ok(k) && qty(k, q)) list[k] = { qty: qty(k, q), mode: "cheap" };
+      changed = true;
+    }
+    if (Array.isArray(o.remove)) o.remove.forEach(k => { if (list[k]) { delete list[k]; changed = true; } });
+    if (o.add && typeof o.add === "object") for (const [k, q] of Object.entries(o.add)) if (ok(k) && qty(k, q)) { list[k] = { qty: qty(k, q), mode: (list[k] && list[k].mode) || "cheap" }; changed = true; }
+    if (o.mode === "cheap" || o.mode === "quality") { Object.keys(list).forEach(k => list[k].mode = o.mode); changed = true; }
+    if (changed) { save(); draw(); }
+    return changed;
+  }
+  function resultLine() {
+    const R = compare(); if (!R.common.length) return "";
+    const { tot, order, win } = R, last = order[order.length - 1];
+    return ` Con los precios de hoy te conviene ${SHOP[win]}: ${money(tot(win))} por ${R.common.length} productos. Ahorrás hasta ${money(tot(last) - tot(win))} contra ${SHOP[last]}.`;
+  }
+  async function ask(text, voice) {
     if (!C) return;
-    const r = understand(text);
-    act(r);
     const box = $("answer"); box.hidden = false;
-    box.innerHTML = `<span class="you">Vos: «${esc(text)}»</span><span class="typing"><i></i><i></i><i></i></span>`;
-    setTimeout(() => {
-      const ans = reply(r);
-      box.innerHTML = `<span class="you">Vos: «${esc(text)}»</span><p>${esc(ans.text)}</p><div class="acts"></div>`;
-      const acts = box.querySelector(".acts");
-      if ("speechSynthesis" in window) { const b = el("button", null, IC.spk + "Escuchar"); b.type = "button"; b.addEventListener("click", () => speak(ans.text)); acts.appendChild(b); }
-      if (ans.item) { const b = el("button", null, IC.tag + `Ver ${esc(short(C.items[ans.item].es).toLowerCase())} en los 4 súper`); b.type = "button"; b.addEventListener("click", () => openItem(ans.item)); acts.appendChild(b); }
-      if (ans.tab) { const b = el("button", null, "Ver el informe"); b.type = "button"; b.addEventListener("click", () => go(ans.tab)); acts.appendChild(b); }
-      listenAfter = !!voice && /\?$/.test(ans.text.trim());
-      if (voice) speak(ans.text);
-    }, 450);
+    box.innerHTML = `<span class="you">Vos: «${esc(text)}»</span><span class="tiny">Pensando…</span><span class="typing"><i></i><i></i><i></i></span>`;
+    let ans = null, fromAI = false;
+    try {
+      const o = await aiCall(text);
+      if (!o || typeof o.reply !== "string") throw { code: "invalid_json" };
+      const changed = applyAI(o);
+      ans = { text: o.reply.trim(), calc: changed ? resultLine().trim() : "", item: typeof o.show === "string" && C.items[o.show] ? o.show : null, tab: o.show === "informe" ? "informe" : null };
+      turns.push({ role: "user", content: text }, { role: "assistant", content: JSON.stringify({ reply: o.reply }) });
+      fromAI = true;
+    } catch (e) {
+      if (e && ["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e.code)) aiOff = true;
+      if (e && e.code === "rate_limited") toast("La IA está ocupada. Te respondo con lo básico.");
+      const r = understand(text); act(r); ans = reply(r);
+    }
+    show(text, ans, voice, fromAI);
+  }
+  function show(text, ans, voice, fromAI) {
+    const box = $("answer");
+    box.innerHTML = `<span class="you">Vos: «${esc(text)}»</span>${fromAI ? '<span class="who">Asistente con IA</span>' : ""}<p>${esc(ans.text)}</p>${ans.calc ? `<p class="calc">${esc(ans.calc)}</p>` : ""}<div class="acts"></div>`;
+    const acts = box.querySelector(".acts");
+    const spoken = ans.calc ? ans.calc + " " + ans.text : ans.text;
+    if ("speechSynthesis" in window) { const b = el("button", null, IC.spk + "Escuchar"); b.type = "button"; b.addEventListener("click", () => speak(spoken)); acts.appendChild(b); }
+    if (ans.item) { const b = el("button", null, IC.tag + `Ver ${esc(short(C.items[ans.item].es).toLowerCase())} en los 4 súper`); b.type = "button"; b.addEventListener("click", () => openItem(ans.item)); acts.appendChild(b); }
+    if (ans.tab) { const b = el("button", null, "Ver el informe"); b.type = "button"; b.addEventListener("click", () => go(ans.tab)); acts.appendChild(b); }
+    listenAfter = !!voice && /\?$/.test(ans.text.trim());
+    if (voice) speak(spoken);
   }
   function speak(text) {
     if (!("speechSynthesis" in window)) return;
@@ -734,6 +835,7 @@ img.lg-d { display: none !important; }
     const b = el("button", null, "«" + esc(q) + "»"); b.type = "button"; b.addEventListener("click", () => ask(q)); $("quick").appendChild(b);
     if (i < a.length - 1) $("quick").appendChild(document.createTextNode(" · "));
   });
+  $("ownB").addEventListener("click", () => { keepLast(); list = {}; base = null; save(); draw(); $("openAdd").click(); toast("Elegí lo que llevás. Tu canasta anterior queda en «Última canasta»."); });
   $("typed").addEventListener("submit", e => { e.preventDefault(); const t = $("q").value.trim(); if (t) { $("q").value = ""; $("q").blur(); ask(t); } });
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   let rec = null;

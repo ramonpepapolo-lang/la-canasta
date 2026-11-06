@@ -18,6 +18,11 @@
    "Dairy and eggs"
   ],
   [
+   "fiambres",
+   "Fiambres y quesos",
+   "Deli and cheese"
+  ],
+  [
    "almacen",
    "Almacén",
    "Pantry"
@@ -287,32 +292,32 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Bicarbonato de sodio s TACC Pergola 50 g.",
-      "unit_price": 11900.0,
+      "name": "Carbón de leña 4 kg.",
+      "unit_price": 1622.5,
       "promo": false
      },
      "quality": null
     },
     "Jumbo": {
      "cheap": {
-      "name": "Bicarbonato De Sodio I Love Bicarbonato 500g",
-      "unit_price": 11600.0,
+      "name": "Carbón 4 Kg Apunto",
+      "unit_price": 2324.75,
       "promo": false
      },
      "quality": null
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Limpiador En Polvo Bicarbonato I Love Bicarbonato 500g",
-      "unit_price": 10598.0,
-      "promo": false
+      "name": "Carbón La Taba 4 Kg",
+      "unit_price": 1466.04,
+      "promo": true
      },
      "quality": null
     },
     "Dia": {
      "cheap": {
-      "name": "Bicarbonato I Love Bicarbonato 100 Gr.",
-      "unit_price": 8320.0,
+      "name": "Carbón Vegetal 3 Kg.",
+      "unit_price": 1996.67,
       "promo": false
      },
      "quality": null
@@ -538,9 +543,9 @@
       "promo": true
      },
      "quality": {
-      "name": "Vino Tinto Cosecha Tardía Norton 750 ml.",
-      "unit_price": 7320.0,
-      "promo": true
+      "name": "Vino Tinto Malbec Santa Julia 750 Ml.",
+      "unit_price": 9116.0,
+      "promo": false
      }
     }
    }
@@ -611,18 +616,10 @@
    "q": 2.25,
    "has_quality": false,
    "shops": {
-    "Carrefour": {
-     "cheap": {
-      "name": "Gaseosa cola Coca Cola sabor original 2,25 lts",
-      "unit_price": 2711.11,
-      "promo": false
-     },
-     "quality": null
-    },
     "Jumbo": {
      "cheap": {
-      "name": "Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
-      "unit_price": 2711.11,
+      "name": "Gaseosa Coca-cola Sabor Original 354 Ml Gaseosa Sabor Original 354 Ml Coca Cola",
+      "unit_price": 7627.12,
       "promo": false
      },
      "quality": null
@@ -984,14 +981,6 @@
       "promo": false
      },
      "quality": null
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Filet De Pechuga Sin Hueso 1,5 Kg",
-      "unit_price": 14299.0,
-      "promo": false
-     },
-     "quality": null
     }
    }
   },
@@ -1017,13 +1006,13 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Atún Desmenuzado Al Natural 120 Grs Maxima",
-      "unit_price": 1772.0,
+      "name": "Atún Desmenuzado En Aceite Y Agua 120 Grs Maxima",
+      "unit_price": 1301.0,
       "promo": false
      },
      "quality": {
-      "name": "Lomo de Atún en Aceite 170 Grs La Campagnola",
-      "unit_price": 6161.0,
+      "name": "Atún Lomo en Aceite Sabor Ahumado 170 Grs La Campagnola",
+      "unit_price": 6950.0,
       "promo": false
      }
     },
@@ -1191,11 +1180,7 @@
       "unit_price": 3868.5,
       "promo": true
      },
-     "quality": {
-      "name": "Cereal Granix Con Avena Y Trigo 180 G",
-      "unit_price": 14827.78,
-      "promo": false
-     }
+     "quality": null
     },
     "Dia": {
      "cheap": {
@@ -2611,6 +2596,2546 @@
       "name": "Pasta Dental Kolynos Frescura 123 90 Gr.",
       "unit_price": 19833.33,
       "promo": true
+     }
+    }
+   }
+  },
+  "nalga": {
+   "es": "Nalga",
+   "en": "Beef round (nalga)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Tapa de nalga x kg",
+      "unit_price": 12990.0,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Tapa De Nalga Novillito",
+      "unit_price": 16999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Tapa De Nalga De Novillito Envasado Al Vacío 1.3 Kg",
+      "unit_price": 18699.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Tapa de Nalga Envasado al Vacío x Kg.",
+      "unit_price": 18890.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "milanesa_carne": {
+   "es": "Milanesas de carne",
+   "en": "Beef milanesas",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Milanesa de bola de lomo x kg",
+      "unit_price": 16490.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Milanesa Nalga Novillito",
+      "unit_price": 17999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
+      "unit_price": 18990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "cuadril": {
+   "es": "Cuadril",
+   "en": "Rump (cuadril)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
+      "unit_price": 25199.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Cuadril de Novillito en churrasco Envasado al Vacío x 1 Kg.",
+      "unit_price": 21300.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "bife_chorizo": {
+   "es": "Bife de chorizo",
+   "en": "Sirloin steak (bife de chorizo)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Bife de chorizo de Novillito x kg",
+      "unit_price": 24500.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Bife Angosto Novillito",
+      "unit_price": 21705.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Bife De Chorizo 900 G",
+      "unit_price": 33899.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Bife de Chorizo x Kg.",
+      "unit_price": 25990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "bife_ancho": {
+   "es": "Bife ancho",
+   "en": "Rib-eye (bife ancho)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Bife Ancho Novillito",
+      "unit_price": 23215.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "lomo": {
+   "es": "Lomo",
+   "en": "Tenderloin (lomo)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Lomo De Novillito Envasado Al Vacío 1,2 Kg",
+      "unit_price": 34599.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Lomo de Novillito Envasado al Vacío x 1 Kg.",
+      "unit_price": 32500.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "entrana": {
+   "es": "Entraña",
+   "en": "Skirt steak (entraña)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Entraña Parri Novillito Ev Al Vacio Entraña Novillito",
+      "unit_price": 28279.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Entraña De Novillito Envasado Al Vacío 1.2kg",
+      "unit_price": 34699.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Entraña Envasado al Vacío x Kg.",
+      "unit_price": 30990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "matambre": {
+   "es": "Matambre",
+   "en": "Flank steak (matambre)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Matambre De Novillito Envasado Al Vacío 1.8 Kg",
+      "unit_price": 13889.0,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Matambre Envasado al Vacío x Kg.",
+      "unit_price": 16990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "osobuco": {
+   "es": "Osobuco",
+   "en": "Beef shank (osobuco)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Osobuco Novillito",
+      "unit_price": 9999.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "roast_beef": {
+   "es": "Roast beef",
+   "en": "Roast beef (chuck)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Roast Beef De Novillito Envasado Al Vacío 1.2 Kg",
+      "unit_price": 18299.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Roast Beef Envasado al Vacío Porción Individual x Kg.",
+      "unit_price": 18890.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "paleta": {
+   "es": "Paleta",
+   "en": "Beef shoulder (paleta)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Paleta De Novillito Envasado Al Vacío 1.2 Kg",
+      "unit_price": 17699.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Paleta en Churrasco Envasado al Vacío x Kg.",
+      "unit_price": 18990.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "peceto": {
+   "es": "Peceto",
+   "en": "Eye of round (peceto)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Peceto Feteado Para Milanesa",
+      "unit_price": 32719.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Peceto Entero De Novillito Envasado Al Vacío 1.2 Kg",
+      "unit_price": 24899.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Peceto Feteado Envasado al Vacío x 1 Kg.",
+      "unit_price": 25700.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "bola_de_lomo": {
+   "es": "Bola de lomo",
+   "en": "Knuckle (bola de lomo)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Bola De Lomo Feteada De Novillito Envasado Al Vacío 1 Kg",
+      "unit_price": 20199.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "cuadrada": {
+   "es": "Cuadrada",
+   "en": "Topside (cuadrada)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cuadrada Feteada De Novillito Envasado Al Vacío 800g",
+      "unit_price": 20399.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "falda": {
+   "es": "Falda",
+   "en": "Brisket (falda)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "molleja": {
+   "es": "Molleja",
+   "en": "Sweetbreads (molleja)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "chinchulin": {
+   "es": "Chinchulines",
+   "en": "Chitterlings (chinchulines)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "costilla_cerdo": {
+   "es": "Costillas de cerdo",
+   "en": "Pork ribs",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "bondiola": {
+   "es": "Bondiola de cerdo",
+   "en": "Pork shoulder (bondiola)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Bondiola al vacio El Bierzo x kg",
+      "unit_price": 41020.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Bondiola Cerdo Fresca al vacio x Kg Cagnoli",
+      "unit_price": 52690.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "carre_cerdo": {
+   "es": "Carré de cerdo",
+   "en": "Pork loin (carré)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Dia": {
+     "cheap": {
+      "name": "Carre Chuleta Con Hueso x Kg.",
+      "unit_price": 10700.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "pata_muslo": {
+   "es": "Pata muslo",
+   "en": "Chicken leg (pata muslo)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "suprema": {
+   "es": "Suprema de pollo",
+   "en": "Chicken fillet (suprema)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Suprema de pollo al vacio Que Rico x kg",
+      "unit_price": 22500.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Suprema De Pollo Granel Fresca",
+      "unit_price": 8999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Supremas De Pollo Ls x Kg.",
+      "unit_price": 8800.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "milanesa_pollo": {
+   "es": "Milanesas de pollo",
+   "en": "Chicken milanesas",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Milanesa de pollo congelada Carnes Carrefour 500 grs",
+      "unit_price": 19000.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Milanesas de Pollo",
+      "unit_price": 16199.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Milanesas de Pollo Congeladas 500 Gr.",
+      "unit_price": 13580.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "hamburguesas": {
+   "es": "Hamburguesas de carne",
+   "en": "Beef burgers",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "salchichas": {
+   "es": "Salchichas",
+   "en": "Hot dog sausages (salchichas)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 0.3,
+   "has_quality": true,
+   "shops": {}
+  },
+  "merluza": {
+   "es": "Merluza",
+   "en": "Hake (merluza)",
+   "unit": "kg",
+   "cat": "carnes",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "jamon_cocido": {
+   "es": "Jamón cocido",
+   "en": "Cooked ham",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {}
+  },
+  "queso_fetas": {
+   "es": "Queso en fetas (de máquina)",
+   "en": "Sliced cheese",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Danbo Feteado 0.15 Kg Finlandia",
+      "unit_price": 42666.67,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Queso Danbo Check Feteado 200 G",
+      "unit_price": 25995.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Tybo Feteado Gran Aldea 180 Gr.",
+      "unit_price": 19388.89,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "salame": {
+   "es": "Salame",
+   "en": "Salami",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Salamín picado fino El Bierzo x kg.",
+      "unit_price": 30360.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Salame Picado Grueso Al Vacío Familia Grion X Kg",
+      "unit_price": 33490.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Salame Cerdo Ahumado Envasado 145 Grs Cagnoli",
+      "unit_price": 64068.97,
+      "promo": false
+     }
+    }
+   }
+  },
+  "mortadela": {
+   "es": "Mortadela",
+   "en": "Mortadella",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Mortadela Sabor Pistacho Envasado 250 Grs x 17 Un Cagnoli Mortadela Cagnoli Con Pistacho",
+      "unit_price": 28400.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mortadela Sabor Pistacho Envasado 250 Grs x 17 Un Cagnoli Mortadela Cagnoli Con Pistacho",
+      "unit_price": 28400.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "muzzarella": {
+   "es": "Muzzarella",
+   "en": "Mozzarella",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Queso muzzarella Lucrecia x kg.",
+      "unit_price": 18730.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Muzzarella Envasado x 500 Grs Cuisine y Co",
+      "unit_price": 19990.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Queso Mozzarella Barraza 1 Kg",
+      "unit_price": 14549.25,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Muzzarella Dia 250 Gr.",
+      "unit_price": 22360.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "queso_rallado": {
+   "es": "Queso rallado",
+   "en": "Grated cheese",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Queso rallado Milkaut 120 g.",
+      "unit_price": 42000.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Queso rallado Milkaut 120 g.",
+      "unit_price": 42000.0,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Rallado Sbrinz x Kg",
+      "unit_price": 23990.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Queso Rallado x 120 Grs Milkaut",
+      "unit_price": 52500.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Queso Rallado Itapiru 100 G",
+      "unit_price": 22490.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Queso Rallado La Paulina 450g",
+      "unit_price": 30248.33,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Rallado DIA 40 Gr.",
+      "unit_price": 39750.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Queso Rallado Ilolay 115 Gr.",
+      "unit_price": 46521.74,
+      "promo": true
+     }
+    }
+   }
+  },
+  "ricota": {
+   "es": "Ricota",
+   "en": "Ricotta",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "queso_untable": {
+   "es": "Queso untable",
+   "en": "Cream cheese",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Queso untable Tonadita sabor queso azul 180 g.",
+      "unit_price": 15827.78,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Queso Untable Reducido 290grs Patagonia",
+      "unit_price": 15517.24,
+      "promo": false
+     },
+     "quality": {
+      "name": "Queso Untable Finlandia Clásico 290 Gr",
+      "unit_price": 21551.72,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Queso Crema Check 290 G",
+      "unit_price": 9237.93,
+      "promo": false
+     },
+     "quality": {
+      "name": "Queso Untable Milkaut Azul 190g",
+      "unit_price": 18521.05,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Queso Crema Clásico Casancrem 500 Gr.",
+      "unit_price": 12000.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Queso Crema Clásico Casancrem 500 Gr.",
+      "unit_price": 12000.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "crema_leche": {
+   "es": "Crema de leche",
+   "en": "Cream",
+   "unit": "l",
+   "cat": "lacteos",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Crema de leche Milkaut en pote 330 cc.",
+      "unit_price": 14581.82,
+      "promo": true
+     },
+     "quality": {
+      "name": "Crema de leche Milkaut en pote 330 cc.",
+      "unit_price": 14581.82,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Crema de leche 200 Cc Milkaut Crema Simple Milkaut 200cc",
+      "unit_price": 20000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Crema de leche 200 Cc Milkaut Crema Simple Milkaut 200cc",
+      "unit_price": 20000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Crema De Leche Ilolay 350 Ml",
+      "unit_price": 11547.86,
+      "promo": true
+     },
+     "quality": {
+      "name": "Crema De Leche Ilolay 350 Ml",
+      "unit_price": 11547.86,
+      "promo": true
+     }
+    }
+   }
+  },
+  "tapas_empanadas": {
+   "es": "Tapas de empanadas",
+   "en": "Empanada wrappers",
+   "unit": "un",
+   "cat": "fiambres",
+   "q": 2,
+   "has_quality": true,
+   "shops": {}
+  },
+  "tapas_tarta": {
+   "es": "Tapas de tarta",
+   "en": "Pie crusts",
+   "unit": "un",
+   "cat": "fiambres",
+   "q": 1,
+   "has_quality": true,
+   "shops": {}
+  },
+  "prepizza": {
+   "es": "Prepizza",
+   "en": "Pizza base",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Prepizza de tomate Carrefour Classic 260 grs",
+      "unit_price": 9576.92,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "ravioles": {
+   "es": "Ravioles",
+   "en": "Ravioli",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Ravioles Mendia pollo y verdura 500 g.",
+      "unit_price": 6890.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Ravioles Aliada De Pollo Y Verdura 1 Kg",
+      "unit_price": 4549.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Ravioles DIA Pollo y Espinaca 1 Kg.",
+      "unit_price": 3900.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "noquis": {
+   "es": "Ñoquis",
+   "en": "Gnocchi",
+   "unit": "kg",
+   "cat": "fiambres",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Ñoquis de papa Bellaterra flow pack 500 g.",
+      "unit_price": 4538.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Ñoquis de papa La salteña 900 g.",
+      "unit_price": 7532.22,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Ñoquis de Papa Amici 500 Grs ñoquis De Papa Amici 500 Gr",
+      "unit_price": 4240.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Ñoquis de Sabor Papa Familiar 900 Grs La Salteña",
+      "unit_price": 8055.56,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Ñoquis Papa El Sol X 1kg",
+      "unit_price": 3086.3,
+      "promo": true
+     },
+     "quality": {
+      "name": "Ñoquis La Salteña De Papa 900g",
+      "unit_price": 7532.22,
+      "promo": false
+     }
+    }
+   }
+  },
+  "zapallo": {
+   "es": "Zapallo",
+   "en": "Pumpkin (zapallo)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "zapallito": {
+   "es": "Zapallitos",
+   "en": "Round courgettes (zapallitos)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "morron": {
+   "es": "Morrón",
+   "en": "Bell pepper (morrón)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "ajo": {
+   "es": "Ajo",
+   "en": "Garlic",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "limon": {
+   "es": "Limón",
+   "en": "Lemon",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "palta": {
+   "es": "Palta",
+   "en": "Avocado (palta)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "espinaca": {
+   "es": "Espinaca",
+   "en": "Spinach",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "acelga": {
+   "es": "Acelga",
+   "en": "Chard (acelga)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "choclo": {
+   "es": "Choclo",
+   "en": "Corn on the cob (choclo)",
+   "unit": "un",
+   "cat": "verduleria",
+   "q": 2,
+   "has_quality": false,
+   "shops": {}
+  },
+  "batata": {
+   "es": "Batata",
+   "en": "Sweet potato (batata)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "pera": {
+   "es": "Pera",
+   "en": "Pear",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "mandarina": {
+   "es": "Mandarina",
+   "en": "Mandarin",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 1,
+   "has_quality": false,
+   "shops": {}
+  },
+  "frutilla": {
+   "es": "Frutillas",
+   "en": "Strawberries (frutillas)",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "uva": {
+   "es": "Uvas",
+   "en": "Grapes",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "pepino": {
+   "es": "Pepino",
+   "en": "Cucumber",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "berenjena": {
+   "es": "Berenjena",
+   "en": "Aubergine",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "brocoli": {
+   "es": "Brócoli",
+   "en": "Broccoli",
+   "unit": "kg",
+   "cat": "verduleria",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "polenta": {
+   "es": "Polenta",
+   "en": "Polenta",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Harina de maíz para arepas Morixe 1 kg.",
+      "unit_price": 3649.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina de maíz para arepas Morixe 1 kg.",
+      "unit_price": 3649.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Harina De Maíz Egran 500 Gr",
+      "unit_price": 2500.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina de Maíz Blanco 1 Kg Presto Pronta",
+      "unit_price": 4500.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Polenta Prestopronta 490 Gr.",
+      "unit_price": 3608.16,
+      "promo": false
+     },
+     "quality": {
+      "name": "Polenta Prestopronta 490 Gr.",
+      "unit_price": 3608.16,
+      "promo": false
+     }
+    }
+   }
+  },
+  "garbanzos": {
+   "es": "Garbanzos",
+   "en": "Chickpeas",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {}
+  },
+  "porotos": {
+   "es": "Porotos",
+   "en": "Beans (porotos)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Poroto Granel A Granel 500 Gr Poroto Manteca 500 Grs",
+      "unit_price": 5398.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "arvejas": {
+   "es": "Arvejas",
+   "en": "Peas (arvejas)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Arvejas y zanahoria Carrefour Classic 300 grs",
+      "unit_price": 3728.67,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "caballa": {
+   "es": "Caballa en lata",
+   "en": "Canned mackerel",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 2,
+   "has_quality": true,
+   "shops": {}
+  },
+  "sal_fina": {
+   "es": "Sal fina",
+   "en": "Table salt",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "pimienta": {
+   "es": "Pimienta",
+   "en": "Pepper",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.025,
+   "has_quality": true,
+   "shops": {}
+  },
+  "vinagre": {
+   "es": "Vinagre",
+   "en": "Vinegar",
+   "unit": "l",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Vinagre de manzana clásico Casalta pet 1 l.",
+      "unit_price": 4249.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vinagre de manzana clásico Casalta pet 1 l.",
+      "unit_price": 4249.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Vinagre De Manzana 960ml Maxima Mp",
+      "unit_price": 2968.75,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vinagre de Arroz 1 Lts Casalta",
+      "unit_price": 3850.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Vinagre De Manzana Menoyo 1 Lt",
+      "unit_price": 2787.85,
+      "promo": true
+     },
+     "quality": {
+      "name": "Vinagre De Manzana Menoyo 1 Lt",
+      "unit_price": 2787.85,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Vinagre de Manzana Dia 500 Ml.",
+      "unit_price": 4060.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Vinagre de Manzana Menoyo 500 Ml.",
+      "unit_price": 5050.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "aceite_oliva": {
+   "es": "Aceite de oliva",
+   "en": "Olive oil",
+   "unit": "l",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "ketchup": {
+   "es": "Ketchup",
+   "en": "Ketchup",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Ketchup Fanacoa doy pack 250 grs",
+      "unit_price": 6260.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Ketchup Fanacoa doy pack 250 grs",
+      "unit_price": 6260.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "mostaza": {
+   "es": "Mostaza",
+   "en": "Mustard",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.3,
+   "has_quality": true,
+   "shops": {}
+  },
+  "mermelada": {
+   "es": "Mermelada",
+   "en": "Jam",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.4,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Mermelada naranja Dulcor frasco 454 g.",
+      "unit_price": 6046.26,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mermelada de naranja Arcor 454 g.",
+      "unit_price": 7367.84,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Mermelada Sabor Naranja 454 Grs Arcor Mermeladas Arcor Naranja 454gr",
+      "unit_price": 7819.38,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mermelada Sabor Naranja 454 Grs Arcor Mermeladas Arcor Naranja 454gr",
+      "unit_price": 7819.38,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Mermelada Arcor Naranja 454g",
+      "unit_price": 7376.65,
+      "promo": false
+     },
+     "quality": {
+      "name": "Mermelada Arcor Naranja 454g",
+      "unit_price": 7376.65,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Mermelada Bc Naranja 390 Gr.",
+      "unit_price": 6933.33,
+      "promo": true
+     },
+     "quality": {
+      "name": "Mermelada Bc Naranja 390 Gr.",
+      "unit_price": 6933.33,
+      "promo": true
+     }
+    }
+   }
+  },
+  "miel": {
+   "es": "Miel",
+   "en": "Honey",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.3,
+   "has_quality": false,
+   "shops": {}
+  },
+  "cacao": {
+   "es": "Cacao en polvo",
+   "en": "Cocoa powder",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.4,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Cacao en polvo Arcor en bolsa 180 g.",
+      "unit_price": 11272.22,
+      "promo": false
+     },
+     "quality": {
+      "name": "Nesquik original cacao en polvo 800 grs",
+      "unit_price": 11943.75,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Cacao en Polvo 800 Grs Exquisita",
+      "unit_price": 14250.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Cacao en Polvo 360 Grs Nesquik",
+      "unit_price": 17247.22,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cacao En Polvo Nesquik Original 800 G",
+      "unit_price": 10566.75,
+      "promo": true
+     },
+     "quality": {
+      "name": "Cacao En Polvo Nesquik Original 800 G",
+      "unit_price": 10566.75,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Cacao En Polvo Toddy Extremo 360 Gr.",
+      "unit_price": 12563.89,
+      "promo": false
+     },
+     "quality": {
+      "name": "Cacao En Polvo Toddy Extremo 360 Gr.",
+      "unit_price": 12563.89,
+      "promo": false
+     }
+    }
+   }
+  },
+  "tostadas": {
+   "es": "Tostadas",
+   "en": "Toasts (tostadas)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Tostadas sin sal gruesas 200 grs",
+      "unit_price": 11995.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "pan_rallado": {
+   "es": "Pan rallado",
+   "en": "Breadcrumbs",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Dia": {
+     "cheap": {
+      "name": "Rebozador Preferido 1 Kg.",
+      "unit_price": 2992.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Rebozador Preferido 1 Kg.",
+      "unit_price": 2992.5,
+      "promo": true
+     }
+    }
+   }
+  },
+  "cereales": {
+   "es": "Cereales para el desayuno",
+   "en": "Breakfast cereal",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Granola con manzana Carrefour Classic 200 g.",
+      "unit_price": 16875.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Granola Kelloggs de banana y manzana 200 grs",
+      "unit_price": 25750.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Granola Integral Sabor Banana y Manzana 200 Grs Kellogg's",
+      "unit_price": 25750.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Granola Integral Sabor Banana y Manzana 200 Grs Kellogg's",
+      "unit_price": 25750.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Cereal Check Ositos Azucarados 200 G",
+      "unit_price": 7317.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Cereal Azucarado Skarchitos 240 Gr",
+      "unit_price": 9495.83,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Copos Azucarados Tres Arroyos 500 Gr.",
+      "unit_price": 7080.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Cereal Naturitos Dulce de Leche Granix 90 Gr.",
+      "unit_price": 25000.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "alfajor": {
+   "es": "Alfajor",
+   "en": "Alfajor",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Alfajor de arroz Lulemuu negro 22 g.",
+      "unit_price": 1229.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Alfajor Milka Super Dulce de Leche Blanco 70 grs",
+      "unit_price": 2239.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Alfajor Negro Sabor Dulce de Leche 45 Grs Entre Dos",
+      "unit_price": 1050.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Alfajor Sabor Dulce de Leche 55 Grs Terrabusi",
+      "unit_price": 2400.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Alfajor De Arroz Chocoarroz Marroc 22g",
+      "unit_price": 1085.4,
+      "promo": true
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Alfajor Relleno de Dulce de Leche 9 de Oro 45 Gr.",
+      "unit_price": 750.0,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "papas_fritas": {
+   "es": "Papas fritas (snack)",
+   "en": "Crisps",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Papas fritas Bulnez corte clásico 450 g.",
+      "unit_price": 17311.11,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papas fritas Pringles de crema y cebolla 109 g.",
+      "unit_price": 36605.5,
+      "promo": true
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Papas Fritas Pehuamar Clásica 90 G",
+      "unit_price": 35000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papas Fritas Pehuamar Clásica 90 G",
+      "unit_price": 35000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Papas Fritas Pay Quento 110 Gr",
+      "unit_price": 16920.91,
+      "promo": true
+     },
+     "quality": {
+      "name": "Papas Fritas Pehuamar 230 G",
+      "unit_price": 20692.61,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Papas Fritas Clasica Papax 70 Gr.",
+      "unit_price": 21428.57,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papas Fritas Acanaladas Pehuamar 230 Gr.",
+      "unit_price": 29565.22,
+      "promo": false
+     }
+    }
+   }
+  },
+  "membrillo": {
+   "es": "Dulce de membrillo",
+   "en": "Quince paste (membrillo)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "leche_polvo": {
+   "es": "Leche en polvo",
+   "en": "Powdered milk",
+   "unit": "kg",
+   "cat": "lacteos",
+   "q": 0.4,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Leche En Polvo 800gr 3 Nidina",
+      "unit_price": 42062.5,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Leche En Polvo Apostoles Entera 800 G",
+      "unit_price": 12498.75,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Leche en Polvo Purísima Desalctosada 400 Gr.",
+      "unit_price": 20000.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "galletitas_agua": {
+   "es": "Galletitas de agua",
+   "en": "Water crackers",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Galletitas Criollitas crackers x5 499 grs",
+      "unit_price": 6791.58,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas Criollitas crackers x5 499 grs",
+      "unit_price": 6791.58,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Galletitas Criollitas 499 Gr",
+      "unit_price": 7214.43,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas Criollitas 499 Gr",
+      "unit_price": 7214.43,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Galletitas De Agua Check Pentapack 505g",
+      "unit_price": 6255.45,
+      "promo": false
+     },
+     "quality": {
+      "name": "Galletitas Crackers Criollitas 499gr",
+      "unit_price": 6791.58,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Galletitas Crackers Sandwich Traviata 324 Gr.",
+      "unit_price": 4043.21,
+      "promo": true
+     },
+     "quality": {
+      "name": "Galletitas Crackers Sandwich Traviata 324 Gr.",
+      "unit_price": 4043.21,
+      "promo": true
+     }
+    }
+   }
+  },
+  "tomate_lata": {
+   "es": "Tomates en lata",
+   "en": "Canned tomatoes",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Tomate perita cubeteados Carrefour Classic 400 g.",
+      "unit_price": 1296.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Tomate perita Arcor 400 g.",
+      "unit_price": 1579.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Tomate Perita Sin Tacc 400 Grs Cuisine & Co",
+      "unit_price": 1550.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Tomate Perita Cubeteado Arcor 400 Gr",
+      "unit_price": 2000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Tomates Perita Inca 400g",
+      "unit_price": 1299.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Tomates Perita Cubeteados La Campagnola 400gr",
+      "unit_price": 2099.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Tomate Perita Arcor 400 Gr.",
+      "unit_price": 1582.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Tomate Perita Arcor 400 Gr.",
+      "unit_price": 1582.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "edulcorante": {
+   "es": "Edulcorante líquido",
+   "en": "Liquid sweetener",
+   "unit": "l",
+   "cat": "almacen",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Dia": {
+     "cheap": {
+      "name": "Edulcorante Líquido Dietético Sucralosa Dia 500 Ml.",
+      "unit_price": 9780.0,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "aceitunas": {
+   "es": "Aceitunas",
+   "en": "Olives",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Aceitunas verdes rellenas de atún Carrefour Extra 200 grs",
+      "unit_price": 14647.5,
+      "promo": true
+     },
+     "quality": null
+    }
+   }
+  },
+  "pan_hamburguesa": {
+   "es": "Pan de hamburguesa",
+   "en": "Burger buns",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pan para Hamburguesa Lactal 4 uni",
+      "unit_price": 2700.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pan para Hamburguesa Lactal 4 uni",
+      "unit_price": 2700.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Pan de Hamburguesa Lactal 210 Grs x 4 Un",
+      "unit_price": 2950.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pan de Hamburguesa Lactal 210 Grs x 4 Un",
+      "unit_price": 2950.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Pan Para Hamburguesas Fargo Papa 4 U 210 G",
+      "unit_price": 2516.8,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan Para Hamburguesas Fargo Papa 4 U 210 G",
+      "unit_price": 2516.8,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Pan para Hamburguesa Lactal 4 Ud.",
+      "unit_price": 1895.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan para Hamburguesa Lactal 4 Ud.",
+      "unit_price": 1895.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "pan_pancho": {
+   "es": "Pan de pancho",
+   "en": "Hot dog buns",
+   "unit": "un",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Pan de panchos Lactal 6 uni",
+      "unit_price": 2700.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pan de panchos Lactal 6 uni",
+      "unit_price": 2700.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Pan de Pancho Artesano Brioche Sabor Manteca 240 Grs x 6 Un Bimbo Pan De Pancho Artesano Brioche X 240 Grs Bimbo",
+      "unit_price": 6100.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Pan de Pancho Artesano Brioche Sabor Manteca 240 Grs x 6 Un Bimbo Pan De Pancho Artesano Brioche X 240 Grs Bimbo",
+      "unit_price": 6100.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Pan Para Panchos Fargo Papa 6 U 210 G",
+      "unit_price": 2516.8,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan Para Panchos Fargo Papa 6 U 210 G",
+      "unit_price": 2516.8,
+      "promo": true
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Pan de Pancho Lactal 6 Ud.",
+      "unit_price": 1895.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Pan de Pancho Lactal 6 Ud.",
+      "unit_price": 1895.0,
+      "promo": true
+     }
+    }
+   }
+  },
+  "harina_leudante": {
+   "es": "Harina leudante",
+   "en": "Self-raising flour",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Harina leudante Bulnez 1 kg",
+      "unit_price": 1137.5,
+      "promo": true
+     },
+     "quality": {
+      "name": "Harina de trigo Morixe leudante 1 kg.",
+      "unit_price": 1889.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Harina Caserita Leudante 1 Kg",
+      "unit_price": 1850.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina Leudante Morixe 1 Kg",
+      "unit_price": 2050.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Harina Leudante Chacabuco 1 Kg",
+      "unit_price": 1579.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Harina Leudante Morixe X 1 Kg",
+      "unit_price": 1889.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Harina Leudante DIA 1 Kg.",
+      "unit_price": 950.0,
+      "promo": true
+     },
+     "quality": {
+      "name": "Harina Leudante Morixe 1 Kg.",
+      "unit_price": 1889.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "maicena": {
+   "es": "Almidón de maíz (maicena)",
+   "en": "Cornflour",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {}
+  },
+  "jugo_polvo": {
+   "es": "Jugo en polvo",
+   "en": "Powdered juice",
+   "unit": "un",
+   "cat": "bebidas",
+   "q": 3,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Jugo en polvo Arcor de multifruta 15 grs",
+      "unit_price": 389.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo en polvo Arcor de multifruta 15 grs",
+      "unit_price": 389.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Jugo En Polvo Verao Naranja 7gr",
+      "unit_price": 301.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo En Polvo Verao Naranja 7gr",
+      "unit_price": 301.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Jugo En Polvo Bc Naranja 7g",
+      "unit_price": 389.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo En Polvo Arcor Naranja Banana 15 G",
+      "unit_price": 389.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Jugo en polvo light Dia Manzana Deliciosa 7,5 Gr.",
+      "unit_price": 309.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo En Polvo Tang Naranja 15 Gr.",
+      "unit_price": 595.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "jugo": {
+   "es": "Jugo listo",
+   "en": "Ready juice",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Jugo natural manzana Del Valle 1 l.",
+      "unit_price": 2195.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo natural manzana Del Valle 1 l.",
+      "unit_price": 2195.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Jugo Sabor Manzana 1 Lts Tutti",
+      "unit_price": 2100.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo Sabor Manzana 1 Lts Del Valle",
+      "unit_price": 2250.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Jugo Manzana Del Valle 1000 Cc",
+      "unit_price": 2299.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo Manzana Del Valle 1000 Cc",
+      "unit_price": 2299.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Jugo de Naranja Brick Dia 1 Lt.",
+      "unit_price": 2150.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jugo Del Valle Naranja 1 Lt.",
+      "unit_price": 2229.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "soda": {
+   "es": "Soda",
+   "en": "Soda water",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Dia": {
+     "cheap": {
+      "name": "Agua Con Gas Yerba Frutos Rojos Yaci 355 Ml.",
+      "unit_price": 5070.42,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "agua_saborizada": {
+   "es": "Agua saborizada",
+   "en": "Flavoured water",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 1.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Agua saborizada de manzana Levité 2,25 lts",
+      "unit_price": 1688.89,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua saborizada de manzana Levité 2,25 lts",
+      "unit_price": 1688.89,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Agua Saborizada Sabor Naranja 2.25 Lts Aquarius",
+      "unit_price": 1822.22,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua Saborizada Sabor Naranja 2.25 Lts Aquarius",
+      "unit_price": 1822.22,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Agua Saborizada Levite Cero Manzana 2.25l",
+      "unit_price": 1688.44,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua Saborizada Levite Cero Manzana 2.25l",
+      "unit_price": 1688.44,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Agua Saborizada Pera Vds Levite 2,25 Lt.",
+      "unit_price": 1688.89,
+      "promo": false
+     },
+     "quality": {
+      "name": "Agua Saborizada Pera Vds Levite 2,25 Lt.",
+      "unit_price": 1688.89,
+      "promo": false
+     }
+    }
+   }
+  },
+  "sprite": {
+   "es": "Sprite (lima limón)",
+   "en": "Sprite (lemon-lime)",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 2.25,
+   "has_quality": false,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Gaseosa Sprite Lima-Limón 1,25 lts",
+      "unit_price": 2792.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Gaseosa Sprite Lima Limón 600 Ml",
+      "unit_price": 4498.33,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Gaseosa Sprite Lima-Limón 3 Lt.",
+      "unit_price": 2622.33,
+      "promo": false
+     },
+     "quality": null
+    }
+   }
+  },
+  "fernet": {
+   "es": "Fernet",
+   "en": "Fernet",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 0.75,
+   "has_quality": true,
+   "shops": {}
+  },
+  "vino_blanco": {
+   "es": "Vino blanco (botella 750 ml)",
+   "en": "White wine (750 ml bottle)",
+   "unit": "l",
+   "cat": "bebidas",
+   "q": 0.75,
+   "has_quality": true,
+   "shops": {}
+  },
+  "suavizante": {
+   "es": "Suavizante",
+   "en": "Fabric softener",
+   "unit": "l",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {}
+  },
+  "rollo_cocina": {
+   "es": "Rollo de cocina",
+   "en": "Kitchen roll",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {}
+  },
+  "limpiador_piso": {
+   "es": "Limpiador de pisos",
+   "en": "Floor cleaner",
+   "unit": "l",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {}
+  },
+  "esponja": {
+   "es": "Esponja de cocina",
+   "en": "Kitchen sponge",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Esponja Scotch Brite Cero Raya Naranja",
+      "unit_price": 2800.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Esponja Scotch Brite Cero Raya Naranja",
+      "unit_price": 2800.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Esponja Naranja Scotch 1 Ud.",
+      "unit_price": 2570.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Esponja Naranja Scotch 1 Ud.",
+      "unit_price": 2570.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "bolsas_residuos": {
+   "es": "Bolsas de residuos",
+   "en": "Bin bags",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 30,
+   "has_quality": true,
+   "shops": {}
+  },
+  "desodorante": {
+   "es": "Desodorante",
+   "en": "Deodorant",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {}
+  },
+  "panales": {
+   "es": "Pañales",
+   "en": "Nappies",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 30,
+   "has_quality": true,
+   "shops": {}
+  },
+  "papel_higienico": {
+   "es": "Papel higiénico",
+   "en": "Toilet paper",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 1,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Papel higiénico Elegante hoja simple 30 mts. x 6 uni",
+      "unit_price": 3549.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papel higiénico Elite Ultra Suave doble hoja 30 mts 4 uni",
+      "unit_price": 4699.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Papel Higienico Elegante Simple Hoja 4x30m",
+      "unit_price": 2800.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papel Higiénico Fresh Hoja Simple 30 Mts x 4 Un Higienol Papel Higiénico Fresh Hoja Simple 30 M X 4 Un Higienol",
+      "unit_price": 2800.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U",
+      "unit_price": 2649.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U",
+      "unit_price": 2649.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.",
+      "unit_price": 2760.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.",
+      "unit_price": 2760.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "jabon_tocador": {
+   "es": "Jabón de tocador",
+   "en": "Bar soap",
+   "unit": "un",
+   "cat": "limpieza",
+   "q": 2,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Jabón de tocador Palmolive nutrimilk 85 g.",
+      "unit_price": 1869.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabón de tocador Palmolive nutrimilk 85 g.",
+      "unit_price": 1869.0,
+      "promo": false
+     }
+    },
+    "Jumbo": {
+     "cheap": {
+      "name": "Jabón de Tocador Nutri-Milk Humectante 85 Grs Palmolive",
+      "unit_price": 2000.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabón de Tocador Nutri-Milk Humectante 85 Grs Palmolive",
+      "unit_price": 2000.0,
+      "promo": false
+     }
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Jabon De Tocador Palmolive Naturals Frambuesa Y Mora 125gr",
+      "unit_price": 1659.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabon De Tocador Palmolive Naturals Frambuesa Y Mora 125gr",
+      "unit_price": 1659.0,
+      "promo": false
+     }
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Jabon De Tocador Palmolive Nutri Milk Hidratacion Prolongada 85 Gr.",
+      "unit_price": 1875.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Jabon De Tocador Palmolive Nutri Milk Hidratacion Prolongada 85 Gr.",
+      "unit_price": 1875.0,
+      "promo": false
+     }
+    }
+   }
+  },
+  "dulce_batata": {
+   "es": "Dulce de batata",
+   "en": "Sweet potato paste (dulce de batata)",
+   "unit": "kg",
+   "cat": "almacen",
+   "q": 0.5,
+   "has_quality": true,
+   "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Dulce de batata Arcor x kg",
+      "unit_price": 4679.0,
+      "promo": false
+     },
+     "quality": {
+      "name": "Dulce de batata Arcor x kg",
+      "unit_price": 4679.0,
+      "promo": false
      }
     }
    }

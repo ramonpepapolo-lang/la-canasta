@@ -559,10 +559,41 @@ img.lg-d { display: none !important; }
     lavandina: ["lavandina"], jabon: ["jabon_ropa"], "jabón": ["jabon_ropa"], shampoo: ["shampoo"], "pasta dental": ["pasta_dental"], " papa": ["papa"], tomate: ["tomate"], cebolla: ["cebolla"],
     " té ": ["te"], "puré": ["pure_tomate"], lenteja: ["lentejas"], avena: ["avena"], naranja: ["naranja"], zanahoria: ["zanahoria"]
   };
+  // more products (6 Nov 2026): a word, and the products it means
+  Object.assign(ALIASES, {
+    nalga: ["nalga"], milanesa: ["milanesa_carne"], cuadril: ["cuadril"], " bife": ["bife_chorizo", "bife_ancho"], "bife de chorizo": ["bife_chorizo"], "bife ancho": ["bife_ancho"],
+    " lomo": ["lomo"], "entraña": ["entrana"], entrana: ["entrana"], matambre: ["matambre"], osobuco: ["osobuco"], "roast beef": ["roast_beef"], paleta: ["paleta"], peceto: ["peceto"],
+    "bola de lomo": ["bola_de_lomo"], cuadrada: ["cuadrada"], falda: ["falda"], molleja: ["molleja"], chinchul: ["chinchulin"], costilla: ["costilla_cerdo"], bondiola: ["bondiola"],
+    "carré": ["carre_cerdo"], carre: ["carre_cerdo"], chuleta: ["carre_cerdo"], "pata muslo": ["pata_muslo"], muslo: ["pata_muslo"], suprema: ["suprema"], hamburgues: ["hamburguesas"],
+    salchich: ["salchichas"], pancho: ["salchichas", "pan_pancho"], merluza: ["merluza"], pescado: ["merluza"], "jamón": ["jamon_cocido"], jamon: ["jamon_cocido"],
+    "queso de máquina": ["queso_fetas"], "queso en fetas": ["queso_fetas"], fetas: ["queso_fetas"], salame: ["salame"], salamin: ["salame"], mortadela: ["mortadela"],
+    muzzarella: ["muzzarella"], mozzarella: ["muzzarella"], muzza: ["muzzarella"], rallado: ["queso_rallado"], ricota: ["ricota"], untable: ["queso_untable"], "queso crema": ["queso_untable"],
+    "crema de leche": ["crema_leche"], " crema ": ["crema_leche"], empanada: ["tapas_empanadas"], tarta: ["tapas_tarta"], pizza: ["prepizza"], ravioles: ["ravioles"], "ñoqui": ["noquis"], noqui: ["noquis"],
+    zapallo: ["zapallo"], zapallito: ["zapallito"], "morrón": ["morron"], morron: ["morron"], " ajo": ["ajo"], "limón": ["limon"], limon: ["limon"], palta: ["palta"], espinaca: ["espinaca"],
+    acelga: ["acelga"], choclo: ["choclo"], batata: ["batata"], " pera": ["pera"], mandarina: ["mandarina"], frutilla: ["frutilla"], " uva": ["uva"], pepino: ["pepino"], berenjena: ["berenjena"],
+    "brócoli": ["brocoli"], brocoli: ["brocoli"], polenta: ["polenta"], garbanzo: ["garbanzos"], poroto: ["porotos"], arveja: ["arvejas"], caballa: ["caballa"], "sal fina": ["sal_fina"],
+    pimienta: ["pimienta"], vinagre: ["vinagre"], oliva: ["aceite_oliva"], ketchup: ["ketchup"], mostaza: ["mostaza"], mermelada: ["mermelada"], " miel": ["miel"], cacao: ["cacao"], nesquik: ["cacao"],
+    tostada: ["tostadas"], "pan rallado": ["pan_rallado"], cereal: ["cereales"], alfajor: ["alfajor"], "papas fritas": ["papas_fritas"], membrillo: ["membrillo"], "dulce de batata": ["dulce_batata"],
+    "leche en polvo": ["leche_polvo"], "galletitas de agua": ["galletitas_agua"], crackers: ["galletitas_agua"], "tomate en lata": ["tomate_lata"], "tomates en lata": ["tomate_lata"], "tomate perita": ["tomate_lata"],
+    edulcorante: ["edulcorante"], aceituna: ["aceitunas"], "pan de hamburguesa": ["pan_hamburguesa"], "pan de pancho": ["pan_pancho"], leudante: ["harina_leudante"], maicena: ["maicena"], maizena: ["maicena"],
+    jugo: ["jugo"], " soda": ["soda"], "agua saborizada": ["agua_saborizada"], sprite: ["sprite"], fernet: ["fernet"], "vino blanco": ["vino_blanco"], suavizante: ["suavizante"],
+    "rollo de cocina": ["rollo_cocina"], "papel de cocina": ["rollo_cocina"], piso: ["limpiador_piso"], esponja: ["esponja"], "bolsas de residuos": ["bolsas_residuos"], "bolsas de basura": ["bolsas_residuos"],
+    desodorante: ["desodorante"], "pañal": ["panales"], panal: ["panales"], "papel higiénico": ["papel_higienico"], "papel higienico": ["papel_higienico"], "jabón de tocador": ["jabon_tocador"], "jabon de tocador": ["jabon_tocador"]
+  });
+  // a longer name wins over the shorter word inside it ("pan rallado" is not bread, "vino blanco" is not red wine)
+  const MORE_SPECIFIC = [["pan rallado", ["pan", "pan_lactal"]], ["pan de hamburguesa", ["pan", "pan_lactal"]], ["pan de pancho", ["pan", "pan_lactal", "salchichas"]], ["pan lactal", ["pan"]],
+    ["leche en polvo", ["leche"]], ["dulce de leche", ["leche"]], ["crema de leche", ["leche"]], ["vino blanco", ["vino"]], ["papas fritas", ["papa"]],
+    ["agua saborizada", ["agua"]], ["galletitas de agua", ["galletitas", "agua"]], ["aceite de oliva", ["aceite"]], ["jabón de tocador", ["jabon_ropa"]], ["jabon de tocador", ["jabon_ropa"]],
+    ["queso rallado", ["queso", "provoleta"]], ["queso untable", ["queso", "provoleta"]], ["queso crema", ["queso", "provoleta", "crema_leche"]], ["queso en fetas", ["queso", "provoleta"]], ["queso de máquina", ["queso", "provoleta"]],
+    ["milanesa de pollo", ["milanesa_carne", "pollo"]], ["milanesas de pollo", ["milanesa_carne", "pollo"]], ["suprema", ["pollo"]], ["muslo", ["pollo"]], ["dulce de batata", ["batata"]],
+    ["sal fina", ["sal_gruesa"]], ["harina leudante", ["harina"]], ["bola de lomo", ["lomo"]], ["bife de chorizo", ["chorizo", "bife_ancho"]], ["bife ancho", ["bife_chorizo"]],
+    ["asado de tira", []], ["carne picada", ["asado_tira", "vacio"]], ["pata muslo", ["pollo"]], ["tomate en lata", ["tomate"]], ["tomates en lata", ["tomate"]], ["tomate perita", ["tomate"]]];
   function ingsIn(t) {
     const out = new Set(); for (const k in ALIASES) if (t.includes(k)) ALIASES[k].forEach(x => out.add(x));
     if (out.has("dulce_de_leche")) out.delete("leche");
-    if (t.includes("pan lactal")) out.delete("pan");
+    MORE_SPECIFIC.forEach(([w, drop]) => { if (t.includes(w)) drop.forEach(d => out.delete(d)); });
+    if (/(lata|perita)/.test(t)) out.delete("tomate"); else out.delete("tomate_lata");
+    if (C) [...out].forEach(k => { if (!C.items[k]) out.delete(k); });
     return [...out];
   }
   function understand(text) {

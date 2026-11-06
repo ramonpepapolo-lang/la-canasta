@@ -94,8 +94,19 @@ img.lg-d { display: none !important; }
 .micbtn .ico { width: 26px; height: 26px; }
 .micbtn.on { background: #C8553D; animation: pulse 1.2s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(200,85,61,.5); } 100% { box-shadow: 0 0 0 18px rgba(200,85,61,0); } }
-.quick { display: flex; gap: 7px; flex-wrap: wrap; }
-.quick button { padding: 7px 12px; border-radius: 999px; background: var(--herofield); color: var(--heroink); font-size: 13px; font-weight: 600; }
+.quick { margin: -2px 0 0; font-size: 13px; color: var(--heromuted); line-height: 1.7; }
+.quick button { color: var(--heroink); font-size: 13px; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; }
+.saved { display: flex; gap: 8px; overflow-x: auto; padding: 0 18px 2px; scrollbar-width: none; }
+.saved::-webkit-scrollbar { display: none; }
+.saved .sv { flex: none; display: inline-flex; align-items: center; gap: 4px; padding: 7px 8px 7px 13px; border-radius: 999px; background: var(--card); border: 1px solid var(--rule); font-size: 13px; font-weight: 600; white-space: nowrap; }
+.saved .sv.new { border-style: dashed; border-color: var(--celeste); color: var(--navy); padding-right: 13px; }
+.saved .sv.last { color: var(--navy); }
+.saved .sv .x { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; color: var(--muted); font-size: 16px; line-height: 1; }
+.saveform { display: grid; gap: 8px; margin: 0 18px; padding: 14px; }
+.saveform .row { display: flex; gap: 8px; }
+.saveform input { flex: 1; min-width: 0; padding: 11px 13px; border-radius: 12px; border: 1px solid var(--rule); background: var(--bg); outline: none; font-size: 15px; }
+.saveform .sugs { display: flex; gap: 6px; flex-wrap: wrap; }
+.saveform .sugs button { padding: 5px 10px; border-radius: 999px; background: var(--sky); color: var(--navy); font-size: 12.5px; font-weight: 600; }
 .answer { display: grid; gap: 6px; padding: 12px 14px; border-radius: 16px; background: var(--card); color: var(--ink); }
 .answer .you { font-size: 12.5px; color: var(--muted); font-weight: 600; }
 .answer p { margin: 0; font-size: 15px; line-height: 1.42; }
@@ -281,16 +292,18 @@ img.lg-d { display: none !important; }
           <form id="typed" autocomplete="off"><input id="q" type="text" placeholder="Ej: asado para 6" aria-label="Qué querés comprar"><button class="send" type="submit" aria-label="Enviar"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
           <button class="micbtn" id="mic" type="button" aria-label="Hablar"><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></button>
         </div>
-        <div class="quick" id="quick"></div>
+        <p class="quick" id="quick">Por ejemplo: </p>
         <div class="answer" id="answer" hidden></div>
       </div>
       <div id="res"></div>
       <div class="sec">
         <div class="sec-h"><h2>Tu canasta <span class="muted" id="cCount"></span></h2><button class="link" type="button" id="clearL">Vaciar</button></div>
+        <div class="saved" id="saved"></div>
+        <form class="card saveform" id="saveForm" hidden><b>Guardar esta canasta</b><div class="row"><input id="saveName" type="text" maxlength="28" placeholder="Nombre" aria-label="Nombre de la canasta"><button class="btn pri sm" type="submit">Guardar</button></div><div class="sugs" id="saveSugs"></div></form>
         <div class="card mylist" id="mylist"></div>
       </div>
       <button class="addbtn" type="button" id="openAdd"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Agregar productos</button>
-      <p class="tiny pad" style="margin-top:14px">Para cada producto tomamos el más barato que hay hoy en la web de cada súper, o el más barato de una primera marca si lo elegís. El total compara solo lo que tienen los 4, para que sea parejo.</p>
+      <p class="tiny pad" style="margin-top:14px">Para cada producto tomamos el más barato que hay hoy en la web de cada súper, o el más barato de una primera marca si lo elegís. El total compara solo lo que tienen los 4, para que sea parejo. Son los precios online de cada cadena, que son sobre todo los del Gran Buenos Aires: en otras provincias el precio en la góndola puede variar.</p>
       <p class="foot">Fundado por Ramon Pepa · lacanastaindex.com</p>
     </section>
 
@@ -388,6 +401,12 @@ img.lg-d { display: none !important; }
   if (!list || typeof list !== "object") { list = {}; for (const k in STARTER) list[k] = { qty: STARTER[k], mode: "cheap" }; }
   let base = store.get("lc-base", null); // the ready-made basket the list came from: {id, people, per}
   const save = () => { store.set("lc-lista", list); store.set("lc-base", base); };
+  // saved baskets: your own named ones ("Semanal", "Del mes") and the last one you had before starting a new one
+  let saved = store.get("lc-guardadas", []); if (!Array.isArray(saved)) saved = [];
+  let last = store.get("lc-ultima", null);
+  const copy = o => JSON.parse(JSON.stringify(o));
+  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  function keepLast() { if (Object.keys(list).length) { last = { items: copy(list), base: copy(base) }; store.set("lc-ultima", last); } }
 
   // Same rule as the website: per shop, the cheapest product (or leading brand) for each item; the total only
   // counts items that all 4 shops have today, so the comparison is fair.
@@ -472,8 +491,38 @@ img.lg-d { display: none !important; }
       ml.appendChild(row);
     });
   }
-  const draw = () => { drawRes(); drawList(); };
-  $("clearL").addEventListener("click", () => { list = {}; base = null; save(); draw(); toast("Canasta vacía"); });
+  const draw = () => { drawRes(); drawList(); drawSaved(); };
+  $("clearL").addEventListener("click", () => { keepLast(); list = {}; base = null; save(); draw(); toast("Canasta vacía. Podés volver a la última."); });
+  function drawSaved() {
+    const box = $("saved"); box.textContent = "";
+    if (last && !same(last.items, list)) {
+      const b = el("button", "sv last", "↺ Última canasta"); b.type = "button";
+      b.addEventListener("click", () => { const cur = { items: copy(list), base: copy(base) }; list = copy(last.items); base = copy(last.base); last = Object.keys(cur.items).length ? cur : null; store.set("lc-ultima", last); save(); draw(); toast("Volviste a tu última canasta"); });
+      box.appendChild(b);
+    }
+    saved.forEach((x, i) => {
+      const c = el("span", "sv", `<button type="button">${same(x.items, list) ? "✓ " : ""}${esc(x.name)}</button><button type="button" class="x" aria-label="Borrar ${esc(x.name)}">×</button>`);
+      c.firstChild.addEventListener("click", () => { if (!same(x.items, list)) keepLast(); list = copy(x.items); base = copy(x.base || null); save(); draw(); toast(`Cargaste «${x.name}»`); });
+      c.lastChild.addEventListener("click", () => { saved.splice(i, 1); store.set("lc-guardadas", saved); drawSaved(); toast(`Borraste «${x.name}»`); });
+      box.appendChild(c);
+    });
+    if (Object.keys(list).length && !saved.some(x => same(x.items, list))) {
+      const n = el("button", "sv new", "+ Guardar esta canasta"); n.type = "button";
+      n.addEventListener("click", () => { $("saveForm").hidden = !$("saveForm").hidden; if (!$("saveForm").hidden) $("saveName").focus(); });
+      box.appendChild(n);
+    }
+    box.hidden = !box.children.length;
+  }
+  ["Semanal", "Compra del mes", "Asado del finde", "Desayunos"].forEach(n => { const b = el("button", null, esc(n)); b.type = "button"; b.addEventListener("click", () => { $("saveName").value = n; $("saveName").focus(); }); $("saveSugs").appendChild(b); });
+  $("saveForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const n = $("saveName").value.trim() || `Canasta ${saved.length + 1}`;
+    const at = saved.findIndex(x => x.name.toLowerCase() === n.toLowerCase());
+    const item = { name: n, items: copy(list), base: copy(base) };
+    if (at >= 0) saved[at] = item; else saved.push(item);
+    store.set("lc-guardadas", saved); $("saveName").value = ""; $("saveForm").hidden = true; drawSaved();
+    toast(`Guardada: «${n}»`);
+  });
   $("openAdd").addEventListener("click", () => {
     const body = el("div");
     body.innerHTML = `<div class="sh"><h2 class="h1">Agregar productos</h2><button class="close" type="button" aria-label="Cerrar">${IC.x}</button></div>
@@ -518,7 +567,7 @@ img.lg-d { display: none !important; }
   }
   function understand(text) {
     const t = " " + text.toLowerCase().normalize("NFC").replace(/[¿?¡!.,;:«»"]/g, " ").replace(/\s+/g, " ") + " ";
-    const r = { basket: null, people: null, remove: [], add: [], shop: null, ask: null, mode: null, greet: false, thanks: false, items: ingsIn(t) };
+    const r = { basket: null, people: null, remove: [], add: [], added: [], shop: null, ask: null, mode: null, greet: false, thanks: false, items: ingsIn(t) };
     const priceQ = /(cu[aá]nto (sale|cuesta|est[aá]|vale)|precio de|d[oó]nde (est[aá]|hay|compro|conviene)\s.*(barat|menos))/.test(t);
     if (/asado|parrill/.test(t) && !priceQ && !/asado de tira/.test(t)) r.basket = "asado";
     else if (/salud|sano |sana |abuel|jubil|dieta|viej|mayor/.test(t)) r.basket = "saludable";
@@ -542,17 +591,26 @@ img.lg-d { display: none !important; }
     else if (/(cualquier marca|lo m[aá]s barato|la m[aá]s barata|lo m[aá]s econ[oó]mico)/.test(t) && !r.basket) r.mode = "cheap";
     if (/^ (hola|buenas|buen d[ií]a|qu[eé] tal) /.test(t)) r.greet = true;
     if (/(gracias|genial|perfecto|b[aá]rbaro|joya)/.test(t)) r.thanks = true;
+    // "guardala como semanal", "cargá mi canasta semanal", "volvé a la última"
+    m = t.match(/ guard[aá](?:la|r|me)?(?: (?:la|esta|mi) canasta)?(?: como)? (.+?) $/); if (m) { r.saveAs = m[1].replace(/^(la |mi )/, "").trim(); r.basket = null; r.add = []; r.remove = []; r.ask = "save"; }
+    if (/ [uú]ltima /.test(t) && / (carg|volv|abr|us[aá]|pon|quiero)/.test(t)) { r.ask = "last"; r.basket = null; r.add = []; }
+    m = t.match(/ (?:carg[aá]|abr[ií]|us[aá]|pon[eé]|quiero) (?:la |mi )?(?:canasta )?(.+?) $/);
+    if (m && r.ask !== "last") { const f = saved.find(x => norm(m[1]).includes(norm(x.name))); if (f) { r.load = f; r.ask = "load"; r.basket = null; r.add = []; r.remove = []; } }
     return r;
   }
   const BNAME = { asado: "el asado", saludable: "la semana saludable", estudiante: "la semana de estudiante" };
   function loadBasket(id, ppl) {
     const B = D.baskets.find(b => b.id === id); if (!B) return;
+    keepLast();
     const per = B.per === "persona";
     list = {};
     B.shops[B.ranking[0]].items.forEach(i => { if (C.items[i.ing]) list[i.ing] = { qty: Math.round(i.qty * (per && !i.fixed ? ppl : 1) * 100) / 100, mode: "cheap" }; });
     base = { id, people: per ? ppl : 1, per };
   }
   function act(r) {
+    if (r.ask === "save") { const n = r.saveAs.charAt(0).toUpperCase() + r.saveAs.slice(1), at = saved.findIndex(x => x.name.toLowerCase() === n.toLowerCase()); const it = { name: n, items: copy(list), base: copy(base) }; if (at >= 0) saved[at] = it; else saved.push(it); r.saveAs = n; store.set("lc-guardadas", saved); draw(); return; }
+    if (r.ask === "last") { if (last) { const cur = { items: copy(list), base: copy(base) }; list = copy(last.items); base = copy(last.base); last = cur; store.set("lc-ultima", last); save(); draw(); } else r.noLast = true; return; }
+    if (r.ask === "load") { if (!same(r.load.items, list)) keepLast(); list = copy(r.load.items); base = copy(r.load.base || null); save(); draw(); return; }
     if (r.basket) loadBasket(r.basket, r.people || (base && base.id === r.basket ? base.people : 4));
     else if (r.people && base && base.per) {
       const B = D.baskets.find(b => b.id === base.id), f = r.people / base.people;
@@ -588,6 +646,8 @@ img.lg-d { display: none !important; }
       const s = A.ranking.shops;
       return { text: `Esta semana el súper más barato es ${SHOP[s[0].shop]}. Con los mismos ${A.ranking.n_products} productos, ${SHOP[s[1].shop]} sale ${pct(s[1].pct)}, ${SHOP[s[2].shop]} ${pct(s[2].pct)} y ${SHOP[s[3].shop]} ${pct(s[3].pct)}.`, tab: "informe" };
     }
+    if (r.ask === "save") return { text: `Listo, guardé tu canasta como «${r.saveAs}». La cargás cuando quieras desde «Tu canasta» o diciendo «cargá ${r.saveAs.toLowerCase()}».` };
+    if (r.ask === "last" && r.noLast) return { text: "Todavía no tengo una canasta anterior." };
     if (r.greet && !r.basket && !r.items.length) return { text: "¡Hola! Decime qué querés comprar, por ejemplo «asado para 6» o «yerba, leche y aceite», y te digo en qué súper te sale menos." };
     if (r.thanks && !r.basket && !r.items.length && !r.people) return { text: "¡De nada! Si querés cambiar algo, decime, por ejemplo: «sin alcohol» o «somos 8»." };
     const R = compare();
@@ -607,6 +667,7 @@ img.lg-d { display: none !important; }
       const its = R.S[win].filter(i => !i.missing && R.common.includes(i.k)).sort((a, b) => b.cost - a.cost);
       return { text: `Lo que más pesa es ${nm(its[0].k)}: ${money(its[0].cost)} de ${money(tot(win))}.` };
     }
+    if (r.ask === "last" || r.ask === "load") parts.push(r.ask === "last" ? "Volví a tu última canasta." : `Cargué «${r.load.name}».`);
     if (!r.basket && !r.people && !parts.length && !r.add.length) return { text: "Perdón, no te entendí. Probá con «asado para 6», «yerba, leche y aceite», «sin alcohol» o «¿cuánto sale la yerba?»." };
     const second = order[order.length - 1];
     parts.push(`Te conviene ir a ${SHOP[win]}: ${what} sale ${money(tot(win))}${base && base.per && base.people > 1 && what !== "tu canasta" ? `, unos ${money(tot(win) / base.people)} por persona` : ""}. Te ahorrás hasta ${money(tot(second) - tot(win))} contra ${SHOP[second]}, el más caro.`);
@@ -638,8 +699,9 @@ img.lg-d { display: none !important; }
     u.onend = () => { if (listenAfter) { listenAfter = false; listen(); } };
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   }
-  [["🔥 Asado para 6", "Asado para 6"], ["🥗 Semana saludable", "Una semana saludable"], ["🎒 Estudiante", "Semana de estudiante"], ["¿Cuánto sale la yerba?", "¿Cuánto sale la yerba?"]].forEach(([l, q]) => {
-    const b = el("button", null, esc(l)); b.type = "button"; b.addEventListener("click", () => ask(q)); $("quick").appendChild(b);
+  ["asado para 6", "semana saludable", "comida de estudiante", "¿cuánto sale la yerba?"].forEach((q, i, a) => {
+    const b = el("button", null, "«" + esc(q) + "»"); b.type = "button"; b.addEventListener("click", () => ask(q)); $("quick").appendChild(b);
+    if (i < a.length - 1) $("quick").appendChild(document.createTextNode(" · "));
   });
   $("typed").addEventListener("submit", e => { e.preventDefault(); const t = $("q").value.trim(); if (t) { $("q").value = ""; $("q").blur(); ask(t); } });
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;

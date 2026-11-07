@@ -160,6 +160,13 @@ for term in SEARCHES:
         other = {k: v for k, v in data.items() if k != "price" and not isinstance(v, (dict, list))}
         other.update({"price_min": min(shelf), "price_max": max(shelf), "n_stores": len(shelf),
                       "price_per_unit": statistics.median(per_unit) if per_unit else None})
+        # Each store's own shelf price (from 7 Nov 2026), so Coto can later be followed one store at a time,
+        # like the other shops (the median of ~35 stores barely moves). web_store: the store in the product's link.
+        try:
+            other["stores"] = {str(x.get("store")): x["listPrice"] for x in store_prices if x.get("store")}
+            other["web_store"] = str(data.get("url") or "").rsplit("-", 1)[-1] or None
+        except Exception:
+            pass
         prices[("Coto", data.get("id"))] = {
             "date": today,
             "shop": "Coto",

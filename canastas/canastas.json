@@ -883,7 +883,7 @@
    "unit": "kg",
    "search": "merluza",
    "include": "^(filet|filete|filetes)? ?(de )?merluza\\b",
-   "exclude": "rebozad|milanesa|crocante|bast[oó]n|nugget|hamburg|empan|pat[eé]|rellen|a la romana|en salsa|apanad|sin piel con|en aceite|lata|conserva|medall|al natural",
+   "exclude": "rebozad|milanesa|crocante|bast[oó]n|nugget|hamburg|empan|pat[eé]|rellen|a la romana|en salsa|apanad|sin piel con|en aceite|lata|conserva|medall|al natural|al agua|en agua",
    "size_required": true,
    "kcal": 900,
    "cat": "carnes",

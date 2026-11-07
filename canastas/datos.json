@@ -1,5 +1,5 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-07",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,13 +93,12 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 15090.64,
+     "total": 17319.82,
      "complete": false,
      "missing": [
-      "pan",
-      "gaseosa"
+      "pan"
      ],
-     "kcal": 2528,
+     "kcal": 2696,
      "items": [
       {
        "ing": "asado_tira",
@@ -161,11 +160,11 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 22900.0,
-       "cost": 1832.0,
-       "name": "Queso provoleta Vaquero fraccionado",
-       "sku_id": "219783",
-       "promo": true
+       "unit_price": 26650.0,
+       "cost": 2132.0,
+       "name": "Queso provolone hilado Lucrecia x kg.",
+       "sku_id": "120927",
+       "promo": false
       },
       {
        "ing": "tomate",
@@ -211,17 +210,21 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3441.0,
-       "cost": 1720.5,
-       "name": "Cerveza rubia Andes Origen 1 lt",
-       "sku_id": "10786",
+       "unit_price": 3699.37,
+       "cost": 1849.68,
+       "name": "Cerveza rubia Quilmes 473 ml",
+       "sku_id": "8763",
        "promo": true
       },
       {
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "missing": true
+       "unit_price": 4500.0,
+       "cost": 1800.0,
+       "name": "Gaseosa Coca-Cola sabor original 600 ml",
+       "sku_id": "248002",
+       "promo": false
       },
       {
        "ing": "chimichurri",
@@ -245,13 +248,12 @@
       }
      ],
      "lacks": [
-      "pan",
-      "gaseosa"
+      "pan"
      ],
      "fixed_total": 3070.0
     },
     "Jumbo": {
-     "total": 18157.22,
+     "total": 19465.22,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -330,8 +332,8 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 6999.0,
-       "cost": 839.88,
+       "unit_price": 7599.0,
+       "cost": 911.88,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -370,20 +372,20 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4900.0,
-       "cost": 2450.0,
-       "name": "Cerveza Rubia 1000 Ml Schneider",
-       "sku_id": "26673",
+       "unit_price": 5100.0,
+       "cost": 2550.0,
+       "name": "Cerveza Rubia 1 Lts Budweiser",
+       "sku_id": "28372",
        "promo": false
       },
       {
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "unit_price": 7627.12,
-       "cost": 3050.85,
-       "name": "Gaseosa Coca-cola Sabor Original 354 Ml Gaseosa Sabor Original 354 Ml Coca Cola",
-       "sku_id": "31542",
+       "unit_price": 2840.0,
+       "cost": 1136.0,
+       "name": "Coca-cola Sabor Original 1,25 Lt Gaseosa Cola Sabor Original 1.25 Lts Coca Cola",
+       "sku_id": "255282",
        "promo": false
       },
       {
@@ -411,7 +413,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 14922.53,
+     "total": 16710.3,
      "complete": false,
      "missing": [
       "lechuga"
@@ -474,8 +476,8 @@
        "fixed": false,
        "unit_price": 1466.04,
        "cost": 879.62,
-       "name": "Carbón La Taba 4 Kg",
-       "sku_id": "185957",
+       "name": "Carbón Vegetal 4kg",
+       "sku_id": "169821",
        "promo": true
       },
       {
@@ -528,11 +530,11 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3528.54,
-       "cost": 1764.27,
-       "name": "Cerveza Rubia Quilmes Bajocero 473 Ml",
-       "sku_id": "244065",
-       "promo": false
+       "unit_price": 3505.42,
+       "cost": 1752.71,
+       "name": "Cerveza Rubia Quilmes Laton 710 Cc",
+       "sku_id": "228806",
+       "promo": true
       },
       {
        "ing": "gaseosa",
@@ -571,7 +573,7 @@
      "fixed_total": 3198.0
     },
     "Dia": {
-     "total": 16737.13,
+     "total": 17592.88,
      "complete": false,
      "missing": [
       "pan"
@@ -688,10 +690,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2966.1,
-       "cost": 1483.05,
-       "name": "Cerveza 1890 Quilmes 354 Ml.",
-       "sku_id": "14806",
+       "unit_price": 2580.0,
+       "cost": 1290.0,
+       "name": "Cerveza Lager St. Wendeler 500 Ml.",
+       "sku_id": "259401",
        "promo": true
       },
       {
@@ -749,6 +751,7 @@
     "cebolla",
     "vino",
     "cerveza",
+    "gaseosa",
     "chimichurri",
     "sal_gruesa"
    ],
@@ -861,7 +864,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 53818.34,
+     "total": 53145.94,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -892,16 +895,16 @@
        "fixed": false,
        "unit_price": 5143.33,
        "cost": 5143.33,
-       "name": "Yogur entero Milkaut frutilla sachet 900 g.",
-       "sku_id": "78118",
+       "name": "Yogur descremado Milkaut de frutilla en sachet 900 g.",
+       "sku_id": "141284",
        "promo": false
       },
       {
        "ing": "huevos",
        "qty": 12,
        "fixed": false,
-       "unit_price": 287.99,
-       "cost": 3455.88,
+       "unit_price": 235.29,
+       "cost": 2823.48,
        "name": "Huevo blanco El Mercado carton 30 uni",
        "sku_id": "18681",
        "promo": true
@@ -1050,10 +1053,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3900.0,
-       "cost": 1950.0,
-       "name": "Yerba mate Chamigo con palo 500 g.",
-       "sku_id": "86695",
+       "unit_price": 3820.0,
+       "cost": 1910.0,
+       "name": "Yerba mate La tranquera liviana 1 kg.",
+       "sku_id": "119505",
        "promo": false
       }
      ],
@@ -1061,7 +1064,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 61336.46,
+     "total": 60977.46,
      "complete": false,
      "missing": [
       "naranja"
@@ -1142,10 +1145,10 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2650.0,
-       "cost": 1325.0,
-       "name": "Arroz Luchetti Integral X1kg",
-       "sku_id": "403672",
+       "unit_price": 2150.0,
+       "cost": 1075.0,
+       "name": "Arroz Integral 1 Kg Dos Hermanos Arroz Integral Dos Hermanos Non Gmo X1 Kg",
+       "sku_id": "346490",
        "promo": false
       },
       {
@@ -1188,8 +1191,8 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 6999.0,
-       "cost": 4899.3,
+       "unit_price": 7599.0,
+       "cost": 5319.3,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -1248,10 +1251,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5208.0,
-       "cost": 2604.0,
-       "name": "Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg",
-       "sku_id": "315800",
+       "unit_price": 4150.0,
+       "cost": 2075.0,
+       "name": "Yerba Mate Liviana 1 Kg La Tranquera Yerba La Tranquera liviana x1kg",
+       "sku_id": "391384",
        "promo": false
       }
      ],
@@ -1261,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 51050.93,
+     "total": 51010.93,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1340,10 +1343,10 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2309.0,
-       "cost": 1154.5,
-       "name": "Arroz Parboil Dos Hermanos 1 Kg",
-       "sku_id": "159850",
+       "unit_price": 2229.0,
+       "cost": 1114.5,
+       "name": "Arroz Integral Cañuelas 1 Kg",
+       "sku_id": "222521",
        "promo": false
       },
       {
@@ -1461,7 +1464,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 53068.0,
+     "total": 51955.12,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1480,11 +1483,11 @@
        "ing": "leche",
        "qty": 3.5,
        "fixed": false,
-       "unit_price": 2019.0,
-       "cost": 7066.5,
-       "name": "Leche Fresca Entera 3% Fortificada Casanto Sachet 1 Lt.",
-       "sku_id": "288868",
-       "promo": false
+       "unit_price": 1790.0,
+       "cost": 6265.0,
+       "name": "Leche Entera DIA Larga Vida 1 Lt.",
+       "sku_id": "608",
+       "promo": true
       },
       {
        "ing": "yogur",
@@ -1640,11 +1643,11 @@
        "ing": "aceite",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 4543.33,
-       "cost": 1135.83,
-       "name": "Aceite de Girasol Legítimo 1,5 Lt.",
-       "sku_id": "15122",
-       "promo": false
+       "unit_price": 3297.78,
+       "cost": 824.45,
+       "name": "Aceite de Girasol Legítimo 900 Ml.",
+       "sku_id": "56453",
+       "promo": true
       },
       {
        "ing": "yerba",
@@ -1792,22 +1795,21 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43556.84,
+     "total": 50947.14,
      "complete": false,
      "missing": [
-      "carne_picada",
-      "gaseosa"
+      "carne_picada"
      ],
-     "kcal": 26461,
+     "kcal": 27406,
      "items": [
       {
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3492.3,
-       "cost": 3492.3,
-       "name": "Fideos tallarin N5 Lucchetti 500 g.",
-       "sku_id": "157189",
+       "unit_price": 2398.0,
+       "cost": 2398.0,
+       "name": "Fideos dedalitos Favorita bolsa 500 g.",
+       "sku_id": "80454",
        "promo": false
       },
       {
@@ -1834,8 +1836,8 @@
        "ing": "huevos",
        "qty": 12,
        "fixed": false,
-       "unit_price": 287.99,
-       "cost": 3455.88,
+       "unit_price": 235.29,
+       "cost": 2823.48,
        "name": "Huevo blanco El Mercado carton 30 uni",
        "sku_id": "18681",
        "promo": true
@@ -1864,10 +1866,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3900.0,
-       "cost": 1950.0,
-       "name": "Yerba mate Chamigo con palo 500 g.",
-       "sku_id": "86695",
+       "unit_price": 3820.0,
+       "cost": 1910.0,
+       "name": "Yerba mate La tranquera liviana 1 kg.",
+       "sku_id": "119505",
        "promo": false
       },
       {
@@ -1930,10 +1932,10 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 1055.0,
-       "cost": 3165.0,
-       "name": "Galletitas Celosas polvoron de vainilla 120 g.",
-       "sku_id": "144991",
+       "unit_price": 889.0,
+       "cost": 2667.0,
+       "name": "Galletitas de chocolate Macucas 85 g.",
+       "sku_id": "201109",
        "promo": false
       },
       {
@@ -1960,27 +1962,30 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1549.0,
-       "cost": 1549.0,
-       "name": "Mayonesa Natura 237 g.",
-       "sku_id": "4438",
+       "unit_price": 1079.0,
+       "cost": 1079.0,
+       "name": "Mayonesa Fiesta 237 grs",
+       "sku_id": "148675",
        "promo": false
       },
       {
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "missing": true
+       "unit_price": 4500.0,
+       "cost": 10125.0,
+       "name": "Gaseosa Coca-Cola sabor original 600 ml",
+       "sku_id": "248002",
+       "promo": false
       }
      ],
      "lacks": [
-      "carne_picada",
-      "gaseosa"
+      "carne_picada"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 50302.34,
+     "total": 53613.34,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -1989,20 +1994,20 @@
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3900.0,
-       "cost": 3900.0,
-       "name": "Fideos Coditos 500 Grs Lucchetti",
-       "sku_id": "40184",
+       "unit_price": 2600.0,
+       "cost": 2600.0,
+       "name": "Fideos Dedalitos 500 Grs Favorita",
+       "sku_id": "244260",
        "promo": false
       },
       {
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2650.0,
-       "cost": 1325.0,
-       "name": "Arroz Luchetti Integral X1kg",
-       "sku_id": "403672",
+       "unit_price": 2150.0,
+       "cost": 1075.0,
+       "name": "Arroz Integral 1 Kg Dos Hermanos Arroz Integral Dos Hermanos Non Gmo X1 Kg",
+       "sku_id": "346490",
        "promo": false
       },
       {
@@ -2049,10 +2054,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5208.0,
-       "cost": 2604.0,
-       "name": "Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg",
-       "sku_id": "315800",
+       "unit_price": 4150.0,
+       "cost": 2075.0,
+       "name": "Yerba Mate Liviana 1 Kg La Tranquera Yerba La Tranquera liviana x1kg",
+       "sku_id": "391384",
        "promo": false
       },
       {
@@ -2119,10 +2124,10 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 950.0,
-       "cost": 2850.0,
-       "name": "Galletitas Macucas Rellenas 85g",
-       "sku_id": "1363556",
+       "unit_price": 900.0,
+       "cost": 2700.0,
+       "name": "Galletitas Traviata 108g",
+       "sku_id": "1359945",
        "promo": false
       },
       {
@@ -2149,20 +2154,20 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1750.0,
-       "cost": 1750.0,
-       "name": "Aderezo Mayonesa Natura 237 Gr",
-       "sku_id": "20517",
+       "unit_price": 900.0,
+       "cost": 900.0,
+       "name": "Aderezo Mayonesa Cada Día 250 Gr",
+       "sku_id": "1510",
        "promo": false
       },
       {
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "unit_price": 7627.12,
-       "cost": 17161.02,
-       "name": "Gaseosa Coca-cola Sabor Original 354 Ml Gaseosa Sabor Original 354 Ml Coca Cola",
-       "sku_id": "31542",
+       "unit_price": 2840.0,
+       "cost": 6390.0,
+       "name": "Coca-cola Sabor Original 1,25 Lt Gaseosa Cola Sabor Original 1.25 Lts Coca Cola",
+       "sku_id": "255282",
        "promo": false
       }
      ],
@@ -2170,7 +2175,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 45894.31,
+     "total": 54005.55,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2179,20 +2184,20 @@
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3698.0,
-       "cost": 3698.0,
-       "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
-       "sku_id": "13346",
+       "unit_price": 2398.0,
+       "cost": 2398.0,
+       "name": "Fideos Favorita Dedalitos 500g",
+       "sku_id": "220864",
        "promo": false
       },
       {
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2309.0,
-       "cost": 1154.5,
-       "name": "Arroz Parboil Dos Hermanos 1 Kg",
-       "sku_id": "159850",
+       "unit_price": 2229.0,
+       "cost": 1114.5,
+       "name": "Arroz Integral Cañuelas 1 Kg",
+       "sku_id": "222521",
        "promo": false
       },
       {
@@ -2309,10 +2314,10 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 989.0,
-       "cost": 2967.0,
-       "name": "Galletitas Pamela Vainilla 84g",
-       "sku_id": "249976",
+       "unit_price": 899.0,
+       "cost": 2697.0,
+       "name": "Galletitas Formis Animales Frutilla 54g",
+       "sku_id": "249608",
        "promo": false
       },
       {
@@ -2339,10 +2344,10 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1549.0,
-       "cost": 1549.0,
-       "name": "Mayonesa Natura 250 Cc",
-       "sku_id": "14691",
+       "unit_price": 1149.0,
+       "cost": 1149.0,
+       "name": "Mayonesa Dánica Dp 250 Cc.",
+       "sku_id": "225068",
        "promo": false
       },
       {
@@ -2360,7 +2365,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 43760.91,
+     "total": 48489.64,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2371,8 +2376,8 @@
        "fixed": false,
        "unit_price": 2480.0,
        "cost": 2480.0,
-       "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
-       "sku_id": "38576",
+       "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
+       "sku_id": "38574",
        "promo": true
       },
       {
@@ -2419,11 +2424,11 @@
        "ing": "leche",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2019.0,
-       "cost": 4038.0,
-       "name": "Leche Fresca Entera 3% Fortificada Casanto Sachet 1 Lt.",
-       "sku_id": "288868",
-       "promo": false
+       "unit_price": 1790.0,
+       "cost": 3580.0,
+       "name": "Leche Entera DIA Larga Vida 1 Lt.",
+       "sku_id": "608",
+       "promo": true
       },
       {
        "ing": "yerba",
@@ -2453,7 +2458,7 @@
        "cost": 5490.0,
        "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
        "sku_id": "247423",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "pollo",
@@ -2499,21 +2504,21 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 920.0,
-       "cost": 2760.0,
-       "name": "Galletitas Oreo Mini Rellenas Con Crema Sabor Original 50 Gr.",
-       "sku_id": "175320",
-       "promo": true
+       "unit_price": 890.0,
+       "cost": 2670.0,
+       "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
+       "sku_id": "168119",
+       "promo": false
       },
       {
        "ing": "aceite",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4543.33,
-       "cost": 2271.66,
-       "name": "Aceite de Girasol Legítimo 1,5 Lt.",
-       "sku_id": "15122",
-       "promo": false
+       "unit_price": 3297.78,
+       "cost": 1648.89,
+       "name": "Aceite de Girasol Legítimo 900 Ml.",
+       "sku_id": "56453",
+       "promo": true
       },
       {
        "ing": "queso",
@@ -2551,12 +2556,12 @@
     }
    },
    "ranking": [
-    "Carrefour",
     "Dia",
-    "ChangoMas",
-    "Jumbo"
+    "Carrefour",
+    "Jumbo",
+    "ChangoMas"
    ],
-   "cheapest": "Carrefour",
+   "cheapest": "Dia",
    "common": [
     "fideos",
     "arroz",
@@ -2573,7 +2578,8 @@
     "galletitas",
     "aceite",
     "queso",
-    "mayonesa"
+    "mayonesa",
+    "gaseosa"
    ],
    "all_complete": false,
    "missing_everywhere": []

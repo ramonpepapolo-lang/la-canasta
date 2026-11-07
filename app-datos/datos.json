@@ -1,12 +1,12 @@
 {
- "date": "2026-11-06",
- "previous": "2026-11-05",
+ "date": "2026-11-07",
+ "previous": "2026-11-06",
  "index": {
-  "date": "2026-11-06",
-  "paid": 98.236,
-  "regular": 99.038,
-  "day_change": 0.13,
-  "days_of_data": 14,
+  "date": "2026-11-07",
+  "paid": 98.158,
+  "regular": 99.111,
+  "day_change": -0.08,
+  "days_of_data": 15,
   "series": [
    [
     "2026-10-24",
@@ -77,18 +77,23 @@
     "2026-11-06",
     98.236,
     99.038
+   ],
+   [
+    "2026-11-07",
+    98.158,
+    99.111
    ]
   ],
   "mode": "week",
-  "week_paid": -0.5,
-  "week_regular": -0.38,
+  "week_paid": -0.77,
+  "week_regular": -0.47,
   "now": [
-   "2026-10-31",
-   "2026-11-06"
+   "2026-11-01",
+   "2026-11-07"
   ],
   "before": [
-   "2026-10-24",
-   "2026-10-30"
+   "2026-10-25",
+   "2026-10-31"
   ]
  },
  "ranking": {
@@ -96,252 +101,225 @@
   "label_en": "Week of 1 to 7 November 2026",
   "days": [
    "2026-11-01",
-   "2026-11-06"
+   "2026-11-07"
   ],
-  "n_products": 142,
+  "n_products": 136,
   "shops": [
    {
     "shop": "Dia",
-    "total": 513398.67,
+    "total": 488317.71,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 538438.66,
-    "pct": 4.88
+    "total": 514363.96,
+    "pct": 5.33
    },
    {
     "shop": "ChangoMas",
-    "total": 545167.36,
-    "pct": 6.19
+    "total": 521187.7,
+    "pct": 6.73
    },
    {
     "shop": "Jumbo",
-    "total": 610069.5,
-    "pct": 18.83
+    "total": 583311.9,
+    "pct": 19.45
    }
   ]
  },
  "down": [
   {
-   "shop": "Dia",
-   "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
-   "type": "carne_picada",
-   "before": 11000.0,
-   "now": 5490.0,
-   "pct": -50.1,
+   "shop": "ChangoMas",
+   "name": "Cerveza Clásica Quilmes 473ml",
+   "type": "cerveza",
+   "before": 2689.0,
+   "now": 1747.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Quilmes Laton 710 Cc",
+   "type": "cerveza",
+   "before": 3829.0,
+   "now": 2488.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Cebolla Sanes en red 4 uni",
+   "type": "cebolla",
+   "before": 4990.0,
+   "now": 3399.0,
+   "pct": -31.9,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Huevo blanco El Mercado carton 30 uni",
+   "type": "huevos",
+   "before": 8639.7,
+   "now": 7058.7,
+   "pct": -18.3,
    "why": "list_down"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Tomate Redondo 500 G",
+   "shop": "Jumbo",
+   "name": "Manzana Roja por Kg",
+   "type": "manzana",
+   "before": 3699.0,
+   "now": 3899.0,
+   "pct": 5.4,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Tomate Perita x Kg",
    "type": "tomate",
-   "before": 4899.0,
-   "now": 3299.0,
-   "pct": -32.7,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Suprema De Pollo Granel Fresca",
-   "type": "suprema",
-   "before": 12449.0,
-   "now": 8999.0,
-   "pct": -27.7,
+   "before": 7399.0,
+   "now": 7999.0,
+   "pct": 8.1,
    "why": "price"
   },
   {
    "shop": "Jumbo",
-   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
-   "type": "vacio",
-   "before": 22289.0,
-   "now": 17999.0,
-   "pct": -19.2,
+   "name": "Leche Descremada La Serenísima 2sachet 1lt Leche Descremada 1 Lts x 2% La Serenisima",
+   "type": "leche",
+   "before": 2050.0,
+   "now": 2225.0,
+   "pct": 8.5,
    "why": "price"
   },
   {
    "shop": "Jumbo",
-   "name": "Papa Cepillada Granel Por Kg",
-   "type": "papa",
-   "before": 2999.0,
-   "now": 2499.0,
-   "pct": -16.7,
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 6999.0,
+   "now": 7599.0,
+   "pct": 8.6,
    "why": "price"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Asado De Tira De Novillito 1 Kg",
-   "type": "asado",
-   "before": 14704.15,
-   "now": 12299.0,
-   "pct": -16.4,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Agua Mineral Sin Gas Villa Del Sur 2.25l",
-   "type": "agua",
-   "before": 2699.0,
-   "now": 2294.15,
-   "pct": -15.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Agua Mineral Villa Del Sur Sin Gas 600ml",
-   "type": "agua",
-   "before": 1949.0,
-   "now": 1656.65,
-   "pct": -15.0,
-   "why": "promo_start"
   },
   {
    "shop": "Carrefour",
-   "name": "Té clásico en saquitos Carrefour Classic sin TACC 50 uni",
-   "type": "te",
-   "before": 1850.0,
-   "now": 1646.5,
-   "pct": -11.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
-   "type": "vacio",
-   "before": 18019.15,
-   "now": 16499.0,
-   "pct": -8.4,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Nalga x kg",
-   "type": "nalga",
-   "before": 16990.0,
-   "now": 17990.0,
-   "pct": 5.9,
+   "name": "Queso cremoso Bulnez 300 grs",
+   "type": "queso_cremoso",
+   "before": 3299.0,
+   "now": 3729.0,
+   "pct": 13.0,
    "why": "promo_end"
   },
   {
-   "shop": "Carrefour",
-   "name": "Pasta Dental Kolynos Frescura 90 g.",
-   "type": "pasta_dental",
-   "before": 2369.0,
-   "now": 2549.0,
-   "pct": 7.6,
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+   "type": "detergente",
+   "before": 2735.4,
+   "now": 3143.4,
+   "pct": 14.9,
    "why": "list_up"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Queso cremoso Cremac x kg.",
+   "type": "queso_cremoso",
+   "before": 9999.0,
+   "now": 11990.0,
+   "pct": 19.9,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 2616.75,
+   "now": 3489.0,
+   "pct": 33.3,
+   "why": "promo_end"
   }
  ],
  "up": [
   {
-   "shop": "Carrefour",
-   "name": "Banana selección x kg.",
-   "type": "banana",
-   "before": 1749.0,
-   "now": 2499.0,
+   "shop": "ChangoMas",
+   "name": "Aceite De Girasol Natural 900 Ml",
+   "type": "aceite_girasol",
+   "before": 3303.3,
+   "now": 4719.0,
    "pct": 42.9,
    "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Bife De Vacio Envasado Al Vacío 800 G",
-   "type": "vacio",
-   "before": 24224.15,
-   "now": 28499.0,
-   "pct": 17.6,
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 2616.75,
+   "now": 3489.0,
+   "pct": 33.3,
    "why": "promo_end"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Bola De Lomo Feteada De Novillito Envasado Al Vacío 1 Kg",
-   "type": "cortes_magros",
-   "before": 17169.15,
-   "now": 20199.0,
-   "pct": 17.6,
+   "shop": "Carrefour",
+   "name": "Queso cremoso Cremac x kg.",
+   "type": "queso_cremoso",
+   "before": 9999.0,
+   "now": 11990.0,
+   "pct": 19.9,
    "why": "promo_end"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Carne Picada Magra 800g",
-   "type": "carne_picada",
-   "before": 13939.15,
-   "now": 16399.0,
-   "pct": 17.6,
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+   "type": "detergente",
+   "before": 2735.4,
+   "now": 3143.4,
+   "pct": 14.9,
+   "why": "list_up"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Queso cremoso Bulnez 300 grs",
+   "type": "queso_cremoso",
+   "before": 3299.0,
+   "now": 3729.0,
+   "pct": 13.0,
    "why": "promo_end"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 21504.15,
-   "now": 25299.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 6999.0,
+   "now": 7599.0,
+   "pct": 8.6,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Cuadrada Feteada De Novillito Envasado Al Vacío 800g",
-   "type": "cortes_magros",
-   "before": 17339.15,
-   "now": 20399.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Jumbo",
+   "name": "Leche Descremada La Serenísima 2sachet 1lt Leche Descremada 1 Lts x 2% La Serenisima",
+   "type": "leche",
+   "before": 2050.0,
+   "now": 2225.0,
+   "pct": 8.5,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 21419.15,
-   "now": 25199.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Jumbo",
+   "name": "Tomate Perita x Kg",
+   "type": "tomate",
+   "before": 7399.0,
+   "now": 7999.0,
+   "pct": 8.1,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Nalga Feteada Envasado Al Vacío 1 Kg",
-   "type": "nalga",
-   "before": 18189.15,
-   "now": 21399.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Paleta De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "roast_paleta",
-   "before": 15044.15,
-   "now": 17699.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Pan Lactal Regular Veneziana 400 Gr",
-   "type": "pan_lactal",
-   "before": 2991.15,
-   "now": 3519.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Peceto Entero De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cortes_magros",
-   "before": 21164.15,
-   "now": 24899.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Peceto Feteado De Novillito Envasado Al Vacío 800 G",
-   "type": "cortes_magros",
-   "before": 21164.15,
-   "now": 24899.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Jumbo",
+   "name": "Manzana Roja por Kg",
+   "type": "manzana",
+   "before": 3699.0,
+   "now": 3899.0,
+   "pct": 5.4,
+   "why": "price"
   }
  ],
- "n_down": 10,
- "n_up": 20
+ "n_down": 4,
+ "n_up": 9
 }

@@ -1,0 +1,413 @@
+{
+ "id": "2026-11-01",
+ "start": "2026-11-01",
+ "end": "2026-11-07",
+ "label_es": "Semana del 1 al 7 de noviembre de 2026",
+ "label_en": "Week of 1 to 7 November 2026",
+ "before_start": "2026-10-25",
+ "before_end": "2026-10-31",
+ "days_now": [
+  "2026-11-01",
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "days_before": [
+  "2026-10-25",
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30",
+  "2026-10-31"
+ ],
+ "min_in_stock": 4,
+ "paid": -0.77,
+ "regular": -0.47,
+ "shops": [
+  {
+   "shop": "Carrefour",
+   "pct": -1.38
+  },
+  {
+   "shop": "Jumbo",
+   "pct": 0.81
+  },
+  {
+   "shop": "ChangoMas",
+   "pct": -1.19
+  },
+  {
+   "shop": "Dia",
+   "pct": -0.96
+  }
+ ],
+ "groups": [
+  {
+   "group": "carne_ave",
+   "name_es": "Pollo",
+   "name_en": "Chicken",
+   "in_headline": true,
+   "pct": 2.08
+  },
+  {
+   "group": "lacteos",
+   "name_es": "Lácteos y huevos",
+   "name_en": "Dairy and eggs",
+   "in_headline": true,
+   "pct": 1.49
+  },
+  {
+   "group": "aguas_gaseosas",
+   "name_es": "Aguas y gaseosas",
+   "name_en": "Water and soft drinks",
+   "in_headline": true,
+   "pct": 1.23
+  },
+  {
+   "group": "azucar",
+   "name_es": "Azúcar y dulces",
+   "name_en": "Sugar and sweets",
+   "in_headline": true,
+   "pct": 0.75
+  },
+  {
+   "group": "cafe_te_yerba",
+   "name_es": "Café, té y yerba",
+   "name_en": "Coffee, tea and yerba",
+   "in_headline": true,
+   "pct": 0.33
+  },
+  {
+   "group": "carne_vacuna",
+   "name_es": "Carne vacuna",
+   "name_en": "Beef",
+   "in_headline": true,
+   "pct": 0.23
+  },
+  {
+   "group": "aceites",
+   "name_es": "Aceites",
+   "name_en": "Oils",
+   "in_headline": true,
+   "pct": 0.13
+  },
+  {
+   "group": "otros_alimentos",
+   "name_es": "Otros alimentos",
+   "name_en": "Other food",
+   "in_headline": true,
+   "pct": -1.07
+  },
+  {
+   "group": "pan_cereales",
+   "name_es": "Pan y cereales",
+   "name_en": "Bread and cereals",
+   "in_headline": true,
+   "pct": -1.14
+  },
+  {
+   "group": "cuidado_personal",
+   "name_es": "Cuidado personal",
+   "name_en": "Personal care",
+   "in_headline": false,
+   "pct": -1.18
+  },
+  {
+   "group": "frutas",
+   "name_es": "Frutas",
+   "name_en": "Fruit",
+   "in_headline": true,
+   "pct": -2.29
+  },
+  {
+   "group": "alcohol",
+   "name_es": "Bebidas alcohólicas",
+   "name_en": "Alcoholic drinks",
+   "in_headline": true,
+   "pct": -2.61
+  },
+  {
+   "group": "verduras",
+   "name_es": "Verduras",
+   "name_en": "Vegetables",
+   "in_headline": true,
+   "pct": -5.14
+  },
+  {
+   "group": "limpieza",
+   "name_es": "Limpieza",
+   "name_en": "Cleaning products",
+   "in_headline": true,
+   "pct": -7.95
+  }
+ ],
+ "products_compared": 1092,
+ "products_up": 332,
+ "products_down": 209,
+ "products_same": 551,
+ "top_up": [
+  {
+   "type": "manteca",
+   "type_en": "Butter",
+   "shop": "Carrefour",
+   "sku_id": "28722",
+   "name": "Manteca Tonadita calidad extra 200 g.",
+   "before": 2827.57,
+   "now": 4399.0,
+   "pct": 55.58,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "yerba",
+   "type_en": "Yerba mate",
+   "shop": "Dia",
+   "sku_id": "269665",
+   "name": "Yerba Mate Mañanita 4 Flex 500 Gr.",
+   "before": 1990.0,
+   "now": 3095.0,
+   "pct": 55.53,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "coca_cola",
+   "type_en": "Coca-Cola",
+   "shop": "Carrefour",
+   "sku_id": "73254",
+   "name": "Gaseosa cola Coca Cola sabor original 1,75 lts",
+   "before": 4042.14,
+   "now": 5400.0,
+   "pct": 33.59,
+   "regular_pct": 2.02
+  },
+  {
+   "type": "mayonesa",
+   "type_en": "Mayonnaise",
+   "shop": "Carrefour",
+   "sku_id": "150485",
+   "name": "Mayonesa Dánica dp 500 g.",
+   "before": 1619.25,
+   "now": 2159.0,
+   "pct": 33.33,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "pure_tomate",
+   "type_en": "Tomato puree",
+   "shop": "Dia",
+   "sku_id": "56121",
+   "name": "Puré De Tomate Arcor 520 Gr.",
+   "before": 915.0,
+   "now": 1220.0,
+   "pct": 33.33,
+   "regular_pct": 0.0
+  }
+ ],
+ "top_down": [
+  {
+   "type": "shampoo",
+   "type_en": "Shampoo",
+   "shop": "Dia",
+   "sku_id": "298657",
+   "name": "Shampoo Elvive RT5 Keratin 400 Ml.",
+   "before": 11990.0,
+   "now": 7365.29,
+   "pct": -38.57,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "Carrefour",
+   "sku_id": "138082",
+   "name": "Detergente Concentrado Cif Lima Botella 500 ml",
+   "before": 4388.46,
+   "now": 2881.32,
+   "pct": -34.34,
+   "regular_pct": -0.09
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "sku_id": "24442",
+   "name": "Cerveza rubia Warsteiner 473 ml",
+   "before": 3485.0,
+   "now": 2290.14,
+   "pct": -34.29,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "sku_id": "6388",
+   "name": "Cerveza blanca Golsch 473 ml",
+   "before": 3925.0,
+   "now": 2579.29,
+   "pct": -34.29,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "sku_id": "98151",
+   "name": "Cerveza roja Imperial 473 ml",
+   "before": 3295.0,
+   "now": 2165.29,
+   "pct": -34.29,
+   "regular_pct": 0.0
+  }
+ ],
+ "promos_now": {
+  "Carrefour": 62.4,
+  "ChangoMas": 37.0,
+  "Dia": 74.4
+ },
+ "promos_before": {
+  "Carrefour": 46.1,
+  "ChangoMas": 39.0,
+  "Dia": 73.1
+ },
+ "series": [
+  {
+   "date": "2026-10-25",
+   "paid": 99.241,
+   "regular": 99.822
+  },
+  {
+   "date": "2026-10-26",
+   "paid": 100.914,
+   "regular": 99.916
+  },
+  {
+   "date": "2026-10-27",
+   "paid": 101.157,
+   "regular": 99.818
+  },
+  {
+   "date": "2026-10-28",
+   "paid": 100.273,
+   "regular": 100.236
+  },
+  {
+   "date": "2026-10-29",
+   "paid": 100.023,
+   "regular": 100.149
+  },
+  {
+   "date": "2026-10-30",
+   "paid": 99.734,
+   "regular": 100.237
+  },
+  {
+   "date": "2026-10-31",
+   "paid": 99.627,
+   "regular": 99.838
+  },
+  {
+   "date": "2026-11-01",
+   "paid": 99.849,
+   "regular": 99.893
+  },
+  {
+   "date": "2026-11-02",
+   "paid": 100.481,
+   "regular": 99.841
+  },
+  {
+   "date": "2026-11-03",
+   "paid": 101.294,
+   "regular": 100.003
+  },
+  {
+   "date": "2026-11-04",
+   "paid": 98.459,
+   "regular": 99.26
+  },
+  {
+   "date": "2026-11-05",
+   "paid": 98.113,
+   "regular": 99.274
+  },
+  {
+   "date": "2026-11-06",
+   "paid": 98.236,
+   "regular": 99.038
+  },
+  {
+   "date": "2026-11-07",
+   "paid": 98.158,
+   "regular": 99.111
+  }
+ ],
+ "ranking": {
+  "days": [
+   "2026-11-01",
+   "2026-11-07"
+  ],
+  "days_of_data": 7,
+  "n_products": 136,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 488317.71,
+    "pct": 0.0
+   },
+   {
+    "shop": "Carrefour",
+    "total": 514363.96,
+    "pct": 5.33
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 521187.7,
+    "pct": 6.73
+   },
+   {
+    "shop": "Jumbo",
+    "total": 583311.9,
+    "pct": 19.45
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 46,
+   "Jumbo": 1,
+   "ChangoMas": 56,
+   "Dia": 55
+  },
+  "examples": [
+   {
+    "ean": "7791290793446",
+    "name": "Jabon En Polvo Bio-enzimas Baja Espuma 600 Grs Skip",
+    "low_shop": "ChangoMas",
+    "low": 2609.4,
+    "high_shop": "Jumbo",
+    "high": 4750.0,
+    "pct": 82.0
+   },
+   {
+    "ean": "7791290796706",
+    "name": "Detergente Cif Active Gel 500 Ml",
+    "low_shop": "ChangoMas",
+    "low": 3214.99,
+    "high_shop": "Jumbo",
+    "high": 5850.0,
+    "pct": 82.0
+   },
+   {
+    "ean": "7790990003022",
+    "name": "Detergente Magistral Ultra Limón 300 Ml",
+    "low_shop": "Carrefour",
+    "low": 2064.29,
+    "high_shop": "Jumbo",
+    "high": 3750.0,
+    "pct": 81.7
+   }
+  ]
+ }
+}

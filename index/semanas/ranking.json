@@ -5,60 +5,42 @@
   "end": "2026-11-07",
   "label_es": "Semana del 1 al 7 de noviembre de 2026",
   "label_en": "Week of 1 to 7 November 2026",
-  "complete": false,
+  "complete": true,
   "days": [
    "2026-11-01",
-   "2026-11-06"
+   "2026-11-07"
   ],
-  "days_of_data": 6,
-  "n_products": 142,
+  "days_of_data": 7,
+  "n_products": 136,
   "shops": [
    {
     "shop": "Dia",
-    "total": 513398.67,
+    "total": 488317.71,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 538438.66,
-    "pct": 4.88
+    "total": 514363.96,
+    "pct": 5.33
    },
    {
     "shop": "ChangoMas",
-    "total": 545167.36,
-    "pct": 6.19
+    "total": 521187.7,
+    "pct": 6.73
    },
    {
     "shop": "Jumbo",
-    "total": 610069.5,
-    "pct": 18.83
+    "total": 583311.9,
+    "pct": 19.45
    }
   ],
   "cheapest_count": {
-   "Carrefour": 51,
+   "Carrefour": 46,
    "Jumbo": 1,
    "ChangoMas": 56,
-   "Dia": 58
+   "Dia": 55
   },
   "examples": [
-   {
-    "ean": "8445291395961",
-    "name": "Leche Chocolotada 200ml Nesquik",
-    "low_shop": "Carrefour",
-    "low": 1095.0,
-    "high_shop": "Jumbo",
-    "high": 2350.0,
-    "pct": 114.6
-   },
-   {
-    "ean": "7791290796706",
-    "name": "Detergente Cif Active Gel 500 Ml",
-    "low_shop": "ChangoMas",
-    "low": 3201.92,
-    "high_shop": "Jumbo",
-    "high": 5850.0,
-    "pct": 82.7
-   },
    {
     "ean": "7791290793446",
     "name": "Jabon En Polvo Bio-enzimas Baja Espuma 600 Grs Skip",
@@ -67,6 +49,24 @@
     "high_shop": "Jumbo",
     "high": 4750.0,
     "pct": 82.0
+   },
+   {
+    "ean": "7791290796706",
+    "name": "Detergente Cif Active Gel 500 Ml",
+    "low_shop": "ChangoMas",
+    "low": 3214.99,
+    "high_shop": "Jumbo",
+    "high": 5850.0,
+    "pct": 82.0
+   },
+   {
+    "ean": "7790990003022",
+    "name": "Detergente Magistral Ultra Limón 300 Ml",
+    "low_shop": "Carrefour",
+    "low": 2064.29,
+    "high_shop": "Jumbo",
+    "high": 3750.0,
+    "pct": 81.7
    }
   ]
  },

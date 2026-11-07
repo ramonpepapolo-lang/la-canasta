@@ -3,40 +3,40 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.4,
+ "inflation": -1.47,
  "base_date": "2026-10-31",
- "end_date": "2026-11-06",
- "days_of_data": 6,
- "prices_collected": 66296,
+ "end_date": "2026-11-07",
+ "days_of_data": 7,
+ "prices_collected": 90249,
  "headline": {
-  "end_to_end_paid": -1.4,
-  "end_to_end_regular": -0.8,
+  "end_to_end_paid": -1.47,
+  "end_to_end_regular": -0.73,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -2.13
+   "pct": -2.55
   },
   {
    "shop": "ChangoMas",
-   "pct": 0.12
+   "pct": 0.06
   },
   {
    "shop": "Dia",
-   "pct": -2.07
+   "pct": -2.08
   },
   {
    "shop": "Jumbo",
-   "pct": -0.08
+   "pct": 0.11
   }
  ],
  "groups": [
   {
    "group": "frutas",
    "in_headline": true,
-   "pct": 5.39
+   "pct": 5.47
   },
   {
    "group": "carne_ave",
@@ -51,12 +51,12 @@
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.77
+   "pct": 0.98
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": -0.52
+   "pct": -0.49
   },
   {
    "group": "cuidado_personal",
@@ -69,14 +69,14 @@
    "pct": -0.63
   },
   {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": -0.92
+  },
+  {
    "group": "carne_vacuna",
    "in_headline": true,
    "pct": -1.47
-  },
-  {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": -2.02
   },
   {
    "group": "aguas_gaseosas",
@@ -86,28 +86,28 @@
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": -3.12
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": -4.47
+   "pct": -3.24
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -4.71
+   "pct": -4.6
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": -5.16
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -9.42
+   "pct": -10.52
   }
  ],
- "products_compared": 1108,
- "products_up": 113,
- "products_down": 140,
- "products_same": 855,
+ "products_compared": 1109,
+ "products_up": 117,
+ "products_down": 142,
+ "products_same": 850,
  "top_up": [
   {
    "type": "fideos",
@@ -237,6 +237,11 @@
    "date": "2026-11-06",
    "paid": 98.236,
    "regular": 99.038
+  },
+  {
+   "date": "2026-11-07",
+   "paid": 98.158,
+   "regular": 99.111
   }
  ]
 }

@@ -1,5 +1,76 @@
 [
  {
+  "id": "2026-11-08",
+  "start": "2026-11-08",
+  "end": "2026-11-14",
+  "label_es": "Semana del 8 al 14 de noviembre de 2026",
+  "label_en": "Week of 8 to 14 November 2026",
+  "complete": false,
+  "days": [
+   "2026-11-08",
+   "2026-11-08"
+  ],
+  "days_of_data": 1,
+  "n_products": 304,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 1225187.75,
+    "pct": 0.0
+   },
+   {
+    "shop": "Carrefour",
+    "total": 1299375.21,
+    "pct": 6.06
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 1306084.55,
+    "pct": 6.6
+   },
+   {
+    "shop": "Jumbo",
+    "total": 1491124.0,
+    "pct": 21.71
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 118,
+   "Jumbo": 5,
+   "ChangoMas": 132,
+   "Dia": 129
+  },
+  "examples": [
+   {
+    "ean": "7460123477616",
+    "name": "Sazonador Maggi Completo Pimienta 180 G",
+    "low_shop": "Dia",
+    "low": 3602.5,
+    "high_shop": "Jumbo",
+    "high": 7750.0,
+    "pct": 115.1
+   },
+   {
+    "ean": "7790070417916",
+    "name": "Postre Exquisita Dulce De Leche 80g",
+    "low_shop": "ChangoMas",
+    "low": 791.4,
+    "high_shop": "Jumbo",
+    "high": 1650.0,
+    "pct": 108.5
+   },
+   {
+    "ean": "7500435252935",
+    "name": "Suavizante Concentrado Brisa Suave 350 Ml Downy",
+    "low_shop": "ChangoMas",
+    "low": 3898.95,
+    "high_shop": "Jumbo",
+    "high": 7650.0,
+    "pct": 96.2
+   }
+  ]
+ },
+ {
   "id": "2026-11-01",
   "start": "2026-11-01",
   "end": "2026-11-07",

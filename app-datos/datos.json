@@ -1,12 +1,12 @@
 {
- "date": "2026-11-07",
- "previous": "2026-11-06",
+ "date": "2026-11-08",
+ "previous": "2026-11-07",
  "index": {
-  "date": "2026-11-07",
-  "paid": 98.158,
-  "regular": 99.111,
-  "day_change": -0.08,
-  "days_of_data": 15,
+  "date": "2026-11-08",
+  "paid": 98.335,
+  "regular": 99.121,
+  "day_change": 0.18,
+  "days_of_data": 16,
   "series": [
    [
     "2026-10-24",
@@ -76,250 +76,138 @@
    [
     "2026-11-06",
     98.236,
-    99.038
+    99.259
    ],
    [
     "2026-11-07",
     98.158,
     99.111
+   ],
+   [
+    "2026-11-08",
+    98.335,
+    99.121
    ]
   ],
   "mode": "week",
-  "week_paid": -0.77,
-  "week_regular": -0.47,
+  "week_paid": -1.27,
+  "week_regular": -0.66,
   "now": [
-   "2026-11-01",
-   "2026-11-07"
+   "2026-11-02",
+   "2026-11-08"
   ],
   "before": [
-   "2026-10-25",
-   "2026-10-31"
+   "2026-10-26",
+   "2026-11-01"
   ]
  },
  "ranking": {
-  "label_es": "Semana del 1 al 7 de noviembre de 2026",
-  "label_en": "Week of 1 to 7 November 2026",
+  "label_es": "Semana del 8 al 14 de noviembre de 2026",
+  "label_en": "Week of 8 to 14 November 2026",
   "days": [
-   "2026-11-01",
-   "2026-11-07"
+   "2026-11-08",
+   "2026-11-08"
   ],
-  "n_products": 136,
+  "n_products": 304,
   "shops": [
    {
     "shop": "Dia",
-    "total": 488317.71,
+    "total": 1225187.75,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 514363.96,
-    "pct": 5.33
+    "total": 1299375.21,
+    "pct": 6.06
    },
    {
     "shop": "ChangoMas",
-    "total": 521187.7,
-    "pct": 6.73
+    "total": 1306084.55,
+    "pct": 6.6
    },
    {
     "shop": "Jumbo",
-    "total": 583311.9,
-    "pct": 19.45
+    "total": 1491124.0,
+    "pct": 21.71
    }
   ]
  },
  "down": [
   {
-   "shop": "ChangoMas",
-   "name": "Cerveza Clásica Quilmes 473ml",
-   "type": "cerveza",
-   "before": 2689.0,
-   "now": 1747.85,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-   "type": "cerveza",
-   "before": 3829.0,
-   "now": 2488.85,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
    "shop": "Carrefour",
-   "name": "Cebolla Sanes en red 4 uni",
-   "type": "cebolla",
-   "before": 4990.0,
-   "now": 3399.0,
-   "pct": -31.9,
+   "name": "Queso cremoso Cremac x kg.",
+   "type": "queso_cremoso",
+   "before": 11990.0,
+   "now": 8490.0,
+   "pct": -29.2,
    "why": "promo_start"
   },
   {
-   "shop": "Carrefour",
-   "name": "Huevo blanco El Mercado carton 30 uni",
-   "type": "huevos",
-   "before": 8639.7,
-   "now": 7058.7,
-   "pct": -18.3,
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "type": "banana",
+   "before": 2899.0,
+   "now": 2399.0,
+   "pct": -17.2,
    "why": "list_down"
   },
   {
-   "shop": "Jumbo",
-   "name": "Manzana Roja por Kg",
-   "type": "manzana",
-   "before": 3699.0,
-   "now": 3899.0,
-   "pct": 5.4,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Perita x Kg",
-   "type": "tomate",
-   "before": 7399.0,
-   "now": 7999.0,
-   "pct": 8.1,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Leche Descremada La Serenísima 2sachet 1lt Leche Descremada 1 Lts x 2% La Serenisima",
-   "type": "leche",
-   "before": 2050.0,
-   "now": 2225.0,
-   "pct": 8.5,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 6999.0,
-   "now": 7599.0,
-   "pct": 8.6,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cremoso Bulnez 300 grs",
-   "type": "queso_cremoso",
-   "before": 3299.0,
-   "now": 3729.0,
-   "pct": 13.0,
+   "shop": "Dia",
+   "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
+   "type": "harina_000",
+   "before": 780.0,
+   "now": 1300.0,
+   "pct": 66.7,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
-   "type": "detergente",
-   "before": 2735.4,
-   "now": 3143.4,
-   "pct": 14.9,
+   "name": "Harina 0000 con Vitaminas Favorita 1 Kg.",
+   "type": "harina_000",
+   "before": 1020.0,
+   "now": 1700.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
+   "type": "carne_picada",
+   "before": 5490.0,
+   "now": 11000.0,
+   "pct": 100.4,
    "why": "list_up"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cremoso Cremac x kg.",
-   "type": "queso_cremoso",
-   "before": 9999.0,
-   "now": 11990.0,
-   "pct": 19.9,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Cerveza Rubia Warsteiner 473 Ml",
-   "type": "cerveza",
-   "before": 2616.75,
-   "now": 3489.0,
-   "pct": 33.3,
-   "why": "promo_end"
   }
  ],
  "up": [
   {
-   "shop": "ChangoMas",
-   "name": "Aceite De Girasol Natural 900 Ml",
-   "type": "aceite_girasol",
-   "before": 3303.3,
-   "now": 4719.0,
-   "pct": 42.9,
-   "why": "promo_end"
+   "shop": "Dia",
+   "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
+   "type": "carne_picada",
+   "before": 5490.0,
+   "now": 11000.0,
+   "pct": 100.4,
+   "why": "list_up"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Cerveza Rubia Warsteiner 473 Ml",
-   "type": "cerveza",
-   "before": 2616.75,
-   "now": 3489.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cremoso Cremac x kg.",
-   "type": "queso_cremoso",
-   "before": 9999.0,
-   "now": 11990.0,
-   "pct": 19.9,
+   "shop": "Dia",
+   "name": "Harina 000 con Vitaminas Favorita 1 Kg.",
+   "type": "harina_000",
+   "before": 780.0,
+   "now": 1300.0,
+   "pct": 66.7,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
-   "type": "detergente",
-   "before": 2735.4,
-   "now": 3143.4,
-   "pct": 14.9,
-   "why": "list_up"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cremoso Bulnez 300 grs",
-   "type": "queso_cremoso",
-   "before": 3299.0,
-   "now": 3729.0,
-   "pct": 13.0,
+   "name": "Harina 0000 con Vitaminas Favorita 1 Kg.",
+   "type": "harina_000",
+   "before": 1020.0,
+   "now": 1700.0,
+   "pct": 66.7,
    "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 6999.0,
-   "now": 7599.0,
-   "pct": 8.6,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Leche Descremada La Serenísima 2sachet 1lt Leche Descremada 1 Lts x 2% La Serenisima",
-   "type": "leche",
-   "before": 2050.0,
-   "now": 2225.0,
-   "pct": 8.5,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Perita x Kg",
-   "type": "tomate",
-   "before": 7399.0,
-   "now": 7999.0,
-   "pct": 8.1,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Manzana Roja por Kg",
-   "type": "manzana",
-   "before": 3699.0,
-   "now": 3899.0,
-   "pct": 5.4,
-   "why": "price"
   }
  ],
- "n_down": 4,
- "n_up": 9
+ "n_down": 2,
+ "n_up": 3
 }

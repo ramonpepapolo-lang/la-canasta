@@ -1,5 +1,5 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,7 +93,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 17319.82,
+     "total": 16985.97,
      "complete": false,
      "missing": [
       "pan"
@@ -160,11 +160,11 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 26650.0,
-       "cost": 2132.0,
-       "name": "Queso provolone hilado Lucrecia x kg.",
-       "sku_id": "120927",
-       "promo": false
+       "unit_price": 22900.0,
+       "cost": 1832.0,
+       "name": "Queso provoleta Vaquero fraccionado",
+       "sku_id": "219783",
+       "promo": true
       },
       {
        "ing": "tomate",
@@ -200,20 +200,20 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6052.0,
-       "cost": 1513.0,
-       "name": "Vino tinto Don Valentín Lacrado 750 ml",
-       "sku_id": "143611",
+       "unit_price": 6433.33,
+       "cost": 1608.33,
+       "name": "Vino tinto Malbec Suter 750 ml",
+       "sku_id": "10564",
        "promo": false
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3699.37,
-       "cost": 1849.68,
-       "name": "Cerveza rubia Quilmes 473 ml",
-       "sku_id": "8763",
+       "unit_price": 3441.0,
+       "cost": 1720.5,
+       "name": "Cerveza rubia Andes Origen 1 lt",
+       "sku_id": "10786",
        "promo": true
       },
       {
@@ -230,11 +230,11 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1575.0,
-       "cost": 1575.0,
-       "name": "Especias parrilla chimichurri Alicante 25 grs",
-       "sku_id": "248259",
-       "promo": false
+       "unit_price": 1363.0,
+       "cost": 1363.0,
+       "name": "Condimento chimichurri Carrefour Classic en sobre 25 g.",
+       "sku_id": "172762",
+       "promo": true
       },
       {
        "ing": "sal_gruesa",
@@ -250,10 +250,10 @@
      "lacks": [
       "pan"
      ],
-     "fixed_total": 3070.0
+     "fixed_total": 2858.0
     },
     "Jumbo": {
-     "total": 19465.22,
+     "total": 19365.22,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5100.0,
-       "cost": 2550.0,
-       "name": "Cerveza Rubia 1 Lts Budweiser",
-       "sku_id": "28372",
+       "unit_price": 4900.0,
+       "cost": 2450.0,
+       "name": "Cerveza Rubia 1000 Ml Schneider",
+       "sku_id": "26673",
        "promo": false
       },
       {
@@ -692,8 +692,8 @@
        "fixed": false,
        "unit_price": 2580.0,
        "cost": 1290.0,
-       "name": "Cerveza Lager St. Wendeler 500 Ml.",
-       "sku_id": "259401",
+       "name": "Cerveza Rubia St. Wendeler 500 ml.",
+       "sku_id": "240514",
        "promo": true
       },
       {
@@ -734,12 +734,12 @@
     }
    },
    "ranking": [
-    "ChangoMas",
     "Carrefour",
+    "ChangoMas",
     "Dia",
     "Jumbo"
    ],
-   "cheapest": "ChangoMas",
+   "cheapest": "Carrefour",
    "common": [
     "asado_tira",
     "vacio",
@@ -864,7 +864,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 53145.94,
+     "total": 54469.94,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -883,11 +883,11 @@
        "ing": "leche",
        "qty": 3.5,
        "fixed": false,
-       "unit_price": 1790.0,
-       "cost": 6265.0,
-       "name": "Leche clásica UAT Bulnez 1 lt",
-       "sku_id": "284609",
-       "promo": false
+       "unit_price": 2269.0,
+       "cost": 7941.5,
+       "name": "Leche La serenisima clásica 3% 1L.",
+       "sku_id": "144373",
+       "promo": true
       },
       {
        "ing": "yogur",
@@ -895,8 +895,8 @@
        "fixed": false,
        "unit_price": 5143.33,
        "cost": 5143.33,
-       "name": "Yogur descremado Milkaut de frutilla en sachet 900 g.",
-       "sku_id": "141284",
+       "name": "Yogur entero Milkaut frutilla sachet 900 g.",
+       "sku_id": "78118",
        "promo": false
       },
       {
@@ -1033,11 +1033,11 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 9900.0,
-       "cost": 2475.0,
-       "name": "Queso cuartirolo Tremblay x kg.",
-       "sku_id": "17378",
-       "promo": false
+       "unit_price": 8490.0,
+       "cost": 2122.5,
+       "name": "Queso cremoso Cremac x kg.",
+       "sku_id": "19862",
+       "promo": true
       },
       {
        "ing": "aceite",
@@ -1264,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 51010.93,
+     "total": 50154.23,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1273,11 +1273,11 @@
        "ing": "avena",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3868.5,
-       "cost": 1934.25,
-       "name": "Avena Check Arrollada 400 G",
-       "sku_id": "12857",
-       "promo": true
+       "unit_price": 5497.5,
+       "cost": 2748.75,
+       "name": "Avena Instantánea Morixe 400 G",
+       "sku_id": "218631",
+       "promo": false
       },
       {
        "ing": "leche",
@@ -1353,18 +1353,18 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3519.0,
-       "cost": 3519.0,
-       "name": "Pan Lactal Regular Veneziana 400 Gr",
-       "sku_id": "138736",
-       "promo": false
+       "unit_price": 2347.8,
+       "cost": 2347.8,
+       "name": "Pan Lactal De Mesa 315 G",
+       "sku_id": "189853",
+       "promo": true
       },
       {
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2899.0,
-       "cost": 2899.0,
+       "unit_price": 2399.0,
+       "cost": 2399.0,
        "name": "Banana 1 Kg",
        "sku_id": "204538",
        "promo": false
@@ -1795,7 +1795,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 50947.14,
+     "total": 51552.64,
      "complete": false,
      "missing": [
       "carne_picada"
@@ -1856,11 +1856,11 @@
        "ing": "leche",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1790.0,
-       "cost": 3580.0,
-       "name": "Leche clásica UAT Bulnez 1 lt",
-       "sku_id": "284609",
-       "promo": false
+       "unit_price": 2269.0,
+       "cost": 4538.0,
+       "name": "Leche La serenisima clásica 3% 1L.",
+       "sku_id": "144373",
+       "promo": true
       },
       {
        "ing": "yerba",
@@ -1952,11 +1952,11 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 9900.0,
-       "cost": 2475.0,
-       "name": "Queso cuartirolo Tremblay x kg.",
-       "sku_id": "17378",
-       "promo": false
+       "unit_price": 8490.0,
+       "cost": 2122.5,
+       "name": "Queso cremoso Cremac x kg.",
+       "sku_id": "19862",
+       "promo": true
       },
       {
        "ing": "mayonesa",
@@ -2175,7 +2175,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 54005.55,
+     "total": 52339.35,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2224,11 +2224,11 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3519.0,
-       "cost": 3519.0,
-       "name": "Pan Lactal Regular Veneziana 400 Gr",
-       "sku_id": "138736",
-       "promo": false
+       "unit_price": 2347.8,
+       "cost": 2347.8,
+       "name": "Pan Lactal De Mesa 315 G",
+       "sku_id": "189853",
+       "promo": true
       },
       {
        "ing": "leche",
@@ -2254,10 +2254,10 @@
        "ing": "azucar",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1469.0,
-       "cost": 734.5,
-       "name": "Azucar Check Comun Tipo A 1kg",
-       "sku_id": "183793",
+       "unit_price": 1479.0,
+       "cost": 739.5,
+       "name": "Azúcar Azucel 1kg",
+       "sku_id": "41373",
        "promo": false
       },
       {
@@ -2304,8 +2304,8 @@
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2899.0,
-       "cost": 2899.0,
+       "unit_price": 2399.0,
+       "cost": 2399.0,
        "name": "Banana 1 Kg",
        "sku_id": "204538",
        "promo": false
@@ -2454,11 +2454,11 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 10980.0,
-       "cost": 5490.0,
-       "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
-       "sku_id": "247423",
-       "promo": true
+       "unit_price": 14000.0,
+       "cost": 7000.0,
+       "name": "Carne Picada común Atmósfera Modificada 600 Gr.",
+       "sku_id": "225677",
+       "promo": false
       },
       {
        "ing": "pollo",
@@ -2558,8 +2558,8 @@
    "ranking": [
     "Dia",
     "Carrefour",
-    "Jumbo",
-    "ChangoMas"
+    "ChangoMas",
+    "Jumbo"
    ],
    "cheapest": "Dia",
    "common": [

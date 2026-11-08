@@ -3,29 +3,29 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.47,
+ "inflation": -1.3,
  "base_date": "2026-10-31",
- "end_date": "2026-11-07",
- "days_of_data": 7,
- "prices_collected": 90249,
+ "end_date": "2026-11-08",
+ "days_of_data": 8,
+ "prices_collected": 114174,
  "headline": {
-  "end_to_end_paid": -1.47,
-  "end_to_end_regular": -0.73,
+  "end_to_end_paid": -1.3,
+  "end_to_end_regular": -0.72,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -2.55
+   "pct": -2.71
   },
   {
    "shop": "ChangoMas",
-   "pct": 0.06
+   "pct": -0.28
   },
   {
    "shop": "Dia",
-   "pct": -2.08
+   "pct": -1.32
   },
   {
    "shop": "Jumbo",
@@ -34,14 +34,14 @@
  ],
  "groups": [
   {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 5.47
-  },
-  {
    "group": "carne_ave",
    "in_headline": true,
    "pct": 4.09
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 3.0
   },
   {
    "group": "azucar",
@@ -51,12 +51,17 @@
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.98
+   "pct": 0.69
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": -0.49
+   "pct": 0.02
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -0.2
   },
   {
    "group": "cuidado_personal",
@@ -72,11 +77,6 @@
    "group": "aceites",
    "in_headline": true,
    "pct": -0.92
-  },
-  {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -1.47
   },
   {
    "group": "aguas_gaseosas",
@@ -105,9 +105,9 @@
   }
  ],
  "products_compared": 1109,
- "products_up": 117,
- "products_down": 142,
- "products_same": 850,
+ "products_up": 119,
+ "products_down": 139,
+ "products_same": 851,
  "top_up": [
   {
    "type": "fideos",
@@ -157,15 +157,6 @@
  ],
  "top_down": [
   {
-   "type": "carne_picada",
-   "type_en": "Minced beef",
-   "shop": "Dia",
-   "name": "Carne picada Especial Atmósfera Modificada 500 Gr.",
-   "before": 11000.0,
-   "now": 5490.0,
-   "pct": -50.09
-  },
-  {
    "type": "pure_tomate",
    "type_en": "Tomato puree",
    "shop": "ChangoMas",
@@ -200,6 +191,15 @@
    "before": 2200.0,
    "now": 1240.0,
    "pct": -43.64
+  },
+  {
+   "type": "arroz",
+   "type_en": "Rice",
+   "shop": "ChangoMas",
+   "name": "Arroz Check Largo Fino 1 Kg",
+   "before": 1489.0,
+   "now": 893.0,
+   "pct": -40.03
   }
  ],
  "series": [
@@ -242,6 +242,11 @@
    "date": "2026-11-07",
    "paid": 98.158,
    "regular": 99.111
+  },
+  {
+   "date": "2026-11-08",
+   "paid": 98.335,
+   "regular": 99.121
   }
  ]
 }

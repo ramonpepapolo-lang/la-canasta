@@ -81,6 +81,9 @@ nav a:hover { color: var(--navy); }
 .lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
 .copy { font-size: 0.85rem; }
 @media (max-width: 900px) { nav a[href="index.html#basket"] { display: none; } }
+header.topbar nav { min-width: 0; overflow: hidden; } header.topbar nav a { white-space: nowrap; flex: none; }
+@media (max-width: 1100px) { .lang-label { display: none; } header.topbar nav { gap: 1.2rem; } }
+@media (max-width: 960px) { header.topbar nav a[href$="metodo.html"] { display: none; } }
 @media (max-width: 800px) { nav { display: none; } }
 
 main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }

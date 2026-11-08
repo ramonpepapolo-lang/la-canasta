@@ -130,8 +130,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outli
 .mobile-menu nav { display: grid; padding-block: 0.4rem 1rem; }
 .mobile-menu a { padding: 0.85rem 0.2rem; border-bottom: 1px solid var(--rule); color: var(--navy); text-decoration: none; font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; }
 .mobile-menu a::after { content: "→"; color: var(--celeste); }
-@media (max-width: 1280px) { .mainnav a.opt { display: none; } }
-@media (max-width: 860px) {
+.mainnav { min-width: 0; overflow: hidden; } .mainnav a { flex: none; }
+/* below 960px (a small laptop window, a tablet, a phone) the menu becomes the menu button, like on a phone */
+@media (max-width: 960px) {
   .mainnav, .btn-sub { display: none; }
   .head-actions { margin-left: auto; }
   .menu-btn { display: inline-flex; }

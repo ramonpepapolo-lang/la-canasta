@@ -8,3 +8,6 @@ videos/presentacion/render.log
 videos/presentacion/*/short.html
 videos/presentacion/*/timeline.json
 datos-abiertos/la-canasta-datos.zip
+
+# app code lives in a private place, never here
+app/

@@ -1,4 +1,4 @@
-"""Data for the La Canasta app (app/datos.json on the website), rebuilt every day after the index.
+"""Data for the La Canasta app (app-datos/datos.json on the website), rebuilt every day after the index.
 
 Everything comes from files the site already publishes and checks: index/daily.csv, index/semana.json,
 index/semanas/ranking.json and the day's prices in data/. Nothing is estimated.

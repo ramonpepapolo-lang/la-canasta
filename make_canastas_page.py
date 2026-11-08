@@ -1,6 +1,5 @@
 """Writes the website's app page, lacanastaindex.com/canastas/: the La Canasta app is coming soon to the App Store
-and Google Play, free. The app itself is not on the website: it only lives inside the iPhone and Android app
-(app/src/app.html, built by app/build-www.js).
+and Google Play, free. The app itself is not on the website or in this repository.
 
 Run after make_canastas.py (it reads canastas/catalogo.json only for the date of the sitemap).
 """

@@ -81,10 +81,20 @@ nav a:hover { color: var(--navy); }
 .lang-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
 .copy { font-size: 0.85rem; }
 @media (max-width: 900px) { nav a[href="index.html#basket"] { display: none; } }
-header.topbar nav { min-width: 0; overflow: hidden; } header.topbar nav a { white-space: nowrap; flex: none; }
-@media (max-width: 1100px) { .lang-label { display: none; } header.topbar nav { gap: 1.2rem; } }
-@media (max-width: 960px) { header.topbar nav a[href$="metodo.html"] { display: none; } }
-@media (max-width: 800px) { nav { display: none; } }
+/* one menu on every screen size: the menu button and its list (never a row of links that can overlap) */
+.menu-btn { display: inline-flex; width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 10px; background: var(--bg); cursor: pointer; align-items: center; justify-content: center; flex: none; }
+.menu-btn span { display: block; width: 18px; height: 2px; background: var(--navy); position: relative; }
+.menu-btn span::before, .menu-btn span::after { content: ""; position: absolute; left: 0; width: 18px; height: 2px; background: var(--navy); }
+.menu-btn span::before { top: -6px; } .menu-btn span::after { top: 6px; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mobile-menu { display: none; border-top: 1px solid var(--rule); background: var(--bg); }
+.mobile-menu.open { display: block; }
+.topbar .mobile-menu nav.container { display: grid; grid-template-columns: minmax(0, 1fr); align-items: stretch; justify-content: stretch; padding-block: 0.4rem 1rem; gap: 0; }
+.mobile-menu a { padding: 0.85rem 0.2rem; border-bottom: 1px solid var(--rule); color: var(--navy); text-decoration: none; font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; }
+.mobile-menu a::after { content: "→"; color: var(--celeste); }
+@media (min-width: 760px) { .topbar .mobile-menu nav.container { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2rem; } }
+.lang-wrap { display: flex; align-items: center; gap: 0.7rem; margin-left: auto; }
+
 
 main { display: grid; gap: 6rem; padding-block: 3.5rem 0; }
 section { scroll-margin-top: 5.5rem; }
@@ -374,20 +384,26 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
 <header class="topbar">
   <div class="container">
     <a class="logo" href="index.html"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="169" height="48"></a>
-    <nav aria-label="Secciones">
-      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
-      <a href="canastas/"><span data-lang="es">La app</span><span data-lang="en">The app</span></a>
-      <a href="precios/"><span data-lang="es">Precios</span><span data-lang="en">Prices</span></a>
-      <a href="metodo.html"><span data-lang="es">Metodología</span><span data-lang="en">Methodology</span></a>
-      <a class="nav-rep" href="informes.html"><span data-lang="es">Informes</span><span data-lang="en">Reports</span></a>
-    </nav>
     <div class="lang-wrap">
-      <span class="lang-label"><span data-lang="es">Language</span><span data-lang="en">Idioma</span></span>
       <div class="lang" role="group" aria-label="Idioma / Language">
         <button type="button" id="btn-es" data-set="es" aria-pressed="true">ES</button>
         <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
       </div>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu"><span></span><span class="sr">Menú</span></button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="container" aria-label="Menú">
+      <a href="index.html#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="canastas/"><span data-lang="es">Creá tu canasta</span><span data-lang="en">Build your basket</span></a>
+      <a href="precios/"><span data-lang="es">Precios de hoy</span><span data-lang="en">Today's prices</span></a>
+      <a href="index.html#shops"><span data-lang="es">Supermercados</span><span data-lang="en">Supermarkets</span></a>
+      <a href="informes.html"><span data-lang="es">Informes</span><span data-lang="en">Reports</span></a>
+      <a href="index.html#video"><span data-lang="es">Video: qué es La Canasta</span><span data-lang="en">Video: what is La Canasta</span></a>
+      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
+      <a href="metodo.html"><span data-lang="es">Metodología y datos</span><span data-lang="en">Methodology and data</span></a>
+      <a href="index.html#suscribirse"><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></a>
+    </nav>
   </div>
 </header>
 <main class="container rep">
@@ -465,7 +481,7 @@ function setLang(l) {
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
 setLang(lang);
 </script>
-<script src="counter.js?v=6"></script>
+<script src="counter.js?v=7"></script>
 <script>
 (function () {
   // Email sign-up box. This browser remembers if you signed up (only on this device).

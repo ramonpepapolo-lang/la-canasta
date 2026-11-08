@@ -131,12 +131,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outli
 .mobile-menu a { padding: 0.85rem 0.2rem; border-bottom: 1px solid var(--rule); color: var(--navy); text-decoration: none; font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; }
 .mobile-menu a::after { content: "→"; color: var(--celeste); }
 .mainnav { min-width: 0; overflow: hidden; } .mainnav a { flex: none; }
-/* below 960px (a small laptop window, a tablet, a phone) the menu becomes the menu button, like on a phone */
-@media (max-width: 960px) {
-  .mainnav, .btn-sub { display: none; }
-  .head-actions { margin-left: auto; }
-  .menu-btn { display: inline-flex; }
-}
+/* one menu on every screen size, like on the phone: the menu button and its list */
+.mainnav, .btn-sub { display: none !important; }
+.head-actions { margin-left: auto; }
+.menu-btn { display: inline-flex; }
+@media (min-width: 760px) { .mobile-menu nav { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2rem; } }
 
 /* ---------- Hero ---------- */
 .hero-wrap { background: linear-gradient(180deg, var(--band) 0%, var(--bg) 100%); border-bottom: 1px solid var(--rule); }
@@ -437,15 +436,15 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <nav class="container" aria-label="Menú">
-      <a href="#index" data-t="navIndex">El índice</a>
-      <a href="canastas/"><span data-lang="es">La app (muy pronto)</span><span data-lang="en">The app (very soon)</span></a>
+      <a href="#index"><span data-lang="es">El índice</span><span data-lang="en">The index</span></a>
+      <a href="canastas/"><span data-lang="es">Creá tu canasta</span><span data-lang="en">Build your basket</span></a>
       <a href="precios/"><span data-lang="es">Precios de hoy</span><span data-lang="en">Today's prices</span></a>
-      <a href="#shops" data-t="navShops">Supermercados</a>
-      <a href="informes.html" data-t="navReport">Informes</a>
+      <a href="#shops"><span data-lang="es">Supermercados</span><span data-lang="en">Supermarkets</span></a>
+      <a href="informes.html"><span data-lang="es">Informes</span><span data-lang="en">Reports</span></a>
       <a href="#video"><span data-lang="es">Video: qué es La Canasta</span><span data-lang="en">Video: what is La Canasta</span></a>
       <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
       <a href="metodo.html"><span data-lang="es">Metodología y datos</span><span data-lang="en">Methodology and data</span></a>
-      <a href="#suscribirse"><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></a>
+      <a href="#suscribirse" data-gosub><span data-lang="es">Recibí el informe por email</span><span data-lang="en">Get the report by email</span></a>
     </nav>
   </div>
 </header>
@@ -1376,7 +1375,7 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
     if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}
 })();
 </script>
-<script src="counter.js?v=6"></script>
+<script src="counter.js?v=7"></script>
 <script>
 (function () {
   // Email sign-up box. This browser remembers if you signed up (only on this device).
@@ -1443,9 +1442,7 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
   var isEs = function () { return document.documentElement.lang !== "en"; };
 
   // Mobile menu
-  var mb = $("menuBtn"), mm = $("mobileMenu");
-  mb.addEventListener("click", function () { var o = mm.classList.toggle("open"); mb.setAttribute("aria-expanded", String(o)); });
-  mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { mm.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); }); });
+  // (menu button: counter.js)
 
   // WhatsApp share links
   function waHref() {
@@ -1488,6 +1485,9 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
       setTimeout(function () { $("heroSub").scrollIntoView({ block: "center" }); $("hsEmail").focus({ preventScroll: true }); }, 60);
     });
   }
+
+  // arriving from another page's menu ("Recibí el informe por email")
+  if (location.hash === "#suscribirse" && hasForm) setTimeout(function () { ($("heroSub").hidden ? $("suscribirse") : $("heroSub")).scrollIntoView({ block: "center" }); }, 300);
 
   // "Recibilo gratis" buttons jump to the top form
   document.querySelectorAll("[data-gosub]").forEach(function (a) {

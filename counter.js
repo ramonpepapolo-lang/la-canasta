@@ -98,11 +98,17 @@ var UNSUBSCRIBE_ACTION = "";
 // in Spanish and English.
 (function () {
   var tb = document.querySelector("header.topbar"); if (!tb) return;
-  var nav = tb.querySelector("nav"); if (!nav) return;
+  // the menu button opens the full list (every page, every screen size)
+  var mb = document.getElementById("menuBtn"), mm = document.getElementById("mobileMenu");
+  if (mb && mm) {
+    mb.addEventListener("click", function () { var o = mm.classList.toggle("open"); mb.setAttribute("aria-expanded", String(o)); });
+    mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { mm.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); }); });
+  }
+  var nav = tb.querySelector(".container nav.mainnav, .container > nav"); if (!nav) return;
   var hasMenu = !!tb.querySelector(".menu-btn");
   var st = document.createElement("style");
   st.textContent = ".lc-hide{display:none!important}" +
-    "header.topbar nav{min-width:0;overflow:hidden}header.topbar nav a{white-space:nowrap;flex-shrink:0}" +
+    "header.topbar .container nav{min-width:0;overflow:hidden}header.topbar .container nav a{white-space:nowrap;flex-shrink:0}" +
     ".topbar.lc-compact .mainnav,.topbar.lc-compact .btn-sub{display:none!important}" +
     ".topbar.lc-compact .head-actions{margin-left:auto}" +
     ".topbar.lc-compact .menu-btn{display:inline-flex!important}";

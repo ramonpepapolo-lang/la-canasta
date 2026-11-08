@@ -1,9 +1,9 @@
 {
- "name": "La Canasta: ¿dónde conviene comprar?",
+ "name": "La Canasta",
  "short_name": "La Canasta",
- "description": "Decile qué querés hacer (un asado, una semana saludable) y te dice a qué súper ir, cuánto sale y cómo llegar. Precios de hoy en Carrefour, Jumbo, ChangoMás y Día.",
- "id": "/canastas/?app=1",
- "start_url": "/canastas/app.html?app=1",
+ "description": "El índice diario de precios de supermercado de Argentina: precios de hoy en Carrefour, Jumbo, ChangoMás y Día.",
+ "id": "/?app=1",
+ "start_url": "/?app=1",
  "scope": "/",
  "display": "standalone",
  "orientation": "portrait",
@@ -35,8 +35,8 @@
  ],
  "shortcuts": [
   {
-   "name": "Mi canasta",
-   "url": "/canastas/app.html?app=1#canasta",
+   "name": "Índice",
+   "url": "/?app=1#index",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",
@@ -46,7 +46,7 @@
   },
   {
    "name": "Precios",
-   "url": "/canastas/app.html?app=1#precios",
+   "url": "/precios/?app=1",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",
@@ -55,8 +55,8 @@
    ]
   },
   {
-   "name": "Informe",
-   "url": "/canastas/app.html?app=1#informe",
+   "name": "Informes",
+   "url": "/informes.html?app=1",
    "icons": [
     {
      "src": "/app-icons/icon-192.png",

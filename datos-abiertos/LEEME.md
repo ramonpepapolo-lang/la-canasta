@@ -10,7 +10,7 @@
 
 ## Qué es
 
-La Canasta es un índice diario e independiente de precios de supermercados en Argentina. Todos los días, un programa lee los precios online de Carrefour, Jumbo, ChangoMás, Día y Coto. Con 1.111 productos de 45 tipos básicos (carne, leche, pan, yerba, aceite, limpieza y más) calcula un índice ponderado con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).
+La Canasta es un índice diario e independiente de precios de supermercados en Argentina. Todos los días, un programa lee los precios online de Carrefour, Jumbo, ChangoMás, Día y Coto. Con 1.018 productos de 45 tipos básicos (carne, leche, pan, yerba, aceite, limpieza y más) calcula un índice ponderado con las ponderaciones oficiales del INDEC (ENGHo 2004/05, Gran Buenos Aires).
 
 Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios).
 
@@ -51,7 +51,7 @@ Esta versión cubre del **{FIRST}** al **{LAST}** ({DAYS} días, {ROWS} precios)
 4. Los grupos se combinan con las ponderaciones del INDEC.
 5. Los días se encadenan. Un precio que se triplica o cae a un tercio de un día al otro se trata como error.
 
-La canasta tiene 1.111 productos de 45 tipos (hasta diez por tipo y súper). Se ampliaron el 1/11/2026 y el 6/11/2026 (carne vacuna, yogur, galletitas, suprema de pollo, y de cinco a diez productos por tipo y súper) y cada vez el índice se recalculó desde el primer día con los precios guardados. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
+La canasta tiene 1.018 productos de 45 tipos (hasta diez por tipo y súper). Se ampliaron el 1/11/2026 y el 6/11/2026 (carne vacuna, yogur, galletitas, suprema de pollo, y de cinco a diez productos por tipo y súper) y cada vez el índice se recalculó desde el primer día con los precios guardados. Coto se recolecta pero todavía no cuenta en el índice. Metodología completa: https://lacanastaindex.com/metodo.html
 
 ## Cómo citarlo
 
@@ -69,7 +69,7 @@ Pepa, R. (2026). *La Canasta: precios diarios de supermercados en Argentina* [Da
 
 ## What it is
 
-La Canasta is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of Carrefour, Jumbo, ChangoMás, Día and Coto. Using 1,111 products of 45 basic kinds (beef, milk, bread, yerba, oil, cleaning and more) it calculates an index weighted with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).
+La Canasta is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of Carrefour, Jumbo, ChangoMás, Día and Coto. Using 1,018 products of 45 basic kinds (beef, milk, bread, yerba, oil, cleaning and more) it calculates an index weighted with INDEC's official weights (ENGHo 2004/05, Greater Buenos Aires).
 
 This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 
@@ -85,7 +85,7 @@ This version covers **{FIRST}** to **{LAST}** ({DAYS} days, {ROWS_EN} prices).
 
 ## Method
 
-Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. The basket has 1,111 products of 45 kinds (up to ten per kind and shop); it was widened on 1 Nov 2026 and 6 Nov 2026 (beef, yoghurt, biscuits, chicken fillets, and from five to ten products per kind and shop) and each time the index was recalculated from the first day with the saved prices. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
+Each product's price is compared with the last day it was in stock (same shop, same product). Products are averaged within each kind (geometric mean, each shop weighted equally), kinds within each INDEC group, and groups with INDEC's weights. Days are chained. The basket has 1,018 products of 45 kinds (up to ten per kind and shop); it was widened on 1 Nov 2026 and 6 Nov 2026 (beef, yoghurt, biscuits, chicken fillets, and from five to ten products per kind and shop) and cleaned on 8 Nov 2026 (150 variants, dead or doubtful products out, 57 clean ones in), and each time the index was recalculated from the first day with the saved prices. Coto is collected but not yet in the index. Full method: https://lacanastaindex.com/metodo.html
 
 ## How to cite
 

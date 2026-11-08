@@ -25,40 +25,33 @@
   "2026-10-31"
  ],
  "min_in_stock": 4,
- "paid": -0.77,
- "regular": -0.45,
+ "paid": -0.84,
+ "regular": -0.44,
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -1.38
+   "pct": -1.4
   },
   {
    "shop": "Jumbo",
-   "pct": 0.81
+   "pct": 0.74
   },
   {
    "shop": "ChangoMas",
-   "pct": -1.19
+   "pct": -1.2
   },
   {
    "shop": "Dia",
-   "pct": -0.96
+   "pct": -1.14
   }
  ],
  "groups": [
-  {
-   "group": "carne_ave",
-   "name_es": "Pollo",
-   "name_en": "Chicken",
-   "in_headline": true,
-   "pct": 2.08
-  },
   {
    "group": "lacteos",
    "name_es": "Lácteos y huevos",
    "name_en": "Dairy and eggs",
    "in_headline": true,
-   "pct": 1.49
+   "pct": 1.5
   },
   {
    "group": "aguas_gaseosas",
@@ -75,25 +68,39 @@
    "pct": 0.75
   },
   {
-   "group": "cafe_te_yerba",
-   "name_es": "Café, té y yerba",
-   "name_en": "Coffee, tea and yerba",
-   "in_headline": true,
-   "pct": 0.33
-  },
-  {
    "group": "carne_vacuna",
    "name_es": "Carne vacuna",
    "name_en": "Beef",
    "in_headline": true,
-   "pct": 0.23
+   "pct": 0.28
+  },
+  {
+   "group": "cafe_te_yerba",
+   "name_es": "Café, té y yerba",
+   "name_en": "Coffee, tea and yerba",
+   "in_headline": true,
+   "pct": 0.27
   },
   {
    "group": "aceites",
    "name_es": "Aceites",
    "name_en": "Oils",
    "in_headline": true,
-   "pct": 0.13
+   "pct": 0.23
+  },
+  {
+   "group": "carne_ave",
+   "name_es": "Pollo",
+   "name_en": "Chicken",
+   "in_headline": true,
+   "pct": 0.07
+  },
+  {
+   "group": "pan_cereales",
+   "name_es": "Pan y cereales",
+   "name_en": "Bread and cereals",
+   "in_headline": true,
+   "pct": -0.76
   },
   {
    "group": "otros_alimentos",
@@ -103,13 +110,6 @@
    "pct": -1.07
   },
   {
-   "group": "pan_cereales",
-   "name_es": "Pan y cereales",
-   "name_en": "Bread and cereals",
-   "in_headline": true,
-   "pct": -1.14
-  },
-  {
    "group": "cuidado_personal",
    "name_es": "Cuidado personal",
    "name_en": "Personal care",
@@ -117,38 +117,38 @@
    "pct": -1.18
   },
   {
-   "group": "frutas",
-   "name_es": "Frutas",
-   "name_en": "Fruit",
-   "in_headline": true,
-   "pct": -2.29
-  },
-  {
    "group": "alcohol",
    "name_es": "Bebidas alcohólicas",
    "name_en": "Alcoholic drinks",
    "in_headline": true,
-   "pct": -2.61
+   "pct": -2.14
+  },
+  {
+   "group": "frutas",
+   "name_es": "Frutas",
+   "name_en": "Fruit",
+   "in_headline": true,
+   "pct": -2.74
   },
   {
    "group": "verduras",
    "name_es": "Verduras",
    "name_en": "Vegetables",
    "in_headline": true,
-   "pct": -5.14
+   "pct": -5.51
   },
   {
    "group": "limpieza",
    "name_es": "Limpieza",
    "name_en": "Cleaning products",
    "in_headline": true,
-   "pct": -7.95
+   "pct": -7.09
   }
  ],
- "products_compared": 1092,
- "products_up": 332,
- "products_down": 209,
- "products_same": 551,
+ "products_compared": 1006,
+ "products_up": 309,
+ "products_down": 195,
+ "products_same": 502,
  "top_up": [
   {
    "type": "manteca",
@@ -252,97 +252,97 @@
    "regular_pct": 0.0
   },
   {
-   "type": "cerveza",
-   "type_en": "Beer",
+   "type": "detergente",
+   "type_en": "Dish soap",
    "shop": "Carrefour",
-   "sku_id": "98151",
-   "name": "Cerveza roja Imperial 473 ml",
-   "before": 3295.0,
-   "now": 2165.29,
+   "sku_id": "138091",
+   "name": "Detergente Concentrado Cif Lima Botella 300 ml",
+   "before": 2700.0,
+   "now": 1774.29,
    "pct": -34.29,
    "regular_pct": 0.0
   }
  ],
  "promos_now": {
-  "Carrefour": 62.4,
-  "ChangoMas": 37.0,
-  "Dia": 74.4
+  "Carrefour": 54.6,
+  "ChangoMas": 36.0,
+  "Dia": 73.4
  },
  "promos_before": {
-  "Carrefour": 46.1,
-  "ChangoMas": 39.0,
-  "Dia": 73.1
+  "Carrefour": 42.0,
+  "ChangoMas": 36.9,
+  "Dia": 70.4
  },
  "series": [
   {
    "date": "2026-10-25",
-   "paid": 99.241,
-   "regular": 99.822
+   "paid": 99.249,
+   "regular": 99.729
   },
   {
    "date": "2026-10-26",
-   "paid": 100.914,
-   "regular": 99.916
+   "paid": 100.977,
+   "regular": 99.828
   },
   {
    "date": "2026-10-27",
-   "paid": 101.157,
-   "regular": 99.818
+   "paid": 101.29,
+   "regular": 99.729
   },
   {
    "date": "2026-10-28",
-   "paid": 100.273,
-   "regular": 100.236
+   "paid": 100.239,
+   "regular": 100.346
   },
   {
    "date": "2026-10-29",
-   "paid": 100.023,
-   "regular": 100.149
+   "paid": 99.898,
+   "regular": 100.291
   },
   {
    "date": "2026-10-30",
-   "paid": 99.734,
-   "regular": 100.237
+   "paid": 99.803,
+   "regular": 100.348
   },
   {
    "date": "2026-10-31",
-   "paid": 99.627,
-   "regular": 99.838
+   "paid": 99.517,
+   "regular": 99.949
   },
   {
    "date": "2026-11-01",
-   "paid": 99.849,
-   "regular": 99.893
+   "paid": 99.79,
+   "regular": 100.03
   },
   {
    "date": "2026-11-02",
-   "paid": 100.481,
-   "regular": 99.841
+   "paid": 100.573,
+   "regular": 99.947
   },
   {
    "date": "2026-11-03",
-   "paid": 101.294,
-   "regular": 100.003
+   "paid": 101.51,
+   "regular": 100.108
   },
   {
    "date": "2026-11-04",
-   "paid": 98.459,
-   "regular": 99.26
+   "paid": 98.456,
+   "regular": 99.368
   },
   {
    "date": "2026-11-05",
-   "paid": 98.113,
-   "regular": 99.274
+   "paid": 98.089,
+   "regular": 99.396
   },
   {
    "date": "2026-11-06",
-   "paid": 98.236,
-   "regular": 99.259
+   "paid": 98.235,
+   "regular": 99.381
   },
   {
    "date": "2026-11-07",
-   "paid": 98.158,
-   "regular": 99.111
+   "paid": 98.196,
+   "regular": 99.363
   }
  ],
  "ranking": {

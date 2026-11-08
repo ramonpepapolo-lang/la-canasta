@@ -156,7 +156,7 @@ def main():
     noscript = (f'<noscript><p style="padding:16px;font-family:sans-serif">La Canasta compara hoy los precios de {n_items} productos '
                 f'en Carrefour, Jumbo, ChangoMás y Día (precios del {date}). Para armar tu canasta hace falta JavaScript. '
                 f'<a href="/precios/">Ver los precios de hoy</a> · <a href="/">El índice</a></p></noscript>')
-    html = head + app + "\n" + noscript + '\n<script src="/counter.js?v=4"></script>\n</html>\n'
+    html = head + app + "\n" + noscript + '\n<script src="/counter.js?v=5"></script>\n</html>\n'
     os.makedirs(os.path.join(ROOT, "canastas"), exist_ok=True)
     with open(os.path.join(ROOT, "canastas", "app.html"), "w", encoding="utf-8") as f:
         f.write(html)

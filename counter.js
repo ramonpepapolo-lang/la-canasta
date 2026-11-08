@@ -102,13 +102,13 @@ var UNSUBSCRIBE_ACTION = "";
   var hasMenu = !!tb.querySelector(".menu-btn");
   var st = document.createElement("style");
   st.textContent = ".lc-hide{display:none!important}" +
-    "header.topbar nav{min-width:0;overflow:hidden}" +
+    "header.topbar nav{min-width:0;overflow:hidden}header.topbar nav a{white-space:nowrap;flex-shrink:0}" +
     ".topbar.lc-compact .mainnav,.topbar.lc-compact .btn-sub{display:none!important}" +
     ".topbar.lc-compact .head-actions{margin-left:auto}" +
     ".topbar.lc-compact .menu-btn{display:inline-flex!important}";
   document.head.appendChild(st);
-  var order = hasMenu ? ["#how", "#data"] :
-    ["#basket", "#data", "articulos.html", "#index", "informes.html"];
+  var order = hasMenu ? ["metodo.html", "precios/"] :
+    ["metodo.html", "#index", "precios/"];
   function links() { return Array.prototype.slice.call(nav.querySelectorAll("a")); }
   function over() { return nav.scrollWidth > nav.clientWidth + 1; }
   function fit() {

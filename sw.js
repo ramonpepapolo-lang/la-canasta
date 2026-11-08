@@ -1,8 +1,8 @@
 // La Canasta app: works offline with the last prices it saw.
 // Pages and data: network first (always today's prices when there is signal), the saved copy when there is none.
 // Logos, icons and scripts: saved copy first (they rarely change).
-const CACHE = "lc-app-v4";
-const PRECACHE = ["/canastas/", "/canastas/app.html", "/canastas/datos.json", "/canastas/catalogo.json", "/app-datos/datos.json", "/counter.js?v=4", "/manifest.webmanifest",
+const CACHE = "lc-app-v5";
+const PRECACHE = ["/canastas/", "/canastas/app.html", "/canastas/datos.json", "/canastas/catalogo.json", "/app-datos/datos.json", "/counter.js?v=5", "/manifest.webmanifest",
   "/app-icons/icon-192.png", "/la-canasta-logo/la-canasta-logo-horizontal.svg", "/la-canasta-logo/la-canasta-icon.svg"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== CACHE).map(x => caches.delete(x)))).then(() => self.clients.claim())); });

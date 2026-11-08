@@ -420,14 +420,10 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
     <a class="logo" href="#top"><img src="la-canasta-logo/la-canasta-logo-horizontal.svg" alt="La Canasta" width="155" height="44"></a>
     <nav class="mainnav" aria-label="Secciones">
       <a href="#index" data-t="navIndex">El índice</a>
-      <a href="#shops" data-t="navShops">Supermercados</a>
-      <a href="#basket" data-t="navBasket">La canasta</a>
-      <a class="opt" href="#how"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></a>
-      <a href="informes.html" data-t="navReport">Informes</a>
+      <a href="canastas/"><span data-lang="es">Creá tu canasta</span><span data-lang="en">Build your basket</span></a>
       <a href="precios/"><span data-lang="es">Precios</span><span data-lang="en">Prices</span></a>
-      <a href="canastas/"><span data-lang="es">Canastas</span><span data-lang="en">Baskets</span></a>
-      <a href="articulos.html"><span data-lang="es">Artículos</span><span data-lang="en">Articles</span></a>
-      <a class="opt" href="#data" data-t="navData">Datos y método</a>
+      <a href="metodo.html"><span data-lang="es">Metodología</span><span data-lang="en">Methodology</span></a>
+      <a href="informes.html" data-t="navReport">Informes</a>
     </nav>
     <div class="head-actions">
       <div class="lang" role="group" aria-label="Idioma / Language">
@@ -1379,7 +1375,7 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
     if (r.ok) { const ready = (await r.json()).filter(x => x.publishable); if (ready.length) { latestReport = ready[ready.length - 1]; render(); } } } catch (e) {}
 })();
 </script>
-<script src="counter.js?v=3"></script>
+<script src="counter.js?v=5"></script>
 <script>
 (function () {
   // Email sign-up box. This browser remembers if you signed up (only on this device).

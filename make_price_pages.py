@@ -526,7 +526,7 @@ function setLang(l) {
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
 setLang(lang);
 </script>
-<script src="../counter.js?v=3"></script>"""
+<script src="../counter.js?v=5"></script>"""
     def chrome(title, desc, path, body, ld):
         url = f"{SITE}/{path}"
         return f"""<!doctype html>

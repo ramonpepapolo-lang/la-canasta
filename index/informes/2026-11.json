@@ -3,13 +3,13 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.15,
+ "inflation": 0.18,
  "base_date": "2026-10-31",
- "end_date": "2026-11-08",
- "days_of_data": 8,
- "prices_collected": 114174,
+ "end_date": "2026-11-09",
+ "days_of_data": 9,
+ "prices_collected": 138119,
  "headline": {
-  "end_to_end_paid": -1.15,
+  "end_to_end_paid": 0.18,
   "end_to_end_regular": -0.7,
   "avg_paid": null,
   "avg_regular": null
@@ -17,11 +17,11 @@
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -2.6
+   "pct": -1.9
   },
   {
    "shop": "ChangoMas",
-   "pct": -0.59
+   "pct": 1.65
   },
   {
    "shop": "Dia",
@@ -29,14 +29,14 @@
   },
   {
    "shop": "Jumbo",
-   "pct": 0.06
+   "pct": 3.37
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 5.49
+   "pct": 11.36
   },
   {
    "group": "frutas",
@@ -49,29 +49,29 @@
    "pct": 1.16
   },
   {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 1.14
+  },
+  {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.76
-  },
-  {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": 0.07
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 0.06
+   "pct": 1.05
   },
   {
    "group": "carne_vacuna",
    "in_headline": true,
-   "pct": -0.05
+   "pct": 0.9
   },
   {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": -0.55
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": 0.32
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": 0.31
   },
   {
    "group": "aceites",
@@ -79,35 +79,35 @@
    "pct": -0.92
   },
   {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": -1.42
+  },
+  {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": -2.11
+   "pct": -1.62
   },
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": -3.24
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": -4.56
+   "pct": -2.54
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -4.77
+   "pct": -3.63
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -10.58
+   "pct": -6.09
   }
  ],
  "products_compared": 1018,
- "products_up": 119,
- "products_down": 133,
- "products_same": 766,
+ "products_up": 123,
+ "products_down": 111,
+ "products_same": 784,
  "top_up": [
   {
    "type": "fideos",
@@ -146,25 +146,16 @@
    "pct": 66.67
   },
   {
-   "type": "fideos",
-   "type_en": "Dry pasta",
-   "shop": "Dia",
-   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
-   "before": 1050.0,
-   "now": 1749.0,
-   "pct": 66.57
+   "type": "shampoo",
+   "type_en": "Shampoo",
+   "shop": "ChangoMas",
+   "name": "Shampoo Tresemme Hydra 500ml",
+   "before": 8201.4,
+   "now": 13669.0,
+   "pct": 66.67
   }
  ],
  "top_down": [
-  {
-   "type": "pure_tomate",
-   "type_en": "Tomato puree",
-   "shop": "ChangoMas",
-   "name": "Puré De Tomate Arcor 520 G",
-   "before": 1229.0,
-   "now": 674.0,
-   "pct": -45.16
-  },
   {
    "type": "shampoo",
    "type_en": "Shampoo",
@@ -193,13 +184,22 @@
    "pct": -43.64
   },
   {
-   "type": "arroz",
-   "type_en": "Rice",
+   "type": "jabon_ropa",
+   "type_en": "Laundry powder",
    "shop": "ChangoMas",
-   "name": "Arroz Check Largo Fino 1 Kg",
-   "before": 1489.0,
-   "now": 893.0,
-   "pct": -40.03
+   "name": "Jabón En Polvo Ala Con Bicarbonato 800 G",
+   "before": 3329.0,
+   "now": 1997.4,
+   "pct": -40.0
+  },
+  {
+   "type": "jabon_ropa",
+   "type_en": "Laundry powder",
+   "shop": "ChangoMas",
+   "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
+   "before": 11529.0,
+   "now": 6917.4,
+   "pct": -40.0
   }
  ],
  "series": [
@@ -246,6 +246,11 @@
   {
    "date": "2026-11-08",
    "paid": 98.373,
+   "regular": 99.25
+  },
+  {
+   "date": "2026-11-09",
+   "paid": 99.696,
    "regular": 99.25
   }
  ]

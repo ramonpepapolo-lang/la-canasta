@@ -1,5 +1,5 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -67,25 +67,13 @@
     "Jumbo": {
      "cheap": {
       "name": "Asado Del Centro Novillito",
-      "unit_price": 15999.0,
+      "unit_price": 19965.0,
       "promo": false
      },
      "quality": {
       "name": "Asado Del Centro Novillito",
-      "unit_price": 15999.0,
+      "unit_price": 19965.0,
       "promo": false
-     }
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Asado De Tira De Novillito 1 Kg",
-      "unit_price": 12299.0,
-      "promo": true
-     },
-     "quality": {
-      "name": "Asado De Tira De Novillito 1 Kg",
-      "unit_price": 12299.0,
-      "promo": true
      }
     },
     "Dia": {
@@ -125,25 +113,25 @@
     "Jumbo": {
      "cheap": {
       "name": "Vacio Novillito",
-      "unit_price": 17999.0,
+      "unit_price": 22289.0,
       "promo": false
      },
      "quality": {
       "name": "Vacio Novillito",
-      "unit_price": 17999.0,
+      "unit_price": 22289.0,
       "promo": false
      }
     },
     "ChangoMas": {
      "cheap": {
       "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
-      "unit_price": 16499.0,
-      "promo": true
+      "unit_price": 21199.0,
+      "promo": false
      },
      "quality": {
       "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
-      "unit_price": 16499.0,
-      "promo": true
+      "unit_price": 21199.0,
+      "promo": false
      }
     },
     "Dia": {
@@ -195,13 +183,13 @@
     "ChangoMas": {
      "cheap": {
       "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
-      "unit_price": 9441.75,
-      "promo": true
+      "unit_price": 12589.0,
+      "promo": false
      },
      "quality": {
       "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
-      "unit_price": 9441.75,
-      "promo": true
+      "unit_price": 12589.0,
+      "promo": false
      }
     },
     "Dia": {
@@ -240,9 +228,9 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Morcilla Tradicional Campo Austral Al Vacío 400 Gr",
-      "unit_price": 8316.75,
-      "promo": true
+      "name": "Morcilla La Divisa 400 G",
+      "unit_price": 18472.5,
+      "promo": false
      },
      "quality": null
     },
@@ -309,8 +297,8 @@
     "ChangoMas": {
      "cheap": {
       "name": "Carbón Vegetal 4kg",
-      "unit_price": 1466.04,
-      "promo": true
+      "unit_price": 1724.75,
+      "promo": false
      },
      "quality": null
     },
@@ -382,14 +370,6 @@
    "q": 1,
    "has_quality": false,
    "shops": {
-    "Carrefour": {
-     "cheap": {
-      "name": "Tomate x kg.",
-      "unit_price": 4999.0,
-      "promo": false
-     },
-     "quality": null
-    },
     "Jumbo": {
      "cheap": {
       "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
@@ -401,8 +381,8 @@
     "ChangoMas": {
      "cheap": {
       "name": "Tomate Redondo 500 G",
-      "unit_price": 3299.0,
-      "promo": true
+      "unit_price": 4899.0,
+      "promo": false
      },
      "quality": null
     },
@@ -502,8 +482,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Vino tinto Malbec Suter 750 ml",
-      "unit_price": 6433.33,
+      "name": "Vino tinto Don Valentín Lacrado 750 ml",
+      "unit_price": 6052.0,
       "promo": false
      },
      "quality": {
@@ -560,14 +540,14 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Cerveza rubia Andes Origen 1 lt",
-      "unit_price": 3441.0,
-      "promo": true
+      "name": "Cerveza rubia clásica Quilmes 1 lt",
+      "unit_price": 4649.0,
+      "promo": false
      },
      "quality": {
-      "name": "Cerveza rubia Andes Origen 1 lt",
-      "unit_price": 3441.0,
-      "promo": true
+      "name": "Cerveza rubia clásica Quilmes 1 lt",
+      "unit_price": 4649.0,
+      "promo": false
      }
     },
     "Jumbo": {
@@ -584,25 +564,25 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-      "unit_price": 3505.42,
-      "promo": true
+      "name": "Cerveza Clasica Quilmes Retornable 1 L",
+      "unit_price": 4649.0,
+      "promo": false
      },
      "quality": {
-      "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-      "unit_price": 3505.42,
-      "promo": true
+      "name": "Cerveza Clasica Quilmes Retornable 1 L",
+      "unit_price": 4649.0,
+      "promo": false
      }
     },
     "Dia": {
      "cheap": {
-      "name": "Cerveza Rubia St. Wendeler 500 ml.",
-      "unit_price": 2580.0,
+      "name": "Cerveza 1890 Quilmes 354 Ml.",
+      "unit_price": 2966.1,
       "promo": true
      },
      "quality": {
-      "name": "Cerveza Bajo Cero Quilmes 473 Ml.",
-      "unit_price": 2807.61,
+      "name": "Cerveza 1890 Quilmes 354 Ml.",
+      "unit_price": 2966.1,
       "promo": true
      }
     }
@@ -660,13 +640,13 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Condimento chimichurri Carrefour Classic en sobre 25 g.",
-      "unit_price": 1363.0,
-      "promo": true
+      "name": "Chimichurri 50 g.",
+      "unit_price": 2499.0,
+      "promo": false
      },
      "quality": {
-      "name": "Especias parrilla chimichurri Alicante 25 grs",
-      "unit_price": 1575.0,
+      "name": "Salsa chimichurri La Parmesana picante 300 g.",
+      "unit_price": 3599.0,
       "promo": false
      }
     },
@@ -859,14 +839,6 @@
       "unit_price": 3321.5,
       "promo": true
      }
-    },
-    "Dia": {
-     "cheap": {
-      "name": "Yogur Entero Vainilla Sachet Milkaut 900 Gr.",
-      "unit_price": 4366.67,
-      "promo": true
-     },
-     "quality": null
     }
    }
   },
@@ -920,14 +892,6 @@
    "q": 2,
    "has_quality": true,
    "shops": {
-    "Carrefour": {
-     "cheap": {
-      "name": "Pollo entero congelado x kg",
-      "unit_price": 3979.0,
-      "promo": false
-     },
-     "quality": null
-    },
     "Jumbo": {
      "cheap": {
       "name": "Pollo Fresco Con Menudos",
@@ -1107,32 +1071,32 @@
       "promo": false
      },
      "quality": {
-      "name": "Arroz integral Luccetti 1 kg.",
-      "unit_price": 2339.0,
+      "name": "Arroz parboil Lucchetti 1 kg.",
+      "unit_price": 2489.0,
       "promo": false
      }
     },
     "Jumbo": {
      "cheap": {
-      "name": "Arroz Integral 1 Kg Dos Hermanos Arroz Integral Dos Hermanos Non Gmo X1 Kg",
-      "unit_price": 2150.0,
+      "name": "Arroz Parboil 1 Kg Lucchetti",
+      "unit_price": 2750.0,
       "promo": false
      },
      "quality": {
-      "name": "Arroz Luchetti Integral X1kg",
-      "unit_price": 2650.0,
+      "name": "Arroz Parboil 1 Kg Lucchetti",
+      "unit_price": 2750.0,
       "promo": false
      }
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Arroz Integral Cañuelas 1 Kg",
-      "unit_price": 2229.0,
+      "name": "Arroz Check Largo Fino 1 Kg",
+      "unit_price": 1489.0,
       "promo": false
      },
      "quality": {
-      "name": "Arroz Lucchetti Integral 1 Kg",
-      "unit_price": 2339.0,
+      "name": "Arroz Largo Fino Lucchetti 1 Kg",
+      "unit_price": 2139.0,
       "promo": false
      }
     },
@@ -1322,7 +1286,7 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Manzana granny especial x kg.",
+      "name": "Manzana roja x kg.",
       "unit_price": 4999.0,
       "promo": false
      },
@@ -1330,8 +1294,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Manzana Pink Lady por Kg",
-      "unit_price": 3499.0,
+      "name": "Manzana Roja por Kg",
+      "unit_price": 3899.0,
       "promo": false
      },
      "quality": null
@@ -1449,7 +1413,7 @@
     "Jumbo": {
      "cheap": {
       "name": "Papa Cepillada Granel Por Kg",
-      "unit_price": 2499.0,
+      "unit_price": 2999.0,
       "promo": false
      },
      "quality": null
@@ -1482,9 +1446,9 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Queso cremoso Cremac x kg.",
-      "unit_price": 8490.0,
-      "promo": true
+      "name": "Queso cuartirolo Tremblay x kg.",
+      "unit_price": 9900.0,
+      "promo": false
      },
      "quality": null
     },
@@ -1590,8 +1554,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Yerba mate La tranquera liviana 1 kg.",
-      "unit_price": 3820.0,
+      "name": "Yerba mate Chamigo con palo 500 g.",
+      "unit_price": 3900.0,
       "promo": false
      },
      "quality": {
@@ -1602,20 +1566,20 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Yerba Mate Liviana 1 Kg La Tranquera Yerba La Tranquera liviana x1kg",
-      "unit_price": 4150.0,
+      "name": "Yerba Mate con Palo 1 Kg Nobleza Gaucha",
+      "unit_price": 5050.0,
       "promo": false
      },
      "quality": {
-      "name": "Yerba Mate Suave 1 Kg Playadito Yerba Mate Playadito Suave 1 Kg",
-      "unit_price": 5208.0,
+      "name": "Yerba Amanda Tradicional 500 Grs",
+      "unit_price": 5600.0,
       "promo": false
      }
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Yerba Mate Chamigo Sin Tacc 500g",
-      "unit_price": 3898.0,
+      "name": "Yerba Mate Chamigo Sin Tacc 1kg",
+      "unit_price": 3729.0,
       "promo": false
      },
      "quality": {
@@ -1730,13 +1694,13 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Puré De Tomate Arcor 520 G",
-      "unit_price": 674.0,
-      "promo": true
+      "name": "Puré De Tomate Check 520g",
+      "unit_price": 849.0,
+      "promo": false
      },
      "quality": {
       "name": "Puré De Tomate Arcor 520 G",
-      "unit_price": 674.0,
+      "unit_price": 899.0,
       "promo": true
      }
     },
@@ -1829,18 +1793,6 @@
      "quality": {
       "name": "Picada Especial",
       "unit_price": 12999.0,
-      "promo": false
-     }
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Carne Picada Magra 800g",
-      "unit_price": 16399.0,
-      "promo": false
-     },
-     "quality": {
-      "name": "Carne Picada Magra 800g",
-      "unit_price": 16399.0,
       "promo": false
      }
     },
@@ -2071,8 +2023,8 @@
       "promo": false
      },
      "quality": {
-      "name": "Té Clásico Green Hills 25 Saquitos",
-      "unit_price": 1569.0,
+      "name": "Té Negro La Virginia Intenso 20 Saquitos",
+      "unit_price": 1049.0,
       "promo": false
      }
     },
@@ -2298,13 +2250,13 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Agua Mineral Sin Gas Villa Del Sur 2.25l",
-      "unit_price": 1019.62,
+      "name": "Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt",
+      "unit_price": 1116.15,
       "promo": true
      },
      "quality": {
-      "name": "Agua Mineral Sin Gas Villa Del Sur 2.25l",
-      "unit_price": 1019.62,
+      "name": "Agua Mineral De Manantial Sin Gas Eco De Los Andes 2 Lt",
+      "unit_price": 1116.15,
       "promo": true
      }
     },
@@ -2332,13 +2284,13 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Detergente Concentrado Cif Lima Botella 500 ml",
-      "unit_price": 5261.54,
+      "name": "Detergente Magistral Ultra de limón Doy Pack 450 ml",
+      "unit_price": 6278.67,
       "promo": true
      },
      "quality": {
-      "name": "Detergente Concentrado Cif Lima Botella 500 ml",
-      "unit_price": 5261.54,
+      "name": "Detergente Magistral Ultra de limón Doy Pack 450 ml",
+      "unit_price": 6278.67,
       "promo": true
      }
     },
@@ -2390,20 +2342,20 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Lavandina Ayudín triple poder pureza glaciar 1 l.",
-      "unit_price": 1329.25,
-      "promo": true
+      "name": "Lavandina Ayudín original 1 l.",
+      "unit_price": 1455.0,
+      "promo": false
      },
      "quality": {
-      "name": "Lavandina Ayudín triple poder pureza glaciar 1 l.",
-      "unit_price": 1329.25,
-      "promo": true
+      "name": "Lavandina Ayudín original 1 l.",
+      "unit_price": 1455.0,
+      "promo": false
      }
     },
     "Jumbo": {
      "cheap": {
-      "name": "Lavandina Heroe Clasica 2lt",
-      "unit_price": 1250.0,
+      "name": "Lavandina Limpialin Clasica 25g 4lt",
+      "unit_price": 1050.0,
       "promo": false
      },
      "quality": {
@@ -2414,8 +2366,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Lavandina Odex 2 Lts",
-      "unit_price": 999.5,
+      "name": "Lavandina Comun Odex X 4 L",
+      "unit_price": 974.75,
       "promo": true
      },
      "quality": {
@@ -2426,8 +2378,8 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Lavandina Clasica Heroe 2 Lt.",
-      "unit_price": 1145.0,
+      "name": "Lavandina DIA Tradicional 4 Lt.",
+      "unit_price": 1047.5,
       "promo": false
      },
      "quality": {
@@ -2530,14 +2482,14 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Shampoo Tresemme Hydra 500ml",
-      "unit_price": 16402.8,
-      "promo": true
+      "name": "Shampoo Sedal Ceramidas 340ml",
+      "unit_price": 18791.18,
+      "promo": false
      },
      "quality": {
-      "name": "Shampoo Tresemme Hydra 500ml",
-      "unit_price": 16402.8,
-      "promo": true
+      "name": "Shampoo Sedal Ceramidas 340ml",
+      "unit_price": 18791.18,
+      "promo": false
      }
     },
     "Dia": {
@@ -2673,7 +2625,7 @@
     "Jumbo": {
      "cheap": {
       "name": "Milanesa Nalga Novillito",
-      "unit_price": 17999.0,
+      "unit_price": 19499.0,
       "promo": false
      },
      "quality": null
@@ -2714,8 +2666,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Cuadril Churrasco De Novillito 700 G",
-      "unit_price": 21299.0,
+      "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
+      "unit_price": 25199.0,
       "promo": false
      },
      "quality": null
@@ -2822,6 +2774,14 @@
      },
      "quality": null
     },
+    "Jumbo": {
+     "cheap": {
+      "name": "Lomo Premium",
+      "unit_price": 48999.0,
+      "promo": false
+     },
+     "quality": null
+    },
     "ChangoMas": {
      "cheap": {
       "name": "Lomo De Novillito Envasado Al Vacío 1,2 Kg",
@@ -2892,8 +2852,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Matambre Medio Novillito",
-      "unit_price": 14999.0,
+      "name": "Matambre Novillito",
+      "unit_price": 17895.0,
       "promo": false
      },
      "quality": null
@@ -2901,8 +2861,8 @@
     "ChangoMas": {
      "cheap": {
       "name": "Matambre De Novillito Envasado Al Vacío 1.8 Kg",
-      "unit_price": 13889.0,
-      "promo": true
+      "unit_price": 19799.0,
+      "promo": false
      },
      "quality": null
     },
@@ -3128,6 +3088,14 @@
    "q": 1,
    "has_quality": false,
    "shops": {
+    "Jumbo": {
+     "cheap": {
+      "name": "Falda Novillito",
+      "unit_price": 8145.0,
+      "promo": false
+     },
+     "quality": null
+    },
     "Dia": {
      "cheap": {
       "name": "Falda Parrillera X kg",
@@ -3156,8 +3124,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Molleja Fresca",
-      "unit_price": 27999.0,
+      "name": "Molleja Congelada",
+      "unit_price": 48249.0,
       "promo": false
      },
      "quality": null
@@ -3172,14 +3140,6 @@
    "q": 0.5,
    "has_quality": false,
    "shops": {
-    "Carrefour": {
-     "cheap": {
-      "name": "Chinchulín escurrido x kg",
-      "unit_price": 6490.0,
-      "promo": false
-     },
-     "quality": null
-    },
     "Jumbo": {
      "cheap": {
       "name": "Chinchulin Congelado",
@@ -3209,8 +3169,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Bondiola de cerdo x kg",
-      "unit_price": 10500.0,
+      "name": "Bondiola finas hierbas Etiqueta Negra x kg",
+      "unit_price": 15000.0,
       "promo": false
      },
      "quality": null
@@ -3218,15 +3178,7 @@
     "Jumbo": {
      "cheap": {
       "name": "Bondiola de Cerdo Fresca",
-      "unit_price": 10599.0,
-      "promo": false
-     },
-     "quality": null
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Bondiola en Trozo 900 G",
-      "unit_price": 13499.0,
+      "unit_price": 22849.0,
       "promo": false
      },
      "quality": null
@@ -3260,7 +3212,7 @@
     "Jumbo": {
      "cheap": {
       "name": "Carre De Cerdo Con Hueso Fresco",
-      "unit_price": 7499.0,
+      "unit_price": 7749.0,
       "promo": false
      },
      "quality": null
@@ -3294,16 +3246,16 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Suprema de pollo al vacio Que Rico x kg",
-      "unit_price": 22500.0,
+      "name": "Supremas de pollo x kg",
+      "unit_price": 11200.0,
       "promo": false
      },
      "quality": null
     },
     "Jumbo": {
      "cheap": {
-      "name": "Supremas de Pollo 360 Grs x 4 Un Granja del Sol",
-      "unit_price": 31805.56,
+      "name": "Suprema De Pollo Granel Fresca",
+      "unit_price": 12449.0,
       "promo": false
      },
      "quality": null
@@ -3538,7 +3490,7 @@
      },
      "quality": {
       "name": "Jamón Cocido Paladini Feteado Fino 200 Gr.",
-      "unit_price": 40195.0,
+      "unit_price": 42700.0,
       "promo": false
      }
     }
@@ -3590,9 +3542,9 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Queso Tybo En Fetas Dia 170 Gr.",
-      "unit_price": 26411.76,
-      "promo": true
+      "name": "Queso Tybo Feteado Gran Aldea 180 Gr.",
+      "unit_price": 19388.89,
+      "promo": false
      },
      "quality": {
       "name": "Queso Danbo Fetas La Paulina 500 Gr.",
@@ -3671,9 +3623,9 @@
       "promo": true
      },
      "quality": {
-      "name": "Mortadela mini Cagnoli 300 g.",
-      "unit_price": 14663.33,
-      "promo": true
+      "name": "Mortadela Paladini mini 300 g.",
+      "unit_price": 16333.33,
+      "promo": false
      }
     },
     "Jumbo": {
@@ -3690,9 +3642,9 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Mortadela Mini Campo Austral 300 G",
-      "unit_price": 13230.0,
-      "promo": false
+      "name": "Mortadela Cagnoli 300 G",
+      "unit_price": 14672.5,
+      "promo": true
      },
      "quality": {
       "name": "Mortadela Cagnoli 300 G",
@@ -3703,12 +3655,12 @@
     "Dia": {
      "cheap": {
       "name": "Mortadela Bocha Paladini 300 Gr.",
-      "unit_price": 16333.33,
+      "unit_price": 18633.33,
       "promo": false
      },
      "quality": {
       "name": "Mortadela Bocha Paladini 300 Gr.",
-      "unit_price": 16333.33,
+      "unit_price": 18633.33,
       "promo": false
      }
     }
@@ -3878,8 +3830,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Queso crema entero San ignacio en pote 480 g.",
-      "unit_price": 12291.67,
+      "name": "Queso crema untable Bulnez clásico en pote 180 grs",
+      "unit_price": 13277.78,
       "promo": false
      },
      "quality": {
@@ -3919,8 +3871,8 @@
       "promo": true
      },
      "quality": {
-      "name": "Queso Crema Clásico Casancrem 290 Gr.",
-      "unit_price": 13413.79,
+      "name": "Queso Crema Clásico Casancrem 500 Gr.",
+      "unit_price": 12000.0,
       "promo": true
      }
     }
@@ -4133,8 +4085,8 @@
       "promo": false
      },
      "quality": {
-      "name": "Ravioles La salteña de pollo y espinaca flow pack 900 g.",
-      "unit_price": 10044.44,
+      "name": "Ravioles de ricota La salteña 450 g.",
+      "unit_price": 10111.11,
       "promo": false
      }
     },
@@ -4423,8 +4375,8 @@
     "ChangoMas": {
      "cheap": {
       "name": "Palta Hass 140gr",
-      "unit_price": 5990.0,
-      "promo": true
+      "unit_price": 7999.0,
+      "promo": false
      },
      "quality": null
     }
@@ -4508,8 +4460,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Choclo x uni",
-      "unit_price": 1490.0,
+      "name": "Choclo dulce Rocky en bandeja 2 uni",
+      "unit_price": 8490.0,
       "promo": false
      },
      "quality": null
@@ -4518,6 +4470,14 @@
      "cheap": {
       "name": "Choclo X Unidad",
       "unit_price": 2199.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "Dia": {
+     "cheap": {
+      "name": "Choclo en Bandeja 1 Un.",
+      "unit_price": 5690.0,
       "promo": false
      },
      "quality": null
@@ -4796,8 +4756,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Brocoli 500 Grs Cuisine & Co",
-      "unit_price": 12400.0,
+      "name": "Brócoli x 500 Grs",
+      "unit_price": 5499.0,
       "promo": false
      },
      "quality": null
@@ -5052,9 +5012,9 @@
       "promo": false
      },
      "quality": {
-      "name": "Sal Fina Dos Anclas 500g",
-      "unit_price": 2638.5,
-      "promo": true
+      "name": "Sal Fina Celusal Paquete 500 Gr",
+      "unit_price": 3598.0,
+      "promo": false
      }
     },
     "Dia": {
@@ -5105,13 +5065,13 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Pimienta Negra Molida Dos Anclas 25 Gr",
-      "unit_price": 50092.0,
+      "name": "Pimienta Negra Dos Anclas En Grano 50g",
+      "unit_price": 50526.0,
       "promo": true
      },
      "quality": {
-      "name": "Pimienta Negra Molida Dos Anclas 25 Gr",
-      "unit_price": 50092.0,
+      "name": "Pimienta Negra Dos Anclas En Grano 50g",
+      "unit_price": 50526.0,
       "promo": true
      }
     },
@@ -5209,8 +5169,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Aceite De Oliva Puro X 900 Ml Cocinero",
-      "unit_price": 24333.33,
+      "name": "Aceite De Oliva 2 Lts Pisi",
+      "unit_price": 20200.0,
       "promo": false
      },
      "quality": {
@@ -5279,8 +5239,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Ketchup D' Fiesta 220 G",
-      "unit_price": 6540.91,
+      "name": "Ketchup Natura 500 G",
+      "unit_price": 6838.0,
       "promo": false
      },
      "quality": {
@@ -5437,8 +5397,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Miel Líquida 340 Grs Cuisine & Co",
-      "unit_price": 16617.65,
+      "name": "Miel Multifloral 500 Grs Cuisine & Co Miel De Abejas 500 Gr Cuisine & Co",
+      "unit_price": 15700.0,
       "promo": false
      },
      "quality": null
@@ -5495,14 +5455,14 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Cacao En Polvo Nesquik Original 800 G",
-      "unit_price": 10566.75,
-      "promo": true
+      "name": "Cacao Arcoa En Polvo 360g",
+      "unit_price": 12247.22,
+      "promo": false
      },
      "quality": {
-      "name": "Cacao En Polvo Nesquik Original 800 G",
-      "unit_price": 10566.75,
-      "promo": true
+      "name": "Cacao Chocolino Fortificado 800g",
+      "unit_price": 13011.25,
+      "promo": false
      }
     },
     "Dia": {
@@ -5645,9 +5605,9 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Copos de maiz Carrefour Classic 400 g.",
-      "unit_price": 6652.75,
-      "promo": true
+      "name": "Copos de maíz 3 Arroyos azucarados bolsa 500 g.",
+      "unit_price": 7098.0,
+      "promo": false
      },
      "quality": {
       "name": "Granola Kelloggs de banana y manzana 200 grs",
@@ -6217,8 +6177,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Pan para panchos Mimago 240 grs",
-      "unit_price": 2159.0,
+      "name": "Pan para panchos Carrefour Classic 240 grs",
+      "unit_price": 2490.0,
       "promo": false
      },
      "quality": {
@@ -6229,8 +6189,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Pan de Pancho Lactal 210 Grs x 6 Un",
-      "unit_price": 2950.0,
+      "name": "Pan para Pancho x 6 Un",
+      "unit_price": 2890.0,
       "promo": false
      },
      "quality": {
@@ -6357,13 +6317,13 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Almidon De Maiz Maizena 220g",
-      "unit_price": 11222.73,
+      "name": "Almidon De Maiz Maizena 500g",
+      "unit_price": 8418.0,
       "promo": false
      },
      "quality": {
-      "name": "Almidon De Maiz Maizena 220g",
-      "unit_price": 11222.73,
+      "name": "Almidon De Maiz Maizena 500g",
+      "unit_price": 8418.0,
       "promo": false
      }
     },
@@ -6682,12 +6642,12 @@
     "Dia": {
      "cheap": {
       "name": "Fernet Negro Buhero 700 Ml.",
-      "unit_price": 16525.71,
+      "unit_price": 17262.86,
       "promo": false
      },
      "quality": {
       "name": "Fernet Negro Buhero 700 Ml.",
-      "unit_price": 16525.71,
+      "unit_price": 17262.86,
       "promo": false
      }
     }
@@ -6715,8 +6675,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Vino Blanco Torrontés 750 Cc Finca Natalina",
-      "unit_price": 7666.67,
+      "name": "Vino Blanco 750 Cc Toro",
+      "unit_price": 4200.0,
       "promo": false
      },
      "quality": {
@@ -6732,8 +6692,8 @@
       "promo": true
      },
      "quality": {
-      "name": "Vino Blanco Santa Julia Chardonnay 750 Ml",
-      "unit_price": 8745.33,
+      "name": "Vino Blanco Trapiche Reserva Chardonnay 750 Ml",
+      "unit_price": 16638.67,
       "promo": false
      }
     },
@@ -6761,20 +6721,20 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Suavizante para ropa Vivere Clásico Doypack 3 lts",
-      "unit_price": 4138.33,
+      "name": "Suavizante para ropa Querubín flores silvestres repuesto 3 l.",
+      "unit_price": 4266.67,
       "promo": false
      },
      "quality": {
-      "name": "Suavizante para ropa Vivere Clásico Doypack 3 lts",
-      "unit_price": 4138.33,
+      "name": "Suavizante Downy Lirios Do Campo 500mL, Rinde 2L, Perfume de Larga Duración",
+      "unit_price": 5137.5,
       "promo": false
      }
     },
     "Jumbo": {
      "cheap": {
-      "name": "Suavizante para Ropa Frescura Matinal 900 Ml Héroe",
-      "unit_price": 3888.89,
+      "name": "Suavizante para Ropa Plancha Fácil 900 Ml Vivere Suavizante Plancha Facil Dp 900ml Vivere",
+      "unit_price": 4000.0,
       "promo": false
      },
      "quality": {
@@ -6877,9 +6837,9 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Limpiador líquido Odex limón 900 cc.",
-      "unit_price": 1877.78,
-      "promo": false
+      "name": "Limpiador líquido Carrefour Essential limón 4 lts",
+      "unit_price": 1430.97,
+      "promo": true
      },
      "quality": {
       "name": "Limpiador líquido Procenex pisos marina 1.8 l.",
@@ -7039,14 +6999,14 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Desodorante Antitranspirante Rexona V8 Roll-On 50 ml",
-      "unit_price": 2232.3,
-      "promo": true
+      "name": "Desodorante antitranspirante Etiquet Sport roll on 60 g.",
+      "unit_price": 2479.0,
+      "promo": false
      },
      "quality": {
-      "name": "Desodorante Antitranspirante Rexona V8 Roll-On 50 ml",
-      "unit_price": 2232.3,
-      "promo": true
+      "name": "Desodorante antitranspirante Etiquet Sport roll on 60 g.",
+      "unit_price": 2479.0,
+      "promo": false
      }
     },
     "Jumbo": {
@@ -7075,13 +7035,13 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Desodorante Antitranspirante Rexona V8 Roll-On 50 Ml.",
-      "unit_price": 2226.0,
+      "name": "Desodorante Roll-On Power Dry Rexona 50 Ml.",
+      "unit_price": 2229.5,
       "promo": true
      },
      "quality": {
-      "name": "Desodorante Antitranspirante Rexona V8 Roll-On 50 Ml.",
-      "unit_price": 2226.0,
+      "name": "Desodorante Roll-On Power Dry Rexona 50 Ml.",
+      "unit_price": 2229.5,
       "promo": true
      }
     }
@@ -7295,8 +7255,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Dulce De Batata Check Con Vainilla 500 G",
-      "unit_price": 5198.0,
+      "name": "Dulce De Batata Orieta Con Chocolate 500 G",
+      "unit_price": 5998.0,
       "promo": false
      },
      "quality": {

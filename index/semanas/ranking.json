@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-08",
-   "2026-11-08"
+   "2026-11-09"
   ],
-  "days_of_data": 1,
-  "n_products": 304,
+  "days_of_data": 2,
+  "n_products": 319,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1225187.75,
+    "total": 1285693.25,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1299375.21,
-    "pct": 6.06
+    "total": 1379860.48,
+    "pct": 7.32
    },
    {
     "shop": "ChangoMas",
-    "total": 1306084.55,
-    "pct": 6.6
+    "total": 1388300.55,
+    "pct": 7.98
    },
    {
     "shop": "Jumbo",
-    "total": 1491124.0,
-    "pct": 21.71
+    "total": 1572324.0,
+    "pct": 22.29
    }
   ],
   "cheapest_count": {
-   "Carrefour": 118,
+   "Carrefour": 121,
    "Jumbo": 5,
    "ChangoMas": 132,
-   "Dia": 129
+   "Dia": 141
   },
   "examples": [
    {
@@ -51,6 +51,15 @@
     "pct": 115.1
    },
    {
+    "ean": "7622202816437",
+    "name": "Alfajor Shot Blanco Triple 60 G",
+    "low_shop": "ChangoMas",
+    "low": 1343.4,
+    "high_shop": "Jumbo",
+    "high": 2850.0,
+    "pct": 112.1
+   },
+   {
     "ean": "7790070417916",
     "name": "Postre Exquisita Dulce De Leche 80g",
     "low_shop": "ChangoMas",
@@ -58,15 +67,6 @@
     "high_shop": "Jumbo",
     "high": 1650.0,
     "pct": 108.5
-   },
-   {
-    "ean": "7500435252935",
-    "name": "Suavizante Concentrado Brisa Suave 350 Ml Downy",
-    "low_shop": "ChangoMas",
-    "low": 3898.95,
-    "high_shop": "Jumbo",
-    "high": 7650.0,
-    "pct": 96.2
    }
   ]
  },

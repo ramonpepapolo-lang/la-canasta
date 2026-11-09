@@ -1,5 +1,5 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,12 +93,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 16985.97,
+     "total": 12997.76,
      "complete": false,
      "missing": [
-      "pan"
+      "pan",
+      "tomate"
      ],
-     "kcal": 2696,
+     "kcal": 2674,
      "items": [
       {
        "ing": "asado_tira",
@@ -170,11 +171,7 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 4999.0,
-       "cost": 599.88,
-       "name": "Tomate x kg.",
-       "sku_id": "8051",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "cebolla",
@@ -200,21 +197,21 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6433.33,
-       "cost": 1608.33,
-       "name": "Vino tinto Malbec Suter 750 ml",
-       "sku_id": "10564",
+       "unit_price": 6052.0,
+       "cost": 1513.0,
+       "name": "Vino tinto Don Valentín Lacrado 750 ml",
+       "sku_id": "143611",
        "promo": false
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3441.0,
-       "cost": 1720.5,
-       "name": "Cerveza rubia Andes Origen 1 lt",
-       "sku_id": "10786",
-       "promo": true
+       "unit_price": 4649.0,
+       "cost": 2324.5,
+       "name": "Cerveza rubia clásica Quilmes 1 lt",
+       "sku_id": "9255",
+       "promo": false
       },
       {
        "ing": "gaseosa",
@@ -230,11 +227,11 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1363.0,
-       "cost": 1363.0,
-       "name": "Condimento chimichurri Carrefour Classic en sobre 25 g.",
-       "sku_id": "172762",
-       "promo": true
+       "unit_price": 2499.0,
+       "cost": 2499.0,
+       "name": "Chimichurri 50 g.",
+       "sku_id": "8717",
+       "promo": false
       },
       {
        "ing": "sal_gruesa",
@@ -248,12 +245,13 @@
       }
      ],
      "lacks": [
-      "pan"
+      "pan",
+      "tomate"
      ],
-     "fixed_total": 2858.0
+     "fixed_total": 3994.0
     },
     "Jumbo": {
-     "total": 19365.22,
+     "total": 14297.14,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -262,8 +260,8 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 15999.0,
-       "cost": 4799.7,
+       "unit_price": 19965.0,
+       "cost": 5989.5,
        "name": "Asado Del Centro Novillito",
        "sku_id": "322124",
        "promo": false
@@ -272,8 +270,8 @@
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 17999.0,
-       "cost": 2699.85,
+       "unit_price": 22289.0,
+       "cost": 3343.35,
        "name": "Vacio Novillito",
        "sku_id": "330346",
        "promo": false
@@ -413,52 +411,49 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 16710.3,
+     "total": 15043.76,
      "complete": false,
      "missing": [
+      "asado_tira",
       "lechuga"
      ],
-     "kcal": 2948,
+     "kcal": 2078,
      "items": [
       {
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 12299.0,
-       "cost": 3689.7,
-       "name": "Asado De Tira De Novillito 1 Kg",
-       "sku_id": "112394",
-       "promo": true
+       "missing": true
       },
       {
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 16499.0,
-       "cost": 2474.85,
+       "unit_price": 21199.0,
+       "cost": 3179.85,
        "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
        "sku_id": "111741",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 9441.75,
-       "cost": 1133.01,
+       "unit_price": 12589.0,
+       "cost": 1510.68,
        "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
        "sku_id": "161138",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 8316.75,
-       "cost": 499.0,
-       "name": "Morcilla Tradicional Campo Austral Al Vacío 400 Gr",
-       "sku_id": "161131",
-       "promo": true
+       "unit_price": 18472.5,
+       "cost": 1108.35,
+       "name": "Morcilla La Divisa 400 G",
+       "sku_id": "213933",
+       "promo": false
       },
       {
        "ing": "pan",
@@ -474,11 +469,11 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1466.04,
-       "cost": 879.62,
+       "unit_price": 1724.75,
+       "cost": 1034.85,
        "name": "Carbón Vegetal 4kg",
        "sku_id": "169821",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "provoleta",
@@ -494,11 +489,11 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 3299.0,
-       "cost": 395.88,
+       "unit_price": 4899.0,
+       "cost": 587.88,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "cebolla",
@@ -530,11 +525,11 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3505.42,
-       "cost": 1752.71,
-       "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-       "sku_id": "228806",
-       "promo": true
+       "unit_price": 4649.0,
+       "cost": 2324.5,
+       "name": "Cerveza Clasica Quilmes Retornable 1 L",
+       "sku_id": "545",
+       "promo": false
       },
       {
        "ing": "gaseosa",
@@ -568,12 +563,13 @@
       }
      ],
      "lacks": [
+      "asado_tira",
       "lechuga"
      ],
      "fixed_total": 3198.0
     },
     "Dia": {
-     "total": 17592.88,
+     "total": 12357.13,
      "complete": false,
      "missing": [
       "pan"
@@ -690,10 +686,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2580.0,
-       "cost": 1290.0,
-       "name": "Cerveza Rubia St. Wendeler 500 ml.",
-       "sku_id": "240514",
+       "unit_price": 2966.1,
+       "cost": 1483.05,
+       "name": "Cerveza 1890 Quilmes 354 Ml.",
+       "sku_id": "14806",
        "promo": true
       },
       {
@@ -734,20 +730,18 @@
     }
    },
    "ranking": [
-    "Carrefour",
-    "ChangoMas",
     "Dia",
-    "Jumbo"
+    "Carrefour",
+    "Jumbo",
+    "ChangoMas"
    ],
-   "cheapest": "Carrefour",
+   "cheapest": "Dia",
    "common": [
-    "asado_tira",
     "vacio",
     "chorizo",
     "morcilla",
     "carbon",
     "provoleta",
-    "tomate",
     "cebolla",
     "vino",
     "cerveza",
@@ -864,10 +858,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 54469.94,
-     "complete": true,
-     "missing": [],
-     "kcal": 19267,
+     "total": 40251.31,
+     "complete": false,
+     "missing": [
+      "pollo",
+      "tomate"
+     ],
+     "kcal": 16666,
      "items": [
       {
        "ing": "avena",
@@ -913,11 +910,7 @@
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3979.0,
-       "cost": 5968.5,
-       "name": "Pollo entero congelado x kg",
-       "sku_id": "105063",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "atun",
@@ -975,8 +968,8 @@
        "fixed": false,
        "unit_price": 4999.0,
        "cost": 4999.0,
-       "name": "Manzana granny especial x kg.",
-       "sku_id": "61585",
+       "name": "Manzana roja x kg.",
+       "sku_id": "8918",
        "promo": false
       },
       {
@@ -993,11 +986,7 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 4999.0,
-       "cost": 3499.3,
-       "name": "Tomate x kg.",
-       "sku_id": "8051",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "zanahoria",
@@ -1033,11 +1022,11 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 8490.0,
-       "cost": 2122.5,
-       "name": "Queso cremoso Cremac x kg.",
-       "sku_id": "19862",
-       "promo": true
+       "unit_price": 9900.0,
+       "cost": 2475.0,
+       "name": "Queso cuartirolo Tremblay x kg.",
+       "sku_id": "17378",
+       "promo": false
       },
       {
        "ing": "aceite",
@@ -1053,18 +1042,21 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3820.0,
-       "cost": 1910.0,
-       "name": "Yerba mate La tranquera liviana 1 kg.",
-       "sku_id": "119505",
+       "unit_price": 3900.0,
+       "cost": 1950.0,
+       "name": "Yerba mate Chamigo con palo 500 g.",
+       "sku_id": "86695",
        "promo": false
       }
      ],
-     "lacks": [],
+     "lacks": [
+      "pollo",
+      "tomate"
+     ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 60977.46,
+     "total": 45726.33,
      "complete": false,
      "missing": [
       "naranja"
@@ -1145,10 +1137,10 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2150.0,
-       "cost": 1075.0,
-       "name": "Arroz Integral 1 Kg Dos Hermanos Arroz Integral Dos Hermanos Non Gmo X1 Kg",
-       "sku_id": "346490",
+       "unit_price": 2750.0,
+       "cost": 1375.0,
+       "name": "Arroz Parboil 1 Kg Lucchetti",
+       "sku_id": "403671",
        "promo": false
       },
       {
@@ -1175,10 +1167,10 @@
        "ing": "manzana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3499.0,
-       "cost": 3499.0,
-       "name": "Manzana Pink Lady por Kg",
-       "sku_id": "7489",
+       "unit_price": 3899.0,
+       "cost": 3899.0,
+       "name": "Manzana Roja por Kg",
+       "sku_id": "10238",
        "promo": false
       },
       {
@@ -1221,8 +1213,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 2499.0,
+       "unit_price": 2999.0,
+       "cost": 2999.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -1251,10 +1243,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4150.0,
-       "cost": 2075.0,
-       "name": "Yerba Mate Liviana 1 Kg La Tranquera Yerba La Tranquera liviana x1kg",
-       "sku_id": "391384",
+       "unit_price": 5050.0,
+       "cost": 2525.0,
+       "name": "Yerba Mate con Palo 1 Kg Nobleza Gaucha",
+       "sku_id": "311230",
        "promo": false
       }
      ],
@@ -1264,7 +1256,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 50154.23,
+     "total": 38385.43,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1343,10 +1335,10 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2229.0,
-       "cost": 1114.5,
-       "name": "Arroz Integral Cañuelas 1 Kg",
-       "sku_id": "222521",
+       "unit_price": 1489.0,
+       "cost": 744.5,
+       "name": "Arroz Check Largo Fino 1 Kg",
+       "sku_id": "16210",
        "promo": false
       },
       {
@@ -1393,11 +1385,11 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 3299.0,
-       "cost": 2309.3,
+       "unit_price": 4899.0,
+       "cost": 3429.3,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "zanahoria",
@@ -1453,10 +1445,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3898.0,
-       "cost": 1949.0,
-       "name": "Yerba Mate Chamigo Sin Tacc 500g",
-       "sku_id": "169651",
+       "unit_price": 3729.0,
+       "cost": 1864.5,
+       "name": "Yerba Mate Chamigo Sin Tacc 1kg",
+       "sku_id": "171418",
        "promo": false
       }
      ],
@@ -1464,10 +1456,12 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 51955.12,
-     "complete": true,
-     "missing": [],
-     "kcal": 19267,
+     "total": 37160.45,
+     "complete": false,
+     "missing": [
+      "yogur"
+     ],
+     "kcal": 18667,
      "items": [
       {
        "ing": "avena",
@@ -1493,11 +1487,7 @@
        "ing": "yogur",
        "qty": 1,
        "fixed": false,
-       "unit_price": 4366.67,
-       "cost": 4366.67,
-       "name": "Yogur Entero Vainilla Sachet Milkaut 900 Gr.",
-       "sku_id": "304360",
-       "promo": true
+       "missing": true
       },
       {
        "ing": "huevos",
@@ -1660,30 +1650,29 @@
        "promo": true
       }
      ],
-     "lacks": [],
+     "lacks": [
+      "yogur"
+     ],
      "fixed_total": 0
     }
    },
    "ranking": [
-    "ChangoMas",
     "Dia",
+    "ChangoMas",
     "Carrefour",
     "Jumbo"
    ],
-   "cheapest": "ChangoMas",
+   "cheapest": "Dia",
    "common": [
     "avena",
     "leche",
-    "yogur",
     "huevos",
-    "pollo",
     "atun",
     "lentejas",
     "arroz",
     "pan_lactal",
     "banana",
     "manzana",
-    "tomate",
     "zanahoria",
     "cebolla",
     "papa",
@@ -1795,12 +1784,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 51552.64,
+     "total": 45976.64,
      "complete": false,
      "missing": [
-      "carne_picada"
+      "carne_picada",
+      "pollo"
      ],
-     "kcal": 27406,
+     "kcal": 24931,
      "items": [
       {
        "ing": "fideos",
@@ -1866,10 +1856,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3820.0,
-       "cost": 1910.0,
-       "name": "Yerba mate La tranquera liviana 1 kg.",
-       "sku_id": "119505",
+       "unit_price": 3900.0,
+       "cost": 1950.0,
+       "name": "Yerba mate Chamigo con palo 500 g.",
+       "sku_id": "86695",
        "promo": false
       },
       {
@@ -1892,11 +1882,7 @@
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3979.0,
-       "cost": 5968.5,
-       "name": "Pollo entero congelado x kg",
-       "sku_id": "105063",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "papa",
@@ -1952,11 +1938,11 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 8490.0,
-       "cost": 2122.5,
-       "name": "Queso cremoso Cremac x kg.",
-       "sku_id": "19862",
-       "promo": true
+       "unit_price": 9900.0,
+       "cost": 2475.0,
+       "name": "Queso cuartirolo Tremblay x kg.",
+       "sku_id": "17378",
+       "promo": false
       },
       {
        "ing": "mayonesa",
@@ -1980,12 +1966,13 @@
       }
      ],
      "lacks": [
-      "carne_picada"
+      "carne_picada",
+      "pollo"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 53613.34,
+     "total": 48614.84,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2004,10 +1991,10 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2150.0,
-       "cost": 1075.0,
-       "name": "Arroz Integral 1 Kg Dos Hermanos Arroz Integral Dos Hermanos Non Gmo X1 Kg",
-       "sku_id": "346490",
+       "unit_price": 2750.0,
+       "cost": 1375.0,
+       "name": "Arroz Parboil 1 Kg Lucchetti",
+       "sku_id": "403671",
        "promo": false
       },
       {
@@ -2054,10 +2041,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4150.0,
-       "cost": 2075.0,
-       "name": "Yerba Mate Liviana 1 Kg La Tranquera Yerba La Tranquera liviana x1kg",
-       "sku_id": "391384",
+       "unit_price": 5050.0,
+       "cost": 2525.0,
+       "name": "Yerba Mate con Palo 1 Kg Nobleza Gaucha",
+       "sku_id": "311230",
        "promo": false
       },
       {
@@ -2094,8 +2081,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 4998.0,
+       "unit_price": 2999.0,
+       "cost": 5998.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -2175,10 +2162,12 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 52339.35,
-     "complete": true,
-     "missing": [],
-     "kcal": 28656,
+     "total": 46551.35,
+     "complete": false,
+     "missing": [
+      "carne_picada"
+     ],
+     "kcal": 27406,
      "items": [
       {
        "ing": "fideos",
@@ -2194,21 +2183,21 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2229.0,
-       "cost": 1114.5,
-       "name": "Arroz Integral Cañuelas 1 Kg",
-       "sku_id": "222521",
+       "unit_price": 1489.0,
+       "cost": 744.5,
+       "name": "Arroz Check Largo Fino 1 Kg",
+       "sku_id": "16210",
        "promo": false
       },
       {
        "ing": "pure_tomate",
        "qty": 2,
        "fixed": false,
-       "unit_price": 674.0,
-       "cost": 1348.0,
-       "name": "Puré De Tomate Arcor 520 G",
-       "sku_id": "221488",
-       "promo": true
+       "unit_price": 849.0,
+       "cost": 1698.0,
+       "name": "Puré De Tomate Check 520g",
+       "sku_id": "35701",
+       "promo": false
       },
       {
        "ing": "huevos",
@@ -2244,10 +2233,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3898.0,
-       "cost": 1949.0,
-       "name": "Yerba Mate Chamigo Sin Tacc 500g",
-       "sku_id": "169651",
+       "unit_price": 3729.0,
+       "cost": 1864.5,
+       "name": "Yerba Mate Chamigo Sin Tacc 1kg",
+       "sku_id": "171418",
        "promo": false
       },
       {
@@ -2264,11 +2253,7 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 16399.0,
-       "cost": 8199.5,
-       "name": "Carne Picada Magra 800g",
-       "sku_id": "38299",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "pollo",
@@ -2361,11 +2346,13 @@
        "promo": false
       }
      ],
-     "lacks": [],
+     "lacks": [
+      "carne_picada"
+     ],
      "fixed_total": 0
     },
     "Dia": {
-     "total": 48489.64,
+     "total": 41904.64,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2571,7 +2558,6 @@
     "leche",
     "yerba",
     "azucar",
-    "pollo",
     "papa",
     "cebolla",
     "banana",

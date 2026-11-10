@@ -1,3 +1,3 @@
-Verificación independiente del índice (2026-11-09 14:45 España)
-Días: 17 (2026-10-24 a 2026-11-09). Precios dejados afuera por revisión: 10.
+Verificación independiente del índice (2026-11-10 14:45 España)
+Días: 18 (2026-10-24 a 2026-11-10). Precios dejados afuera por revisión: 10.
 OK: todos los números publicados coinciden con el recálculo.

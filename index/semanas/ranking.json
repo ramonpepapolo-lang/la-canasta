@@ -8,48 +8,39 @@
   "complete": false,
   "days": [
    "2026-11-08",
-   "2026-11-09"
+   "2026-11-10"
   ],
-  "days_of_data": 2,
-  "n_products": 319,
+  "days_of_data": 3,
+  "n_products": 306,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1285693.25,
+    "total": 1256122.5,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1379860.48,
-    "pct": 7.32
+    "total": 1268867.33,
+    "pct": 1.01
    },
    {
     "shop": "ChangoMas",
-    "total": 1388300.55,
-    "pct": 7.98
+    "total": 1281604.55,
+    "pct": 2.03
    },
    {
     "shop": "Jumbo",
-    "total": 1572324.0,
-    "pct": 22.29
+    "total": 1450043.0,
+    "pct": 15.44
    }
   ],
   "cheapest_count": {
-   "Carrefour": 121,
+   "Carrefour": 132,
    "Jumbo": 5,
-   "ChangoMas": 132,
-   "Dia": 141
+   "ChangoMas": 138,
+   "Dia": 103
   },
   "examples": [
-   {
-    "ean": "7460123477616",
-    "name": "Sazonador Maggi Completo Pimienta 180 G",
-    "low_shop": "Dia",
-    "low": 3602.5,
-    "high_shop": "Jumbo",
-    "high": 7750.0,
-    "pct": 115.1
-   },
    {
     "ean": "7622202816437",
     "name": "Alfajor Shot Blanco Triple 60 G",
@@ -67,6 +58,15 @@
     "high_shop": "Jumbo",
     "high": 1650.0,
     "pct": 108.5
+   },
+   {
+    "ean": "7500435252935",
+    "name": "Suavizante Concentrado Brisa Suave 350 Ml Downy",
+    "low_shop": "ChangoMas",
+    "low": 3898.95,
+    "high_shop": "Jumbo",
+    "high": 7650.0,
+    "pct": 96.2
    }
   ]
  },

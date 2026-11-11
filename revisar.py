@@ -120,4 +120,6 @@ REGLAS (ver notas/LEEME-revision.md):
   B. Promo no marcada: lista = pagado, el precio sale de su nivel 1 a 3 dias (tipico fin de semana) y vuelve
      o se queda en otro nivel estable, y los otros super no se movieron igual: excluir 'regular' esos dias.
   C. Todo lo demas es un cambio real: NO se excluye. Ante la duda, no se excluye.
+  Jumbo: la regla B no se aplica (Jumbo no esta en el indice sin promociones). Sus bajas de viernes a domingo
+     sin descuento marcado son precio real de fin de semana: no se excluyen ni se consultan.
 """)

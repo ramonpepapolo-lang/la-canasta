@@ -31,4 +31,6 @@ Nunca se borra una línea vieja. Nunca se inventa ni se reemplaza un precio: el 
 ## Cosas conocidas
 
 - Jumbo: el campo de "precio de lista" no es un precio de lista real (es el precio sin IVA multiplicado por 100). Para Jumbo, "sin promociones" = precio pagado. No es un error a excluir.
+- Jumbo no entra en el índice "sin promociones" (solo en el del precio pagado), así que la regla B **no se aplica a Jumbo**: excluir su `regular` no cambia nada.
+- Jumbo baja muchos precios de viernes a domingo sin marcarlos como descuento (por ejemplo suprema 12.449 → 8.999, vacío 22.289 → 17.999, papa 2.999 → 2.499) y el lunes vuelven. Es el precio real que paga cualquiera ese fin de semana: **se deja, no se excluye ni se pregunta**. El promedio semanal y el mensual comparan los mismos días de la semana, así que este vaivén se compensa solo.
 - Frutas y verduras se mueven mucho: un cambio grande en papa, tomate o banana suele ser real.

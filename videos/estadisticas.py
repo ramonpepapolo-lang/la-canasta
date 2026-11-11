@@ -12,7 +12,7 @@ web = {}
 for path in ["TOTAL", "/", "/precios/", "/canastas/", "/informes.html", "/metodo.html", "/articulos.html"]:
     try:
         r = requests.get("https://lacanasta.goatcounter.com/counter/" + urllib.parse.quote(path, safe="") + ".json", timeout=20)
-        web[path] = int(str(r.json()["count"]).replace(" ", "").replace(",", "")) if r.ok else None
+        web[path] = int(re.sub(r"\D", "", str(r.json()["count"]))) if r.ok else None
     except Exception as e:
         web[path] = None
 out["website"] = web
@@ -43,7 +43,46 @@ try:
     out["youtube"] = {"channel": ch["snippet"]["title"], "subscribers": int(st.get("subscriberCount", 0)),
                       "views": int(st.get("viewCount", 0)), "videos": int(st.get("videoCount", 0)), "list": vids}
 except Exception as e:
-    out["errors"].append("youtube: " + str(e)[:400])
+    out["errors"].append("youtube api: " + str(e)[:200])
+    # The key only allows uploading: read the channel's public pages instead (what anyone sees on YouTube)
+    try:
+        H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+             "Accept-Language": "en-US,en;q=0.9"}
+        CK = {"CONSENT": "YES+cb", "SOCS": "CAI"}
+        get = lambda u: requests.get(u, headers=H, cookies=CK, timeout=30).text
+        ids = []
+        def add(found):
+            for i in found:
+                if i not in ids:
+                    ids.append(i)
+        page = get("https://www.youtube.com/@LaCanastaIndex")
+        subs = re.search(r'([\d.,]+[KM]?) subscribers', page)
+        cid = re.search(r'"(?:channelId|externalId)":"(UC[\w-]{22})"', page)
+        about = get("https://www.youtube.com/@LaCanastaIndex/about")
+        total = re.search(r'"viewCountText":"([\d,]+) views"', about) or re.search(r'([\d,]+) views"', about)
+        for tab in ("videos", "shorts"):
+            t = get("https://www.youtube.com/@LaCanastaIndex/" + tab)
+            add(re.findall(r'"reelWatchEndpoint":\{"videoId":"([\w-]{11})"', t))
+            add(re.findall(r'"videoRenderer":\{"videoId":"([\w-]{11})"', t))
+        if cid:
+            add(re.findall(r"<yt:videoId>([\w-]{11})</yt:videoId>", get("https://www.youtube.com/feeds/videos.xml?channel_id=" + cid.group(1))))
+        vids = []
+        for vid in ids:
+            w = get("https://www.youtube.com/watch?v=" + vid)
+            vc = re.search(r'"viewCount":"(\d+)"', w)
+            lk = (re.search(r'along with ([\d,]+) other (?:people|person)', w) or re.search(r'"likeCount":"?(\d+)', w)
+                  or re.search(r'"likeCountWithoutLikeText":\{"simpleText":"([\d,]+)"', w))
+            ti = re.search(r'"videoDetails":\{"videoId":"[\w-]{11}","title":"((?:[^"\\]|\\.)*)"', w)
+            pub = re.search(r'"(?:publishDate|uploadDate)":"(\d{4}-\d\d-\d\d)', w)
+            vids.append({"id": vid, "title": json.loads('"' + ti.group(1) + '"') if ti else "",
+                         "published": pub.group(1) if pub else "",
+                         "views": int(vc.group(1)) if vc else None,
+                         "likes": int(lk.group(1).replace(",", "")) if lk else None})
+        out["youtube"] = {"source": "public pages", "subscribers_text": subs.group(1) if subs else None,
+                          "views_total_text": total.group(1) if total else None,
+                          "views_sum_of_videos": sum(v["views"] or 0 for v in vids), "videos": len(vids), "list": vids}
+    except Exception as e2:
+        out["errors"].append("youtube pages: " + str(e2)[:300])
 
 # ---------- X (the account the videos are posted from) ----------
 try:

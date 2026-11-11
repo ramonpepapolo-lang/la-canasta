@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-11 08:30",
+ "when_utc": "2026-11-11 08:31",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -16,11 +16,12 @@
   "source": "public pages",
   "subscribers_text": "360",
   "views_total_text": "95,991",
-  "views_sum_of_videos": 8721,
+  "views_sum_of_videos": 47221,
   "videos": 23,
   "list": [
    {
     "id": "G-mzB9TJ1fo",
+    "debug": null,
     "title": "El agua chica te sale casi 4 veces más por litro 💧 #finanzas #argentina #supermercado",
     "published": "2026-11-06",
     "views": 41,
@@ -29,6 +30,7 @@
    },
    {
     "id": "WxtF4OwrTQA",
+    "debug": null,
     "title": "Asado para 6: hoy ChangoMás le ganó a Carrefour 🥩 #finanzas #supermercado #dinero #inflación",
     "published": "2026-11-06",
     "views": 37,
@@ -37,6 +39,7 @@
    },
    {
     "id": "zx1MupnB8f4",
+    "debug": null,
     "title": "4 yerbas subieron en un día en Carrefour: el caso 🔎 #argentina #supermercado #inflación #finanzas",
     "published": "2026-11-05",
     "views": 53,
@@ -45,6 +48,7 @@
    },
    {
     "id": "oH9pfAKkRUg",
+    "debug": null,
     "title": "El pollo de ChangoMás tuvo 5 precios en 13 días 🍗 #finanzas #negocios #dinero #invertir #inversiones",
     "published": "2026-11-05",
     "views": 49,
@@ -53,6 +57,7 @@
    },
    {
     "id": "mLkoUDDikcw",
+    "debug": null,
     "title": "What is La Canasta? Argentina's supermarket prices, every day 🛒 #argentina",
     "published": "2026-11-05",
     "views": 8,
@@ -61,6 +66,7 @@
    },
    {
     "id": "tc23dqKHSUw",
+    "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
     "views": 7797,
@@ -69,6 +75,7 @@
    },
    {
     "id": "0ROpFGL4YvA",
+    "debug": null,
     "title": "Promos que arrancaron hoy: hasta 44% menos 🛒",
     "published": "2026-11-04",
     "views": 14,
@@ -77,6 +84,7 @@
    },
    {
     "id": "AFxUYBMYpT0",
+    "debug": null,
     "title": "La gaseosa chica de Día subió 35% en un día 📈 #argentina #finanzas #supermercado #dinero #inflación",
     "published": "2026-11-04",
     "views": 6,
@@ -85,6 +93,7 @@
    },
    {
     "id": "3wWnwhN6uAE",
+    "debug": null,
     "title": "¿Aumento o promo? Cómo darte cuenta en 5 segundos 🧐 #argentina #inflación #supermercado #economía",
     "published": "2026-11-02",
     "views": 58,
@@ -93,6 +102,7 @@
    },
    {
     "id": "gDh-ivbLA40",
+    "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
     "views": 302,
@@ -101,6 +111,7 @@
    },
    {
     "id": "uYOS0ICnMvA",
+    "debug": null,
     "title": "¿Cuánto pagás por un litro de Coca?#argentina #inflación #supermercado #precios #economía #ahorro",
     "published": "2026-11-01",
     "views": 26,
@@ -109,6 +120,7 @@
    },
    {
     "id": "B5L4kojQefE",
+    "debug": null,
     "title": "¿Por qué los precios del súper suben 54% de un día para el otro? 🤯 #argentina #precios #lacanasta",
     "published": "2026-11-01",
     "views": 19,
@@ -117,6 +129,7 @@
    },
    {
     "id": "e3o-AO0agd0",
+    "debug": null,
     "title": "Imprimimos el ticket de las promos del súper 🧾 #Shorts #argentina #supermercado #precios #inflación",
     "published": "2026-11-01",
     "views": 20,
@@ -125,70 +138,79 @@
    },
    {
     "id": "XoBQeQhf8Aw",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
+    "published": "2026-10-31",
+    "views": 10922,
+    "views_exact": true,
+    "likes": 53
    },
    {
     "id": "L1E_gsxHEb8",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "¿Dónde está más barato? Tenés 3 segundos ⏱️ #Shorts #argentina #supermercado #inflación #economía",
+    "published": "2026-10-31",
+    "views": 29,
+    "views_exact": true,
+    "likes": 2
    },
    {
     "id": "sq4QiYlzBHI",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "I built a program + 6 AI agents to measure inflation in Argentina 🤖 #Shorts #argentina #inflation",
+    "published": "2026-10-31",
+    "views": 15,
+    "views_exact": true,
+    "likes": 2
    },
    {
     "id": "njkhtUHqAQM",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
+    "published": "2026-10-29",
+    "views": 6119,
+    "views_exact": true,
+    "likes": 482
    },
    {
     "id": "EimZGNWwnkQ",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "¿Inflación o se terminó la promo? Datos reales del súper #argentina #inflación #supermercado",
+    "published": "2026-10-29",
+    "views": 46,
+    "views_exact": true,
+    "likes": 0
    },
    {
     "id": "gM6gTakve-Y",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
+    "published": "2026-10-29",
+    "views": 5356,
+    "views_exact": true,
+    "likes": 5
    },
    {
     "id": "tlgFxGkcb_Y",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "La misma manteca: $2.199 - $4.650 ‼️⚠️ ¿Dónde está más barata? #argentina #supermercado #inflacion",
+    "published": "2026-10-28",
+    "views": 275,
+    "views_exact": true,
+    "likes": 4
    },
    {
     "id": "EyudS8G5EmA",
-    "title": "",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": null
+    "debug": null,
+    "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
+    "published": "2026-10-28",
+    "views": 15729,
+    "views_exact": true,
+    "likes": 5
    },
    {
     "id": "Y9JkCvIlXLk",
+    "debug": null,
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "2026-11-04",
     "views": 21,
@@ -197,9 +219,10 @@
    },
    {
     "id": "JjtoCbpvaQg",
+    "debug": null,
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "2026-11-04",
-    "views": 270,
+    "views": 279,
     "views_exact": true,
     "likes": 2
    }

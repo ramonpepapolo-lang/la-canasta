@@ -1,0 +1,68 @@
+{
+ "when_utc": "2026-11-11 08:28",
+ "errors": [
+  "youtube: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+ ],
+ "website": {
+  "TOTAL": null,
+  "/": null,
+  "/precios/": 6,
+  "/canastas/": 13,
+  "/informes.html": 41,
+  "/metodo.html": 24,
+  "/articulos.html": 12
+ },
+ "x": {
+  "me_status": 200,
+  "username": "LaCanastaIndex",
+  "followers_count": 0,
+  "following_count": 3,
+  "like_count": 24,
+  "listed_count": 0,
+  "media_count": 21,
+  "tweet_count": 45,
+  "tweets_status": 200,
+  "last_posts": [
+   {
+    "date": "2026-11-10",
+    "text": "Fernet con coca hoy, mismo combo (1882 750 ml + Coca 2,25 L):\n\nChangoMás $13.298\nCarrefour",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-10",
+    "text": "Semana de estudiante, 16 productos básicos:\n\nLunes 9/11: Día $41.905 vs Carrefour $45.977\n",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-09",
+    "text": "Queso cremoso Cremac, el kilo, Carrefour:\n\nMar 3: $13.260\nMié 4: $9.999\nSáb 7: $11.990\nDom",
+    "bookmark_count": 0,
+    "impression_count": 2,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-09",
+    "text": "Mismo suavizante, mismo código de barras, lunes 9/11:\n\nDowny 350 ml: $3.899 en ChangoMás v",
+    "bookmark_count": 0,
+    "impression_count": 1,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   }
+  ]
+ }
+}

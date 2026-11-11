@@ -1,16 +1,186 @@
 {
- "when_utc": "2026-11-11 08:28",
+ "when_utc": "2026-11-11 08:29",
  "errors": [
-  "youtube: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+  "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": null,
-  "/": null,
+  "TOTAL": 2959,
+  "/": 2826,
   "/precios/": 6,
   "/canastas/": 13,
   "/informes.html": 41,
   "/metodo.html": 24,
   "/articulos.html": 12
+ },
+ "youtube": {
+  "source": "public pages",
+  "subscribers_text": "360",
+  "views_total_text": "95,991",
+  "views_sum_of_videos": 0,
+  "videos": 23,
+  "list": [
+   {
+    "id": "G-mzB9TJ1fo",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "WxtF4OwrTQA",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "zx1MupnB8f4",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "oH9pfAKkRUg",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "mLkoUDDikcw",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "tc23dqKHSUw",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "0ROpFGL4YvA",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "AFxUYBMYpT0",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "3wWnwhN6uAE",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "gDh-ivbLA40",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "uYOS0ICnMvA",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "B5L4kojQefE",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "e3o-AO0agd0",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "XoBQeQhf8Aw",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "L1E_gsxHEb8",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "sq4QiYlzBHI",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "njkhtUHqAQM",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "EimZGNWwnkQ",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "gM6gTakve-Y",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "tlgFxGkcb_Y",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "EyudS8G5EmA",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "Y9JkCvIlXLk",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   },
+   {
+    "id": "JjtoCbpvaQg",
+    "title": "",
+    "published": "",
+    "views": null,
+    "likes": null
+   }
+  ]
  },
  "x": {
   "me_status": 200,

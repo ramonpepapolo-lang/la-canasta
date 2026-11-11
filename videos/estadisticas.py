@@ -88,7 +88,29 @@ except Exception as e:
                 import html as _h
                 d.update({"title": _h.unescape(ti.group(1)) if ti else d.get("title", ""), "published": pub.group(1) if pub else "",
                           "views": int(vw.group(1)) if vw else None, "likes": int(lk.group(1)) if lk else None})
-        vids = [{"id": vid, "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
+        # Videos the feed does not cover (older ones): read their own page
+        for vid in ids:
+            if info.get(vid, {}).get("views") is not None:
+                continue
+            w = get("https://www.youtube.com/shorts/" + vid)
+            if '"viewCount"' not in w:
+                w = get("https://www.youtube.com/watch?v=" + vid + "&hl=en")
+            d = info.setdefault(vid, {})
+            vc = re.search(r'"viewCount":"(\d+)"', w)
+            lk = (re.search(r'along with ([\d,]+) other (?:people|person)', w) or re.search(r'"likeCount":"?(\d+)', w))
+            ti = re.search(r'"videoDetails":\{"videoId":"[\w-]{11}","title":"((?:[^"\\]|\\.)*)"', w)
+            pub = re.search(r'"(?:publishDate|uploadDate)":"(\d{4}-\d\d-\d\d)', w)
+            if vc:
+                d["views"] = int(vc.group(1))
+            if lk:
+                d["likes"] = int(lk.group(1).replace(",", ""))
+            if ti and not d.get("title"):
+                d["title"] = json.loads('"' + ti.group(1) + '"')
+            if pub and not d.get("published"):
+                d["published"] = pub.group(1)
+            if not vc:
+                d["debug"] = (re.search(r"<title>(.*?)</title>", w, re.S).group(1)[:80] if "<title>" in w else w[:120])
+        vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
                  "views": info.get(vid, {}).get("views", info.get(vid, {}).get("views_list")),
                  "views_exact": "views" in info.get(vid, {}), "likes": info.get(vid, {}).get("likes")} for vid in ids]
         out["youtube"] = {"source": "public pages", "subscribers_text": subs.group(1) if subs else None,

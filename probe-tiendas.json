@@ -1,0 +1,158 @@
+{
+ "Disco": {
+  "base": "https://www.disco.com.ar",
+  "home": 200,
+  "vtex_hint": true,
+  "search_status": 206,
+  "n": 50,
+  "sample": [
+   [
+    "Oblea Leche 4 Fingers 41.5 Grs Kitkat®",
+    3050.0
+   ],
+   [
+    "Chocolate Con Leche Milka 150 Gr",
+    12850.0
+   ],
+   [
+    "Crema La Serenisima Batir 330ml",
+    6150.0
+   ]
+  ],
+  "eans": 50
+ },
+ "Vea": {
+  "base": "https://www.vea.com.ar",
+  "home": 200,
+  "vtex_hint": true,
+  "search_status": 206,
+  "n": 50,
+  "sample": [
+   [
+    "Oblea Leche 4 Fingers 41.5 Grs Kitkat®",
+    2890.0
+   ],
+   [
+    "Chocolate Con Leche Milka 150 Gr",
+    12190.0
+   ],
+   [
+    "Crema La Serenisima Batir 330ml",
+    5590.0
+   ]
+  ],
+  "eans": 50
+ },
+ "Libertad": {
+  "base": "https://www.hiperlibertad.com.ar",
+  "home": 403,
+  "vtex_hint": false,
+  "search_status": 403,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Toledo": {
+  "base": "https://www.toledodigital.com.ar",
+  "home": 200,
+  "vtex_hint": true,
+  "search_status": 206,
+  "n": 50,
+  "sample": [
+   [
+    "Hervidor Leche Paris",
+    22041.75
+   ],
+   [
+    "POSTRE DULCE DE LECHE",
+    7825.0
+   ],
+   [
+    "LECHE CHOCOLATADA MOCCA",
+    7598.0
+   ]
+  ],
+  "eans": 50
+ },
+ "LaAnonima": {
+  "base": "https://supermercado.laanonimaonline.com",
+  "home": 403,
+  "vtex_hint": false,
+  "search_status": 403,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "CoopObrera": {
+  "base": "https://www.lacoopeencasa.coop",
+  "home": 200,
+  "vtex_hint": false,
+  "search_status": 200,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Makro": {
+  "base": "https://www.makro.com.ar",
+  "home": 200,
+  "vtex_hint": true,
+  "search_status": 404,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Atomo": {
+  "base": "https://atomoconviene.com",
+  "home": 200,
+  "vtex_hint": false,
+  "search_status": 200,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Dino": {
+  "base": "https://www.dinoonline.com.ar",
+  "home": 503,
+  "vtex_hint": false,
+  "search_status": 403,
+  "search_err": "Expecting value: line 2 column 1 (char 1)"
+ },
+ "Vital": {
+  "base": "https://www.vital.com.ar",
+  "home": 200,
+  "vtex_hint": false,
+  "search_status": 404,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Maxiconsumo": {
+  "base": "https://maxiconsumo.com",
+  "home": 200,
+  "vtex_hint": false,
+  "search_status": 404,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Diarco": {
+  "base": "https://www.diarco.com.ar",
+  "home": 200,
+  "vtex_hint": false,
+  "search_status": 404,
+  "search_err": "Expecting value: line 1 column 1 (char 0)"
+ },
+ "Cordiez": {
+  "base": "https://www.cordiez.com.ar",
+  "home": 200,
+  "vtex_hint": true,
+  "search_status": 206,
+  "n": 50,
+  "sample": [
+   [
+    "Tableta De Chocolate Con Leche y Dulce De Leche 29 Gr",
+    2579.0
+   ],
+   [
+    "DULCE DE LECHE SER POTE",
+    4929.0
+   ],
+   [
+    "Crema De Leche Windy 200 Gr",
+    1899.0
+   ]
+  ],
+  "eans": 50
+ },
+ "ElNene": {
+  "base": "https://www.supermercadoselnene.com.ar",
+  "home": "HTTPSConnectionPool(host='www.supermercadoselnene.com.ar', port=443): Max retrie",
+  "search_err": "HTTPSConnectionPool(host='www.supermercadoselnene.com.ar', port=443): Max retrie"
+ }
+}

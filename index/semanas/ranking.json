@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-08",
-   "2026-11-10"
+   "2026-11-11"
   ],
-  "days_of_data": 3,
-  "n_products": 306,
+  "days_of_data": 4,
+  "n_products": 316,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1256122.5,
+    "total": 1331093.24,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1268867.33,
-    "pct": 1.01
+    "total": 1366946.24,
+    "pct": 2.69
    },
    {
     "shop": "ChangoMas",
-    "total": 1281604.55,
-    "pct": 2.03
+    "total": 1387891.95,
+    "pct": 4.27
    },
    {
     "shop": "Jumbo",
-    "total": 1450043.0,
-    "pct": 15.44
+    "total": 1558411.0,
+    "pct": 17.08
    }
   ],
   "cheapest_count": {
-   "Carrefour": 132,
-   "Jumbo": 5,
-   "ChangoMas": 138,
-   "Dia": 103
+   "Carrefour": 124,
+   "Jumbo": 4,
+   "ChangoMas": 132,
+   "Dia": 116
   },
   "examples": [
    {

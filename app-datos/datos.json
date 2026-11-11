@@ -1,12 +1,12 @@
 {
- "date": "2026-11-10",
- "previous": "2026-11-09",
+ "date": "2026-11-11",
+ "previous": "2026-11-10",
  "index": {
-  "date": "2026-11-10",
-  "paid": 101.643,
-  "regular": 99.284,
-  "day_change": 1.95,
-  "days_of_data": 18,
+  "date": "2026-11-11",
+  "paid": 98.621,
+  "regular": 99.148,
+  "day_change": -2.97,
+  "days_of_data": 19,
   "series": [
    [
     "2026-10-24",
@@ -97,18 +97,23 @@
     "2026-11-10",
     101.643,
     99.284
+   ],
+   [
+    "2026-11-11",
+    98.621,
+    99.148
    ]
   ],
   "mode": "week",
-  "week_paid": -1.33,
-  "week_regular": -0.89,
+  "week_paid": -1.04,
+  "week_regular": -0.77,
   "now": [
-   "2026-11-04",
-   "2026-11-10"
+   "2026-11-05",
+   "2026-11-11"
   ],
   "before": [
-   "2026-10-28",
-   "2026-11-03"
+   "2026-10-29",
+   "2026-11-04"
   ]
  },
  "ranking": {
@@ -116,252 +121,153 @@
   "label_en": "Week of 8 to 14 November 2026",
   "days": [
    "2026-11-08",
-   "2026-11-10"
+   "2026-11-11"
   ],
-  "n_products": 306,
+  "n_products": 316,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1256122.5,
+    "total": 1331093.24,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1268867.33,
-    "pct": 1.01
+    "total": 1366946.24,
+    "pct": 2.69
    },
    {
     "shop": "ChangoMas",
-    "total": 1281604.55,
-    "pct": 2.03
+    "total": 1387891.95,
+    "pct": 4.27
    },
    {
     "shop": "Jumbo",
-    "total": 1450043.0,
-    "pct": 15.44
+    "total": 1558411.0,
+    "pct": 17.08
    }
   ]
  },
  "down": [
   {
-   "shop": "Carrefour",
-   "name": "Jabón de tocador Palmolive Naturals toque nutritivo 125 grs",
-   "type": "jabon_tocador",
-   "before": 1559.0,
-   "now": 1169.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Jabón de tocador Palmolive nutrimilk 85 g.",
-   "type": "jabon_tocador",
-   "before": 1869.0,
-   "now": 1401.75,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Pasta dental Colgate sensitive whitening 100 g.",
-   "type": "pasta_dental",
-   "before": 5929.0,
-   "now": 4446.75,
-   "pct": -25.0,
+   "shop": "Dia",
+   "name": "Papel Higienico Simple Hoja 80mts 4 Ud.",
+   "type": "papel_higienico",
+   "before": 5300.0,
+   "now": 2650.0,
+   "pct": -50.0,
    "why": "promo_start"
   },
   {
    "shop": "Dia",
-   "name": "Pasta Dental Kolynos Frescura 123 90 Gr.",
-   "type": "pasta_dental",
-   "before": 1785.0,
-   "now": 1900.0,
-   "pct": 6.4,
-   "why": "list_down"
-  },
-  {
-   "shop": "Dia",
-   "name": "Cerveza Heineken Lata 473 ml.",
+   "name": "Cerveza Warsteiner 473 Ml.",
    "type": "cerveza",
-   "before": 4030.0,
-   "now": 4290.0,
-   "pct": 6.5,
+   "before": 3690.0,
+   "now": 1990.0,
+   "pct": -46.1,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
+   "type": "yerba",
+   "before": 2500.0,
+   "now": 1490.0,
+   "pct": -40.4,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Galletitas Chocolate Chocolinas 250 Gr.",
+   "type": "galletitas",
+   "before": 2824.0,
+   "now": 1690.0,
+   "pct": -40.2,
    "why": "list_up"
   },
   {
    "shop": "Dia",
-   "name": "Jabon De Tocador Palmolive Nutri Milk Hidratacion Prolongada 85 Gr.",
-   "type": "jabon_tocador",
-   "before": 1875.0,
-   "now": 2000.0,
-   "pct": 6.7,
-   "why": "list_up"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Magistral Ultra Limón Botella 300 ml",
-   "type": "detergente",
-   "before": 2040.0,
-   "now": 2210.0,
-   "pct": 8.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Magistral Ultra Limón Botella 500 ml",
-   "type": "detergente",
-   "before": 3143.4,
-   "now": 3405.35,
-   "pct": 8.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Magistral Ultra Limón Botella 750 ml",
-   "type": "detergente",
-   "before": 4943.4,
-   "now": 5355.35,
-   "pct": 8.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Magistral Ultra de limón Doy Pack 450 ml",
-   "type": "detergente",
-   "before": 2825.4,
-   "now": 3060.85,
-   "pct": 8.3,
-   "why": "promo_end"
+   "name": "Pasta Dental Colgate Total Carbon Activado Con Fluor 90 Gr.",
+   "type": "pasta_dental",
+   "before": 7495.0,
+   "now": 4497.0,
+   "pct": -40.0,
+   "why": "promo_start"
   },
   {
    "shop": "Dia",
-   "name": "Azúcar Ledesma Refinado Superior 1 Kg.",
-   "type": "azucar",
-   "before": 1450.0,
-   "now": 1619.0,
-   "pct": 11.7,
-   "why": "list_down"
+   "name": "Pasta Dental Total Interdental Colgate 90 Gr.",
+   "type": "pasta_dental",
+   "before": 7495.0,
+   "now": 4497.0,
+   "pct": -40.0,
+   "why": "promo_start"
   },
   {
    "shop": "Dia",
-   "name": "Huevos Frescos Santa Rita Blanco Grande 30 Un.",
-   "type": "huevos",
-   "before": 6990.0,
-   "now": 7990.0,
-   "pct": 14.3,
-   "why": "list_up"
-  }
- ],
- "up": [
-  {
-   "shop": "Dia",
-   "name": "Detergente Concentrado Cif Active Gel Original 500 Ml.",
-   "type": "detergente",
-   "before": 2997.5,
-   "now": 5450.0,
-   "pct": 81.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Shampoo Elvive RT5 Keratin 400 Ml.",
+   "name": "Shampoo Oil Control Fructis 350 Ml.",
    "type": "shampoo",
-   "before": 6594.5,
-   "now": 11990.0,
-   "pct": 81.8,
-   "why": "promo_end"
+   "before": 8990.0,
+   "now": 5394.0,
+   "pct": -40.0,
+   "why": "promo_start"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1240.0,
-   "now": 2200.0,
-   "pct": 77.4,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1240.0,
-   "now": 2200.0,
-   "pct": 77.4,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente CIF Bioactive Lima Botella 300 Ml.",
-   "type": "detergente",
-   "before": 1620.0,
-   "now": 2700.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente CIF Bioactive Lima Botella 500 Ml.",
-   "type": "detergente",
-   "before": 2634.0,
-   "now": 4390.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente CIF Bioactive Lima Botella 750 Ml.",
-   "type": "detergente",
-   "before": 3930.0,
-   "now": 6550.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente CIF Bioactive Lima Doypack 450 Ml.",
-   "type": "detergente",
-   "before": 2310.0,
-   "now": 3850.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente Concentrado Cif Active Gel Limon 500 Ml.",
-   "type": "detergente",
-   "before": 3270.0,
-   "now": 5450.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
-   "type": "detergente",
-   "before": 3143.4,
-   "now": 5239.0,
-   "pct": 66.7,
-   "why": "promo_end"
+   "name": "Cerveza Brahma 710 Ml.",
+   "type": "cerveza",
+   "before": 4050.0,
+   "now": 2490.0,
+   "pct": -38.5,
+   "why": "promo_start"
   },
   {
    "shop": "Dia",
    "name": "Fideos Spaghetti Favorita 500 Gr.",
    "type": "fideos",
-   "before": 719.4,
-   "now": 1199.0,
-   "pct": 66.7,
-   "why": "promo_end"
+   "before": 1199.0,
+   "now": 750.0,
+   "pct": -37.4,
+   "why": "list_up"
   },
   {
    "shop": "Dia",
    "name": "Fideos Tirabuzón Favorita 500 Gr.",
    "type": "fideos",
-   "before": 719.4,
-   "now": 1199.0,
-   "pct": 66.7,
+   "before": 1199.0,
+   "now": 750.0,
+   "pct": -37.4,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Cerveza Schneider Rubia 710 Ml.",
+   "type": "cerveza",
+   "before": 3890.0,
+   "now": 2490.0,
+   "pct": -36.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Agua Mineral sin Gas Eco de los Andes 2 Lts.",
+   "type": "agua",
+   "before": 3187.0,
+   "now": 2050.0,
+   "pct": -35.7,
+   "why": "promo_start"
+  }
+ ],
+ "up": [
+  {
+   "shop": "ChangoMas",
+   "name": "Manzana Roja 1 Kg",
+   "type": "manzana",
+   "before": 2999.0,
+   "now": 3999.0,
+   "pct": 33.3,
    "why": "promo_end"
   }
  ],
- "n_down": 3,
- "n_up": 84
+ "n_down": 97,
+ "n_up": 1
 }

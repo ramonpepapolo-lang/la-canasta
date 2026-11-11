@@ -1,0 +1,33 @@
+# More supermarkets (scrape_extra.py), every day after the main collection. Saved on the separate branch
+# "datos-extra" (data-extra/YYYY-MM-DD.csv.gz): not used by the index or the website until we decide to add them.
+name: Más supermercados
+on:
+  schedule:
+    - cron: "53 15 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scrape_extra.py]
+permissions:
+  contents: write
+concurrency:
+  group: datos-extra
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests
+      - run: python scrape_extra.py
+      - name: Save on the "datos-extra" branch
+        run: |
+          mkdir /tmp/out && cd /tmp/out && git init -q
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git fetch -q "$R" datos-extra 2>/dev/null; then git checkout -q -b datos-extra FETCH_HEAD; else git checkout -q --orphan datos-extra; fi
+          mkdir -p data-extra && cp "$GITHUB_WORKSPACE"/data-extra/*.csv.gz data-extra/
+          git add data-extra && git commit -q -m "Más supermercados $(ls data-extra | tail -1)" && git push -q "$R" datos-extra

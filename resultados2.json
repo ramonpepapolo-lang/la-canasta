@@ -1,0 +1,92 @@
+[
+ {
+  "outlet": "El Argentino Diario",
+  "to": "ElArgentinoWeb.com@gmail.com",
+  "sent": true,
+  "info": "<202611112339.82513757597@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Prensa Libre Online",
+  "to": "contacto@prensalibreonline.com.ar",
+  "sent": true,
+  "info": "<202611112339.34731001417@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario La Ciudad",
+  "to": "info@laciudadweb.com.ar",
+  "sent": true,
+  "info": "<202611112340.33424104005@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "DataConurbano",
+  "to": "info@dataconurbano.net",
+  "sent": true,
+  "info": "<202611112340.29996352382@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Opinión (Pergamino)",
+  "to": "redaccion@laopinionline.ar",
+  "sent": true,
+  "info": "<202611112340.45232487883@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Nueva",
+  "to": "contenidos@lanueva.com",
+  "sent": true,
+  "info": "<202611112341.69851629932@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario de Rivera",
+  "to": "info@diarioderivera.com",
+  "sent": true,
+  "info": "<202611112341.15458494904@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "0223",
+  "to": "info@0223.com.ar",
+  "sent": true,
+  "info": "<202611112341.68530740810@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Noticias NQN",
+  "to": "redaccion@noticiasnqn.com.ar",
+  "sent": true,
+  "info": "<202611112342.63740595155@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Huarpe",
+  "to": "prensa@diariohuarpe.com",
+  "sent": true,
+  "info": "<202611112342.47822226544@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Canal C",
+  "to": "contenidos@canalc.com.ar",
+  "sent": true,
+  "info": "<202611112342.51287454351@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Diario de la República",
+  "to": "redaccion@eldiariodelarepublica.com",
+  "sent": true,
+  "info": "<202611112343.29220545696@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Economis",
+  "to": "redaccion@economis.com.ar",
+  "sent": true,
+  "info": "<202611112343.86446153847@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Mendoza Today",
+  "to": "info@mendozatoday.com.ar",
+  "sent": true,
+  "info": "<202611112343.78512439952@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Radio Cataratas",
+  "to": "fabio_pereyra@yahoo.com.ar",
+  "sent": true,
+  "info": "<202611112344.62403813298@smtp-relay.mailin.fr>"
+ }
+]

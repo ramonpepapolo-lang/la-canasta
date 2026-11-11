@@ -1,0 +1,25 @@
+# Tests other supermarket websites (probe_tiendas.py). Result on the separate branch "probe-tiendas", never on main.
+name: Probar supermercados
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [probe_tiendas.py]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests
+      - run: python probe_tiendas.py
+      - run: |
+          mkdir /tmp/out && mv probe-tiendas.json /tmp/out/ && cd /tmp/out && git init -q && git checkout -q -b probe-tiendas
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          git add . && git commit -q -m "Probe of supermarkets"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" probe-tiendas

@@ -1,0 +1,62 @@
+[
+ {
+  "outlet": "InfoRegión",
+  "to": "redaccion@inforegion.com.ar",
+  "sent": true,
+  "info": "<202611112250.19546880470@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Zonales",
+  "to": "redaccion@zonales.com",
+  "sent": true,
+  "info": "<202611112251.91244393883@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Anticipos",
+  "to": "anticiposentrevistas@gmail.com",
+  "sent": true,
+  "info": "<202611112251.63990393768@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Norte en Línea",
+  "to": "contacto@norteenlinea.com",
+  "sent": true,
+  "info": "<202611112251.89302699422@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "ImpulsoBaires",
+  "to": "envios@impulsobaires.com.ar",
+  "sent": true,
+  "info": "<202611112252.45660694955@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "InfoBAN",
+  "to": "contacto@infoban.com.ar",
+  "sent": true,
+  "info": "<202611112252.67634361541@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Conurbano",
+  "to": "info@diarioconurbano.com.ar",
+  "sent": true,
+  "info": "<202611112252.12059260499@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Informe 365",
+  "to": "redaccion@informe365.com",
+  "sent": true,
+  "info": "<202611112253.22523646721@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Rosario Finanzas",
+  "to": "administracion@rosariofinanzas.ar",
+  "sent": true,
+  "info": "<202611112253.33867560553@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Diario Nuevo Día",
+  "to": "eldiarionuevodia@hotmail.com",
+  "sent": true,
+  "info": "<202611112253.33732668079@smtp-relay.mailin.fr>"
+ }
+]

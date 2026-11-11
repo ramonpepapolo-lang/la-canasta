@@ -1,0 +1,49 @@
+# Numbers of the website, YouTube and X, once a day (and whenever notas/pedir-estadisticas.txt changes).
+# The result goes to the separate branch "estadisticas" (estadisticas.json + historial.csv), never to main or the website.
+name: Estadísticas
+on:
+  schedule:
+    - cron: "37 7 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [notas/pedir-estadisticas.txt]
+permissions:
+  contents: write
+concurrency:
+  group: estadisticas
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests requests-oauthlib google-api-python-client google-auth
+      - name: Collect
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python videos/estadisticas.py
+      - name: Save on the "estadisticas" branch
+        run: |
+          python - <<'PY'
+          import json
+          d = json.load(open("estadisticas.json")); y = d.get("youtube", {}); x = d.get("x", {}); w = d.get("website", {})
+          row = [d["when_utc"], w.get("TOTAL"), y.get("subscribers"), y.get("views"), y.get("videos"), x.get("followers_count"), x.get("tweet_count")]
+          open("/tmp/row.csv", "w").write(",".join("" if v is None else str(v) for v in row) + "\n")
+          PY
+          mkdir /tmp/out && cd /tmp/out && git init -q
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git fetch -q "$R" estadisticas 2>/dev/null; then git checkout -q -b estadisticas FETCH_HEAD; else git checkout -q --orphan estadisticas; echo "when_utc,web_total,yt_subscribers,yt_views,yt_videos,x_followers,x_posts" > historial.csv; fi
+          cp "$GITHUB_WORKSPACE/estadisticas.json" . && cat /tmp/row.csv >> historial.csv
+          git add estadisticas.json historial.csv && git commit -q -m "Estadísticas $(date -u +%F)"
+          git push -q "$R" estadisticas

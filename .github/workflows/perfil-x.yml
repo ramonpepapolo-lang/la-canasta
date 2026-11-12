@@ -1,0 +1,24 @@
+name: Perfil de X
+on:
+  push:
+    branches: [envios]
+    paths: [perfil-x.py]
+permissions:
+  contents: write
+jobs:
+  perfil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet requests requests-oauthlib
+      - env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: python3 perfil-x.py
+      - if: always()
+        run: |
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          git add perfil-x.json && git commit -q -m "Perfil de X" && git push -q

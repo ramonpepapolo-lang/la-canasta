@@ -28,10 +28,12 @@ jobs:
           urls += ["https://lacanastaindex.com/llms.txt"]
           body = json.dumps({"host": "lacanastaindex.com", "key": "e1743890f26c26dcedc19498b431cbb5",
                              "keyLocation": "https://lacanastaindex.com/e1743890f26c26dcedc19498b431cbb5.txt", "urlList": urls}).encode()
+          ok = 0
           for api in ["https://api.indexnow.org/indexnow", "https://www.bing.com/indexnow", "https://yandex.com/indexnow"]:
               req = urllib.request.Request(api, data=body, headers={"Content-Type": "application/json; charset=utf-8"})
               try:
-                  r = urllib.request.urlopen(req, timeout=30); print(api, r.status, len(urls), "pages")
+                  r = urllib.request.urlopen(req, timeout=30); print(api, r.status, len(urls), "pages"); ok += r.status in (200, 202)
               except Exception as e:
                   print(api, "error:", getattr(e, "code", ""), str(e)[:200])
+          raise SystemExit(0 if ok else "no search engine accepted the list")
           PY

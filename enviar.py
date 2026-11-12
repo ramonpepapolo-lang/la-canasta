@@ -12,6 +12,8 @@ for i, m in enumerate(json.load(open(SRC, encoding="utf-8"))):
            "to": [{"email": m["to"], "name": m["outlet"]}], "subject": m["subject"], "textContent": m["text"]}
     if BCC:
         msg["bcc"] = [{"email": BCC}]
+    if m.get("headers"):
+        msg["headers"] = m["headers"]
     req = urllib.request.Request("https://api.brevo.com/v3/smtp/email", data=json.dumps(msg).encode(), method="POST",
                                  headers={"api-key": KEY, "content-type": "application/json", "accept": "application/json"})
     try:

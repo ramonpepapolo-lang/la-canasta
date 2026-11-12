@@ -70,7 +70,7 @@ jobs:
       - name: Update the price page of each product (never stops the prices being saved)
         if: steps.check.outputs.done == 'no'
         continue-on-error: true
-        run: python make_price_pages.py
+        run: python fotos_productos.py; python make_price_pages.py
       - name: Update the cheapest-supermarket page (never stops the prices being saved)
         if: steps.check.outputs.done == 'no'
         continue-on-error: true

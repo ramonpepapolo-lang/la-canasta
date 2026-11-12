@@ -1,0 +1,35 @@
+# Product photos for the price pages (precios/fotos.json): the store's own photo of each product, loaded from the
+# store's address. Runs when fotos_productos.py changes and every Monday (the daily collection also adds new ones).
+# Small copies go to the separate branch "fotos-copia", only for the in-Claude preview of the site.
+name: Fotos de productos
+on:
+  push:
+    branches: [main]
+    paths: [fotos_productos.py, notas/pedir-fotos.txt]
+  schedule:
+    - cron: "17 9 * * 1"
+permissions:
+  contents: write
+concurrency:
+  group: fotos
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests
+      - run: python fotos_productos.py --copy /tmp/copia && python make_price_pages.py
+      - name: Save on main
+        run: |
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          git add precios && (git commit -q -m "Fotos de productos" && git pull -q --rebase && git push -q) || echo "nothing new"
+      - name: Small copies for the in-Claude preview (branch fotos-copia)
+        run: |
+          mkdir /tmp/out && cd /tmp/out && git init -q && git checkout -q --orphan fotos-copia
+          git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          cp /tmp/copia/*.jpg . && git add . && git commit -q -m "Copias de fotos"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" fotos-copia

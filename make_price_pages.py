@@ -91,6 +91,19 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+FOTOS = {}
+
+
+def photo(ean, size=44):
+    """The store's own photo of the product (precios/fotos.json, made by fotos_productos.py), loaded from the
+    store's address. Hidden if it does not load, so a missing photo never looks broken."""
+    url = FOTOS.get(ean)
+    if not url:
+        return ""
+    return (f'<img class="pimg{" big" if size > 44 else ""}" src="{esc(url)}" alt="" width="{size}" height="{size}" '
+            f'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">')
+
+
 def load():
     basket = list(csv.DictReader(open(os.path.join(ROOT, "basket.csv"), encoding="utf-8")))
     want = {}  # (shop, sku) -> basket row
@@ -345,7 +358,7 @@ def page(K, others, chrome):
         promo_en = f'<span class="promo">-{pct(it["off"], "en", False).replace("%", "")}%</span> <s>{money(it["list"], "en")}</s>' if it["list"] else ""
         per_es = money(it["per"], "es") + f"<i> {per_u_es}</i>" if it["per"] is not None else "—"
         per_en = money(it["per"], "en") + f"<i> {per_u_en}</i>" if it["per"] is not None else "—"
-        trs.append(f'<tr><td>{esc(it["name"])}</td><td class="shopc">{SHOP_NAME[it["shop"]]}</td>'
+        trs.append(f'<tr><td><span class="pname">{photo(it["ean"])}{esc(it["name"])}</span></td><td class="shopc">{SHOP_NAME[it["shop"]]}</td>'
                    f'<td class="r pricec"><strong><span data-lang="es">{money(it["paid"], "es")}</span><span data-lang="en">{money(it["paid"], "en")}</span></strong></td>'
                    f'<td class="r perc"><span data-lang="es">{per_es}</span><span data-lang="en">{per_en}</span></td>'
                    f'<td><span data-lang="es">{promo_es}</span><span data-lang="en">{promo_en}</span></td></tr>')
@@ -355,7 +368,7 @@ def page(K, others, chrome):
         cells = "".join(
             (f'<td class="r{" best" if s in c["cheapest"] else ""}" data-shop="{SHOP_NAME[s]}"><span data-lang="es">{money(c["by"][s], "es")}</span><span data-lang="en">{money(c["by"][s], "en")}</span></td>'
              if s in c["by"] else f'<td class="r muted" data-shop="{SHOP_NAME[s]}">—</td>') for s in SHOPS)
-        cmp_rows.append(f'<tr><td>{esc(c["name"])}</td>{cells}</tr>')
+        cmp_rows.append(f'<tr><td><span class="pname">{photo(c["ean"])}{esc(c["name"])}</span></td>{cells}</tr>')
     # Chart legend
     legend = "".join(f'<span class="lkey" style="--c:{SHOP_COLOR[s]}">{SHOP_NAME[s]}</span>' for s in SHOPS if s in K["series"])
     first_day = date.fromisoformat(min(d for s in K["series"].values() for d, _ in s)) if K["series"] else None
@@ -397,7 +410,7 @@ def page(K, others, chrome):
 
   <section>
     <h2><span data-lang="es">El mismo producto en cada súper</span><span data-lang="en">The same product in each shop</span></h2>
-    <p class="muted"><span data-lang="es"><strong>{esc(K['ref_name'] or '')}</strong>, mismo código de barras, precio pagado cada día{f" desde el {first_day.day} de {MES[first_day.month-1]}" if first_day else ""}.</span><span data-lang="en"><strong>{esc(K['ref_name'] or '')}</strong>, same barcode, price paid each day{f" since {first_day.day} {MON[first_day.month-1]}" if first_day else ""}.</span></p>
+    <div class="refrow">{photo(K['ref'], 88) if K['ref'] else ''}<p class="muted"><span data-lang="es"><strong>{esc(K['ref_name'] or '')}</strong>, mismo código de barras, precio pagado cada día{f" desde el {first_day.day} de {MES[first_day.month-1]}" if first_day else ""}.</span><span data-lang="en"><strong>{esc(K['ref_name'] or '')}</strong>, same barcode, price paid each day{f" since {first_day.day} {MON[first_day.month-1]}" if first_day else ""}.</span></p></div>
     <div class="panel pchart"><div class="legend">{legend}</div><div class="wide">{chart_svg(K['series'], 'es')}</div><div class="narrow">{chart_svg(K['series'], 'es', narrow=True)}</div></div>
   </section>
 
@@ -510,6 +523,11 @@ def make_chrome():
 .lkey::before { content: ""; width: 1.1rem; height: 4px; border-radius: 2px; background: var(--c); }
 .others { line-height: 2; max-width: none; }
 .faq p + p { margin-top: 0.8rem; }
+.pname { display: flex; align-items: center; gap: 0.75rem; }
+.pimg { width: 44px; height: 44px; object-fit: contain; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 10px; padding: 3px; flex: none; }
+.pimg.big { width: 88px; height: 88px; border-radius: 14px; padding: 6px; }
+.refrow { display: flex; align-items: center; gap: 1rem; }
+.refrow p { margin: 0; }
 .pp .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .pp .card-link h3 { font-size: 1.5rem; }
 @media (max-width: 820px) { .pboxes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -590,6 +608,9 @@ def main():
         print("No data"); return
     chrome = make_chrome()
     os.makedirs(out, exist_ok=True)
+    fp = os.path.join(ROOT, "precios", "fotos.json")
+    if os.path.exists(fp):
+        FOTOS.update(json.load(open(fp, encoding="utf-8")))
     Ks = [build_kind(k, basket, prices, dates) for k in KINDS]
     for K in Ks:
         if not K["items"]:

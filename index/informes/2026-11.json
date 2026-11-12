@@ -3,33 +3,33 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.9,
+ "inflation": -0.43,
  "base_date": "2026-10-31",
- "end_date": "2026-11-11",
- "days_of_data": 11,
- "prices_collected": 185994,
+ "end_date": "2026-11-12",
+ "days_of_data": 12,
+ "prices_collected": 209952,
  "headline": {
-  "end_to_end_paid": -0.9,
-  "end_to_end_regular": -0.8,
+  "end_to_end_paid": -0.43,
+  "end_to_end_regular": -0.66,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -2.21
+   "pct": 1.04
   },
   {
    "shop": "ChangoMas",
-   "pct": -2.14
+   "pct": -3.03
   },
   {
    "shop": "Dia",
-   "pct": -0.88
+   "pct": -0.87
   },
   {
    "shop": "Jumbo",
-   "pct": 3.09
+   "pct": 2.92
   }
  ],
  "groups": [
@@ -39,75 +39,75 @@
    "pct": 8.38
   },
   {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": 3.84
+  },
+  {
    "group": "frutas",
    "in_headline": true,
-   "pct": 5.03
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 1.33
-  },
-  {
-   "group": "azucar",
-   "in_headline": true,
-   "pct": 1.02
+   "pct": 2.16
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.69
+   "pct": 1.75
+  },
+  {
+   "group": "azucar",
+   "in_headline": true,
+   "pct": 1.04
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 0.98
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": 0.64
-  },
-  {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": 0.25
-  },
-  {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": -0.16
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": -1.14
-  },
-  {
-   "group": "aguas_gaseosas",
-   "in_headline": true,
-   "pct": -1.34
-  },
-  {
-   "group": "otros_alimentos",
-   "in_headline": true,
-   "pct": -1.53
-  },
-  {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -3.7
+   "pct": 0.63
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -6.55
+   "pct": -0.56
+  },
+  {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": -0.69
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": -1.73
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": -2.38
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": -3.29
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -3.64
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -7.54
+   "pct": -9.56
   }
  ],
  "products_compared": 1018,
- "products_up": 129,
- "products_down": 119,
- "products_same": 770,
+ "products_up": 172,
+ "products_down": 148,
+ "products_same": 698,
  "top_up": [
   {
    "type": "fideos",
@@ -187,18 +187,18 @@
    "type": "jabon_ropa",
    "type_en": "Laundry powder",
    "shop": "ChangoMas",
-   "name": "Jabón En Polvo Ala Con Bicarbonato 800 G",
-   "before": 3329.0,
-   "now": 1997.4,
-   "pct": -40.0
-  },
-  {
-   "type": "jabon_ropa",
-   "type_en": "Laundry powder",
-   "shop": "ChangoMas",
    "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
    "before": 11529.0,
    "now": 6917.4,
+   "pct": -40.0
+  },
+  {
+   "type": "yerba",
+   "type_en": "Yerba mate",
+   "shop": "ChangoMas",
+   "name": "Yerba Mate Chamigo Sin Tacc 500g",
+   "before": 1949.0,
+   "now": 1169.4,
    "pct": -40.0
   }
  ],
@@ -262,6 +262,11 @@
    "date": "2026-11-11",
    "paid": 98.621,
    "regular": 99.148
+  },
+  {
+   "date": "2026-11-12",
+   "paid": 99.093,
+   "regular": 99.288
   }
  ]
 }

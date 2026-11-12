@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-08",
-   "2026-11-11"
+   "2026-11-12"
   ],
-  "days_of_data": 4,
-  "n_products": 316,
+  "days_of_data": 5,
+  "n_products": 298,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1331093.24,
+    "total": 1274536.14,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1366946.24,
-    "pct": 2.69
+    "total": 1317844.13,
+    "pct": 3.4
    },
    {
     "shop": "ChangoMas",
-    "total": 1387891.95,
-    "pct": 4.27
+    "total": 1326431.21,
+    "pct": 4.07
    },
    {
     "shop": "Jumbo",
-    "total": 1558411.0,
-    "pct": 17.08
+    "total": 1494526.73,
+    "pct": 17.26
    }
   ],
   "cheapest_count": {
-   "Carrefour": 124,
+   "Carrefour": 103,
    "Jumbo": 4,
-   "ChangoMas": 132,
-   "Dia": 116
+   "ChangoMas": 129,
+   "Dia": 110
   },
   "examples": [
    {
@@ -51,22 +51,22 @@
     "pct": 112.1
    },
    {
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15960.0,
+    "high_shop": "Jumbo",
+    "high": 29783.33,
+    "pct": 86.6
+   },
+   {
     "ean": "7790070417916",
     "name": "Postre Exquisita Dulce De Leche 80g",
     "low_shop": "ChangoMas",
-    "low": 791.4,
+    "low": 896.92,
     "high_shop": "Jumbo",
     "high": 1650.0,
-    "pct": 108.5
-   },
-   {
-    "ean": "7500435252935",
-    "name": "Suavizante Concentrado Brisa Suave 350 Ml Downy",
-    "low_shop": "ChangoMas",
-    "low": 3898.95,
-    "high_shop": "Jumbo",
-    "high": 7650.0,
-    "pct": 96.2
+    "pct": 84.0
    }
   ]
  },

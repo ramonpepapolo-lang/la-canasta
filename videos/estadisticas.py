@@ -123,11 +123,11 @@ except Exception as e:
 try:
     from requests_oauthlib import OAuth1
     auth = OAuth1(os.environ["X_API_KEY"], os.environ["X_API_SECRET"], os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
-    r = requests.get("https://api.twitter.com/2/users/me", auth=auth, params={"user.fields": "public_metrics,username"}, timeout=30)
+    r = requests.get("https://api.twitter.com/2/users/me", auth=auth, params={"user.fields": "public_metrics,username,created_at"}, timeout=30)
     x = {"me_status": r.status_code}
     if r.ok:
         me = r.json()["data"]
-        x.update({"username": me.get("username"), **me.get("public_metrics", {})})
+        x.update({"username": me.get("username"), "created_at": me.get("created_at"), **me.get("public_metrics", {})})
         t = requests.get(f"https://api.twitter.com/2/users/{me['id']}/tweets", auth=auth, timeout=30,
                          params={"max_results": 5, "exclude": "replies", "tweet.fields": "public_metrics,created_at"})
         x["tweets_status"] = t.status_code

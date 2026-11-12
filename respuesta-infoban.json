@@ -1,0 +1,12 @@
+[
+ {
+  "outlet": "InfoBAN",
+  "to": "redaccion@infoban.com.ar",
+  "subject": "RE: Inflación del súper de noviembre: se los paso antes, para el 1 de diciembre",
+  "text": "Hola Charly, ¡gracias!\nTe lo mando la noche del 30 de noviembre, para que lo puedan publicar desde el 1 de diciembre.\nSi antes necesitás algún dato puntual, avisame y te lo busco.\nSaludos,\nRamon",
+  "headers": {
+   "In-Reply-To": "<1794486905.918824617@webmail.emailsrvr.com>",
+   "References": "<202611112252.67634361541@smtp-relay.mailin.fr> <1794486905.918824617@webmail.emailsrvr.com>"
+  }
+ }
+]

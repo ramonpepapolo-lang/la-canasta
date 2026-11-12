@@ -2,7 +2,7 @@
 import json, os, requests
 from requests_oauthlib import OAuth1
 auth = OAuth1(os.environ["X_API_KEY"], os.environ["X_API_SECRET"], os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
-BIO = "Índice diario de precios del súper en Argentina. Creado por Ramon Pepa. Datos abiertos, todos los días."
+BIO = "Índice diario de precios del súper en Argentina, creado por Ramon Pepa. Más de 20.000 precios por día. Datos abiertos.\n\n📺 youtube.com/@LaCanastaIndex"
 out = {}
 r = requests.get("https://api.twitter.com/2/users/me", auth=auth, params={"user.fields": "description,url,entities"}, timeout=30)
 out["before"] = r.json() if r.ok else {"status": r.status_code, "text": r.text[:300]}

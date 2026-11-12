@@ -1,44 +1,33 @@
 {
  "before": {
   "data": {
-   "description": "Índice diario de precios de supermercados en Argentina. Más de 10.000 precios por día. Datos abiertos. Fundado por Ramon Pepa.\n\n📺 https://t.co/v9jCmRw67v",
+   "description": "Índice diario de precios del súper en Argentina. Creado por Ramon Pepa. Datos abiertos, todos los días.",
    "entities": {
-    "description": {
-     "urls": [
-      {
-       "display_url": "youtube.com/@LaCanastaIndex",
-       "end": 153,
-       "expanded_url": "http://youtube.com/@LaCanastaIndex",
-       "start": 130,
-       "url": "https://t.co/v9jCmRw67v"
-      }
-     ]
-    },
     "url": {
      "urls": [
       {
        "display_url": "lacanastaindex.com",
        "end": 23,
-       "expanded_url": "http://lacanastaindex.com",
+       "expanded_url": "https://lacanastaindex.com",
        "start": 0,
-       "url": "https://t.co/oXbX5LT3R7"
+       "url": "https://t.co/YUZK1PTqsV"
       }
      ]
     }
    },
    "id": "2115609307249074176",
    "name": "La Canasta",
-   "url": "https://t.co/oXbX5LT3R7",
+   "url": "https://t.co/YUZK1PTqsV",
    "username": "LaCanastaIndex"
   }
  },
  "update": {
   "status": 200,
-  "text": "{\"id\":2115609307249074176,\"id_str\":\"2115609307249074176\",\"name\":\"La Canasta\",\"screen_name\":\"LaCanastaIndex\",\"location\":\"Argentina\",\"profile_location\":null,\"description\":\"\\u00cdndice diario de precios del s\\u00faper en Argentina. Creado por Ramon Pepa. Datos abiertos, todos los d\\u00edas.\",\"url\":\"https:\\/\\/t.co\\/YUZK1PTqsV\",\"entities\":{\"url\":{\"urls\":[{\"url\":\"https:\\/\\/t.co\\/YUZK1PTqsV\",\"expanded_ur"
+  "text": "{\"id\":2115609307249074176,\"id_str\":\"2115609307249074176\",\"name\":\"La Canasta\",\"screen_name\":\"LaCanastaIndex\",\"location\":\"Argentina\",\"profile_location\":null,\"description\":\"\\u00cdndice diario de precios del s\\u00faper en Argentina, creado por Ramon Pepa. M\\u00e1s de 20.000 precios por d\\u00eda. Datos abiertos.\\n\\n\\ud83d\\udcfa https:\\/\\/t.co\\/v9jCmRw67v\",\"url\":\"https:\\/\\/t.co\\/YUZK1PTqsV\",\"entities\":{"
  },
  "after": {
   "data": {
-   "description": "Índice diario de precios del súper en Argentina. Creado por Ramon Pepa. Datos abiertos, todos los días.",
+   "description": "Índice diario de precios del súper en Argentina, creado por Ramon Pepa. Más de 20.000 precios por día. Datos abiertos.\n\n📺 https://t.co/v9jCmRw67v",
    "id": "2115609307249074176",
    "name": "La Canasta",
    "url": "https://t.co/YUZK1PTqsV",

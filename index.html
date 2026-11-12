@@ -8,9 +8,11 @@
 <meta name="msvalidate.01" content="7F044100708482C5EBAE0833BCAAC3BD" />
 <meta property="og:title" content="La Canasta · Índice diario de precios de supermercados en Argentina">
 <meta property="og:description" content="Índice diario de precios de supermercados en Argentina: cuánto suben los alimentos cada día y cada semana, y qué súper es más barato (Carrefour, Día, Jumbo y ChangoMás). Datos abiertos, publicados antes que el INDEC.">
-<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:image" content="https://lacanastaindex.com/og/home.png?v=2026-11-12">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://lacanastaindex.com/">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://lacanastaindex.com/">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization",
@@ -413,6 +415,9 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
   @keyframes swing { from { transform: rotate(-5deg) translateY(-8px); } to { transform: rotate(-1deg); } }
   .bar { transition: width 0.6s ease; }
 }
+.qm { display: inline-flex; align-items: center; justify-content: center; width: 1.2rem; height: 1.2rem; margin-left: 0.25rem; padding: 0; border: 1.5px solid currentColor; border-radius: 50%; background: transparent; color: inherit; font: 700 0.72rem/1 var(--body); cursor: pointer; opacity: 0.75; vertical-align: middle; letter-spacing: 0; text-transform: none; }
+.qm:hover, .qm[aria-expanded="true"] { opacity: 1; }
+.qtip { margin: 0.6rem 0 0; font-size: 0.92rem; line-height: 1.5; background: var(--band); color: var(--navy); border-left: 3px solid var(--celeste); padding: 0.6rem 0.85rem; border-radius: 8px; text-align: left; }
 </style>
 
 <header class="topbar">
@@ -492,18 +497,21 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
           <span class="eyebrow num" id="todayDate"></span>
         </div>
         <div class="tag" aria-live="polite">
-          <span class="small" data-t="tagLabel">Lo que se paga</span>
+          <span class="small"><span data-t="tagLabel">Lo que se paga</span> <button type="button" class="qm" data-q="q1" aria-expanded="false" aria-controls="q1"><span class="sr">¿Qué es?</span><span aria-hidden="true">?</span></button></span>
           <span class="big" id="bigChange">+0.00%</span>
           <span class="sub" id="tagSub">Updated</span>
         </div>
+        <p class="qtip" id="q1" hidden><span data-lang="es">Es lo que paga cualquier persona en la web del súper ese día, con las ofertas que tiene todo el mundo. Es el número principal, como en el INDEC.</span><span data-lang="en">What anyone pays on the supermarket's website that day, with the offers everyone gets. It's the main number, as at INDEC.</span></p>
         <div class="tag-note" role="note">
           <strong data-t="noteTitle">¿Por qué el número parece tan alto?</strong>
           <p data-t="noteText"></p>
         </div>
         <div class="tag-meta">
-          <div><span class="eyebrow" data-t="indexLabel">Índice hoy</span><strong class="num" id="indexToday">100,00</strong></div>
-          <div><span class="eyebrow" data-t="regularLabel">Sin promociones</span><strong class="num" id="regularToday">+0.00%</strong></div>
+          <div><span class="eyebrow"><span data-t="indexLabel">Índice hoy</span> <button type="button" class="qm" data-q="q2" aria-expanded="false" aria-controls="q2"><span class="sr">¿Qué es?</span><span aria-hidden="true">?</span></button></span><strong class="num" id="indexToday">100,00</strong></div>
+          <div><span class="eyebrow"><span data-t="regularLabel">Sin promociones</span> <button type="button" class="qm" data-q="q3" aria-expanded="false" aria-controls="q3"><span class="sr">¿Qué es?</span><span aria-hidden="true">?</span></button></span><strong class="num" id="regularToday">+0.00%</strong></div>
         </div>
+        <p class="qtip" id="q2" hidden><span data-lang="es">100 es lo que costaba la canasta en su primera semana (24 al 30 de octubre de 2026). 101 quiere decir que hoy cuesta 1% más que esa semana.</span><span data-lang="en">100 is what the basket cost in its first week (24 to 30 October 2026). 101 means it costs 1% more today than that week.</span></p>
+        <p class="qtip" id="q3" hidden><span data-lang="es">El mismo cálculo pero con el precio de la etiqueta, sin ninguna oferta. Sirve para ver si suben los precios de verdad o si solo cambian las promos.</span><span data-lang="en">The same calculation with the label price, without any offer. It shows whether prices really rise or only the promotions change.</span></p>
         <a class="why-two" href="#dos-numeros"><span data-lang="es">¿Por qué dos números? ↓</span><span data-lang="en">Why two numbers? ↓</span></a>
       </div>
     </div>
@@ -514,8 +522,9 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
       <div><strong id="statDays">1</strong><span data-t="statDays">días de datos</span></div>
       <div><strong>5</strong><span data-t="statShops">cadenas recolectadas, 4 en el índice</span></div>
       <div><strong>1.018</strong><span data-t="statProducts">productos en la canasta</span></div>
-      <div><strong>12</strong><span data-t="statDaily">grupos de gasto, ponderados como el INDEC</span></div>
+      <div><strong>12</strong><span><span data-t="statDaily">grupos de gasto, ponderados como el INDEC</span> <button type="button" class="qm" data-q="q4" aria-expanded="false" aria-controls="q4"><span class="sr">¿Qué es?</span><span aria-hidden="true">?</span></button></span></div>
     </div>
+    <p class="qtip" id="q4" hidden><span data-lang="es">Lo que más gastan las familias pesa más en el número. Por ejemplo, la carne pesa más que el café, con los pesos oficiales del INDEC.</span><span data-lang="en">What families spend most on counts more in the number. For example, beef counts more than coffee, using INDEC's official weights.</span></p>
   </div>
 
   <section class="sec container" id="index">
@@ -1522,4 +1531,14 @@ daily = parseCSV(FALLBACK_DAILY); groups = parseCSV(FALLBACK_GROUPS); render();
   render = function () { r0(); var d = $("todayDate"), ro = $("roDate"); if (d && ro) d.textContent = ro.textContent; heroShow(); nextReport(); };
   render();
 })();
+</script>
+<script>
+document.querySelectorAll(".qm").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var t = document.getElementById(b.dataset.q), open = t.hidden;
+    document.querySelectorAll(".qtip").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".qm").forEach(function (x) { x.setAttribute("aria-expanded", "false"); });
+    t.hidden = !open; b.setAttribute("aria-expanded", String(open));
+  });
+});
 </script>

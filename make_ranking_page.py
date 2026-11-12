@@ -5,7 +5,7 @@ make_price_pages.py, every day.
 """
 import json, os
 from datetime import date
-from make_price_pages import SHOP_NAME, SITE, add_to_sitemap, d_en, d_es, esc, make_chrome, money
+from make_price_pages import SHOP_NAME, SITE, add_to_sitemap, d_en, d_es, esc, make_chrome, money, share_wa
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PATH = "precios/supermercado-mas-barato.html"
@@ -21,6 +21,27 @@ def pct_en(x):
 
 def n_es(n):
     return f"{n:,}".replace(",", ".")
+
+
+CALC_JS = r'''<script>
+(function () {
+  var amt = document.getElementById("calcAmt"), shop = document.getElementById("calcShop"), out = document.getElementById("calcOut"), BEST = __BEST__;
+  function fmt(x) { return "$" + Math.round(x).toLocaleString("es-AR"); }
+  function show() {
+    var en = document.documentElement.lang === "en", a = parseFloat((amt.value || "").replace(/[^0-9]/g, "")), p = parseFloat(shop.value);
+    var name = shop.options[shop.selectedIndex].text;
+    if (!a) { out.textContent = en ? "Type how much you spend and see the difference." : "Escribí cuánto gastás y mirá la diferencia."; return; }
+    if (p <= 0) { out.innerHTML = en ? "You already shop at the cheapest one this week." : "Ya comprás en el más barato de esta semana. 👏"; return; }
+    var save = a - a / (1 + p / 100);
+    out.innerHTML = en ? "Buying the same at " + BEST + " instead of " + name + ", you would save about <strong>" + fmt(save) + " a month</strong> (" + fmt(save * 12) + " a year)."
+                       : "Comprando lo mismo en " + BEST + " en vez de " + name + ", ahorrarías unos <strong>" + fmt(save) + " por mes</strong> (" + fmt(save * 12) + " por año).";
+  }
+  amt.addEventListener("input", function () { var d = amt.value.replace(/[^0-9]/g, ""); amt.value = d ? "$ " + Number(d).toLocaleString("es-AR") : ""; show(); });
+  shop.addEventListener("change", show);
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setTimeout(show, 0); }); });
+  show();
+})();
+</script>'''
 
 
 def pick(weeks):
@@ -125,6 +146,7 @@ def main():
     <h1><span data-lang="es">¿Qué supermercado es más barato en Argentina?</span><span data-lang="en">Which supermarket is cheapest in Argentina?</span></h1>
     <p class="summary"><span data-lang="es"><strong>{esc(B)}.</strong> {esc(answer_es[len("Esta semana el supermercado más barato es " + B + ". "):])}</span><span data-lang="en"><strong>{esc(B)}.</strong> {esc(answer_en[len("This week the cheapest supermarket is " + B + ". "):])}</span></p>
     <p class="psub"><span data-lang="es">Actualizado todos los días. Último dato: {d_es(last, True)}.</span><span data-lang="en">Updated every day. Latest data: {d_en(last, True)}.</span></p>
+    {share_wa(f"¿Qué súper es más barato esta semana? {B}. Mirá el ranking 👉 {SITE}/{PATH}", f"Which supermarket is cheapest this week? {B}. See the ranking 👉 {SITE}/{PATH}")}
   </header>
 
   <section>
@@ -132,6 +154,17 @@ def main():
     <div class="pboxes">{''.join(boxes)}</div>
     <p class="psub"><span data-lang="es">Total de la misma compra de {n_es(n)} productos, promedio de la semana. {Wn} fue {pct_es(worst['pct']).lstrip('+')} más caro que {B}.</span><span data-lang="en">Total of the same basket of {n:,} products, week average. {Wn} was {pct_en(worst['pct']).lstrip('+')} more expensive than {B}.</span></p>
   </section>
+
+  <section class="calc" id="ahorro">
+    <h2><span data-lang="es">¿Cuánto ahorrás?</span><span data-lang="en">How much could you save?</span></h2>
+    <div class="calc-row">
+      <label><span><span data-lang="es">¿Cuánto gastás por mes en el súper?</span><span data-lang="en">How much do you spend a month at the supermarket?</span></span><input id="calcAmt" type="text" inputmode="numeric" autocomplete="off" placeholder="$ 400.000"></label>
+      <label><span><span data-lang="es">¿Dónde comprás?</span><span data-lang="en">Where do you shop?</span></span><select id="calcShop">{''.join(f'<option value="{s["pct"]}"{" selected" if s is worst else ""}>{SHOP_NAME[s["shop"]]}</option>' for s in shops)}</select></label>
+    </div>
+    <p class="calc-out" id="calcOut" aria-live="polite"></p>
+    <p class="psub"><span data-lang="es">Estimado con la misma compra de esta semana ({n_es(n)} productos, mismo código de barras). Es una cuenta aproximada: depende de qué comprás.</span><span data-lang="en">Estimated with this week's same basket ({n:,} products, same barcodes). A rough figure: it depends on what you buy.</span></p>
+  </section>
+  {CALC_JS.replace("__BEST__", json.dumps(B))}
 
   <section>
     <h2><span data-lang="es">¿Conviene comprar todo en el mismo súper?</span><span data-lang="en">Is it worth buying everything at the same shop?</span></h2>

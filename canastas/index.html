@@ -7,9 +7,11 @@
 <meta name="description" content="La app de La Canasta llega muy pronto, gratis, para iPhone y Android. Mientras tanto: el índice de hoy y los precios de hoy en Carrefour, Jumbo, ChangoMás y Día.">
 <meta property="og:title" content="La app de La Canasta: muy pronto en App Store y Google Play, gratis · La Canasta">
 <meta property="og:description" content="La app de La Canasta llega muy pronto, gratis, para iPhone y Android. Mientras tanto: el índice de hoy y los precios de hoy en Carrefour, Jumbo, ChangoMás y Día.">
-<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:image" content="https://lacanastaindex.com/og/canastas.png?v=2026-11-13">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://lacanastaindex.com/canastas/">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://lacanastaindex.com/canastas/">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#2B3B5C">
@@ -361,6 +363,29 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 .lkey::before { content: ""; width: 1.1rem; height: 4px; border-radius: 2px; background: var(--c); }
 .others { line-height: 2; max-width: none; }
 .faq p + p { margin-top: 0.8rem; }
+.pname { display: flex; align-items: center; gap: 0.75rem; }
+.pimg { width: 44px; height: 44px; object-fit: contain; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 10px; padding: 3px; flex: none; }
+.pimg.big { width: 88px; height: 88px; border-radius: 14px; padding: 6px; }
+.refrow { display: flex; align-items: center; gap: 1rem; }
+.refrow p { margin: 0; }
+.share { margin: 0.2rem 0 0; }
+.wa { display: inline-flex; align-items: center; gap: 0.5rem; border: 1.5px solid var(--down); color: var(--down); border-radius: 999px; padding: 0.45rem 1rem; font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+.wa:hover { background: var(--down); color: #FFFFFF; }
+.psearch { display: grid; gap: 0.6rem; }
+.psearch input { font: inherit; font-size: 1.05rem; padding: 0.8rem 1rem; border: 1.5px solid var(--rule); border-radius: 12px; width: 100%; box-sizing: border-box; background: #FFFFFF; color: var(--navy); }
+.psearch input:focus { outline: none; border-color: var(--celeste); }
+.presults { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.presults a { display: flex; align-items: center; gap: 0.75rem; padding: 0.55rem 0.7rem; border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; }
+.presults a:hover { border-color: var(--celeste); }
+.presults .pn { flex: 1; min-width: 0; font-weight: 600; }
+.presults .ps { color: var(--muted); font-size: 0.88rem; font-weight: 500; display: block; }
+.presults .pp2 { font-weight: 700; white-space: nowrap; }
+.calc { display: grid; gap: 0.9rem; border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.3rem 1.4rem; background: var(--band); }
+.calc-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.8rem; }
+.calc label { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+.calc input, .calc select { font: inherit; padding: 0.7rem 0.9rem; border: 1.5px solid var(--rule); border-radius: 10px; background: #FFFFFF; color: var(--navy); width: 100%; box-sizing: border-box; }
+.calc-out { font-size: 1.2rem; margin: 0; }
+.calc-out strong { color: var(--down); }
 .pp .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .pp .card-link h3 { font-size: 1.5rem; }
 @media (max-width: 820px) { .pboxes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

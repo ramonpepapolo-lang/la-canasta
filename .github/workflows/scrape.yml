@@ -62,7 +62,7 @@ jobs:
         with:
           python-version: "3.12"
       - if: steps.check.outputs.done == 'no'
-        run: pip install requests
+        run: pip install requests pillow
       - if: steps.check.outputs.done == 'no'
         run: python scrape_supermarkets.py
       - if: steps.check.outputs.done == 'no'
@@ -75,6 +75,10 @@ jobs:
         if: steps.check.outputs.done == 'no'
         continue-on-error: true
         run: python make_ranking_page.py
+      - name: Update the share pictures and the not-found page (never stops the prices being saved)
+        if: steps.check.outputs.done == 'no'
+        continue-on-error: true
+        run: python make_share_cards.py && python make_404.py
       - name: Update the ready-made baskets (never stops the prices being saved)
         if: steps.check.outputs.done == 'no'
         continue-on-error: true
@@ -101,7 +105,7 @@ jobs:
         run: |
           git config user.name "la-canasta-bot"
           git config user.email "la-canasta-bot@users.noreply.github.com"
-          git add data index precios canastas app-datos sitemap.xml
+          git add data index precios canastas app-datos sitemap.xml og 404.html index.html
           git commit -m "Prices and index for ${{ steps.check.outputs.ar_date }}" || echo "Nothing new"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && break

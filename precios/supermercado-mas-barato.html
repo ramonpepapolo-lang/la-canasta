@@ -7,9 +7,11 @@
 <meta name="description" content="Esta semana el súper más barato es Día. La misma compra de 298 productos (mismo código de barras) costó Carrefour +3,4%, ChangoMás +4,1%, Jumbo +17,3%. Actualizado todos los días.">
 <meta property="og:title" content="¿Qué supermercado es más barato en Argentina? Ranking de Carrefour, Jumbo, ChangoMás y Día · La Canasta">
 <meta property="og:description" content="Esta semana el súper más barato es Día. La misma compra de 298 productos (mismo código de barras) costó Carrefour +3,4%, ChangoMás +4,1%, Jumbo +17,3%. Actualizado todos los días.">
-<meta property="og:image" content="https://lacanastaindex.com/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:image" content="https://lacanastaindex.com/og/precios-supermercado-mas-barato.png?v=2026-11-13">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://lacanastaindex.com/precios/supermercado-mas-barato.html">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://lacanastaindex.com/precios/supermercado-mas-barato.html">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#2B3B5C">
@@ -415,6 +417,29 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
 .lkey::before { content: ""; width: 1.1rem; height: 4px; border-radius: 2px; background: var(--c); }
 .others { line-height: 2; max-width: none; }
 .faq p + p { margin-top: 0.8rem; }
+.pname { display: flex; align-items: center; gap: 0.75rem; }
+.pimg { width: 44px; height: 44px; object-fit: contain; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 10px; padding: 3px; flex: none; }
+.pimg.big { width: 88px; height: 88px; border-radius: 14px; padding: 6px; }
+.refrow { display: flex; align-items: center; gap: 1rem; }
+.refrow p { margin: 0; }
+.share { margin: 0.2rem 0 0; }
+.wa { display: inline-flex; align-items: center; gap: 0.5rem; border: 1.5px solid var(--down); color: var(--down); border-radius: 999px; padding: 0.45rem 1rem; font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+.wa:hover { background: var(--down); color: #FFFFFF; }
+.psearch { display: grid; gap: 0.6rem; }
+.psearch input { font: inherit; font-size: 1.05rem; padding: 0.8rem 1rem; border: 1.5px solid var(--rule); border-radius: 12px; width: 100%; box-sizing: border-box; background: #FFFFFF; color: var(--navy); }
+.psearch input:focus { outline: none; border-color: var(--celeste); }
+.presults { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.presults a { display: flex; align-items: center; gap: 0.75rem; padding: 0.55rem 0.7rem; border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; }
+.presults a:hover { border-color: var(--celeste); }
+.presults .pn { flex: 1; min-width: 0; font-weight: 600; }
+.presults .ps { color: var(--muted); font-size: 0.88rem; font-weight: 500; display: block; }
+.presults .pp2 { font-weight: 700; white-space: nowrap; }
+.calc { display: grid; gap: 0.9rem; border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.3rem 1.4rem; background: var(--band); }
+.calc-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.8rem; }
+.calc label { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+.calc input, .calc select { font: inherit; padding: 0.7rem 0.9rem; border: 1.5px solid var(--rule); border-radius: 10px; background: #FFFFFF; color: var(--navy); width: 100%; box-sizing: border-box; }
+.calc-out { font-size: 1.2rem; margin: 0; }
+.calc-out strong { color: var(--down); }
 .pp .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .pp .card-link h3 { font-size: 1.5rem; }
 @media (max-width: 820px) { .pboxes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -453,6 +478,7 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
     <h1><span data-lang="es">¿Qué supermercado es más barato en Argentina?</span><span data-lang="en">Which supermarket is cheapest in Argentina?</span></h1>
     <p class="summary"><span data-lang="es"><strong>Día.</strong> En la semana del 8 al 14 de noviembre de 2026 (datos hasta el 12 de noviembre de 2026), la misma compra de 298 productos, con el mismo código de barras, costó más en los demás: Carrefour +3,4%, ChangoMás +4,1%, Jumbo +17,3%.</span><span data-lang="en"><strong>Día.</strong> In the week of 8 to 14 November 2026 (data up to 12 November 2026), the same basket of 298 products, with the same barcodes, cost more elsewhere: Carrefour +3.4%, ChangoMás +4.1%, Jumbo +17.3%.</span></p>
     <p class="psub"><span data-lang="es">Actualizado todos los días. Último dato: jueves 12 de noviembre de 2026.</span><span data-lang="en">Updated every day. Latest data: Thursday 12 November 2026.</span></p>
+    <p class="share"><a class="wa" data-lang="es" href="https://wa.me/?text=%C2%BFQu%C3%A9%20s%C3%BAper%20es%20m%C3%A1s%20barato%20esta%20semana%3F%20D%C3%ADa.%20Mir%C3%A1%20el%20ranking%20%F0%9F%91%89%20https%3A//lacanastaindex.com/precios/supermercado-mas-barato.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.5-4.9A8.5 8.5 0 1 1 21 12z"/></svg>Compartir por WhatsApp</a><a class="wa" data-lang="en" href="https://wa.me/?text=Which%20supermarket%20is%20cheapest%20this%20week%3F%20D%C3%ADa.%20See%20the%20ranking%20%F0%9F%91%89%20https%3A//lacanastaindex.com/precios/supermercado-mas-barato.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.5-4.9A8.5 8.5 0 1 1 21 12z"/></svg>Share on WhatsApp</a></p>
   </header>
 
   <section>
@@ -460,6 +486,35 @@ html[lang="en"] [data-lang="es"] { display: none !important; }
     <div class="pboxes"><div class="pbox"><span class="plab">1°</span><strong>Día</strong><span class="psub"><span data-lang="es">el más barato · $1.274.536</span><span data-lang="en">the cheapest · $1,274,536</span></span></div><div class="pbox"><span class="plab">2°</span><strong>Carrefour</strong><span class="psub"><span data-lang="es">3,4% más caro que Día · $1.317.844</span><span data-lang="en">3.4% dearer than Día · $1,317,844</span></span></div><div class="pbox"><span class="plab">3°</span><strong>ChangoMás</strong><span class="psub"><span data-lang="es">4,1% más caro que Día · $1.326.431</span><span data-lang="en">4.1% dearer than Día · $1,326,431</span></span></div><div class="pbox"><span class="plab">4°</span><strong>Jumbo</strong><span class="psub"><span data-lang="es">17,3% más caro que Día · $1.494.527</span><span data-lang="en">17.3% dearer than Día · $1,494,527</span></span></div></div>
     <p class="psub"><span data-lang="es">Total de la misma compra de 298 productos, promedio de la semana. Jumbo fue 17,3% más caro que Día.</span><span data-lang="en">Total of the same basket of 298 products, week average. Jumbo was 17.3% more expensive than Día.</span></p>
   </section>
+
+  <section class="calc" id="ahorro">
+    <h2><span data-lang="es">¿Cuánto ahorrás?</span><span data-lang="en">How much could you save?</span></h2>
+    <div class="calc-row">
+      <label><span><span data-lang="es">¿Cuánto gastás por mes en el súper?</span><span data-lang="en">How much do you spend a month at the supermarket?</span></span><input id="calcAmt" type="text" inputmode="numeric" autocomplete="off" placeholder="$ 400.000"></label>
+      <label><span><span data-lang="es">¿Dónde comprás?</span><span data-lang="en">Where do you shop?</span></span><select id="calcShop"><option value="0.0">Día</option><option value="3.4">Carrefour</option><option value="4.07">ChangoMás</option><option value="17.26" selected>Jumbo</option></select></label>
+    </div>
+    <p class="calc-out" id="calcOut" aria-live="polite"></p>
+    <p class="psub"><span data-lang="es">Estimado con la misma compra de esta semana (298 productos, mismo código de barras). Es una cuenta aproximada: depende de qué comprás.</span><span data-lang="en">Estimated with this week's same basket (298 products, same barcodes). A rough figure: it depends on what you buy.</span></p>
+  </section>
+  <script>
+(function () {
+  var amt = document.getElementById("calcAmt"), shop = document.getElementById("calcShop"), out = document.getElementById("calcOut"), BEST = "D\u00eda";
+  function fmt(x) { return "$" + Math.round(x).toLocaleString("es-AR"); }
+  function show() {
+    var en = document.documentElement.lang === "en", a = parseFloat((amt.value || "").replace(/[^0-9]/g, "")), p = parseFloat(shop.value);
+    var name = shop.options[shop.selectedIndex].text;
+    if (!a) { out.textContent = en ? "Type how much you spend and see the difference." : "Escribí cuánto gastás y mirá la diferencia."; return; }
+    if (p <= 0) { out.innerHTML = en ? "You already shop at the cheapest one this week." : "Ya comprás en el más barato de esta semana. 👏"; return; }
+    var save = a - a / (1 + p / 100);
+    out.innerHTML = en ? "Buying the same at " + BEST + " instead of " + name + ", you would save about <strong>" + fmt(save) + " a month</strong> (" + fmt(save * 12) + " a year)."
+                       : "Comprando lo mismo en " + BEST + " en vez de " + name + ", ahorrarías unos <strong>" + fmt(save) + " por mes</strong> (" + fmt(save * 12) + " por año).";
+  }
+  amt.addEventListener("input", function () { var d = amt.value.replace(/[^0-9]/g, ""); amt.value = d ? "$ " + Number(d).toLocaleString("es-AR") : ""; show(); });
+  shop.addEventListener("change", show);
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setTimeout(show, 0); }); });
+  show();
+})();
+</script>
 
   <section>
     <h2><span data-lang="es">¿Conviene comprar todo en el mismo súper?</span><span data-lang="en">Is it worth buying everything at the same shop?</span></h2>

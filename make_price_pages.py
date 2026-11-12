@@ -92,6 +92,15 @@ def esc(s):
 
 
 FOTOS = {}
+CHAT_ICON = ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">'
+             '<path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.5-4.9A8.5 8.5 0 1 1 21 12z"/></svg>')
+
+
+def share_wa(text_es, text_en):
+    """A WhatsApp share button with a ready message (opens WhatsApp on the phone, WhatsApp Web on a computer)."""
+    from urllib.parse import quote
+    return (f'<p class="share"><a class="wa" data-lang="es" href="https://wa.me/?text={quote(text_es)}" target="_blank" rel="noopener">{CHAT_ICON}Compartir por WhatsApp</a>'
+            f'<a class="wa" data-lang="en" href="https://wa.me/?text={quote(text_en)}" target="_blank" rel="noopener">{CHAT_ICON}Share on WhatsApp</a></p>')
 
 
 def photo(ean, size=44):
@@ -394,6 +403,7 @@ def page(K, others, chrome):
   <header class="pp-head">
     <h1><span data-lang="es">{h1_es}</span><span data-lang="en">{h1_en}</span></h1>
     <p class="lede"><span data-lang="es">En Carrefour, Jumbo, ChangoMás y Día. Precios del {d_es(tday, True)}.</span><span data-lang="en">At Carrefour, Jumbo, ChangoMás and Día. Prices of {d_en(tday, True)}.</span></p>
+    {share_wa(f"{h1_es}, súper por súper 👉 {SITE}/precios/{slug}.html", f"{h1_en}, shop by shop 👉 {SITE}/precios/{slug}.html")}
   </header>
   <div class="pboxes">{''.join(boxes)}</div>
   <p class="summary" data-lang="es">{' '.join(s_es)}</p>
@@ -440,6 +450,32 @@ def page(K, others, chrome):
     return chrome(t_es, desc, f"precios/{slug}.html", body, ld_html)
 
 
+HUB_JS = r'''
+<script>
+(function () {
+  var L = JSON.parse(document.getElementById("plist").textContent), q = document.getElementById("pq"), out = document.getElementById("pres");
+  function norm(x) { return x.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+  var N = L.map(function (r) { return norm(r[0] + " " + r[1]); });
+  function esc(x) { return x.replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); }
+  function show() {
+    var w = norm(q.value).split(/\s+/).filter(Boolean); out.innerHTML = "";
+    if (!w.length) return;
+    var hits = [];
+    for (var i = 0; i < L.length && hits.length < 8; i++) if (w.every(function (x) { return N[i].indexOf(x) >= 0; })) hits.push(L[i]);
+    if (!hits.length) { out.innerHTML = '<li class="muted">' + (document.documentElement.lang === "en" ? "Nothing found. Try another word." : "No encontramos nada. Probá con otra palabra.") + "</li>"; return; }
+    out.innerHTML = hits.map(function (r) {
+      return '<li><a href="' + r[3] + '.html">' + (r[4] ? '<img class="pimg" src="' + esc(r[4]) + '" alt="" width="44" height="44" referrerpolicy="no-referrer" onerror="this.remove()">' : "") +
+        '<span class="pn">' + esc(r[0]) + '<span class="ps">' + esc(r[1]) + '</span></span><span class="pp2">' + esc(r[2]) + "</span></a></li>";
+    }).join("");
+  }
+  q.addEventListener("input", show);
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () {
+    setTimeout(function () { q.placeholder = q.dataset[document.documentElement.lang === "en" ? "phEn" : "phEs"]; show(); }, 0); }); });
+  q.placeholder = q.dataset[document.documentElement.lang === "en" ? "phEn" : "phEs"];
+})();
+</script>'''
+
+
 def hub(Ks, chrome):
     tday = date.fromisoformat(Ks[0]["today"])
     cards = []
@@ -454,6 +490,8 @@ def hub(Ks, chrome):
         cards.append(f'''<a class="card-link" href="{slug}.html"><h3><span data-lang="es">{label_es(K["kind"])}</span><span data-lang="en">{name_en[0].upper()+name_en[1:]}</span></h3>
 <p>{f'<span data-lang="es">Desde {money(best["per"], "es")} {per_es} en {join_shops(priced, best, "es")}</span><span data-lang="en">From {money(best["per"], "en")} {per_en} at {join_shops(priced, best, "en")}</span>' if best else ''}</p>
 <p>{'' if c is None else f'<span data-lang="es">En 7 días: <strong class="{cls}">{pct(c, "es")}</strong></span><span data-lang="en">In 7 days: <strong class="{cls}">{pct(c, "en")}</strong></span>'}</p></a>''')
+    plist = json.dumps([[i["name"], SHOP_NAME[i["shop"]], money(i["paid"], "es"), K["kind"][0], FOTOS.get(i["ean"], "")]
+                        for K in Ks for i in K["items"]], ensure_ascii=False).replace("</", "<\\/")
     body = f"""
 <main class="container pp">
   <nav class="crumbs" aria-label="Ruta"><a href="../index.html">La Canasta</a> › <span data-lang="es">Precios</span><span data-lang="en">Prices</span></nav>
@@ -461,9 +499,15 @@ def hub(Ks, chrome):
     <h1><span data-lang="es">Precios del súper hoy</span><span data-lang="en">Supermarket prices today</span></h1>
     <p class="lede"><span data-lang="es">Leche, yerba, aceite, arroz y más, en Carrefour, Jumbo, ChangoMás y Día. Precios del {d_es(tday, True)}, actualizados todos los días.</span><span data-lang="en">Milk, yerba, oil, rice and more, at Carrefour, Jumbo, ChangoMás and Día. Prices of {d_en(tday, True)}, updated every day.</span></p>
   </header>
+  <section class="psearch" aria-label="Buscar">
+    <label class="sr" for="pq">Buscar un producto</label>
+    <input id="pq" type="search" autocomplete="off" data-ph-es="Buscá un producto: yerba, leche, coca…" data-ph-en="Search a product: yerba, milk, coke…" placeholder="Buscá un producto: yerba, leche, coca…">
+    <ul class="presults" id="pres"></ul>
+  </section>
+  <script type="application/json" id="plist">{plist}</script>
   <p class="summary"><a href="supermercado-mas-barato.html"><span data-lang="es">¿Qué supermercado es más barato esta semana? Ver el ranking →</span><span data-lang="en">Which supermarket is cheapest this week? See the ranking →</span></a></p>
   <div class="cards">{''.join(cards)}</div>
-</main>"""
+</main>""" + HUB_JS
     return chrome("Precios del súper hoy en Argentina: leche, yerba, aceite y más · La Canasta",
                   f"Precios de hoy ({d_es(tday)}) de leche, yerba, aceite, arroz, fideos, azúcar, harina, café, Coca-Cola y dulce de leche en Carrefour, Jumbo, ChangoMás y Día. Actualizados todos los días.",
                   "precios/", body, "")
@@ -528,6 +572,24 @@ def make_chrome():
 .pimg.big { width: 88px; height: 88px; border-radius: 14px; padding: 6px; }
 .refrow { display: flex; align-items: center; gap: 1rem; }
 .refrow p { margin: 0; }
+.share { margin: 0.2rem 0 0; }
+.wa { display: inline-flex; align-items: center; gap: 0.5rem; border: 1.5px solid var(--down); color: var(--down); border-radius: 999px; padding: 0.45rem 1rem; font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+.wa:hover { background: var(--down); color: #FFFFFF; }
+.psearch { display: grid; gap: 0.6rem; }
+.psearch input { font: inherit; font-size: 1.05rem; padding: 0.8rem 1rem; border: 1.5px solid var(--rule); border-radius: 12px; width: 100%; box-sizing: border-box; background: #FFFFFF; color: var(--navy); }
+.psearch input:focus { outline: none; border-color: var(--celeste); }
+.presults { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.presults a { display: flex; align-items: center; gap: 0.75rem; padding: 0.55rem 0.7rem; border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; }
+.presults a:hover { border-color: var(--celeste); }
+.presults .pn { flex: 1; min-width: 0; font-weight: 600; }
+.presults .ps { color: var(--muted); font-size: 0.88rem; font-weight: 500; display: block; }
+.presults .pp2 { font-weight: 700; white-space: nowrap; }
+.calc { display: grid; gap: 0.9rem; border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.3rem 1.4rem; background: var(--band); }
+.calc-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.8rem; }
+.calc label { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+.calc input, .calc select { font: inherit; padding: 0.7rem 0.9rem; border: 1.5px solid var(--rule); border-radius: 10px; background: #FFFFFF; color: var(--navy); width: 100%; box-sizing: border-box; }
+.calc-out { font-size: 1.2rem; margin: 0; }
+.calc-out strong { color: var(--down); }
 .pp .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .pp .card-link h3 { font-size: 1.5rem; }
 @media (max-width: 820px) { .pboxes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -557,9 +619,11 @@ setLang(lang);
 <meta name="description" content="{esc(desc)}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
-<meta property="og:image" content="{SITE}/la-canasta-logo/la-canasta-icon-512.png">
+<meta property="og:image" content="{SITE}/og/{(path.strip("/").replace("/", "-").replace(".html", "") or "home")}.png?v={date.today().isoformat()}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{url}">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#2B3B5C">

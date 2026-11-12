@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-12 16:11",
+ "when_utc": "2026-11-12 17:23",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -16,7 +16,7 @@
   "source": "public pages",
   "subscribers_text": "408",
   "views_total_text": "102,397",
-  "views_sum_of_videos": 50602,
+  "views_sum_of_videos": 50701,
   "videos": 23,
   "list": [
    {
@@ -105,9 +105,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 353,
+    "views": 357,
     "views_exact": true,
-    "likes": 54
+    "likes": 53
    },
    {
     "id": "uYOS0ICnMvA",
@@ -141,9 +141,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 12096,
+    "views": 12148,
     "views_exact": true,
-    "likes": 66
+    "likes": 65
    },
    {
     "id": "L1E_gsxHEb8",
@@ -168,9 +168,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 6336,
+    "views": 6346,
     "views_exact": true,
-    "likes": 501
+    "likes": 502
    },
    {
     "id": "EimZGNWwnkQ",
@@ -186,7 +186,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 5587,
+    "views": 5606,
     "views_exact": true,
     "likes": 6
    },
@@ -204,7 +204,7 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 16070,
+    "views": 16084,
     "views_exact": true,
     "likes": 5
    },
@@ -236,10 +236,30 @@
   "following_count": 3,
   "like_count": 24,
   "listed_count": 0,
-  "media_count": 21,
-  "tweet_count": 45,
+  "media_count": 23,
+  "tweet_count": 47,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-12",
+    "text": "¡Truco! 🍟\nAyer: 0 papas congeladas en promo en ChangoMás. Hoy: las 15 al 40%.\n\nMcCain 2 kg",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-12",
+    "text": "Ayer Carrefour tenía 0 vinos en promo. Hoy, 22 🍷\n\nAlaris Malbec 750 ml: $5.910 → $2.470 (−",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-10",
     "text": "Fernet con coca hoy, mismo combo (1882 750 ml + Coca 2,25 L):\n\nChangoMás $13.298\nCarrefour",
@@ -255,26 +275,6 @@
     "text": "Semana de estudiante, 16 productos básicos:\n\nLunes 9/11: Día $41.905 vs Carrefour $45.977\n",
     "bookmark_count": 0,
     "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-09",
-    "text": "Queso cremoso Cremac, el kilo, Carrefour:\n\nMar 3: $13.260\nMié 4: $9.999\nSáb 7: $11.990\nDom",
-    "bookmark_count": 0,
-    "impression_count": 2,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-09",
-    "text": "Mismo suavizante, mismo código de barras, lunes 9/11:\n\nDowny 350 ml: $3.899 en ChangoMás v",
-    "bookmark_count": 0,
-    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

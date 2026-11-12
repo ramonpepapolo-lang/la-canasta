@@ -17,6 +17,7 @@ La Canasta (lacanastaindex.com) es un índice diario e independiente de precios 
 - [Press](https://lacanastaindex.com/prensa.html): how to cite La Canasta, logo, contact, embargoed reports
 - [Methodology and data](https://lacanastaindex.com/metodo.html): the full method and downloadable data
 - [Reports](https://lacanastaindex.com/informes.html): weekly and monthly reports
+- [Which supermarket is cheapest in Argentina](https://lacanastaindex.com/precios/supermercado-mas-barato.html): weekly ranking of Carrefour, Jumbo, ChangoMás and Día with the same basket (same barcodes), updated daily. ¿Qué supermercado es más barato en Argentina?
 - [Today's prices](https://lacanastaindex.com/precios/): prices of milk, yerba, oil and more, shop by shop
 - [Articles](https://lacanastaindex.com/articulos.html): articles on inflation by Ramon Pepa
 

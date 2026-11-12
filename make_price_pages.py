@@ -448,6 +448,7 @@ def hub(Ks, chrome):
     <h1><span data-lang="es">Precios del súper hoy</span><span data-lang="en">Supermarket prices today</span></h1>
     <p class="lede"><span data-lang="es">Leche, yerba, aceite, arroz y más, en Carrefour, Jumbo, ChangoMás y Día. Precios del {d_es(tday, True)}, actualizados todos los días.</span><span data-lang="en">Milk, yerba, oil, rice and more, at Carrefour, Jumbo, ChangoMás and Día. Prices of {d_en(tday, True)}, updated every day.</span></p>
   </header>
+  <p class="summary"><a href="supermercado-mas-barato.html"><span data-lang="es">¿Qué supermercado es más barato esta semana? Ver el ranking →</span><span data-lang="en">Which supermarket is cheapest this week? See the ranking →</span></a></p>
   <div class="cards">{''.join(cards)}</div>
 </main>"""
     return chrome("Precios del súper hoy en Argentina: leche, yerba, aceite y más · La Canasta",

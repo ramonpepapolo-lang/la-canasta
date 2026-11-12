@@ -4,7 +4,7 @@ name: IndexNow
 on:
   push:
     branches: [main]
-    paths: [sitemap.xml, llms.txt, prensa.html, ramon-pepa.html, notas/indexnow.txt]
+    paths: [sitemap.xml, llms.txt, prensa.html, ramon-pepa.html, precios/supermercado-mas-barato.html, notas/indexnow.txt]
 jobs:
   ping:
     runs-on: ubuntu-latest

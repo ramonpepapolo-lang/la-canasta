@@ -1,0 +1,58 @@
+[
+ {
+  "shop": "Carrefour",
+  "sku_id": "144373",
+  "ean": "7790742363008",
+  "url": "https://carrefourar.vteximg.com.br/arquivos/ids/636141-200-200/7790742363008_01.jpg.jpg?v=638780812788100000",
+  "bytes": 9438,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "Jumbo",
+  "sku_id": "247387",
+  "ean": "7790787002528",
+  "url": "https://jumboargentina.vteximg.com.br/arquivos/ids/882962-200-200/7790787002528.jpg?v=638929383459470000",
+  "bytes": 6048,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "ChangoMas",
+  "sku_id": "178930",
+  "ean": "7790742192301",
+  "url": "https://masonlineprod.vteximg.com.br/arquivos/ids/311669-200-200/Leche-Casanto-Entera-3-Sachet-1l-1-35373.jpg?v=638774892436500000",
+  "bytes": 7849,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "Dia",
+  "sku_id": "275781",
+  "ean": "7793913001822",
+  "url": "https://ardiaprod.vteximg.com.br/arquivos/ids/358557-200-200/Leche-Entera-Tregar-Larga-Vida-1-Lt-_1.jpg?v=639287916151070000",
+  "bytes": 7823,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "Dia",
+  "sku_id": "608",
+  "ean": "8480017006080",
+  "url": "https://ardiaprod.vteximg.com.br/arquivos/ids/358619-200-200/Leche-Entera-DIA-Larga-Vida-1-Lt-_1.jpg?v=638954663398330000",
+  "bytes": 7845,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "Dia",
+  "sku_id": "30111",
+  "ean": "8480017286291",
+  "url": "https://ardiaprod.vteximg.com.br/arquivos/ids/343871-200-200/Leche-Entera-DIA-Sachet-1-Lt-_1.jpg?v=638736548287370000",
+  "bytes": 8162,
+  "type": "image/jpeg"
+ },
+ {
+  "shop": "Dia",
+  "sku_id": "274565",
+  "ean": "7790742348302",
+  "url": "https://ardiaprod.vteximg.com.br/arquivos/ids/343627-200-200/Leche-Multidefensa-3--La-Serenisima-1-Lt-_1.jpg?v=638905332363270000",
+  "bytes": 10428,
+  "type": "image/jpeg"
+ }
+]

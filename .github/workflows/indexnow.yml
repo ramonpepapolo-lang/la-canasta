@@ -1,0 +1,37 @@
+# Tells Bing (and the other IndexNow search engines) which pages are new or changed, so they read them
+# straight away instead of in weeks. ChatGPT search uses Bing. Google does not use IndexNow.
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: [sitemap.xml, llms.txt, prensa.html, ramon-pepa.html, notas/indexnow.txt]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait until the site has the new files
+        run: |
+          for i in $(seq 1 40); do
+            k=$(curl -s https://lacanastaindex.com/e1743890f26c26dcedc19498b431cbb5.txt || true)
+            p=$(curl -s -o /dev/null -w '%{http_code}' https://lacanastaindex.com/prensa.html || true)
+            [ "$k" = "e1743890f26c26dcedc19498b431cbb5" ] && [ "$p" = "200" ] && echo "site ready" && exit 0
+            sleep 15
+          done
+          echo "site not ready yet, pinging anyway"
+      - name: Send the page list
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())
+          urls += ["https://lacanastaindex.com/llms.txt"]
+          body = json.dumps({"host": "lacanastaindex.com", "key": "e1743890f26c26dcedc19498b431cbb5",
+                             "keyLocation": "https://lacanastaindex.com/e1743890f26c26dcedc19498b431cbb5.txt", "urlList": urls}).encode()
+          for api in ["https://api.indexnow.org/indexnow", "https://www.bing.com/indexnow", "https://yandex.com/indexnow"]:
+              req = urllib.request.Request(api, data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+              try:
+                  r = urllib.request.urlopen(req, timeout=30); print(api, r.status, len(urls), "pages")
+              except Exception as e:
+                  print(api, "error:", getattr(e, "code", ""), str(e)[:200])
+          PY

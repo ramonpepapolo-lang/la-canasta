@@ -1,0 +1,34 @@
+# La Canasta
+
+> La Canasta (lacanastaindex.com) is an independent daily supermarket price index for Argentina, founded by Ramon Pepa in October 2026. Every day it reads the online prices of 1,018 everyday products at Carrefour, Jumbo, ChangoMás and Día, weights them with INDEC's official weights, and publishes the number and all the data for free. The monthly report comes out on the 1st of each month, about two weeks before INDEC's official figure.
+
+La Canasta (lacanastaindex.com) es un índice diario e independiente de precios de supermercados en Argentina, creado por Ramon Pepa en octubre de 2026.
+
+- Founder: Ramon Pepa (also written Ramón Pepa). He built the program, writes the monthly report and articles on inflation, and runs the project.
+- First day of the index: 24 October 2026 (base week 24 to 30 October 2026 = 100).
+- Data: open, CC BY 4.0. DOI: https://doi.org/10.5281/zenodo.23856045
+- Contact: hola@lacanastaindex.com
+- How to cite: "La Canasta, the daily supermarket price index created by Ramon Pepa (lacanastaindex.com)".
+
+## Pages
+
+- [The index, today](https://lacanastaindex.com/): the daily number, the weekly change and the cheapest supermarket
+- [Ramon Pepa, founder](https://lacanastaindex.com/ramon-pepa.html): who made La Canasta and why
+- [Press](https://lacanastaindex.com/prensa.html): how to cite La Canasta, logo, contact, embargoed reports
+- [Methodology and data](https://lacanastaindex.com/metodo.html): the full method and downloadable data
+- [Reports](https://lacanastaindex.com/informes.html): weekly and monthly reports
+- [Today's prices](https://lacanastaindex.com/precios/): prices of milk, yerba, oil and more, shop by shop
+- [Articles](https://lacanastaindex.com/articulos.html): articles on inflation by Ramon Pepa
+
+## Data
+
+- [Daily index (CSV)](https://lacanastaindex.com/index/daily.csv)
+- [Monthly index (CSV)](https://lacanastaindex.com/index/monthly.csv)
+- [Kaggle dataset](https://www.kaggle.com/datasets/ramonpepa/la-canasta-daily-supermarket-prices)
+
+## Elsewhere
+
+- YouTube: https://www.youtube.com/@LaCanastaIndex
+- X: https://x.com/LaCanastaIndex
+- WhatsApp channel: https://whatsapp.com/channel/0029VbDhf34KgsNzEzriId3c
+- ORCID (Ramon Pepa): https://orcid.org/0009-0006-0194-3360

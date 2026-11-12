@@ -44,7 +44,7 @@ jobs:
           python-version: "3.12"
       - name: Install the PDF maker
         run: |
-          pip install --quiet playwright
+          pip install --quiet playwright pypdf
           python -m playwright install --with-deps chromium
       - name: Test PDF (only when asked, nothing is saved)
         if: inputs.test_week != ''

@@ -412,6 +412,25 @@ def monthly(r, lang, comment=""):
 
 
 # ---------- Render ----------
+def set_author(path, doc=""):
+    """Writes the author (Ramon Pepa) and the title into the PDF's own details, which search engines read."""
+    try:
+        import re
+        from pypdf import PdfReader, PdfWriter
+        m = re.search(r"<title>(.*?)</title>", doc, re.S)
+        title = html.unescape(m.group(1)).strip() if m else ""
+        w = PdfWriter(clone_from=PdfReader(path))
+        meta = {"/Author": "Ramon Pepa", "/Creator": "La Canasta (lacanastaindex.com)",
+                "/Subject": "La Canasta, índice diario de precios de supermercados en Argentina, por Ramon Pepa"}
+        if title:
+            meta["/Title"] = title
+        w.add_metadata(meta)
+        with open(path, "wb") as f:
+            w.write(f)
+    except Exception as e:  # never stop the reports over this
+        print(f"(author not set on {path}: {e})")
+
+
 def render(jobs):
     """jobs: list of (html, pdf_path). Checks every PDF has at most 2 pages."""
     if not jobs:
@@ -428,6 +447,7 @@ def render(jobs):
             os.makedirs(os.path.dirname(out), exist_ok=True)
             pg.pdf(path=out, format="A4", print_background=True, prefer_css_page_size=True)
             os.unlink(f.name)
+            set_author(out, doc)
             pages = open(out, "rb").read().count(b"/Type /Page") - open(out, "rb").read().count(b"/Type /Pages")
             print(f"{out}: {pages} page(s)")
             if pages > 2:

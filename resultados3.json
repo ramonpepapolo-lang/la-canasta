@@ -1,0 +1,74 @@
+[
+ {
+  "outlet": "Infobae",
+  "to": "redaccion@infobae.com",
+  "sent": true,
+  "info": "<202611121831.85985382041@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Nación (Esteban Lafuente)",
+  "to": "elafuente@lanacion.com.ar",
+  "sent": true,
+  "info": "<202611121831.12503711682@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Cronista (Patricia Valli)",
+  "to": "pvalli@cronista.com",
+  "sent": true,
+  "info": "<202611121831.72941396291@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "iProfesional",
+  "to": "contacto@iprofesional.com",
+  "sent": true,
+  "info": "<202611121832.82816932697@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Página/12",
+  "to": "redactor@pagina12.com.ar",
+  "sent": true,
+  "info": "<202611121832.26829781396@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "elDiarioAR",
+  "to": "comunidad@eldiarioar.com",
+  "sent": true,
+  "info": "<202611121832.44789893273@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Chequeado",
+  "to": "info@chequeado.com",
+  "sent": true,
+  "info": "<202611121833.45506773791@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Bloomberg News",
+  "to": "tips2@bloomberg.net",
+  "sent": true,
+  "info": "<202611121833.62995556923@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Rest of World",
+  "to": "hello@restofworld.org",
+  "sent": true,
+  "info": "<202611121833.75118810480@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "TechCrunch",
+  "to": "tips@techcrunch.com",
+  "sent": true,
+  "info": "<202611121834.95967270572@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Americas Quarterly",
+  "to": "AQeditors@as-coa.org",
+  "sent": true,
+  "info": "<202611121834.77430649763@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Buenos Aires Herald",
+  "to": "newsroom@buenosairesherald.com",
+  "sent": true,
+  "info": "<202611121834.56772534247@smtp-relay.mailin.fr>"
+ }
+]

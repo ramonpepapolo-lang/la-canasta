@@ -1,0 +1,98 @@
+[
+ {
+  "outlet": "Pilar a Diario (Pilar)",
+  "to": "info@pilaradiario.com",
+  "sent": true,
+  "info": "<202611132104.93078015434@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Agencia Comunas (GBA)",
+  "to": "agenciacomunas9@gmail.com",
+  "sent": true,
+  "info": "<202611132105.43907732081@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Auditor (CABA)",
+  "to": "info@elauditor.info",
+  "sent": true,
+  "info": "<202611132105.68034048890@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Norte (San Nicolás)",
+  "to": "redaccion@diarioelnorte.com.ar",
+  "sent": true,
+  "info": "<202611132106.18295865761@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Núcleo (Pergamino)",
+  "to": "redaccion@diarionucleo.com",
+  "sent": true,
+  "info": "<202611132106.87064414447@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Puntal (Río Cuarto)",
+  "to": "puntalweb@puntal.com.ar",
+  "sent": true,
+  "info": "<202611132106.29767600411@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Diario (Paraná)",
+  "to": "coordinacion@eldiario.com.ar",
+  "sent": true,
+  "info": "<202611132107.22313087618@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario UNO (Mendoza)",
+  "to": "contacto@diariouno.com.ar",
+  "sent": true,
+  "info": "<202611132107.53328633123@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Región (Santa Rosa, La Pampa)",
+  "to": "info@region.com.ar",
+  "sent": true,
+  "info": "<202611132107.82585538795@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Norte (Resistencia, Chaco)",
+  "to": "webchaco@diarionorte.com",
+  "sent": true,
+  "info": "<202611132108.72396467395@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Contexto (Tucumán)",
+  "to": "revista@contextotucuman.com",
+  "sent": true,
+  "info": "<202611132108.28074542551@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Panorama (Santiago del Estero)",
+  "to": "diariopanoramacom@gmail.com",
+  "sent": true,
+  "info": "<202611132108.39929243485@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "ADNSUR (Comodoro Rivadavia, Noelia Rivera)",
+  "to": "nrivera@adnsur.com.ar",
+  "sent": true,
+  "info": "<202611132109.63027279367@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Diario de Madryn (Puerto Madryn)",
+  "to": "redaccion@eldiarioweb.com",
+  "sent": true,
+  "info": "<202611132109.77450265144@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Cholila Online (Chubut)",
+  "to": "cholilaonline@gmail.com",
+  "sent": true,
+  "info": "<202611132109.10801024693@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Tiempo Fueguino (Río Grande)",
+  "to": "tiempo.fueguino@tiempofueguino.com",
+  "sent": true,
+  "info": "<202611132110.39229912873@smtp-relay.mailin.fr>"
+ }
+]

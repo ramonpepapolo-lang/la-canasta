@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-13 14:31",
+ "when_utc": "2026-11-13 14:36",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -14,9 +14,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "431",
+  "subscribers_text": "432",
   "views_total_text": "108,873",
-  "views_sum_of_videos": 54042,
+  "views_sum_of_videos": 54020,
   "videos": 23,
   "list": [
    {
@@ -26,7 +26,8 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "WxtF4OwrTQA",
@@ -35,7 +36,8 @@
     "published": "2026-11-06",
     "views": 41,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": null
    },
    {
     "id": "zx1MupnB8f4",
@@ -44,7 +46,8 @@
     "published": "2026-11-05",
     "views": 57,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "oH9pfAKkRUg",
@@ -53,7 +56,8 @@
     "published": "2026-11-05",
     "views": 61,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": null
    },
    {
     "id": "mLkoUDDikcw",
@@ -62,7 +66,8 @@
     "published": "2026-11-05",
     "views": 9,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": null
    },
    {
     "id": "tc23dqKHSUw",
@@ -71,7 +76,8 @@
     "published": "2026-11-05",
     "views": 10415,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "0ROpFGL4YvA",
@@ -80,7 +86,8 @@
     "published": "2026-11-04",
     "views": 14,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "AFxUYBMYpT0",
@@ -89,7 +96,8 @@
     "published": "2026-11-04",
     "views": 6,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "3wWnwhN6uAE",
@@ -98,7 +106,8 @@
     "published": "2026-11-02",
     "views": 58,
     "views_exact": true,
-    "likes": 4
+    "likes": 4,
+    "comments": null
    },
    {
     "id": "gDh-ivbLA40",
@@ -107,7 +116,8 @@
     "published": "2026-11-02",
     "views": 405,
     "views_exact": true,
-    "likes": 62
+    "likes": 62,
+    "comments": null
    },
    {
     "id": "uYOS0ICnMvA",
@@ -116,7 +126,8 @@
     "published": "2026-11-01",
     "views": 26,
     "views_exact": true,
-    "likes": 4
+    "likes": 4,
+    "comments": null
    },
    {
     "id": "B5L4kojQefE",
@@ -125,7 +136,8 @@
     "published": "2026-11-01",
     "views": 21,
     "views_exact": true,
-    "likes": 4
+    "likes": 4,
+    "comments": null
    },
    {
     "id": "e3o-AO0agd0",
@@ -134,16 +146,18 @@
     "published": "2026-11-01",
     "views": 21,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": 1
    },
    {
     "id": "XoBQeQhf8Aw",
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 13326,
+    "views": 13301,
     "views_exact": true,
-    "likes": 72
+    "likes": 71,
+    "comments": 1
    },
    {
     "id": "L1E_gsxHEb8",
@@ -152,7 +166,8 @@
     "published": "2026-10-31",
     "views": 29,
     "views_exact": true,
-    "likes": 98
+    "likes": 2,
+    "comments": 3
    },
    {
     "id": "sq4QiYlzBHI",
@@ -161,7 +176,8 @@
     "published": "2026-10-31",
     "views": 15,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": null
    },
    {
     "id": "njkhtUHqAQM",
@@ -170,7 +186,8 @@
     "published": "2026-10-29",
     "views": 6493,
     "views_exact": true,
-    "likes": 522
+    "likes": 523,
+    "comments": 1
    },
    {
     "id": "EimZGNWwnkQ",
@@ -179,16 +196,18 @@
     "published": "2026-10-29",
     "views": 46,
     "views_exact": true,
-    "likes": 0
+    "likes": 0,
+    "comments": null
    },
    {
     "id": "gM6gTakve-Y",
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 5917,
+    "views": 5918,
     "views_exact": true,
-    "likes": 6
+    "likes": 6,
+    "comments": null
    },
    {
     "id": "tlgFxGkcb_Y",
@@ -197,16 +216,18 @@
     "published": "2026-10-28",
     "views": 275,
     "views_exact": true,
-    "likes": 4
+    "likes": 4,
+    "comments": 1
    },
    {
     "id": "EyudS8G5EmA",
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 16389,
+    "views": 16391,
     "views_exact": true,
-    "likes": 5
+    "likes": 5,
+    "comments": 2
    },
    {
     "id": "Y9JkCvIlXLk",
@@ -215,7 +236,8 @@
     "published": "2026-11-04",
     "views": 26,
     "views_exact": true,
-    "likes": 1
+    "likes": 1,
+    "comments": null
    },
    {
     "id": "JjtoCbpvaQg",
@@ -224,7 +246,8 @@
     "published": "2026-11-04",
     "views": 350,
     "views_exact": true,
-    "likes": 2
+    "likes": 2,
+    "comments": null
    }
   ]
  },

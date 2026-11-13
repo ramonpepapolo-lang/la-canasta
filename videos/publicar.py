@@ -24,9 +24,9 @@ new_lines = []
 
 have_x = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"))
 have_yt = all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"))
-# Until Google approves the YouTube API audit, uploads would stay locked as private: only upload when the
-# repo variable YT_ON is "si" (Ramon sets it once Google approves).
-yt_on = os.environ.get("YT_ON") == "si"
+# Since 2 Nov 2026 Google no longer locks API uploads as private (no audit needed), so approved videos go to
+# YouTube too (asked by Ramon, 13 Nov 2026). Setting the repo variable YT_ON to "no" turns YouTube off again.
+yt_on = os.environ.get("YT_ON", "").strip().lower() != "no"
 
 
 def post_x(v):
@@ -71,7 +71,7 @@ for i, v in enumerate(posts["videos"], 1):
         if not ok:
             report.append(f"  {site}: todavía no está conectado (faltan las claves). No se publicó."); continue
         if site == "YouTube" and not yt_on:
-            report.append("  YouTube: claves listas, pero falta la aprobación de Google (variable YT_ON). Subilo a mano por ahora."); continue
+            report.append("  YouTube: apagado a propósito (variable YT_ON = no). No se publicó."); continue
         try:
             url = fn(v)
             report.append(f"  {site}: publicado ✅ {url}"); new_lines.append(f"{key} {url}")

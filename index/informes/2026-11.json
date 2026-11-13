@@ -3,40 +3,40 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.43,
+ "inflation": -0.7,
  "base_date": "2026-10-31",
- "end_date": "2026-11-12",
- "days_of_data": 12,
- "prices_collected": 209952,
+ "end_date": "2026-11-13",
+ "days_of_data": 13,
+ "prices_collected": 233919,
  "headline": {
-  "end_to_end_paid": -0.43,
-  "end_to_end_regular": -0.66,
+  "end_to_end_paid": -0.7,
+  "end_to_end_regular": -0.96,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.04
+   "pct": 1.13
   },
   {
    "shop": "ChangoMas",
-   "pct": -3.03
+   "pct": -0.76
   },
   {
    "shop": "Dia",
-   "pct": -0.87
+   "pct": -1.26
   },
   {
    "shop": "Jumbo",
-   "pct": 2.92
+   "pct": -0.82
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 8.38
+   "pct": 5.49
   },
   {
    "group": "otros_alimentos",
@@ -44,44 +44,49 @@
    "pct": 3.84
   },
   {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 2.16
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 1.42
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.75
+   "pct": 1.37
   },
   {
    "group": "azucar",
    "in_headline": true,
-   "pct": 1.04
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 0.98
+   "pct": 1.1
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": 0.63
+   "pct": 0.89
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": -0.56
+   "pct": 0.24
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": -0.35
   },
   {
    "group": "aceites",
    "in_headline": true,
-   "pct": -0.69
+   "pct": -1.29
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -1.6
   },
   {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": -1.73
+   "pct": -1.78
   },
   {
    "group": "aguas_gaseosas",
@@ -94,21 +99,25 @@
    "pct": -3.29
   },
   {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -3.64
-  },
-  {
    "group": "verduras",
    "in_headline": true,
-   "pct": -9.56
+   "pct": -13.55
   }
  ],
  "products_compared": 1018,
- "products_up": 172,
- "products_down": 148,
- "products_same": 698,
+ "products_up": 178,
+ "products_down": 145,
+ "products_same": 695,
  "top_up": [
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
+  },
   {
    "type": "fideos",
    "type_en": "Dry pasta",
@@ -128,6 +137,15 @@
    "pct": 76.19
   },
   {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
+  },
+  {
    "type": "pasta_dental",
    "type_en": "Toothpaste",
    "shop": "Dia",
@@ -135,36 +153,9 @@
    "before": 3790.0,
    "now": 6320.0,
    "pct": 66.75
-  },
-  {
-   "type": "lavandina",
-   "type_en": "Bleach",
-   "shop": "ChangoMas",
-   "name": "Lavandina Ayudín Anti-Splash 1 Lt",
-   "before": 1433.4,
-   "now": 2389.0,
-   "pct": 66.67
-  },
-  {
-   "type": "lavandina",
-   "type_en": "Bleach",
-   "shop": "ChangoMas",
-   "name": "Lavandina Ayudín Anti-Splash 2 Lt",
-   "before": 2771.4,
-   "now": 4619.0,
-   "pct": 66.67
   }
  ],
  "top_down": [
-  {
-   "type": "papel_higienico",
-   "type_en": "Toilet paper",
-   "shop": "Dia",
-   "name": "Papel Higienico Simple Hoja 80mts 4 Ud.",
-   "before": 5300.0,
-   "now": 2650.0,
-   "pct": -50.0
-  },
   {
    "type": "cerveza",
    "type_en": "Beer",
@@ -173,6 +164,15 @@
    "before": 3690.0,
    "now": 1990.0,
    "pct": -46.07
+  },
+  {
+   "type": "huevos",
+   "type_en": "Eggs",
+   "shop": "ChangoMas",
+   "name": "Huevos Blancos La Piara 30 U",
+   "before": 8899.0,
+   "now": 4999.0,
+   "pct": -43.83
   },
   {
    "type": "yerba",
@@ -267,6 +267,11 @@
    "date": "2026-11-12",
    "paid": 99.093,
    "regular": 99.288
+  },
+  {
+   "date": "2026-11-13",
+   "paid": 98.819,
+   "regular": 98.993
   }
  ]
 }

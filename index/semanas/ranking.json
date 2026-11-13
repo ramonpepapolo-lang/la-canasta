@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-08",
-   "2026-11-12"
+   "2026-11-13"
   ],
-  "days_of_data": 5,
-  "n_products": 298,
+  "days_of_data": 6,
+  "n_products": 311,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1274536.14,
+    "total": 1327074.73,
     "pct": 0.0
    },
    {
-    "shop": "Carrefour",
-    "total": 1317844.13,
-    "pct": 3.4
+    "shop": "ChangoMas",
+    "total": 1377758.37,
+    "pct": 3.82
    },
    {
-    "shop": "ChangoMas",
-    "total": 1326431.21,
-    "pct": 4.07
+    "shop": "Carrefour",
+    "total": 1380700.09,
+    "pct": 4.04
    },
    {
     "shop": "Jumbo",
-    "total": 1494526.73,
-    "pct": 17.26
+    "total": 1555984.33,
+    "pct": 17.25
    }
   ],
   "cheapest_count": {
-   "Carrefour": 103,
+   "Carrefour": 102,
    "Jumbo": 4,
-   "ChangoMas": 129,
-   "Dia": 110
+   "ChangoMas": 139,
+   "Dia": 119
   },
   "examples": [
    {
@@ -54,19 +54,19 @@
     "ean": "7794626012846",
     "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
     "low_shop": "Dia",
-    "low": 15960.0,
+    "low": 15833.33,
     "high_shop": "Jumbo",
-    "high": 29783.33,
-    "pct": 86.6
+    "high": 29275.0,
+    "pct": 84.9
    },
    {
-    "ean": "7790070417916",
-    "name": "Postre Exquisita Dulce De Leche 80g",
+    "ean": "77956699",
+    "name": "Alfajor Shot Con Maní Triple 60 G",
     "low_shop": "ChangoMas",
-    "low": 896.92,
+    "low": 1343.4,
     "high_shop": "Jumbo",
-    "high": 1650.0,
-    "pct": 84.0
+    "high": 2400.0,
+    "pct": 78.7
    }
   ]
  },

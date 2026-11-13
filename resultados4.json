@@ -1,0 +1,68 @@
+[
+ {
+  "outlet": "El Destape",
+  "to": "redaccion@eldestapeweb.com",
+  "sent": true,
+  "info": "<202611131922.37537320516@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Letra P",
+  "to": "redaccion@letrap.com.ar",
+  "sent": true,
+  "info": "<202611131922.34175622818@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "0221 (La Plata)",
+  "to": "redaccion@0221.com.ar",
+  "sent": true,
+  "info": "<202611131923.13607944938@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Noticias Argentinas (Jorge García)",
+  "to": "jorge.garcia@alphamedia.com.ar",
+  "sent": true,
+  "info": "<202611131923.31433196089@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Río Negro (Diego Penizzotto)",
+  "to": "diegopenizzotto@rionegro.com.ar",
+  "sent": true,
+  "info": "<202611131923.15958501922@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Tribuno (Pablo Juárez)",
+  "to": "pjuarez@eltribuno.com.ar",
+  "sent": true,
+  "info": "<202611131924.88405957174@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Rosario3",
+  "to": "editor@rosario3.com",
+  "sent": true,
+  "info": "<202611131924.26444692966@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario de Cuyo",
+  "to": "web@diariodecuyo.com.ar",
+  "sent": true,
+  "info": "<202611131924.10785525014@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Jornada (Chubut)",
+  "to": "info@diariojornada.com.ar",
+  "sent": true,
+  "info": "<202611131925.45664946065@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Hoy Día Córdoba",
+  "to": "redaccion@hoydiacordoba.info",
+  "sent": true,
+  "info": "<202611131925.51328985947@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Fortuna",
+  "to": "contacto@fortunaweb.com.ar",
+  "sent": true,
+  "info": "<202611131925.41489044587@smtp-relay.mailin.fr>"
+ }
+]

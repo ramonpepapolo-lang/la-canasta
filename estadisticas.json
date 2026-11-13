@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-13 14:36",
+ "when_utc": "2026-11-13 15:40",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -14,11 +14,31 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "432",
+  "subscribers_text": "433",
   "views_total_text": "108,873",
-  "views_sum_of_videos": 54020,
-  "videos": 23,
+  "views_sum_of_videos": 54042,
+  "videos": 25,
   "list": [
+   {
+    "id": "vdSfcIdQnl4",
+    "debug": null,
+    "title": "Alfajores al 25%: ayer 6 en promo, hoy 20 en Carrefour",
+    "published": "2026-11-13",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "FX3OnMgJ6og",
+    "debug": null,
+    "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
+    "published": "2026-11-13",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "G-mzB9TJ1fo",
     "debug": null,
@@ -143,7 +163,7 @@
     "id": "e3o-AO0agd0",
     "debug": null,
     "title": "Imprimimos el ticket de las promos del súper 🧾 #Shorts #argentina #supermercado #precios #inflación",
-    "published": "2026-11-01",
+    "published": "2026-10-31",
     "views": 21,
     "views_exact": true,
     "likes": 2,
@@ -154,9 +174,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 13301,
+    "views": 13326,
     "views_exact": true,
-    "likes": 71,
+    "likes": 72,
     "comments": 1
    },
    {
@@ -186,7 +206,7 @@
     "published": "2026-10-29",
     "views": 6493,
     "views_exact": true,
-    "likes": 523,
+    "likes": 522,
     "comments": 1
    },
    {
@@ -204,7 +224,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 5918,
+    "views": 5917,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -224,7 +244,7 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 16391,
+    "views": 16389,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -259,10 +279,30 @@
   "following_count": 3,
   "like_count": 24,
   "listed_count": 0,
-  "media_count": 23,
-  "tweet_count": 47,
+  "media_count": 25,
+  "tweet_count": 49,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-13",
+    "text": "Alfajores en promo en Carrefour:\nayer 6, hoy 20.\n\nFantoche triple: $1.759 → $1.319 (Día $1",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-13",
+    "text": "30 huevos a $4.999 🥚\n\nDesde hoy en ChangoMás: Carnave y La Piara bajaron de $8.899. Son $1",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-12",
     "text": "¡Truco! 🍟\nAyer: 0 papas congeladas en promo en ChangoMás. Hoy: las 15 al 40%.\n\nMcCain 2 kg",
@@ -276,26 +316,6 @@
    {
     "date": "2026-11-12",
     "text": "Ayer Carrefour tenía 0 vinos en promo. Hoy, 22 🍷\n\nAlaris Malbec 750 ml: $5.910 → $2.470 (−",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-10",
-    "text": "Fernet con coca hoy, mismo combo (1882 750 ml + Coca 2,25 L):\n\nChangoMás $13.298\nCarrefour",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-10",
-    "text": "Semana de estudiante, 16 productos básicos:\n\nLunes 9/11: Día $41.905 vs Carrefour $45.977\n",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,

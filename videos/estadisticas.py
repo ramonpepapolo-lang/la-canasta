@@ -110,9 +110,19 @@ except Exception as e:
                 d["published"] = pub.group(1)
             if not vc:
                 d["debug"] = (re.search(r"<title>(.*?)</title>", w, re.S).group(1)[:80] if "<title>" in w else w[:120])
+        # Number of comments, from each video's public watch page
+        for vid in ids:
+            try:
+                w = get("https://www.youtube.com/watch?v=" + vid + "&hl=en")
+                m = (re.search(r'"commentCount":\{"simpleText":"([\d,.KM]+)"', w) or re.search(r'"contextualInfo":\{"runs":\[\{"text":"([\d,.KM]+)"\}\]\}', w)
+                     or re.search(r'"commentCount":"?(\d+)', w))
+                info.setdefault(vid, {})["comments"] = num(m.group(1)) if m else None
+            except Exception:
+                pass
         vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
                  "views": info.get(vid, {}).get("views", info.get(vid, {}).get("views_list")),
-                 "views_exact": "views" in info.get(vid, {}), "likes": info.get(vid, {}).get("likes")} for vid in ids]
+                 "views_exact": "views" in info.get(vid, {}), "likes": info.get(vid, {}).get("likes"),
+                 "comments": info.get(vid, {}).get("comments")} for vid in ids]
         out["youtube"] = {"source": "public pages", "subscribers_text": subs.group(1) if subs else None,
                           "views_total_text": total.group(1) if total else None,
                           "views_sum_of_videos": sum(v["views"] or 0 for v in vids), "videos": len(vids), "list": vids}

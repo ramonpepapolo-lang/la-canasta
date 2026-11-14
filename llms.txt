@@ -35,4 +35,5 @@ La Canasta (lacanastaindex.com) es un índice diario e independiente de precios 
 - WhatsApp channel: https://whatsapp.com/channel/0029VbDhf34KgsNzEzriId3c
 - ORCID (Ramon Pepa): https://orcid.org/0009-0006-0194-3360
 - Kaggle (Ramon Pepa): https://www.kaggle.com/ramonpepa
+- GitHub (Ramon Pepa): https://github.com/ramonpepapolo-lang
 - Cría Cibao La Pampa, also by Ramon Pepa: https://criacibaolapampa.com/

@@ -5,40 +5,40 @@
   "end": "2026-11-14",
   "label_es": "Semana del 8 al 14 de noviembre de 2026",
   "label_en": "Week of 8 to 14 November 2026",
-  "complete": false,
+  "complete": true,
   "days": [
    "2026-11-08",
-   "2026-11-13"
+   "2026-11-14"
   ],
-  "days_of_data": 6,
-  "n_products": 311,
+  "days_of_data": 7,
+  "n_products": 296,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1327074.73,
+    "total": 1240791.28,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1377758.37,
-    "pct": 3.82
+    "total": 1282003.41,
+    "pct": 3.32
    },
    {
     "shop": "Carrefour",
-    "total": 1380700.09,
-    "pct": 4.04
+    "total": 1290679.65,
+    "pct": 4.02
    },
    {
     "shop": "Jumbo",
-    "total": 1555984.33,
-    "pct": 17.25
+    "total": 1458079.14,
+    "pct": 17.51
    }
   ],
   "cheapest_count": {
-   "Carrefour": 102,
+   "Carrefour": 92,
    "Jumbo": 4,
-   "ChangoMas": 139,
-   "Dia": 119
+   "ChangoMas": 135,
+   "Dia": 109
   },
   "examples": [
    {
@@ -54,10 +54,10 @@
     "ean": "7794626012846",
     "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
     "low_shop": "Dia",
-    "low": 15833.33,
+    "low": 15742.86,
     "high_shop": "Jumbo",
-    "high": 29275.0,
-    "pct": 84.9
+    "high": 28970.0,
+    "pct": 84.0
    },
    {
     "ean": "77956699",

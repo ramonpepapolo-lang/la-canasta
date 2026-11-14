@@ -3,33 +3,33 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.7,
+ "inflation": -0.52,
  "base_date": "2026-10-31",
- "end_date": "2026-11-13",
- "days_of_data": 13,
- "prices_collected": 233919,
+ "end_date": "2026-11-14",
+ "days_of_data": 14,
+ "prices_collected": 257912,
  "headline": {
-  "end_to_end_paid": -0.7,
-  "end_to_end_regular": -0.96,
+  "end_to_end_paid": -0.52,
+  "end_to_end_regular": -0.92,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.13
+   "pct": 1.17
   },
   {
    "shop": "ChangoMas",
-   "pct": -0.76
+   "pct": 0.48
   },
   {
    "shop": "Dia",
-   "pct": -1.26
+   "pct": -1.41
   },
   {
    "shop": "Jumbo",
-   "pct": -0.82
+   "pct": -1.05
   }
  ],
  "groups": [
@@ -41,17 +41,22 @@
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 3.84
+   "pct": 4.11
   },
   {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": 1.42
+   "pct": 1.58
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.37
+   "pct": 1.53
+  },
+  {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": 1.45
   },
   {
    "group": "azucar",
@@ -59,14 +64,9 @@
    "pct": 1.1
   },
   {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 0.89
-  },
-  {
    "group": "limpieza",
    "in_headline": true,
-   "pct": 0.24
+   "pct": 0.16
   },
   {
    "group": "frutas",
@@ -74,19 +74,19 @@
    "pct": -0.35
   },
   {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -0.66
+  },
+  {
    "group": "aceites",
    "in_headline": true,
    "pct": -1.29
   },
   {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -1.6
-  },
-  {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": -1.78
+   "pct": -1.6
   },
   {
    "group": "aguas_gaseosas",
@@ -96,19 +96,28 @@
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -3.29
+   "pct": -3.56
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -13.55
+   "pct": -14.7
   }
  ],
  "products_compared": 1018,
- "products_up": 178,
- "products_down": 145,
- "products_same": 695,
+ "products_up": 191,
+ "products_down": 141,
+ "products_same": 686,
  "top_up": [
+  {
+   "type": "arroz",
+   "type_en": "Rice",
+   "shop": "ChangoMas",
+   "name": "Arroz Gallo Parboil 1kg",
+   "before": 1789.0,
+   "now": 3249.0,
+   "pct": 81.61
+  },
   {
    "type": "fideos",
    "type_en": "Dry pasta",
@@ -144,15 +153,6 @@
    "before": 1050.0,
    "now": 1850.0,
    "pct": 76.19
-  },
-  {
-   "type": "pasta_dental",
-   "type_en": "Toothpaste",
-   "shop": "Dia",
-   "name": "Pasta Dental Colgate Sensitive Whitening 100 Gr.",
-   "before": 3790.0,
-   "now": 6320.0,
-   "pct": 66.75
   }
  ],
  "top_down": [
@@ -272,6 +272,11 @@
    "date": "2026-11-13",
    "paid": 98.819,
    "regular": 98.993
+  },
+  {
+   "date": "2026-11-14",
+   "paid": 98.998,
+   "regular": 99.026
   }
  ]
 }

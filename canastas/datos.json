@@ -1,5 +1,5 @@
 {
- "date": "2026-11-13",
+ "date": "2026-11-14",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,7 +93,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 13735.31,
+     "total": 17584.31,
      "complete": false,
      "missing": [
       "pan"
@@ -124,10 +124,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 10900.0,
-       "cost": 1308.0,
-       "name": "Chorizo fresco en gancho x kg",
-       "sku_id": "250077",
+       "unit_price": 10500.0,
+       "cost": 1260.0,
+       "name": "Chorizo de cerdo al gancho x kg",
+       "sku_id": "50037",
        "promo": false
       },
       {
@@ -253,7 +253,7 @@
      "fixed_total": 2840.0
     },
     "Jumbo": {
-     "total": 14944.34,
+     "total": 19596.04,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -332,8 +332,8 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 4899.0,
-       "cost": 587.88,
+       "unit_price": 4499.0,
+       "cost": 539.88,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -354,8 +354,8 @@
        "fixed": false,
        "unit_price": 3999.0,
        "cost": 999.75,
-       "name": "Lechuga Morada Orgánica X Unidad Lechuga Morada Orgánica x 260 Grs",
-       "sku_id": "347981",
+       "name": "Lechuga Mantecosa Organica X Unid",
+       "sku_id": "347962",
        "promo": false
       },
       {
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5100.0,
-       "cost": 2550.0,
-       "name": "Cerveza Rubia 1 Lts Budweiser",
-       "sku_id": "28372",
+       "unit_price": 4900.0,
+       "cost": 2450.0,
+       "name": "Cerveza Rubia 1000 Ml Schneider",
+       "sku_id": "26673",
        "promo": false
       },
       {
@@ -413,19 +413,22 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 13993.33,
+     "total": 17833.03,
      "complete": false,
      "missing": [
-      "asado_tira",
       "lechuga"
      ],
-     "kcal": 2078,
+     "kcal": 2948,
      "items": [
       {
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "missing": true
+       "unit_price": 12799.0,
+       "cost": 3839.7,
+       "name": "Asado Carnicero De Novillito 1kg",
+       "sku_id": "38221",
+       "promo": false
       },
       {
        "ing": "vacio",
@@ -565,13 +568,12 @@
       }
      ],
      "lacks": [
-      "asado_tira",
       "lechuga"
      ],
      "fixed_total": 2688.3
     },
     "Dia": {
-     "total": 12164.53,
+     "total": 16934.53,
      "complete": false,
      "missing": [
       "pan"
@@ -739,6 +741,7 @@
    ],
    "cheapest": "Dia",
    "common": [
+    "asado_tira",
     "vacio",
     "chorizo",
     "morcilla",
@@ -861,13 +864,14 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 47074.94,
+     "total": 49613.72,
      "complete": false,
      "missing": [
       "pollo",
-      "naranja"
+      "naranja",
+      "papa"
      ],
-     "kcal": 16087,
+     "kcal": 15317,
      "items": [
       {
        "ing": "avena",
@@ -883,10 +887,10 @@
        "ing": "leche",
        "qty": 3.5,
        "fixed": false,
-       "unit_price": 1790.0,
-       "cost": 6265.0,
-       "name": "Leche clásica UAT Bulnez 1 lt",
-       "sku_id": "284609",
+       "unit_price": 3030.0,
+       "cost": 10605.0,
+       "name": "Leche La serenisima clásica 3% 1L.",
+       "sku_id": "144373",
        "promo": false
       },
       {
@@ -949,10 +953,10 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2700.0,
-       "cost": 2700.0,
-       "name": "Pan Blanco Lactal 315 grs",
-       "sku_id": "126927",
+       "unit_price": 3947.78,
+       "cost": 3947.78,
+       "name": "Pan blanco en rodajas finas Lactal bolsa 550 grs",
+       "sku_id": "312176",
        "promo": true
       },
       {
@@ -995,11 +999,11 @@
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1999.0,
-       "cost": 999.5,
-       "name": "Zanahoria Huella Natural x kg.",
-       "sku_id": "26503",
-       "promo": true
+       "unit_price": 1899.0,
+       "cost": 949.5,
+       "name": "Zanahoria x kg.",
+       "sku_id": "50067",
+       "promo": false
       },
       {
        "ing": "cebolla",
@@ -1015,11 +1019,7 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 2999.0,
-       "name": "Papa cepillada x kg.",
-       "sku_id": "34549",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "queso",
@@ -1054,17 +1054,16 @@
      ],
      "lacks": [
       "pollo",
-      "naranja"
+      "naranja",
+      "papa"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 55380.96,
-     "complete": false,
-     "missing": [
-      "naranja"
-     ],
-     "kcal": 18562,
+     "total": 52489.74,
+     "complete": true,
+     "missing": [],
+     "kcal": 19267,
      "items": [
       {
        "ing": "avena",
@@ -1090,10 +1089,10 @@
        "ing": "yogur",
        "qty": 1,
        "fixed": false,
-       "unit_price": 4833.33,
-       "cost": 4833.33,
-       "name": "Yogur Frutilla Sachet X 900 Gr Ilolay",
-       "sku_id": "3066301",
+       "unit_price": 5221.11,
+       "cost": 5221.11,
+       "name": "Yogur Milkaut Zero Vainilla Sachet 900g",
+       "sku_id": "3094001",
        "promo": false
       },
       {
@@ -1180,14 +1179,18 @@
        "ing": "naranja",
        "qty": 1.5,
        "fixed": false,
-       "missing": true
+       "unit_price": 1699.0,
+       "cost": 2548.5,
+       "name": "Naranja Ombligo Elegida Por Kg",
+       "sku_id": "10252",
+       "promo": false
       },
       {
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 4899.0,
-       "cost": 3429.3,
+       "unit_price": 4499.0,
+       "cost": 3149.3,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -1253,13 +1256,11 @@
        "promo": false
       }
      ],
-     "lacks": [
-      "naranja"
-     ],
+     "lacks": [],
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 43977.37,
+     "total": 40808.55,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1328,10 +1329,10 @@
        "ing": "lentejas",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5622.5,
-       "cost": 2811.25,
-       "name": "Lentejas Olinto 400 G",
-       "sku_id": "246955",
+       "unit_price": 4282.86,
+       "cost": 2141.43,
+       "name": "Lentejas Inca 350 Gr",
+       "sku_id": "14397",
        "promo": false
       },
       {
@@ -1459,7 +1460,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 43906.66,
+     "total": 41571.66,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1648,10 +1649,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2470.0,
-       "cost": 1235.0,
-       "name": "Yerba Mate Nobleza Gaucha Selección 1 Kg.",
-       "sku_id": "275540",
+       "unit_price": 2980.0,
+       "cost": 1490.0,
+       "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
+       "sku_id": "304727",
        "promo": true
       }
      ],
@@ -1660,12 +1661,12 @@
     }
    },
    "ranking": [
-    "Dia",
     "ChangoMas",
+    "Dia",
     "Carrefour",
     "Jumbo"
    ],
-   "cheapest": "Dia",
+   "cheapest": "ChangoMas",
    "common": [
     "avena",
     "leche",
@@ -1680,7 +1681,6 @@
     "tomate",
     "zanahoria",
     "cebolla",
-    "papa",
     "queso",
     "aceite",
     "yerba"
@@ -1789,13 +1789,14 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 45828.14,
+     "total": 43557.92,
      "complete": false,
      "missing": [
       "carne_picada",
-      "pollo"
+      "pollo",
+      "papa"
      ],
-     "kcal": 24931,
+     "kcal": 23391,
      "items": [
       {
        "ing": "fideos",
@@ -1841,20 +1842,20 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2700.0,
-       "cost": 2700.0,
-       "name": "Pan Blanco Lactal 315 grs",
-       "sku_id": "126927",
+       "unit_price": 3947.78,
+       "cost": 3947.78,
+       "name": "Pan blanco en rodajas finas Lactal bolsa 550 grs",
+       "sku_id": "312176",
        "promo": true
       },
       {
        "ing": "leche",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1790.0,
-       "cost": 3580.0,
-       "name": "Leche clásica UAT Bulnez 1 lt",
-       "sku_id": "284609",
+       "unit_price": 3030.0,
+       "cost": 6060.0,
+       "name": "Leche La serenisima clásica 3% 1L.",
+       "sku_id": "144373",
        "promo": false
       },
       {
@@ -1893,11 +1894,7 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 5998.0,
-       "name": "Papa cepillada x kg.",
-       "sku_id": "34549",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "cebolla",
@@ -1972,12 +1969,13 @@
      ],
      "lacks": [
       "carne_picada",
-      "pollo"
+      "pollo",
+      "papa"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 49214.84,
+     "total": 43216.84,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2167,7 +2165,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 42809.09,
+     "total": 37891.09,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2336,8 +2334,8 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1549.0,
-       "cost": 1549.0,
+       "unit_price": 1629.0,
+       "cost": 1629.0,
        "name": "Mayonesa Natura 250 Cc",
        "sku_id": "14691",
        "promo": false
@@ -2357,7 +2355,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 41635.41,
+     "total": 36710.41,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2426,10 +2424,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2470.0,
-       "cost": 1235.0,
-       "name": "Yerba Mate Nobleza Gaucha Selección 1 Kg.",
-       "sku_id": "275540",
+       "unit_price": 2980.0,
+       "cost": 1490.0,
+       "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
+       "sku_id": "304727",
        "promo": true
       },
       {
@@ -2550,8 +2548,8 @@
    "ranking": [
     "Dia",
     "ChangoMas",
-    "Carrefour",
-    "Jumbo"
+    "Jumbo",
+    "Carrefour"
    ],
    "cheapest": "Dia",
    "common": [
@@ -2563,7 +2561,6 @@
     "leche",
     "yerba",
     "azucar",
-    "papa",
     "cebolla",
     "banana",
     "galletitas",

@@ -1,12 +1,12 @@
 {
- "date": "2026-11-13",
- "previous": "2026-11-12",
+ "date": "2026-11-14",
+ "previous": "2026-11-13",
  "index": {
-  "date": "2026-11-13",
-  "paid": 98.819,
-  "regular": 98.993,
-  "day_change": -0.28,
-  "days_of_data": 21,
+  "date": "2026-11-14",
+  "paid": 98.998,
+  "regular": 99.026,
+  "day_change": 0.18,
+  "days_of_data": 22,
   "series": [
    [
     "2026-10-24",
@@ -112,18 +112,23 @@
     "2026-11-13",
     98.819,
     98.993
+   ],
+   [
+    "2026-11-14",
+    98.998,
+    99.026
    ]
   ],
   "mode": "week",
-  "week_paid": -0.32,
-  "week_regular": -0.56,
+  "week_paid": -0.11,
+  "week_regular": -0.51,
   "now": [
-   "2026-11-07",
-   "2026-11-13"
+   "2026-11-08",
+   "2026-11-14"
   ],
   "before": [
-   "2026-10-31",
-   "2026-11-06"
+   "2026-11-01",
+   "2026-11-07"
   ]
  },
  "ranking": {
@@ -131,252 +136,252 @@
   "label_en": "Week of 8 to 14 November 2026",
   "days": [
    "2026-11-08",
-   "2026-11-13"
+   "2026-11-14"
   ],
-  "n_products": 311,
+  "n_products": 296,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1327074.73,
+    "total": 1240791.28,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1377758.37,
-    "pct": 3.82
+    "total": 1282003.41,
+    "pct": 3.32
    },
    {
     "shop": "Carrefour",
-    "total": 1380700.09,
-    "pct": 4.04
+    "total": 1290679.65,
+    "pct": 4.02
    },
    {
     "shop": "Jumbo",
-    "total": 1555984.33,
-    "pct": 17.25
+    "total": 1458079.14,
+    "pct": 17.51
    }
   ]
  },
  "down": [
   {
    "shop": "ChangoMas",
-   "name": "Huevos Blancos La Piara 30 U",
-   "type": "huevos",
-   "before": 8899.0,
-   "now": 4999.0,
-   "pct": -43.8,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 6999.0,
-   "now": 4899.0,
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 3699.0,
+   "now": 2589.3,
    "pct": -30.0,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Suprema De Pollo Granel Fresca",
-   "type": "suprema",
-   "before": 12449.0,
-   "now": 8999.0,
-   "pct": -27.7,
-   "why": "price"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Banana 1 Kg",
-   "type": "banana",
-   "before": 2399.0,
-   "now": 1759.2,
-   "pct": -26.7,
-   "why": "list_down"
-  },
-  {
-   "shop": "Dia",
-   "name": "Roast Beef en Churrasco Envasado al Vacío x Kg.",
-   "type": "roast_paleta",
-   "before": 18990.0,
-   "now": 14490.0,
-   "pct": -23.7,
-   "why": "list_down"
-  },
-  {
-   "shop": "Dia",
-   "name": "Aceite Girasol Natural 0,9 Lt.",
-   "type": "aceite_girasol",
-   "before": 4715.0,
-   "now": 3700.0,
-   "pct": -21.5,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Peceto Entero De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cortes_magros",
-   "before": 21164.15,
-   "now": 16999.0,
-   "pct": -19.7,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
-   "type": "vacio",
-   "before": 22289.0,
-   "now": 17999.0,
-   "pct": -19.2,
-   "why": "price"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 21504.15,
-   "now": 17999.0,
-   "pct": -16.3,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Cebolla Sanes en red 4 uni",
-   "type": "cebolla",
-   "before": 3399.0,
-   "now": 2999.0,
-   "pct": -11.8,
    "why": "promo_start"
   },
   {
    "shop": "Dia",
    "name": "Tomate Redondo x Kg.",
    "type": "tomate",
-   "before": 5490.0,
-   "now": 4990.0,
-   "pct": -9.1,
+   "before": 4990.0,
+   "now": 4290.0,
+   "pct": -14.0,
    "why": "list_down"
   },
   {
    "shop": "Dia",
-   "name": "Manzana Roja Comercial en bolsa malla x Kg.",
-   "type": "manzana",
-   "before": 3790.0,
-   "now": 3490.0,
-   "pct": -7.9,
+   "name": "Lavandina Ayudín Original 1 Lt.",
+   "type": "lavandina",
+   "before": 1650.0,
+   "now": 1455.0,
+   "pct": -11.8,
    "why": "list_down"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 4899.0,
+   "now": 4499.0,
+   "pct": -8.2,
+   "why": "price"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Vino tinto Malbec Trumpeter 750 ml",
+   "type": "vino",
+   "before": 10949.0,
+   "now": 11499.0,
+   "pct": 5.0,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Mayonesa Natura 1000 Cc",
+   "type": "mayonesa",
+   "before": 5959.0,
+   "now": 6259.0,
+   "pct": 5.0,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+   "type": "detergente",
+   "before": 3405.35,
+   "now": 3578.25,
+   "pct": 5.1,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Mayonesa Natura 250 Cc",
+   "type": "mayonesa",
+   "before": 1549.0,
+   "now": 1629.0,
+   "pct": 5.2,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Arroz Parboil Lucchetti 1 Kg",
+   "type": "arroz",
+   "before": 2489.0,
+   "now": 2629.0,
+   "pct": 5.6,
+   "why": "list_up"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Dulce de leche Ilolay clásico 400 g.",
+   "type": "dulce_de_leche",
+   "before": 3819.0,
+   "now": 4035.0,
+   "pct": 5.7,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Papel Higiénico Higienol Max hoja simple 80 m 4 Ud.",
+   "type": "papel_higienico",
+   "before": 6098.0,
+   "now": 6448.0,
+   "pct": 5.7,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.",
+   "type": "papel_higienico",
+   "before": 2498.0,
+   "now": 2648.0,
+   "pct": 6.0,
+   "why": "list_up"
   }
  ],
  "up": [
   {
    "shop": "Dia",
-   "name": "Papel Higienico Simple Hoja 80mts 4 Ud.",
+   "name": "Yerba Mate Nobleza Gaucha Selección 1 Kg.",
+   "type": "yerba",
+   "before": 2470.0,
+   "now": 3087.5,
+   "pct": 25.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Leche Multidefensa 3% La Serenisima 1 Lt.",
+   "type": "leche",
+   "before": 1899.0,
+   "now": 2225.0,
+   "pct": 17.2,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Arroz Gallo Parboil 1kg",
+   "type": "arroz",
+   "before": 2979.0,
+   "now": 3249.0,
+   "pct": 9.1,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Harina De Trigo Favorita 0000 1 Kg",
+   "type": "harina_000",
+   "before": 1699.0,
+   "now": 1839.0,
+   "pct": 8.2,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Papel Higiénico Doble Hoja Fusion Higienol 4 Ud.",
    "type": "papel_higienico",
-   "before": 2650.0,
-   "now": 5300.0,
-   "pct": 100.0,
-   "why": "promo_end"
+   "before": 4620.0,
+   "now": 4939.0,
+   "pct": 6.9,
+   "why": "list_up"
   },
   {
-   "shop": "Jumbo",
-   "name": "Banana Ecuador X Kg",
-   "type": "banana",
-   "before": 2899.0,
-   "now": 3499.0,
-   "pct": 20.7,
-   "why": "price"
+   "shop": "Dia",
+   "name": "Papel Higiénico Higienol Max hoja simple 100 m 4 Ud.",
+   "type": "papel_higienico",
+   "before": 7699.0,
+   "now": 8199.0,
+   "pct": 6.5,
+   "why": "list_up"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Bife De Vacio Envasado Al Vacío 800 G",
-   "type": "vacio",
-   "before": 24224.15,
-   "now": 28499.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Dia",
+   "name": "Papel Higiénico Higienol Fresh hoja simple 30 m 4 Ud.",
+   "type": "papel_higienico",
+   "before": 2498.0,
+   "now": 2648.0,
+   "pct": 6.0,
+   "why": "list_up"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Bola De Lomo Feteada De Novillito Envasado Al Vacío 1 Kg",
-   "type": "cortes_magros",
-   "before": 17169.15,
-   "now": 20199.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Carrefour",
+   "name": "Dulce de leche Ilolay clásico 400 g.",
+   "type": "dulce_de_leche",
+   "before": 3819.0,
+   "now": 4035.0,
+   "pct": 5.7,
+   "why": "list_up"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Carne Picada Magra 800g",
-   "type": "carne_picada",
-   "before": 13939.15,
-   "now": 16399.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Cuadrada Feteada De Novillito Envasado Al Vacío 800g",
-   "type": "cortes_magros",
-   "before": 17339.15,
-   "now": 20399.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Dia",
+   "name": "Papel Higiénico Higienol Max hoja simple 80 m 4 Ud.",
+   "type": "papel_higienico",
+   "before": 6098.0,
+   "now": 6448.0,
+   "pct": 5.7,
+   "why": "list_up"
   },
   {
    "shop": "ChangoMas",
-   "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 21419.15,
-   "now": 25199.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "name": "Arroz Parboil Lucchetti 1 Kg",
+   "type": "arroz",
+   "before": 2489.0,
+   "now": 2629.0,
+   "pct": 5.6,
+   "why": "list_up"
   },
   {
    "shop": "ChangoMas",
-   "name": "Nalga Feteada Envasado Al Vacío 1 Kg",
-   "type": "nalga",
-   "before": 18189.15,
-   "now": 21399.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "name": "Mayonesa Natura 250 Cc",
+   "type": "mayonesa",
+   "before": 1549.0,
+   "now": 1629.0,
+   "pct": 5.2,
+   "why": "list_up"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Paleta De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "roast_paleta",
-   "before": 15044.15,
-   "now": 17699.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Peceto Feteado De Novillito Envasado Al Vacío 800 G",
-   "type": "cortes_magros",
-   "before": 21164.15,
-   "now": 24899.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "type": "pollo_entero",
-   "before": 3220.65,
-   "now": 3789.0,
-   "pct": 17.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Roast Beef De Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "roast_paleta",
-   "before": 15554.15,
-   "now": 18299.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+   "type": "detergente",
+   "before": 3405.35,
+   "now": 3578.25,
+   "pct": 5.1,
+   "why": "list_up"
   }
  ],
- "n_down": 14,
- "n_up": 17
+ "n_down": 4,
+ "n_up": 14
 }

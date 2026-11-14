@@ -1,0 +1,413 @@
+{
+ "id": "2026-11-08",
+ "start": "2026-11-08",
+ "end": "2026-11-14",
+ "label_es": "Semana del 8 al 14 de noviembre de 2026",
+ "label_en": "Week of 8 to 14 November 2026",
+ "before_start": "2026-11-01",
+ "before_end": "2026-11-07",
+ "days_now": [
+  "2026-11-08",
+  "2026-11-09",
+  "2026-11-10",
+  "2026-11-11",
+  "2026-11-12",
+  "2026-11-13",
+  "2026-11-14"
+ ],
+ "days_before": [
+  "2026-11-01",
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "min_in_stock": 4,
+ "paid": -0.11,
+ "regular": -0.51,
+ "shops": [
+  {
+   "shop": "Carrefour",
+   "pct": 0.49
+  },
+  {
+   "shop": "Jumbo",
+   "pct": -0.12
+  },
+  {
+   "shop": "ChangoMas",
+   "pct": -0.48
+  },
+  {
+   "shop": "Dia",
+   "pct": -0.04
+  }
+ ],
+ "groups": [
+  {
+   "group": "cuidado_personal",
+   "name_es": "Cuidado personal",
+   "name_en": "Personal care",
+   "in_headline": false,
+   "pct": 2.49
+  },
+  {
+   "group": "otros_alimentos",
+   "name_es": "Otros alimentos",
+   "name_en": "Other food",
+   "in_headline": true,
+   "pct": 1.8
+  },
+  {
+   "group": "alcohol",
+   "name_es": "Bebidas alcohólicas",
+   "name_en": "Alcoholic drinks",
+   "in_headline": true,
+   "pct": 1.62
+  },
+  {
+   "group": "limpieza",
+   "name_es": "Limpieza",
+   "name_en": "Cleaning products",
+   "in_headline": true,
+   "pct": 0.86
+  },
+  {
+   "group": "pan_cereales",
+   "name_es": "Pan y cereales",
+   "name_en": "Bread and cereals",
+   "in_headline": true,
+   "pct": 0.82
+  },
+  {
+   "group": "carne_ave",
+   "name_es": "Pollo",
+   "name_en": "Chicken",
+   "in_headline": true,
+   "pct": 0.7
+  },
+  {
+   "group": "lacteos",
+   "name_es": "Lácteos y huevos",
+   "name_en": "Dairy and eggs",
+   "in_headline": true,
+   "pct": 0.59
+  },
+  {
+   "group": "aceites",
+   "name_es": "Aceites",
+   "name_en": "Oils",
+   "in_headline": true,
+   "pct": 0.56
+  },
+  {
+   "group": "azucar",
+   "name_es": "Azúcar y dulces",
+   "name_en": "Sugar and sweets",
+   "in_headline": true,
+   "pct": 0.07
+  },
+  {
+   "group": "carne_vacuna",
+   "name_es": "Carne vacuna",
+   "name_en": "Beef",
+   "in_headline": true,
+   "pct": -0.01
+  },
+  {
+   "group": "cafe_te_yerba",
+   "name_es": "Café, té y yerba",
+   "name_en": "Coffee, tea and yerba",
+   "in_headline": true,
+   "pct": -0.49
+  },
+  {
+   "group": "frutas",
+   "name_es": "Frutas",
+   "name_en": "Fruit",
+   "in_headline": true,
+   "pct": -0.92
+  },
+  {
+   "group": "aguas_gaseosas",
+   "name_es": "Aguas y gaseosas",
+   "name_en": "Water and soft drinks",
+   "in_headline": true,
+   "pct": -0.98
+  },
+  {
+   "group": "verduras",
+   "name_es": "Verduras",
+   "name_en": "Vegetables",
+   "in_headline": true,
+   "pct": -6.09
+  }
+ ],
+ "products_compared": 965,
+ "products_up": 243,
+ "products_down": 139,
+ "products_same": 583,
+ "top_up": [
+  {
+   "type": "papel_higienico",
+   "type_en": "Toilet paper",
+   "shop": "Carrefour",
+   "sku_id": "19431",
+   "name": "Papel higiénico Elegante triple hoja 4 u.",
+   "before": 4536.94,
+   "now": 6808.0,
+   "pct": 50.06,
+   "regular_pct": 6.93
+  },
+  {
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
+   "shop": "Dia",
+   "sku_id": "311096",
+   "name": "Pasta Dental Colgate Luminous White Color Correct 70 Gr.",
+   "before": 4316.54,
+   "now": 6235.43,
+   "pct": 44.45,
+   "regular_pct": -0.91
+  },
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "Carrefour",
+   "sku_id": "138082",
+   "name": "Detergente Concentrado Cif Lima Botella 500 ml",
+   "before": 2881.32,
+   "now": 4136.38,
+   "pct": 43.56,
+   "regular_pct": 0.05
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "sku_id": "24442",
+   "name": "Cerveza rubia Warsteiner 473 ml",
+   "before": 2290.14,
+   "now": 3285.86,
+   "pct": 43.48,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Carrefour",
+   "sku_id": "6388",
+   "name": "Cerveza blanca Golsch 473 ml",
+   "before": 2579.29,
+   "now": 3700.71,
+   "pct": 43.48,
+   "regular_pct": 0.0
+  }
+ ],
+ "top_down": [
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Carrefour",
+   "sku_id": "6937",
+   "name": "Cebolla Sanes en red 4 uni",
+   "before": 4762.71,
+   "now": 3512.0,
+   "pct": -26.26,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "yerba",
+   "type_en": "Yerba mate",
+   "shop": "Dia",
+   "sku_id": "304727",
+   "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
+   "before": 2500.0,
+   "now": 1922.86,
+   "pct": -23.09,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "Dia",
+   "sku_id": "298887",
+   "name": "Cerveza Warsteiner 473 Ml.",
+   "before": 3061.43,
+   "now": 2404.29,
+   "pct": -21.47,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "galletitas",
+   "type_en": "Biscuits",
+   "shop": "Dia",
+   "sku_id": "47932",
+   "name": "Galletitas Chocolate Chocolinas 250 Gr.",
+   "before": 2764.0,
+   "now": 2176.0,
+   "pct": -21.27,
+   "regular_pct": 2.42
+  },
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Carrefour",
+   "sku_id": "7968",
+   "name": "Cebolla x kg.",
+   "before": 3256.14,
+   "now": 2599.0,
+   "pct": -20.18,
+   "regular_pct": -20.18
+  }
+ ],
+ "promos_now": {
+  "Carrefour": 42.3,
+  "ChangoMas": 38.6,
+  "Dia": 68.4
+ },
+ "promos_before": {
+  "Carrefour": 54.6,
+  "ChangoMas": 36.0,
+  "Dia": 73.4
+ },
+ "series": [
+  {
+   "date": "2026-11-01",
+   "paid": 99.79,
+   "regular": 100.03
+  },
+  {
+   "date": "2026-11-02",
+   "paid": 100.573,
+   "regular": 99.947
+  },
+  {
+   "date": "2026-11-03",
+   "paid": 101.51,
+   "regular": 100.108
+  },
+  {
+   "date": "2026-11-04",
+   "paid": 98.456,
+   "regular": 99.368
+  },
+  {
+   "date": "2026-11-05",
+   "paid": 98.089,
+   "regular": 99.396
+  },
+  {
+   "date": "2026-11-06",
+   "paid": 98.235,
+   "regular": 99.381
+  },
+  {
+   "date": "2026-11-07",
+   "paid": 98.196,
+   "regular": 99.363
+  },
+  {
+   "date": "2026-11-08",
+   "paid": 98.373,
+   "regular": 99.25
+  },
+  {
+   "date": "2026-11-09",
+   "paid": 99.696,
+   "regular": 99.25
+  },
+  {
+   "date": "2026-11-10",
+   "paid": 101.643,
+   "regular": 99.284
+  },
+  {
+   "date": "2026-11-11",
+   "paid": 98.621,
+   "regular": 99.148
+  },
+  {
+   "date": "2026-11-12",
+   "paid": 99.093,
+   "regular": 99.288
+  },
+  {
+   "date": "2026-11-13",
+   "paid": 98.819,
+   "regular": 98.993
+  },
+  {
+   "date": "2026-11-14",
+   "paid": 98.998,
+   "regular": 99.026
+  }
+ ],
+ "ranking": {
+  "days": [
+   "2026-11-08",
+   "2026-11-14"
+  ],
+  "days_of_data": 7,
+  "n_products": 296,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 1240791.28,
+    "pct": 0.0
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 1282003.41,
+    "pct": 3.32
+   },
+   {
+    "shop": "Carrefour",
+    "total": 1290679.65,
+    "pct": 4.02
+   },
+   {
+    "shop": "Jumbo",
+    "total": 1458079.14,
+    "pct": 17.51
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 92,
+   "Jumbo": 4,
+   "ChangoMas": 135,
+   "Dia": 109
+  },
+  "examples": [
+   {
+    "ean": "7622202816437",
+    "name": "Alfajor Shot Blanco Triple 60 G",
+    "low_shop": "ChangoMas",
+    "low": 1343.4,
+    "high_shop": "Jumbo",
+    "high": 2850.0,
+    "pct": 112.1
+   },
+   {
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15742.86,
+    "high_shop": "Jumbo",
+    "high": 28970.0,
+    "pct": 84.0
+   },
+   {
+    "ean": "77956699",
+    "name": "Alfajor Shot Con Maní Triple 60 G",
+    "low_shop": "ChangoMas",
+    "low": 1343.4,
+    "high_shop": "Jumbo",
+    "high": 2400.0,
+    "pct": 78.7
+   }
+  ]
+ }
+}

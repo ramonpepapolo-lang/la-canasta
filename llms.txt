@@ -27,6 +27,8 @@ La Canasta (lacanastaindex.com) es un índice diario e independiente de precios 
 - [Daily index (CSV)](https://lacanastaindex.com/index/daily.csv)
 - [Monthly index (CSV)](https://lacanastaindex.com/index/monthly.csv)
 - [Kaggle dataset](https://www.kaggle.com/datasets/ramonpepa/la-canasta-daily-supermarket-prices)
+- [Kaggle notebook: Which supermarket is cheapest in Argentina?](https://www.kaggle.com/code/ramonpepa/which-supermarket-is-cheapest-in-argentina), by Ramon Pepa
+- [Kaggle notebook: La Canasta, Argentine supermarket prices daily](https://www.kaggle.com/code/ramonpepa/la-canasta-argentine-supermarket-prices-daily), by Ramon Pepa
 
 ## Elsewhere
 

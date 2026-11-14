@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-14 10:16",
+ "when_utc": "2026-11-14 10:26",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -167,7 +167,7 @@
     "views": 21,
     "views_exact": true,
     "likes": 2,
-    "comments": 1
+    "comments": null
    },
    {
     "id": "XoBQeQhf8Aw",
@@ -177,7 +177,7 @@
     "views": 14507,
     "views_exact": true,
     "likes": 77,
-    "comments": 1
+    "comments": null
    },
    {
     "id": "L1E_gsxHEb8",
@@ -187,7 +187,7 @@
     "views": 29,
     "views_exact": true,
     "likes": 2,
-    "comments": 3
+    "comments": null
    },
    {
     "id": "sq4QiYlzBHI",
@@ -207,7 +207,7 @@
     "views": 6722,
     "views_exact": true,
     "likes": 550,
-    "comments": 1
+    "comments": null
    },
    {
     "id": "EimZGNWwnkQ",
@@ -237,7 +237,7 @@
     "views": 275,
     "views_exact": true,
     "likes": 4,
-    "comments": 1
+    "comments": null
    },
    {
     "id": "EyudS8G5EmA",
@@ -247,7 +247,7 @@
     "views": 16693,
     "views_exact": true,
     "likes": 5,
-    "comments": 2
+    "comments": null
    },
    {
     "id": "Y9JkCvIlXLk",
@@ -324,5 +324,11 @@
     "retweet_count": 0
    }
   ]
+ },
+ "email": {
+  "status": 200,
+  "list_name": "Informe mensual",
+  "subscribers": 10,
+  "blacklisted": 0
  }
 }

@@ -1,14 +1,19 @@
 {
- "id": "ramonpepa/la-canasta-argentine-supermarket-prices-day-by-day",
- "title": "La Canasta: Argentine supermarket prices day by day",
+ "id": "ramonpepa/la-canasta-argentine-supermarket-prices-daily",
+ "title": "La Canasta: Argentine supermarket prices daily",
  "code_file": "la-canasta-kaggle-notebook.ipynb",
  "language": "python",
  "kernel_type": "notebook",
  "is_private": false,
  "enable_gpu": false,
  "enable_internet": false,
- "dataset_sources": ["ramonpepa/la-canasta-daily-supermarket-prices"],
+ "dataset_sources": [
+  "ramonpepa/la-canasta-daily-supermarket-prices"
+ ],
  "competition_sources": [],
  "kernel_sources": [],
- "keywords": ["economics", "retail and shopping", "food", "time series analysis"]
+ "keywords": [
+  "economics",
+  "food"
+ ]
 }

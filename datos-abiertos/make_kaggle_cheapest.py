@@ -176,6 +176,6 @@ json.dump({
     "dataset_sources": ["ramonpepa/la-canasta-daily-supermarket-prices"],
     "competition_sources": [],
     "kernel_sources": [],
-    "keywords": ["economics", "retail and shopping", "food", "data visualization"],
+    "keywords": ["economics", "food"],
 }, open(os.path.join(OUT, "kernel-metadata.json"), "w"), indent=1)
 print("Wrote", OUT)

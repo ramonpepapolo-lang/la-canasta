@@ -2,7 +2,7 @@ name: Kaggle notebooks
 
 # Publishes the public Kaggle notebooks that use the La Canasta dataset (by Ramon Pepa):
 #   datos-abiertos/kaggle-cheapest   "Which supermarket is cheapest in Argentina?"
-#   datos-abiertos/kaggle-ejemplo    "La Canasta: Argentine supermarket prices day by day"
+#   datos-abiertos/kaggle-ejemplo    "La Canasta: Argentine supermarket prices daily"
 # Kaggle runs each notebook on its own servers with the latest version of the dataset.
 # Runs when a notebook changes, every Monday (after Sunday's dataset update) so the charts show the new week, and on demand.
 on:

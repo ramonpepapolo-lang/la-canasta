@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-14 10:26",
+ "when_utc": "2026-11-14 14:28",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -14,9 +14,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "457",
+  "subscribers_text": "465",
   "views_total_text": "115,672",
-  "views_sum_of_videos": 57456,
+  "views_sum_of_videos": 57656,
   "videos": 25,
   "list": [
    {
@@ -94,7 +94,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 11684,
+    "views": 11731,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -134,9 +134,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 434,
+    "views": 439,
     "views_exact": true,
-    "likes": 71,
+    "likes": 74,
     "comments": null
    },
    {
@@ -167,17 +167,17 @@
     "views": 21,
     "views_exact": true,
     "likes": 2,
-    "comments": null
+    "comments": 1
    },
    {
     "id": "XoBQeQhf8Aw",
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 14507,
+    "views": 14574,
     "views_exact": true,
-    "likes": 77,
-    "comments": null
+    "likes": 79,
+    "comments": 1
    },
    {
     "id": "L1E_gsxHEb8",
@@ -187,7 +187,7 @@
     "views": 29,
     "views_exact": true,
     "likes": 2,
-    "comments": null
+    "comments": 3
    },
    {
     "id": "sq4QiYlzBHI",
@@ -204,10 +204,10 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 6722,
+    "views": 6733,
     "views_exact": true,
-    "likes": 550,
-    "comments": null
+    "likes": 553,
+    "comments": 1
    },
    {
     "id": "EimZGNWwnkQ",
@@ -224,7 +224,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 6245,
+    "views": 6258,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -237,24 +237,24 @@
     "views": 275,
     "views_exact": true,
     "likes": 4,
-    "comments": null
+    "comments": 1
    },
    {
     "id": "EyudS8G5EmA",
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 16693,
+    "views": 16749,
     "views_exact": true,
     "likes": 5,
-    "comments": null
+    "comments": 2
    },
    {
     "id": "Y9JkCvIlXLk",
     "debug": null,
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "2026-11-04",
-    "views": 29,
+    "views": 30,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -266,7 +266,7 @@
     "published": "2026-11-04",
     "views": 397,
     "views_exact": true,
-    "likes": 2,
+    "likes": 3,
     "comments": null
    }
   ]

@@ -152,6 +152,18 @@ try:
 except Exception as e:
     out["errors"].append("x: " + str(e)[:400])
 
+# Email subscribers (the website's sign-up list in Brevo): only the count, never any address
+try:
+    import requests as _rq
+    key, lid = os.environ.get("BREVO_API_KEY", "").strip(), os.environ.get("BREVO_LIST_ID", "").strip()
+    if key and lid:
+        r = _rq.get(f"https://api.brevo.com/v3/contacts/lists/{lid}", headers={"api-key": key, "accept": "application/json"}, timeout=30)
+        j = r.json()
+        out["email"] = {"status": r.status_code, "list_name": j.get("name"), "subscribers": j.get("uniqueSubscribers", j.get("totalSubscribers")),
+                        "blacklisted": j.get("totalBlacklisted")}
+except Exception as e:
+    out["errors"].append("email: " + str(e)[:200])
+
 json.dump(out, open("estadisticas.json", "w"), ensure_ascii=False, indent=1)
 print(json.dumps({k: v for k, v in out.items() if k != "youtube"}, ensure_ascii=False)[:2000])
 print("youtube:", {k: v for k, v in out.get("youtube", {}).items() if k != "list"})

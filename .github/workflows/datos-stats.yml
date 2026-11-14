@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "41 6 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [notas/pedir-datos-stats.txt]
 
 permissions:
   contents: write

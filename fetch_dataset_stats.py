@@ -54,7 +54,22 @@ def kaggle():
     raise RuntimeError("Kaggle dataset not found in the list")
 
 
-for name, fn in (("zenodo", zenodo), ("kaggle", kaggle)):
+def kaggle_notebooks():
+    """Public notebooks on Kaggle by ramonpepa: votes (Kaggle's API gives no view count for notebooks)."""
+    if not (os.environ.get("KAGGLE_KEY") or os.environ.get("KAGGLE_API_TOKEN")):
+        return None
+    from kaggle.api.kaggle_api_extended import KaggleApi
+    api = KaggleApi()
+    api.authenticate()
+    rows = []
+    for k in api.kernels_list(user=KAGGLE_OWNER, page_size=50):
+        g = lambda *names: next((getattr(k, n) for n in names if getattr(k, n, None) is not None), None)
+        rows.append({"title": g("title"), "ref": g("ref"), "votes": g("total_votes", "totalVotes"),
+                     "views": g("total_views", "totalViews", "view_count"), "last_run": str(g("last_run_time", "lastRunTime"))})
+    return rows
+
+
+for name, fn in (("zenodo", zenodo), ("kaggle", kaggle), ("kaggle_notebooks", kaggle_notebooks)):
     try:
         out[name] = fn()
     except Exception as e:  # one site failing never stops the other

@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-14 11:32",
+ "updated": "2026-11-14 14:46",
  "zenodo": {
   "views": 13,
   "downloads": 5,
   "url": "https://doi.org/10.5281/zenodo.23856045"
  },
  "kaggle": {
-  "views": 25,
+  "views": 26,
   "downloads": 30,
   "votes": 0,
   "usability": 0.64705884,
@@ -27,20 +27,6 @@
    "votes": 0,
    "views": null,
    "last_run": "2026-11-14 00:35:07.377000"
-  },
-  {
-   "title": "notebookda39de53a2",
-   "ref": "ramonpepa/notebookda39de53a2",
-   "votes": 0,
-   "views": null,
-   "last_run": "2026-11-04 08:45:36.027000"
-  },
-  {
-   "title": "La Canasta: Argentine supermarket prices, day by d",
-   "ref": "ramonpepa/la-canasta-argentine-supermarket-prices-day-by-d",
-   "votes": 0,
-   "views": null,
-   "last_run": "2026-11-05 15:53:25.663000"
   }
  ]
 }

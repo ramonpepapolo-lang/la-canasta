@@ -1,0 +1,48 @@
+name: Kaggle notebooks
+
+# Publishes the public Kaggle notebooks that use the La Canasta dataset (by Ramon Pepa):
+#   datos-abiertos/kaggle-cheapest   "Which supermarket is cheapest in Argentina?"
+#   datos-abiertos/kaggle-ejemplo    "La Canasta: Argentine supermarket prices day by day"
+# Kaggle runs each notebook on its own servers with the latest version of the dataset.
+# Runs when a notebook changes, every Monday (after Sunday's dataset update) so the charts show the new week, and on demand.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "datos-abiertos/kaggle-cheapest/**"
+      - "datos-abiertos/kaggle-ejemplo/**"
+      - ".github/workflows/kaggle-notebooks.yml"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish and run on Kaggle
+        env:
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          pip install --quiet kaggle
+          KAGGLE_API_TOKEN="$(echo "$KAGGLE_API_TOKEN" | sed 's/.*=//; s/[[:space:]]//g')"; export KAGGLE_API_TOKEN
+          [ -z "$KAGGLE_API_TOKEN" ] && unset KAGGLE_API_TOKEN
+          kaggle datasets list -m --max-size 1 >/dev/null && echo "Kaggle login OK" || { echo "Kaggle login FAILED"; exit 1; }
+          fail=0
+          for d in datos-abiertos/kaggle-cheapest datos-abiertos/kaggle-ejemplo; do
+            id=$(python3 -c "import json;print(json.load(open('$d/kernel-metadata.json'))['id'])")
+            echo "== $id"
+            kaggle kernels push -p "$d" 2>&1 | tee push.log
+            grep -qi "error" push.log && { fail=1; continue; }
+            for i in $(seq 1 60); do
+              st=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$st"
+              echo "$st" | grep -qi "complete" && break
+              echo "$st" | grep -qi "error\|cancel" && { fail=1; break; }
+              sleep 20
+            done
+          done
+          exit $fail

@@ -1,0 +1,21 @@
+{
+ "id": "ramonpepa/which-supermarket-is-cheapest-in-argentina",
+ "title": "Which supermarket is cheapest in Argentina?",
+ "code_file": "cheapest-supermarket-argentina.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": false,
+ "enable_gpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "ramonpepa/la-canasta-daily-supermarket-prices"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "keywords": [
+  "economics",
+  "retail and shopping",
+  "food",
+  "data visualization"
+ ]
+}

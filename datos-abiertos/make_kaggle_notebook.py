@@ -11,7 +11,9 @@ cells = [
 md("""# La Canasta: Argentine supermarket prices, day by day
 *Precios de supermercados en Argentina, día por día*
 
-**La Canasta** is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of **Carrefour, Jumbo, ChangoMás, Día and Coto**, and turns 1,018 everyday products (beef, milk, bread, yerba, oil, cleaning products and more) into one index, weighted with INDEC's official household spending weights.
+*By Ramon Pepa, founder of [La Canasta](https://lacanastaindex.com).*
+
+**La Canasta** is an independent daily price index of Argentine supermarkets. Every day a program reads the online prices of **Carrefour, Jumbo, ChangoMás and Día** (and, since November, **Coto**, collected but not yet in the index), and turns 1,018 everyday products (beef, milk, bread, yerba, oil, cleaning products and more) into one index, weighted with INDEC's official household spending weights.
 
 This notebook shows what you can do with the data:
 
@@ -94,7 +96,9 @@ code("""g = groups.pivot_table(index="date", columns="group_name", values="index
 first = g[g.index < g.index.min() + pd.Timedelta(days=7)].mean()
 last = g.tail(7).mean()
 change = ((last / first - 1) * 100).sort_values()
-ax = change.plot.barh(color=[RED if v > 0 else GREEN for v in change], figsize=(10, 5.5))
+fig, ax = plt.subplots(figsize=(10, 5.5))
+ax.barh(range(len(change)), change.values, color=[RED if v > 0 else GREEN for v in change])
+ax.set_yticks(range(len(change)), change.index)
 for i, v in enumerate(change):
     ax.text(v + (0.1 if v >= 0 else -0.1), i, f"{v:+.1f}%", va="center", ha="left" if v >= 0 else "right", fontsize=10)
 ax.axvline(0, color="grey", lw=0.8)
@@ -131,7 +135,9 @@ day = week
 wide = wide[wide.max(axis=1) <= 3 * wide.min(axis=1)]   # leave out obvious mismatches
 totals = wide.sum().sort_values()
 pct = (totals / totals.min() - 1) * 100
-ax = totals.rename(SHOP_NAME).plot.bar(color=[GREEN] + [CELESTE] * (len(totals) - 1), rot=0, figsize=(9, 4.5))
+fig, ax = plt.subplots(figsize=(9, 4.5))
+ax.bar(range(len(totals)), totals.values, color=[GREEN] + [CELESTE] * (len(totals) - 1))
+ax.set_xticks(range(len(totals)), [SHOP_NAME.get(s, s) for s in totals.index])
 for i, (t, p) in enumerate(zip(totals, pct)):
     ax.text(i, t, f"${t:,.0f}\\n" + ("cheapest" if p == 0 else f"+{p:.1f}%"), ha="center", va="bottom", fontsize=10)
 ax.set_ylim(0, totals.max() * 1.15)

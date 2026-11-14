@@ -1,0 +1,52 @@
+name: Kaggle cleanup (one-off)
+
+# Deletes two old Kaggle notebooks on Ramon's account (approved by Ramon, 14 Nov 2026):
+#   ramonpepa/notebookda39de53a2                          an empty default notebook from 4 Nov
+#   ramonpepa/la-canasta-argentine-supermarket-prices-day-by-d   an older copy of "La Canasta: Argentine supermarket prices daily"
+# A copy of each is downloaded first and kept as this run's artifact (90 days).
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/kaggle-limpieza.yml]
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Back up, then delete
+        env:
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          pip install --quiet kaggle
+          KAGGLE_API_TOKEN="$(echo "$KAGGLE_API_TOKEN" | sed 's/.*=//; s/[[:space:]]//g')"; export KAGGLE_API_TOKEN
+          [ -z "$KAGGLE_API_TOKEN" ] && unset KAGGLE_API_TOKEN
+          [ -z "$KAGGLE_KEY" ] && unset KAGGLE_KEY
+          kaggle --version
+          kaggle kernels -h | head -20
+          mkdir -p backup
+          for k in ramonpepa/notebookda39de53a2 ramonpepa/la-canasta-argentine-supermarket-prices-day-by-d; do
+            d="backup/${k#*/}"; mkdir -p "$d"
+            echo "== $k"
+            kaggle kernels pull "$k" -p "$d" -m || { echo "could not back up $k, not deleting it"; continue; }
+            ls -la "$d"; python3 -c "import json,glob;f=glob.glob('$d/*.ipynb');nb=json.load(open(f[0])) if f else {'cells':[]};print('cells:',len(nb['cells']));[print('-',''.join(c['source'])[:120].replace(chr(10),' | ')) for c in nb['cells'][:4]]"
+            kaggle kernels delete "$k" -y 2>&1 || python3 - "$k" <<'PY'
+          import sys
+          from kaggle.api.kaggle_api_extended import KaggleApi
+          api = KaggleApi(); api.authenticate()
+          owner, slug = sys.argv[1].split("/")
+          fn = getattr(api, "kernels_delete", None) or getattr(api, "kernel_delete", None)
+          if not fn:
+              raise SystemExit("this Kaggle client has no delete for notebooks")
+          print(fn(owner + "/" + slug) if fn.__code__.co_argcount <= 2 else fn(owner, slug))
+          PY
+          done
+          echo "== notebooks left"
+          kaggle kernels list --mine 2>&1 | head
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kaggle-backup
+          path: backup

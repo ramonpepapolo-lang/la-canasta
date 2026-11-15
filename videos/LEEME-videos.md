@@ -1,5 +1,34 @@
 # Videos de La Canasta (YouTube Shorts + X)
 
+## FORMATO PRO (desde el 15/11/2026, pedido por Ramon): manda sobre todo lo de abajo
+
+Ramon vio el ejemplo `ejemplos/pro-changuito/` (publicado el 15/11) y quiere TODOS los videos así: cortos, bien hechos,
+calidad profesional, y que **cambien los colores y el concepto visual en cada video**. Lo de abajo sigue valiendo
+(datos, reglas de contenido, miniatura, nunca publicar sin Ramon) salvo lo que este bloque cambia.
+
+- **Duración: 20 a 30 segundos** (6 a 8 líneas cortas). Nada de 40-55 s.
+- **Temas: lo que funcionó.** Los más vistos son comparaciones claras ("Mismo carrito en 4 súper", "¿Cuánto suben los precios?",
+  "¿Qué es La Canasta?", "Armé un programa con IA"): 6.000 a 17.000 vistas. Las promos sueltas de un producto sacan 10-60.
+  Preferí: la misma compra en los 4 súper, dónde conviene, cuánta plata de diferencia, rankings, "cuánto cuesta X en cada súper".
+  Una promo suelta solo si es muy fuerte y le sirve a mucha gente.
+- **Calidad visual (la vara es `ejemplos/pro-changuito/short.html`):** pantalla completa, sin la tarjeta vieja;
+  logo oficial arriba a la izquierda (`../assets/logo-white.svg`, o el de color sobre fondo claro) y la fecha en una pastilla;
+  motion graphics de verdad (contadores, barras que corren, sellos, escaneos, zoom), un `render(t)` propio y determinista;
+  subtítulos con la palabra que suena resaltada; la nota de fuente abajo; barra de progreso.
+  **Cada video con su propia paleta y su propio concepto** (oscuro, claro, colores fuertes, pastel...): nunca la misma paleta
+  ni el mismo concepto que alguno de los últimos 6 videos (anotalo en notas/videos-hechos.txt). La tapa de 0,8 s sigue siendo obligatoria.
+- **Voz: Kokoro "em_alex"** (natural, español latino con la "sh" argentina), ya no Piper. Se hace en GitHub Actions:
+  escribí `{"voice": "em_alex", "lines": [...]}` (mismas líneas que script.json: k, scene, sub, say; "gap" opcional por línea)
+  como `<id>.json` en la rama `voz-pedidos` y hacé push; en 2-4 minutos aparecen `<id>/voice.wav` y `<id>/timeline.json`
+  en la rama `voz-salida` (https://raw.githubusercontent.com/ramonpepapolo-lang/la-canasta/voz-salida/<id>/timeline.json).
+  Copialos a la carpeta del video (reemplazan a gen.py). Revisá el campo "ps" de cada línea: si una palabra quedó rara, reescribila en "say".
+  Números siempre en palabras en "say". Voseo argentino.
+- **Música: temas reales** de la rama `musica` (Kevin MacLeod, CC BY 4.0, 75 s cada uno; `creditos.json` dice el clima de cada uno).
+  Elegí uno que no se haya usado en los últimos 6 videos y que pegue con la historia. **El crédito de `creditos.json` va SIEMPRE
+  al final de la yt_description.** Ya no se usa bed.py.
+- **Efectos:** `sfx.json` en la carpeta del video (ver el ejemplo) y `python3 sfx_pro.py d-...`.
+- **Mezcla:** `node render.js d-...` y después `sh mix_pro.sh d-... NOMBRE musica.mp3` (la música baja sola cuando habla la voz).
+
 Cómo se hace cada video, paso a paso. Todo corre en una máquina Linux con Python, Node, Playwright y ffmpeg.
 
 ## 0. Preparar (una vez por sesión)

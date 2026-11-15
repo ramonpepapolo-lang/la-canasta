@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:600;src:url(../assets/dm-sans-latin-600-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../assets/dm-sans-latin-700-normal.woff2)}
+:root{--ink:#0F1828;--navy:#2B3B5C;--sun:#E0962F;--cel:#7FB1C6;--green:#35B57E;--red:#E5533D;--paper:#F4EFE6;--dim:rgba(255,255,255,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-family:"Sans";color:#fff}
+#glow{position:absolute;inset:-200px;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.55}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:60px 60px}
+#head{position:absolute;left:64px;right:64px;top:84px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+#head img{height:74px}
+#date{font-weight:700;font-size:28px;letter-spacing:2px;color:var(--ink);background:var(--sun);padding:12px 22px;border-radius:999px}
+.s{position:absolute;left:0;right:0;top:230px;height:1180px;opacity:0}
+.h1{font-family:"Serif";font-size:150px;line-height:.98;letter-spacing:-2px;text-align:center}
+.h2{font-weight:700;font-size:56px;text-align:center;color:var(--dim);letter-spacing:-.5px}
+/* hook */
+#carts{position:absolute;left:90px;right:90px;top:470px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.cart{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12);border-radius:34px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.cart svg{width:120px;height:96px}
+.cart b{font-size:56px;letter-spacing:-.5px}
+/* count */
+#n296{font-family:"Serif";font-size:400px;line-height:1;text-align:center;margin-top:60px;font-variant-numeric:tabular-nums;letter-spacing:-8px}
+#bc{position:absolute;left:190px;width:700px;top:700px;height:250px}
+#laser{position:absolute;left:170px;width:740px;height:6px;background:var(--red);box-shadow:0 0 30px 8px rgba(229,83,61,.75);border-radius:3px}
+/* ranking */
+#rk{position:absolute;left:70px;right:70px;top:120px}
+.row{margin-bottom:78px;opacity:0}
+.rl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.rl b{font-size:66px;letter-spacing:-.5px}
+.rl span{font-weight:700;font-size:62px;font-variant-numeric:tabular-nums}
+.track{height:104px;border-radius:20px;background:rgba(255,255,255,.07);position:relative;overflow:visible}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:20px}
+.tag{position:absolute;top:50%;transform:translateY(-50%);font-weight:700;font-size:34px;padding:10px 20px;border-radius:999px;white-space:nowrap;opacity:0}
+#rowJ .track{box-shadow:0 0 0 0 rgba(229,83,61,0)}
+#stamp{display:none;position:absolute;right:10px;top:1000px;font-family:"Serif";font-size:150px;color:var(--red);opacity:0;text-shadow:0 10px 40px rgba(0,0,0,.4)}
+/* diff */
+#dif .k{font-family:"Serif";font-size:200px;text-align:center;color:var(--red);letter-spacing:-4px;font-variant-numeric:tabular-nums;margin-top:300px}
+#dif .l{font-weight:700;font-size:60px;text-align:center;margin-top:16px}
+#dif .eq{display:flex;justify-content:space-between;margin:110px 70px 0;font-size:44px;font-weight:600;color:var(--dim)}
+#split{position:relative;margin:24px 70px 0;height:120px;border-radius:24px;background:rgba(255,255,255,.07);overflow:hidden}
+#sg{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green)}
+#sr{position:absolute;top:0;bottom:0;left:85.1%;width:0;background:var(--red)}
+#sgl,#srl{position:absolute;top:50%;transform:translateY(-50%);font-weight:700;font-size:34px;color:#0F1828;white-space:nowrap}
+#sgl{left:30px}#srl{left:calc(85.1% - 0px);color:#fff;font-size:30px;opacity:0}
+#dif .eq b{color:#fff}
+/* cta */
+#cta svg{display:block;margin:120px auto 0;width:400px;height:400px}
+#cta .u{font-family:"Serif";font-size:96px;text-align:center;margin-top:50px;letter-spacing:-1px}
+#cta .h2{margin-top:24px}
+/* thumbnail cover */
+#thumb{position:absolute;inset:0;z-index:20;background:radial-gradient(120% 80% at 50% 30%,#22345A,var(--ink));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;padding:0 70px}
+#thumb img{height:110px;margin-bottom:30px}
+#thumb .t1{font-family:"Serif";font-size:150px;line-height:.98;text-align:center;letter-spacing:-2px}
+#thumb .t2{font-family:"Serif";font-size:190px;color:var(--red);letter-spacing:-4px}
+#thumb .t3{font-weight:700;font-size:56px;color:var(--dim);text-align:center}
+/* captions + footer */
+#cap{position:absolute;left:60px;right:60px;top:1470px;text-align:center;font-weight:700;font-size:64px;line-height:1.15;letter-spacing:-.5px;z-index:6}
+#cap span{display:inline-block;margin:0 9px;transition:none}
+#cap .w{color:var(--sun)}
+#src{position:absolute;left:60px;right:60px;bottom:120px;text-align:center;font-size:26px;font-weight:600;color:rgba(255,255,255,.5);z-index:6}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--sun);z-index:7}
+</style></head><body>
+<div id="glow"><div class="blob" id="b1" style="width:900px;height:900px;background:#2E5C9A"></div><div class="blob" id="b2" style="width:700px;height:700px;background:#E0962F;opacity:.22"></div></div>
+<div id="grid"></div>
+<div id="head"><img src="../assets/logo-white.svg" alt=""><div id="date">8–14 NOV</div></div>
+
+<div class="s" id="s-hook">
+  <div class="h1" id="hk1">Mismo<br>changuito.</div>
+  <div id="carts"></div>
+</div>
+
+<div class="s" id="s-n">
+  <div id="n296">0</div>
+  <div class="h2" id="nlab" style="color:#fff;font-size:64px">productos idénticos</div>
+  <svg id="bc" viewBox="0 0 700 250"></svg>
+  <div id="laser"></div>
+</div>
+
+<div class="s" id="s-rank">
+  <div id="rk"></div>
+</div>
+
+<div class="s" id="s-dif"><div id="dif">
+  <div class="k" id="difk">+$0</div>
+  <div class="l">por los mismos 296 productos</div>
+  <div class="eq"><span>Día <b>$1.240.791</b></span><span>Jumbo <b>$1.458.079</b></span></div>
+  <div id="split"><div id="sg"></div><div id="sr"></div><div id="sgl">mismos productos</div></div>
+</div></div>
+
+<div class="s" id="s-cta"><div id="cta">
+<svg viewBox="218 186 534 534"><path id="arc" d="M288.5 452V430A196 196 0 0 1 680.5 430V452" fill="none" stroke="#fff" stroke-width="23"/>
+<rect id="i1" x="344.5" y="362.5" width="72" height="77.5" fill="#fff"/><rect id="i2" x="448.5" y="289.5" width="72" height="150.5" fill="#fff"/><rect id="i3" x="552.5" y="216.5" width="72" height="223.5" fill="#fff"/>
+<rect x="242" y="436" width="486" height="32" fill="#fff"/><path d="M314 661H655L646.5 690H322.5Z" fill="#fff"/>
+<clipPath id="lcb"><path d="M261 488H708L661.5 642H307.5Z"/></clipPath>
+<g clip-path="url(#lcb)"><rect x="250" y="488" width="470" height="51.33" fill="#7FB1C6"/><rect x="250" y="539.33" width="470" height="51.33" fill="#fff"/><rect x="250" y="590.67" width="470" height="52.33" fill="#7FB1C6"/></g>
+<path d="M261 488H708L661.5 642H307.5Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="484.5" cy="565" r="13" fill="#E0962F"/></svg>
+  <div class="u">lacanastaindex.com</div>
+  <div class="h2">Comparalo gratis, todos los días</div>
+</div></div>
+
+<div id="thumb"><img src="../assets/logo-white.svg" alt=""><div class="t1">Mismo changuito,<br>4 súper</div><div class="t2">+$217.288</div><div class="t3">¿Dónde pagás de más?</div></div>
+<div id="cap"></div>
+<div id="src">Precios online de Día, ChangoMás, Carrefour y Jumbo · 8 al 14/11/2026 · lacanastaindex.com</div>
+<div id="prog"></div>
+
+<script>
+const SHOPS=[{n:"Día",t:1240791.28,p:0,c:"var(--green)"},{n:"ChangoMás",t:1282003.41,p:3.3,c:"var(--cel)"},{n:"Carrefour",t:1290679.65,p:4.0,c:"var(--cel)"},{n:"Jumbo",t:1458079.14,p:17.5,c:"var(--red)"}];
+const SCENE={hook:"hook",n:"n",dia:"rank",mid:"rank",jumbo:"rank",dif:"dif",cta:"cta"};
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),E=x=>1-Math.pow(1-clamp(x),4),EI=x=>{x=clamp(x);return x<.5?8*x*x*x*x:1-Math.pow(-2*x+2,4)/2};
+const back=x=>{x=clamp(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const money=n=>"$"+Math.round(n).toLocaleString("es-AR");
+let TL,L={};const $=id=>document.getElementById(id);
+function cartSVG(c){return `<svg viewBox="0 0 120 96"><path d="M6 10h18l14 52h58l14-38H32" fill="none" stroke="${c}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="46" cy="82" r="8" fill="${c}"/><circle cx="88" cy="82" r="8" fill="${c}"/></svg>`}
+function setup(){
+  TL.lines.forEach(l=>L[l.k]=l);
+  $("carts").innerHTML=SHOPS.map((s,i)=>`<div class="cart" id="c${i}">${cartSVG(i==0?"#35B57E":i==3?"#E5533D":"#7FB1C6")}<b>${s.n}</b></div>`).join("");
+  let bars="",x=0,seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+  while(x<700){const w=[4,6,10,14][Math.floor(rnd()*4)];bars+=`<rect x="${x}" y="0" width="${w}" height="210" fill="#fff"/>`;x+=w+[5,7,10][Math.floor(rnd()*3)];}
+  bars+=`<text x="350" y="246" text-anchor="middle" fill="#fff" font-family="Sans" font-weight="600" font-size="30" letter-spacing="12">7 622202 816437</text>`;$("bc").innerHTML=bars;
+  const max=SHOPS[3].t;
+  $("rk").innerHTML=SHOPS.map((s,i)=>`<div class="row" id="row${i}"><div class="rl"><b>${s.n}</b><span id="v${i}">$0</span></div><div class="track"><div class="fill" id="f${i}" style="background:${s.c}"></div><div class="tag" id="g${i}" style="background:${s.c};color:#0F1828">${i==0?"EL MÁS BARATO":"+"+s.p.toLocaleString("es-AR",{minimumFractionDigits:1})+"%"}</div></div></div>`).join("")+`<div id="stamp">+17,5%</div>`;
+  SHOPS.forEach((s,i)=>s.w=s.t/max*100);
+  // captions
+  TL.lines.forEach(l=>{const ws=l.sub.split(" ");const tot=ws.reduce((a,w)=>a+w.length+2,0);let acc=0;l.words=ws.map(w=>{const s=l.start+acc/tot*l.dur;acc+=w.length+2;return{w,s,e:l.start+acc/tot*l.dur}});
+    l.chunks=[];let cur=[];l.words.forEach((x,j)=>{cur.push(j);if(cur.length===4||/[.,:?!]$/.test(x.w)){l.chunks.push(cur);cur=[]}});if(cur.length)l.chunks.push(cur);});
+}
+const at=(k,f=0)=>L[k].start+f*L[k].dur, p=(t,t0,d=.5)=>clamp((t-t0)/d);
+function render(t){
+  // background drift
+  $("b1").style.transform=`translate(${-100+120*Math.sin(t*.35)}px,${200+160*Math.cos(t*.27)}px)`;
+  $("b2").style.transform=`translate(${520+140*Math.cos(t*.3)}px,${1300+120*Math.sin(t*.22)}px)`;
+  $("grid").style.transform=`translateY(${-(t*12)%60}px)`;
+  // thumbnail cover
+  $("thumb").style.opacity=1-clamp((t-.8)/.3);
+  // scenes
+  let cur=TL.lines[0];for(const l of TL.lines)if(t>=l.start-.15)cur=l;
+  const sc=SCENE[cur.k];
+  document.querySelectorAll(".s").forEach(el=>{const on=el.id==="s-"+sc;const first=TL.lines.find(l=>SCENE[l.k]===el.id.slice(2));const q=E((t-first.start+.15)/.45);
+    el.style.opacity=on?q:0;el.style.transform=on?`translateY(${(1-q)*40}px)`:"none";});
+  // hook
+  $("hk1").style.transform=`scale(${.9+.1*back(p(t,at("hook"),.5))})`;
+  SHOPS.forEach((s,i)=>{const q=back(p(t,at("hook",.35)+i*.09,.45));const c=$("c"+i);c.style.opacity=clamp(q*1.5);c.style.transform=`translateY(${(1-q)*120}px) scale(${.85+.15*q})`;});
+  // count
+  const qn=EI(p(t,at("n"),1.1));$("n296").textContent=Math.round(296*qn);
+  $("nlab").style.opacity=E(p(t,at("n",.25),.4));
+  const lp=p(t,at("n",.35),1.4);$("laser").style.top=(700+250*Math.abs(Math.sin(lp*Math.PI*1.5)))+"px";$("laser").style.opacity=lp>0&&lp<1?1:0;
+  $("bc").style.opacity=E(p(t,at("n",.3),.4));
+  // ranking
+  const rows=[at("dia"),at("mid",.05),at("mid",.5),at("jumbo",.2)];
+  SHOPS.forEach((s,i)=>{const r=$("row"+i),q=E(p(t,rows[i]-.15,.35));r.style.opacity=i==0||t>=rows[i]-.15?Math.max(q,i==0?0:0):0;r.style.opacity=q;r.style.transform=`translateX(${(1-q)*-60}px)`;
+    const g=EI(p(t,rows[i],.9));$("f"+i).style.width=(s.w*g)+"%";$("v"+i).textContent=money(s.t*g);
+    const tg=$("g"+i),tq=back(p(t,rows[i]+.75,.35));tg.style.opacity=clamp(tq*2);tg.style.left=`calc(${s.w}% - ${i==0?330:i==3?250:180}px)`;tg.style.transform=`translateY(-50%) scale(${.6+.4*tq})`;});
+  const jq=p(t,at("jumbo",.55),.4);const st=$("stamp");st.style.opacity=clamp(jq*2);st.style.transform=`rotate(-8deg) scale(${2.2-1.2*E(jq)})`;
+  const shake=jq>0&&jq<1?Math.sin(t*90)*10*(1-jq):0;$("row3").style.marginLeft=shake+"px";
+  const g3=$("g3");g3.style.fontSize=(34+16*E(jq))+"px";g3.style.color=jq>0?"#fff":"#0F1828";$("v3").style.color=jq>0?"var(--red)":"#fff";
+  $("f3").style.boxShadow=`0 0 ${40*E(jq)}px ${10*E(jq)}px rgba(229,83,61,.55)`;
+  // diff
+  const dq=EI(p(t,at("dif"),1.2));$("difk").textContent="+"+money(217288*dq);$("difk").style.transform=`scale(${.9+.1*back(p(t,at("dif"),.5))})`;
+  const sq=EI(p(t,at("dif",.3),.8));$("sg").style.width=(85.1*sq)+"%";$("sr").style.width=(14.9*EI(p(t,at("dif",.65),.6)))+"%";$("sgl").style.opacity=clamp(sq*1.5);
+  // cta
+  ["i1","i2","i3"].forEach((id,i)=>{const r=$(id),h0=[77.5,150.5,223.5][i],y0=[362.5,289.5,216.5][i],q=back(p(t,at("cta")+i*.12,.5));r.setAttribute("height",h0*q);r.setAttribute("y",y0+h0*(1-q));});
+  // captions
+  const cap=$("cap");cap.innerHTML="";
+  if(t>=cur.start-.05&&t<=cur.end+.2){let ci=cur.chunks.findIndex(ch=>t<cur.words[ch[ch.length-1]].e);if(ci<0)ci=cur.chunks.length-1;
+    const wi=cur.words.findIndex(x=>t>=x.s&&t<x.e);cur.chunks[ci].forEach(j=>{const s=document.createElement("span");s.textContent=cur.words[j].w;if(j===wi)s.className="w";cap.appendChild(s)});}
+  $("prog").style.width=(clamp(t/TL.total)*1080)+"px";
+}
+async function init(){TL=await (await fetch("timeline.json")).json();await document.fonts.ready;setup();window.TOTAL=TL.total;window.READY=true;render(0);}
+window.render=render;init();
+</script></body></html>

@@ -1,0 +1,45 @@
+name: Voz de los Shorts (Kokoro)
+
+# Hace la voz "pro" de los Shorts. Cómo se usa (también lo hace el agente diario):
+#   1. En la rama "voz-pedidos", subí un archivo <id>.json (ver videos/voz_kokoro.py) y hacé push.
+#   2. En 2 a 4 minutos aparecen <id>/voice.wav y <id>/timeline.json en la rama "voz-salida".
+on:
+  push:
+    branches: [voz-pedidos]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voz
+
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: pedidos
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+          sparse-checkout: videos/voz_kokoro.py
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg >/dev/null
+      - run: pip install --quiet "kokoro>=0.9.4" soundfile "misaki[en]>=0.9.4"
+      - name: Make the voices still missing
+        run: |
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          mkdir salida && cd salida && git init -q && git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
+          if git fetch -q "$R" voz-salida 2>/dev/null; then git checkout -q -b voz-salida FETCH_HEAD; else git checkout -q --orphan voz-salida; echo "Voces hechas por .github/workflows/voz.yml" > README.md; fi
+          cd ..
+          n=0
+          for f in pedidos/*.json; do
+            id=$(basename "$f" .json)
+            [ -f "salida/$id/timeline.json" ] && continue
+            python main/videos/voz_kokoro.py "$f" "salida/$id" && n=$((n+1))
+          done
+          cd salida && git add -A && git commit -q -m "Voces ($n nuevas)" && git push -q "$R" voz-salida || echo "nada nuevo"

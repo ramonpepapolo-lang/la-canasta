@@ -1,5 +1,76 @@
 [
  {
+  "id": "2026-11-15",
+  "start": "2026-11-15",
+  "end": "2026-11-21",
+  "label_es": "Semana del 15 al 21 de noviembre de 2026",
+  "label_en": "Week of 15 to 21 November 2026",
+  "complete": false,
+  "days": [
+   "2026-11-15",
+   "2026-11-15"
+  ],
+  "days_of_data": 1,
+  "n_products": 290,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 1198271.15,
+    "pct": 0.0
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 1232963.95,
+    "pct": 2.9
+   },
+   {
+    "shop": "Carrefour",
+    "total": 1278285.68,
+    "pct": 6.68
+   },
+   {
+    "shop": "Jumbo",
+    "total": 1412049.0,
+    "pct": 17.84
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 101,
+   "Jumbo": 9,
+   "ChangoMas": 131,
+   "Dia": 121
+  },
+  "examples": [
+   {
+    "ean": "7509546686622",
+    "name": "Enjuague Bucal Colgate Total Carbón Activado 250 Ml",
+    "low_shop": "Dia",
+    "low": 2635.8,
+    "high_shop": "Jumbo",
+    "high": 6900.0,
+    "pct": 161.8
+   },
+   {
+    "ean": "7790240017069",
+    "name": "Vino Blanco Alaris Sauvignon Blanc 750 Ml",
+    "low_shop": "Carrefour",
+    "low": 2470.0,
+    "high_shop": "Jumbo",
+    "high": 6350.0,
+    "pct": 157.1
+   },
+   {
+    "ean": "7622202816437",
+    "name": "Alfajor Shot Blanco Triple 60 G",
+    "low_shop": "ChangoMas",
+    "low": 1343.4,
+    "high_shop": "Jumbo",
+    "high": 2850.0,
+    "pct": 112.1
+   }
+  ]
+ },
+ {
   "id": "2026-11-08",
   "start": "2026-11-08",
   "end": "2026-11-14",

@@ -1,5 +1,5 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -230,11 +230,11 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1345.0,
-       "cost": 1345.0,
-       "name": "Chimichurri disecado La campagnola en sobre 23 g.",
-       "sku_id": "97829",
-       "promo": false
+       "unit_price": 1363.0,
+       "cost": 1363.0,
+       "name": "Condimento chimichurri Carrefour Classic en sobre 25 g.",
+       "sku_id": "172762",
+       "promo": true
       },
       {
        "ing": "sal_gruesa",
@@ -250,10 +250,10 @@
      "lacks": [
       "pan"
      ],
-     "fixed_total": 2840.0
+     "fixed_total": 2858.0
     },
     "Jumbo": {
-     "total": 19596.04,
+     "total": 19345.14,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -282,10 +282,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 18122.5,
-       "cost": 2174.7,
-       "name": "Chorizo Fresco de Cerdo 400 Grs x 4 Un Cagnoli",
-       "sku_id": "258944",
+       "unit_price": 14990.0,
+       "cost": 1798.8,
+       "name": "Chorizo Comun Bandeja - 4 U - X Kg - La Criolla",
+       "sku_id": "16465",
        "promo": false
       },
       {
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4900.0,
-       "cost": 2450.0,
-       "name": "Cerveza Rubia 1000 Ml Schneider",
-       "sku_id": "26673",
+       "unit_price": 5150.0,
+       "cost": 2575.0,
+       "name": "Cerveza Lager 1 Lts Amstel",
+       "sku_id": "318177",
        "promo": false
       },
       {
@@ -573,7 +573,7 @@
      "fixed_total": 2688.3
     },
     "Dia": {
-     "total": 16934.53,
+     "total": 17117.58,
      "complete": false,
      "missing": [
       "pan"
@@ -680,20 +680,20 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 3986.67,
-       "cost": 996.67,
-       "name": "Vino Tinto Clasico Finca Norte 750 Ml.",
-       "sku_id": "260650",
+       "unit_price": 4186.67,
+       "cost": 1046.67,
+       "name": "Vino Tinto Suter Malbec 750 Ml.",
+       "sku_id": "138550",
        "promo": true
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2700.0,
-       "cost": 1350.0,
-       "name": "Cerveza Rubia St. Wendeler 500 ml.",
-       "sku_id": "240514",
+       "unit_price": 2966.1,
+       "cost": 1483.05,
+       "name": "Cerveza 1890 Quilmes 354 Ml.",
+       "sku_id": "14806",
        "promo": true
       },
       {
@@ -864,14 +864,12 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 49613.72,
+     "total": 48823.44,
      "complete": false,
      "missing": [
-      "pollo",
-      "naranja",
-      "papa"
+      "pollo"
      ],
-     "kcal": 15317,
+     "kcal": 16792,
      "items": [
       {
        "ing": "avena",
@@ -887,10 +885,10 @@
        "ing": "leche",
        "qty": 3.5,
        "fixed": false,
-       "unit_price": 3030.0,
-       "cost": 10605.0,
-       "name": "Leche La serenisima clásica 3% 1L.",
-       "sku_id": "144373",
+       "unit_price": 1790.0,
+       "cost": 6265.0,
+       "name": "Leche clásica UAT Bulnez 1 lt",
+       "sku_id": "284609",
        "promo": false
       },
       {
@@ -953,10 +951,10 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3947.78,
-       "cost": 3947.78,
-       "name": "Pan blanco en rodajas finas Lactal bolsa 550 grs",
-       "sku_id": "312176",
+       "unit_price": 2700.0,
+       "cost": 2700.0,
+       "name": "Pan Blanco Lactal 315 grs",
+       "sku_id": "126927",
        "promo": true
       },
       {
@@ -983,7 +981,11 @@
        "ing": "naranja",
        "qty": 1.5,
        "fixed": false,
-       "missing": true
+       "unit_price": 1199.0,
+       "cost": 1798.5,
+       "name": "Naranja ombligo premiun x kg.",
+       "sku_id": "95664",
+       "promo": false
       },
       {
        "ing": "tomate",
@@ -1019,7 +1021,11 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "missing": true
+       "unit_price": 2999.0,
+       "cost": 2999.0,
+       "name": "Papa cepillada x kg.",
+       "sku_id": "34549",
+       "promo": false
       },
       {
        "ing": "queso",
@@ -1053,14 +1059,12 @@
       }
      ],
      "lacks": [
-      "pollo",
-      "naranja",
-      "papa"
+      "pollo"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 52489.74,
+     "total": 58037.24,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1260,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 40808.55,
+     "total": 44506.35,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1460,7 +1464,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 41571.66,
+     "total": 47146.66,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1678,9 +1682,11 @@
     "pan_lactal",
     "banana",
     "manzana",
+    "naranja",
     "tomate",
     "zanahoria",
     "cebolla",
+    "papa",
     "queso",
     "aceite",
     "yerba"
@@ -1789,14 +1795,13 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43557.92,
+     "total": 45006.14,
      "complete": false,
      "missing": [
       "carne_picada",
-      "pollo",
-      "papa"
+      "pollo"
      ],
-     "kcal": 23391,
+     "kcal": 24931,
      "items": [
       {
        "ing": "fideos",
@@ -1822,10 +1827,10 @@
        "ing": "pure_tomate",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1220.0,
-       "cost": 2440.0,
-       "name": "Puré de tomate Arcor brik 520 g.",
-       "sku_id": "188614",
+       "unit_price": 809.0,
+       "cost": 1618.0,
+       "name": "Puré de tomates Bulnez 520 g.",
+       "sku_id": "188262",
        "promo": false
       },
       {
@@ -1842,20 +1847,20 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3947.78,
-       "cost": 3947.78,
-       "name": "Pan blanco en rodajas finas Lactal bolsa 550 grs",
-       "sku_id": "312176",
+       "unit_price": 2700.0,
+       "cost": 2700.0,
+       "name": "Pan Blanco Lactal 315 grs",
+       "sku_id": "126927",
        "promo": true
       },
       {
        "ing": "leche",
        "qty": 2,
        "fixed": false,
-       "unit_price": 3030.0,
-       "cost": 6060.0,
-       "name": "Leche La serenisima clásica 3% 1L.",
-       "sku_id": "144373",
+       "unit_price": 1790.0,
+       "cost": 3580.0,
+       "name": "Leche clásica UAT Bulnez 1 lt",
+       "sku_id": "284609",
        "promo": false
       },
       {
@@ -1894,7 +1899,11 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "missing": true
+       "unit_price": 2999.0,
+       "cost": 5998.0,
+       "name": "Papa cepillada x kg.",
+       "sku_id": "34549",
+       "promo": false
       },
       {
        "ing": "cebolla",
@@ -1969,13 +1978,12 @@
      ],
      "lacks": [
       "carne_picada",
-      "pollo",
-      "papa"
+      "pollo"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 43216.84,
+     "total": 49214.84,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2165,7 +2173,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 37891.09,
+     "total": 42409.09,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2334,10 +2342,10 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1629.0,
-       "cost": 1629.0,
-       "name": "Mayonesa Natura 250 Cc",
-       "sku_id": "14691",
+       "unit_price": 1149.0,
+       "cost": 1149.0,
+       "name": "Mayonesa Dánica Dp 250 Cc.",
+       "sku_id": "225068",
        "promo": false
       },
       {
@@ -2355,7 +2363,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 36710.41,
+     "total": 41770.41,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2494,10 +2502,10 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 990.0,
-       "cost": 2970.0,
-       "name": "Galletitas Mini Pitusas Frutilla 160 Gr.",
-       "sku_id": "231934",
+       "unit_price": 950.0,
+       "cost": 2850.0,
+       "name": "Galletitas Tortitas Black Cofler 84 Gr.",
+       "sku_id": "314183",
        "promo": true
       },
       {
@@ -2548,8 +2556,8 @@
    "ranking": [
     "Dia",
     "ChangoMas",
-    "Jumbo",
-    "Carrefour"
+    "Carrefour",
+    "Jumbo"
    ],
    "cheapest": "Dia",
    "common": [
@@ -2561,6 +2569,7 @@
     "leche",
     "yerba",
     "azucar",
+    "papa",
     "cebolla",
     "banana",
     "galletitas",

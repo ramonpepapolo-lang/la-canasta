@@ -12,8 +12,8 @@ def phon(text, sh):
         for a in ["ʝ", "ɟʝ", "ʎ", "j͡"]:
             ps = ps.replace(a, "ʃ")
     return ps
-for voice in ["em_alex", "ef_dora", "em_santa"]:
-    for sh in [True, False]:
+for voice in ["em_alex", "ef_dora"]:
+    for sh in [True]:
         tag = f"{voice}{'-sh' if sh else ''}"
         meta = []
         for i, L in enumerate(lines):

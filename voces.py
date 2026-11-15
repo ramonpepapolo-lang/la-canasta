@@ -9,7 +9,7 @@ pipe = KPipeline(lang_code="e", repo_id="hexgrad/Kokoro-82M")
 def phon(text, sh):
     ps, _ = g2p(text)
     if sh:  # rioplatense: ll / y -> "sh"
-        for a in ["ʝ", "ɟʝ", "ʎ", "j͡"]:
+        for a in ["jj", "ʝ", "ɟʝ", "ʎ"]:
             ps = ps.replace(a, "ʃ")
     return ps
 for voice in ["em_alex", "ef_dora"]:

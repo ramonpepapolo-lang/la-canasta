@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-15 12:47",
+ "when_utc": "2026-11-15 14:57",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -14,9 +14,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "488",
+  "subscribers_text": "490",
   "views_total_text": "122,992",
-  "views_sum_of_videos": 62711,
+  "views_sum_of_videos": 62934,
   "videos": 27,
   "list": [
    {
@@ -114,7 +114,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 13455,
+    "views": 13489,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -154,9 +154,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 486,
+    "views": 489,
     "views_exact": true,
-    "likes": 77,
+    "likes": 78,
     "comments": null
    },
    {
@@ -194,9 +194,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 16508,
+    "views": 16620,
     "views_exact": true,
-    "likes": 91,
+    "likes": 87,
     "comments": 1
    },
    {
@@ -206,7 +206,7 @@
     "published": "2026-10-31",
     "views": 29,
     "views_exact": true,
-    "likes": 2,
+    "likes": 872,
     "comments": 3
    },
    {
@@ -224,9 +224,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 6993,
+    "views": 7031,
     "views_exact": true,
-    "likes": 566,
+    "likes": 569,
     "comments": 1
    },
    {
@@ -244,7 +244,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 6729,
+    "views": 6744,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -264,7 +264,7 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 17212,
+    "views": 17229,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -284,7 +284,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "2026-11-04",
-    "views": 503,
+    "views": 507,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -297,51 +297,51 @@
   "created_at": "2026-10-29T01:01:21.000Z",
   "followers_count": 0,
   "following_count": 3,
-  "like_count": 24,
+  "like_count": 34,
   "listed_count": 0,
   "media_count": 27,
-  "tweet_count": 51,
+  "tweet_count": 55,
   "tweets_status": 200,
   "last_posts": [
    {
-    "date": "2026-11-14",
-    "text": "Se dio vuelta la balanza ⚖️\n\nQueso untable Finlandia en Día:\nAyer: 180 g a $2.565 ($14.250",
+    "date": "2026-11-15",
+    "text": "RT @LaCanastaIndex: 30 huevos a $4.999 🥚\n\nDesde hoy en ChangoMás: Carnave y La Piara bajar",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
-    "retweet_count": 0
+    "retweet_count": 1
    },
    {
-    "date": "2026-11-14",
-    "text": "Pronóstico para tu picada del sábado: lluvia de promos 🌦️\n\nCarrefour bajó hoy 7 fiambres C",
+    "date": "2026-11-15",
+    "text": "RT @LaCanastaIndex: Alfajores en promo en Carrefour:\nayer 6, hoy 20.\n\nFantoche triple: $1.",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
-    "retweet_count": 0
+    "retweet_count": 1
    },
    {
-    "date": "2026-11-13",
-    "text": "Alfajores en promo en Carrefour:\nayer 6, hoy 20.\n\nFantoche triple: $1.759 → $1.319 (Día $1",
+    "date": "2026-11-15",
+    "text": "RT @LaCanastaIndex: Pronóstico para tu picada del sábado: lluvia de promos 🌦️\n\nCarrefour b",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
-    "retweet_count": 0
+    "retweet_count": 1
    },
    {
-    "date": "2026-11-13",
-    "text": "30 huevos a $4.999 🥚\n\nDesde hoy en ChangoMás: Carnave y La Piara bajaron de $8.899. Son $1",
+    "date": "2026-11-15",
+    "text": "RT @LaCanastaIndex: Se dio vuelta la balanza ⚖️\n\nQueso untable Finlandia en Día:\nAyer: 180",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
-    "retweet_count": 0
+    "retweet_count": 1
    }
   ]
  },

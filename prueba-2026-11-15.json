@@ -1,0 +1,40 @@
+{
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "sub": "Mismo changuito. 4 súper.",
+   "say": "Mismo changuito. Cuatro súper."
+  },
+  {
+   "k": "n",
+   "sub": "296 productos idénticos, mismo código de barras.",
+   "say": "Doscientos noventa y seis productos idénticos, con el mismo código de barras."
+  },
+  {
+   "k": "dia",
+   "sub": "Día: $1.240.791. El más barato.",
+   "say": "En Día, un millón doscientos cuarenta mil pesos. El más barato."
+  },
+  {
+   "k": "mid",
+   "sub": "ChangoMás, 3,3% más. Carrefour, 4%.",
+   "say": "ChangoMás, tres coma tres por ciento más. Carrefour, cuatro."
+  },
+  {
+   "k": "jumbo",
+   "sub": "¿Y Jumbo? 17,5% más caro.",
+   "say": "¿Y Jumbo? Diecisiete y medio por ciento más caro."
+  },
+  {
+   "k": "dif",
+   "sub": "Por lo mismo, $217.288 más.",
+   "say": "Por lo mismo, doscientos diecisiete mil pesos más."
+  },
+  {
+   "k": "cta",
+   "sub": "Comparalo gratis en lacanastaindex.com",
+   "say": "Comparalo gratis en la canasta index punto com."
+  }
+ ]
+}

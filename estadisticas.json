@@ -1,32 +1,52 @@
 {
- "when_utc": "2026-11-14 14:28",
+ "when_utc": "2026-11-15 12:47",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 3388,
-  "/": 3247,
-  "/precios/": 6,
-  "/canastas/": 15,
-  "/informes.html": 45,
-  "/metodo.html": 24,
+  "TOTAL": 3551,
+  "/": 3402,
+  "/precios/": 7,
+  "/canastas/": 16,
+  "/informes.html": 46,
+  "/metodo.html": 26,
   "/articulos.html": 12
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "465",
-  "views_total_text": "115,672",
-  "views_sum_of_videos": 57656,
-  "videos": 25,
+  "subscribers_text": "488",
+  "views_total_text": "122,992",
+  "views_sum_of_videos": 62711,
+  "videos": 27,
   "list": [
+   {
+    "id": "ICtgJe5-m84",
+    "debug": null,
+    "title": "Ayer convenía el pote chico, hoy el grande ⚖️",
+    "published": "2026-11-14",
+    "views": 22,
+    "views_exact": true,
+    "likes": 1,
+    "comments": null
+   },
+   {
+    "id": "-3oL1VZ7XH8",
+    "debug": null,
+    "title": "Picada del sábado: el salamín bajó 20% hoy 🌦️",
+    "published": "2026-11-14",
+    "views": 16,
+    "views_exact": true,
+    "likes": 1,
+    "comments": null
+   },
    {
     "id": "vdSfcIdQnl4",
     "debug": null,
     "title": "Alfajores al 25%: ayer 6 en promo, hoy 20 en Carrefour",
     "published": "2026-11-13",
-    "views": 4,
+    "views": 7,
     "views_exact": true,
-    "likes": 1,
+    "likes": 2,
     "comments": null
    },
    {
@@ -34,9 +54,9 @@
     "debug": null,
     "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
     "published": "2026-11-13",
-    "views": 12,
+    "views": 16,
     "views_exact": true,
-    "likes": 1,
+    "likes": 3,
     "comments": null
    },
    {
@@ -74,7 +94,7 @@
     "debug": null,
     "title": "El pollo de ChangoMás tuvo 5 precios en 13 días 🍗 #finanzas #negocios #dinero #invertir #inversiones",
     "published": "2026-11-05",
-    "views": 66,
+    "views": 67,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -94,9 +114,9 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 11731,
+    "views": 13455,
     "views_exact": true,
-    "likes": 1,
+    "likes": 2,
     "comments": null
    },
    {
@@ -134,9 +154,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 439,
+    "views": 486,
     "views_exact": true,
-    "likes": 74,
+    "likes": 77,
     "comments": null
    },
    {
@@ -174,9 +194,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 14574,
+    "views": 16508,
     "views_exact": true,
-    "likes": 79,
+    "likes": 91,
     "comments": 1
    },
    {
@@ -204,9 +224,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 6733,
+    "views": 6993,
     "views_exact": true,
-    "likes": 553,
+    "likes": 566,
     "comments": 1
    },
    {
@@ -224,7 +244,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 6258,
+    "views": 6729,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -244,7 +264,7 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 16749,
+    "views": 17212,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -254,7 +274,7 @@
     "debug": null,
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "2026-11-04",
-    "views": 30,
+    "views": 34,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -264,7 +284,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "2026-11-04",
-    "views": 397,
+    "views": 503,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -279,10 +299,30 @@
   "following_count": 3,
   "like_count": 24,
   "listed_count": 0,
-  "media_count": 25,
-  "tweet_count": 49,
+  "media_count": 27,
+  "tweet_count": 51,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-14",
+    "text": "Se dio vuelta la balanza ⚖️\n\nQueso untable Finlandia en Día:\nAyer: 180 g a $2.565 ($14.250",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-14",
+    "text": "Pronóstico para tu picada del sábado: lluvia de promos 🌦️\n\nCarrefour bajó hoy 7 fiambres C",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-13",
     "text": "Alfajores en promo en Carrefour:\nayer 6, hoy 20.\n\nFantoche triple: $1.759 → $1.319 (Día $1",
@@ -296,26 +336,6 @@
    {
     "date": "2026-11-13",
     "text": "30 huevos a $4.999 🥚\n\nDesde hoy en ChangoMás: Carnave y La Piara bajaron de $8.899. Son $1",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-12",
-    "text": "¡Truco! 🍟\nAyer: 0 papas congeladas en promo en ChangoMás. Hoy: las 15 al 40%.\n\nMcCain 2 kg",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-12",
-    "text": "Ayer Carrefour tenía 0 vinos en promo. Hoy, 22 🍷\n\nAlaris Malbec 750 ml: $5.910 → $2.470 (−",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,

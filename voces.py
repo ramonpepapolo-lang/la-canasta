@@ -1,7 +1,8 @@
 # Voice tests: Kokoro (natural neural voice) with Latin American Spanish phonemes and Argentine "sh" (sheísmo).
-import json, sys, numpy as np, soundfile as sf
+import json, os, sys, numpy as np, soundfile as sf
 from kokoro import KPipeline
 from misaki import espeak
+os.makedirs("out", exist_ok=True)
 lines = json.load(open("lines.json"))
 g2p = espeak.EspeakG2P(language="es-419")
 pipe = KPipeline(lang_code="e", repo_id="hexgrad/Kokoro-82M")

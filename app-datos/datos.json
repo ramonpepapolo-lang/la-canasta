@@ -1,12 +1,12 @@
 {
- "date": "2026-11-15",
- "previous": "2026-11-14",
+ "date": "2026-11-16",
+ "previous": "2026-11-15",
  "index": {
-  "date": "2026-11-15",
-  "paid": 99.084,
-  "regular": 99.112,
-  "day_change": 0.09,
-  "days_of_data": 23,
+  "date": "2026-11-16",
+  "paid": 100.066,
+  "regular": 99.21,
+  "day_change": 0.99,
+  "days_of_data": 24,
   "series": [
    [
     "2026-10-24",
@@ -101,7 +101,7 @@
    [
     "2026-11-11",
     98.621,
-    99.148
+    99.191
    ],
    [
     "2026-11-12",
@@ -111,29 +111,34 @@
    [
     "2026-11-13",
     98.819,
-    99.015
+    99.101
    ],
    [
     "2026-11-14",
     98.998,
-    99.026
+    99.112
    ],
    [
     "2026-11-15",
     99.084,
     99.112
+   ],
+   [
+    "2026-11-16",
+    100.066,
+    99.21
    ]
   ],
   "mode": "week",
-  "week_paid": 0.13,
-  "week_regular": -0.41,
+  "week_paid": 0.25,
+  "week_regular": -0.27,
   "now": [
-   "2026-11-09",
-   "2026-11-15"
+   "2026-11-10",
+   "2026-11-16"
   ],
   "before": [
-   "2026-11-02",
-   "2026-11-08"
+   "2026-11-03",
+   "2026-11-09"
   ]
  },
  "ranking": {
@@ -141,54 +146,225 @@
   "label_en": "Week of 15 to 21 November 2026",
   "days": [
    "2026-11-15",
-   "2026-11-15"
+   "2026-11-16"
   ],
-  "n_products": 290,
+  "n_products": 310,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1198271.15,
+    "total": 1285053.15,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1232963.95,
-    "pct": 2.9
+    "total": 1317060.6,
+    "pct": 2.49
    },
    {
     "shop": "Carrefour",
-    "total": 1278285.68,
-    "pct": 6.68
+    "total": 1360279.98,
+    "pct": 5.85
    },
    {
     "shop": "Jumbo",
-    "total": 1412049.0,
-    "pct": 17.84
+    "total": 1506841.0,
+    "pct": 17.26
    }
   ]
  },
  "down": [
   {
+   "shop": "Jumbo",
+   "name": "Cebolla Superior Por Kg",
+   "type": "cebolla",
+   "before": 3699.0,
+   "now": 2299.0,
+   "pct": -37.8,
+   "why": "price"
+  },
+  {
    "shop": "Dia",
-   "name": "Roast Beef en Churrasco Envasado al Vacío x Kg.",
-   "type": "roast_paleta",
-   "before": 14490.0,
-   "now": 18990.0,
-   "pct": 31.1,
+   "name": "Shampoo DIA Extra Brillo Manzana 950 Ml.",
+   "type": "shampoo",
+   "before": 2940.0,
+   "now": 3090.0,
+   "pct": 5.1,
    "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Pollo Entero Fresco 2.700kg",
+   "type": "pollo_entero",
+   "before": 3789.0,
+   "now": 3989.0,
+   "pct": 5.3,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Jabon De Tocador Flores 125Gr Saint Tropez 3 Ud.",
+   "type": "jabon_tocador",
+   "before": 3070.0,
+   "now": 3300.0,
+   "pct": 7.5,
+   "why": "list_up"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg",
+   "type": "queso_cremoso",
+   "before": 16500.0,
+   "now": 18900.0,
+   "pct": 14.5,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 4499.0,
+   "now": 5499.0,
+   "pct": 22.2,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
+   "type": "vacio",
+   "before": 17999.0,
+   "now": 22289.0,
+   "pct": 23.8,
+   "why": "price"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "type": "banana",
+   "before": 1759.2,
+   "now": 2199.0,
+   "pct": 25.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Suprema De Pollo Granel Fresca",
+   "type": "suprema",
+   "before": 8999.0,
+   "now": 12449.0,
+   "pct": 38.3,
+   "why": "price"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 17999.0,
+   "now": 25299.0,
+   "pct": 40.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Huevos Blancos La Piara 30 U",
+   "type": "huevos",
+   "before": 4999.0,
+   "now": 8899.0,
+   "pct": 78.0,
+   "why": "promo_end"
   }
  ],
  "up": [
   {
+   "shop": "ChangoMas",
+   "name": "Huevos Blancos La Piara 30 U",
+   "type": "huevos",
+   "before": 4999.0,
+   "now": 8899.0,
+   "pct": 78.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 17999.0,
+   "now": 25299.0,
+   "pct": 40.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Suprema De Pollo Granel Fresca",
+   "type": "suprema",
+   "before": 8999.0,
+   "now": 12449.0,
+   "pct": 38.3,
+   "why": "price"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "type": "banana",
+   "before": 1759.2,
+   "now": 2199.0,
+   "pct": 25.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
+   "type": "vacio",
+   "before": 17999.0,
+   "now": 22289.0,
+   "pct": 23.8,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 4499.0,
+   "now": 5499.0,
+   "pct": 22.2,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg",
+   "type": "queso_cremoso",
+   "before": 16500.0,
+   "now": 18900.0,
+   "pct": 14.5,
+   "why": "price"
+  },
+  {
    "shop": "Dia",
-   "name": "Roast Beef en Churrasco Envasado al Vacío x Kg.",
-   "type": "roast_paleta",
-   "before": 14490.0,
-   "now": 18990.0,
-   "pct": 31.1,
+   "name": "Jabon De Tocador Flores 125Gr Saint Tropez 3 Ud.",
+   "type": "jabon_tocador",
+   "before": 3070.0,
+   "now": 3300.0,
+   "pct": 7.5,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Pollo Entero Fresco 2.700kg",
+   "type": "pollo_entero",
+   "before": 3789.0,
+   "now": 3989.0,
+   "pct": 5.3,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Shampoo DIA Extra Brillo Manzana 950 Ml.",
+   "type": "shampoo",
+   "before": 2940.0,
+   "now": 3090.0,
+   "pct": 5.1,
    "why": "list_up"
   }
  ],
- "n_down": 0,
- "n_up": 1
+ "n_down": 1,
+ "n_up": 10
 }

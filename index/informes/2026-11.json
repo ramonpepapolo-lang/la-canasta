@@ -3,14 +3,14 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.44,
+ "inflation": 0.55,
  "base_date": "2026-10-31",
- "end_date": "2026-11-15",
- "days_of_data": 15,
- "prices_collected": 281902,
+ "end_date": "2026-11-16",
+ "days_of_data": 16,
+ "prices_collected": 305911,
  "headline": {
-  "end_to_end_paid": -0.44,
-  "end_to_end_regular": -0.84,
+  "end_to_end_paid": 0.55,
+  "end_to_end_regular": -0.74,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -21,7 +21,7 @@
   },
   {
    "shop": "ChangoMas",
-   "pct": 0.48
+   "pct": 2.0
   },
   {
    "shop": "Dia",
@@ -29,14 +29,14 @@
   },
   {
    "shop": "Jumbo",
-   "pct": -1.05
+   "pct": 3.58
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 5.49
+   "pct": 12.8
   },
   {
    "group": "otros_alimentos",
@@ -44,19 +44,29 @@
    "pct": 4.11
   },
   {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 1.58
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 2.47
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.53
+   "pct": 2.13
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 1.65
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
    "pct": 1.45
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": 1.38
   },
   {
    "group": "azucar",
@@ -67,16 +77,6 @@
    "group": "limpieza",
    "in_headline": true,
    "pct": 0.16
-  },
-  {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -0.17
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": -0.35
   },
   {
    "group": "aceites",
@@ -101,13 +101,13 @@
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -14.7
+   "pct": -14.4
   }
  ],
  "products_compared": 1018,
- "products_up": 191,
- "products_down": 140,
- "products_same": 687,
+ "products_up": 196,
+ "products_down": 137,
+ "products_same": 685,
  "top_up": [
   {
    "type": "arroz",
@@ -166,13 +166,13 @@
    "pct": -46.07
   },
   {
-   "type": "huevos",
-   "type_en": "Eggs",
-   "shop": "ChangoMas",
-   "name": "Huevos Blancos La Piara 30 U",
-   "before": 8899.0,
-   "now": 4999.0,
-   "pct": -43.83
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Jumbo",
+   "name": "Cebolla Superior Por Kg",
+   "before": 3999.0,
+   "now": 2299.0,
+   "pct": -42.51
   },
   {
    "type": "yerba",
@@ -282,6 +282,11 @@
    "date": "2026-11-15",
    "paid": 99.084,
    "regular": 99.112
+  },
+  {
+   "date": "2026-11-16",
+   "paid": 100.066,
+   "regular": 99.21
   }
  ]
 }

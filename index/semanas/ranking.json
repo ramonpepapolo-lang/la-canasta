@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-15",
-   "2026-11-15"
+   "2026-11-16"
   ],
-  "days_of_data": 1,
-  "n_products": 290,
+  "days_of_data": 2,
+  "n_products": 310,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1198271.15,
+    "total": 1285053.15,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1232963.95,
-    "pct": 2.9
+    "total": 1317060.6,
+    "pct": 2.49
    },
    {
     "shop": "Carrefour",
-    "total": 1278285.68,
-    "pct": 6.68
+    "total": 1360279.98,
+    "pct": 5.85
    },
    {
     "shop": "Jumbo",
-    "total": 1412049.0,
-    "pct": 17.84
+    "total": 1506841.0,
+    "pct": 17.26
    }
   ],
   "cheapest_count": {
-   "Carrefour": 101,
-   "Jumbo": 9,
-   "ChangoMas": 131,
-   "Dia": 121
+   "Carrefour": 114,
+   "Jumbo": 10,
+   "ChangoMas": 140,
+   "Dia": 126
   },
   "examples": [
    {
@@ -60,13 +60,13 @@
     "pct": 157.1
    },
    {
-    "ean": "7622202816437",
-    "name": "Alfajor Shot Blanco Triple 60 G",
-    "low_shop": "ChangoMas",
-    "low": 1343.4,
-    "high_shop": "Jumbo",
-    "high": 2850.0,
-    "pct": 112.1
+    "ean": "7790240041880",
+    "name": "Vino Blanco Alaris Dulce Natural 750 Ml",
+    "low_shop": "Carrefour",
+    "low": 2470.0,
+    "high_shop": "Dia",
+    "high": 5855.0,
+    "pct": 137.0
    }
   ]
  },

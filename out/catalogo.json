@@ -1,0 +1,17 @@
+{
+ "datasets": {
+  "datos.produccion.gob.ar/sepa-precios": {
+   "error": "HTTP Error 403: Forbidden"
+  },
+  "datos.produccion.gob.ar/precios-claros-sepa-mayoristas": {
+   "error": "HTTP Error 403: Forbidden"
+  },
+  "datos.gob.ar/produccion-precios-claros---base-sepa": {
+   "error": "HTTP Error 404: Not Found"
+  }
+ },
+ "search": {
+  "sepa": "HTTP Error 403: Forbidden",
+  "precios claros": "HTTP Error 403: Forbidden"
+ }
+}

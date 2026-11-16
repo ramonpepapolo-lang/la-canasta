@@ -7,10 +7,10 @@ calidad profesional, y que **cambien los colores y el concepto visual en cada vi
 (datos, reglas de contenido, miniatura, nunca publicar sin Ramon) salvo lo que este bloque cambia.
 
 - **Duración: 20 a 30 segundos** (6 a 8 líneas cortas). Nada de 40-55 s.
-- **Temas: lo que funcionó.** Los más vistos son comparaciones claras ("Mismo carrito en 4 súper", "¿Cuánto suben los precios?",
-  "¿Qué es La Canasta?", "Armé un programa con IA"): 6.000 a 17.000 vistas. Las promos sueltas de un producto sacan 10-60.
-  Preferí: la misma compra en los 4 súper, dónde conviene, cuánta plata de diferencia, rankings, "cuánto cuesta X en cada súper".
-  Una promo suelta solo si es muy fuerte y le sirve a mucha gente.
+- **Temas.** OJO: los videos con miles de vistas ("Mismo carrito en 4 súper", "¿Cuánto suben los precios?", "¿Qué es La Canasta?",
+  "¿Cuánto cuesta desayunar?", "Armé un programa con IA") tuvieron **promoción paga de YouTube** (Ramon, unos £10). Sus vistas NO
+  prueban que el tema funcione mejor. Sin promoción, un video normal saca 10 a 60 vistas. Igual preferí temas útiles para mucha
+  gente: la misma compra en los 4 súper, dónde conviene, cuánta plata de diferencia, rankings. Una promo suelta solo si es muy fuerte.
 - **Calidad visual (la vara es `ejemplos/pro-changuito/short.html`):** pantalla completa, sin la tarjeta vieja;
   logo arriba a la izquierda y la fecha en una pastilla;
   motion graphics de verdad (contadores, barras que corren, sellos, escaneos, zoom), un `render(t)` propio y determinista;

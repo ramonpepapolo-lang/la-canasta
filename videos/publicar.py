@@ -109,6 +109,4 @@ if promo.get("budget_gbp"):
                f"  Gasto sugerido hoy: £{promo['budget_gbp']}",
                f"  Por qué: {promo.get('why', '')}",
                "  Cómo: app YouTube Studio en el celu → el video → Promocionar. Después contale a Claude cuánto gastaste."]
-elif "promo" in posts:
-    report += ["", "💸 Promoción: hoy no vale la pena gastar. Gasto sugerido hoy: £0."]
 print(head + "\n\n" + "\n".join(report))

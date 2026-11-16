@@ -99,4 +99,16 @@ else:
 if sites["X"] and sites["X"] < n or sites["YouTube"] and sites["YouTube"] < n:
     head += " Alguno no salió en todos lados, mirá el detalle."
 open("subject.txt", "w", encoding="utf-8").write(f"{subj} | La Canasta {day}")
+# Promotion suggestion for today (written by the daily video agent in posts.json, see videos/LEEME-videos.md).
+# Nothing is ever paid automatically: Ramon decides and taps Promote himself in the YouTube Studio app.
+promo = posts.get("promo") or {}
+if promo.get("budget_gbp"):
+    report += ["", "💸 ¿PROMOCIONAMOS HOY? (lo decidís vos, nada se paga solo)",
+               f"  Video: {promo.get('video', '')}",
+               f"  Objetivo: {promo.get('goal', '')}",
+               f"  Gasto sugerido hoy: £{promo['budget_gbp']}",
+               f"  Por qué: {promo.get('why', '')}",
+               "  Cómo: app YouTube Studio en el celu → el video → Promocionar. Después contale a Claude cuánto gastaste."]
+elif "promo" in posts:
+    report += ["", "💸 Promoción: hoy no vale la pena gastar. Gasto sugerido hoy: £0."]
 print(head + "\n\n" + "\n".join(report))

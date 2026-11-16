@@ -169,6 +169,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--celeste); outli
 .tag .small { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--celeste); }
 .tag .big { font-weight: 700; font-size: clamp(3.4rem, 9vw, 5.4rem); line-height: 0.95; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .tag .sub { font-size: 0.9rem; color: rgba(255, 255, 255, 0.82); }
+.tag .week { margin-top: 0.35rem; padding-top: 0.45rem; border-top: 1px solid rgba(255, 255, 255, 0.18); font-weight: 600; color: rgba(255, 255, 255, 0.95); }
 .tag-note { display: grid; gap: 0.35rem; background: #FDF4E9; border: 1px solid rgba(217, 138, 43, 0.3); border-left: 5px solid var(--sun); border-radius: 10px; padding: 0.95rem 1.15rem; }
 .tag-note strong { font-size: 1.02rem; font-weight: 700; }
 .tag-note p { font-size: 0.94rem; line-height: 1.55; }
@@ -501,6 +502,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
           <span class="small"><span data-t="tagLabel">Lo que se paga</span> <button type="button" class="qm" data-q="q1" aria-expanded="false" aria-controls="q1"><span class="sr">¿Qué es?</span><span aria-hidden="true">?</span></button></span>
           <span class="big" id="bigChange">+0.00%</span>
           <span class="sub" id="tagSub">Updated</span>
+          <span class="sub week" id="tagWeek" hidden></span>
         </div>
         <p class="qtip" id="q1" hidden><span data-lang="es">Es lo que paga cualquier persona en la web del súper ese día, con las ofertas que tiene todo el mundo. Es el número principal, como en el INDEC.</span><span data-lang="en">What anyone pays on the supermarket's website that day, with the offers everyone gets. It's the main number, as at INDEC.</span></p>
         <div class="tag-note" role="note">
@@ -1263,11 +1265,15 @@ function render() {
   const big = document.getElementById("bigChange"), label = document.querySelector('[data-t="tagLabel"]');
   const note = document.querySelector(".tag-note"); if (note) note.hidden = true;  // shown again below while collecting
   big.style.fontSize = "";
+  const wk = document.getElementById("tagWeek"); if (wk) wk.hidden = true;
   if (latestReport) {
     const mi = +latestReport.month.slice(5) - 1, y = latestReport.month.slice(0, 4);
     label.textContent = es ? `Inflación del súper en ${MESES[mi]} ${y}` : `Supermarket inflation, ${MONTHS[mi]} ${y}`;
     big.textContent = pct(latestReport.inflation);
     document.getElementById("tagSub").textContent = es ? "Informe mensual · precio pagado" : "Monthly report · price paid";
+    // Under the month's figure, the live weekly change, so the page still moves every day (Ramon, 16 Nov 2026)
+    if (wk && n >= 14) { wk.textContent = es ? `Esta semana: ${pct(week("index_paid"))} · últimos 7 días contra los 7 anteriores, al ${fmtDate(last.date)}`
+                                          : `This week: ${pct(week("index_paid"))} · last 7 days vs the 7 before, to ${fmtDate(last.date)}`; wk.hidden = false; }
   } else if (n >= 14) {
     label.textContent = es ? "Últimos 7 días contra la semana anterior" : "Last 7 days vs the week before";
     big.textContent = pct(week("index_paid"));

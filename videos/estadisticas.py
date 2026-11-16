@@ -9,7 +9,8 @@ out = {"when_utc": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M"), "error
 
 # ---------- Website (GoatCounter's public counter) ----------
 web = {}
-for path in ["TOTAL", "/", "/precios/", "/canastas/", "/informes.html", "/metodo.html", "/articulos.html"]:
+for path in ["TOTAL", "/", "/precios/", "/canastas/", "/informes.html", "/metodo.html", "/articulos.html",
+             "/ramon-pepa.html", "/prensa.html", "/precios/supermercado-mas-barato.html"]:
     try:
         r = requests.get("https://lacanasta.goatcounter.com/counter/" + urllib.parse.quote(path, safe="") + ".json", timeout=20)
         web[path] = int(re.sub(r"\D", "", str(r.json()["count"]))) if r.ok else None

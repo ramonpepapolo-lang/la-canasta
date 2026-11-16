@@ -1,0 +1,54 @@
+{
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "sub": "Mismo changuito de limpieza. 4 súper.",
+   "say": "Mismo changuito de limpieza. Cuatro súper.",
+   "gap": 0.9
+  },
+  {
+   "k": "n",
+   "scene": "n",
+   "sub": "27 productos, mismo código de barras.",
+   "say": "Veintisiete productos, mismo código de barras."
+  },
+  {
+   "k": "dia",
+   "scene": "rank",
+   "sub": "Día, $113.393. El más barato.",
+   "say": "En Día, ciento trece mil pesos. El más barato."
+  },
+  {
+   "k": "mid",
+   "scene": "rank",
+   "sub": "Carrefour, $130.885. ChangoMás, $131.538.",
+   "say": "Carrefour, ciento treinta mil. ChangoMás, ciento treinta y un mil."
+  },
+  {
+   "k": "jumbo",
+   "scene": "rank",
+   "sub": "¿Y Jumbo? $156.797, 38% más.",
+   "say": "¿Y Jumbo? Ciento cincuenta y seis mil, treinta y ocho por ciento más."
+  },
+  {
+   "k": "promo",
+   "scene": "promo",
+   "sub": "Día tiene 16 de los 27 en promo hoy.",
+   "say": "Día tiene dieciséis de los veintisiete en promo hoy."
+  },
+  {
+   "k": "dif",
+   "scene": "dif",
+   "sub": "Por lo mismo, $43.404 de diferencia.",
+   "say": "Por lo mismo, cuarenta y tres mil pesos de diferencia."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Comparalo gratis en lacanastaindex.com",
+   "say": "Comparalo gratis en la canasta index punto com."
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "sub": "¿Comprás la carne el lunes?",
+   "say": "¿Comprás la carne el lunes?",
+   "gap": 0.9
+  },
+  {
+   "k": "week",
+   "scene": "week",
+   "sub": "En Jumbo, de viernes a domingo sale menos.",
+   "say": "En Jumbo, de viernes a domingo sale menos."
+  },
+  {
+   "k": "asado",
+   "scene": "cuts",
+   "sub": "Asado: $15.999 el finde. Hoy, $19.965.",
+   "say": "Asado: dieciséis mil el finde. Hoy, casi veinte mil."
+  },
+  {
+   "k": "more",
+   "scene": "cuts",
+   "sub": "Vacío, +$4.290. Suprema, +$3.450.",
+   "say": "Vacío, cuatro mil trescientos más. Suprema, tres mil cuatrocientos más."
+  },
+  {
+   "k": "rep",
+   "scene": "cal",
+   "sub": "Pasó los últimos 3 fines de semana.",
+   "say": "Pasó los últimos tres fines de semana."
+  },
+  {
+   "k": "tot",
+   "scene": "tot",
+   "sub": "Un kilo de cada uno: $11.706 más el lunes.",
+   "say": "Un kilo de cada uno: once mil setecientos pesos más el lunes."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Mirá los precios de hoy en lacanastaindex.com",
+   "say": "Mirá los precios de hoy en la canasta index punto com."
+  }
+ ]
+}

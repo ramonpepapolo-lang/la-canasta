@@ -26,7 +26,7 @@
  ],
  "min_in_stock": 4,
  "paid": -0.11,
- "regular": -0.51,
+ "regular": -0.48,
  "shops": [
   {
    "shop": "Carrefour",
@@ -327,7 +327,7 @@
   {
    "date": "2026-11-11",
    "paid": 98.621,
-   "regular": 99.148
+   "regular": 99.191
   },
   {
    "date": "2026-11-12",
@@ -337,12 +337,12 @@
   {
    "date": "2026-11-13",
    "paid": 98.819,
-   "regular": 99.015
+   "regular": 99.101
   },
   {
    "date": "2026-11-14",
    "paid": 98.998,
-   "regular": 99.026
+   "regular": 99.112
   }
  ],
  "ranking": {

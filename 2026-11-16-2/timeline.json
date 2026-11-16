@@ -1,0 +1,87 @@
+{
+ "total": 29.984,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "sub": "Mismo changuito de limpieza. 4 súper.",
+   "say": "Mismo changuito de limpieza. Cuatro súper.",
+   "gap": 0.9,
+   "start": 0.95,
+   "end": 3.363,
+   "dur": 2.413,
+   "ps": "mˈismo ʧaŋɡˈito ðe limpjˈesa. kwˈatɾo sˈupeɾ."
+  },
+  {
+   "k": "n",
+   "scene": "n",
+   "sub": "27 productos, mismo código de barras.",
+   "say": "Veintisiete productos, mismo código de barras.",
+   "start": 4.263,
+   "end": 6.996,
+   "dur": 2.732,
+   "ps": "bˌAntisjˈete pɾoðˈuktos, mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "dia",
+   "scene": "rank",
+   "sub": "Día, $113.393. El más barato.",
+   "say": "En Día, ciento trece mil pesos. El más barato.",
+   "start": 7.276,
+   "end": 10.011,
+   "dur": 2.735,
+   "ps": "en dˈia, sjˈɛnto tɾˈese mˈil pˈesos. el mˈas βaɾˈato."
+  },
+  {
+   "k": "mid",
+   "scene": "rank",
+   "sub": "Carrefour, $130.885. ChangoMás, $131.538.",
+   "say": "Carrefour, ciento treinta mil. ChangoMás, ciento treinta y un mil.",
+   "start": 10.291,
+   "end": 14.023,
+   "dur": 3.733,
+   "ps": "kˌarefˈowɾ, sjˈɛnto tɾˈAnta mˈil. ʧˈaŋɡo mˈas, sjˈɛnto tɾˈAnta i ˈun mˈil."
+  },
+  {
+   "k": "jumbo",
+   "scene": "rank",
+   "sub": "¿Y Jumbo? $156.797, 38% más.",
+   "say": "¿Y Jumbo? Ciento cincuenta y seis mil, treinta y ocho por ciento más.",
+   "start": 14.303,
+   "end": 18.281,
+   "dur": 3.978,
+   "ps": "¿i xˈumbo? sjˈɛnto sinkwˈɛnta i sˈAs mˈil, tɾˈAnta i ˈoʧo poɾ sjˈɛnto mˈas."
+  },
+  {
+   "k": "promo",
+   "scene": "promo",
+   "sub": "Día tiene 16 de los 27 en promo hoy.",
+   "say": "Día tiene dieciséis de los veintisiete en promo hoy.",
+   "start": 18.561,
+   "end": 21.401,
+   "dur": 2.84,
+   "ps": "dˈia tjˈene ðjˌesisˈeis ðe los βˌAntisjˈete em pɾˈomo ˈoɪ."
+  },
+  {
+   "k": "dif",
+   "scene": "dif",
+   "sub": "Por lo mismo, $43.404 de diferencia.",
+   "say": "Por lo mismo, cuarenta y tres mil pesos de diferencia.",
+   "start": 21.681,
+   "end": 24.793,
+   "dur": 3.112,
+   "ps": "poɾ lo mˈismo, kwaɾˈɛnta i tɾˈes mˈil pˈesos ðe ðˌifeɾˈɛnsja."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Comparalo gratis en lacanastaindex.com",
+   "say": "Comparalo gratis en la canasta index punto com.",
+   "start": 25.073,
+   "end": 28.004,
+   "dur": 2.931,
+   "ps": "kˌompaɾˈalo ɣɾˈatis en la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

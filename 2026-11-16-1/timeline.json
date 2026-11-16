@@ -1,0 +1,77 @@
+{
+ "total": 25.895,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "sub": "¿Comprás la carne el lunes?",
+   "say": "¿Comprás la carne el lunes?",
+   "gap": 0.9,
+   "start": 0.95,
+   "end": 2.461,
+   "dur": 1.511,
+   "ps": "¿kompɾˈas la kˈaɾne el lˈunes?"
+  },
+  {
+   "k": "week",
+   "scene": "week",
+   "sub": "En Jumbo, de viernes a domingo sale menos.",
+   "say": "En Jumbo, de viernes a domingo sale menos.",
+   "start": 3.361,
+   "end": 5.895,
+   "dur": 2.533,
+   "ps": "en xˈumbo, de βjˈeɾnes a ðomˈiŋɡo sˈale mˈenos."
+  },
+  {
+   "k": "asado",
+   "scene": "cuts",
+   "sub": "Asado: $15.999 el finde. Hoy, $19.965.",
+   "say": "Asado: dieciséis mil el finde. Hoy, casi veinte mil.",
+   "start": 6.175,
+   "end": 9.283,
+   "dur": 3.108,
+   "ps": "asˈaðo: djˌesisˈeis mˈil el fˈinde. ˈoɪ, kˈasi βˈAnte mˈil."
+  },
+  {
+   "k": "more",
+   "scene": "cuts",
+   "sub": "Vacío, +$4.290. Suprema, +$3.450.",
+   "say": "Vacío, cuatro mil trescientos más. Suprema, tres mil cuatrocientos más.",
+   "start": 9.563,
+   "end": 13.863,
+   "dur": 4.301,
+   "ps": "basˈio, kwˈatɾo mˈil tɾesjˈɛntos mˈas. supɾˈema, tɾˈes mˈil kwˌatɾosjˈɛntos mˈas."
+  },
+  {
+   "k": "rep",
+   "scene": "cal",
+   "sub": "Pasó los últimos 3 fines de semana.",
+   "say": "Pasó los últimos tres fines de semana.",
+   "start": 14.143,
+   "end": 16.544,
+   "dur": 2.4,
+   "ps": "pasˈo los ˈultimos tɾˈes fˈines ðe semˈana."
+  },
+  {
+   "k": "tot",
+   "scene": "tot",
+   "sub": "Un kilo de cada uno: $11.706 más el lunes.",
+   "say": "Un kilo de cada uno: once mil setecientos pesos más el lunes.",
+   "start": 16.824,
+   "end": 20.554,
+   "dur": 3.731,
+   "ps": "ˈuŋ kˈilo ðe kˈaða ˈuno: ˈonse mˈil sˌetesjˈɛntos pˈesos mˈas el lˈunes."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Mirá los precios de hoy en lacanastaindex.com",
+   "say": "Mirá los precios de hoy en la canasta index punto com.",
+   "start": 20.834,
+   "end": 23.915,
+   "dur": 3.081,
+   "ps": "miɾˈa los pɾˈesjos ðe ˈoɪ en la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

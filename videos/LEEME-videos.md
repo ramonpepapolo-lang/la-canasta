@@ -12,11 +12,16 @@ calidad profesional, y que **cambien los colores y el concepto visual en cada vi
   Preferí: la misma compra en los 4 súper, dónde conviene, cuánta plata de diferencia, rankings, "cuánto cuesta X en cada súper".
   Una promo suelta solo si es muy fuerte y le sirve a mucha gente.
 - **Calidad visual (la vara es `ejemplos/pro-changuito/short.html`):** pantalla completa, sin la tarjeta vieja;
-  logo oficial arriba a la izquierda (`../assets/logo-white.svg`, o el de color sobre fondo claro) y la fecha en una pastilla;
+  logo arriba a la izquierda y la fecha en una pastilla;
   motion graphics de verdad (contadores, barras que corren, sellos, escaneos, zoom), un `render(t)` propio y determinista;
   subtítulos con la palabra que suena resaltada; la nota de fuente abajo; barra de progreso.
   **Cada video con su propia paleta y su propio concepto** (oscuro, claro, colores fuertes, pastel...): nunca la misma paleta
   ni el mismo concepto que alguno de los últimos 6 videos (anotalo en notas/videos-hechos.txt). La tapa de 0,8 s sigue siendo obligatoria.
+- **EL LOGO ES SIEMPRE EL OFICIAL, CON SUS COLORES (Ramon, 16/11):** azul de La Canasta + la bandera argentina (celeste, blanco,
+  celeste y el sol). Los colores del video cambian, el logo NUNCA. Usá solo los archivos oficiales:
+  `../assets/la-canasta-logo-horizontal.svg` arriba (dentro de una pastilla blanca) y `../assets/la-canasta-logo-stacked.svg`
+  en el cierre (sobre una tarjeta blanca), como en `ejemplos/pro-changuito/`. Nunca el logo blanco, ni recoloreado, ni dibujado a mano.
+  **Cierre obligatorio de cada video:** el logo oficial + lacanastaindex.com. La tapa (#thumb) va sin logo: thumb.js le pone el oficial.
 - **Voz: Kokoro "em_alex"** (natural, español latino con la "sh" argentina), ya no Piper. Se hace en GitHub Actions:
   escribí `{"voice": "em_alex", "lines": [...]}` (mismas líneas que script.json: k, scene, sub, say; "gap" opcional por línea)
   como `<id>.json` en la rama `voz-pedidos` y hacé push; en 2-4 minutos aparecen `<id>/voice.wav` y `<id>/timeline.json`

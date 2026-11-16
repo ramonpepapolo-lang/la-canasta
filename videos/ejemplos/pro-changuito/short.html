@@ -11,7 +11,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-
 .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.55}
 #grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:60px 60px}
 #head{position:absolute;left:64px;right:64px;top:84px;display:flex;align-items:center;justify-content:space-between;z-index:5}
-#head img{height:74px}
+#head .badge{background:#fff;border-radius:999px;padding:14px 26px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:flex}
+#head img{height:58px}
 #date{font-weight:700;font-size:28px;letter-spacing:2px;color:var(--ink);background:var(--sun);padding:12px 22px;border-radius:999px}
 .s{position:absolute;left:0;right:0;top:230px;height:1180px;opacity:0}
 .h1{font-family:"Serif";font-size:150px;line-height:.98;letter-spacing:-2px;text-align:center}
@@ -47,7 +48,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-
 #sgl{left:30px}#srl{left:calc(85.1% - 0px);color:#fff;font-size:30px;opacity:0}
 #dif .eq b{color:#fff}
 /* cta */
-#cta svg{display:block;margin:120px auto 0;width:400px;height:400px}
+#cta .card{background:#fff;border-radius:48px;width:600px;margin:110px auto 0;padding:60px 50px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+#cta .card img{display:block;width:100%}
 #cta .u{font-family:"Serif";font-size:96px;text-align:center;margin-top:50px;letter-spacing:-1px}
 #cta .h2{margin-top:24px}
 /* thumbnail cover */
@@ -65,7 +67,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-
 </style></head><body>
 <div id="glow"><div class="blob" id="b1" style="width:900px;height:900px;background:#2E5C9A"></div><div class="blob" id="b2" style="width:700px;height:700px;background:#E0962F;opacity:.22"></div></div>
 <div id="grid"></div>
-<div id="head"><img src="../assets/logo-white.svg" alt=""><div id="date">8–14 NOV</div></div>
+<div id="head"><div class="badge"><img src="../assets/la-canasta-logo-horizontal.svg" alt=""></div><div id="date">8–14 NOV</div></div>
 
 <div class="s" id="s-hook">
   <div class="h1" id="hk1">Mismo<br>changuito.</div>
@@ -91,18 +93,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-
 </div></div>
 
 <div class="s" id="s-cta"><div id="cta">
-<svg viewBox="218 186 534 534"><path id="arc" d="M288.5 452V430A196 196 0 0 1 680.5 430V452" fill="none" stroke="#fff" stroke-width="23"/>
-<rect id="i1" x="344.5" y="362.5" width="72" height="77.5" fill="#fff"/><rect id="i2" x="448.5" y="289.5" width="72" height="150.5" fill="#fff"/><rect id="i3" x="552.5" y="216.5" width="72" height="223.5" fill="#fff"/>
-<rect x="242" y="436" width="486" height="32" fill="#fff"/><path d="M314 661H655L646.5 690H322.5Z" fill="#fff"/>
-<clipPath id="lcb"><path d="M261 488H708L661.5 642H307.5Z"/></clipPath>
-<g clip-path="url(#lcb)"><rect x="250" y="488" width="470" height="51.33" fill="#7FB1C6"/><rect x="250" y="539.33" width="470" height="51.33" fill="#fff"/><rect x="250" y="590.67" width="470" height="52.33" fill="#7FB1C6"/></g>
-<path d="M261 488H708L661.5 642H307.5Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
-<circle cx="484.5" cy="565" r="13" fill="#E0962F"/></svg>
+<div class="card" id="cardlogo"><img src="../assets/la-canasta-logo-stacked.svg" alt="La Canasta"></div>
   <div class="u">lacanastaindex.com</div>
   <div class="h2">Comparalo gratis, todos los días</div>
 </div></div>
 
-<div id="thumb"><img src="../assets/logo-white.svg" alt=""><div class="t1">Mismo changuito,<br>4 súper</div><div class="t2">+$217.288</div><div class="t3">¿Dónde pagás de más?</div></div>
+<div id="thumb"><div class="t1">Mismo changuito,<br>4 súper</div><div class="t2">+$217.288</div><div class="t3">¿Dónde pagás de más?</div></div>
 <div id="cap"></div>
 <div id="src">Precios online de Día, ChangoMás, Carrefour y Jumbo · 8 al 14/11/2026 · lacanastaindex.com</div>
 <div id="prog"></div>
@@ -162,7 +158,7 @@ function render(t){
   const dq=EI(p(t,at("dif"),1.2));$("difk").textContent="+"+money(217288*dq);$("difk").style.transform=`scale(${.9+.1*back(p(t,at("dif"),.5))})`;
   const sq=EI(p(t,at("dif",.3),.8));$("sg").style.width=(85.1*sq)+"%";$("sr").style.width=(14.9*EI(p(t,at("dif",.65),.6)))+"%";$("sgl").style.opacity=clamp(sq*1.5);
   // cta
-  ["i1","i2","i3"].forEach((id,i)=>{const r=$(id),h0=[77.5,150.5,223.5][i],y0=[362.5,289.5,216.5][i],q=back(p(t,at("cta")+i*.12,.5));r.setAttribute("height",h0*q);r.setAttribute("y",y0+h0*(1-q));});
+  {const q=back(p(t,at("cta"),.6));$("cardlogo").style.transform=`scale(${.7+.3*q})`;$("cardlogo").style.opacity=clamp(q*1.5);}
   // captions
   const cap=$("cap");cap.innerHTML="";
   if(t>=cur.start-.05&&t<=cur.end+.2){let ci=cur.chunks.findIndex(ch=>t<cur.words[ch[ch.length-1]].e);if(ci<0)ci=cur.chunks.length-1;

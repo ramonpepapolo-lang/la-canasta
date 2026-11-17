@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Serif";src:url(dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(dm-sans-latin-700-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;overflow:hidden;background:#0B1C22;font-family:"Sans";color:#F3EEE4}
+.g{position:absolute;inset:0;background:radial-gradient(700px 500px at 80% 30%,rgba(127,177,198,.28),transparent 65%),radial-gradient(600px 400px at 0% 100%,rgba(255,107,74,.22),transparent 60%)}
+.rows{position:absolute;right:-40px;top:-20px;width:560px;transform:rotate(-6deg);opacity:.22;font-size:24px;line-height:46px}
+.rows div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(243,238,228,.15)}
+.tag{position:absolute;left:56px;top:56px;background:#FF6B4A;color:#fff;font-size:30px;letter-spacing:3px;padding:10px 22px;border-radius:12px;transform:rotate(-2deg)}
+.big{position:absolute;left:52px;top:150px;font-family:"Serif";font-size:190px;line-height:.92;letter-spacing:-4px}
+.big span{color:#F2B53A}
+.sub{position:absolute;left:58px;top:520px;font-size:52px;line-height:1.1}
+.sub b{color:#7FB1C6}
+.logo{position:absolute;right:48px;bottom:44px;background:#fff;border-radius:999px;padding:12px 26px}
+.logo img{height:52px;display:block}
+.ai{position:absolute;right:120px;top:190px;width:300px;height:300px;border-radius:50%;border:6px solid #F2B53A;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(11,28,34,.85);box-shadow:0 0 80px rgba(242,181,58,.35)}
+.ai .n{font-family:"Serif";font-size:150px;line-height:.9;color:#F2B53A}
+.ai .l{font-size:34px;letter-spacing:2px}
+</style></head><body><div class="g"></div>
+<div class="rows" id="rows"></div>
+<div class="tag">SIN CÁMARA · SIN EQUIPO</div>
+<div class="big">20.000<br><span>precios</span></div>
+<div class="sub">por día, <b>antes que el INDEC</b></div>
+<div class="ai"><div class="n">7</div><div class="l">AGENTES IA</div></div>
+<div class="logo"><img src="la-canasta-logo-horizontal.svg"></div>
+<script>fetch('data.json').then(r=>r.json()).then(d=>{document.getElementById('rows').innerHTML=d.rows.slice(0,16).map(r=>`<div><span>${r[1].slice(0,26)}</span><b>$${Math.round(r[2]).toLocaleString('es-AR')}</b></div>`).join('');window.READY=true})</script>
+</body></html>

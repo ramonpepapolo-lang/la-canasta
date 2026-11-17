@@ -1,0 +1,167 @@
+{
+ "voice": "em_alex",
+ "speed": 1.02,
+ "pre": 3.2,
+ "gap": 0.3,
+ "tail": 2.6,
+ "lines": [
+  {
+   "k": "i1",
+   "sub": "Reporte semanal. Semana del 8 al 14 de noviembre.",
+   "say": "Reporte semanal. Semana del ocho al catorce de noviembre.",
+   "gap": 0.6
+  },
+  {
+   "k": "i2",
+   "sub": "Esta semana, la misma cerveza subió 43% en un súper…",
+   "say": "Esta semana, la misma cerveza subió cuarenta y tres por ciento en un súper."
+  },
+  {
+   "k": "i3",
+   "sub": "…y bajó 21% en otro.",
+   "say": "Y bajó veintiuno en otro.",
+   "gap": 0.5
+  },
+  {
+   "k": "i4",
+   "sub": "Y aun así, el súper en total casi no se movió. Vamos por partes.",
+   "say": "Y aun así, el súper en total casi no se movió. Vamos por partes.",
+   "gap": 0.7
+  },
+  {
+   "k": "n1",
+   "sub": "Cada producto, contra su precio de la semana anterior (1 al 7 de noviembre).",
+   "say": "Comparamos cada producto contra su precio de la semana anterior, del uno al siete de noviembre."
+  },
+  {
+   "k": "n2",
+   "sub": "965 productos comparados.",
+   "say": "Novecientos sesenta y cinco productos."
+  },
+  {
+   "k": "n3",
+   "sub": "Resultado: −0,11%. Prácticamente plano.",
+   "say": "Resultado: menos cero coma once por ciento. Prácticamente plano."
+  },
+  {
+   "k": "n4",
+   "sub": "Sin promociones, con el precio de lista: −0,48%.",
+   "say": "Sin promociones, con el precio de lista, menos cero coma cuarenta y ocho."
+  },
+  {
+   "k": "n5",
+   "sub": "243 subieron. 139 bajaron. 583 quedaron igual.",
+   "say": "Doscientos cuarenta y tres productos subieron. Ciento treinta y nueve bajaron. Y quinientos ochenta y tres quedaron igual."
+  },
+  {
+   "k": "n6",
+   "sub": "Día a día sube y baja con las promos. La semana entera, casi nada.",
+   "say": "Día a día, el índice sube y baja con las promos. Pero la semana entera, casi nada.",
+   "gap": 0.7
+  },
+  {
+   "k": "g1",
+   "sub": "Grupos del índice que más subieron: otros alimentos, +1,8%. Bebidas alcohólicas, +1,6%.",
+   "say": "Por grupos del índice, lo que más subió fue otros alimentos, uno coma ocho por ciento. Y las bebidas alcohólicas, uno coma seis."
+  },
+  {
+   "k": "g2",
+   "sub": "Lo que más bajó: las verduras. −6,1% en una semana.",
+   "say": "Lo que más bajó: las verduras. Seis por ciento menos, en una sola semana."
+  },
+  {
+   "k": "g3",
+   "sub": "La carne, lo que más pesa en la canasta: igual (−0,01%).",
+   "say": "Y la carne, que es lo que más pesa en la canasta, quedó igual.",
+   "gap": 0.7
+  },
+  {
+   "k": "u1",
+   "sub": "El que más subió: papel higiénico Elegante x4, en Carrefour. +50%.",
+   "say": "El producto que más subió: papel higiénico Elegante, cuatro rollos, en Carrefour. De cuatro mil quinientos, a seis mil ochocientos. Cincuenta por ciento."
+  },
+  {
+   "k": "u2",
+   "sub": "Pero su precio de lista subió solo 7%. El resto: una promo que terminó.",
+   "say": "Pero ojo. Su precio de lista subió solo siete por ciento. El resto fue una promo que terminó."
+  },
+  {
+   "k": "u3",
+   "sub": "Pasta dental Colgate en Día: +44%. Precio de lista, casi igual. Otra promo que se fue.",
+   "say": "La pasta dental Colgate, en Día: más cuarenta y cuatro por ciento. Y su precio de lista, casi igual. Otra promo que se fue."
+  },
+  {
+   "k": "d1",
+   "sub": "Del otro lado, la cebolla: −26% la bolsa de 4 y −20% por kilo, en Carrefour.",
+   "say": "Del otro lado, la cebolla. En Carrefour, la bolsa de cuatro bajó veintiséis por ciento. Y la cebolla por kilo, veinte."
+  },
+  {
+   "k": "d2",
+   "sub": "Yerba Nobleza Gaucha 500 g, en Día: −23%.",
+   "say": "Y la yerba Nobleza Gaucha de medio kilo, en Día, veintitrés por ciento más barata.",
+   "gap": 0.7
+  },
+  {
+   "k": "b1",
+   "sub": "Ahora, la cerveza. Warsteiner, lata de 473 ml. Mismo código de barras.",
+   "say": "Ahora sí, la cerveza. Warsteiner, lata de cuatrocientos setenta y tres. Mismo código de barras."
+  },
+  {
+   "k": "b2",
+   "sub": "Carrefour: de $2.290 a $3.286. +43%.",
+   "say": "En Carrefour pasó de dos mil doscientos noventa, a tres mil doscientos ochenta y seis. Más cuarenta y tres por ciento."
+  },
+  {
+   "k": "b3",
+   "sub": "Día: de $3.061 a $2.404. −21%.",
+   "say": "En Día, la misma lata bajó de tres mil sesenta, a dos mil cuatrocientos. Menos veintiuno."
+  },
+  {
+   "k": "b4",
+   "sub": "La semana anterior convenía Carrefour. Esta semana, Día.",
+   "say": "La semana anterior convenía Carrefour. Esta semana, Día."
+  },
+  {
+   "k": "b5",
+   "sub": "Si comprás siempre en el mismo lugar, te lo perdés.",
+   "say": "Si comprás siempre en el mismo lugar, te lo perdés.",
+   "gap": 0.7
+  },
+  {
+   "k": "s1",
+   "sub": "¿Qué cadena subió más? Carrefour: +0,49%. Las demás bajaron un poco.",
+   "say": "¿Qué cadena subió más? Carrefour. Más cero coma cuarenta y nueve por ciento. Las demás bajaron un poco."
+  },
+  {
+   "k": "s2",
+   "sub": "Una pista: Carrefour tuvo menos ofertas. De 55 productos en promo por día, a 42.",
+   "say": "Una pista: Carrefour tuvo menos ofertas. De cincuenta y cinco productos en promo por día, pasó a cuarenta y dos."
+  },
+  {
+   "k": "s3",
+   "sub": "Ranking: mismos 296 productos. Día, el más barato otra vez.",
+   "say": "Y el ranking. Para los mismos doscientos noventa y seis productos, Día fue el más barato otra vez."
+  },
+  {
+   "k": "s4",
+   "sub": "Jumbo: 17,5% más caro por lo mismo.",
+   "say": "Jumbo, diecisiete y medio por ciento más caro, por exactamente lo mismo.",
+   "gap": 0.7
+  },
+  {
+   "k": "e1",
+   "sub": "En resumen: semana plana, verduras más baratas y promos que van y vienen.",
+   "say": "En resumen. Semana plana, verduras más baratas, y promos que van y vienen."
+  },
+  {
+   "k": "e2",
+   "sub": "El 1 de diciembre: la inflación del súper de noviembre.",
+   "say": "El primero de diciembre sale el informe de noviembre. La inflación del súper del mes."
+  },
+  {
+   "k": "e3",
+   "sub": "Cada domingo, un reporte nuevo. Suscribite. Datos en lacanastaindex.com",
+   "say": "Y cada domingo, un nuevo reporte semanal. Suscribite. Todos los datos están en la canasta index punto com."
+  }
+ ]
+}

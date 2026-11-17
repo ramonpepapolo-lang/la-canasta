@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Serif";src:url(dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(dm-sans-latin-700-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;overflow:hidden;background:#15132B;font-family:"Sans";color:#F4F0E8}
+.g{position:absolute;inset:0;background:radial-gradient(700px 500px at 75% 25%,rgba(242,181,58,.22),transparent 65%),radial-gradient(600px 400px at 0% 100%,rgba(127,177,198,.2),transparent 60%)}
+.tag{position:absolute;left:56px;top:50px;background:#F2B53A;color:#15132B;font-size:32px;letter-spacing:3px;padding:10px 22px;border-radius:12px}
+.wk{position:absolute;left:56px;top:118px;font-size:30px;letter-spacing:2px;color:rgba(244,240,232,.7)}
+.big{position:absolute;left:52px;top:180px;font-family:"Serif";font-size:100px;line-height:.98;letter-spacing:-2px;width:820px}
+.p1,.p2{position:absolute;font-family:"Serif";font-size:150px;line-height:1}
+.p1{left:56px;top:410px;color:#FF6B5A}.p2{left:450px;top:410px;color:#3DD6A0}
+.s1,.s2{position:absolute;top:570px;font-size:32px;color:rgba(244,240,232,.8)}
+.s1{left:60px}.s2{left:456px}
+svg{position:absolute;right:120px;top:120px;width:300px;transform:rotate(8deg);filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.logo{position:absolute;right:48px;bottom:44px;background:#fff;border-radius:999px;padding:12px 26px}
+.logo img{height:52px;display:block}
+</style></head><body><div class="g"></div>
+<div class="tag" id="t1"></div><div class="wk" id="t2"></div>
+<div class="big" id="t3"></div>
+<div class="p1">+43%</div><div class="s1">Carrefour</div>
+<div class="p2">−21%</div><div class="s2">Día</div>
+<svg viewBox="0 0 300 520"><defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#9AA3B5"/><stop offset=".35" stop-color="#E9EDF3"/><stop offset=".7" stop-color="#B7C0CE"/><stop offset="1" stop-color="#7D8799"/></linearGradient></defs>
+  <rect x="40" y="40" width="220" height="440" rx="34" fill="url(#cg)"/><rect x="40" y="150" width="220" height="210" fill="#C9A14A" opacity=".9"/><rect x="40" y="150" width="220" height="12" fill="#fff" opacity=".5"/>
+  <ellipse cx="150" cy="44" rx="110" ry="22" fill="#CDD3DD"/><ellipse cx="150" cy="44" rx="80" ry="14" fill="#A7AFBD"/><text x="150" y="268" text-anchor="middle" font-family="Sans" font-weight="700" font-size="40" fill="#15132B">473 ml</text></svg>
+<div class="logo"><img src="la-canasta-logo-horizontal.svg"></div>
+<script>const en=new URLSearchParams(location.search).get('lang')=='en';
+document.getElementById('t1').textContent=en?'WEEKLY REPORT':'REPORTE SEMANAL';
+document.getElementById('t2').textContent=en?'NOV 8 – 14, 2026':'8 AL 14 DE NOVIEMBRE 2026';
+document.getElementById('t3').textContent=en?'Same beer, two prices':'Misma cerveza, dos precios';
+document.fonts.ready.then(()=>window.READY=true)</script>
+</body></html>

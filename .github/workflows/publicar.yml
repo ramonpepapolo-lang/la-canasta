@@ -17,8 +17,13 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Get the day's videos
-        run: git clone --depth 1 --branch videos-dia "https://github.com/${{ github.repository }}" vd
+      - name: Get the videos (the day's Shorts, or the long videos with "publicar largos AAAA-MM-DD")
+        env:
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          B=videos-dia
+          case "$TITLE" in *largo*|*LARGO*|*Largo*) B=videos-largos;; esac
+          git clone --depth 1 --branch "$B" "https://github.com/${{ github.repository }}" vd
       - name: Install
         run: pip install --quiet tweepy google-api-python-client google-auth
       - name: Publish

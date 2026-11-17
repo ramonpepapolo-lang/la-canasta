@@ -8,12 +8,14 @@
 import json, os, re, sys
 
 title = os.environ.get("ISSUE_TITLE", "")
-m = re.match(r"\s*publicar\s+(\d{4}-\d{2}-\d{2})(?:\s+(\d))?\s*$", title, re.I)
+# Long videos (mini-docs, the Sunday "Reporte semanal"): "publicar largos AAAA-MM-DD" reads the branch videos-largos.
+m = re.match(r"\s*publicar\s+(largos\s+)?(\d{4}-\d{2}-\d{2})(?:\s+(\d))?\s*$", title, re.I)
 report = []
 if not m:
     open("subject.txt", "w").write("⚠️ No se publicó nada | La Canasta")
     print("Ramon, ojo: no se publicó nada, ni en X ni en YouTube. Título no reconocido. Usá: publicar AAAA-MM-DD o publicar AAAA-MM-DD 1"); sys.exit(0)
-day, only = m.group(1), m.group(2)
+largos, day, only = bool(m.group(1)), m.group(2), m.group(3)
+tag = ("largos " if largos else "") + day
 posts = json.load(open("vd/posts.json", encoding="utf-8"))
 if posts.get("date") != day:
     open("subject.txt", "w").write(f"⚠️ No se publicó nada | La Canasta {day}")
@@ -33,7 +35,8 @@ def post_x(v):
     import tweepy
     auth = tweepy.OAuth1UserHandler(os.environ["X_API_KEY"], os.environ["X_API_SECRET"],
                                     os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
-    media = tweepy.API(auth).media_upload("vd/" + v["file"], chunked=True, media_category="tweet_video")
+    # X takes videos of up to 140 s: long videos bring a shorter cut for X in "x_file"
+    media = tweepy.API(auth).media_upload("vd/" + v.get("x_file", v["file"]), chunked=True, media_category="tweet_video")
     c = tweepy.Client(consumer_key=os.environ["X_API_KEY"], consumer_secret=os.environ["X_API_SECRET"],
                       access_token=os.environ["X_ACCESS_TOKEN"], access_token_secret=os.environ["X_ACCESS_SECRET"])
     t = c.create_tweet(text=v["x_text"], media_ids=[media.media_id])
@@ -52,12 +55,18 @@ def post_yt(v):
     cr = Credentials(None, refresh_token=os.environ["YT_REFRESH_TOKEN"], token_uri="https://oauth2.googleapis.com/token",
                      client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
     yt = build("youtube", "v3", credentials=cr)
+    lang = v.get("lang", "es")
     body = {"snippet": {"title": v["yt_title"][:100], "description": v["yt_description"] + "\n\n" + v["hashtags"],
-                        "categoryId": "25", "defaultLanguage": "es", "defaultAudioLanguage": "es-419"},
+                        "categoryId": "25", "defaultLanguage": lang, "defaultAudioLanguage": "en" if lang == "en" else "es-419"},
             "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
     r = yt.videos().insert(part="snippet,status", body=body,
                            media_body=MediaFileUpload("vd/" + v["file"], chunksize=-1, resumable=True)).execute()
-    return f"https://youtube.com/shorts/{r['id']}"
+    if v.get("thumb"):  # custom thumbnail (YouTube only allows it on verified channels; if it fails the video stays up)
+        try:
+            yt.thumbnails().set(videoId=r["id"], media_body=MediaFileUpload("vd/" + v["thumb"])).execute()
+        except Exception as e:
+            report.append(f"  (miniatura no subida: {str(e)[:160]})")
+    return f"https://youtube.com/watch?v={r['id']}" if v.get("long") else f"https://youtube.com/shorts/{r['id']}"
 
 
 for i, v in enumerate(posts["videos"], 1):
@@ -65,7 +74,7 @@ for i, v in enumerate(posts["videos"], 1):
         continue
     report.append(f"VIDEO {i}: {v['name']}")
     for site, ok, fn in (("X", have_x, post_x), ("YouTube", have_yt, post_yt)):
-        key = f"{day} {i} {site}"
+        key = f"{tag} {i} {site}"
         if key in done:
             report.append(f"  {site}: ya estaba publicado, no se repite."); continue
         if not ok:

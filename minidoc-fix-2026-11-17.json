@@ -1,0 +1,30 @@
+{
+ "voice": "em_alex",
+ "speed": 1.02,
+ "pre": 0.3,
+ "gap": 0.3,
+ "tail": 0.3,
+ "lines": [
+  {
+   "k": "c2",
+   "sub": "Carrefour, Jumbo, ChangoMás, Día y Coto.",
+   "say": "Carrefour, Yumbo, ChangoMás, Día y Coto."
+  },
+  {
+   "k": "r3",
+   "sub": "Jumbo, por lo mismo: $1.458.079. 17,5% más.",
+   "say": "En Yumbo, por exactamente lo mismo, un millón cuatrocientos cincuenta y ocho mil. Diecisiete y medio por ciento más."
+  },
+  {
+   "k": "t4",
+   "sub": "Pañales Huggies talle G, 40 unidades: Día $15.743. ChangoMás $26.215. Jumbo $28.970.",
+   "say": "Los mismos pañales Jáguis, talle G, cuarenta unidades. En Día, quince mil setecientos. En ChangoMás, veintiséis mil. En Yumbo, casi veintinueve mil.",
+   "gap": 0.8
+  },
+  {
+   "k": "o1",
+   "sub": "Todo es abierto y gratis: los datos están en Kaggle y Zenodo.",
+   "say": "Todo esto es abierto y gratis. Los datos están en Káguel y en Zenodo, para cualquiera que los quiera revisar."
+  }
+ ]
+}

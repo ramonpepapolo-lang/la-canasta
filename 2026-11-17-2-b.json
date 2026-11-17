@@ -1,0 +1,48 @@
+{
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "gap": 0.75,
+   "sub": "Pañales talle G: ¿dónde pagás de más?",
+   "say": "Pañales talle grande: ¿dónde pagás de más?"
+  },
+  {
+   "k": "hug",
+   "scene": "hug",
+   "sub": "Huggies G, 40: en Día, $15.200.",
+   "say": "Jáguis grande, cuarenta: en Día, quince mil doscientos."
+  },
+  {
+   "k": "jum",
+   "scene": "hug",
+   "sub": "En Jumbo, $27.750: ¡$12.550 más!",
+   "say": "En Jumbo, veintisiete mil setecientos cincuenta: ¡doce mil quinientos más!"
+  },
+  {
+   "k": "per",
+   "scene": "per",
+   "sub": "Por pañal: $380 contra $694.",
+   "say": "Por pañal: trescientos ochenta contra seiscientos noventa y cuatro."
+  },
+  {
+   "k": "pam",
+   "scene": "pam",
+   "sub": "Pampers Premium G: casi igual en todos, $52 de diferencia.",
+   "say": "Pámpers grande: casi igual en todos, cincuenta y dos pesos de diferencia."
+  },
+  {
+   "k": "bab",
+   "scene": "bab",
+   "sub": "Babysec G, 40: en Carrefour, $10.237,50, en promo.",
+   "say": "Beibisec grande: en Carrefour, diez mil doscientos, en promo."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Mirá tu marca en lacanastaindex.com",
+   "say": "Mirá tu marca en la canasta index punto com."
+  }
+ ]
+}

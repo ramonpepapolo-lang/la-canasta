@@ -1,11 +1,11 @@
 {
- "when_utc": "2026-11-16 20:58",
+ "when_utc": "2026-11-17 17:03",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 3724,
-  "/": 3598,
+  "TOTAL": 3860,
+  "/": 3708,
   "/precios/": 8,
   "/canastas/": 16,
   "/informes.html": 47,
@@ -17,17 +17,37 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "525",
-  "views_total_text": "136,980",
-  "views_sum_of_videos": 67794,
-  "videos": 30,
+  "subscribers_text": "545",
+  "views_total_text": "145,141",
+  "views_sum_of_videos": 71620,
+  "videos": 32,
   "list": [
+   {
+    "id": "WFIgF0LXUvc",
+    "debug": null,
+    "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
+    "published": "2026-11-17",
+    "views": 2,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "yeHf72gYq98",
+    "debug": null,
+    "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
+    "published": "2026-11-17",
+    "views": 3,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "oWIENCLLAe4",
     "debug": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 12,
+    "views": 29,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -37,9 +57,9 @@
     "debug": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 16,
+    "views": 32,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -47,7 +67,7 @@
     "debug": null,
     "title": "Mismo changuito, 4 súper: $217.288 de diferencia 🛒",
     "published": "2026-11-15",
-    "views": 20,
+    "views": 29,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -57,7 +77,7 @@
     "debug": null,
     "title": "El cerdo subió $1.000 el kilo… menos la bondiola 🐖",
     "published": "2026-11-15",
-    "views": 8,
+    "views": 12,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -67,7 +87,7 @@
     "debug": null,
     "title": "Nesquik 800 g: $8.453 o $14.900, mismo paquete 🍫",
     "published": "2026-11-15",
-    "views": 14,
+    "views": 17,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -77,7 +97,7 @@
     "debug": null,
     "title": "Ayer convenía el pote chico, hoy el grande ⚖️",
     "published": "2026-11-14",
-    "views": 37,
+    "views": 41,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -87,7 +107,7 @@
     "debug": null,
     "title": "Picada del sábado: el salamín bajó 20% hoy 🌦️",
     "published": "2026-11-14",
-    "views": 18,
+    "views": 22,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -107,7 +127,7 @@
     "debug": null,
     "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
     "published": "2026-11-13",
-    "views": 16,
+    "views": 15,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -167,9 +187,9 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 14961,
+    "views": 15993,
     "views_exact": true,
-    "likes": 2,
+    "likes": 3,
     "comments": null
    },
    {
@@ -207,9 +227,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 525,
+    "views": 634,
     "views_exact": true,
-    "likes": 83,
+    "likes": 85,
     "comments": null
    },
    {
@@ -247,10 +267,10 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 18648,
+    "views": 19955,
     "views_exact": true,
-    "likes": 104,
-    "comments": 1
+    "likes": 122,
+    "comments": null
    },
    {
     "id": "L1E_gsxHEb8",
@@ -260,7 +280,7 @@
     "views": 30,
     "views_exact": true,
     "likes": 2,
-    "comments": 3
+    "comments": null
    },
    {
     "id": "sq4QiYlzBHI",
@@ -277,10 +297,10 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 7919,
+    "views": 8642,
     "views_exact": true,
-    "likes": 594,
-    "comments": 2
+    "likes": 628,
+    "comments": null
    },
    {
     "id": "EimZGNWwnkQ",
@@ -297,7 +317,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7137,
+    "views": 7412,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -317,10 +337,10 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 17721,
+    "views": 18040,
     "views_exact": true,
     "likes": 5,
-    "comments": 2
+    "comments": null
    }
   ]
  },
@@ -330,18 +350,38 @@
   "created_at": "2026-10-29T01:01:21.000Z",
   "followers_count": 0,
   "following_count": 3,
-  "like_count": 34,
+  "like_count": 39,
   "listed_count": 0,
-  "media_count": 32,
-  "tweet_count": 60,
+  "media_count": 34,
+  "tweet_count": 62,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-17",
+    "text": "Pañales Huggies talle G x40, mismo paquete (17/11):\n\nDía $15.200\nCarrefour $19.000\nChangoM",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-17",
+    "text": "55 bebidas iguales, mismo código de barras, en 4 súper (17/11):\n\nChangoMás $205.931\nCarref",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-16",
     "text": "Mismo changuito de limpieza, 27 productos idénticos, 4 súper (hoy 16/11):\n\nDía $113.393\nCa",
     "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
+    "impression_count": 1,
+    "like_count": 1,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0
@@ -350,27 +390,7 @@
     "date": "2026-11-16",
     "text": "¿Comprás la carne el lunes? En Jumbo, viernes a domingo sale menos:\n\nAsado $15.999 → $19.9",
     "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-15",
-    "text": "Mismo changuito, 4 súper 🛒\n\n296 productos idénticos, semana del 8 al 14/11:\nDía $1.240.791",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-15",
-    "text": "En ChangoMás el cerdo subió un piso 🐖\n\nPor kilo, de ayer a hoy:\nVacío $12.449 → $13.449\nMa",
-    "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

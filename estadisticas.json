@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-17 17:03",
+ "when_utc": "2026-11-17 18:49",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "545",
+  "subscribers_text": "550",
   "views_total_text": "145,141",
-  "views_sum_of_videos": 71620,
+  "views_sum_of_videos": 72155,
   "videos": 32,
   "list": [
    {
@@ -27,7 +27,7 @@
     "debug": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 2,
+    "views": 22,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -37,7 +37,7 @@
     "debug": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 3,
+    "views": 4,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -57,7 +57,7 @@
     "debug": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 32,
+    "views": 33,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -77,7 +77,7 @@
     "debug": null,
     "title": "El cerdo subió $1.000 el kilo… menos la bondiola 🐖",
     "published": "2026-11-15",
-    "views": 12,
+    "views": 13,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -187,7 +187,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 15993,
+    "views": 16109,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -227,9 +227,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 634,
+    "views": 658,
     "views_exact": true,
-    "likes": 85,
+    "likes": 87,
     "comments": null
    },
    {
@@ -267,10 +267,10 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 19955,
+    "views": 20138,
     "views_exact": true,
-    "likes": 122,
-    "comments": null
+    "likes": 123,
+    "comments": 1
    },
    {
     "id": "L1E_gsxHEb8",
@@ -280,7 +280,7 @@
     "views": 30,
     "views_exact": true,
     "likes": 2,
-    "comments": null
+    "comments": 3
    },
    {
     "id": "sq4QiYlzBHI",
@@ -297,10 +297,10 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 8642,
+    "views": 8788,
     "views_exact": true,
-    "likes": 628,
-    "comments": null
+    "likes": 631,
+    "comments": 2
    },
    {
     "id": "EimZGNWwnkQ",
@@ -317,7 +317,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7412,
+    "views": 7445,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -337,10 +337,10 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18040,
+    "views": 18050,
     "views_exact": true,
     "likes": 5,
-    "comments": null
+    "comments": 2
    }
   ]
  },
@@ -381,7 +381,7 @@
     "text": "Mismo changuito de limpieza, 27 productos idénticos, 4 súper (hoy 16/11):\n\nDía $113.393\nCa",
     "bookmark_count": 0,
     "impression_count": 1,
-    "like_count": 1,
+    "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0
@@ -391,7 +391,7 @@
     "text": "¿Comprás la carne el lunes? En Jumbo, viernes a domingo sale menos:\n\nAsado $15.999 → $19.9",
     "bookmark_count": 0,
     "impression_count": 1,
-    "like_count": 0,
+    "like_count": 1,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-17 18:49",
+ "when_utc": "2026-11-17 22:54",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "550",
+  "subscribers_text": "559",
   "views_total_text": "145,141",
-  "views_sum_of_videos": 72155,
+  "views_sum_of_videos": 73523,
   "videos": 32,
   "list": [
    {
@@ -27,7 +27,7 @@
     "debug": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 22,
+    "views": 40,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -37,7 +37,7 @@
     "debug": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 4,
+    "views": 10,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -47,7 +47,7 @@
     "debug": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 29,
+    "views": 30,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -97,7 +97,7 @@
     "debug": null,
     "title": "Ayer convenía el pote chico, hoy el grande ⚖️",
     "published": "2026-11-14",
-    "views": 41,
+    "views": 42,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -187,7 +187,7 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 16109,
+    "views": 16400,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -227,9 +227,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 658,
+    "views": 757,
     "views_exact": true,
-    "likes": 87,
+    "likes": 89,
     "comments": null
    },
    {
@@ -267,9 +267,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 20138,
+    "views": 20548,
     "views_exact": true,
-    "likes": 123,
+    "likes": 122,
     "comments": 1
    },
    {
@@ -297,9 +297,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 8788,
+    "views": 9184,
     "views_exact": true,
-    "likes": 631,
+    "likes": 630,
     "comments": 2
    },
    {
@@ -317,7 +317,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7445,
+    "views": 7519,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -337,7 +337,7 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18050,
+    "views": 18122,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -381,7 +381,7 @@
     "text": "Mismo changuito de limpieza, 27 productos idénticos, 4 súper (hoy 16/11):\n\nDía $113.393\nCa",
     "bookmark_count": 0,
     "impression_count": 1,
-    "like_count": 0,
+    "like_count": 1,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0

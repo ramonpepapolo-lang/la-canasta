@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Serif";src:url(../../assets/dm-serif-display-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:400;src:url(../../assets/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Sans";font-weight:700;src:url(../../assets/dm-sans-latin-700-normal.woff2)}
+:root{--bg:#24091A;--bg2:#3A1229;--cream:#FBF1E6;--dim:rgba(251,241,230,.6);--gold:#F3C26B;--green:#4ADE9B;--coral:#FF6B6B;--faint:rgba(251,241,230,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);font-family:"Sans";color:var(--cream)}
+#glow{position:absolute;inset:0;background:radial-gradient(900px 900px at 50% 30%,rgba(180,40,90,.35),transparent 65%),radial-gradient(700px 700px at 50% 100%,rgba(243,194,107,.12),transparent 60%)}
+#head{position:absolute;left:60px;right:60px;top:120px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+#head .badge{background:#fff;border-radius:999px;padding:12px 24px;display:flex}
+#head img{height:50px}
+#date{font-weight:700;font-size:28px;letter-spacing:2px;color:var(--bg);background:var(--gold);padding:12px 22px;border-radius:999px}
+.s{position:absolute;inset:0;opacity:0}
+/* hook */
+#prod{position:absolute;left:0;right:0;top:300px;text-align:center;font-weight:700;font-size:44px;letter-spacing:6px;color:var(--gold)}
+#bottle{position:absolute;left:50%;top:380px;width:150px;margin-left:-75px}
+#p1,#p2{position:absolute;left:0;right:0;text-align:center;font-family:"Serif";line-height:1;font-variant-numeric:tabular-nums}
+#p1{top:780px;font-size:250px;color:var(--green)}
+.shp{position:absolute;left:0;right:0;text-align:center;font-weight:700;font-size:46px}
+#p2{top:1110px;font-size:250px;color:var(--coral)}
+/* shops */
+#bars{position:absolute;left:70px;right:70px;top:420px}
+.row{margin-bottom:70px}
+.rl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.rl b{font-size:62px}
+.rl span{font-weight:700;font-size:64px;font-variant-numeric:tabular-nums}
+.tr{height:96px;border-radius:20px;background:var(--faint);position:relative;overflow:hidden}
+.f{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:20px}
+/* promo */
+#tag{position:absolute;left:90px;right:90px;top:420px;border-radius:40px;background:var(--cream);color:var(--bg);padding:60px;text-align:center}
+#tag .sh{font-weight:700;font-size:44px;letter-spacing:4px;color:#7a3a55}
+#tag .old{font-family:"Serif";font-size:150px;line-height:1.1;position:relative;display:inline-block;color:#8c6b78}
+#tag .old i{position:absolute;left:-10px;right:-10px;top:52%;height:12px;background:var(--coral);border-radius:6px;transform-origin:left;transform:scaleX(0)}
+#tag .new{font-family:"Serif";font-size:220px;line-height:1;color:#0f8a57}
+#tag .off{display:inline-block;margin-top:24px;font-weight:700;font-size:54px;background:var(--coral);color:#fff;padding:12px 34px;border-radius:999px}
+#days{position:absolute;left:70px;right:70px;top:1180px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.d{border-radius:18px;padding:16px 0;text-align:center;background:var(--faint);opacity:0}
+.d .n{font-weight:700;font-size:30px;color:var(--dim)}
+.d .v{font-weight:700;font-size:26px;margin-top:6px}
+/* payoff */
+#save{position:absolute;left:0;right:0;top:520px;text-align:center}
+#save .l{font-weight:700;font-size:56px;color:var(--dim)}
+#save .k{font-family:"Serif";font-size:270px;line-height:1.05;color:var(--gold);font-variant-numeric:tabular-nums}
+#save .m{font-weight:700;font-size:64px}
+#half{position:absolute;left:0;right:0;top:1180px;text-align:center;font-weight:700;font-size:60px;color:var(--green);opacity:0}
+#half .a{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green)}
+#half .b{position:absolute;top:0;bottom:0;right:0;width:0;background:var(--coral);opacity:.35}
+/* end */
+#end{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;background:var(--bg)}
+#end .box{background:#fff;border-radius:44px;padding:50px 70px}
+#end img{height:330px;display:block}
+#end .u{font-weight:700;font-size:58px}
+/* captions + source */
+#sub{position:absolute;left:70px;right:70px;top:1440px;text-align:center;font-weight:700;font-size:58px;line-height:1.18;z-index:6}
+#sub span{background:rgba(10,2,8,.72);padding:6px 18px;border-radius:14px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#src{position:absolute;left:0;right:0;top:1640px;text-align:center;font-size:26px;color:var(--dim);z-index:6}
+#prog{position:absolute;left:0;top:0;height:8px;background:var(--gold);z-index:7}
+</style></head><body>
+<div id="glow"></div>
+<div id="head"><div class="badge"><img src="../../assets/la-canasta-logo-horizontal.svg"></div><div id="date">17/11/2026</div></div>
+
+<div class="s" id="sHook">
+ <div id="prod">ALARIS MALBEC 750 ML</div>
+ <svg id="bottle" viewBox="0 0 150 380"><path d="M60 0h30v90c0 30 40 50 40 95v175c0 11-9 20-20 20H40c-11 0-20-9-20-20V185c0-45 40-65 40-95z" fill="#4A0F2A" stroke="#F3C26B" stroke-width="4"/><rect x="22" y="215" width="106" height="110" rx="6" fill="#FBF1E6"/><rect x="38" y="245" width="74" height="10" rx="5" fill="#7a3a55"/><rect x="48" y="268" width="54" height="8" rx="4" fill="#c9a9b6"/><rect x="56" y="0" width="38" height="30" fill="#F3C26B"/></svg>
+ <div id="p1">$2.470</div><div class="shp" style="top:1035px;color:var(--green)">en Carrefour</div><div id="p2">$6.400</div><div class="shp" style="top:1355px;color:var(--coral)">en Jumbo</div>
+</div>
+
+<div class="s" id="sBars"><div id="bars">
+ <div class="row"><div class="rl"><b>Carrefour</b><span id="v0" style="color:var(--green)">$0</span></div><div class="tr"><div class="f" style="background:var(--green)"></div></div></div>
+ <div class="row"><div class="rl"><b>ChangoMás</b><span id="v1">$0</span></div><div class="tr"><div class="f" style="background:rgba(251,241,230,.55)"></div></div></div>
+ <div class="row"><div class="rl"><b>Jumbo</b><span id="v2" style="color:var(--coral)">$0</span></div><div class="tr"><div class="f" style="background:var(--coral)"></div></div></div>
+</div></div>
+
+<div class="s" id="sPromo">
+ <div id="tag"><div class="sh">CARREFOUR · PRECIO DE LISTA</div><div class="old">$5.910<i></i></div><div class="new">$2.470</div><div class="off">−58% · OFERTA</div></div>
+ <div id="days"></div>
+</div>
+
+<div class="s" id="sSave">
+ <div id="save"><div class="l">te ahorrás</div><div class="k">$0</div><div class="m">por botella</div></div>
+ <div id="half">61% menos que en Jumbo</div>
+</div>
+
+<div id="end"><div class="box"><img src="../../assets/la-canasta-logo-stacked.svg"></div><div class="u">lacanastaindex.com</div></div>
+<div id="sub"></div><div id="src">Precios online del 17/11/2026 · mismo código de barras</div><div id="prog"></div>
+<script>
+let TL,L;const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const cl=x=>x<0?0:x>1?1:x,E=x=>{x=cl(x);return 1-Math.pow(1-x,3)},P=(t,a,b)=>cl((t-a)/(b-a));
+const S=(k,f=0)=>L[k].start+f*L[k].dur,EN=k=>L[k].end,fmt=n=>'$'+Math.round(n).toLocaleString('es-AR');
+const DAYS=[[10,5910],[11,5910],[12,2470],[13,2470],[14,2470],[15,2470],[16,2470],[17,2470]];
+function scene(el,a,b,t){const v=Math.min(a<=0?1:E(P(t,a,a+.25)),1-P(t,b-.2,b));el.style.opacity=v;return v}
+function render(t){
+ const end0=EN('p1')+.35;
+ scene($('#sHook'),0,S('w1')-.05,t);
+ // hook is fully visible at frame 0: prices already there, a subtle push-in
+ const z=1+.04*E(P(t,0,2.5));$('#p1').style.transform=`scale(${z})`;$('#p2').style.transform=`scale(${z})`;
+ $('#bottle').style.transform=`rotate(${Math.sin(t*1.5)*3}deg)`;
+ scene($('#sBars'),S('w1')-.05,S('b1')-.05,t);
+ const vals=[2470,5909,6400],st=[S('w1',.35),S('w2'),S('w2',.55)];
+ $$('.row').forEach((r,i)=>{const e=E(P(t,st[i],st[i]+.6));r.querySelector('.f').style.width=(vals[i]/6400*100*e)+'%';$('#v'+i).textContent=fmt(vals[i]*e);r.style.opacity=E(P(t,st[i]-.15,st[i]+.1))});
+ scene($('#sPromo'),S('b1')-.05,S('p1')-.05,t);
+ $('#tag .old i').style.transform=`scaleX(${E(P(t,S('b1',.55),S('b1',.75)))})`;
+ $('#tag .new').style.opacity=E(P(t,S('b1',.1),S('b1',.3)));$('#tag .off').style.opacity=E(P(t,S('b1',.8),S('b1',.95)));
+ $$('.d').forEach((d,i)=>{const a=S('b2',.05+i*.06);d.style.opacity=E(P(t,a,a+.2));const on=DAYS[i][1]<3000&&t>a;d.style.background=on?'rgba(74,222,155,.22)':'';d.querySelector('.v').style.color=on?'var(--green)':''});
+ scene($('#sSave'),S('p1')-.05,end0,t);
+ $('#save .k').textContent=fmt(3930*E(P(t,S('p1',.1),S('p1',.5))));
+ $('#half').style.opacity=E(P(t,S('p1',.55),S('p1',.7)));
+ $('#end').style.opacity=E(P(t,end0,end0+.25));$('#head').style.opacity=1-E(P(t,end0,end0+.25));
+ let cur=null;for(const l of TL.lines)if(t>=l.start-.05&&t<l.end+.25)cur=l;
+ $('#sub').innerHTML=cur&&t<end0?`<span>${cur.sub}</span>`:'';$('#src').style.opacity=t<end0?1:0;
+ $('#prog').style.width=(t/TL.total*100)+'%';
+}
+async function init(){TL=await (await fetch('timeline.json')).json();L={};TL.lines.forEach(l=>L[l.k]=l);
+ $('#days').innerHTML=DAYS.map(d=>`<div class="d"><div class="n">${d[0]}/11</div><div class="v">${(d[1]/1000).toFixed(1).replace('.',',')}k</div></div>`).join('');
+ await document.fonts.ready;window.TOTAL=TL.total;window.READY=true;render(0);}
+init();
+</script></body></html>

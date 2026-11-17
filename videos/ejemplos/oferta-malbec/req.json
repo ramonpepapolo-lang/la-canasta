@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Mismo Malbec. Mismo código de barras.","say":"Mismo Malbec. Mismo código de barras."},
+{"k":"h2","sub":"$2.470… o $6.400.","say":"Dos mil cuatrocientos setenta, o seis mil cuatrocientos.","gap":0.35},
+{"k":"w1","sub":"Alaris Malbec 750: $2.470 en Carrefour.","say":"Alaris Malbec, en Carrefour: dos mil cuatrocientos setenta."},
+{"k":"w2","sub":"ChangoMás $5.909. Jumbo $6.400.","say":"En ChangoMás, cinco mil novecientos. En Jumbo, seis mil cuatrocientos."},
+{"k":"b1","sub":"Pero ojo: es una oferta. El precio de lista es $5.910.","say":"Pero ojo. Es una oferta: el precio de lista es cinco mil novecientos diez.","gap":0.3},
+{"k":"b2","sub":"Está así desde el jueves 12. Puede terminar cualquier día.","say":"Está así desde el jueves doce, y puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $3.930 por botella. Más de la mitad.","say":"Ahorrás tres mil novecientos treinta pesos por botella. Más de la mitad."}
+]}

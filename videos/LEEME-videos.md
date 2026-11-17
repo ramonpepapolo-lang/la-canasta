@@ -1,6 +1,29 @@
 # Videos de La Canasta (YouTube Shorts + X)
 
-## FORMATO PRO (desde el 15/11/2026, pedido por Ramon): manda sobre todo lo de abajo
+## FORMATO 18/11/2026 (Ramon aprobó, después de la investigación del algoritmo): manda sobre todo lo de abajo
+
+Ejemplo aprobado: `ejemplos/oferta-malbec/` (Alaris Malbec, 17/11). Investigación completa: doc "claude/youtube-algorithm-playbook.md"
+del proyecto La Canasta. Los Shorts fallaban la primera prueba de YouTube: la gente deslizaba antes de ver el precio.
+
+1. **UN Short por día** (no dos), cada uno con su propio ángulo. 20 a 28 segundos.
+2. **Sin tapa.** El cuadro 1 (segundo 0) YA muestra el producto y los dos precios grandes, con el súper debajo de cada uno.
+   La voz arranca en 0,1 s ("pre": 0.12, "speed": 1.08). Nada de logo grande, título ni gráfico que se arma lento al principio.
+3. **Una sola diferencia grande y sorprendente**, en pesos, de un producto que todos conocen (yerba, vino, aceite, dulce de leche,
+   alfajores, café, pañales, asado, Coca, cerveza). Mismo código de barras. Preferí brechas de 40% o más.
+4. **Estructura:** gancho (los dos precios) → los súper (barras) → **un "pero"** (es una oferta que puede terminar, el que siempre
+   es más barato acá es el más caro, subió ayer...) → **remate** con la plata que te ahorrás ("Ahorrás $X por ...") →
+   cierre de 1 segundo con el logo oficial y lacanastaindex.com.
+5. **Título para buscar:** producto + precio + súper. Ej.: "Vino Alaris Malbec: $2.470 en Carrefour, $6.400 en Jumbo".
+   0 a 2 hashtags (sin #Shorts).
+6. La miniatura se hace aparte con thumb.js (segundo 0,3) y se sube como miniatura; revisá que el logo no quede doble
+   (si queda, ocultá la pastilla del logo del video en los primeros 0,5 s).
+7. Si después de ~20 Shorts así ninguno pasa las 1.000 vistas, se cambia la IDEA, no la edición (avisale a Ramon).
+
+**Post extra en X (Ramon, 18/11):** además del Short, un post SOLO en X con una imagen (un gráfico hecho por nosotros, con datos
+reales y el logo oficial) y un comentario nuestro. Va en posts.json como `"x_posts": [{"image": "AAAA-MM-DD-grafico.png", "x_text": "..."}]`
+y se publica con la misma aprobación de Ramon (publicar.py).
+
+## FORMATO PRO (desde el 15/11/2026, pedido por Ramon)
 
 Ramon vio el ejemplo `ejemplos/pro-changuito/` (publicado el 15/11) y quiere TODOS los videos así: cortos, bien hechos,
 calidad profesional, y que **cambien los colores y el concepto visual en cada video**. Lo de abajo sigue valiendo

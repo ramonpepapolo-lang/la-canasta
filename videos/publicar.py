@@ -61,9 +61,10 @@ def post_yt(v):
             "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
     r = yt.videos().insert(part="snippet,status", body=body,
                            media_body=MediaFileUpload("vd/" + v["file"], chunksize=-1, resumable=True)).execute()
-    if v.get("thumb"):  # custom thumbnail (YouTube only allows it on verified channels; if it fails the video stays up)
+    thumb = v.get("thumb") or v.get("thumbnail")
+    if thumb:  # custom thumbnail, also for Shorts (YouTube only allows it on verified channels; if it fails the video stays up)
         try:
-            yt.thumbnails().set(videoId=r["id"], media_body=MediaFileUpload("vd/" + v["thumb"])).execute()
+            yt.thumbnails().set(videoId=r["id"], media_body=MediaFileUpload("vd/" + thumb)).execute()
         except Exception as e:
             report.append(f"  (miniatura no subida: {str(e)[:160]})")
     return f"https://youtube.com/watch?v={r['id']}" if v.get("long") else f"https://youtube.com/shorts/{r['id']}"
@@ -86,6 +87,33 @@ for i, v in enumerate(posts["videos"], 1):
             report.append(f"  {site}: publicado ✅ {url}"); new_lines.append(f"{key} {url}")
         except Exception as e:
             report.append(f"  {site}: ERROR, no se publicó: {str(e)[:300]}")
+
+# X posts with an image (a chart) and our own comment, no video (Ramon, 18 Nov 2026). posts.json "x_posts":
+# [{"image": "file.png", "x_text": "..."}]. Published on X only, with the same approval as the day's Short.
+def post_x_image(p):
+    import tweepy
+    auth = tweepy.OAuth1UserHandler(os.environ["X_API_KEY"], os.environ["X_API_SECRET"],
+                                    os.environ["X_ACCESS_TOKEN"], os.environ["X_ACCESS_SECRET"])
+    media = tweepy.API(auth).media_upload("vd/" + p["image"])
+    c = tweepy.Client(consumer_key=os.environ["X_API_KEY"], consumer_secret=os.environ["X_API_SECRET"],
+                      access_token=os.environ["X_ACCESS_TOKEN"], access_token_secret=os.environ["X_ACCESS_SECRET"])
+    t = c.create_tweet(text=p["x_text"], media_ids=[media.media_id])
+    return f"https://x.com/LaCanastaIndex/status/{t.data['id']}"
+
+
+if not only:
+    for j, p in enumerate(posts.get("x_posts", []), 1):
+        report.append(f"POST CON GRÁFICO {j} (solo X)")
+        key = f"{tag} img{j} X"
+        if key in done:
+            report.append("  X (gráfico): ya estaba publicado, no se repite."); continue
+        if not have_x:
+            report.append("  X (gráfico): faltan las claves. No se publicó."); continue
+        try:
+            url = post_x_image(p)
+            report.append(f"  X (gráfico): publicado ✅ {url}"); new_lines.append(f"{key} {url}")
+        except Exception as e:
+            report.append(f"  X (gráfico): ERROR, no se publicó: {str(e)[:300]}")
 
 if new_lines:
     with open(done_path, "a", encoding="utf-8") as f:

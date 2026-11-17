@@ -1,0 +1,385 @@
+{
+ "total": 184.396,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Cada mañana, un programa revisa más de 20.000 precios del súper.",
+   "say": "Cada mañana, mientras Argentina se despierta, un programa revisa más de veinte mil precios del súper.",
+   "start": 0.6,
+   "end": 6.318,
+   "dur": 5.718,
+   "ps": "kˈaða maɲˈana, mjˌentɾas ˌaɾxentˈina se ðespjˈeɾta, ˈum pɾoɣɾˈama reβˈisa mˈas ðe βˈAnte mˈil pɾˈesjos ðel sˈupeɾ."
+  },
+  {
+   "k": "h2",
+   "sub": "Nadie lo toca.",
+   "say": "Nadie lo toca.",
+   "start": 6.618,
+   "end": 7.675,
+   "dur": 1.057,
+   "ps": "nˈaðje lo tˈoka."
+  },
+  {
+   "k": "h3",
+   "sub": "Y el 1 de diciembre va a decir cuánto subió el súper en noviembre. Antes que el INDEC.",
+   "say": "Y el primero de diciembre va a decir cuánto subió el súper en noviembre. Antes que el Indec.",
+   "gap": 0.5,
+   "start": 7.975,
+   "end": 12.888,
+   "dur": 4.913,
+   "ps": "i el pɾimˈeɾo ðe ðisjˈembɾe βˈa a ðesˈiɾ kwˈanto suβjˈo el sˈupeɾ en noβjˈembɾe. ˈantes ke el indˈek."
+  },
+  {
+   "k": "h4",
+   "sub": "Sin cámara. Sin equipo.",
+   "say": "Sin cámara. Sin equipo.",
+   "start": 13.388,
+   "end": 14.809,
+   "dur": 1.422,
+   "ps": "sin kˈamaɾa. sin ekˈipo."
+  },
+  {
+   "k": "h5",
+   "sub": "Una persona. Un sistema.",
+   "say": "Una persona. Un sistema.",
+   "gap": 0.9,
+   "start": 15.109,
+   "end": 16.599,
+   "dur": 1.49,
+   "ps": "ˈuna peɾsˈona. ˈun sistˈema."
+  },
+  {
+   "k": "p1",
+   "sub": "La inflación oficial de un mes se conoce a mediados del mes siguiente.",
+   "say": "La inflación oficial de un mes se conoce a mediados del mes siguiente.",
+   "start": 17.499,
+   "end": 21.308,
+   "dur": 3.809,
+   "ps": "la ˌimflasjˈon ˌofisjˈal ðe ˈun mˈes se konˈose a meðjˈaðos ðel mˈes siɣjˈɛnte."
+  },
+  {
+   "k": "p2",
+   "sub": "Para el que hace las compras, eso es una eternidad.",
+   "say": "Para el que hace las compras, eso es una eternidad.",
+   "start": 21.608,
+   "end": 24.169,
+   "dur": 2.561,
+   "ps": "pˌaɾa el ke ˈase las kˈompɾas, ˈeso ˈes ˈuna ˌeteɾniðˈad."
+  },
+  {
+   "k": "p3",
+   "sub": "¿Se puede medir antes, con los precios reales del súper?",
+   "say": "Entonces, la pregunta era simple. ¿Se puede medir antes, con los precios reales del súper?",
+   "gap": 0.7,
+   "start": 24.47,
+   "end": 29.478,
+   "dur": 5.008,
+   "ps": "entˈonses, la pɾeɣˈunta ˈeɾa sˈimple. ¿se pwˈeðe meðˈiɾ ˈantes, kon los pɾˈesjos reˈales ðel sˈupeɾ?"
+  },
+  {
+   "k": "c1",
+   "sub": "Todas las mañanas entra a las webs de cinco cadenas.",
+   "say": "Todas las mañanas, el programa entra a las webs de cinco cadenas.",
+   "start": 30.178,
+   "end": 33.879,
+   "dur": 3.701,
+   "ps": "tˈoðas las maɲˈanas, el pɾoɣɾˈama ˈɛntɾa a las wˈebs ðe sˈinko kaðˈenas."
+  },
+  {
+   "k": "c2",
+   "sub": "Carrefour, Jumbo, ChangoMás, Día y Coto.",
+   "say": "Carrefour, Jumbo, ChangoMás, Día y Coto.",
+   "start": 34.179,
+   "end": 36.537,
+   "dur": 2.358,
+   "ps": "kˌarefˈowɾ, xˈumbo, ʧˈaŋɡo mˈas, dˈia i kˈoto."
+  },
+  {
+   "k": "c3",
+   "sub": "Cada precio, cada promo, cada producto sin stock.",
+   "say": "Lee cada precio, cada promo, cada producto sin stock.",
+   "start": 36.837,
+   "end": 40.05,
+   "dur": 3.213,
+   "ps": "lˈee kˈaða pɾˈesjo, kˈaða pɾˈomo, kˈaða pɾoðˈukto sin stˈok."
+  },
+  {
+   "k": "c4",
+   "sub": "Con eso arma una canasta: 1.018 productos de 45 tipos básicos.",
+   "say": "Con eso arma una canasta. Mil dieciocho productos de cuarenta y cinco tipos básicos.",
+   "start": 40.35,
+   "end": 45.577,
+   "dur": 5.227,
+   "ps": "kon ˈeso ˈaɾma ˈuna kanˈasta. mˈil ðjesjˈoʧo pɾoðˈuktos ðe kwaɾˈɛnta i sˈinko tˈipos βˈasikos."
+  },
+  {
+   "k": "c5",
+   "sub": "Carne, leche, pan, yerba.",
+   "say": "Carne, leche, pan, yerba.",
+   "start": 45.877,
+   "end": 47.468,
+   "dur": 1.59,
+   "ps": "kˈaɾne, lˈeʧe, pˈan, ʃˈeɾβa."
+  },
+  {
+   "k": "c6",
+   "sub": "Y los pondera como el INDEC: la carne pesa 17,3%. El café, té y yerba, 2,5%.",
+   "say": "Y los pondera como el Indec. La carne pesa diecisiete coma tres por ciento. El café, el té y la yerba, dos coma cinco.",
+   "gap": 0.7,
+   "start": 47.768,
+   "end": 54.845,
+   "dur": 7.077,
+   "ps": "i los pondˈeɾa kˌomo el indˈek. la kˈaɾne pˈesa ðjˌesisjˈete kˈoma tɾˈes poɾ sjˈɛnto. el kafˈe, el tˈe i la ʃˈeɾβa, dˈos kˈoma sˈinko."
+  },
+  {
+   "k": "a0",
+   "sub": "Leer precios es lo fácil. Lo difícil es no equivocarse.",
+   "say": "Pero leer precios es lo fácil. Lo difícil es no equivocarse.",
+   "start": 55.545,
+   "end": 59.204,
+   "dur": 3.659,
+   "ps": "pˌeɾo leˈeɾ pɾˈesjos ˈes lo fˈasil. lo ðifˈisil ˈes nˈo ˌekiβokˈaɾse."
+  },
+  {
+   "k": "a1",
+   "sub": "Por eso, 7 agentes de inteligencia artificial cuidan el sistema.",
+   "say": "Por eso, siete agentes de inteligencia artificial cuidan el sistema.",
+   "start": 59.504,
+   "end": 63.264,
+   "dur": 3.76,
+   "ps": "poɾ ˈeso, sjˈete axˈɛntes ðe ˌintelixˈɛnsja ˌaɾtifisjˈal kwˈiðan el sistˈema."
+  },
+  {
+   "k": "a2",
+   "sub": "Que no falte ningún día.",
+   "say": "Uno se fija que no falte ningún día.",
+   "start": 63.564,
+   "end": 65.841,
+   "dur": 2.277,
+   "ps": "ˈuno se fˈixa ke nˈo fˈalte niŋɡˈun dˈia."
+  },
+  {
+   "k": "a3",
+   "sub": "Datos limpios. Cada precio dudoso, revisado.",
+   "say": "Otro limpia los datos y revisa cada precio dudoso.",
+   "start": 66.141,
+   "end": 69.262,
+   "dur": 3.12,
+   "ps": "ˈotɾo lˈimpja los ðˈatos i reβˈisa kˈaða pɾˈesjo ðuðˈoso."
+  },
+  {
+   "k": "a4",
+   "sub": "La comparación con el INDEC.",
+   "say": "Otro compara con el Indec.",
+   "start": 69.562,
+   "end": 71.237,
+   "dur": 1.675,
+   "ps": "ˈotɾo kompˈaɾa kon el indˈek."
+  },
+  {
+   "k": "a5",
+   "sub": "El informe mensual, verificado antes de salir.",
+   "say": "Otro verifica el informe mensual antes de que salga.",
+   "start": 71.537,
+   "end": 74.601,
+   "dur": 3.063,
+   "ps": "ˈotɾo βˌeɾifˈika el infˈoɾme menswˈal ˈantes ðe ke sˈalɣa."
+  },
+  {
+   "k": "a6",
+   "sub": "Y dos videos por día con los datos del día.",
+   "say": "Y otros hacen dos videos por día, con los datos del día.",
+   "gap": 0.5,
+   "start": 74.901,
+   "end": 78.153,
+   "dur": 3.252,
+   "ps": "i ˈotɾos ˈasen dˈos βiðˈeos poɾ ðˈia, kon los ðˈatos ðel ðˈia."
+  },
+  {
+   "k": "a7",
+   "sub": "Regla de oro: el mismo código de barras, en el mismo súper.",
+   "say": "Y una regla de oro. Solo se compara el mismo código de barras, en el mismo súper.",
+   "gap": 0.8,
+   "start": 78.653,
+   "end": 83.173,
+   "dur": 4.521,
+   "ps": "i ˈuna rˈeɣla ðe ˈoɾo. sˈolo se kompˈaɾa el mˈismo kˈoðiɣo ðe βˈaras, en el mˈismo sˈupeɾ."
+  },
+  {
+   "k": "f0",
+   "sub": "Veinticinco días después, ¿qué encontró?",
+   "say": "Veinticinco días después, ¿qué encontró?",
+   "gap": 0.6,
+   "start": 83.973,
+   "end": 86.306,
+   "dur": 2.333,
+   "ps": "bˌAntisˈinko ðˈias ðespwˈes, ¿kˈe ˌenkontɾˈo?"
+  },
+  {
+   "k": "f1",
+   "sub": "Primero: un día solo no dice casi nada.",
+   "say": "Primero. Un día solo no dice casi nada.",
+   "start": 86.906,
+   "end": 89.299,
+   "dur": 2.393,
+   "ps": "pɾimˈeɾo. ˈun dˈia sˈolo nˈo ðˈise kˈasi nˈaða."
+  },
+  {
+   "k": "f2",
+   "sub": "El índice sube y baja con las promos que empiezan y terminan.",
+   "say": "El índice sube y baja con las promos que empiezan y terminan.",
+   "start": 89.599,
+   "end": 93.09,
+   "dur": 3.491,
+   "ps": "el ˈindise sˈuβe i βˈaxa kon las pɾˈomos ke empjˈesan i teɾmˈinan."
+  },
+  {
+   "k": "f3",
+   "sub": "Por eso se mira la semana: +0,21% contra la semana anterior.",
+   "say": "Por eso se mira la semana. Los últimos siete días, contra los siete anteriores: más cero coma veintiuno por ciento.",
+   "start": 93.39,
+   "end": 99.885,
+   "dur": 6.495,
+   "ps": "poɾ ˈeso se mˈiɾa la semˈana. los ˈultimos sjˈete ðˈias, kˈontɾa los sjˈete ˌanteɾjˈoɾes: mˈas sˈeɾo kˈoma βAntjˈuno poɾ sjˈɛnto."
+  },
+  {
+   "k": "f4",
+   "sub": "Verduras: 12,6% más baratas que la primera semana.",
+   "say": "Y adentro de la canasta, cada cosa va por su lado. Las verduras, doce coma seis por ciento más baratas que en la primera semana.",
+   "start": 100.185,
+   "end": 107.393,
+   "dur": 7.208,
+   "ps": "i aðˈɛntɾo ðe la kanˈasta, kˈaða kˈosa βˈa poɾ su lˈaðo. las βeɾðˈuɾas, dˈose kˈoma sˈAs poɾ sjˈɛnto mˈas βaɾˈatas ke en la pɾimˈeɾa semˈana."
+  },
+  {
+   "k": "f5",
+   "sub": "Lácteos y huevos: 3,1% más caros.",
+   "say": "Los lácteos y los huevos, tres coma uno más caros.",
+   "gap": 0.8,
+   "start": 107.693,
+   "end": 110.4,
+   "dur": 2.707,
+   "ps": "los lˈakteos i los wˈeβos, tɾˈes kˈoma ˈuno mˈas kˈaɾos."
+  },
+  {
+   "k": "r0",
+   "sub": "¿Qué súper es más barato?",
+   "say": "Y ahora, la pregunta que más nos hacen. ¿Qué súper es más barato?",
+   "start": 111.2,
+   "end": 114.832,
+   "dur": 3.632,
+   "ps": "i aˈoɾa, la pɾeɣˈunta ke mˈas nos ˈasen. ¿kˈe sˈupeɾ ˈes mˈas βaɾˈato?"
+  },
+  {
+   "k": "r1",
+   "sub": "Los mismos 296 productos. Semana del 8 al 14 de noviembre.",
+   "say": "Los mismos doscientos noventa y seis productos. Semana del ocho al catorce de noviembre.",
+   "start": 115.132,
+   "end": 120.233,
+   "dur": 5.101,
+   "ps": "los mˈismos ðosjˈɛntos noβˈɛnta i sˈAs pɾoðˈuktos. semˈana ðel ˈoʧo al katˈoɾse ðe noβjˈembɾe."
+  },
+  {
+   "k": "r2",
+   "sub": "Día: $1.240.791.",
+   "say": "En Día, un millón doscientos cuarenta mil pesos.",
+   "start": 120.533,
+   "end": 123.266,
+   "dur": 2.733,
+   "ps": "en dˈia, ˈun miʃˈon dosjˈɛntos kwaɾˈɛnta mˈil pˈesos."
+  },
+  {
+   "k": "r3",
+   "sub": "Jumbo, por lo mismo: $1.458.079. 17,5% más.",
+   "say": "En Jumbo, por exactamente lo mismo, un millón cuatrocientos cincuenta y ocho mil. Diecisiete y medio por ciento más.",
+   "start": 123.566,
+   "end": 130.296,
+   "dur": 6.73,
+   "ps": "en xˈumbo, poɾ eksˈaktamˈente lo mˈismo, ˈun miʃˈon kwˌatɾosjˈɛntos sinkwˈɛnta i ˈoʧo mˈil. djˌesisjˈete i mˈeðjo poɾ sjˈɛnto mˈas."
+  },
+  {
+   "k": "r4",
+   "sub": "Jumbo fue el más caro en 271 de los 296 productos.",
+   "say": "Jumbo fue el más caro en doscientos setenta y uno de los doscientos noventa y seis productos.",
+   "start": 130.596,
+   "end": 135.63,
+   "dur": 5.033,
+   "ps": "xˈumbo fwˈe el mˈas kˈaɾo en dosjˈɛntos setˈɛnta i ˈuno ðe los ðosjˈɛntos noβˈɛnta i sˈAs pɾoðˈuktos."
+  },
+  {
+   "k": "r5",
+   "sub": "Y no es suerte: Día ganó todas las semanas que medimos.",
+   "say": "Y no es una semana con suerte. Día salió más barato en todas las semanas que medimos.",
+   "gap": 0.7,
+   "start": 135.929,
+   "end": 140.783,
+   "dur": 4.853,
+   "ps": "i nˈo ˈes ˈuna semˈana kon swˈeɾte. dˈia saljˈo mˈas βaɾˈato en tˈoðas las semˈanas ke meðˈimos."
+  },
+  {
+   "k": "t1",
+   "sub": "Pero acá viene lo raro.",
+   "say": "Pero acá viene lo raro.",
+   "start": 141.483,
+   "end": 142.917,
+   "dur": 1.435,
+   "ps": "pˌeɾo akˈa βjˈene lo rˈaɾo."
+  },
+  {
+   "k": "t2",
+   "sub": "Producto por producto, el que más gana es ChangoMás: 135, contra 109 de Día.",
+   "say": "Producto por producto, el que más veces gana no es Día. Es ChangoMás. Ciento treinta y cinco productos, contra ciento nueve de Día.",
+   "start": 143.217,
+   "end": 150.601,
+   "dur": 7.384,
+   "ps": "pɾoðˈukto poɾ pɾoðˈukto, el ke mˈas βˈeses ɣˈana nˈo ˈes ðˈia. ˈes ʧˈaŋɡo mˈas. sjˈɛnto tɾˈAnta i sˈinko pɾoðˈuktos, kˈontɾa sjˈɛnto nwˈeβe ðe ðˈia."
+  },
+  {
+   "k": "t3",
+   "sub": "ChangoMás gana seguido, pero por poquito. Cuando Día gana, gana por mucho.",
+   "say": "¿Cómo puede ser? ChangoMás gana seguido, pero por poquito. Y cuando Día gana, gana por mucho.",
+   "start": 150.901,
+   "end": 156.115,
+   "dur": 5.214,
+   "ps": "¿kˈomo pwˈeðe sˈer? ʧˈaŋɡo mˈas ɣˈana seɣˈiðo, pˌeɾo poɾ pokˈito. i kwˌando ðˈia ɣˈana, ɡˈana poɾ mˈuʧo."
+  },
+  {
+   "k": "t4",
+   "sub": "Pañales Huggies talle G, 40 unidades: Día $15.743. ChangoMás $26.215. Jumbo $28.970.",
+   "say": "Los mismos pañales Huggies, talle G, cuarenta unidades. En Día, quince mil setecientos. En ChangoMás, veintiséis mil. En Jumbo, casi veintinueve mil.",
+   "gap": 0.8,
+   "start": 156.415,
+   "end": 164.956,
+   "dur": 8.541,
+   "ps": "los mˈismos paɲˈales ˈuɡxjes, tˈaʃe xˈe, kwaɾˈɛnta ˌuniðˈaðes. en dˈia, kˈinse mˈil sˌetesjˈɛntos. en ʧˈaŋɡo mˈas, bˌAntisˈeis mˈil. en xˈumbo, kˈasi βˌAntinwˈeβe mˈil."
+  },
+  {
+   "k": "o1",
+   "sub": "Todo es abierto y gratis: los datos están en Kaggle y Zenodo.",
+   "say": "Todo esto es abierto y gratis. Los datos están en Kágel y en Zenodo, para cualquiera que los quiera revisar.",
+   "start": 165.756,
+   "end": 171.847,
+   "dur": 6.091,
+   "ps": "tˈoðo ˈesto ˈes aβjˈeɾto i ɣɾˈatis. los ðˈatos estˈan eŋ kˈaxel i en senˈoðo, pˌaɾa kwalkjˈeɾa ke los kjˈeɾa rˌeβisˈaɾ."
+  },
+  {
+   "k": "o2",
+   "sub": "El 1 de diciembre sale el primer informe: la inflación del súper en noviembre.",
+   "say": "Y el primero de diciembre sale el primer informe. La inflación del súper en noviembre.",
+   "start": 172.147,
+   "end": 176.892,
+   "dur": 4.744,
+   "ps": "i el pɾimˈeɾo ðe ðisjˈembɾe sˈale el pɾimˈeɾ infˈoɾme. la ˌimflasjˈon del sˈupeɾ en noβjˈembɾe."
+  },
+  {
+   "k": "o3",
+   "sub": "Suscribite para verlo antes que nadie. lacanastaindex.com",
+   "say": "Suscribite para verlo antes que nadie. Y entrá a la canasta index punto com.",
+   "start": 177.192,
+   "end": 181.696,
+   "dur": 4.504,
+   "ps": "sˌuskɾiβˈite pˌaɾa βˈeɾlo ˈantes ke nˈaðje. i entɾˈa a la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

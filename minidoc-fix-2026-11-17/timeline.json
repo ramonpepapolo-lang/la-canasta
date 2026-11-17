@@ -1,0 +1,43 @@
+{
+ "total": 25.944,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "c2",
+   "sub": "Carrefour, Jumbo, ChangoMás, Día y Coto.",
+   "say": "Carrefour, Yumbo, ChangoMás, Día y Coto.",
+   "start": 0.3,
+   "end": 2.732,
+   "dur": 2.432,
+   "ps": "kˌarefˈowɾ, ʃˈumbo, ʧˈaŋɡo mˈas, dˈia i kˈoto."
+  },
+  {
+   "k": "r3",
+   "sub": "Jumbo, por lo mismo: $1.458.079. 17,5% más.",
+   "say": "En Yumbo, por exactamente lo mismo, un millón cuatrocientos cincuenta y ocho mil. Diecisiete y medio por ciento más.",
+   "start": 3.032,
+   "end": 9.712,
+   "dur": 6.68,
+   "ps": "en ʤˈumbo, poɾ eksˈaktamˈente lo mˈismo, ˈun miʃˈon kwˌatɾosjˈɛntos sinkwˈɛnta i ˈoʧo mˈil. djˌesisjˈete i mˈeðjo poɾ sjˈɛnto mˈas."
+  },
+  {
+   "k": "t4",
+   "sub": "Pañales Huggies talle G, 40 unidades: Día $15.743. ChangoMás $26.215. Jumbo $28.970.",
+   "say": "Los mismos pañales Jáguis, talle G, cuarenta unidades. En Día, quince mil setecientos. En ChangoMás, veintiséis mil. En Yumbo, casi veintinueve mil.",
+   "gap": 0.8,
+   "start": 10.012,
+   "end": 18.524,
+   "dur": 8.512,
+   "ps": "los mˈismos paɲˈales xˈaɣis, tˈaʃe xˈe, kwaɾˈɛnta ˌuniðˈaðes. en dˈia, kˈinse mˈil sˌetesjˈɛntos. en ʧˈaŋɡo mˈas, bˌAntisˈeis mˈil. en ʤˈumbo, kˈasi βˌAntinwˈeβe mˈil."
+  },
+  {
+   "k": "o1",
+   "sub": "Todo es abierto y gratis: los datos están en Kaggle y Zenodo.",
+   "say": "Todo esto es abierto y gratis. Los datos están en Káguel y en Zenodo, para cualquiera que los quiera revisar.",
+   "start": 19.324,
+   "end": 25.344,
+   "dur": 6.02,
+   "ps": "tˈoðo ˈesto ˈes aβjˈeɾto i ɣɾˈatis. los ðˈatos estˈan eŋ kˈaɣel i en senˈoðo, pˌaɾa kwalkjˈeɾa ke los kjˈeɾa rˌeβisˈaɾ."
+  }
+ ]
+}

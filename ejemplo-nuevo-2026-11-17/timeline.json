@@ -1,0 +1,71 @@
+{
+ "total": 26.706,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo Malbec. Mismo código de barras.",
+   "say": "Mismo Malbec. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.168,
+   "dur": 2.048,
+   "ps": "mˈismo malβˈek. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.470… o $6.400.",
+   "say": "Dos mil cuatrocientos setenta, o seis mil cuatrocientos.",
+   "gap": 0.35,
+   "start": 2.388,
+   "end": 5.491,
+   "dur": 3.104,
+   "ps": "dˈos mˈil kwˌatɾosjˈɛntos setˈɛnta, o sˈAs mˈil kwˌatɾosjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "Alaris Malbec 750: $2.470 en Carrefour.",
+   "say": "Alaris Malbec, en Carrefour: dos mil cuatrocientos setenta.",
+   "start": 5.841,
+   "end": 9.155,
+   "dur": 3.313,
+   "ps": "alˈaɾis malβˈek, en kˌarefˈowɾ: dˈos mˈil kwˌatɾosjˈɛntos setˈɛnta."
+  },
+  {
+   "k": "w2",
+   "sub": "ChangoMás $5.909. Jumbo $6.400.",
+   "say": "En ChangoMás, cinco mil novecientos. En Jumbo, seis mil cuatrocientos.",
+   "start": 9.375,
+   "end": 13.254,
+   "dur": 3.879,
+   "ps": "en ʧˈaŋɡo mˈas, sˈinko mˈil nˌoβesjˈɛntos. en xˈumbo, sˈAs mˈil kwˌatɾosjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $5.910.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es cinco mil novecientos diez.",
+   "gap": 0.3,
+   "start": 13.474,
+   "end": 17.404,
+   "dur": 3.93,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes sˈinko mˈil nˌoβesjˈɛntos ðjˈes."
+  },
+  {
+   "k": "b2",
+   "sub": "Está así desde el jueves 12. Puede terminar cualquier día.",
+   "say": "Está así desde el jueves doce, y puede terminar cualquier día.",
+   "start": 17.704,
+   "end": 21.017,
+   "dur": 3.313,
+   "ps": "estˈa asˈi ðˌesðe el xwˈeβes ðˈose, i pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $3.930 por botella. Más de la mitad.",
+   "say": "Ahorrás tres mil novecientos treinta pesos por botella. Más de la mitad.",
+   "start": 21.237,
+   "end": 25.186,
+   "dur": 3.948,
+   "ps": "ˌaorˈas tɾˈes mˈil nˌoβesjˈɛntos tɾˈAnta pˈesos poɾ βotˈeʃa. mˈas ðe la mitˈad."
+  }
+ ]
+}

@@ -8,48 +8,39 @@
   "complete": false,
   "days": [
    "2026-11-15",
-   "2026-11-16"
+   "2026-11-17"
   ],
-  "days_of_data": 2,
-  "n_products": 310,
+  "days_of_data": 3,
+  "n_products": 289,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1285053.15,
+    "total": 1204312.9,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1317060.6,
-    "pct": 2.49
+    "total": 1219381.48,
+    "pct": 1.25
    },
    {
     "shop": "Carrefour",
-    "total": 1360279.98,
-    "pct": 5.85
+    "total": 1237985.26,
+    "pct": 2.8
    },
    {
     "shop": "Jumbo",
-    "total": 1506841.0,
-    "pct": 17.26
+    "total": 1372322.33,
+    "pct": 13.95
    }
   ],
   "cheapest_count": {
-   "Carrefour": 114,
-   "Jumbo": 10,
-   "ChangoMas": 140,
-   "Dia": 126
+   "Carrefour": 107,
+   "Jumbo": 9,
+   "ChangoMas": 135,
+   "Dia": 106
   },
   "examples": [
-   {
-    "ean": "7509546686622",
-    "name": "Enjuague Bucal Colgate Total Carbón Activado 250 Ml",
-    "low_shop": "Dia",
-    "low": 2635.8,
-    "high_shop": "Jumbo",
-    "high": 6900.0,
-    "pct": 161.8
-   },
    {
     "ean": "7790240017069",
     "name": "Vino Blanco Alaris Sauvignon Blanc 750 Ml",
@@ -65,8 +56,17 @@
     "low_shop": "Carrefour",
     "low": 2470.0,
     "high_shop": "Dia",
-    "high": 5855.0,
-    "pct": 137.0
+    "high": 5883.67,
+    "pct": 138.2
+   },
+   {
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15200.0,
+    "high_shop": "Jumbo",
+    "high": 27750.0,
+    "pct": 82.6
    }
   ]
  },
@@ -185,7 +185,7 @@
   "examples": [
    {
     "ean": "7791290793446",
-    "name": "Jabon En Polvo Bio-enzimas Baja Espuma 600 Grs Skip",
+    "name": "Jabón En Polvo Skip Bio-Enzimas 600g",
     "low_shop": "ChangoMas",
     "low": 2609.4,
     "high_shop": "Jumbo",

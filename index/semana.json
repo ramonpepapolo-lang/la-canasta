@@ -1,15 +1,15 @@
 {
  "ready": true,
- "days_of_data": 24,
+ "days_of_data": 25,
  "now": [
-  "2026-11-10",
-  "2026-11-16"
+  "2026-11-11",
+  "2026-11-17"
  ],
  "before": [
-  "2026-11-03",
-  "2026-11-09"
+  "2026-11-04",
+  "2026-11-10"
  ],
- "paid": 0.25,
- "regular": -0.27,
- "products_compared": 963
+ "paid": 0.21,
+ "regular": -0.15,
+ "products_compared": 959
 }

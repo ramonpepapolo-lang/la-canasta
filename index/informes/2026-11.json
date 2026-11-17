@@ -3,33 +3,33 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 0.55,
+ "inflation": 2.65,
  "base_date": "2026-10-31",
- "end_date": "2026-11-16",
- "days_of_data": 16,
- "prices_collected": 305911,
+ "end_date": "2026-11-17",
+ "days_of_data": 17,
+ "prices_collected": 329948,
  "headline": {
-  "end_to_end_paid": 0.55,
-  "end_to_end_regular": -0.74,
+  "end_to_end_paid": 2.65,
+  "end_to_end_regular": -0.75,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.17
+   "pct": 1.01
   },
   {
    "shop": "ChangoMas",
-   "pct": 2.0
+   "pct": 4.15
   },
   {
    "shop": "Dia",
-   "pct": -1.23
+   "pct": 4.83
   },
   {
    "shop": "Jumbo",
-   "pct": 3.58
+   "pct": 3.82
   }
  ],
  "groups": [
@@ -39,29 +39,44 @@
    "pct": 12.8
   },
   {
-   "group": "otros_alimentos",
+   "group": "limpieza",
    "in_headline": true,
-   "pct": 4.11
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 2.47
-  },
-  {
-   "group": "lacteos",
-   "in_headline": true,
-   "pct": 2.13
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 1.65
+   "pct": 10.13
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": 1.45
+   "pct": 7.45
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 6.03
+  },
+  {
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 5.69
+  },
+  {
+   "group": "otros_alimentos",
+   "in_headline": true,
+   "pct": 3.66
+  },
+  {
+   "group": "azucar",
+   "in_headline": true,
+   "pct": 3.37
+  },
+  {
+   "group": "lacteos",
+   "in_headline": true,
+   "pct": 3.12
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": 1.48
   },
   {
    "group": "carne_vacuna",
@@ -69,46 +84,40 @@
    "pct": 1.38
   },
   {
-   "group": "azucar",
+   "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": 1.1
-  },
-  {
-   "group": "limpieza",
-   "in_headline": true,
-   "pct": 0.16
+   "pct": 1.01
   },
   {
    "group": "aceites",
    "in_headline": true,
-   "pct": -1.29
-  },
-  {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": -1.6
+   "pct": 0.03
   },
   {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": -2.38
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": -3.56
+   "pct": -0.61
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -14.4
+   "pct": -14.75
   }
  ],
  "products_compared": 1018,
- "products_up": 196,
- "products_down": 137,
- "products_same": 685,
+ "products_up": 238,
+ "products_down": 85,
+ "products_same": 695,
  "top_up": [
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "Dia",
+   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
+   "before": 2963.35,
+   "now": 5505.0,
+   "pct": 85.77
+  },
   {
    "type": "arroz",
    "type_en": "Rice",
@@ -144,27 +153,9 @@
    "before": 1050.0,
    "now": 1850.0,
    "pct": 76.19
-  },
-  {
-   "type": "fideos",
-   "type_en": "Dry pasta",
-   "shop": "Dia",
-   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
-   "before": 1050.0,
-   "now": 1850.0,
-   "pct": 76.19
   }
  ],
  "top_down": [
-  {
-   "type": "cerveza",
-   "type_en": "Beer",
-   "shop": "Dia",
-   "name": "Cerveza Warsteiner 473 Ml.",
-   "before": 3690.0,
-   "now": 1990.0,
-   "pct": -46.07
-  },
   {
    "type": "cebolla",
    "type_en": "Onions",
@@ -175,13 +166,13 @@
    "pct": -42.51
   },
   {
-   "type": "yerba",
-   "type_en": "Yerba mate",
-   "shop": "Dia",
-   "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
-   "before": 2500.0,
-   "now": 1490.0,
-   "pct": -40.4
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
+   "shop": "ChangoMas",
+   "name": "Pasta Dental Colgate Luminous Charcoal 90 G",
+   "before": 8069.0,
+   "now": 4799.0,
+   "pct": -40.53
   },
   {
    "type": "jabon_ropa",
@@ -193,13 +184,22 @@
    "pct": -40.0
   },
   {
-   "type": "yerba",
-   "type_en": "Yerba mate",
+   "type": "jabon_ropa",
+   "type_en": "Laundry powder",
    "shop": "ChangoMas",
-   "name": "Yerba Mate Chamigo Sin Tacc 500g",
-   "before": 1949.0,
-   "now": 1169.4,
+   "name": "Jabon En Polvo Ala Matic Ecolavado 800 Gr",
+   "before": 3909.0,
+   "now": 2345.4,
    "pct": -40.0
+  },
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Carrefour",
+   "name": "Cebolla Sanes en red 4 uni",
+   "before": 4990.0,
+   "now": 2999.0,
+   "pct": -39.9
   }
  ],
  "series": [
@@ -287,6 +287,11 @@
    "date": "2026-11-16",
    "paid": 100.066,
    "regular": 99.21
+  },
+  {
+   "date": "2026-11-17",
+   "paid": 102.155,
+   "regular": 99.198
   }
  ]
 }

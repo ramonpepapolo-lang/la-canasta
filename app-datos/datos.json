@@ -1,12 +1,12 @@
 {
- "date": "2026-11-16",
- "previous": "2026-11-15",
+ "date": "2026-11-17",
+ "previous": "2026-11-16",
  "index": {
-  "date": "2026-11-16",
-  "paid": 100.066,
-  "regular": 99.21,
-  "day_change": 0.99,
-  "days_of_data": 24,
+  "date": "2026-11-17",
+  "paid": 102.155,
+  "regular": 99.198,
+  "day_change": 2.09,
+  "days_of_data": 25,
   "series": [
    [
     "2026-10-24",
@@ -127,18 +127,23 @@
     "2026-11-16",
     100.066,
     99.21
+   ],
+   [
+    "2026-11-17",
+    102.155,
+    99.198
    ]
   ],
   "mode": "week",
-  "week_paid": 0.25,
-  "week_regular": -0.27,
+  "week_paid": 0.21,
+  "week_regular": -0.15,
   "now": [
-   "2026-11-10",
-   "2026-11-16"
+   "2026-11-11",
+   "2026-11-17"
   ],
   "before": [
-   "2026-11-03",
-   "2026-11-09"
+   "2026-11-04",
+   "2026-11-10"
   ]
  },
  "ranking": {
@@ -146,225 +151,252 @@
   "label_en": "Week of 15 to 21 November 2026",
   "days": [
    "2026-11-15",
-   "2026-11-16"
+   "2026-11-17"
   ],
-  "n_products": 310,
+  "n_products": 289,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1285053.15,
+    "total": 1204312.9,
     "pct": 0.0
    },
    {
     "shop": "ChangoMas",
-    "total": 1317060.6,
-    "pct": 2.49
+    "total": 1219381.48,
+    "pct": 1.25
    },
    {
     "shop": "Carrefour",
-    "total": 1360279.98,
-    "pct": 5.85
+    "total": 1237985.26,
+    "pct": 2.8
    },
    {
     "shop": "Jumbo",
-    "total": 1506841.0,
-    "pct": 17.26
+    "total": 1372322.33,
+    "pct": 13.95
    }
   ]
  },
  "down": [
   {
-   "shop": "Jumbo",
-   "name": "Cebolla Superior Por Kg",
-   "type": "cebolla",
-   "before": 3699.0,
-   "now": 2299.0,
-   "pct": -37.8,
-   "why": "price"
+   "shop": "ChangoMas",
+   "name": "Pasta Dental Colgate Luminous Charcoal 90 G",
+   "type": "pasta_dental",
+   "before": 8069.0,
+   "now": 4799.0,
+   "pct": -40.5,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Shampoo DIA Extra Brillo Manzana 950 Ml.",
-   "type": "shampoo",
-   "before": 2940.0,
-   "now": 3090.0,
-   "pct": 5.1,
-   "why": "list_up"
+   "shop": "Carrefour",
+   "name": "Pasta Dental Colgate Luminous White Brilliant 140 grs",
+   "type": "pasta_dental",
+   "before": 11299.0,
+   "now": 7909.3,
+   "pct": -30.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Pasta dental Colgate Luminous White Brilliant 90 grs",
+   "type": "pasta_dental",
+   "before": 7585.0,
+   "now": 5309.5,
+   "pct": -30.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Pasta dental Colgate Luminous White charcoal 90 grs",
+   "type": "pasta_dental",
+   "before": 7579.0,
+   "now": 5305.3,
+   "pct": -30.0,
+   "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "type": "pollo_entero",
-   "before": 3789.0,
-   "now": 3989.0,
-   "pct": 5.3,
-   "why": "list_up"
+   "name": "Cerveza Rubia Brahma 473ml",
+   "type": "cerveza",
+   "before": 2829.0,
+   "now": 1999.0,
+   "pct": -29.3,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Jabon De Tocador Flores 125Gr Saint Tropez 3 Ud.",
-   "type": "jabon_tocador",
-   "before": 3070.0,
-   "now": 3300.0,
-   "pct": 7.5,
-   "why": "list_up"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg",
+   "shop": "ChangoMas",
+   "name": "Queso Cremoso Aliada 600 G",
    "type": "queso_cremoso",
-   "before": 16500.0,
-   "now": 18900.0,
-   "pct": 14.5,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 4499.0,
-   "now": 5499.0,
-   "pct": 22.2,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
-   "type": "vacio",
-   "before": 17999.0,
-   "now": 22289.0,
-   "pct": 23.8,
-   "why": "price"
+   "before": 12499.0,
+   "now": 8990.0,
+   "pct": -28.1,
+   "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Banana 1 Kg",
-   "type": "banana",
-   "before": 1759.2,
-   "now": 2199.0,
-   "pct": 25.0,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Suprema De Pollo Granel Fresca",
-   "type": "suprema",
-   "before": 8999.0,
-   "now": 12449.0,
-   "pct": 38.3,
-   "why": "price"
+   "name": "Galletitas Cerealitas Clásicas 212gr",
+   "type": "galletitas",
+   "before": 2319.0,
+   "now": 1699.0,
+   "pct": -26.7,
+   "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 17999.0,
-   "now": 25299.0,
-   "pct": 40.6,
-   "why": "promo_end"
+   "name": "Vino Tinto Callia Malbec 750ml",
+   "type": "vino",
+   "before": 5999.0,
+   "now": 4399.0,
+   "pct": -26.7,
+   "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Huevos Blancos La Piara 30 U",
-   "type": "huevos",
-   "before": 4999.0,
-   "now": 8899.0,
-   "pct": 78.0,
-   "why": "promo_end"
+   "name": "Vino Tinto Elementos Malbec 750 Ml",
+   "type": "vino",
+   "before": 7319.0,
+   "now": 5399.0,
+   "pct": -26.2,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Vino Tinto Elementos Syrah 750ml",
+   "type": "vino",
+   "before": 7319.0,
+   "now": 5399.0,
+   "pct": -26.2,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Papel Higiénico Higienol Max Hoja Simple 100 M 4 U",
+   "type": "papel_higienico",
+   "before": 8199.0,
+   "now": 6149.25,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Agua Mineral Villavicencio Aventura Sin Gas 750 Ml",
+   "type": "agua",
+   "before": 2499.0,
+   "now": 1999.0,
+   "pct": -20.0,
+   "why": "promo_start"
   }
  ],
  "up": [
   {
-   "shop": "ChangoMas",
-   "name": "Huevos Blancos La Piara 30 U",
-   "type": "huevos",
-   "before": 4999.0,
-   "now": 8899.0,
-   "pct": 78.0,
+   "shop": "Dia",
+   "name": "Cerveza Warsteiner 473 Ml.",
+   "type": "cerveza",
+   "before": 1990.0,
+   "now": 3690.0,
+   "pct": 85.4,
    "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
-   "type": "cuadril",
-   "before": 17999.0,
-   "now": 25299.0,
-   "pct": 40.6,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Suprema De Pollo Granel Fresca",
-   "type": "suprema",
-   "before": 8999.0,
-   "now": 12449.0,
-   "pct": 38.3,
-   "why": "price"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Banana 1 Kg",
-   "type": "banana",
-   "before": 1759.2,
-   "now": 2199.0,
-   "pct": 25.0,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
-   "type": "vacio",
-   "before": 17999.0,
-   "now": 22289.0,
-   "pct": 23.8,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 4499.0,
-   "now": 5499.0,
-   "pct": 22.2,
-   "why": "price"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Queso Cremon Cremoso La Serenisima Fraccionado Aprox 1 Kg",
-   "type": "queso_cremoso",
-   "before": 16500.0,
-   "now": 18900.0,
-   "pct": 14.5,
-   "why": "price"
   },
   {
    "shop": "Dia",
-   "name": "Jabon De Tocador Flores 125Gr Saint Tropez 3 Ud.",
-   "type": "jabon_tocador",
-   "before": 3070.0,
-   "now": 3300.0,
-   "pct": 7.5,
-   "why": "list_up"
+   "name": "Yerba Mate Seleccion Nobleza Gaucha 500 Gr.",
+   "type": "yerba",
+   "before": 1490.0,
+   "now": 2500.0,
+   "pct": 67.8,
+   "why": "promo_end"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Pollo Entero Fresco 2.700kg",
-   "type": "pollo_entero",
-   "before": 3789.0,
-   "now": 3989.0,
-   "pct": 5.3,
+   "shop": "Dia",
+   "name": "Vino Tinto Alma Mora Malbec 750 ml.",
+   "type": "vino",
+   "before": 5470.0,
+   "now": 9170.0,
+   "pct": 67.6,
    "why": "list_up"
   },
   {
    "shop": "Dia",
-   "name": "Shampoo DIA Extra Brillo Manzana 950 Ml.",
+   "name": "Vino Tinto Alma Mora Syrah 750 Ml.",
+   "type": "vino",
+   "before": 5470.0,
+   "now": 9169.0,
+   "pct": 67.6,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Vino Tinto Elementos Malbec 750 ml.",
+   "type": "vino",
+   "before": 4760.0,
+   "now": 7979.0,
+   "pct": 67.6,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Vino Tinto Suter Malbec 750 Ml.",
+   "type": "vino",
+   "before": 3140.0,
+   "now": 5259.0,
+   "pct": 67.5,
+   "why": "list_up"
+  },
+  {
+   "shop": "Dia",
+   "name": "Galletitas Chocolate Chocolinas 250 Gr.",
+   "type": "galletitas",
+   "before": 1690.0,
+   "now": 2824.0,
+   "pct": 67.1,
+   "why": "list_down"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Instantáneo Arlistan 170 G",
+   "type": "cafe",
+   "before": 6599.0,
+   "now": 10999.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Active Gel Limón 400 Ml",
+   "type": "detergente",
+   "before": 2573.4,
+   "now": 4289.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Active Gel Limón 750 Ml",
+   "type": "detergente",
+   "before": 4943.4,
+   "now": 8239.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Concentrado Active Gel 400ml",
+   "type": "detergente",
+   "before": 2573.4,
+   "now": 4289.0,
+   "pct": 66.7,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Shampoo Tresemme Hydra 500ml",
    "type": "shampoo",
-   "before": 2940.0,
-   "now": 3090.0,
-   "pct": 5.1,
-   "why": "list_up"
+   "before": 8201.4,
+   "now": 13669.0,
+   "pct": 66.7,
+   "why": "promo_end"
   }
  ],
- "n_down": 1,
- "n_up": 10
+ "n_down": 18,
+ "n_up": 100
 }

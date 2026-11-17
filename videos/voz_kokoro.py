@@ -12,12 +12,18 @@ from misaki import espeak
 req = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
 voice = req.get("voice", "em_alex"); speed = float(req.get("speed", 1.0))
 pre, gap, tail = float(req.get("pre", 0.95)), float(req.get("gap", 0.28)), float(req.get("tail", 1.7))
-g2p = espeak.EspeakG2P(language="es-419")
-pipe = KPipeline(lang_code="e", repo_id="hexgrad/Kokoro-82M")
+lang = req.get("lang", "es")  # "es" (Argentine Spanish, default) or "en" (American English, for the English versions)
+if lang == "en":
+    pipe = KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M")
+else:
+    g2p = espeak.EspeakG2P(language="es-419")
+    pipe = KPipeline(lang_code="e", repo_id="hexgrad/Kokoro-82M")
 SR = 24000
 
 
 def phon(text):
+    if lang == "en":
+        return " ".join(r.phonemes for r in pipe(text, voice=voice, speed=speed))
     ps, _ = g2p(text)
     for a in ["jj", "ʝ", "ɟʝ", "ʎ"]:  # rioplatense: "ll" / "y" suenan "sh"
         ps = ps.replace(a, "ʃ")
@@ -26,7 +32,10 @@ def phon(text):
 
 parts = [np.zeros(int(pre * SR))]; t = pre; lines = []
 for L in req["lines"]:
-    audio = [np.asarray(r.audio) for r in pipe.generate_from_tokens(phon(L["say"]), voice=voice, speed=speed)]
+    if lang == "en":
+        audio = [np.asarray(r.audio) for r in pipe(L["say"], voice=voice, speed=speed)]
+    else:
+        audio = [np.asarray(r.audio) for r in pipe.generate_from_tokens(phon(L["say"]), voice=voice, speed=speed)]
     a = np.concatenate(audio)
     idx = np.where(np.abs(a) > 0.01)[0]
     a = a[max(0, idx[0] - 240): idx[-1] + 480]

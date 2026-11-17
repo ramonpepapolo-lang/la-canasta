@@ -1,0 +1,87 @@
+{
+ "total": 29.106,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "gap": 0.75,
+   "sub": "55 bebidas iguales. 4 súper.",
+   "say": "Cincuenta y cinco bebidas iguales. Cuatro súper.",
+   "start": 0.95,
+   "end": 3.833,
+   "dur": 2.883,
+   "ps": "sinkwˈɛnta i sˈinko βeβˈiðas iɣwˈales. kwˈatɾo sˈupeɾ."
+  },
+  {
+   "k": "n",
+   "scene": "n",
+   "sub": "Gaseosas, aguas, vinos y cervezas: mismo código.",
+   "say": "Gaseosas, aguas, vinos y cervezas: mismo código.",
+   "start": 4.583,
+   "end": 7.808,
+   "dur": 3.225,
+   "ps": "ɡˌaseˈosas, ˈaɣwas, bˈinos i seɾβˈesas: mˈismo kˈoðiɣo."
+  },
+  {
+   "k": "cm",
+   "scene": "rank",
+   "sub": "Hoy, ChangoMás: $205.931. El más barato.",
+   "say": "Hoy, ChangoMás: doscientos seis mil. El más barato.",
+   "start": 8.088,
+   "end": 10.957,
+   "dur": 2.869,
+   "ps": "ˈoɪ, ʧˈaŋɡo mˈas: dosjˈɛntos sˈAs mˈil. el mˈas βaɾˈato."
+  },
+  {
+   "k": "mid",
+   "scene": "rank",
+   "sub": "Carrefour, 2% más. Día, 8,6%.",
+   "say": "Carrefour, dos por ciento más. Día, ocho coma seis.",
+   "start": 11.237,
+   "end": 14.339,
+   "dur": 3.103,
+   "ps": "kˌarefˈowɾ, dˈos poɾ sjˈɛnto mˈas. dˈia, ˈoʧo kˈoma sˈAs."
+  },
+  {
+   "k": "jumbo",
+   "scene": "rank",
+   "sub": "¿Y Jumbo? 9,4% más caro.",
+   "say": "¿Y Jumbo? Nueve coma cuatro por ciento más caro.",
+   "start": 14.619,
+   "end": 17.258,
+   "dur": 2.638,
+   "ps": "¿i xˈumbo? nwˈeβe kˈoma kwˈatɾo poɾ sjˈɛnto mˈas kˈaɾo."
+  },
+  {
+   "k": "dif",
+   "scene": "dif",
+   "sub": "Por lo mismo, $19.333 más.",
+   "say": "Por lo mismo, diecinueve mil trescientos pesos más.",
+   "start": 17.538,
+   "end": 20.389,
+   "dur": 2.852,
+   "ps": "poɾ lo mˈismo, djˌesinwˈeβe mˈil tɾesjˈɛntos pˈesos mˈas."
+  },
+  {
+   "k": "win",
+   "scene": "win",
+   "sub": "ChangoMás ganó en 47 de 55.",
+   "say": "ChangoMás ganó en cuarenta y siete de cincuenta y cinco.",
+   "start": 20.669,
+   "end": 23.915,
+   "dur": 3.245,
+   "ps": "ʧˈaŋɡo mˈas ɣanˈo en kwaɾˈɛnta i sjˈete ðe sinkwˈɛnta i sˈinko."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Comparalo gratis en lacanastaindex.com",
+   "say": "Comparalo gratis en la canasta index punto com.",
+   "start": 24.195,
+   "end": 27.126,
+   "dur": 2.931,
+   "ps": "kˌompaɾˈalo ɣɾˈatis en la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

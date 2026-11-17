@@ -1,0 +1,77 @@
+{
+ "total": 28.844,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "hook",
+   "scene": "hook",
+   "gap": 0.75,
+   "sub": "Pañales talle G: ¿dónde pagás de más?",
+   "say": "Pañales talle grande: ¿dónde pagás de más?",
+   "start": 0.95,
+   "end": 3.476,
+   "dur": 2.526,
+   "ps": "paɲˈales tˈaʃe ɣɾˈande: ¿dˈonde paɣˈas ðe mˈas?"
+  },
+  {
+   "k": "hug",
+   "scene": "hug",
+   "sub": "Huggies G, 40: en Día, $15.200.",
+   "say": "Jáguis grande, cuarenta: en Día, quince mil doscientos.",
+   "start": 4.226,
+   "end": 7.334,
+   "dur": 3.108,
+   "ps": "xˈaɣis ɣɾˈande, kwaɾˈɛnta: en dˈia, kˈinse mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "jum",
+   "scene": "hug",
+   "sub": "En Jumbo, $27.750: ¡$12.550 más!",
+   "say": "En Jumbo, veintisiete mil setecientos cincuenta: ¡doce mil quinientos más!",
+   "start": 7.614,
+   "end": 11.842,
+   "dur": 4.228,
+   "ps": "en xˈumbo, bˌAntisjˈete mˈil sˌetesjˈɛntos sinkwˈɛnta: ¡dˈose mˈil kinjˈɛntos mˈas!"
+  },
+  {
+   "k": "per",
+   "scene": "per",
+   "sub": "Por pañal: $380 contra $694.",
+   "say": "Por pañal: trescientos ochenta contra seiscientos noventa y cuatro.",
+   "start": 12.122,
+   "end": 15.844,
+   "dur": 3.722,
+   "ps": "poɾ paɲˈal: tɾesjˈɛntos oʧˈɛnta kˈontɾa sAsjˈɛntos noβˈɛnta i kwˈatɾo."
+  },
+  {
+   "k": "pam",
+   "scene": "pam",
+   "sub": "Pampers Premium G: casi igual en todos, $52 de diferencia.",
+   "say": "Pámpers grande: casi igual en todos, cincuenta y dos pesos de diferencia.",
+   "start": 16.124,
+   "end": 20.292,
+   "dur": 4.167,
+   "ps": "pˈampeɾs ɣɾˈande: kˈasi iɣwˈal en tˈoðos, sinkwˈɛnta i ðˈos pˈesos ðe ðˌifeɾˈɛnsja."
+  },
+  {
+   "k": "bab",
+   "scene": "bab",
+   "sub": "Babysec G, 40: en Carrefour, $10.237,50, en promo.",
+   "say": "Beibisec grande: en Carrefour, diez mil doscientos, en promo.",
+   "start": 20.572,
+   "end": 23.927,
+   "dur": 3.355,
+   "ps": "bˌAβisˈek ɣɾˈande: en kˌarefˈowɾ, djˈes mˈil ðosjˈɛntos, em pɾˈomo."
+  },
+  {
+   "k": "cta",
+   "scene": "cta",
+   "sub": "Mirá tu marca en lacanastaindex.com",
+   "say": "Mirá tu marca en la canasta index punto com.",
+   "start": 24.207,
+   "end": 26.864,
+   "dur": 2.657,
+   "ps": "miɾˈa tu mˈaɾka en la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

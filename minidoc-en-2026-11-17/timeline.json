@@ -1,0 +1,385 @@
+{
+ "total": 192.463,
+ "voice": "af_heart",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Every morning, a program checks more than 20,000 supermarket prices.",
+   "say": "Every morning, while Argentina wakes up, a program checks more than twenty thousand supermarket prices.",
+   "start": 0.6,
+   "end": 6.549,
+   "dur": 5.949,
+   "ps": "ˈɛvəɹi mˈɔɹnɪŋ, wˌIl ˌɑɹʤəntˈinə wˈAks ˌʌp, ɐ pɹˈOɡɹˌæm ʧˈɛks mˈɔɹ ðən twˈɛnti θˈWzᵊnd sˈupəɹmˌɑɹkət pɹˈIsᵻz."
+  },
+  {
+   "k": "h2",
+   "sub": "Nobody touches it.",
+   "say": "Nobody touches it.",
+   "start": 6.849,
+   "end": 7.886,
+   "dur": 1.038,
+   "ps": "nˈObˌɑdi tˈʌʧᵻz ɪt."
+  },
+  {
+   "k": "h3",
+   "sub": "On December 1 it will say how much Argentine groceries rose in November. Before the official figure.",
+   "say": "And on December first, it will say how much Argentine groceries went up in November. Before the official figure.",
+   "gap": 0.5,
+   "start": 8.186,
+   "end": 14.517,
+   "dur": 6.331,
+   "ps": "ˌænd ˌɔn disˈɛmbəɹ fˈɜɹst, ɪt wɪl sˈA hˌW mˈʌʧ ˈɑɹʤəntIn ɡɹˈOsəɹiz wˈɛnt ˌʌp ɪn nOvˈɛmbəɹ. bəfˈɔɹ ði əfˈɪʃᵊl fˈɪɡjəɹ."
+  },
+  {
+   "k": "h4",
+   "sub": "No camera. No team.",
+   "say": "No camera. No team.",
+   "start": 15.017,
+   "end": 16.405,
+   "dur": 1.387,
+   "ps": "nˈO kˈæməɹə. nˈO tˈim."
+  },
+  {
+   "k": "h5",
+   "sub": "One person. One system.",
+   "say": "One person. One system.",
+   "gap": 0.9,
+   "start": 16.705,
+   "end": 18.315,
+   "dur": 1.61,
+   "ps": "wˈʌn pˈɜɹsᵊn. wˈʌn sˈɪstəm."
+  },
+  {
+   "k": "p1",
+   "sub": "Argentina's official inflation for a month comes out in the middle of the next month.",
+   "say": "Argentina's official inflation for a month comes out in the middle of the next month.",
+   "start": 19.215,
+   "end": 23.535,
+   "dur": 4.321,
+   "ps": "ˌɑɹʤəntˈinəz əfˈɪʃᵊl ɪnflˈAʃən fɔɹ ɐ mˈʌnθ kˈʌmz ˈWt ɪn ðə mˈɪdᵊl ʌv ðə nˈɛkst mˈʌnθ."
+  },
+  {
+   "k": "p2",
+   "sub": "If you do the shopping, that's forever.",
+   "say": "If you're the one doing the shopping, that's forever.",
+   "start": 23.835,
+   "end": 26.195,
+   "dur": 2.36,
+   "ps": "ˌɪf jʊɹ ðə wˈʌn dˈuɪŋ ðə ʃˈɑpɪŋ, ðˈæts fəɹˈɛvəɹ."
+  },
+  {
+   "k": "p3",
+   "sub": "Can you measure it sooner, with real supermarket prices?",
+   "say": "So the question was simple. Can you measure it sooner, with real supermarket prices?",
+   "gap": 0.7,
+   "start": 26.495,
+   "end": 31.175,
+   "dur": 4.68,
+   "ps": "sˌO ðə kwˈɛsʧᵊn wʌz sˈɪmpəl. kˌæn ju mˈɛʒəɹ ɪt sˈunəɹ, wɪð ɹˈiᵊl sˈupəɹmˌɑɹkət pɹˈIsᵻz?"
+  },
+  {
+   "k": "c1",
+   "sub": "Every morning it opens the websites of five chains.",
+   "say": "Every morning, the program opens the websites of five supermarket chains.",
+   "start": 31.875,
+   "end": 36.032,
+   "dur": 4.157,
+   "ps": "ˈɛvəɹi mˈɔɹnɪŋ, ðə pɹˈOɡɹˌæm ˈOpᵊnz ðə wˈɛbsˌIts ʌv fˈIv sˈupəɹmˌɑɹkət ʧˈAnz."
+  },
+  {
+   "k": "c2",
+   "sub": "Carrefour, Jumbo, ChangoMás, Día and Coto.",
+   "say": "Carrefour, Jumbo, Chango Mas, Dee-ah and Coto.",
+   "start": 36.332,
+   "end": 38.991,
+   "dur": 2.659,
+   "ps": "kˌɛɹəfˈʊɹ, ʤˈʌmbO, ʧˈæŋɡO mˈɑz, dˈiˌɑ ænd kˈOTO."
+  },
+  {
+   "k": "c3",
+   "sub": "Every price, every deal, every out-of-stock product.",
+   "say": "It reads every price, every deal, every product that's out of stock.",
+   "start": 39.291,
+   "end": 43.143,
+   "dur": 3.852,
+   "ps": "ˌɪt ɹˈidz ˈɛvəɹi pɹˈIs, ˈɛvəɹi dˈil, ˈɛvəɹi pɹˈɑdˌʌkt ðæts ˈWt ʌv stˈɑk."
+  },
+  {
+   "k": "c4",
+   "sub": "From that it builds a basket: 1,018 products of 45 basic types.",
+   "say": "From that, it builds a basket. One thousand and eighteen products, of forty five basic types.",
+   "start": 43.443,
+   "end": 49.193,
+   "dur": 5.75,
+   "ps": "fɹˌʌm ðˈæt, ɪt bˈɪldz ɐ bˈæskət. wˈʌn θˈWzᵊnd ænd ˌAtˈin pɹˈɑdˌʌkts, ʌv fˈɔɹTi fˈIv bˈAsɪk tˈIps."
+  },
+  {
+   "k": "c5",
+   "sub": "Beef, milk, bread, yerba mate.",
+   "say": "Beef, milk, bread, yerba mate.",
+   "start": 49.493,
+   "end": 51.196,
+   "dur": 1.703,
+   "ps": "bˈif, mˈɪlk, bɹˈɛd, jˈɛɹbə mˈAt."
+  },
+  {
+   "k": "c6",
+   "sub": "Weighted like the official index: beef counts 17.3%. Coffee, tea and yerba, 2.5%.",
+   "say": "And it weights them like the official index. Beef counts for seventeen point three percent. Coffee, tea and yerba, two point five.",
+   "gap": 0.7,
+   "start": 51.496,
+   "end": 59.138,
+   "dur": 7.641,
+   "ps": "ˌænd ɪt wˈAts ðˌɛm lˈIk ði əfˈɪʃᵊl ˈɪndˌɛks. bˈif kˈWnts fɔɹ sˌɛvəntˈin pˈYnt θɹˈi pəɹsˈɛnt. kˈɔfi, tˈi ænd jˈɛɹbə, tˈu pˈYnt fˈIv."
+  },
+  {
+   "k": "a0",
+   "sub": "Reading prices is the easy part. Getting it right is the hard part.",
+   "say": "But reading prices is the easy part. Getting it right is the hard part.",
+   "start": 59.838,
+   "end": 63.788,
+   "dur": 3.95,
+   "ps": "bˌʌt ɹˈidɪŋ pɹˈIsᵻz ɪz ði ˈizi pˈɑɹt. ɡˈɛTɪŋ ɪt ɹˈIt ɪz ðə hˈɑɹd pˈɑɹt."
+  },
+  {
+   "k": "a1",
+   "sub": "So 7 AI agents look after the system.",
+   "say": "So seven AI agents look after the system.",
+   "start": 64.088,
+   "end": 66.558,
+   "dur": 2.47,
+   "ps": "sˌO sˈɛvən ˈAˌI ˈAʤᵊnts lˈʊk ˈæftəɹ ðə sˈɪstəm."
+  },
+  {
+   "k": "a2",
+   "sub": "No day can go missing.",
+   "say": "One makes sure no day goes missing.",
+   "start": 66.858,
+   "end": 68.542,
+   "dur": 1.685,
+   "ps": "wˈʌn mˌAks ʃˈʊɹ nˈO dˈA ɡˈOz mˈɪsɪŋ."
+  },
+  {
+   "k": "a3",
+   "sub": "Clean data. Every doubtful price, checked.",
+   "say": "Another cleans the data and checks every doubtful price.",
+   "start": 68.842,
+   "end": 71.995,
+   "dur": 3.153,
+   "ps": "ənˈʌðəɹ klˈinz ðə dˈATə ænd ʧˈɛks ˈɛvəɹi dˈWtfᵊl pɹˈIs."
+  },
+  {
+   "k": "a4",
+   "sub": "The comparison with the official figures.",
+   "say": "Another compares it with the official figures.",
+   "start": 72.295,
+   "end": 74.554,
+   "dur": 2.259,
+   "ps": "ənˈʌðəɹ kəmpˈɛɹz ɪt wɪð ði əfˈɪʃᵊl fˈɪɡjəɹz."
+  },
+  {
+   "k": "a5",
+   "sub": "The monthly report, verified before it goes out.",
+   "say": "Another verifies the monthly report before it goes out.",
+   "start": 74.854,
+   "end": 77.967,
+   "dur": 3.113,
+   "ps": "ənˈʌðəɹ vˈɛɹəfˌIz ðə mˈʌnθli ɹəpˈɔɹt bəfˈɔɹ ɪt ɡˈOz ˈWt."
+  },
+  {
+   "k": "a6",
+   "sub": "And two videos a day with that day's data.",
+   "say": "And others make two videos a day, with that day's data.",
+   "gap": 0.5,
+   "start": 78.267,
+   "end": 81.26,
+   "dur": 2.993,
+   "ps": "ˌænd ˈʌðəɹz mˌAk tˈu vˈɪdiOz ɐ dˈA, wɪð ðˈæt dˈAz dˈATə."
+  },
+  {
+   "k": "a7",
+   "sub": "Golden rule: same barcode, same supermarket.",
+   "say": "And one golden rule. Only the same barcode is compared, in the same supermarket.",
+   "gap": 0.8,
+   "start": 81.76,
+   "end": 86.683,
+   "dur": 4.922,
+   "ps": "ˌænd wˈʌn ɡˈOldən ɹˈul. ˈOnli ðə sˈAm bˈɑɹkˌOd ɪz kəmpˈɛɹd, ɪn ðə sˈAm sˈupəɹmˌɑɹkət."
+  },
+  {
+   "k": "f0",
+   "sub": "Twenty-five days later, what did it find?",
+   "say": "Twenty five days later, what did it find?",
+   "gap": 0.6,
+   "start": 87.483,
+   "end": 89.639,
+   "dur": 2.156,
+   "ps": "twˈɛnti fˈIv dˈAz lˈATəɹ, wˌʌt dˈɪd ɪt fˈInd?"
+  },
+  {
+   "k": "f1",
+   "sub": "First: a single day tells you almost nothing.",
+   "say": "First. A single day tells you almost nothing.",
+   "start": 90.239,
+   "end": 92.643,
+   "dur": 2.404,
+   "ps": "fˈɜɹst. ɐ sˈɪŋɡᵊl dˈA tˈɛlz ju ˈɔlmOst nˈʌθɪŋ."
+  },
+  {
+   "k": "f2",
+   "sub": "The index goes up and down as deals start and end.",
+   "say": "The index goes up and down as deals start and end.",
+   "start": 92.943,
+   "end": 95.792,
+   "dur": 2.849,
+   "ps": "ði ˈɪndˌɛks ɡˈOz ˌʌp ænd dˌWn æz dˈilz stˈɑɹt ænd ˈɛnd."
+  },
+  {
+   "k": "f3",
+   "sub": "So you look at the week: +0.21% against the week before.",
+   "say": "So you look at the week. The last seven days, against the seven before: up zero point two one percent.",
+   "start": 96.092,
+   "end": 101.927,
+   "dur": 5.835,
+   "ps": "sˌO ju lˈʊk æt ðə wˈik. ðə lˈæst sˈɛvən dˈAz, əɡˈɛnst ðə sˈɛvən bəfˈɔɹ: ˌʌp zˈɪɹO pˈYnt tˈu wˈʌn pəɹsˈɛnt."
+  },
+  {
+   "k": "f4",
+   "sub": "Vegetables: 12.6% cheaper than in the first week.",
+   "say": "And inside the basket, everything moves its own way. Vegetables are twelve point six percent cheaper than in the first week.",
+   "start": 102.227,
+   "end": 109.108,
+   "dur": 6.881,
+   "ps": "ˌænd ɪnsˈId ðə bˈæskət, ˈɛvəɹiθˌɪŋ mˈuvz ɪts ˈOn wˈA. vˈɛʤtəbəlz ɑɹ twˈɛlv pˈYnt sˈɪks pəɹsˈɛnt ʧˈipəɹ ðən ɪn ðə fˈɜɹst wˈik."
+  },
+  {
+   "k": "f5",
+   "sub": "Dairy and eggs: 3.1% more expensive.",
+   "say": "Dairy and eggs, three point one percent more expensive.",
+   "gap": 0.8,
+   "start": 109.408,
+   "end": 112.457,
+   "dur": 3.049,
+   "ps": "dˈɛɹi ænd ˈɛɡz, θɹˈi pˈYnt wˈʌn pəɹsˈɛnt mˈɔɹ ɪkspˈɛnsɪv."
+  },
+  {
+   "k": "r0",
+   "sub": "Which supermarket is cheapest?",
+   "say": "And now, the question we get asked most. Which supermarket is cheapest?",
+   "start": 113.257,
+   "end": 117.134,
+   "dur": 3.877,
+   "ps": "ˌænd nˈW, ðə kwˈɛsʧᵊn wi ɡɛt ˈæskt mˈOst. wˌɪʧ sˈupəɹmˌɑɹkət ɪz ʧˈipɪst?"
+  },
+  {
+   "k": "r1",
+   "sub": "The same 296 products. Week of 8 to 14 November.",
+   "say": "The same two hundred and ninety six products. The week of November eighth to fourteenth.",
+   "start": 117.434,
+   "end": 122.28,
+   "dur": 4.846,
+   "ps": "ðə sˈAm tˈu hˈʌndɹəd ænd nˈIndi sˈɪks pɹˈɑdˌʌkts. ðə wˈik ʌv nOvˈɛmbəɹ ˈAθ tə fˌɔɹtˈinθ."
+  },
+  {
+   "k": "r2",
+   "sub": "Día: $1,240,791.",
+   "say": "At Dee-ah, one million, two hundred and forty thousand pesos.",
+   "start": 122.58,
+   "end": 126.198,
+   "dur": 3.618,
+   "ps": "ˌæt dˈiˌɑ, wˈʌn mˈɪljᵊn, tˈu hˈʌndɹəd ænd fˈɔɹTi θˈWzᵊnd pˈAsOz."
+  },
+  {
+   "k": "r3",
+   "sub": "Jumbo, for the same: $1,458,079. 17.5% more.",
+   "say": "At Jumbo, for exactly the same, one million, four hundred and fifty eight thousand. Seventeen and a half percent more.",
+   "start": 126.498,
+   "end": 133.551,
+   "dur": 7.053,
+   "ps": "ˌæt ʤˈʌmbO, fɔɹ ɪɡzˈæktli ðə sˈAm, wˈʌn mˈɪljᵊn, fˈɔɹ hˈʌndɹəd ænd fˈɪfti ˈAt θˈWzᵊnd. sˌɛvəntˈin ænd ɐ hˈæf pəɹsˈɛnt mˈɔɹ."
+  },
+  {
+   "k": "r4",
+   "sub": "Jumbo was the most expensive for 271 of the 296 products.",
+   "say": "Jumbo was the most expensive for two hundred and seventy one of the two hundred and ninety six products.",
+   "start": 133.851,
+   "end": 139.807,
+   "dur": 5.956,
+   "ps": "ʤˈʌmbO wʌz ðə mˈOst ɪkspˈɛnsɪv fɔɹ tˈu hˈʌndɹəd ænd sˈɛvənti wˈʌn ʌv ðə tˈu hˈʌndɹəd ænd nˈIndi sˈɪks pɹˈɑdˌʌkts."
+  },
+  {
+   "k": "r5",
+   "sub": "And it's not luck: Día won every week we measured.",
+   "say": "And it's not a lucky week. Dee-ah was the cheapest every single week we measured.",
+   "gap": 0.7,
+   "start": 140.107,
+   "end": 144.454,
+   "dur": 4.347,
+   "ps": "ˌænd ɪts nˌɑt ɐ lˈʌki wˈik. dˈiˌɑ wʌz ðə ʧˈipɪst ˈɛvəɹi sˈɪŋɡᵊl wˈik wi mˈɛʒəɹd."
+  },
+  {
+   "k": "t1",
+   "sub": "But here's the strange part.",
+   "say": "But here's the strange part.",
+   "start": 145.154,
+   "end": 146.425,
+   "dur": 1.271,
+   "ps": "bˌʌt hˈɪɹz ðə stɹˈAnʤ pˈɑɹt."
+  },
+  {
+   "k": "t2",
+   "sub": "Product by product, the winner is ChangoMás: 135, against 109 for Día.",
+   "say": "Product by product, the one that wins most often isn't Dee-ah. It's Chango Mas. One hundred and thirty five products, against one hundred and nine for Dee-ah.",
+   "start": 146.725,
+   "end": 156.452,
+   "dur": 9.727,
+   "ps": "pɹˈɑdˌʌkt bI pɹˈɑdˌʌkt, ðə wˈʌn ðæt wˈɪnz mˈOst ˈɔfᵊn ˈɪzᵊnt dˈiˌɑ. ˌɪts ʧˈæŋɡO mˈɑz. wˈʌn hˈʌndɹəd ænd θˈɜɹTi fˈIv pɹˈɑdˌʌkts, əɡˈɛnst wˈʌn hˈʌndɹəd ænd nˈIn fɔɹ dˈiˌɑ."
+  },
+  {
+   "k": "t3",
+   "sub": "ChangoMás wins often, but by a little. When Día wins, it wins big.",
+   "say": "How can that be? Chango Mas wins often, but by a little. And when Dee-ah wins, it wins big.",
+   "start": 156.752,
+   "end": 162.357,
+   "dur": 5.605,
+   "ps": "hˌW kæn ðˈæt bˈi? ʧˈæŋɡO mˈɑz wˈɪnz ˈɔfᵊn, bˌʌt bI ɐ lˈɪTᵊl. ˌænd wˌɛn dˈiˌɑ wˈɪnz, ɪt wˈɪnz bˈɪɡ."
+  },
+  {
+   "k": "t4",
+   "sub": "Huggies diapers, size G, 40 units: Día $15,743. ChangoMás $26,215. Jumbo $28,970.",
+   "say": "The same Huggies diapers, size G, forty units. At Dee-ah, fifteen thousand seven hundred. At Chango Mas, twenty six thousand. At Jumbo, almost twenty nine thousand.",
+   "gap": 0.8,
+   "start": 162.657,
+   "end": 173.506,
+   "dur": 10.849,
+   "ps": "ðə sˈAm hˈʌɡɪz dˈIəpəɹz, sˈIz ʤˈi, fˈɔɹTi jˈunəts. ˌæt dˈiˌɑ, fˌɪftˈin θˈWzᵊnd sˈɛvən hˈʌndɹəd. ˌæt ʧˈæŋɡO mˈɑz, twˈɛnti sˈɪks θˈWzᵊnd. ˌæt ʤˈʌmbO, ˈɔlmOst twˈɛnti nˈIn θˈWzᵊnd."
+  },
+  {
+   "k": "o1",
+   "sub": "It's all open and free: the data is on Kaggle and Zenodo.",
+   "say": "All of this is open and free. The data is on Kaggle and Zenodo, for anyone who wants to check it.",
+   "start": 174.306,
+   "end": 180.246,
+   "dur": 5.94,
+   "ps": "ˈɔl ʌv ðɪs ɪz ˈOpᵊn ænd fɹˈi. ðə dˈATə ɪz ˌɔn kˈæɡᵊl ænd zɛnˈOdO, fɔɹ ˈɛniwˌʌn hˌu wˈɑnts tə ʧˈɛk ɪt."
+  },
+  {
+   "k": "o2",
+   "sub": "On December 1, the first report: supermarket inflation in November.",
+   "say": "And on December first, the first report comes out. Supermarket inflation in November.",
+   "start": 180.546,
+   "end": 185.548,
+   "dur": 5.002,
+   "ps": "ˌænd ˌɔn disˈɛmbəɹ fˈɜɹst, ðə fˈɜɹst ɹəpˈɔɹt kˈʌmz ˈWt. sˈupəɹmˌɑɹkət ɪnflˈAʃən ɪn nOvˈɛmbəɹ."
+  },
+  {
+   "k": "o3",
+   "sub": "Subscribe to see it first. lacanastaindex.com",
+   "say": "Subscribe to see it first. And go to la canasta index dot com.",
+   "start": 185.848,
+   "end": 189.763,
+   "dur": 3.915,
+   "ps": "səbskɹˈIb tə sˈi ɪt fˈɜɹst. ˌænd ɡˌO tə lˌɑ kənˈæstə ˈɪndˌɛks dˈɑt kˈɑm."
+  }
+ ]
+}

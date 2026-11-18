@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Misma yerba. Mismo código de barras.","say":"Misma yerba. Mismo código de barras."},
+{"k":"h2","sub":"$3.295… o $5.850.","say":"Tres mil doscientos noventa y cinco, o cinco mil ochocientos cincuenta.","gap":0.35},
+{"k":"w1","sub":"Yerba Amanda con palo, el kilo.","say":"Yerba Amanda con palo, el kilo."},
+{"k":"w2","sub":"Día y ChangoMás, más de $5.000. Jumbo, $5.850.","say":"Día y ChangoMás, más de cinco mil. Jumbo, cinco mil ochocientos cincuenta."},
+{"k":"b1","sub":"Pero ojo: es oferta de hoy. Ayer costaba $5.069.","say":"Pero ojo: es oferta de hoy. Ayer costaba cinco mil sesenta y nueve.","gap":0.3},
+{"k":"b2","sub":"La primera baja en casi un mes. Puede terminar cualquier día.","say":"La primera baja en casi un mes. Puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $2.555 por kilo. 44% menos que en Jumbo.","say":"Ahorrás dos mil quinientos cincuenta y cinco por kilo. Cuarenta y cuatro por ciento menos."}
+]}

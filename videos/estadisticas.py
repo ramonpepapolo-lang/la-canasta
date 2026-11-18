@@ -65,8 +65,15 @@ except Exception as e:
         def num(txt):
             m = re.match(r"([\d.,]+)\s*([KM]?)", txt.replace(",", ""))
             return round(float(m.group(1)) * {"": 1, "K": 1e3, "M": 1e6}[m.group(2)]) if m else None
+        # All uploads, also long videos older than the feed's last 15 (the uploads playlist lists every public video)
+        if cid:
+            pl = get("https://www.youtube.com/playlist?list=UU" + cid.group(1)[2:])
+            add(re.findall(r'"playlistVideoRenderer":\{"videoId":"([\w-]{11})"', pl))
+            add(re.findall(r'"watchEndpoint":\{"videoId":"([\w-]{11})","playlistId":"UU', pl))
         for tab in ("videos", "shorts"):
             t = get("https://www.youtube.com/@LaCanastaIndex/" + tab)
+            add(re.findall(r'"lockupViewModel":\{"contentImage".{0,400}?"videoId":"([\w-]{11})"', t, re.S))
+            add(re.findall(r'"contentId":"([\w-]{11})","contentType":"LOCKUP_CONTENT_TYPE_VIDEO"', t))
             add(re.findall(r'"reelWatchEndpoint":\{"videoId":"([\w-]{11})"', t))
             add(re.findall(r'"videoRenderer":\{"videoId":"([\w-]{11})"', t))
             # Shorts list: title and views ("12K views") of each Short

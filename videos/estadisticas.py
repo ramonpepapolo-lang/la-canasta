@@ -125,6 +125,32 @@ except Exception as e:
                 d["published"] = pub.group(1)
             if not vc:
                 d["debug"] = (re.search(r"<title>(.*?)</title>", w, re.S).group(1)[:80] if "<title>" in w else w[:120])
+        # Videos still without views or title: ask YouTube's own player endpoint (what the web player uses) and oEmbed
+        for vid in ids:
+            d = info.setdefault(vid, {})
+            if d.get("views") is not None and d.get("title"):
+                continue
+            try:
+                r = requests.post("https://www.youtube.com/youtubei/v1/player?prettyPrint=false", headers=H, cookies=CK, timeout=30,
+                                  json={"videoId": vid, "context": {"client": {"clientName": "WEB", "clientVersion": "2.20250101.00.00", "hl": "en"}}})
+                vd = r.json().get("videoDetails", {})
+                mf = r.json().get("microformat", {}).get("playerMicroformatRenderer", {})
+                if vd.get("viewCount") and d.get("views") is None:
+                    d["views"] = int(vd["viewCount"])
+                if vd.get("title") and not d.get("title"):
+                    d["title"] = vd["title"]
+                if mf.get("publishDate") and not d.get("published"):
+                    d["published"] = mf["publishDate"][:10]
+                d["player_status"] = r.json().get("playabilityStatus", {}).get("status")
+            except Exception as e:
+                d["player_status"] = "error " + str(e)[:80]
+            if not d.get("title"):
+                try:
+                    o = requests.get("https://www.youtube.com/oembed", params={"url": "https://www.youtube.com/watch?v=" + vid, "format": "json"}, timeout=20)
+                    if o.ok:
+                        d["title"] = o.json().get("title", "")
+                except Exception:
+                    pass
         # Number of comments, from each video's public watch page
         for vid in ids:
             try:
@@ -134,7 +160,7 @@ except Exception as e:
                 info.setdefault(vid, {})["comments"] = num(m.group(1)) if m else None
             except Exception:
                 pass
-        vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "views_text": info.get(vid, {}).get("views_text"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
+        vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "views_text": info.get(vid, {}).get("views_text"), "player_status": info.get(vid, {}).get("player_status"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
                  "views": info.get(vid, {}).get("views", info.get(vid, {}).get("views_list")),
                  "views_exact": "views" in info.get(vid, {}), "likes": info.get(vid, {}).get("likes"),
                  "comments": info.get(vid, {}).get("comments")} for vid in ids]

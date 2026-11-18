@@ -69,6 +69,13 @@ except Exception as e:
         if cid:
             pl = get("https://www.youtube.com/playlist?list=UU" + cid.group(1)[2:])
             add(re.findall(r'"playlistVideoRenderer":\{"videoId":"([\w-]{11})"', pl))
+            # title and "52K views" of each upload, as the playlist shows them (also for videos whose own page fails)
+            for m in re.finditer(r'"playlistVideoRenderer":\{"videoId":"([\w-]{11})"(.{0,6000}?)"videoInfo":\{"runs":\[\{"text":"([^"]+)"', pl, re.S):
+                d0 = info.setdefault(m.group(1), {})
+                ti = re.search(r'"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', m.group(2))
+                if ti and not d0.get("title"):
+                    d0["title"] = json.loads('"' + ti.group(1) + '"')
+                d0["views_list"] = num(m.group(3)); d0["views_text"] = m.group(3)
             add(re.findall(r'"watchEndpoint":\{"videoId":"([\w-]{11})","playlistId":"UU', pl))
         for tab in ("videos", "shorts"):
             t = get("https://www.youtube.com/@LaCanastaIndex/" + tab)
@@ -127,7 +134,7 @@ except Exception as e:
                 info.setdefault(vid, {})["comments"] = num(m.group(1)) if m else None
             except Exception:
                 pass
-        vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
+        vids = [{"id": vid, "debug": info.get(vid, {}).get("debug"), "views_text": info.get(vid, {}).get("views_text"), "title": info.get(vid, {}).get("title", ""), "published": info.get(vid, {}).get("published", ""),
                  "views": info.get(vid, {}).get("views", info.get(vid, {}).get("views_list")),
                  "views_exact": "views" in info.get(vid, {}), "likes": info.get(vid, {}).get("likes"),
                  "comments": info.get(vid, {}).get("comments")} for vid in ids]

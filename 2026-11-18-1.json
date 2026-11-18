@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Misma yerba. Mismo código de barras.","say":"Misma yerba. Mismo código de barras."},
+{"k":"h2","sub":"$3.295… o $5.850.","say":"Tres mil doscientos noventa y cinco, o cinco mil ochocientos cincuenta.","gap":0.35},
+{"k":"w1","sub":"Amanda con palo, el kilo: $3.295 en Carrefour.","say":"Amanda con palo, el kilo: tres mil doscientos noventa y cinco en Carrefour."},
+{"k":"w2","sub":"En Día, $5.060. En ChangoMás, $5.089. En Jumbo, $5.850.","say":"En Día, cinco mil sesenta. En ChangoMás, cinco mil ochenta y nueve. En Jumbo, cinco mil ochocientos cincuenta."},
+{"k":"b1","sub":"Pero ojo: es una oferta de hoy. Ayer costaba $5.069.","say":"Pero ojo: es una oferta de hoy. Ayer costaba cinco mil sesenta y nueve.","gap":0.3},
+{"k":"b2","sub":"En 26 días que la seguimos, nunca había bajado. Puede terminar cualquier día.","say":"En veintiséis días que la seguimos, nunca había bajado. Puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $2.555 por kilo. 44% menos que en Jumbo.","say":"Ahorrás dos mil quinientos cincuenta y cinco pesos por kilo. Cuarenta y cuatro por ciento menos que en Jumbo."}
+]}

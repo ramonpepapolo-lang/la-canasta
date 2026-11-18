@@ -56,7 +56,10 @@ def post_yt(v):
                      client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
     yt = build("youtube", "v3", credentials=cr)
     lang = v.get("lang", "es")
-    body = {"snippet": {"title": v["yt_title"][:100], "description": v["yt_description"] + "\n\n" + v["hashtags"],
+    tags = v.get("hashtags", "")
+    if isinstance(tags, list):  # the daily agent sometimes writes the hashtags as a list
+        tags = " ".join(tags)
+    body = {"snippet": {"title": v["yt_title"][:100], "description": v["yt_description"] + ("\n\n" + tags if tags else ""),
                         "categoryId": "25", "defaultLanguage": lang, "defaultAudioLanguage": "en" if lang == "en" else "es-419"},
             "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
     r = yt.videos().insert(part="snippet,status", body=body,

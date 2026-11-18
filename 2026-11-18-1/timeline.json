@@ -1,0 +1,71 @@
+{
+ "total": 34.062,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma yerba. Mismo código de barras.",
+   "say": "Misma yerba. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.162,
+   "dur": 2.042,
+   "ps": "mˈisma ʃˈeɾβa. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$3.295… o $5.850.",
+   "say": "Tres mil doscientos noventa y cinco, o cinco mil ochocientos cincuenta.",
+   "gap": 0.35,
+   "start": 2.382,
+   "end": 6.467,
+   "dur": 4.086,
+   "ps": "tɾˈes mˈil ðosjˈɛntos noβˈɛnta i sˈinko, o sˈinko mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w1",
+   "sub": "Amanda con palo, el kilo: $3.295 en Carrefour.",
+   "say": "Amanda con palo, el kilo: tres mil doscientos noventa y cinco en Carrefour.",
+   "start": 6.817,
+   "end": 10.902,
+   "dur": 4.085,
+   "ps": "amˈanda kom pˈalo, el kˈilo: tɾˈes mˈil ðosjˈɛntos noβˈɛnta i sˈinko en kˌarefˈowɾ."
+  },
+  {
+   "k": "w2",
+   "sub": "En Día, $5.060. En ChangoMás, $5.089. En Jumbo, $5.850.",
+   "say": "En Día, cinco mil sesenta. En ChangoMás, cinco mil ochenta y nueve. En Jumbo, cinco mil ochocientos cincuenta.",
+   "start": 11.122,
+   "end": 17.255,
+   "dur": 6.133,
+   "ps": "en dˈia, sˈinko mˈil sesˈɛnta. en ʧˈaŋɡo mˈas, sˈinko mˈil oʧˈɛnta i nwˈeβe. en xˈumbo, sˈinko mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta de hoy. Ayer costaba $5.069.",
+   "say": "Pero ojo: es una oferta de hoy. Ayer costaba cinco mil sesenta y nueve.",
+   "gap": 0.3,
+   "start": 17.475,
+   "end": 21.645,
+   "dur": 4.17,
+   "ps": "pˌeɾo ˈoxo: ˈes ˈuna ofˈeɾta ðe ˈoɪ. aʃˈeɾ kostˈaβa sˈinko mˈil sesˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "En 26 días que la seguimos, nunca había bajado. Puede terminar cualquier día.",
+   "say": "En veintiséis días que la seguimos, nunca había bajado. Puede terminar cualquier día.",
+   "start": 21.945,
+   "end": 26.458,
+   "dur": 4.513,
+   "ps": "em bˌAntisˈeis ðˈias ke la seɣˈimos, nˈunka aβˈia βaxˈaðo. pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.555 por kilo. 44% menos que en Jumbo.",
+   "say": "Ahorrás dos mil quinientos cincuenta y cinco pesos por kilo. Cuarenta y cuatro por ciento menos que en Jumbo.",
+   "start": 26.678,
+   "end": 32.542,
+   "dur": 5.864,
+   "ps": "ˌaorˈas ðˈos mˈil kinjˈɛntos sinkwˈɛnta i sˈinko pˈesos poɾ kˈilo. kwaɾˈɛnta i kwˈatɾo poɾ sjˈɛnto mˈenos ke en xˈumbo."
+  }
+ ]
+}

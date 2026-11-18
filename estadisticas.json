@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-18 20:03",
+ "when_utc": "2026-11-18 23:51",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "584",
+  "subscribers_text": "589",
   "views_total_text": "150,180",
-  "views_sum_of_videos": 77513,
+  "views_sum_of_videos": 78139,
   "videos": 41,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 1,
+    "views": 13,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 2,
+    "views": 3,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 3,
+    "views": 4,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -65,7 +65,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 1,
+    "views": 2,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 95,
+    "views": 109,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 24,
+    "views": 28,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -125,7 +125,7 @@
     "player_status": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 43,
+    "views": 47,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -281,7 +281,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 17453,
+    "views": 17535,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -305,7 +305,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 815,
+    "views": 842,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -353,9 +353,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 904,
+    "views": 922,
     "views_exact": true,
-    "likes": 105,
+    "likes": 107,
     "comments": null
    },
    {
@@ -401,9 +401,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21201,
+    "views": 21208,
     "views_exact": true,
-    "likes": 132,
+    "likes": 131,
     "comments": 1
    },
    {
@@ -437,9 +437,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 9802,
+    "views": 10067,
     "views_exact": true,
-    "likes": 655,
+    "likes": 662,
     "comments": 2
    },
    {
@@ -461,7 +461,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7783,
+    "views": 7889,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -509,7 +509,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18385,
+    "views": 18469,
     "views_exact": true,
     "likes": 5,
     "comments": 2

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-17 22:54",
+ "when_utc": "2026-11-18 00:39",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,17 +17,17 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "559",
+  "subscribers_text": "560",
   "views_total_text": "145,141",
-  "views_sum_of_videos": 73523,
-  "videos": 32,
+  "views_sum_of_videos": 73799,
+  "videos": 36,
   "list": [
    {
     "id": "WFIgF0LXUvc",
     "debug": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 40,
+    "views": 72,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -37,7 +37,7 @@
     "debug": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 10,
+    "views": 16,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -227,9 +227,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 757,
+    "views": 763,
     "views_exact": true,
-    "likes": 89,
+    "likes": 94,
     "comments": null
    },
    {
@@ -297,9 +297,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 9184,
+    "views": 9328,
     "views_exact": true,
-    "likes": 630,
+    "likes": 636,
     "comments": 2
    },
    {
@@ -317,7 +317,7 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7519,
+    "views": 7579,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -337,10 +337,50 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18122,
+    "views": 18150,
     "views_exact": true,
     "likes": 5,
     "comments": 2
+   },
+   {
+    "id": "jIYG_hhlfwA",
+    "debug": null,
+    "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "LQS8enkY2BA",
+    "debug": null,
+    "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "fAwE77ipmCM",
+    "debug": null,
+    "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "cSz2RWeW-xM",
+    "debug": null,
+    "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
    }
   ]
  },
@@ -352,13 +392,13 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 34,
-  "tweet_count": 62,
+  "media_count": 38,
+  "tweet_count": 66,
   "tweets_status": 200,
   "last_posts": [
    {
     "date": "2026-11-17",
-    "text": "Pañales Huggies talle G x40, mismo paquete (17/11):\n\nDía $15.200\nCarrefour $19.000\nChangoM",
+    "text": "Weekly report, Nov 8 to 14 🇦🇷🛒\n\nThe same beer went up 43% at Carrefour and down 21% at Día",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
@@ -368,7 +408,7 @@
    },
    {
     "date": "2026-11-17",
-    "text": "55 bebidas iguales, mismo código de barras, en 4 súper (17/11):\n\nChangoMás $205.931\nCarref",
+    "text": "Reporte semanal, 8 al 14 de noviembre 🛒\n\nLa misma cerveza subió 43% en Carrefour y bajó 21",
     "bookmark_count": 0,
     "impression_count": 0,
     "like_count": 0,
@@ -377,21 +417,21 @@
     "retweet_count": 0
    },
    {
-    "date": "2026-11-16",
-    "text": "Mismo changuito de limpieza, 27 productos idénticos, 4 súper (hoy 16/11):\n\nDía $113.393\nCa",
+    "date": "2026-11-17",
+    "text": "No camera. No team. One person, 7 AI agents and more than 20,000 supermarket prices a day.",
     "bookmark_count": 0,
-    "impression_count": 1,
-    "like_count": 1,
+    "impression_count": 0,
+    "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0
    },
    {
-    "date": "2026-11-16",
-    "text": "¿Comprás la carne el lunes? En Jumbo, viernes a domingo sale menos:\n\nAsado $15.999 → $19.9",
+    "date": "2026-11-17",
+    "text": "Sin cámara. Sin equipo. Una persona, 7 agentes de IA y más de 20.000 precios del súper por",
     "bookmark_count": 0,
-    "impression_count": 1,
-    "like_count": 1,
+    "impression_count": 0,
+    "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
     "retweet_count": 0

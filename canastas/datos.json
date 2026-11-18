@@ -1,5 +1,5 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-18",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,13 +93,12 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 17476.94,
+     "total": 16835.49,
      "complete": false,
      "missing": [
-      "pan",
-      "tomate"
+      "pan"
      ],
-     "kcal": 2674,
+     "kcal": 2696,
      "items": [
       {
        "ing": "asado_tira",
@@ -135,10 +134,10 @@
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 16725.0,
-       "cost": 1003.5,
-       "name": "Morcilla criolla Cabaña Argentina x 400 grs",
-       "sku_id": "3472",
+       "unit_price": 13490.0,
+       "cost": 809.4,
+       "name": "Morcilla rosca en gancho x kg",
+       "sku_id": "155285",
        "promo": false
       },
       {
@@ -151,27 +150,31 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1574.75,
-       "cost": 944.85,
-       "name": "Carbon vegetal asados x 4 kg",
-       "sku_id": "123760",
+       "unit_price": 1622.5,
+       "cost": 973.5,
+       "name": "Carbón de leña 4 kg.",
+       "sku_id": "17650",
        "promo": false
       },
       {
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 26650.0,
-       "cost": 2132.0,
-       "name": "Queso provolone hilado Lucrecia x kg.",
-       "sku_id": "120927",
-       "promo": false
+       "unit_price": 22900.0,
+       "cost": 1832.0,
+       "name": "Queso provoleta Vaquero fraccionado",
+       "sku_id": "219783",
+       "promo": true
       },
       {
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "missing": true
+       "unit_price": 4999.0,
+       "cost": 599.88,
+       "name": "Tomate x kg.",
+       "sku_id": "8051",
+       "promo": false
       },
       {
        "ing": "cebolla",
@@ -187,10 +190,10 @@
        "ing": "lechuga",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 5890.0,
-       "cost": 1472.5,
-       "name": "Lechuga mantecosa Rocky 200 grs",
-       "sku_id": "79776",
+       "unit_price": 6199.0,
+       "cost": 1549.75,
+       "name": "Lechuga mantecosa Buy & Eat 400 grs",
+       "sku_id": "8244",
        "promo": false
       },
       {
@@ -201,17 +204,17 @@
        "cost": 1066.67,
        "name": "Vino tinto Malbec Aime 750 ml",
        "sku_id": "127156",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4649.0,
-       "cost": 2324.5,
+       "unit_price": 3097.25,
+       "cost": 1548.62,
        "name": "Cerveza rubia clásica Quilmes 1 lt",
        "sku_id": "9255",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "gaseosa",
@@ -245,13 +248,12 @@
       }
      ],
      "lacks": [
-      "pan",
-      "tomate"
+      "pan"
      ],
      "fixed_total": 2858.0
     },
     "Jumbo": {
-     "total": 20586.36,
+     "total": 21254.68,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -380,10 +382,10 @@
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "unit_price": 2840.0,
-       "cost": 1136.0,
-       "name": "Coca-cola Sabor Original 1,25 Lt Gaseosa Cola Sabor Original 1.25 Lts Coca Cola",
-       "sku_id": "255282",
+       "unit_price": 2711.11,
+       "cost": 1084.44,
+       "name": "Gaseosa Coca-cola Sabor Original 2.25 L Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
+       "sku_id": "246613",
        "promo": false
       },
       {
@@ -411,7 +413,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 18870.29,
+     "total": 18018.16,
      "complete": false,
      "missing": [
       "lechuga"
@@ -422,61 +424,61 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 12799.0,
-       "cost": 3839.7,
+       "unit_price": 10879.15,
+       "cost": 3263.74,
        "name": "Asado Carnicero De Novillito 1kg",
        "sku_id": "38221",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 21199.0,
-       "cost": 3179.85,
+       "unit_price": 18019.15,
+       "cost": 2702.87,
        "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
        "sku_id": "111741",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 17352.54,
-       "cost": 2082.3,
-       "name": "Chorizo Alemán Friolim 3 U 295 G",
-       "sku_id": "241489",
-       "promo": false
+       "unit_price": 16802.64,
+       "cost": 2016.32,
+       "name": "Chorizo Parrillero Cabaña Argentina 435g 4u",
+       "sku_id": "38936",
+       "promo": true
       },
       {
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 11590.0,
-       "cost": 695.4,
-       "name": "Morcilla Atada Al Vacio Santa Rita 400 Gr",
-       "sku_id": "111624",
-       "promo": false
+       "unit_price": 9425.65,
+       "cost": 565.54,
+       "name": "Morcilla Tradicional Campo Austral Al Vacío 400 Gr",
+       "sku_id": "161131",
+       "promo": true
       },
       {
        "ing": "pan",
        "qty": 0.1,
        "fixed": false,
-       "unit_price": 3699.0,
-       "cost": 369.9,
+       "unit_price": 3144.15,
+       "cost": 314.42,
        "name": "Pan Francés 1 Kg",
        "sku_id": "112033",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1724.75,
-       "cost": 1034.85,
+       "unit_price": 1466.04,
+       "cost": 879.62,
        "name": "Carbón Vegetal 4kg",
        "sku_id": "169821",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "provoleta",
@@ -571,7 +573,7 @@
      "fixed_total": 2988.0
     },
     "Dia": {
-     "total": 17743.04,
+     "total": 17084.42,
      "complete": false,
      "missing": [
       "pan"
@@ -638,11 +640,11 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 36789.47,
-       "cost": 2943.16,
+       "unit_price": 31526.32,
+       "cost": 2522.11,
        "name": "Queso Provoleta Dia 190 Gr.",
        "sku_id": "293521",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "tomate",
@@ -658,8 +660,8 @@
        "ing": "cebolla",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 2190.0,
-       "cost": 175.2,
+       "unit_price": 2290.0,
+       "cost": 183.2,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
        "promo": false
@@ -678,31 +680,31 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 4653.33,
-       "cost": 1163.33,
-       "name": "Vino Tinto Vasco Viejo 750 Ml.",
-       "sku_id": "180719",
+       "unit_price": 3986.67,
+       "cost": 996.67,
+       "name": "Vino Tinto Clasico Finca Norte 750 Ml.",
+       "sku_id": "260650",
        "promo": true
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3079.1,
-       "cost": 1539.55,
-       "name": "Cerveza 1890 Quilmes 354 Ml.",
-       "sku_id": "14806",
+       "unit_price": 2642.71,
+       "cost": 1321.36,
+       "name": "Cerveza Isenbeck 473 Ml.",
+       "sku_id": "304199",
        "promo": true
       },
       {
        "ing": "gaseosa",
        "qty": 0.4,
        "fixed": false,
-       "unit_price": 2622.0,
-       "cost": 1048.8,
-       "name": "Gaseosa Coca-Cola Sabor Original 1,5 Lt.",
-       "sku_id": "16861",
-       "promo": false
+       "unit_price": 2373.2,
+       "cost": 949.28,
+       "name": "Gaseosa Coca-Cola Sabor Original 1,25 Lt.",
+       "sku_id": "251157",
+       "promo": true
       },
       {
        "ing": "chimichurri",
@@ -745,6 +747,7 @@
     "morcilla",
     "carbon",
     "provoleta",
+    "tomate",
     "cebolla",
     "vino",
     "cerveza",
@@ -861,14 +864,12 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43027.64,
+     "total": 43661.53,
      "complete": false,
      "missing": [
-      "pollo",
-      "banana",
-      "tomate"
+      "pollo"
      ],
-     "kcal": 15776,
+     "kcal": 16792,
      "items": [
       {
        "ing": "avena",
@@ -950,17 +951,21 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2700.0,
-       "cost": 2700.0,
+       "unit_price": 3600.0,
+       "cost": 3600.0,
        "name": "Pan Blanco Lactal 315 grs",
        "sku_id": "126927",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "missing": true
+       "unit_price": 2299.0,
+       "cost": 2299.0,
+       "name": "Banana selección x kg.",
+       "sku_id": "185818",
+       "promo": false
       },
       {
        "ing": "manzana",
@@ -976,8 +981,8 @@
        "ing": "naranja",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 1199.0,
-       "cost": 1798.5,
+       "unit_price": 1699.0,
+       "cost": 2548.5,
        "name": "Naranja ombligo premiun x kg.",
        "sku_id": "95664",
        "promo": false
@@ -986,17 +991,21 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "missing": true
+       "unit_price": 4999.0,
+       "cost": 3499.3,
+       "name": "Tomate x kg.",
+       "sku_id": "8051",
+       "promo": false
       },
       {
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1899.0,
-       "cost": 949.5,
-       "name": "Zanahoria x kg.",
-       "sku_id": "50067",
-       "promo": false
+       "unit_price": 1999.0,
+       "cost": 999.5,
+       "name": "Zanahoria Huella Natural x kg.",
+       "sku_id": "26503",
+       "promo": true
       },
       {
        "ing": "cebolla",
@@ -1012,8 +1021,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 2999.0,
+       "unit_price": 2799.0,
+       "cost": 2799.0,
        "name": "Papa cepillada x kg.",
        "sku_id": "34549",
        "promo": false
@@ -1022,8 +1031,8 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 8900.0,
-       "cost": 2225.0,
+       "unit_price": 9490.0,
+       "cost": 2372.5,
        "name": "Queso cremoso Cremac x kg.",
        "sku_id": "19862",
        "promo": true
@@ -1032,35 +1041,35 @@
        "ing": "aceite",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 4543.33,
-       "cost": 1135.83,
-       "name": "Aceite de girasol Legitimo 1.5 lts",
-       "sku_id": "97472",
-       "promo": false
+       "unit_price": 3566.0,
+       "cost": 891.5,
+       "name": "Aceite de girasol Cocinero 1.5 lts",
+       "sku_id": "41078",
+       "promo": true
       },
       {
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3900.0,
-       "cost": 1950.0,
-       "name": "Yerba mate Chamigo con palo 500 g.",
-       "sku_id": "86695",
-       "promo": false
+       "unit_price": 3294.85,
+       "cost": 1647.42,
+       "name": "Yerba mate Amanda tradicional 1 kg.",
+       "sku_id": "3381",
+       "promo": true
       }
      ],
      "lacks": [
-      "pollo",
-      "banana",
-      "tomate"
+      "pollo"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 50688.94,
-     "complete": true,
-     "missing": [],
-     "kcal": 19267,
+     "total": 48645.24,
+     "complete": false,
+     "missing": [
+      "leche"
+     ],
+     "kcal": 17132,
      "items": [
       {
        "ing": "avena",
@@ -1076,11 +1085,7 @@
        "ing": "leche",
        "qty": 3.5,
        "fixed": false,
-       "unit_price": 2600.0,
-       "cost": 9100.0,
-       "name": "Leche Entera Ilolay U.a.t. Brik 1 Lt",
-       "sku_id": "247387",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "yogur",
@@ -1116,10 +1121,10 @@
        "ing": "atun",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1772.0,
-       "cost": 3544.0,
-       "name": "Atún Desmenuzado Al Natural 120 Grs Maxima",
-       "sku_id": "298379",
+       "unit_price": 1301.0,
+       "cost": 2602.0,
+       "name": "Atún Desmenuzado En Aceite Y Agua 120 Grs Maxima",
+       "sku_id": "294510",
        "promo": false
       },
       {
@@ -1156,8 +1161,8 @@
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3499.0,
-       "cost": 3499.0,
+       "unit_price": 3599.0,
+       "cost": 3599.0,
        "name": "Banana Ecuador X Kg",
        "sku_id": "10198",
        "promo": false
@@ -1176,8 +1181,8 @@
        "ing": "naranja",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 1699.0,
-       "cost": 2548.5,
+       "unit_price": 1899.0,
+       "cost": 2848.5,
        "name": "Naranja Ombligo Elegida Por Kg",
        "sku_id": "10252",
        "promo": false
@@ -1216,8 +1221,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 2999.0,
+       "unit_price": 2899.0,
+       "cost": 2899.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -1253,11 +1258,13 @@
        "promo": false
       }
      ],
-     "lacks": [],
+     "lacks": [
+      "leche"
+     ],
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 42388.63,
+     "total": 39228.63,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1306,11 +1313,11 @@
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3989.0,
-       "cost": 5983.5,
+       "unit_price": 3390.65,
+       "cost": 5085.98,
        "name": "Pollo Entero Fresco 2.700kg",
        "sku_id": "17013",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "atun",
@@ -1336,8 +1343,8 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1489.0,
-       "cost": 744.5,
+       "unit_price": 1749.0,
+       "cost": 874.5,
        "name": "Arroz Check Largo Fino 1 Kg",
        "sku_id": "16210",
        "promo": false
@@ -1346,28 +1353,28 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3612.0,
-       "cost": 3612.0,
+       "unit_price": 3070.2,
+       "cost": 3070.2,
        "name": "Pan Lactal De Mesa 315 G",
        "sku_id": "189853",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2699.0,
-       "cost": 2699.0,
+       "unit_price": 1799.0,
+       "cost": 1799.0,
        "name": "Banana 1 Kg",
        "sku_id": "204538",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "manzana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 2999.0,
+       "unit_price": 2799.0,
+       "cost": 2799.0,
        "name": "Manzana Roja 1 Kg",
        "sku_id": "209772",
        "promo": true
@@ -1416,8 +1423,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 2499.0,
+       "unit_price": 1999.0,
+       "cost": 1999.0,
        "name": "Papa 500 G",
        "sku_id": "203532",
        "promo": true
@@ -1457,7 +1464,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 46975.54,
+     "total": 40581.62,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1516,11 +1523,11 @@
        "ing": "atun",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1490.0,
-       "cost": 2980.0,
+       "unit_price": 1190.0,
+       "cost": 2380.0,
        "name": "Atún Desmenuzado en Aceite Dia 170 Gr.",
        "sku_id": "55817",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "lentejas",
@@ -1536,21 +1543,21 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2630.0,
-       "cost": 1315.0,
+       "unit_price": 1709.5,
+       "cost": 854.75,
        "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
        "sku_id": "299061",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3615.0,
-       "cost": 3615.0,
+       "unit_price": 2350.0,
+       "cost": 2350.0,
        "name": "Pan Blanco Lactal 315 Gr.",
        "sku_id": "245474",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "banana",
@@ -1566,8 +1573,8 @@
        "ing": "manzana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3490.0,
-       "cost": 3490.0,
+       "unit_price": 2890.0,
+       "cost": 2890.0,
        "name": "Manzana Roja Comercial en bolsa malla x Kg.",
        "sku_id": "90111",
        "promo": false
@@ -1596,8 +1603,8 @@
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2990.0,
-       "cost": 1495.0,
+       "unit_price": 1990.0,
+       "cost": 995.0,
        "name": "Zanahoria x Kg.",
        "sku_id": "90122",
        "promo": false
@@ -1606,8 +1613,8 @@
        "ing": "cebolla",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2190.0,
-       "cost": 1095.0,
+       "unit_price": 2290.0,
+       "cost": 1145.0,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
        "promo": false
@@ -1636,11 +1643,11 @@
        "ing": "aceite",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 3830.0,
-       "cost": 957.5,
+       "unit_price": 2533.33,
+       "cost": 633.33,
        "name": "Aceite de Girasol Dia 1,5 Lt.",
        "sku_id": "24114",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "yerba",
@@ -1659,22 +1666,23 @@
    },
    "ranking": [
     "ChangoMas",
-    "Carrefour",
     "Dia",
+    "Carrefour",
     "Jumbo"
    ],
    "cheapest": "ChangoMas",
    "common": [
     "avena",
-    "leche",
     "yogur",
     "huevos",
     "atun",
     "lentejas",
     "arroz",
     "pan_lactal",
+    "banana",
     "manzana",
     "naranja",
+    "tomate",
     "zanahoria",
     "cebolla",
     "papa",
@@ -1786,21 +1794,20 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 42709.64,
+     "total": 41104.24,
      "complete": false,
      "missing": [
       "carne_picada",
-      "pollo",
-      "banana"
+      "pollo"
      ],
-     "kcal": 24041,
+     "kcal": 24931,
      "items": [
       {
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2398.0,
-       "cost": 2398.0,
+       "unit_price": 2397.34,
+       "cost": 2397.34,
        "name": "Fideos dedalitos Favorita bolsa 500 g.",
        "sku_id": "80454",
        "promo": false
@@ -1839,11 +1846,11 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2700.0,
-       "cost": 2700.0,
+       "unit_price": 3600.0,
+       "cost": 3600.0,
        "name": "Pan Blanco Lactal 315 grs",
        "sku_id": "126927",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "leche",
@@ -1859,11 +1866,11 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3900.0,
-       "cost": 1950.0,
-       "name": "Yerba mate Chamigo con palo 500 g.",
-       "sku_id": "86695",
-       "promo": false
+       "unit_price": 3294.85,
+       "cost": 1647.42,
+       "name": "Yerba mate Amanda tradicional 1 kg.",
+       "sku_id": "3381",
+       "promo": true
       },
       {
        "ing": "azucar",
@@ -1891,8 +1898,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 5998.0,
+       "unit_price": 2799.0,
+       "cost": 5598.0,
        "name": "Papa cepillada x kg.",
        "sku_id": "34549",
        "promo": false
@@ -1911,34 +1918,38 @@
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "missing": true
+       "unit_price": 2299.0,
+       "cost": 2299.0,
+       "name": "Banana selección x kg.",
+       "sku_id": "185818",
+       "promo": false
       },
       {
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 949.0,
-       "cost": 2847.0,
-       "name": "Galletitas Polvorita vainilla rellenas frutilla 81 g.",
-       "sku_id": "118025",
+       "unit_price": 889.0,
+       "cost": 2667.0,
+       "name": "Galletitas de chocolate Macucas 85 g.",
+       "sku_id": "201109",
        "promo": false
       },
       {
        "ing": "aceite",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4543.33,
-       "cost": 2271.66,
-       "name": "Aceite de girasol Legitimo 1.5 lts",
-       "sku_id": "97472",
-       "promo": false
+       "unit_price": 3566.0,
+       "cost": 1783.0,
+       "name": "Aceite de girasol Cocinero 1.5 lts",
+       "sku_id": "41078",
+       "promo": true
       },
       {
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 8900.0,
-       "cost": 2225.0,
+       "unit_price": 9490.0,
+       "cost": 2372.5,
        "name": "Queso cremoso Cremac x kg.",
        "sku_id": "19862",
        "promo": true
@@ -1966,16 +1977,17 @@
      ],
      "lacks": [
       "carne_picada",
-      "pollo",
-      "banana"
+      "pollo"
      ],
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 44865.84,
-     "complete": true,
-     "missing": [],
-     "kcal": 28656,
+     "total": 42774.84,
+     "complete": false,
+     "missing": [
+      "leche"
+     ],
+     "kcal": 27436,
      "items": [
       {
        "ing": "fideos",
@@ -2031,11 +2043,7 @@
        "ing": "leche",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2600.0,
-       "cost": 5200.0,
-       "name": "Leche Entera Ilolay U.a.t. Brik 1 Lt",
-       "sku_id": "247387",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "yerba",
@@ -2081,8 +2089,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2999.0,
-       "cost": 5998.0,
+       "unit_price": 2899.0,
+       "cost": 5798.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -2101,8 +2109,8 @@
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3499.0,
-       "cost": 3499.0,
+       "unit_price": 3599.0,
+       "cost": 3599.0,
        "name": "Banana Ecuador X Kg",
        "sku_id": "10198",
        "promo": false
@@ -2151,18 +2159,20 @@
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "unit_price": 2840.0,
-       "cost": 6390.0,
-       "name": "Coca-cola Sabor Original 1,25 Lt Gaseosa Cola Sabor Original 1.25 Lts Coca Cola",
-       "sku_id": "255282",
+       "unit_price": 2711.11,
+       "cost": 6100.0,
+       "name": "Gaseosa Coca-cola Sabor Original 2.25 L Gaseosa Cola Sabor Original 2.25 Lts Coca Cola",
+       "sku_id": "246613",
        "promo": false
       }
      ],
-     "lacks": [],
+     "lacks": [
+      "leche"
+     ],
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 44409.3,
+     "total": 40548.5,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2181,8 +2191,8 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1489.0,
-       "cost": 744.5,
+       "unit_price": 1749.0,
+       "cost": 874.5,
        "name": "Arroz Check Largo Fino 1 Kg",
        "sku_id": "16210",
        "promo": false
@@ -2211,11 +2221,11 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3612.0,
-       "cost": 3612.0,
+       "unit_price": 3070.2,
+       "cost": 3070.2,
        "name": "Pan Lactal De Mesa 315 G",
        "sku_id": "189853",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "leche",
@@ -2251,28 +2261,28 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 16399.0,
-       "cost": 8199.5,
+       "unit_price": 13939.15,
+       "cost": 6969.57,
        "name": "Carne Picada Magra 800g",
        "sku_id": "38299",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3989.0,
-       "cost": 5983.5,
+       "unit_price": 3390.65,
+       "cost": 5085.98,
        "name": "Pollo Entero Fresco 2.700kg",
        "sku_id": "17013",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 4998.0,
+       "unit_price": 1999.0,
+       "cost": 3998.0,
        "name": "Papa 500 G",
        "sku_id": "203532",
        "promo": true
@@ -2291,20 +2301,20 @@
        "ing": "banana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2699.0,
-       "cost": 2699.0,
+       "unit_price": 1799.0,
+       "cost": 1799.0,
        "name": "Banana 1 Kg",
        "sku_id": "204538",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 969.0,
-       "cost": 2907.0,
-       "name": "Galletitas Obleas Opera 55 Gr",
-       "sku_id": "26426",
+       "unit_price": 899.0,
+       "cost": 2697.0,
+       "name": "Galletitas Formis Animales Frutilla 54g",
+       "sku_id": "249608",
        "promo": false
       },
       {
@@ -2352,7 +2362,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 42924.96,
+     "total": 37287.57,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2371,21 +2381,21 @@
        "ing": "arroz",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2630.0,
-       "cost": 1315.0,
+       "unit_price": 1709.5,
+       "cost": 854.75,
        "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
        "sku_id": "299061",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "pure_tomate",
        "qty": 2,
        "fixed": false,
-       "unit_price": 990.0,
-       "cost": 1980.0,
+       "unit_price": 750.0,
+       "cost": 1500.0,
        "name": "Puré de Tomate Dia 520 Gr.",
        "sku_id": "34593",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "huevos",
@@ -2401,11 +2411,11 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3615.0,
-       "cost": 3615.0,
+       "unit_price": 2350.0,
+       "cost": 2350.0,
        "name": "Pan Blanco Lactal 315 Gr.",
        "sku_id": "245474",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "leche",
@@ -2431,20 +2441,20 @@
        "ing": "azucar",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1382.0,
-       "cost": 691.0,
-       "name": "Azucar Cuquets 500 Gr.",
-       "sku_id": "294399",
-       "promo": false
+       "unit_price": 1050.0,
+       "cost": 525.0,
+       "name": "Azúcar Común tipo A Domino 1 Kg.",
+       "sku_id": "46881",
+       "promo": true
       },
       {
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 14000.0,
-       "cost": 7000.0,
-       "name": "Carne Picada común Atmósfera Modificada 600 Gr.",
-       "sku_id": "225677",
+       "unit_price": 19980.0,
+       "cost": 9990.0,
+       "name": "Picada De Nalga Catter Meat 500 Gr.",
+       "sku_id": "313708",
        "promo": false
       },
       {
@@ -2471,8 +2481,8 @@
        "ing": "cebolla",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2190.0,
-       "cost": 1095.0,
+       "unit_price": 2290.0,
+       "cost": 1145.0,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
        "promo": false
@@ -2491,21 +2501,21 @@
        "ing": "galletitas",
        "qty": 3,
        "fixed": false,
-       "unit_price": 1064.0,
-       "cost": 3192.0,
-       "name": "Galletitas Crackers Azuca Traviata 96 Gr.",
-       "sku_id": "313527",
+       "unit_price": 890.0,
+       "cost": 2670.0,
+       "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
+       "sku_id": "168119",
        "promo": false
       },
       {
        "ing": "aceite",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3830.0,
-       "cost": 1915.0,
+       "unit_price": 2533.33,
+       "cost": 1266.66,
        "name": "Aceite de Girasol Dia 1,5 Lt.",
        "sku_id": "24114",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "queso",
@@ -2521,21 +2531,21 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1471.0,
-       "cost": 1471.0,
+       "unit_price": 1025.0,
+       "cost": 1025.0,
        "name": "Mayonesa Cañuelas 250 Gr.",
        "sku_id": "299921",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "gaseosa",
        "qty": 2.25,
        "fixed": false,
-       "unit_price": 2622.0,
-       "cost": 5899.5,
-       "name": "Gaseosa Coca-Cola Sabor Original 1,5 Lt.",
-       "sku_id": "16861",
-       "promo": false
+       "unit_price": 2373.2,
+       "cost": 5339.7,
+       "name": "Gaseosa Coca-Cola Sabor Original 1,25 Lt.",
+       "sku_id": "251157",
+       "promo": true
       }
      ],
      "lacks": [],
@@ -2543,23 +2553,23 @@
     }
    },
    "ranking": [
-    "Carrefour",
     "Dia",
     "ChangoMas",
+    "Carrefour",
     "Jumbo"
    ],
-   "cheapest": "Carrefour",
+   "cheapest": "Dia",
    "common": [
     "fideos",
     "arroz",
     "pure_tomate",
     "huevos",
     "pan_lactal",
-    "leche",
     "yerba",
     "azucar",
     "papa",
     "cebolla",
+    "banana",
     "galletitas",
     "aceite",
     "queso",

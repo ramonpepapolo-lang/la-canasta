@@ -3,121 +3,112 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": 2.65,
+ "inflation": -0.71,
  "base_date": "2026-10-31",
- "end_date": "2026-11-17",
- "days_of_data": 17,
- "prices_collected": 329948,
+ "end_date": "2026-11-18",
+ "days_of_data": 18,
+ "prices_collected": 353980,
  "headline": {
-  "end_to_end_paid": 2.65,
-  "end_to_end_regular": -0.75,
+  "end_to_end_paid": -0.71,
+  "end_to_end_regular": -0.8,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.01
+   "pct": 0.5
   },
   {
    "shop": "ChangoMas",
-   "pct": 4.15
+   "pct": -2.05
   },
   {
    "shop": "Dia",
-   "pct": 4.83
+   "pct": -1.4
   },
   {
    "shop": "Jumbo",
-   "pct": 3.82
+   "pct": 3.74
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 12.8
+   "pct": 9.78
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": 10.13
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 7.45
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 6.03
-  },
-  {
-   "group": "cuidado_personal",
-   "in_headline": false,
-   "pct": 5.69
+   "pct": 5.03
   },
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 3.66
-  },
-  {
-   "group": "azucar",
-   "in_headline": true,
-   "pct": 3.37
+   "pct": 2.55
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 3.12
+   "pct": 1.61
   },
   {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": 1.48
+   "group": "cuidado_personal",
+   "in_headline": false,
+   "pct": 1.39
   },
   {
-   "group": "carne_vacuna",
+   "group": "pan_cereales",
    "in_headline": true,
-   "pct": 1.38
+   "pct": 1.25
   },
   {
-   "group": "cafe_te_yerba",
+   "group": "azucar",
    "in_headline": true,
-   "pct": 1.01
+   "pct": 1.09
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 0.07
   },
   {
    "group": "aceites",
    "in_headline": true,
-   "pct": 0.03
+   "pct": -0.92
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": -1.31
   },
   {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": -0.61
+   "pct": -2.01
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -3.68
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": -4.27
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -14.75
+   "pct": -15.5
   }
  ],
  "products_compared": 1018,
- "products_up": 238,
- "products_down": 85,
- "products_same": 695,
+ "products_up": 228,
+ "products_down": 149,
+ "products_same": 641,
  "top_up": [
-  {
-   "type": "detergente",
-   "type_en": "Dish soap",
-   "shop": "Dia",
-   "name": "Detergente Magistral Ultra Limon Botella 500 Ml.",
-   "before": 2963.35,
-   "now": 5505.0,
-   "pct": 85.77
-  },
   {
    "type": "arroz",
    "type_en": "Rice",
@@ -153,9 +144,27 @@
    "before": 1050.0,
    "now": 1850.0,
    "pct": 76.19
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
   }
  ],
  "top_down": [
+  {
+   "type": "galletitas",
+   "type_en": "Biscuits",
+   "shop": "Dia",
+   "name": "Galletitas Rellenas Melba 360 Gr.",
+   "before": 4540.0,
+   "now": 2250.0,
+   "pct": -50.44
+  },
   {
    "type": "cebolla",
    "type_en": "Onions",
@@ -184,22 +193,13 @@
    "pct": -40.0
   },
   {
-   "type": "jabon_ropa",
-   "type_en": "Laundry powder",
-   "shop": "ChangoMas",
-   "name": "Jabon En Polvo Ala Matic Ecolavado 800 Gr",
-   "before": 3909.0,
-   "now": 2345.4,
-   "pct": -40.0
-  },
-  {
    "type": "cebolla",
    "type_en": "Onions",
    "shop": "Carrefour",
-   "name": "Cebolla Sanes en red 4 uni",
-   "before": 4990.0,
-   "now": 2999.0,
-   "pct": -39.9
+   "name": "Cebolla x kg.",
+   "before": 3999.0,
+   "now": 2499.0,
+   "pct": -37.51
   }
  ],
  "series": [
@@ -292,6 +292,11 @@
    "date": "2026-11-17",
    "paid": 102.155,
    "regular": 99.198
+  },
+  {
+   "date": "2026-11-18",
+   "paid": 98.812,
+   "regular": 99.152
   }
  ]
 }

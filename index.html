@@ -1185,7 +1185,7 @@ function drawChart() {
   }
   const every = Math.max(1, Math.ceil(n / 7));
   rows.forEach((d, i) => {
-    if (i % every === 0 || i === n - 1) {
+    if ((i % every === 0 && n - 1 - i >= Math.ceil(every / 2)) || i === n - 1) {  // no tick glued to the last date
       const a = n === 1 ? "middle" : i === 0 ? "start" : i === n - 1 ? "end" : "middle";
       s += `<text x="${x(i).toFixed(1)}" y="${H - 8}" text-anchor="${a}">${fmtDate(d.date, false)}</text>`;
     }

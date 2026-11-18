@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-18 14:04",
+ "when_utc": "2026-11-18 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "568",
+  "subscribers_text": "569",
   "views_total_text": "150,180",
-  "views_sum_of_videos": 76766,
+  "views_sum_of_videos": 76785,
   "videos": 40,
   "list": [
    {
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 1,
+    "views": 3,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 0,
+    "views": 1,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 30,
+    "views": 31,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -113,7 +113,7 @@
     "player_status": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 42,
+    "views": 43,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -125,9 +125,9 @@
     "player_status": null,
     "title": "Mismo changuito, 4 súper: $217.288 de diferencia 🛒",
     "published": "2026-11-15",
-    "views": 30,
+    "views": 31,
     "views_exact": true,
-    "likes": 1,
+    "likes": 2,
     "comments": null
    },
    {
@@ -149,7 +149,7 @@
     "player_status": null,
     "title": "Nesquik 800 g: $8.453 o $14.900, mismo paquete 🍫",
     "published": "2026-11-15",
-    "views": 17,
+    "views": 18,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -425,7 +425,7 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 9574,
+    "views": 9586,
     "views_exact": true,
     "likes": 641,
     "comments": 2

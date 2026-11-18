@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-18 00:39",
+ "when_utc": "2026-11-18 00:56",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,17 +17,57 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "560",
+  "subscribers_text": "561",
   "views_total_text": "145,141",
-  "views_sum_of_videos": 73799,
-  "videos": 36,
+  "views_sum_of_videos": 74718,
+  "videos": 40,
   "list": [
+   {
+    "id": "jIYG_hhlfwA",
+    "debug": null,
+    "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "LQS8enkY2BA",
+    "debug": null,
+    "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "fAwE77ipmCM",
+    "debug": null,
+    "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "cSz2RWeW-xM",
+    "debug": null,
+    "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
+    "published": "2026-11-17",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "WFIgF0LXUvc",
     "debug": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 72,
+    "views": 55,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -37,7 +77,7 @@
     "debug": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 16,
+    "views": 17,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -57,7 +97,7 @@
     "debug": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 33,
+    "views": 35,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -187,9 +227,29 @@
     "debug": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 16400,
+    "views": 16408,
     "views_exact": true,
     "likes": 3,
+    "comments": null
+   },
+   {
+    "id": "Y9JkCvIlXLk",
+    "debug": null,
+    "title": "",
+    "published": "",
+    "views": 41,
+    "views_exact": true,
+    "likes": 1,
+    "comments": null
+   },
+   {
+    "id": "JjtoCbpvaQg",
+    "debug": null,
+    "title": "",
+    "published": "",
+    "views": 743,
+    "views_exact": true,
+    "likes": 4,
     "comments": null
    },
    {
@@ -227,9 +287,9 @@
     "debug": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 763,
+    "views": 771,
     "views_exact": true,
-    "likes": 94,
+    "likes": 95,
     "comments": null
    },
    {
@@ -267,9 +327,9 @@
     "debug": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 20548,
+    "views": 20664,
     "views_exact": true,
-    "likes": 122,
+    "likes": 123,
     "comments": 1
    },
    {
@@ -297,9 +357,9 @@
     "debug": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 9328,
+    "views": 9332,
     "views_exact": true,
-    "likes": 636,
+    "likes": 634,
     "comments": 2
    },
    {
@@ -317,10 +377,30 @@
     "debug": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7579,
+    "views": 7580,
     "views_exact": true,
     "likes": 6,
     "comments": null
+   },
+   {
+    "id": "Sg7xwPm2cvA",
+    "debug": null,
+    "title": "",
+    "published": "",
+    "views": 42,
+    "views_exact": true,
+    "likes": 3,
+    "comments": null
+   },
+   {
+    "id": "fKmu-LsOw64",
+    "debug": " - YouTube",
+    "title": "",
+    "published": "",
+    "views": null,
+    "views_exact": false,
+    "likes": 8,
+    "comments": 1
    },
    {
     "id": "tlgFxGkcb_Y",
@@ -337,50 +417,10 @@
     "debug": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18150,
+    "views": 18120,
     "views_exact": true,
     "likes": 5,
     "comments": 2
-   },
-   {
-    "id": "jIYG_hhlfwA",
-    "debug": null,
-    "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
-    "published": "2026-11-17",
-    "views": 0,
-    "views_exact": true,
-    "likes": 0,
-    "comments": null
-   },
-   {
-    "id": "LQS8enkY2BA",
-    "debug": null,
-    "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
-    "published": "2026-11-17",
-    "views": 0,
-    "views_exact": true,
-    "likes": 0,
-    "comments": null
-   },
-   {
-    "id": "fAwE77ipmCM",
-    "debug": null,
-    "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
-    "published": "2026-11-17",
-    "views": 0,
-    "views_exact": true,
-    "likes": 0,
-    "comments": null
-   },
-   {
-    "id": "cSz2RWeW-xM",
-    "debug": null,
-    "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
-    "published": "2026-11-17",
-    "views": 0,
-    "views_exact": true,
-    "likes": 0,
-    "comments": null
    }
   ]
  },

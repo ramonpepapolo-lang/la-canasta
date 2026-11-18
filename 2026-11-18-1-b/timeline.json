@@ -1,0 +1,71 @@
+{
+ "total": 27.666,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma yerba. Mismo código de barras.",
+   "say": "Misma yerba. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.162,
+   "dur": 2.042,
+   "ps": "mˈisma ʃˈeɾβa. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$3.295… o $5.850.",
+   "say": "Tres mil doscientos noventa y cinco, o cinco mil ochocientos cincuenta.",
+   "gap": 0.35,
+   "start": 2.382,
+   "end": 6.467,
+   "dur": 4.086,
+   "ps": "tɾˈes mˈil ðosjˈɛntos noβˈɛnta i sˈinko, o sˈinko mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w1",
+   "sub": "Yerba Amanda con palo, el kilo.",
+   "say": "Yerba Amanda con palo, el kilo.",
+   "start": 6.817,
+   "end": 8.655,
+   "dur": 1.838,
+   "ps": "ʃˈeɾβa amˈanda kom pˈalo, el kˈilo."
+  },
+  {
+   "k": "w2",
+   "sub": "Día y ChangoMás, más de $5.000. Jumbo, $5.850.",
+   "say": "Día y ChangoMás, más de cinco mil. Jumbo, cinco mil ochocientos cincuenta.",
+   "start": 8.875,
+   "end": 12.989,
+   "dur": 4.113,
+   "ps": "dˈia i ʧˈaŋɡo mˈas, mˈas ðe sˈinko mˈil. xˈumbo, sˈinko mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es oferta de hoy. Ayer costaba $5.069.",
+   "say": "Pero ojo: es oferta de hoy. Ayer costaba cinco mil sesenta y nueve.",
+   "gap": 0.3,
+   "start": 13.209,
+   "end": 17.204,
+   "dur": 3.995,
+   "ps": "pˌeɾo ˈoxo: ˈes ofˈeɾta ðe ˈoɪ. aʃˈeɾ kostˈaβa sˈinko mˈil sesˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "La primera baja en casi un mes. Puede terminar cualquier día.",
+   "say": "La primera baja en casi un mes. Puede terminar cualquier día.",
+   "start": 17.504,
+   "end": 20.942,
+   "dur": 3.438,
+   "ps": "la pɾimˈeɾa βˈaxa en kˈasi ˈun mˈes. pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.555 por kilo. 44% menos que en Jumbo.",
+   "say": "Ahorrás dos mil quinientos cincuenta y cinco por kilo. Cuarenta y cuatro por ciento menos.",
+   "start": 21.162,
+   "end": 26.146,
+   "dur": 4.983,
+   "ps": "ˌaorˈas ðˈos mˈil kinjˈɛntos sinkwˈɛnta i sˈinko poɾ kˈilo. kwaɾˈɛnta i kwˈatɾo poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

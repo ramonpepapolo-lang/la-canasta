@@ -1,14 +1,14 @@
 {
- "when_utc": "2026-11-18 23:51",
+ "when_utc": "2026-11-19 08:26",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4024,
-  "/": 3853,
-  "/precios/": 9,
-  "/canastas/": 17,
-  "/informes.html": 48,
+  "TOTAL": 4087,
+  "/": 3912,
+  "/precios/": 11,
+  "/canastas/": 18,
+  "/informes.html": 49,
   "/metodo.html": 28,
   "/articulos.html": 12,
   "/ramon-pepa.html": 22,
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "589",
-  "views_total_text": "150,180",
-  "views_sum_of_videos": 78139,
+  "subscribers_text": "588",
+  "views_total_text": "157,901",
+  "views_sum_of_videos": 79450,
   "videos": 41,
   "list": [
    {
@@ -29,9 +29,9 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 13,
+    "views": 26,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 3,
+    "views": 5,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 4,
+    "views": 5,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 109,
+    "views": 129,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 28,
+    "views": 34,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -113,7 +113,7 @@
     "player_status": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 32,
+    "views": 33,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -149,7 +149,7 @@
     "player_status": null,
     "title": "El cerdo subió $1.000 el kilo… menos la bondiola 🐖",
     "published": "2026-11-15",
-    "views": 16,
+    "views": 18,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -281,7 +281,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 17535,
+    "views": 18206,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -293,7 +293,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "",
-    "views": 41,
+    "views": 42,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -305,7 +305,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 842,
+    "views": 880,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -353,9 +353,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 922,
+    "views": 1047,
     "views_exact": true,
-    "likes": 107,
+    "likes": 112,
     "comments": null
    },
    {
@@ -401,7 +401,7 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21208,
+    "views": 21173,
     "views_exact": true,
     "likes": 131,
     "comments": 1
@@ -437,9 +437,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10067,
+    "views": 10220,
     "views_exact": true,
-    "likes": 662,
+    "likes": 661,
     "comments": 2
    },
    {
@@ -461,9 +461,9 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 7889,
+    "views": 8040,
     "views_exact": true,
-    "likes": 6,
+    "likes": 7,
     "comments": null
    },
    {
@@ -509,7 +509,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18469,
+    "views": 18631,
     "views_exact": true,
     "likes": 5,
     "comments": 2

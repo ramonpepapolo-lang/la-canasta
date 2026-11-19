@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-19 16:46",
+ "when_utc": "2026-11-19 18:06",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "592",
+  "subscribers_text": "594",
   "views_total_text": "157,901",
-  "views_sum_of_videos": 79701,
+  "views_sum_of_videos": 79704,
   "videos": 41,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 27,
+    "views": 29,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -353,9 +353,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1079,
+    "views": 1080,
     "views_exact": true,
-    "likes": 112,
+    "likes": 113,
     "comments": null
    },
    {
@@ -403,7 +403,7 @@
     "published": "2026-10-31",
     "views": 21178,
     "views_exact": true,
-    "likes": 133,
+    "likes": 134,
     "comments": 1
    },
    {
@@ -517,8 +517,58 @@
   ]
  },
  "x": {
-  "me_status": 403,
-  "me_error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scal"
+  "me_status": 200,
+  "username": "LaCanastaIndex",
+  "created_at": "2026-10-29T01:01:21.000Z",
+  "followers_count": 0,
+  "following_count": 3,
+  "like_count": 39,
+  "listed_count": 0,
+  "media_count": 40,
+  "tweet_count": 68,
+  "tweets_status": 200,
+  "last_posts": [
+   {
+    "date": "2026-11-18",
+    "text": "Los mismos 317 productos, mismo código de barras, en 4 súper (precios del 15 al 18/11): Dí",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Misma yerba Amanda con palo 1 kg, mismo código de barras: $3.294,85 en Carrefour y $5.850 ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-17",
+    "text": "Weekly report, Nov 8 to 14 🇦🇷🛒\n\nThe same beer went up 43% at Carrefour and down 21% at Día",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-17",
+    "text": "Reporte semanal, 8 al 14 de noviembre 🛒\n\nLa misma cerveza subió 43% en Carrefour y bajó 21",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   }
+  ]
  },
  "email": {
   "status": 200,

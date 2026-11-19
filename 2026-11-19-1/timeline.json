@@ -1,0 +1,71 @@
+{
+ "total": 30.597,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma cerveza. Mismo código de barras.",
+   "say": "Misma cerveza. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.354,
+   "dur": 2.234,
+   "ps": "mˈisma seɾβˈesa. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.080… o $4.200.",
+   "say": "Dos mil ochenta, o cuatro mil doscientos.",
+   "gap": 0.35,
+   "start": 2.574,
+   "end": 4.764,
+   "dur": 2.19,
+   "ps": "dˈos mˈil oʧˈɛnta, o kwˈatɾo mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "Brahma de 710: $2.080 en Día. ChangoMás, $2.841.",
+   "say": "Brahma de setecientos diez: dos mil ochenta en Día. ChangoMás, dos mil ochocientos cuarenta y uno.",
+   "start": 5.114,
+   "end": 10.491,
+   "dur": 5.378,
+   "ps": "bɾˈama ðe sˌetesjˈɛntos ðjˈes: dˈos mˈil oʧˈɛnta en dˈia. ʧˈaŋɡo mˈas, dˈos mˈil ˌoʧosjˈɛntos kwaɾˈɛnta i ˈuno."
+  },
+  {
+   "k": "w2",
+   "sub": "Coto, $4.199. Jumbo, $4.200.",
+   "say": "Coto, cuatro mil ciento noventa y nueve. Jumbo, cuatro mil doscientos.",
+   "start": 10.711,
+   "end": 14.32,
+   "dur": 3.608,
+   "ps": "kˈoto, kwˈatɾo mˈil sjˈɛnto noβˈɛnta i nwˈeβe. xˈumbo, kwˈatɾo mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es oferta. En Día, la lista es $4.190.",
+   "say": "Pero ojo: es oferta. En Día, el precio de lista es cuatro mil ciento noventa.",
+   "gap": 0.3,
+   "start": 14.54,
+   "end": 18.753,
+   "dur": 4.213,
+   "ps": "pˌeɾo ˈoxo: ˈes ofˈeɾta. en dˈia, el pɾˈesjo ðe lˈista ˈes kwˈatɾo mˈil sjˈɛnto noβˈɛnta."
+  },
+  {
+   "k": "b2",
+   "sub": "El martes estaba a $3.200. Desde ayer, $2.080: el más bajo en 27 días.",
+   "say": "El martes estaba a tres mil doscientos. Desde ayer, dos mil ochenta: el más bajo en veintisiete días.",
+   "start": 19.053,
+   "end": 24.607,
+   "dur": 5.554,
+   "ps": "el mˈaɾtes estˈaβa a tɾˈes mˈil ðosjˈɛntos. dˌesðe aʃˈeɾ, dˈos mˈil oʧˈɛnta: el mˈas βˌaxo em bˌAntisjˈete ðˈias."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.120 por latón. En seis, $12.720.",
+   "say": "Ahorrás dos mil ciento veinte por latón. En seis, doce mil setecientos veinte.",
+   "start": 24.827,
+   "end": 29.077,
+   "dur": 4.25,
+   "ps": "ˌaorˈas ðˈos mˈil sjˈɛnto βˈAnte poɾ latˈon. en sˈAs, dˈose mˈil sˌetesjˈɛntos βˈAnte."
+  }
+ ]
+}

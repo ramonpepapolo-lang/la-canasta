@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Misma cerveza. Mismo código de barras.","say":"Misma cerveza. Mismo código de barras."},
+{"k":"h2","sub":"$2.080… o $4.200.","say":"Dos mil ochenta, o cuatro mil doscientos.","gap":0.35},
+{"k":"w1","sub":"Brahma de 710: $2.080 en Día. ChangoMás, $2.841.","say":"Brahma de setecientos diez: dos mil ochenta en Día. ChangoMás, dos mil ochocientos cuarenta y uno."},
+{"k":"w2","sub":"Coto, $4.199. Jumbo, $4.200.","say":"Coto, cuatro mil ciento noventa y nueve. Jumbo, cuatro mil doscientos."},
+{"k":"b1","sub":"Pero ojo: es oferta. En Día, la lista es $4.190.","say":"Pero ojo: es oferta. En Día, el precio de lista es cuatro mil ciento noventa.","gap":0.3},
+{"k":"b2","sub":"El martes estaba a $3.200. Desde ayer, $2.080: el más bajo en 27 días.","say":"El martes estaba a tres mil doscientos. Desde ayer, dos mil ochenta: el más bajo en veintisiete días."},
+{"k":"p1","sub":"Ahorrás $2.120 por latón. En seis, $12.720.","say":"Ahorrás dos mil ciento veinte por latón. En seis, doce mil setecientos veinte."}
+]}

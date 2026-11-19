@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-19 20:24",
+ "when_utc": "2026-11-19 23:29",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "595",
+  "subscribers_text": "603",
   "views_total_text": "157,901",
-  "views_sum_of_videos": 79971,
+  "views_sum_of_videos": 80001,
   "videos": 42,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 0,
+    "views": 8,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 29,
+    "views": 30,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -125,7 +125,7 @@
     "player_status": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 33,
+    "views": 31,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -137,7 +137,7 @@
     "player_status": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 48,
+    "views": 45,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -149,7 +149,7 @@
     "player_status": null,
     "title": "Mismo changuito, 4 súper: $217.288 de diferencia 🛒",
     "published": "2026-11-15",
-    "views": 31,
+    "views": 32,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -197,7 +197,7 @@
     "player_status": null,
     "title": "Picada del sábado: el salamín bajó 20% hoy 🌦️",
     "published": "2026-11-14",
-    "views": 22,
+    "views": 23,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -293,7 +293,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 18552,
+    "views": 18515,
     "views_exact": true,
     "likes": 4,
     "comments": null
@@ -317,9 +317,9 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 896,
+    "views": 909,
     "views_exact": true,
-    "likes": 6,
+    "likes": 7,
     "comments": null
    },
    {
@@ -365,9 +365,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1076,
+    "views": 1087,
     "views_exact": true,
-    "likes": 114,
+    "likes": 115,
     "comments": null
    },
    {
@@ -413,9 +413,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21173,
+    "views": 21174,
     "views_exact": true,
-    "likes": 133,
+    "likes": 136,
     "comments": 1
    },
    {
@@ -449,9 +449,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10173,
+    "views": 10178,
     "views_exact": true,
-    "likes": 663,
+    "likes": 665,
     "comments": 2
    },
    {
@@ -473,7 +473,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8118,
+    "views": 8151,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -521,7 +521,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18721,
+    "views": 18719,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -544,7 +544,7 @@
     "date": "2026-11-19",
     "text": "Desde fines de octubre, lo que más bajó en el súper: verduras −14,7% y frutas −6,1% (preci",
     "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

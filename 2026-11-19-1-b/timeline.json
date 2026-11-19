@@ -1,0 +1,71 @@
+{
+ "total": 28.741,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma Brahma de 710. Mismo código de barras.",
+   "say": "Misma Brahma de setecientos diez. Mismo código de barras.",
+   "start": 0.12,
+   "end": 3.226,
+   "dur": 3.106,
+   "ps": "mˈisma βɾˈama ðe sˌetesjˈɛntos ðjˈes. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.080… o $4.200.",
+   "say": "Dos mil ochenta, o cuatro mil doscientos.",
+   "gap": 0.3,
+   "start": 3.446,
+   "end": 5.636,
+   "dur": 2.19,
+   "ps": "dˈos mˈil oʧˈɛnta, o kwˈatɾo mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "Día, $2.080. ChangoMás, $2.841.",
+   "say": "Día, dos mil ochenta. ChangoMás, dos mil ochocientos cuarenta y uno.",
+   "start": 5.936,
+   "end": 9.699,
+   "dur": 3.764,
+   "ps": "dˈia, dˈos mˈil oʧˈɛnta. ʧˈaŋɡo mˈas, dˈos mˈil ˌoʧosjˈɛntos kwaɾˈɛnta i ˈuno."
+  },
+  {
+   "k": "w2",
+   "sub": "Coto, $4.199. Jumbo, $4.200.",
+   "say": "Coto, cuatro mil ciento noventa y nueve. Jumbo, cuatro mil doscientos.",
+   "start": 9.919,
+   "end": 13.528,
+   "dur": 3.608,
+   "ps": "kˈoto, kwˈatɾo mˈil sjˈɛnto noβˈɛnta i nwˈeβe. xˈumbo, kwˈatɾo mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es oferta. La lista en Día es $4.190.",
+   "say": "Pero ojo: es oferta. La lista en Día es cuatro mil ciento noventa.",
+   "gap": 0.3,
+   "start": 13.748,
+   "end": 17.387,
+   "dur": 3.639,
+   "ps": "pˌeɾo ˈoxo: ˈes ofˈeɾta. la lˈista en dˈia ˈes kwˈatɾo mˈil sjˈɛnto noβˈɛnta."
+  },
+  {
+   "k": "b2",
+   "sub": "El martes, $3.200. Desde ayer, $2.080: lo más bajo en 27 días.",
+   "say": "El martes, tres mil doscientos. Desde ayer, dos mil ochenta: lo más bajo en veintisiete días.",
+   "start": 17.687,
+   "end": 22.742,
+   "dur": 5.055,
+   "ps": "el mˈaɾtes, tɾˈes mˈil ðosjˈɛntos. dˌesðe aʃˈeɾ, dˈos mˈil oʧˈɛnta: lo mˈas βˌaxo em bˌAntisjˈete ðˈias."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.120 por latón. En seis, $12.720.",
+   "say": "Ahorrás dos mil ciento veinte por latón. En seis, doce mil setecientos veinte.",
+   "start": 22.962,
+   "end": 27.221,
+   "dur": 4.259,
+   "ps": "ˌaorˈas ðˈos mˈil sjˈɛnto βˈAnte poɾ latˈon. en sˈAs, dˈose mˈil sˌetesjˈɛntos βˈAnte."
+  }
+ ]
+}

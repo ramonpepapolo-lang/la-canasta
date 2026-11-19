@@ -1,5 +1,5 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -204,7 +204,7 @@
        "cost": 1066.67,
        "name": "Vino tinto Malbec Aime 750 ml",
        "sku_id": "127156",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "cerveza",
@@ -253,7 +253,7 @@
      "fixed_total": 2858.0
     },
     "Jumbo": {
-     "total": 21254.68,
+     "total": 21964.29,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -322,8 +322,8 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 33900.0,
-       "cost": 2712.0,
+       "unit_price": 37900.0,
+       "cost": 3032.0,
        "name": "Queso Provoleta Artesanal x 1 Kg Nonna Pia",
        "sku_id": "305103",
        "promo": false
@@ -332,8 +332,8 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 5999.0,
-       "cost": 719.88,
+       "unit_price": 6599.0,
+       "cost": 791.88,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -354,8 +354,8 @@
        "fixed": false,
        "unit_price": 3999.0,
        "cost": 999.75,
-       "name": "Lechuga Morada Orgánica X Unidad Lechuga Morada Orgánica x 260 Grs",
-       "sku_id": "347981",
+       "name": "Lechuga Mantecosa Organica X Unid",
+       "sku_id": "347962",
        "promo": false
       },
       {
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4900.0,
-       "cost": 2450.0,
-       "name": "Cerveza Rubia 1000 Ml Schneider",
-       "sku_id": "26673",
+       "unit_price": 5535.21,
+       "cost": 2767.61,
+       "name": "Cerveza Rubia 710 Cc Schneider",
+       "sku_id": "272150",
        "promo": false
       },
       {
@@ -413,7 +413,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 18018.16,
+     "total": 17285.92,
      "complete": false,
      "missing": [
       "lechuga"
@@ -444,10 +444,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 16802.64,
-       "cost": 2016.32,
-       "name": "Chorizo Parrillero Cabaña Argentina 435g 4u",
-       "sku_id": "38936",
+       "unit_price": 10700.65,
+       "cost": 1284.08,
+       "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
+       "sku_id": "161138",
        "promo": true
       },
       {
@@ -664,7 +664,7 @@
        "cost": 183.2,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "lechuga",
@@ -735,8 +735,8 @@
    },
    "ranking": [
     "Carrefour",
-    "Dia",
     "ChangoMas",
+    "Dia",
     "Jumbo"
    ],
    "cheapest": "Carrefour",
@@ -1064,7 +1064,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 48645.24,
+     "total": 49663.24,
      "complete": false,
      "missing": [
       "leche"
@@ -1121,8 +1121,8 @@
        "ing": "atun",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1301.0,
-       "cost": 2602.0,
+       "unit_price": 1600.0,
+       "cost": 3200.0,
        "name": "Atún Desmenuzado En Aceite Y Agua 120 Grs Maxima",
        "sku_id": "294510",
        "promo": false
@@ -1191,8 +1191,8 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 5999.0,
-       "cost": 4199.3,
+       "unit_price": 6599.0,
+       "cost": 4619.3,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -1264,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 39228.63,
+     "total": 38925.3,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1443,11 +1443,11 @@
        "ing": "aceite",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 4546.0,
-       "cost": 1136.5,
-       "name": "Aceite De Girasol Legítimo 1.5 L",
-       "sku_id": "216055",
-       "promo": false
+       "unit_price": 3332.67,
+       "cost": 833.17,
+       "name": "Aceite De Girasol Cañuelas 1.5 L",
+       "sku_id": "14810",
+       "promo": true
       },
       {
        "ing": "yerba",
@@ -1577,7 +1577,7 @@
        "cost": 2890.0,
        "name": "Manzana Roja Comercial en bolsa malla x Kg.",
        "sku_id": "90111",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "naranja",
@@ -1607,7 +1607,7 @@
        "cost": 995.0,
        "name": "Zanahoria x Kg.",
        "sku_id": "90122",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "cebolla",
@@ -1617,7 +1617,7 @@
        "cost": 1145.0,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "papa",
@@ -2172,7 +2172,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 40548.5,
+     "total": 39701.84,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2251,11 +2251,11 @@
        "ing": "azucar",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1479.0,
-       "cost": 739.5,
+       "unit_price": 999.0,
+       "cost": 499.5,
        "name": "Azúcar Azucel 1kg",
        "sku_id": "41373",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "carne_picada",
@@ -2321,11 +2321,11 @@
        "ing": "aceite",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 4546.0,
-       "cost": 2273.0,
-       "name": "Aceite De Girasol Legítimo 1.5 L",
-       "sku_id": "216055",
-       "promo": false
+       "unit_price": 3332.67,
+       "cost": 1666.34,
+       "name": "Aceite De Girasol Cañuelas 1.5 L",
+       "sku_id": "14810",
+       "promo": true
       },
       {
        "ing": "queso",
@@ -2485,7 +2485,7 @@
        "cost": 1145.0,
        "name": "Cebolla Comercial en bolsa malla x Kg.",
        "sku_id": "90063",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "banana",

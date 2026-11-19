@@ -8,65 +8,65 @@
   "complete": false,
   "days": [
    "2026-11-15",
-   "2026-11-18"
+   "2026-11-19"
   ],
-  "days_of_data": 4,
-  "n_products": 317,
+  "days_of_data": 5,
+  "n_products": 304,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1330940.35,
+    "total": 1223647.66,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1361718.35,
-    "pct": 2.31
+    "total": 1248833.66,
+    "pct": 2.06
    },
    {
     "shop": "ChangoMas",
-    "total": 1365071.76,
-    "pct": 2.56
+    "total": 1263964.0,
+    "pct": 3.29
    },
    {
     "shop": "Jumbo",
-    "total": 1521811.5,
-    "pct": 14.34
+    "total": 1409468.0,
+    "pct": 15.19
    }
   ],
   "cheapest_count": {
-   "Carrefour": 115,
-   "Jumbo": 9,
-   "ChangoMas": 121,
-   "Dia": 130
+   "Carrefour": 114,
+   "Jumbo": 7,
+   "ChangoMas": 112,
+   "Dia": 127
   },
   "examples": [
-   {
-    "ean": "7790240017069",
-    "name": "Vino Blanco Alaris Sauvignon Blanc 750 Ml",
-    "low_shop": "Carrefour",
-    "low": 3330.0,
-    "high_shop": "Jumbo",
-    "high": 6350.0,
-    "pct": 90.7
-   },
    {
     "ean": "7790070431516",
     "name": "Arroz Lucchetti Parboil 500 G",
     "low_shop": "Dia",
-    "low": 866.88,
+    "low": 817.0,
     "high_shop": "Jumbo",
     "high": 1600.0,
-    "pct": 84.6
+    "pct": 95.8
    },
    {
-    "ean": "7790240041880",
-    "name": "Vino Blanco Alaris Dulce Natural 750 Ml",
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15200.0,
+    "high_shop": "Jumbo",
+    "high": 27750.0,
+    "pct": 82.6
+   },
+   {
+    "ean": "7791290793446",
+    "name": "Jabón En Polvo Skip Bio-Enzimas 600g",
     "low_shop": "Carrefour",
-    "low": 3215.0,
-    "high_shop": "Dia",
-    "high": 5898.0,
-    "pct": 83.5
+    "low": 2824.25,
+    "high_shop": "Jumbo",
+    "high": 4750.0,
+    "pct": 68.2
    }
   ]
  },

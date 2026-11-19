@@ -1,12 +1,12 @@
 {
- "date": "2026-11-18",
- "previous": "2026-11-17",
+ "date": "2026-11-19",
+ "previous": "2026-11-18",
  "index": {
-  "date": "2026-11-18",
-  "paid": 98.812,
-  "regular": 99.152,
-  "day_change": -3.27,
-  "days_of_data": 26,
+  "date": "2026-11-19",
+  "paid": 98.74,
+  "regular": 99.499,
+  "day_change": -0.07,
+  "days_of_data": 27,
   "series": [
    [
     "2026-10-24",
@@ -137,18 +137,23 @@
     "2026-11-18",
     98.812,
     99.152
+   ],
+   [
+    "2026-11-19",
+    98.74,
+    99.499
    ]
   ],
   "mode": "week",
-  "week_paid": 0.21,
-  "week_regular": -0.14,
+  "week_paid": 0.03,
+  "week_regular": -0.11,
   "now": [
-   "2026-11-12",
-   "2026-11-18"
+   "2026-11-13",
+   "2026-11-19"
   ],
   "before": [
-   "2026-11-05",
-   "2026-11-11"
+   "2026-11-06",
+   "2026-11-12"
   ]
  },
  "ranking": {
@@ -156,252 +161,153 @@
   "label_en": "Week of 15 to 21 November 2026",
   "days": [
    "2026-11-15",
-   "2026-11-18"
+   "2026-11-19"
   ],
-  "n_products": 317,
+  "n_products": 304,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1330940.35,
+    "total": 1223647.66,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1361718.35,
-    "pct": 2.31
+    "total": 1248833.66,
+    "pct": 2.06
    },
    {
     "shop": "ChangoMas",
-    "total": 1365071.76,
-    "pct": 2.56
+    "total": 1263964.0,
+    "pct": 3.29
    },
    {
     "shop": "Jumbo",
-    "total": 1521811.5,
-    "pct": 14.34
+    "total": 1409468.0,
+    "pct": 15.19
    }
   ]
  },
  "down": [
   {
-   "shop": "Dia",
-   "name": "Galletitas Rellenas Melba 360 Gr.",
-   "type": "galletitas",
-   "before": 4540.0,
-   "now": 2250.0,
-   "pct": -50.4,
+   "shop": "ChangoMas",
+   "name": "Azúcar Azucel 1kg",
+   "type": "azucar",
+   "before": 1479.0,
+   "now": 999.0,
+   "pct": -32.5,
    "why": "promo_start"
-  },
-  {
-   "shop": "Dia",
-   "name": "Harina 0000 con Vitaminas Favorita 1 Kg.",
-   "type": "harina_000",
-   "before": 1836.0,
-   "now": 1050.0,
-   "pct": -42.8,
-   "why": "list_down"
-  },
-  {
-   "shop": "Dia",
-   "name": "Cerveza Quilmes 710 Ml.",
-   "type": "cerveza",
-   "before": 3810.0,
-   "now": 2250.0,
-   "pct": -40.9,
-   "why": "list_up"
-  },
-  {
-   "shop": "Dia",
-   "name": "Agua Mineral sin Gas Eco de los Andes 2 Lts.",
-   "type": "agua",
-   "before": 3346.0,
-   "now": 2050.0,
-   "pct": -38.7,
-   "why": "list_down"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Yerba mate Amanda tradicional 500 grs",
-   "type": "yerba",
-   "before": 2675.0,
-   "now": 1735.0,
-   "pct": -35.1,
-   "why": "list_down"
-  },
-  {
-   "shop": "Dia",
-   "name": "Shampoo Low Poo Metodo Curly Plusbelle 700 Ml.",
-   "type": "shampoo",
-   "before": 7870.0,
-   "now": 5110.0,
-   "pct": -35.1,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Concentrado Cif Lima Botella 300 ml",
-   "type": "detergente",
-   "before": 2700.0,
-   "now": 1755.0,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Detergente Concentrado Cif Lima Botella 500 ml",
-   "type": "detergente",
-   "before": 4390.0,
-   "now": 2853.5,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Yerba mate Amanda selección especial 1 kg.",
-   "type": "yerba",
-   "before": 5619.0,
-   "now": 3652.35,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Yerba mate Amanda tradicional 1 kg.",
-   "type": "yerba",
-   "before": 5069.0,
-   "now": 3294.85,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Dia",
-   "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
-   "type": "arroz",
-   "before": 2630.0,
-   "now": 1709.5,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Dia",
-   "name": "Cerveza Brahma 710 Ml.",
-   "type": "cerveza",
-   "before": 3200.0,
-   "now": 2080.0,
-   "pct": -35.0,
-   "why": "promo_start"
-  }
- ],
- "up": [
-  {
-   "shop": "Carrefour",
-   "name": "Lavandina Ayudín anti-splash 2 l.",
-   "type": "lavandina",
-   "before": 2999.75,
-   "now": 4615.0,
-   "pct": 53.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Lavandina clásica desinfectante Ayudín 2 lts.",
-   "type": "lavandina",
-   "before": 2033.85,
-   "now": 3129.0,
-   "pct": 53.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Shampoo Fructis Hydraliss 350 ml",
-   "type": "shampoo",
-   "before": 5843.5,
-   "now": 8990.0,
-   "pct": 53.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Papel higiénico Felpita hoja simple 4 x 30 m.",
-   "type": "papel_higienico",
-   "before": 1959.3,
-   "now": 2799.0,
-   "pct": 42.9,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Pan Blanco Lactal 315 grs",
-   "type": "pan_lactal",
-   "before": 2700.0,
-   "now": 3600.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Pasta dental Colgate sensitive whitening 100 g.",
-   "type": "pasta_dental",
-   "before": 4446.75,
-   "now": 5929.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Harina de trigo Pureza 0000 1 kg.",
-   "type": "harina_000",
-   "before": 1390.0,
-   "now": 1679.0,
-   "pct": 20.8,
-   "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Arroz Check Largo Fino 1 Kg",
-   "type": "arroz",
-   "before": 1489.0,
-   "now": 1749.0,
-   "pct": 17.5,
-   "why": "list_up"
+   "name": "Cerveza En Lata Brahma 354ml",
+   "type": "cerveza",
+   "before": 2099.0,
+   "now": 1469.3,
+   "pct": -30.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Aceite De Girasol Cañuelas 1.5 L",
+   "type": "aceite_girasol",
+   "before": 6989.0,
+   "now": 4999.0,
+   "pct": -28.5,
+   "why": "promo_start"
   },
   {
    "shop": "Carrefour",
-   "name": "Manzana roja Huella Natural x kg.",
-   "type": "manzana",
-   "before": 5990.0,
-   "now": 6999.0,
-   "pct": 16.8,
-   "why": "promo_end"
+   "name": "Queso cuartirolo Tremblay 300 g.",
+   "type": "queso_cremoso",
+   "before": 3919.0,
+   "now": 3329.0,
+   "pct": -15.1,
+   "why": "list_down"
   },
   {
    "shop": "Carrefour",
    "name": "Lavandina Querubín clásica 2 lt.",
    "type": "lavandina",
-   "before": 2499.0,
-   "now": 2875.0,
-   "pct": 15.0,
-   "why": "promo_end"
+   "before": 2875.0,
+   "now": 2499.0,
+   "pct": -13.1,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Torrado Bonafide Intenso 200 G",
+   "type": "cafe",
+   "before": 6239.0,
+   "now": 6679.0,
+   "pct": 7.1,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Puré De Tomate Doña Pupa Tetra 520 G.",
+   "type": "pure_tomate",
+   "before": 1369.0,
+   "now": 1489.0,
+   "pct": 8.8,
+   "why": "list_up"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 5999.0,
+   "now": 6599.0,
+   "pct": 10.0,
+   "why": "price"
   },
   {
    "shop": "Dia",
-   "name": "Agua DIA Mineralizada 2 Lt.",
-   "type": "agua",
-   "before": 1150.0,
-   "now": 1300.0,
-   "pct": 13.0,
+   "name": "Spaghetti Rina Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 3040.0,
+   "now": 3800.0,
+   "pct": 25.0,
+   "why": "promo_end"
+  }
+ ],
+ "up": [
+  {
+   "shop": "Dia",
+   "name": "Spaghetti Rina Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 3040.0,
+   "now": 3800.0,
+   "pct": 25.0,
    "why": "promo_end"
   },
   {
-   "shop": "Carrefour",
-   "name": "Milanesa bola de lomo de Novillo x kg",
-   "type": "milanesa_carne",
-   "before": 15990.0,
-   "now": 17490.0,
-   "pct": 9.4,
+   "shop": "Jumbo",
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 5999.0,
+   "now": 6599.0,
+   "pct": 10.0,
+   "why": "price"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Puré De Tomate Doña Pupa Tetra 520 G.",
+   "type": "pure_tomate",
+   "before": 1369.0,
+   "now": 1489.0,
+   "pct": 8.8,
+   "why": "list_up"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Torrado Bonafide Intenso 200 G",
+   "type": "cafe",
+   "before": 6239.0,
+   "now": 6679.0,
+   "pct": 7.1,
    "why": "list_up"
   }
  ],
- "n_down": 122,
- "n_up": 24
+ "n_down": 5,
+ "n_up": 4
 }

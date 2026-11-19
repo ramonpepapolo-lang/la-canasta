@@ -3,33 +3,33 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.71,
+ "inflation": -0.78,
  "base_date": "2026-10-31",
- "end_date": "2026-11-18",
- "days_of_data": 18,
- "prices_collected": 353980,
+ "end_date": "2026-11-19",
+ "days_of_data": 19,
+ "prices_collected": 377993,
  "headline": {
-  "end_to_end_paid": -0.71,
-  "end_to_end_regular": -0.8,
+  "end_to_end_paid": -0.78,
+  "end_to_end_regular": -0.45,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 0.5
+   "pct": 0.49
   },
   {
    "shop": "ChangoMas",
-   "pct": -2.05
+   "pct": -2.76
   },
   {
    "shop": "Dia",
-   "pct": -1.4
+   "pct": -1.33
   },
   {
    "shop": "Jumbo",
-   "pct": 3.74
+   "pct": 4.05
   }
  ],
  "groups": [
@@ -41,17 +41,22 @@
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": 5.03
+   "pct": 4.88
   },
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 2.55
+   "pct": 2.82
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.61
+   "pct": 1.53
+  },
+  {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": 1.46
   },
   {
    "group": "cuidado_personal",
@@ -59,55 +64,50 @@
    "pct": 1.39
   },
   {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": 1.25
-  },
-  {
-   "group": "azucar",
-   "in_headline": true,
-   "pct": 1.09
-  },
-  {
    "group": "frutas",
    "in_headline": true,
    "pct": 0.07
   },
   {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": -0.92
-  },
-  {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": -1.31
+   "pct": -0.93
+  },
+  {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": -1.84
   },
   {
    "group": "aguas_gaseosas",
    "in_headline": true,
-   "pct": -2.01
+   "pct": -1.92
   },
   {
    "group": "carne_vacuna",
    "in_headline": true,
-   "pct": -3.68
+   "pct": -3.38
+  },
+  {
+   "group": "azucar",
+   "in_headline": true,
+   "pct": -3.75
   },
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.27
+   "pct": -4.65
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -15.5
+   "pct": -14.83
   }
  ],
  "products_compared": 1018,
- "products_up": 228,
- "products_down": 149,
- "products_same": 641,
+ "products_up": 238,
+ "products_down": 153,
+ "products_same": 627,
  "top_up": [
   {
    "type": "arroz",
@@ -297,6 +297,11 @@
    "date": "2026-11-18",
    "paid": 98.812,
    "regular": 99.152
+  },
+  {
+   "date": "2026-11-19",
+   "paid": 98.74,
+   "regular": 99.499
   }
  ]
 }

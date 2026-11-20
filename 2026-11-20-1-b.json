@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.2,"tail":1.3,"lines":[
+{"k":"h1","sub":"Café La Virginia. Mismo código de barras.","say":"Café La Virginia. Mismo código de barras."},
+{"k":"h2","sub":"$2.916… o $7.850.","say":"Dos mil novecientos dieciséis, o siete mil ochocientos cincuenta.","gap":0.3},
+{"k":"w1","sub":"En Carrefour, $2.916.","say":"En Carrefour, dos mil novecientos dieciséis."},
+{"k":"w2","sub":"Día $7.290. Jumbo $7.850.","say":"En Día, siete mil doscientos noventa. En Jumbo, siete mil ochocientos cincuenta."},
+{"k":"b1","sub":"Pero ojo: es una oferta del 60%.","say":"Pero ojo: es una oferta del sesenta por ciento.","gap":0.25},
+{"k":"b2","sub":"Arrancó ayer, jueves 19. Puede terminar cualquier día.","say":"Arrancó ayer, jueves diecinueve, y puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $4.934 por paquete.","say":"Ahorrás cuatro mil novecientos treinta y cuatro pesos por paquete."}
+]}

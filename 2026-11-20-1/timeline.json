@@ -1,0 +1,71 @@
+{
+ "total": 33.282,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo café. Mismo código de barras.",
+   "say": "Mismo café. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.11,
+   "dur": 1.99,
+   "ps": "mˈismo kafˈe. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.916… o $7.850.",
+   "say": "Dos mil novecientos dieciséis, o siete mil ochocientos cincuenta.",
+   "gap": 0.35,
+   "start": 2.33,
+   "end": 5.893,
+   "dur": 3.563,
+   "ps": "dˈos mˈil nˌoβesjˈɛntos ðjˌesisˈeis, o sjˈete mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w1",
+   "sub": "La Virginia clásico 250 g: $2.916 en Carrefour.",
+   "say": "Café La Virginia de doscientos cincuenta gramos, en Carrefour: dos mil novecientos dieciséis.",
+   "start": 6.243,
+   "end": 11.323,
+   "dur": 5.08,
+   "ps": "kafˈe la βiɾxˈinja ðe ðosjˈɛntos sinkwˈɛnta ɣɾˈamos, en kˌarefˈowɾ: dˈos mˈil nˌoβesjˈɛntos ðjˌesisˈeis."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $7.290. Jumbo $7.850.",
+   "say": "En Día, siete mil doscientos noventa. En Jumbo, siete mil ochocientos cincuenta.",
+   "start": 11.543,
+   "end": 15.956,
+   "dur": 4.413,
+   "ps": "en dˈia, sjˈete mˈil ðosjˈɛntos noβˈɛnta. en xˈumbo, sjˈete mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta del 60%. El precio de lista es $7.289.",
+   "say": "Pero ojo. Es una oferta del sesenta por ciento: el precio de lista es siete mil doscientos ochenta y nueve.",
+   "gap": 0.3,
+   "start": 16.176,
+   "end": 21.996,
+   "dur": 5.82,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta ðel sesˈɛnta poɾ sjˈɛnto: el pɾˈesjo ðe lˈista ˈes sjˈete mˈil ðosjˈɛntos oʧˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "Está así desde ayer, jueves 19. Puede terminar cualquier día.",
+   "say": "Está así desde ayer, jueves diecinueve, y puede terminar cualquier día.",
+   "start": 22.296,
+   "end": 26.159,
+   "dur": 3.863,
+   "ps": "estˈa asˈi ðˌesðe aʃˈeɾ, xwˈeβes ðjˌesinwˈeβe, i pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $4.934 por paquete. Un 63% menos.",
+   "say": "Ahorrás cuatro mil novecientos treinta y cuatro pesos por paquete. Sesenta y tres por ciento menos.",
+   "start": 26.379,
+   "end": 31.762,
+   "dur": 5.383,
+   "ps": "ˌaorˈas kwˈatɾo mˈil nˌoβesjˈɛntos tɾˈAnta i kwˈatɾo pˈesos poɾ pakˈete. sesˈɛnta i tɾˈes poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+[
+ {
+  "outlet": "Infobae",
+  "to": "redaccion@infobae.com",
+  "sent": true,
+  "info": "<202611201848.19075440580@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Nación (Esteban Lafuente)",
+  "to": "elafuente@lanacion.com.ar",
+  "sent": true,
+  "info": "<202611201848.29487413968@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Cronista",
+  "to": "pvalli@cronista.com",
+  "sent": true,
+  "info": "<202611201849.81525165770@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "iProfesional",
+  "to": "contacto@iprofesional.com",
+  "sent": true,
+  "info": "<202611201849.75876345107@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Página/12",
+  "to": "redactor@pagina12.com.ar",
+  "sent": true,
+  "info": "<202611201849.29934730487@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "elDiarioAR",
+  "to": "comunidad@eldiarioar.com",
+  "sent": true,
+  "info": "<202611201850.11464496697@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Chequeado",
+  "to": "info@chequeado.com",
+  "sent": true,
+  "info": "<202611201850.42191595490@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Bloomberg News",
+  "to": "tips2@bloomberg.net",
+  "sent": true,
+  "info": "<202611201850.46289936817@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Rest of World",
+  "to": "hello@restofworld.org",
+  "sent": true,
+  "info": "<202611201851.71140072081@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "TechCrunch",
+  "to": "tips@techcrunch.com",
+  "sent": true,
+  "info": "<202611201851.36616185685@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Americas Quarterly",
+  "to": "AQeditors@as-coa.org",
+  "sent": true,
+  "info": "<202611201851.22357261571@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Buenos Aires Herald",
+  "to": "newsroom@buenosairesherald.com",
+  "sent": true,
+  "info": "<202611201852.29961030005@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Destape",
+  "to": "redaccion@eldestapeweb.com",
+  "sent": true,
+  "info": "<202611201852.83333067343@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Letra P",
+  "to": "redaccion@letrap.com.ar",
+  "sent": true,
+  "info": "<202611201852.54296838562@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "0221",
+  "to": "redaccion@0221.com.ar",
+  "sent": true,
+  "info": "<202611201853.94752407489@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Noticias Argentinas",
+  "to": "jorge.garcia@alphamedia.com.ar",
+  "sent": true,
+  "info": "<202611201853.81683967796@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Río Negro",
+  "to": "diegopenizzotto@rionegro.com.ar",
+  "sent": true,
+  "info": "<202611201853.96309866492@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "El Tribuno",
+  "to": "pjuarez@eltribuno.com.ar",
+  "sent": true,
+  "info": "<202611201854.75422957420@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Rosario3",
+  "to": "editor@rosario3.com",
+  "sent": true,
+  "info": "<202611201854.74181210412@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario de Cuyo",
+  "to": "web@diariodecuyo.com.ar",
+  "sent": true,
+  "info": "<202611201854.66794495263@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Diario Jornada",
+  "to": "info@diariojornada.com.ar",
+  "sent": true,
+  "info": "<202611201855.66092213894@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Hoy Día Córdoba",
+  "to": "redaccion@hoydiacordoba.info",
+  "sent": true,
+  "info": "<202611201855.29977898581@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Fortuna",
+  "to": "contacto@fortunaweb.com.ar",
+  "sent": true,
+  "info": "<202611201855.65254786024@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Nación (María Julieta Rumi)",
+  "to": "mrumi@lanacion.com.ar",
+  "sent": true,
+  "info": "<202611201856.84219933639@smtp-relay.mailin.fr>"
+ }
+]

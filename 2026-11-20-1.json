@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Mismo café. Mismo código de barras.","say":"Mismo café. Mismo código de barras."},
+{"k":"h2","sub":"$2.916… o $7.850.","say":"Dos mil novecientos dieciséis, o siete mil ochocientos cincuenta.","gap":0.35},
+{"k":"w1","sub":"La Virginia clásico 250 g: $2.916 en Carrefour.","say":"Café La Virginia de doscientos cincuenta gramos, en Carrefour: dos mil novecientos dieciséis."},
+{"k":"w2","sub":"Día $7.290. Jumbo $7.850.","say":"En Día, siete mil doscientos noventa. En Jumbo, siete mil ochocientos cincuenta."},
+{"k":"b1","sub":"Pero ojo: es una oferta del 60%. El precio de lista es $7.289.","say":"Pero ojo. Es una oferta del sesenta por ciento: el precio de lista es siete mil doscientos ochenta y nueve.","gap":0.3},
+{"k":"b2","sub":"Está así desde ayer, jueves 19. Puede terminar cualquier día.","say":"Está así desde ayer, jueves diecinueve, y puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $4.934 por paquete. Un 63% menos.","say":"Ahorrás cuatro mil novecientos treinta y cuatro pesos por paquete. Sesenta y tres por ciento menos."}
+]}

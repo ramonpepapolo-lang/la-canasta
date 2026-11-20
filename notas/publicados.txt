@@ -52,3 +52,6 @@ largos 2026-11-17 4 YouTube https://youtube.com/watch?v=jIYG_hhlfwA
 2026-11-19 1 X https://x.com/LaCanastaIndex/status/2123488307916976480
 2026-11-19 1 YouTube https://youtube.com/shorts/cC6vfj9IYLU
 2026-11-19 img1 X https://x.com/LaCanastaIndex/status/2123488336010469649
+2026-11-20 1 X https://x.com/LaCanastaIndex/status/2123792684770881618
+2026-11-20 1 YouTube https://youtube.com/shorts/FjPFd5ld5TM
+2026-11-20 img1 X https://x.com/LaCanastaIndex/status/2123792716949565596

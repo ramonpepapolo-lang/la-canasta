@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-20 14:42",
+ "when_utc": "2026-11-20 16:21",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,11 +17,23 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "610",
+  "subscribers_text": "611",
   "views_total_text": "164,680",
-  "views_sum_of_videos": 81354,
-  "videos": 42,
+  "views_sum_of_videos": 81419,
+  "videos": 43,
   "list": [
+   {
+    "id": "FjPFd5ld5TM",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Café La Virginia 250 g: $2.916 en Carrefour, $7.850 en Jumbo",
+    "published": "2026-11-20",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "cC6vfj9IYLU",
     "debug": null,
@@ -29,7 +41,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 23,
+    "views": 25,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -293,7 +305,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 19408,
+    "views": 19459,
     "views_exact": true,
     "likes": 5,
     "comments": null
@@ -365,7 +377,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1082,
+    "views": 1089,
     "views_exact": true,
     "likes": 115,
     "comments": null
@@ -415,7 +427,7 @@
     "published": "2026-10-31",
     "views": 21175,
     "views_exact": true,
-    "likes": 140,
+    "likes": 139,
     "comments": 1
    },
    {
@@ -449,9 +461,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10135,
+    "views": 10138,
     "views_exact": true,
-    "likes": 669,
+    "likes": 671,
     "comments": 2
    },
    {
@@ -473,7 +485,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8346,
+    "views": 8348,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -536,15 +548,35 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 42,
-  "tweet_count": 70,
+  "media_count": 44,
+  "tweet_count": 72,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-20",
+    "text": "Papas Lays clásicas, mismo paquete en 4 súper, hoy 20/11: en Carrefour, la de 85 g sale $2",
+    "bookmark_count": 0,
+    "impression_count": 1,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-20",
+    "text": "Mismo café La Virginia 250 g, mismo código de barras, hoy 20/11:\n\nCarrefour $2.916\nDía $7.",
+    "bookmark_count": 0,
+    "impression_count": 1,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-19",
     "text": "Desde fines de octubre, lo que más bajó en el súper: verduras −14,7% y frutas −6,1% (preci",
     "bookmark_count": 0,
-    "impression_count": 2,
+    "impression_count": 3,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
@@ -554,27 +586,7 @@
     "date": "2026-11-19",
     "text": "Mismo latón de Brahma 710, mismo código de barras: $2.080 en Día y $4.200 en Jumbo 🍺 Coto ",
     "bookmark_count": 0,
-    "impression_count": 2,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-18",
-    "text": "Los mismos 317 productos, mismo código de barras, en 4 súper (precios del 15 al 18/11): Dí",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-18",
-    "text": "Misma yerba Amanda con palo 1 kg, mismo código de barras: $3.294,85 en Carrefour y $5.850 ",
-    "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 3,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

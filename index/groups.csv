@@ -349,7 +349,7 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-11-17,alcohol,Alcoholic drinks,yes,103.471,101.305
 2026-11-17,limpieza,Cleaning products,yes,104.512,101.02
 2026-11-17,cuidado_personal,Personal care,no (weight pending),105.819,101.169
-2026-11-18,pan_cereales,Bread and cereals,yes,99.828,101.072
+2026-11-18,pan_cereales,Bread and cereals,yes,99.828,101.219
 2026-11-18,carne_vacuna,Beef,yes,97.353,100.484
 2026-11-18,carne_ave,Chicken,yes,102.538,100.0
 2026-11-18,lacteos,Dairy and eggs,yes,103.01,100.666
@@ -363,7 +363,7 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-11-18,alcohol,Alcoholic drinks,yes,97.608,101.546
 2026-11-18,limpieza,Cleaning products,yes,99.676,101.298
 2026-11-18,cuidado_personal,Personal care,no (weight pending),101.511,101.119
-2026-11-19,pan_cereales,Bread and cereals,yes,100.034,101.227
+2026-11-19,pan_cereales,Bread and cereals,yes,100.034,101.241
 2026-11-19,carne_vacuna,Beef,yes,97.65,100.484
 2026-11-19,carne_ave,Chicken,yes,102.538,100.0
 2026-11-19,lacteos,Dairy and eggs,yes,102.93,100.563

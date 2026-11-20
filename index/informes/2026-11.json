@@ -3,14 +3,14 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.78,
+ "inflation": -1.4,
  "base_date": "2026-10-31",
- "end_date": "2026-11-19",
- "days_of_data": 19,
- "prices_collected": 377993,
+ "end_date": "2026-11-20",
+ "days_of_data": 20,
+ "prices_collected": 402017,
  "headline": {
-  "end_to_end_paid": -0.78,
-  "end_to_end_regular": -0.45,
+  "end_to_end_paid": -1.4,
+  "end_to_end_regular": -0.71,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -21,72 +21,72 @@
   },
   {
    "shop": "ChangoMas",
-   "pct": -2.76
+   "pct": -1.22
   },
   {
    "shop": "Dia",
-   "pct": -1.33
+   "pct": -2.34
   },
   {
    "shop": "Jumbo",
-   "pct": 4.05
+   "pct": 0.43
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 9.78
+   "pct": 6.86
   },
   {
    "group": "limpieza",
    "in_headline": true,
-   "pct": 4.88
-  },
-  {
-   "group": "otros_alimentos",
-   "in_headline": true,
-   "pct": 2.82
+   "pct": 2.94
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.53
+   "pct": 1.12
   },
   {
-   "group": "pan_cereales",
+   "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 1.46
+   "pct": 0.95
   },
   {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": 1.39
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
    "pct": 0.07
-  },
-  {
-   "group": "cafe_te_yerba",
-   "in_headline": true,
-   "pct": -0.93
-  },
-  {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": -1.84
-  },
-  {
-   "group": "aguas_gaseosas",
-   "in_headline": true,
-   "pct": -1.92
   },
   {
    "group": "carne_vacuna",
    "in_headline": true,
-   "pct": -3.38
+   "pct": -0.43
+  },
+  {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": -0.76
+  },
+  {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": -1.79
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": -2.0
+  },
+  {
+   "group": "cafe_te_yerba",
+   "in_headline": true,
+   "pct": -2.11
+  },
+  {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": -2.44
   },
   {
    "group": "azucar",
@@ -96,18 +96,18 @@
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.65
+   "pct": -4.69
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -14.83
+   "pct": -16.58
   }
  ],
  "products_compared": 1018,
- "products_up": 238,
- "products_down": 153,
- "products_same": 627,
+ "products_up": 231,
+ "products_down": 171,
+ "products_same": 616,
  "top_up": [
   {
    "type": "arroz",
@@ -119,40 +119,40 @@
    "pct": 81.61
   },
   {
-   "type": "fideos",
-   "type_en": "Dry pasta",
-   "shop": "Dia",
-   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
-   "before": 1050.0,
-   "now": 1850.0,
-   "pct": 76.19
+   "type": "harina_000",
+   "type_en": "Wheat flour 000 / 0000",
+   "shop": "ChangoMas",
+   "name": "Harina De Trigo Favorita 0000 1 Kg",
+   "before": 1099.0,
+   "now": 1839.0,
+   "pct": 67.33
   },
   {
-   "type": "fideos",
-   "type_en": "Dry pasta",
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
    "shop": "Dia",
-   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
-   "before": 1050.0,
-   "now": 1850.0,
-   "pct": 76.19
+   "name": "Pasta Dental Colgate Sensitive Whitening 100 Gr.",
+   "before": 3790.0,
+   "now": 6320.0,
+   "pct": 66.75
   },
   {
-   "type": "fideos",
-   "type_en": "Dry pasta",
-   "shop": "Dia",
-   "name": "Fideos Letritas Lucchetti 500 Gr.",
-   "before": 1050.0,
-   "now": 1850.0,
-   "pct": 76.19
+   "type": "lavandina",
+   "type_en": "Bleach",
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudín Anti-Splash 1 Lt",
+   "before": 1433.4,
+   "now": 2389.0,
+   "pct": 66.67
   },
   {
-   "type": "fideos",
-   "type_en": "Dry pasta",
-   "shop": "Dia",
-   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
-   "before": 1050.0,
-   "now": 1850.0,
-   "pct": 76.19
+   "type": "lavandina",
+   "type_en": "Bleach",
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudín Anti-Splash 2 Lt",
+   "before": 2771.4,
+   "now": 4619.0,
+   "pct": 66.67
   }
  ],
  "top_down": [
@@ -164,6 +164,15 @@
    "before": 4540.0,
    "now": 2250.0,
    "pct": -50.44
+  },
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Jumbo",
+   "name": "Cebolla Fraccionada Por 1 Kg",
+   "before": 5499.0,
+   "now": 2999.0,
+   "pct": -45.46
   },
   {
    "type": "cebolla",
@@ -191,15 +200,6 @@
    "before": 11529.0,
    "now": 6917.4,
    "pct": -40.0
-  },
-  {
-   "type": "cebolla",
-   "type_en": "Onions",
-   "shop": "Carrefour",
-   "name": "Cebolla x kg.",
-   "before": 3999.0,
-   "now": 2499.0,
-   "pct": -37.51
   }
  ],
  "series": [
@@ -302,6 +302,11 @@
    "date": "2026-11-19",
    "paid": 98.74,
    "regular": 99.501
+  },
+  {
+   "date": "2026-11-20",
+   "paid": 98.121,
+   "regular": 99.244
   }
  ]
 }

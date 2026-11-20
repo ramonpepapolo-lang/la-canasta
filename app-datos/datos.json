@@ -1,12 +1,12 @@
 {
- "date": "2026-11-19",
- "previous": "2026-11-18",
+ "date": "2026-11-20",
+ "previous": "2026-11-19",
  "index": {
-  "date": "2026-11-19",
-  "paid": 98.74,
-  "regular": 99.499,
-  "day_change": -0.07,
-  "days_of_data": 27,
+  "date": "2026-11-20",
+  "paid": 98.121,
+  "regular": 99.244,
+  "day_change": -0.63,
+  "days_of_data": 28,
   "series": [
    [
     "2026-10-24",
@@ -136,24 +136,29 @@
    [
     "2026-11-18",
     98.812,
-    99.152
+    99.175
    ],
    [
     "2026-11-19",
     98.74,
-    99.499
+    99.501
+   ],
+   [
+    "2026-11-20",
+    98.121,
+    99.244
    ]
   ],
   "mode": "week",
-  "week_paid": 0.03,
-  "week_regular": -0.11,
+  "week_paid": -0.09,
+  "week_regular": -0.05,
   "now": [
-   "2026-11-13",
-   "2026-11-19"
+   "2026-11-14",
+   "2026-11-20"
   ],
   "before": [
-   "2026-11-06",
-   "2026-11-12"
+   "2026-11-07",
+   "2026-11-13"
   ]
  },
  "ranking": {
@@ -161,153 +166,252 @@
   "label_en": "Week of 15 to 21 November 2026",
   "days": [
    "2026-11-15",
-   "2026-11-19"
+   "2026-11-20"
   ],
-  "n_products": 304,
+  "n_products": 323,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1223647.66,
+    "total": 1299873.96,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1248833.66,
-    "pct": 2.06
+    "total": 1325559.13,
+    "pct": 1.98
    },
    {
     "shop": "ChangoMas",
-    "total": 1263964.0,
-    "pct": 3.29
+    "total": 1334057.04,
+    "pct": 2.63
    },
    {
     "shop": "Jumbo",
-    "total": 1409468.0,
-    "pct": 15.19
+    "total": 1499559.0,
+    "pct": 15.36
    }
   ]
  },
  "down": [
   {
    "shop": "ChangoMas",
-   "name": "Azúcar Azucel 1kg",
-   "type": "azucar",
-   "before": 1479.0,
-   "now": 999.0,
-   "pct": -32.5,
+   "name": "Shampoo Dove Hidratación Hialuron Vit 400ml",
+   "type": "shampoo",
+   "before": 11079.0,
+   "now": 6647.4,
+   "pct": -40.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Cerveza En Lata Brahma 354ml",
-   "type": "cerveza",
-   "before": 2099.0,
-   "now": 1469.3,
-   "pct": -30.0,
+   "name": "Arroz Gallo Doble Carolina 500 G",
+   "type": "arroz",
+   "before": 2229.0,
+   "now": 1448.85,
+   "pct": -35.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Aceite De Girasol Cañuelas 1.5 L",
-   "type": "aceite_girasol",
-   "before": 6989.0,
-   "now": 4999.0,
-   "pct": -28.5,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cuartirolo Tremblay 300 g.",
-   "type": "queso_cremoso",
-   "before": 3919.0,
-   "now": 3329.0,
-   "pct": -15.1,
-   "why": "list_down"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Lavandina Querubín clásica 2 lt.",
-   "type": "lavandina",
-   "before": 2875.0,
-   "now": 2499.0,
-   "pct": -13.1,
+   "name": "Detergente Magistral Ultra Limón 300 Ml",
+   "type": "detergente",
+   "before": 3419.0,
+   "now": 2222.35,
+   "pct": -35.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Café Torrado Bonafide Intenso 200 G",
-   "type": "cafe",
-   "before": 6239.0,
-   "now": 6679.0,
-   "pct": 7.1,
-   "why": "list_up"
+   "name": "Detergente Magistral Ultra Limón 450 Ml",
+   "type": "detergente",
+   "before": 4709.0,
+   "now": 3060.85,
+   "pct": -35.0,
+   "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Puré De Tomate Doña Pupa Tetra 520 G.",
-   "type": "pure_tomate",
-   "before": 1369.0,
-   "now": 1489.0,
-   "pct": 8.8,
-   "why": "list_up"
+   "name": "Detergente Magistral Ultra Limón 500 Ml",
+   "type": "detergente",
+   "before": 5509.0,
+   "now": 3580.85,
+   "pct": -35.0,
+   "why": "promo_start"
   },
   {
    "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 5999.0,
-   "now": 6599.0,
-   "pct": 10.0,
+   "name": "Suprema De Pollo Granel Fresca",
+   "type": "suprema",
+   "before": 12449.0,
+   "now": 8999.0,
+   "pct": -27.7,
    "why": "price"
   },
   {
-   "shop": "Dia",
-   "name": "Spaghetti Rina Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 3040.0,
-   "now": 3800.0,
-   "pct": 25.0,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Café Molido La Morenita Intenso 250gr",
+   "type": "cafe",
+   "before": 7069.0,
+   "now": 5301.75,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Molido La Planta De Café Torrado 1 Kg",
+   "type": "cafe",
+   "before": 30919.0,
+   "now": 23189.25,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Molido La Planta De Café Torrado 250 Gr",
+   "type": "cafe",
+   "before": 8079.0,
+   "now": 6059.25,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Café Molido La Planta De Café Torrado 500 Gr",
+   "type": "cafe",
+   "before": 15859.0,
+   "now": 11894.25,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudin Original 2l",
+   "type": "lavandina",
+   "before": 3129.0,
+   "now": 2346.75,
+   "pct": -25.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Lavandina Ayudin Original 4l",
+   "type": "lavandina",
+   "before": 6259.0,
+   "now": 4694.25,
+   "pct": -25.0,
+   "why": "promo_start"
   }
  ],
  "up": [
   {
-   "shop": "Dia",
-   "name": "Spaghetti Rina Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 3040.0,
-   "now": 3800.0,
-   "pct": 25.0,
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 2404.35,
+   "now": 3699.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
-   "shop": "Jumbo",
-   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
-   "type": "tomate",
-   "before": 5999.0,
-   "now": 6599.0,
-   "pct": 10.0,
-   "why": "price"
+   "shop": "ChangoMas",
+   "name": "Harina 0000 Pureza Ultra Refinada 1 Kg",
+   "type": "harina_000",
+   "before": 1179.0,
+   "now": 1679.0,
+   "pct": 42.4,
+   "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Puré De Tomate Doña Pupa Tetra 520 G.",
-   "type": "pure_tomate",
-   "before": 1369.0,
-   "now": 1489.0,
-   "pct": 8.8,
-   "why": "list_up"
+   "name": "Galletitas Cerealitas Clásicas 212gr",
+   "type": "galletitas",
+   "before": 1699.0,
+   "now": 2319.0,
+   "pct": 36.5,
+   "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Café Torrado Bonafide Intenso 200 G",
-   "type": "cafe",
-   "before": 6239.0,
-   "now": 6679.0,
-   "pct": 7.1,
-   "why": "list_up"
+   "name": "Asado De Tira De Novillito 1 Kg",
+   "type": "asado",
+   "before": 14704.15,
+   "now": 17299.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Bife De Vacio Envasado Al Vacío 800 G",
+   "type": "vacio",
+   "before": 24224.15,
+   "now": 28499.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Carne Picada Magra 800g",
+   "type": "carne_picada",
+   "before": 13939.15,
+   "now": 16399.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Colita De Cuadril Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 21504.15,
+   "now": 25299.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Cuadril De Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "cuadril",
+   "before": 21419.15,
+   "now": 25199.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Lucchetti Codito 500 G",
+   "type": "fideos",
+   "before": 1571.65,
+   "now": 1849.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Lucchetti Tallarin 500 G",
+   "type": "fideos",
+   "before": 1571.65,
+   "now": 1849.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
+   "type": "fideos",
+   "before": 1571.65,
+   "now": 1849.0,
+   "pct": 17.6,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Paleta De Novillito Envasado Al Vacío 1.2 Kg",
+   "type": "roast_paleta",
+   "before": 15044.15,
+   "now": 17699.0,
+   "pct": 17.6,
+   "why": "promo_end"
   }
  ],
- "n_down": 5,
- "n_up": 4
+ "n_down": 51,
+ "n_up": 25
 }

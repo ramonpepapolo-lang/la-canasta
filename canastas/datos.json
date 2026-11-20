@@ -1,5 +1,5 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-20",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,7 +93,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 16835.49,
+     "total": 16508.43,
      "complete": false,
      "missing": [
       "pan"
@@ -134,10 +134,10 @@
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 13490.0,
-       "cost": 809.4,
-       "name": "Morcilla rosca en gancho x kg",
-       "sku_id": "155285",
+       "unit_price": 8039.0,
+       "cost": 482.34,
+       "name": "Morcilla fresca en gancho x kg",
+       "sku_id": "249993",
        "promo": false
       },
       {
@@ -230,11 +230,11 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1363.0,
-       "cost": 1363.0,
-       "name": "Condimento chimichurri Carrefour Classic en sobre 25 g.",
-       "sku_id": "172762",
-       "promo": true
+       "unit_price": 1345.0,
+       "cost": 1345.0,
+       "name": "Chimichurri disecado La campagnola en sobre 23 g.",
+       "sku_id": "97829",
+       "promo": false
       },
       {
        "ing": "sal_gruesa",
@@ -250,10 +250,10 @@
      "lacks": [
       "pan"
      ],
-     "fixed_total": 2858.0
+     "fixed_total": 2840.0
     },
     "Jumbo": {
-     "total": 21964.29,
+     "total": 19938.38,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -262,8 +262,8 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 19965.0,
-       "cost": 5989.5,
+       "unit_price": 15999.0,
+       "cost": 4799.7,
        "name": "Asado Del Centro Novillito",
        "sku_id": "322124",
        "promo": false
@@ -272,8 +272,8 @@
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 22289.0,
-       "cost": 3343.35,
+       "unit_price": 17999.0,
+       "cost": 2699.85,
        "name": "Vacio Novillito",
        "sku_id": "330346",
        "promo": false
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5535.21,
-       "cost": 2767.61,
-       "name": "Cerveza Rubia 710 Cc Schneider",
-       "sku_id": "272150",
+       "unit_price": 5150.0,
+       "cost": 2575.0,
+       "name": "Cerveza Lager 1 Lts Amstel",
+       "sku_id": "318177",
        "promo": false
       },
       {
@@ -413,7 +413,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 17285.92,
+     "total": 18323.93,
      "complete": false,
      "missing": [
       "lechuga"
@@ -424,61 +424,61 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 10879.15,
-       "cost": 3263.74,
+       "unit_price": 12799.0,
+       "cost": 3839.7,
        "name": "Asado Carnicero De Novillito 1kg",
        "sku_id": "38221",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 18019.15,
-       "cost": 2702.87,
+       "unit_price": 21199.0,
+       "cost": 3179.85,
        "name": "Vacío De Novillito Envasado Al Vacío 1.5 Kg",
        "sku_id": "111741",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 10700.65,
-       "cost": 1284.08,
+       "unit_price": 12589.0,
+       "cost": 1510.68,
        "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
        "sku_id": "161138",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 9425.65,
-       "cost": 565.54,
+       "unit_price": 11089.0,
+       "cost": 665.34,
        "name": "Morcilla Tradicional Campo Austral Al Vacío 400 Gr",
        "sku_id": "161131",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "pan",
        "qty": 0.1,
        "fixed": false,
-       "unit_price": 3144.15,
-       "cost": 314.42,
+       "unit_price": 3699.0,
+       "cost": 369.9,
        "name": "Pan Francés 1 Kg",
        "sku_id": "112033",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1466.04,
-       "cost": 879.62,
+       "unit_price": 1724.75,
+       "cost": 1034.85,
        "name": "Carbón Vegetal 4kg",
        "sku_id": "169821",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "provoleta",
@@ -520,20 +520,20 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6665.33,
-       "cost": 1666.33,
-       "name": "Vino Tinto Esperado Malbec 750 Ml",
-       "sku_id": "213025",
-       "promo": true
+       "unit_price": 6172.0,
+       "cost": 1543.0,
+       "name": "Vino Tinto Nampe Malbec 750 Ml",
+       "sku_id": "23050",
+       "promo": false
       },
       {
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3519.72,
-       "cost": 1759.86,
-       "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-       "sku_id": "228806",
+       "unit_price": 2773.26,
+       "cost": 1386.63,
+       "name": "Cerveza Rubia Quilmes Bajocero 473 Ml",
+       "sku_id": "244065",
        "promo": true
       },
       {
@@ -573,7 +573,7 @@
      "fixed_total": 2988.0
     },
     "Dia": {
-     "total": 17084.42,
+     "total": 16643.92,
      "complete": false,
      "missing": [
       "pan"
@@ -604,21 +604,21 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 11500.0,
-       "cost": 1380.0,
-       "name": "Chorizo Puro Cerdo 400 Gr. 1 Ud.",
-       "sku_id": "262290",
-       "promo": false
+       "unit_price": 8966.67,
+       "cost": 1076.0,
+       "name": "Chorizo Verdeo Parrillero Dia 300 Gr.",
+       "sku_id": "295206",
+       "promo": true
       },
       {
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 9000.0,
-       "cost": 540.0,
+       "unit_price": 6725.0,
+       "cost": 403.5,
        "name": "Morcilla Común 400 Gr.",
        "sku_id": "262291",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "pan",
@@ -735,8 +735,8 @@
    },
    "ranking": [
     "Carrefour",
-    "ChangoMas",
     "Dia",
+    "ChangoMas",
     "Jumbo"
    ],
    "cheapest": "Carrefour",
@@ -864,7 +864,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43661.53,
+     "total": 43749.11,
      "complete": false,
      "missing": [
       "pollo"
@@ -1051,10 +1051,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3294.85,
-       "cost": 1647.42,
-       "name": "Yerba mate Amanda tradicional 1 kg.",
-       "sku_id": "3381",
+       "unit_price": 3470.0,
+       "cost": 1735.0,
+       "name": "Yerba mate Amanda tradicional 500 grs",
+       "sku_id": "3163",
        "promo": true
       }
      ],
@@ -1064,7 +1064,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 49663.24,
+     "total": 48363.24,
      "complete": false,
      "missing": [
       "leche"
@@ -1171,8 +1171,8 @@
        "ing": "manzana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3899.0,
-       "cost": 3899.0,
+       "unit_price": 3299.0,
+       "cost": 3299.0,
        "name": "Manzana Roja por Kg",
        "sku_id": "10238",
        "promo": false
@@ -1201,8 +1201,8 @@
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1899.0,
-       "cost": 949.5,
+       "unit_price": 1699.0,
+       "cost": 849.5,
        "name": "Zanahoria Por Kg Zanahoria x Kg",
        "sku_id": "7260",
        "promo": false
@@ -1221,8 +1221,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2899.0,
-       "cost": 2899.0,
+       "unit_price": 2299.0,
+       "cost": 2299.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -1264,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 38925.3,
+     "total": 38202.9,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1313,11 +1313,11 @@
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3390.65,
-       "cost": 5085.98,
+       "unit_price": 3989.0,
+       "cost": 5983.5,
        "name": "Pollo Entero Fresco 2.700kg",
        "sku_id": "17013",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "atun",
@@ -1353,8 +1353,8 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3070.2,
-       "cost": 3070.2,
+       "unit_price": 2347.8,
+       "cost": 2347.8,
        "name": "Pan Lactal De Mesa 315 G",
        "sku_id": "189853",
        "promo": true
@@ -1794,7 +1794,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 41104.24,
+     "total": 41191.82,
      "complete": false,
      "missing": [
       "carne_picada",
@@ -1866,10 +1866,10 @@
        "ing": "yerba",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3294.85,
-       "cost": 1647.42,
-       "name": "Yerba mate Amanda tradicional 1 kg.",
-       "sku_id": "3381",
+       "unit_price": 3470.0,
+       "cost": 1735.0,
+       "name": "Yerba mate Amanda tradicional 500 grs",
+       "sku_id": "3163",
        "promo": true
       },
       {
@@ -1982,7 +1982,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 42774.84,
+     "total": 41574.84,
      "complete": false,
      "missing": [
       "leche"
@@ -2069,10 +2069,10 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 9169.0,
-       "cost": 4584.5,
-       "name": "Picada Comun Novillito",
-       "sku_id": "346994",
+       "unit_price": 12999.0,
+       "cost": 6499.5,
+       "name": "Picada Especial",
+       "sku_id": "322126",
        "promo": false
       },
       {
@@ -2089,8 +2089,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2899.0,
-       "cost": 5798.0,
+       "unit_price": 2299.0,
+       "cost": 4598.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -2172,7 +2172,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 39701.84,
+     "total": 38634.94,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2201,11 +2201,11 @@
        "ing": "pure_tomate",
        "qty": 2,
        "fixed": false,
-       "unit_price": 1229.0,
-       "cost": 2458.0,
-       "name": "Puré De Tomate Arcor 520 G",
-       "sku_id": "221488",
-       "promo": false
+       "unit_price": 1056.75,
+       "cost": 2113.5,
+       "name": "Puré De Tomate La Campagnola 530 G",
+       "sku_id": "222333",
+       "promo": true
       },
       {
        "ing": "huevos",
@@ -2221,8 +2221,8 @@
        "ing": "pan_lactal",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3070.2,
-       "cost": 3070.2,
+       "unit_price": 2347.8,
+       "cost": 2347.8,
        "name": "Pan Lactal De Mesa 315 G",
        "sku_id": "189853",
        "promo": true
@@ -2261,21 +2261,21 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 13939.15,
-       "cost": 6969.57,
+       "unit_price": 16399.0,
+       "cost": 8199.5,
        "name": "Carne Picada Magra 800g",
        "sku_id": "38299",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "pollo",
        "qty": 1.5,
        "fixed": false,
-       "unit_price": 3390.65,
-       "cost": 5085.98,
+       "unit_price": 3989.0,
+       "cost": 5983.5,
        "name": "Pollo Entero Fresco 2.700kg",
        "sku_id": "17013",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "papa",
@@ -2362,7 +2362,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 37287.57,
+     "total": 36688.07,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2371,11 +2371,11 @@
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2398.0,
-       "cost": 2398.0,
+       "unit_price": 1798.5,
+       "cost": 1798.5,
        "name": "Fideos Spaghetti Favorita 500 Gr.",
        "sku_id": "61256",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "arroz",

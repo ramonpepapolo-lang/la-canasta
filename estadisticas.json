@@ -1,11 +1,11 @@
 {
- "when_utc": "2026-11-19 23:29",
+ "when_utc": "2026-11-20 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4121,
-  "/": 3946,
+  "TOTAL": 4184,
+  "/": 4009,
   "/precios/": 11,
   "/canastas/": 18,
   "/informes.html": 49,
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "603",
-  "views_total_text": "157,901",
-  "views_sum_of_videos": 80001,
+  "subscribers_text": "610",
+  "views_total_text": "164,680",
+  "views_sum_of_videos": 81354,
   "videos": 42,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 8,
+    "views": 23,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,9 +41,9 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 30,
+    "views": 35,
     "views_exact": true,
-    "likes": 1,
+    "likes": 2,
     "comments": null
    },
    {
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 5,
+    "views": 6,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -65,7 +65,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 5,
+    "views": 7,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -77,7 +77,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 3,
+    "views": 4,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
     "published": "2026-11-17",
-    "views": 0,
+    "views": 1,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -209,7 +209,7 @@
     "player_status": null,
     "title": "Alfajores al 25%: ayer 6 en promo, hoy 20 en Carrefour",
     "published": "2026-11-13",
-    "views": 10,
+    "views": 11,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -221,7 +221,7 @@
     "player_status": null,
     "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
     "published": "2026-11-13",
-    "views": 15,
+    "views": 16,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -293,9 +293,9 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 18515,
+    "views": 19408,
     "views_exact": true,
-    "likes": 4,
+    "likes": 5,
     "comments": null
    },
    {
@@ -317,7 +317,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 909,
+    "views": 940,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -365,7 +365,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1087,
+    "views": 1082,
     "views_exact": true,
     "likes": 115,
     "comments": null
@@ -413,9 +413,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21174,
+    "views": 21175,
     "views_exact": true,
-    "likes": 136,
+    "likes": 140,
     "comments": 1
    },
    {
@@ -449,9 +449,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10178,
+    "views": 10135,
     "views_exact": true,
-    "likes": 665,
+    "likes": 669,
     "comments": 2
    },
    {
@@ -473,7 +473,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8151,
+    "views": 8346,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -521,7 +521,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 18719,
+    "views": 18973,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -544,7 +544,7 @@
     "date": "2026-11-19",
     "text": "Desde fines de octubre, lo que más bajó en el súper: verduras −14,7% y frutas −6,1% (preci",
     "bookmark_count": 0,
-    "impression_count": 1,
+    "impression_count": 2,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
@@ -554,7 +554,7 @@
     "date": "2026-11-19",
     "text": "Mismo latón de Brahma 710, mismo código de barras: $2.080 en Día y $4.200 en Jumbo 🍺 Coto ",
     "bookmark_count": 0,
-    "impression_count": 1,
+    "impression_count": 2,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

@@ -1,0 +1,71 @@
+{
+ "total": 25.119,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Café La Virginia. Mismo código de barras.",
+   "say": "Café La Virginia. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.387,
+   "dur": 2.267,
+   "ps": "kafˈe la βiɾxˈinja. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.916… o $7.850.",
+   "say": "Dos mil novecientos dieciséis, o siete mil ochocientos cincuenta.",
+   "gap": 0.3,
+   "start": 2.587,
+   "end": 6.15,
+   "dur": 3.563,
+   "ps": "dˈos mˈil nˌoβesjˈɛntos ðjˌesisˈeis, o sjˈete mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w1",
+   "sub": "En Carrefour, $2.916.",
+   "say": "En Carrefour, dos mil novecientos dieciséis.",
+   "start": 6.45,
+   "end": 8.907,
+   "dur": 2.457,
+   "ps": "en kˌarefˈowɾ, dˈos mˈil nˌoβesjˈɛntos ðjˌesisˈeis."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $7.290. Jumbo $7.850.",
+   "say": "En Día, siete mil doscientos noventa. En Jumbo, siete mil ochocientos cincuenta.",
+   "start": 9.107,
+   "end": 13.521,
+   "dur": 4.413,
+   "ps": "en dˈia, sjˈete mˈil ðosjˈɛntos noβˈɛnta. en xˈumbo, sjˈete mˈil ˌoʧosjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta del 60%.",
+   "say": "Pero ojo: es una oferta del sesenta por ciento.",
+   "gap": 0.25,
+   "start": 13.721,
+   "end": 16.342,
+   "dur": 2.621,
+   "ps": "pˌeɾo ˈoxo: ˈes ˈuna ofˈeɾta ðel sesˈɛnta poɾ sjˈɛnto."
+  },
+  {
+   "k": "b2",
+   "sub": "Arrancó ayer, jueves 19. Puede terminar cualquier día.",
+   "say": "Arrancó ayer, jueves diecinueve, y puede terminar cualquier día.",
+   "start": 16.592,
+   "end": 20.055,
+   "dur": 3.463,
+   "ps": "ˌarankˈo aʃˈeɾ, xwˈeβes ðjˌesinwˈeβe, i pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $4.934 por paquete.",
+   "say": "Ahorrás cuatro mil novecientos treinta y cuatro pesos por paquete.",
+   "start": 20.255,
+   "end": 23.619,
+   "dur": 3.364,
+   "ps": "ˌaorˈas kwˈatɾo mˈil nˌoβesjˈɛntos tɾˈAnta i kwˈatɾo pˈesos poɾ pakˈete."
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-21 14:42",
+ "when_utc": "2026-11-21 15:35",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -19,7 +19,7 @@
   "source": "public pages",
   "subscribers_text": "621",
   "views_total_text": "170,638",
-  "views_sum_of_videos": 82323,
+  "views_sum_of_videos": 82314,
   "videos": 43,
   "list": [
    {
@@ -29,9 +29,9 @@
     "player_status": null,
     "title": "Café La Virginia 250 g: $2.916 en Carrefour, $7.850 en Jumbo",
     "published": "2026-11-20",
-    "views": 7,
+    "views": 6,
     "views_exact": true,
-    "likes": 4,
+    "likes": 0,
     "comments": null
    },
    {
@@ -41,9 +41,9 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 37,
+    "views": 38,
     "views_exact": true,
-    "likes": 4,
+    "likes": 0,
     "comments": null
    },
    {
@@ -53,9 +53,9 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 35,
+    "views": 33,
     "views_exact": true,
-    "likes": 6,
+    "likes": 2,
     "comments": null
    },
    {
@@ -127,7 +127,7 @@
     "published": "2026-11-17",
     "views": 37,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -139,7 +139,7 @@
     "published": "2026-11-16",
     "views": 31,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -151,7 +151,7 @@
     "published": "2026-11-16",
     "views": 46,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -163,7 +163,7 @@
     "published": "2026-11-15",
     "views": 32,
     "views_exact": true,
-    "likes": 6,
+    "likes": 2,
     "comments": null
    },
    {
@@ -187,7 +187,7 @@
     "published": "2026-11-15",
     "views": 18,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -199,7 +199,7 @@
     "published": "2026-11-14",
     "views": 42,
     "views_exact": true,
-    "likes": 4,
+    "likes": 1,
     "comments": null
    },
    {
@@ -211,7 +211,7 @@
     "published": "2026-11-14",
     "views": 24,
     "views_exact": true,
-    "likes": 4,
+    "likes": 1,
     "comments": null
    },
    {
@@ -223,7 +223,7 @@
     "published": "2026-11-13",
     "views": 12,
     "views_exact": true,
-    "likes": 4,
+    "likes": 2,
     "comments": null
    },
    {
@@ -235,7 +235,7 @@
     "published": "2026-11-13",
     "views": 17,
     "views_exact": true,
-    "likes": 5,
+    "likes": 3,
     "comments": null
    },
    {
@@ -425,7 +425,7 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21172,
+    "views": 21168,
     "views_exact": true,
     "likes": 140,
     "comments": 1
@@ -533,7 +533,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19158,
+    "views": 19155,
     "views_exact": true,
     "likes": 5,
     "comments": 2

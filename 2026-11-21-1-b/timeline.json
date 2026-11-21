@@ -1,0 +1,71 @@
+{
+ "total": 27.959,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo aceite de oliva. Mismo código de barras.",
+   "say": "Mismo aceite de oliva. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.657,
+   "dur": 2.537,
+   "ps": "mˈismo asˈAte ðe olˈiβa. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$6.889… u $11.600.",
+   "say": "Seis mil ochocientos ochenta y nueve, u once mil seiscientos.",
+   "gap": 0.35,
+   "start": 2.877,
+   "end": 6.231,
+   "dur": 3.354,
+   "ps": "sˈAs mˈil ˌoʧosjˈɛntos oʧˈɛnta i nwˈeβe, u ˈonse mˈil sAsjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "La Toscana en Carrefour: $6.889.",
+   "say": "En Carrefour: seis mil ochocientos ochenta y nueve.",
+   "start": 6.581,
+   "end": 9.369,
+   "dur": 2.788,
+   "ps": "en kˌarefˈowɾ: sˈAs mˈil ˌoʧosjˈɛntos oʧˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $10.700. Jumbo $11.600.",
+   "say": "En Día, diez mil setecientos. En Jumbo, once mil seiscientos.",
+   "start": 9.589,
+   "end": 12.943,
+   "dur": 3.354,
+   "ps": "en dˈia, djˈes mˈil sˌetesjˈɛntos. en xˈumbo, ˈonse mˈil sAsjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $10.599.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es diez mil quinientos noventa y nueve.",
+   "gap": 0.3,
+   "start": 13.163,
+   "end": 17.527,
+   "dur": 4.364,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes ðjˈes mˈil kinjˈɛntos noβˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "Desde el miércoles 18. Puede terminar cualquier día.",
+   "say": "Desde el miércoles dieciocho. Y puede terminar cualquier día.",
+   "start": 17.827,
+   "end": 21.141,
+   "dur": 3.314,
+   "ps": "dˌesðe el mjˈeɾkoles ðjesjˈoʧo. i pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $4.711 por botella: 41% menos.",
+   "say": "Ahorrás cuatro mil setecientos once pesos por botella: cuarenta y uno por ciento menos.",
+   "start": 21.361,
+   "end": 26.439,
+   "dur": 5.079,
+   "ps": "ˌaorˈas kwˈatɾo mˈil sˌetesjˈɛntos ˈonse pˈesos poɾ βotˈeʃa: kwaɾˈɛnta i ˈuno poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

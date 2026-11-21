@@ -1,0 +1,413 @@
+{
+ "id": "2026-11-15",
+ "start": "2026-11-15",
+ "end": "2026-11-21",
+ "label_es": "Semana del 15 al 21 de noviembre de 2026",
+ "label_en": "Week of 15 to 21 November 2026",
+ "before_start": "2026-11-08",
+ "before_end": "2026-11-14",
+ "days_now": [
+  "2026-11-15",
+  "2026-11-16",
+  "2026-11-17",
+  "2026-11-18",
+  "2026-11-19",
+  "2026-11-20",
+  "2026-11-21"
+ ],
+ "days_before": [
+  "2026-11-08",
+  "2026-11-09",
+  "2026-11-10",
+  "2026-11-11",
+  "2026-11-12",
+  "2026-11-13",
+  "2026-11-14"
+ ],
+ "min_in_stock": 4,
+ "paid": -0.33,
+ "regular": 0.02,
+ "shops": [
+  {
+   "shop": "Carrefour",
+   "pct": 0.57
+  },
+  {
+   "shop": "Jumbo",
+   "pct": -0.69
+  },
+  {
+   "shop": "ChangoMas",
+   "pct": -0.4
+  },
+  {
+   "shop": "Dia",
+   "pct": -0.68
+  }
+ ],
+ "groups": [
+  {
+   "group": "limpieza",
+   "name_es": "Limpieza",
+   "name_en": "Cleaning products",
+   "in_headline": true,
+   "pct": 4.67
+  },
+  {
+   "group": "otros_alimentos",
+   "name_es": "Otros alimentos",
+   "name_en": "Other food",
+   "in_headline": true,
+   "pct": 1.42
+  },
+  {
+   "group": "carne_ave",
+   "name_es": "Pollo",
+   "name_en": "Chicken",
+   "in_headline": true,
+   "pct": 0.73
+  },
+  {
+   "group": "pan_cereales",
+   "name_es": "Pan y cereales",
+   "name_en": "Bread and cereals",
+   "in_headline": true,
+   "pct": 0.45
+  },
+  {
+   "group": "lacteos",
+   "name_es": "Lácteos y huevos",
+   "name_en": "Dairy and eggs",
+   "in_headline": true,
+   "pct": 0.18
+  },
+  {
+   "group": "carne_vacuna",
+   "name_es": "Carne vacuna",
+   "name_en": "Beef",
+   "in_headline": true,
+   "pct": 0.01
+  },
+  {
+   "group": "cuidado_personal",
+   "name_es": "Cuidado personal",
+   "name_en": "Personal care",
+   "in_headline": false,
+   "pct": 0.01
+  },
+  {
+   "group": "aguas_gaseosas",
+   "name_es": "Aguas y gaseosas",
+   "name_en": "Water and soft drinks",
+   "in_headline": true,
+   "pct": -0.29
+  },
+  {
+   "group": "cafe_te_yerba",
+   "name_es": "Café, té y yerba",
+   "name_en": "Coffee, tea and yerba",
+   "in_headline": true,
+   "pct": -0.54
+  },
+  {
+   "group": "aceites",
+   "name_es": "Aceites",
+   "name_en": "Oils",
+   "in_headline": true,
+   "pct": -1.18
+  },
+  {
+   "group": "azucar",
+   "name_es": "Azúcar y dulces",
+   "name_en": "Sugar and sweets",
+   "in_headline": true,
+   "pct": -1.73
+  },
+  {
+   "group": "alcohol",
+   "name_es": "Bebidas alcohólicas",
+   "name_en": "Alcoholic drinks",
+   "in_headline": true,
+   "pct": -1.8
+  },
+  {
+   "group": "frutas",
+   "name_es": "Frutas",
+   "name_en": "Fruit",
+   "in_headline": true,
+   "pct": -2.52
+  },
+  {
+   "group": "verduras",
+   "name_es": "Verduras",
+   "name_en": "Vegetables",
+   "in_headline": true,
+   "pct": -6.79
+  }
+ ],
+ "products_compared": 945,
+ "products_up": 244,
+ "products_down": 170,
+ "products_same": 531,
+ "top_up": [
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "ChangoMas",
+   "sku_id": "243265",
+   "name": "Detergente Cif Active Gel 400 Ml",
+   "before": 2573.4,
+   "now": 3798.83,
+   "pct": 47.62,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "ChangoMas",
+   "sku_id": "243262",
+   "name": "Detergente Cif Active Gel Limón 400 Ml",
+   "before": 2573.4,
+   "now": 3798.83,
+   "pct": 47.62,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "detergente",
+   "type_en": "Dish soap",
+   "shop": "ChangoMas",
+   "sku_id": "243263",
+   "name": "Detergente Cif Active Gel Limón 750 Ml",
+   "before": 4943.4,
+   "now": 7297.4,
+   "pct": 47.62,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "vino",
+   "type_en": "Red wine",
+   "shop": "Dia",
+   "sku_id": "138550",
+   "name": "Vino Tinto Suter Malbec 750 Ml.",
+   "before": 3379.64,
+   "now": 4653.57,
+   "pct": 37.69,
+   "regular_pct": 6.42
+  },
+  {
+   "type": "yerba",
+   "type_en": "Yerba mate",
+   "shop": "Dia",
+   "sku_id": "275540",
+   "name": "Yerba Mate Nobleza Gaucha Selección 1 Kg.",
+   "before": 3128.21,
+   "now": 4275.0,
+   "pct": 36.66,
+   "regular_pct": 0.0
+  }
+ ],
+ "top_down": [
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Jumbo",
+   "sku_id": "167685",
+   "name": "Cebolla Superior Por Kg",
+   "before": 3827.57,
+   "now": 2499.0,
+   "pct": -34.71,
+   "regular_pct": null
+  },
+  {
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
+   "shop": "ChangoMas",
+   "sku_id": "189292",
+   "name": "Pasta Dental Colgate Luminous Charcoal 90 G",
+   "before": 8069.0,
+   "now": 5733.29,
+   "pct": -28.95,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "galletitas",
+   "type_en": "Biscuits",
+   "shop": "Dia",
+   "sku_id": "52289",
+   "name": "Galletitas Rellenas Melba 360 Gr.",
+   "before": 4540.0,
+   "now": 3231.43,
+   "pct": -28.82,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "pasta_dental",
+   "type_en": "Toothpaste",
+   "shop": "Carrefour",
+   "sku_id": "24280",
+   "name": "Pasta Dental Colgate Luminous White Brilliant 140 grs",
+   "before": 11299.0,
+   "now": 8877.79,
+   "pct": -21.43,
+   "regular_pct": 0.0
+  },
+  {
+   "type": "cerveza",
+   "type_en": "Beer",
+   "shop": "ChangoMas",
+   "sku_id": "201",
+   "name": "Cerveza Rubia Brahma 473ml",
+   "before": 2829.0,
+   "now": 2228.13,
+   "pct": -21.24,
+   "regular_pct": 0.0
+  }
+ ],
+ "promos_now": {
+  "Carrefour": 49.9,
+  "ChangoMas": 44.4,
+  "Dia": 70.1
+ },
+ "promos_before": {
+  "Carrefour": 42.3,
+  "ChangoMas": 38.6,
+  "Dia": 68.4
+ },
+ "series": [
+  {
+   "date": "2026-11-08",
+   "paid": 98.373,
+   "regular": 99.25
+  },
+  {
+   "date": "2026-11-09",
+   "paid": 99.696,
+   "regular": 99.25
+  },
+  {
+   "date": "2026-11-10",
+   "paid": 101.643,
+   "regular": 99.284
+  },
+  {
+   "date": "2026-11-11",
+   "paid": 98.621,
+   "regular": 99.191
+  },
+  {
+   "date": "2026-11-12",
+   "paid": 99.093,
+   "regular": 99.288
+  },
+  {
+   "date": "2026-11-13",
+   "paid": 98.819,
+   "regular": 99.101
+  },
+  {
+   "date": "2026-11-14",
+   "paid": 98.998,
+   "regular": 99.112
+  },
+  {
+   "date": "2026-11-15",
+   "paid": 99.084,
+   "regular": 99.112
+  },
+  {
+   "date": "2026-11-16",
+   "paid": 100.066,
+   "regular": 99.21
+  },
+  {
+   "date": "2026-11-17",
+   "paid": 102.155,
+   "regular": 99.198
+  },
+  {
+   "date": "2026-11-18",
+   "paid": 98.812,
+   "regular": 99.231
+  },
+  {
+   "date": "2026-11-19",
+   "paid": 98.74,
+   "regular": 99.501
+  },
+  {
+   "date": "2026-11-20",
+   "paid": 98.121,
+   "regular": 99.244
+  },
+  {
+   "date": "2026-11-21",
+   "paid": 97.9,
+   "regular": 99.233
+  }
+ ],
+ "ranking": {
+  "days": [
+   "2026-11-15",
+   "2026-11-21"
+  ],
+  "days_of_data": 7,
+  "n_products": 312,
+  "shops": [
+   {
+    "shop": "Dia",
+    "total": 1260691.49,
+    "pct": 0.0
+   },
+   {
+    "shop": "Carrefour",
+    "total": 1283987.95,
+    "pct": 1.85
+   },
+   {
+    "shop": "ChangoMas",
+    "total": 1287361.13,
+    "pct": 2.12
+   },
+   {
+    "shop": "Jumbo",
+    "total": 1458914.43,
+    "pct": 15.72
+   }
+  ],
+  "cheapest_count": {
+   "Carrefour": 113,
+   "Jumbo": 5,
+   "ChangoMas": 115,
+   "Dia": 126
+  },
+  "examples": [
+   {
+    "ean": "7790070431516",
+    "name": "Arroz Lucchetti Parboil 500 G",
+    "low_shop": "Dia",
+    "low": 760.0,
+    "high_shop": "Jumbo",
+    "high": 1600.0,
+    "pct": 110.5
+   },
+   {
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15200.0,
+    "high_shop": "Jumbo",
+    "high": 27750.0,
+    "pct": 82.6
+   },
+   {
+    "ean": "7791290793446",
+    "name": "Jabón En Polvo Skip Bio-Enzimas 600g",
+    "low_shop": "Carrefour",
+    "low": 2824.25,
+    "high_shop": "Jumbo",
+    "high": 4750.0,
+    "pct": 68.2
+   }
+  ]
+ }
+}

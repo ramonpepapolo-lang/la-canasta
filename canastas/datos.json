@@ -1,5 +1,5 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-21",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,7 +93,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 16508.43,
+     "total": 16455.78,
      "complete": false,
      "missing": [
       "pan"
@@ -150,10 +150,10 @@
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1622.5,
-       "cost": 973.5,
-       "name": "Carbón de leña 4 kg.",
-       "sku_id": "17650",
+       "unit_price": 1574.75,
+       "cost": 944.85,
+       "name": "Carbon vegetal asados x 4 kg",
+       "sku_id": "123760",
        "promo": false
       },
       {
@@ -180,11 +180,11 @@
        "ing": "cebolla",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 199.92,
+       "unit_price": 2199.0,
+       "cost": 175.92,
        "name": "Cebolla x kg.",
        "sku_id": "7968",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "lechuga",
@@ -253,7 +253,7 @@
      "fixed_total": 2840.0
     },
     "Jumbo": {
-     "total": 19938.38,
+     "total": 19661.58,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -282,10 +282,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 14990.0,
-       "cost": 1798.8,
-       "name": "Chorizo Comun Bandeja - 4 U - X Kg - La Criolla",
-       "sku_id": "16465",
+       "unit_price": 16890.0,
+       "cost": 2026.8,
+       "name": "Chorizo Tipo Alemán de Cerdo Fresco al vacio x 1 Kg Facundo Chorizo Alemán Paquete X Kg Facundo",
+       "sku_id": "7818",
        "promo": false
       },
       {
@@ -322,10 +322,10 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 37900.0,
-       "cost": 3032.0,
-       "name": "Queso Provoleta Artesanal x 1 Kg Nonna Pia",
-       "sku_id": "305103",
+       "unit_price": 31590.0,
+       "cost": 2527.2,
+       "name": "Queso Provoleta Provolone Semiduro x Kg Vaquero",
+       "sku_id": "402884",
        "promo": false
       },
       {
@@ -413,7 +413,7 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 18323.93,
+     "total": 19239.77,
      "complete": false,
      "missing": [
       "lechuga"
@@ -484,18 +484,18 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 32559.38,
-       "cost": 2604.75,
-       "name": "Queso Provoleta Vacalin 320g",
-       "sku_id": "221323",
+       "unit_price": 41415.79,
+       "cost": 3313.26,
+       "name": "Queso Provoleta Doña Aurora 190 G",
+       "sku_id": "216375",
        "promo": false
       },
       {
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 4599.0,
-       "cost": 551.88,
+       "unit_price": 5299.0,
+       "cost": 635.88,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
        "promo": false
@@ -520,11 +520,11 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6172.0,
-       "cost": 1543.0,
-       "name": "Vino Tinto Nampe Malbec 750 Ml",
-       "sku_id": "23050",
-       "promo": false
+       "unit_price": 6665.33,
+       "cost": 1666.33,
+       "name": "Vino Tinto Esperado Malbec 750 Ml",
+       "sku_id": "213025",
+       "promo": true
       },
       {
        "ing": "cerveza",
@@ -573,7 +573,7 @@
      "fixed_total": 2988.0
     },
     "Dia": {
-     "total": 16643.92,
+     "total": 17330.82,
      "complete": false,
      "missing": [
       "pan"
@@ -604,11 +604,11 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 8966.67,
-       "cost": 1076.0,
-       "name": "Chorizo Verdeo Parrillero Dia 300 Gr.",
-       "sku_id": "295206",
-       "promo": true
+       "unit_price": 12390.8,
+       "cost": 1486.9,
+       "name": "Chorizo 435 Gr.",
+       "sku_id": "242582",
+       "promo": false
       },
       {
        "ing": "morcilla",
@@ -650,10 +650,10 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 1990.0,
-       "cost": 238.8,
-       "name": "Tomate Comercial en bolsa malla x 1 Kg.",
-       "sku_id": "90076",
+       "unit_price": 4290.0,
+       "cost": 514.8,
+       "name": "Tomate Redondo x Kg.",
+       "sku_id": "90127",
        "promo": false
       },
       {
@@ -864,7 +864,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43749.11,
+     "total": 43199.11,
      "complete": false,
      "missing": [
       "pollo"
@@ -1001,28 +1001,28 @@
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1999.0,
-       "cost": 999.5,
-       "name": "Zanahoria Huella Natural x kg.",
-       "sku_id": "26503",
+       "unit_price": 1599.0,
+       "cost": 799.5,
+       "name": "Zanahoria x kg.",
+       "sku_id": "50067",
        "promo": true
       },
       {
        "ing": "cebolla",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 1249.5,
+       "unit_price": 2199.0,
+       "cost": 1099.5,
        "name": "Cebolla x kg.",
        "sku_id": "7968",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2799.0,
-       "cost": 2799.0,
+       "unit_price": 2599.0,
+       "cost": 2599.0,
        "name": "Papa cepillada x kg.",
        "sku_id": "34549",
        "promo": false
@@ -1264,7 +1264,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 38202.9,
+     "total": 38692.9,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1393,8 +1393,8 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 4599.0,
-       "cost": 3219.3,
+       "unit_price": 5299.0,
+       "cost": 3709.3,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
        "promo": false
@@ -1427,7 +1427,7 @@
        "cost": 1999.0,
        "name": "Papa 500 G",
        "sku_id": "203532",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "queso",
@@ -1464,7 +1464,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 40581.62,
+     "total": 42191.62,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1593,10 +1593,10 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 1990.0,
-       "cost": 1393.0,
-       "name": "Tomate Comercial en bolsa malla x 1 Kg.",
-       "sku_id": "90076",
+       "unit_price": 4290.0,
+       "cost": 3003.0,
+       "name": "Tomate Redondo x Kg.",
+       "sku_id": "90127",
        "promo": false
       },
       {
@@ -1794,7 +1794,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 41191.82,
+     "total": 40696.02,
      "complete": false,
      "missing": [
       "carne_picada",
@@ -1826,11 +1826,11 @@
        "ing": "pure_tomate",
        "qty": 2,
        "fixed": false,
-       "unit_price": 809.0,
-       "cost": 1618.0,
-       "name": "Puré de tomates Bulnez 520 g.",
-       "sku_id": "188262",
-       "promo": false
+       "unit_price": 836.1,
+       "cost": 1672.2,
+       "name": "Puré de tomate Carrefour classic 520 g.",
+       "sku_id": "24927",
+       "promo": true
       },
       {
        "ing": "huevos",
@@ -1898,8 +1898,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2799.0,
-       "cost": 5598.0,
+       "unit_price": 2599.0,
+       "cost": 5198.0,
        "name": "Papa cepillada x kg.",
        "sku_id": "34549",
        "promo": false
@@ -1908,11 +1908,11 @@
        "ing": "cebolla",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 2499.0,
-       "cost": 1249.5,
+       "unit_price": 2199.0,
+       "cost": 1099.5,
        "name": "Cebolla x kg.",
        "sku_id": "7968",
-       "promo": false
+       "promo": true
       },
       {
        "ing": "banana",
@@ -2285,7 +2285,7 @@
        "cost": 3998.0,
        "name": "Papa 500 G",
        "sku_id": "203532",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "cebolla",

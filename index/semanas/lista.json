@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-15",
+  "start": "2026-11-15",
+  "end": "2026-11-21",
+  "label_es": "Semana del 15 al 21 de noviembre de 2026",
+  "label_en": "Week of 15 to 21 November 2026",
+  "paid": -0.33,
+  "regular": 0.02
+ },
+ {
   "id": "2026-11-08",
   "start": "2026-11-08",
   "end": "2026-11-14",

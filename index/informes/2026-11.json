@@ -3,29 +3,29 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.4,
+ "inflation": -1.62,
  "base_date": "2026-10-31",
- "end_date": "2026-11-20",
- "days_of_data": 20,
- "prices_collected": 402017,
+ "end_date": "2026-11-21",
+ "days_of_data": 21,
+ "prices_collected": 426028,
  "headline": {
-  "end_to_end_paid": -1.4,
-  "end_to_end_regular": -0.71,
+  "end_to_end_paid": -1.62,
+  "end_to_end_regular": -0.72,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 0.49
+   "pct": -0.71
   },
   {
    "shop": "ChangoMas",
-   "pct": -1.22
+   "pct": -0.83
   },
   {
    "shop": "Dia",
-   "pct": -2.34
+   "pct": -2.43
   },
   {
    "shop": "Jumbo",
@@ -46,12 +46,12 @@
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.12
+   "pct": 1.15
   },
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 0.95
+   "pct": 1.13
   },
   {
    "group": "cuidado_personal",
@@ -66,12 +66,7 @@
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": -0.76
-  },
-  {
-   "group": "aguas_gaseosas",
-   "in_headline": true,
-   "pct": -1.79
+   "pct": -0.7
   },
   {
    "group": "frutas",
@@ -81,7 +76,7 @@
   {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": -2.11
+   "pct": -2.05
   },
   {
    "group": "aceites",
@@ -89,25 +84,30 @@
    "pct": -2.44
   },
   {
+   "group": "aguas_gaseosas",
+   "in_headline": true,
+   "pct": -2.56
+  },
+  {
    "group": "azucar",
    "in_headline": true,
-   "pct": -3.75
+   "pct": -3.7
   },
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.69
+   "pct": -4.63
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -16.58
+   "pct": -18.55
   }
  ],
  "products_compared": 1018,
- "products_up": 231,
- "products_down": 171,
- "products_same": 616,
+ "products_up": 236,
+ "products_down": 173,
+ "products_same": 609,
  "top_up": [
   {
    "type": "arroz",
@@ -177,6 +177,15 @@
   {
    "type": "cebolla",
    "type_en": "Onions",
+   "shop": "Carrefour",
+   "name": "Cebolla x kg.",
+   "before": 3999.0,
+   "now": 2199.0,
+   "pct": -45.01
+  },
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
    "shop": "Jumbo",
    "name": "Cebolla Superior Por Kg",
    "before": 3999.0,
@@ -191,15 +200,6 @@
    "before": 8069.0,
    "now": 4799.0,
    "pct": -40.53
-  },
-  {
-   "type": "jabon_ropa",
-   "type_en": "Laundry powder",
-   "shop": "ChangoMas",
-   "name": "Jabón En Polvo Para Ropa Ala Con Bicarbonato 3 Kg",
-   "before": 11529.0,
-   "now": 6917.4,
-   "pct": -40.0
   }
  ],
  "series": [
@@ -307,6 +307,11 @@
    "date": "2026-11-20",
    "paid": 98.121,
    "regular": 99.244
+  },
+  {
+   "date": "2026-11-21",
+   "paid": 97.9,
+   "regular": 99.233
   }
  ]
 }

@@ -1,12 +1,12 @@
 {
- "when_utc": "2026-11-21 01:01",
+ "when_utc": "2026-11-21 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4184,
-  "/": 4009,
-  "/precios/": 11,
+  "TOTAL": 4235,
+  "/": 4059,
+  "/precios/": 12,
   "/canastas/": 18,
   "/informes.html": 49,
   "/metodo.html": 28,
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "622",
-  "views_total_text": "164,680",
-  "views_sum_of_videos": 82271,
+  "subscribers_text": "621",
+  "views_total_text": "170,638",
+  "views_sum_of_videos": 82323,
   "videos": 43,
   "list": [
    {
@@ -29,9 +29,9 @@
     "player_status": null,
     "title": "Café La Virginia 250 g: $2.916 en Carrefour, $7.850 en Jumbo",
     "published": "2026-11-20",
-    "views": 2,
+    "views": 7,
     "views_exact": true,
-    "likes": 0,
+    "likes": 4,
     "comments": null
    },
    {
@@ -41,9 +41,9 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 35,
+    "views": 37,
     "views_exact": true,
-    "likes": 0,
+    "likes": 4,
     "comments": null
    },
    {
@@ -55,7 +55,7 @@
     "published": "2026-11-18",
     "views": 35,
     "views_exact": true,
-    "likes": 2,
+    "likes": 6,
     "comments": null
    },
    {
@@ -115,7 +115,7 @@
     "published": "2026-11-17",
     "views": 130,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -125,9 +125,9 @@
     "player_status": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 36,
+    "views": 37,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -139,7 +139,7 @@
     "published": "2026-11-16",
     "views": 31,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -151,7 +151,7 @@
     "published": "2026-11-16",
     "views": 46,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -163,7 +163,7 @@
     "published": "2026-11-15",
     "views": 32,
     "views_exact": true,
-    "likes": 2,
+    "likes": 6,
     "comments": null
    },
    {
@@ -175,7 +175,7 @@
     "published": "2026-11-15",
     "views": 19,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -187,7 +187,7 @@
     "published": "2026-11-15",
     "views": 18,
     "views_exact": true,
-    "likes": 1,
+    "likes": 5,
     "comments": null
    },
    {
@@ -199,7 +199,7 @@
     "published": "2026-11-14",
     "views": 42,
     "views_exact": true,
-    "likes": 1,
+    "likes": 4,
     "comments": null
    },
    {
@@ -211,7 +211,7 @@
     "published": "2026-11-14",
     "views": 24,
     "views_exact": true,
-    "likes": 1,
+    "likes": 4,
     "comments": null
    },
    {
@@ -221,9 +221,9 @@
     "player_status": null,
     "title": "Alfajores al 25%: ayer 6 en promo, hoy 20 en Carrefour",
     "published": "2026-11-13",
-    "views": 11,
+    "views": 12,
     "views_exact": true,
-    "likes": 2,
+    "likes": 4,
     "comments": null
    },
    {
@@ -235,7 +235,7 @@
     "published": "2026-11-13",
     "views": 17,
     "views_exact": true,
-    "likes": 3,
+    "likes": 5,
     "comments": null
    },
    {
@@ -305,7 +305,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 19975,
+    "views": 20016,
     "views_exact": true,
     "likes": 5,
     "comments": null
@@ -329,7 +329,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 949,
+    "views": 950,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -377,7 +377,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1080,
+    "views": 1065,
     "views_exact": true,
     "likes": 118,
     "comments": null
@@ -425,9 +425,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21175,
+    "views": 21172,
     "views_exact": true,
-    "likes": 422,
+    "likes": 140,
     "comments": 1
    },
    {
@@ -461,7 +461,7 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10087,
+    "views": 10081,
     "views_exact": true,
     "likes": 673,
     "comments": 2
@@ -485,9 +485,9 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8536,
+    "views": 8556,
     "views_exact": true,
-    "likes": 575,
+    "likes": 7,
     "comments": null
    },
    {
@@ -533,7 +533,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19153,
+    "views": 19158,
     "views_exact": true,
     "likes": 5,
     "comments": 2

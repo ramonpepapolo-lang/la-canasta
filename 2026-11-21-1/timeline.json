@@ -1,0 +1,71 @@
+{
+ "total": 30.745,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo aceite de oliva. Mismo código de barras.",
+   "say": "Mismo aceite de oliva. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.657,
+   "dur": 2.537,
+   "ps": "mˈismo asˈAte ðe olˈiβa. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$6.889… u $11.600.",
+   "say": "Seis mil ochocientos ochenta y nueve, u once mil seiscientos.",
+   "gap": 0.35,
+   "start": 2.877,
+   "end": 6.231,
+   "dur": 3.354,
+   "ps": "sˈAs mˈil ˌoʧosjˈɛntos oʧˈɛnta i nwˈeβe, u ˈonse mˈil sAsjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "La Toscana 250 ml: $6.889 en Carrefour.",
+   "say": "La Toscana de doscientos cincuenta, en Carrefour: seis mil ochocientos ochenta y nueve.",
+   "start": 6.581,
+   "end": 11.406,
+   "dur": 4.825,
+   "ps": "la toskˈana ðe ðosjˈɛntos sinkwˈɛnta, en kˌarefˈowɾ: sˈAs mˈil ˌoʧosjˈɛntos oʧˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $10.700. Jumbo $11.600.",
+   "say": "En Día, diez mil setecientos. En Jumbo, once mil seiscientos.",
+   "start": 11.626,
+   "end": 14.98,
+   "dur": 3.354,
+   "ps": "en dˈia, djˈes mˈil sˌetesjˈɛntos. en xˈumbo, ˈonse mˈil sAsjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $10.599.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es diez mil quinientos noventa y nueve.",
+   "gap": 0.3,
+   "start": 15.2,
+   "end": 19.563,
+   "dur": 4.364,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes ðjˈes mˈil kinjˈɛntos noβˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "Está así desde el miércoles 18. Puede terminar cualquier día.",
+   "say": "Está así desde el miércoles dieciocho, y puede terminar cualquier día.",
+   "start": 19.863,
+   "end": 23.652,
+   "dur": 3.788,
+   "ps": "estˈa asˈi ðˌesðe el mjˈeɾkoles ðjesjˈoʧo, i pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $4.711 por botella. Un 41% menos.",
+   "say": "Ahorrás cuatro mil setecientos once pesos por botella. Un cuarenta y uno por ciento menos.",
+   "start": 23.872,
+   "end": 29.225,
+   "dur": 5.354,
+   "ps": "ˌaorˈas kwˈatɾo mˈil sˌetesjˈɛntos ˈonse pˈesos poɾ βotˈeʃa. ˈun kwaɾˈɛnta i ˈuno poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

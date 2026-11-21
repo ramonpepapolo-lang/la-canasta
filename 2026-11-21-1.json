@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Mismo aceite de oliva. Mismo código de barras.","say":"Mismo aceite de oliva. Mismo código de barras."},
+{"k":"h2","sub":"$6.889… u $11.600.","say":"Seis mil ochocientos ochenta y nueve, u once mil seiscientos.","gap":0.35},
+{"k":"w1","sub":"La Toscana 250 ml: $6.889 en Carrefour.","say":"La Toscana de doscientos cincuenta, en Carrefour: seis mil ochocientos ochenta y nueve."},
+{"k":"w2","sub":"Día $10.700. Jumbo $11.600.","say":"En Día, diez mil setecientos. En Jumbo, once mil seiscientos."},
+{"k":"b1","sub":"Pero ojo: es una oferta. El precio de lista es $10.599.","say":"Pero ojo. Es una oferta: el precio de lista es diez mil quinientos noventa y nueve.","gap":0.3},
+{"k":"b2","sub":"Está así desde el miércoles 18. Puede terminar cualquier día.","say":"Está así desde el miércoles dieciocho, y puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $4.711 por botella. Un 41% menos.","say":"Ahorrás cuatro mil setecientos once pesos por botella. Un cuarenta y uno por ciento menos."}
+]}

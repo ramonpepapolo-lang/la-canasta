@@ -62,3 +62,4 @@ largos 2026-11-22 1 X https://x.com/LaCanastaIndex/status/2124463170227999070
 largos 2026-11-22 1 YouTube https://youtube.com/watch?v=J8cL6VaFq00
 largos 2026-11-22 2 X https://x.com/LaCanastaIndex/status/2124463215882993909
 largos 2026-11-22 2 YouTube https://youtube.com/watch?v=2wkxKbiHD8Q
+2026-11-22 img1 X https://x.com/LaCanastaIndex/status/2124517894927294910

@@ -21,7 +21,9 @@ if posts.get("date") != day:
     open("subject.txt", "w").write(f"⚠️ No se publicó nada | La Canasta {day}")
     print(f"Ramon, ojo: no se publicó nada, ni en X ni en YouTube. Los videos guardados son del {posts.get('date')}, no del {day}."); sys.exit(0)
 done_path = "notas/publicados.txt"
-done = open(done_path, encoding="utf-8").read() if os.path.exists(done_path) else ""
+# exact keys ("{tag} {i} {site}" = each line without its URL), so "2026-11-22 1 X" is not mistaken for
+# "largos 2026-11-22 1 X" (that bug skipped the 22 Nov Short)
+done = {l.rsplit(" ", 1)[0].strip() for l in open(done_path, encoding="utf-8")} if os.path.exists(done_path) else set()
 new_lines = []
 
 have_x = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"))

@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Mismo Fernet Branca Menta. Mismo código de barras.","say":"Mismo Fernet Branca Menta. Mismo código de barras."},
+{"k":"h2","sub":"$13.650… o $21.000.","say":"Trece mil seiscientos cincuenta, o veintiún mil.","gap":0.35},
+{"k":"w1","sub":"Botella de 750: $13.650 en Carrefour.","say":"La botella de setecientos cincuenta, en Carrefour: trece mil seiscientos cincuenta."},
+{"k":"w2","sub":"Día $14.900. Jumbo $21.000.","say":"En Día, catorce mil novecientos. En Jumbo, veintiún mil."},
+{"k":"b1","sub":"Pero ojo: es una oferta. El precio de lista es $21.000.","say":"Pero ojo. Es una oferta: el precio de lista es veintiún mil.","gap":0.3},
+{"k":"b2","sub":"Carrefour lo bajó el jueves 19. El clásico sigue a $21.000.","say":"Carrefour lo bajó el jueves diecinueve. El clásico, sin menta, sigue a veintiún mil."},
+{"k":"p1","sub":"Ahorrás $7.350 por botella. Un 35% menos.","say":"Ahorrás siete mil trescientos cincuenta pesos por botella. Un treinta y cinco por ciento menos."}
+]}

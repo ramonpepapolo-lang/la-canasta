@@ -1,0 +1,339 @@
+{
+ "total": 251.468,
+ "voice": "af_heart",
+ "lines": [
+  {
+   "k": "i1",
+   "sub": "Weekly report. Week of 15 to 21 November.",
+   "say": "Weekly report. The week of November fifteenth to twenty first.",
+   "gap": 0.6,
+   "start": 3.2,
+   "end": 6.746,
+   "dur": 3.546,
+   "ps": "wˈikli ɹəpˈɔɹt. ðə wˈik ʌv nOvˈɛmbəɹ fˌɪftˈinθ tə twˈɛnti fˈɜɹst."
+  },
+  {
+   "k": "i2",
+   "sub": "This week, the same bread went up 23% at one supermarket…",
+   "say": "This week, the same loaf of bread went up twenty three percent at one supermarket.",
+   "start": 7.346,
+   "end": 11.776,
+   "dur": 4.43,
+   "ps": "ðˌɪs wˈik, ðə sˈAm lˈOf ʌv bɹˈɛd wˈɛnt ˌʌp twˈɛnti θɹˈi pəɹsˈɛnt æt wˈʌn sˈupəɹmˌɑɹkət."
+  },
+  {
+   "k": "i3",
+   "sub": "…and down 14% at another.",
+   "say": "And down fourteen at another.",
+   "gap": 0.5,
+   "start": 12.076,
+   "end": 13.51,
+   "dur": 1.434,
+   "ps": "ˌænd dˌWn fˌɔɹtˈin æt ənˈʌðəɹ."
+  },
+  {
+   "k": "i4",
+   "sub": "And something strange happens every Tuesday. Let's go step by step.",
+   "say": "And something strange happens every Tuesday. Let's take it step by step.",
+   "gap": 0.7,
+   "start": 14.01,
+   "end": 18.03,
+   "dur": 4.02,
+   "ps": "ˌænd sˈʌmθˌɪŋ stɹˈAnʤ hˈæpənz ˈɛvəɹi tˈuzdˌA. lˈɛts tˈAk ɪt stˈɛp bI stˈɛp."
+  },
+  {
+   "k": "n1",
+   "sub": "Every product, against its price the week before (8 to 14 November).",
+   "say": "We compare every product against its price the week before, November eighth to fourteenth.",
+   "start": 18.73,
+   "end": 23.42,
+   "dur": 4.69,
+   "ps": "wˌi kəmpˈɛɹ ˈɛvəɹi pɹˈɑdˌʌkt əɡˈɛnst ɪts pɹˈIs ðə wˈik bəfˈɔɹ, nOvˈɛmbəɹ ˈAθ tə fˌɔɹtˈinθ."
+  },
+  {
+   "k": "n2",
+   "sub": "945 products compared.",
+   "say": "Nine hundred and forty five products.",
+   "start": 23.72,
+   "end": 25.883,
+   "dur": 2.163,
+   "ps": "nˈIn hˈʌndɹəd ænd fˈɔɹTi fˈIv pɹˈɑdˌʌkts."
+  },
+  {
+   "k": "n3",
+   "sub": "Result: −0.33%. The third week in a row going down.",
+   "say": "The result: down zero point three three percent. The third week in a row going down.",
+   "start": 26.183,
+   "end": 30.948,
+   "dur": 4.764,
+   "ps": "ðə ɹəzˈʌlt: dˌWn zˈɪɹO pˈYnt θɹˈi θɹˈi pəɹsˈɛnt. ðə θˈɜɹd wˈik ɪn ɐ ɹˈO ɡˈOɪŋ dˌWn."
+  },
+  {
+   "k": "n4",
+   "sub": "Without deals, at the list price: +0.02%. Almost the same.",
+   "say": "Without deals, at the list price, up zero point zero two. Almost the same.",
+   "start": 31.248,
+   "end": 35.43,
+   "dur": 4.182,
+   "ps": "wɪðˈWt dˈilz, æt ðə lˈɪst pɹˈIs, ˌʌp zˈɪɹO pˈYnt zˈɪɹO tˈu. ˈɔlmOst ðə sˈAm."
+  },
+  {
+   "k": "n5",
+   "sub": "244 went up. 170 went down. 531 stayed the same.",
+   "say": "Two hundred and forty four products went up. One hundred and seventy went down. And five hundred and thirty one stayed the same.",
+   "start": 35.73,
+   "end": 43.07,
+   "dur": 7.34,
+   "ps": "tˈu hˈʌndɹəd ænd fˈɔɹTi fˈɔɹ pɹˈɑdˌʌkts wˈɛnt ˌʌp. wˈʌn hˈʌndɹəd ænd sˈɛvənti wˈɛnt dˌWn. ˌænd fˈIv hˈʌndɹəd ænd θˈɜɹTi wˈʌn stˈAd ðə sˈAm."
+  },
+  {
+   "k": "n6",
+   "sub": "On Saturday the 21st, the index hit 97.9: the lowest day since we started, on 24 October.",
+   "say": "And on Saturday the twenty first, the index hit ninety seven point nine. The lowest day since we started measuring, on October twenty fourth.",
+   "gap": 0.7,
+   "start": 43.37,
+   "end": 51.47,
+   "dur": 8.1,
+   "ps": "ˌænd ˌɔn sˈæTəɹdˌA ðə twˈɛnti fˈɜɹst, ði ˈɪndˌɛks hˈɪt nˈIndi sˈɛvən pˈYnt nˈIn. ðə lˈOᵻst dˈA sˈɪns wi stˈɑɹTᵻd mˈɛʒəɹɪŋ, ˌɔn ɑktˈObəɹ twˈɛnti fˈɔɹθ."
+  },
+  {
+   "k": "g1",
+   "sub": "By group, the biggest rise: cleaning products, +4.7%. Other food, +1.4%.",
+   "say": "Among the index groups, the biggest rise was cleaning products, four point seven percent. And other food, one point four.",
+   "start": 52.17,
+   "end": 59.262,
+   "dur": 7.092,
+   "ps": "əmˈʌŋ ði ˈɪndˌɛks ɡɹˈups, ðə bˈɪɡᵻst ɹˈIz wʌz klˈinɪŋ pɹˈɑdˌʌkts, fˈɔɹ pˈYnt sˈɛvən pəɹsˈɛnt. ˌænd ˈʌðəɹ fˈud, wˈʌn pˈYnt fˈɔɹ."
+  },
+  {
+   "k": "g2",
+   "sub": "The biggest fall: vegetables, −6.8%. And the week before they had already fallen 6.1%.",
+   "say": "The biggest fall: vegetables. Down six point eight percent. And the week before, they had already fallen six point one.",
+   "start": 59.562,
+   "end": 66.455,
+   "dur": 6.893,
+   "ps": "ðə bˈɪɡᵻst fˈɔl: vˈɛʤtəbəlz. dˌWn sˈɪks pˈYnt ˈAt pəɹsˈɛnt. ˌænd ðə wˈik bəfˈɔɹ, ðA hæd ˌɔlɹˈɛdi fˈɔlən sˈɪks pˈYnt wˈʌn."
+  },
+  {
+   "k": "g3",
+   "sub": "Beef, the biggest part of the basket: unchanged (+0.01%).",
+   "say": "And beef, the biggest part of the basket, didn't move.",
+   "gap": 0.7,
+   "start": 66.755,
+   "end": 69.413,
+   "dur": 2.658,
+   "ps": "ˌænd bˈif, ðə bˈɪɡᵻst pˈɑɹt ʌv ðə bˈæskət, dˈɪdᵊnt mˈuv."
+  },
+  {
+   "k": "u1",
+   "sub": "Why did cleaning go up? Cif Active Gel dish soap 400 ml, at ChangoMás: +48%.",
+   "say": "Why did cleaning go up? Cif Active Gel dish soap, four hundred milliliters, at Chango Mas. From two thousand five hundred and seventy pesos, to three thousand eight hundred on average. Forty eight percent.",
+   "start": 70.113,
+   "end": 82.729,
+   "dur": 12.616,
+   "ps": "wˌI dˈɪd klˈinɪŋ ɡˌO ˌʌp? sˈɪf ˈæktɪv ʤˈɛl dˈɪʃ sˈOp, fˈɔɹ hˈʌndɹəd mˈɪləlˌiTəɹz, æt ʧˈæŋɡO mˈɑz. fɹˌʌm tˈu θˈWzᵊnd fˈIv hˈʌndɹəd ænd sˈɛvənti pˈAsOz, tə θɹˈi θˈWzᵊnd ˈAt hˈʌndɹəd ˌɔn ˈævəɹɪʤ. fˈɔɹTi ˈAt pəɹsˈɛnt."
+  },
+  {
+   "k": "u2",
+   "sub": "But its list price did not change. It was a deal, and it ended on Tuesday the 17th.",
+   "say": "But careful. Its list price didn't change at all. It was a deal, and it ended on Tuesday the seventeenth.",
+   "start": 83.029,
+   "end": 88.822,
+   "dur": 5.793,
+   "ps": "bˌʌt kˈɛɹfᵊl. ˌɪts lˈɪst pɹˈIs dˈɪdᵊnt ʧˈAnʤ æt ˈɔl. ˌɪt wʌz ɐ dˈil, ænd ɪt ˈɛndᵻd ˌɔn tˈuzdˌA ðə sˌɛvəntˈinθ."
+  },
+  {
+   "k": "u3",
+   "sub": "Nobleza Gaucha Selección yerba mate 1 kg, at Día: +37%. Same list price. Another deal gone.",
+   "say": "Nobleza Gaucha yerba mate, one kilo, at Dee-ah: up thirty seven percent. And its list price, the same. Another deal gone.",
+   "start": 89.122,
+   "end": 96.629,
+   "dur": 7.507,
+   "ps": "nˈObᵊlzə ɡˈɔʧə jˈɛɹbə mˈAt, wˈʌn kˈilO, æt dˈiˌɑ: ˌʌp θˈɜɹTi sˈɛvən pəɹsˈɛnt. ˌænd ɪts lˈɪst pɹˈIs, ðə sˈAm. ənˈʌðəɹ dˈil ɡˈɔn."
+  },
+  {
+   "k": "d1",
+   "sub": "On the other side: onions by the kilo, at Jumbo. From $3,699 to $2,299 since Monday the 16th. −35%.",
+   "say": "On the other side, onions by the kilo, at Jumbo. From three thousand six hundred and ninety nine pesos, to two thousand two hundred and ninety nine, since Monday the sixteenth. Thirty five percent less on average.",
+   "gap": 0.7,
+   "start": 96.929,
+   "end": 109.855,
+   "dur": 12.926,
+   "ps": "ˌɔn ði ˈʌðəɹ sˈId, ˈʌnjᵊnz bI ðə kˈilO, æt ʤˈʌmbO. fɹˌʌm θɹˈi θˈWzᵊnd sˈɪks hˈʌndɹəd ænd nˈIndi nˈIn pˈAsOz, tə tˈu θˈWzᵊnd tˈu hˈʌndɹəd ænd nˈIndi nˈIn, sˈɪns mˈʌndˌA ðə sˌɪkstˈinθ. θˈɜɹTi fˈIv pəɹsˈɛnt lˈɛs ˌɔn ˈævəɹɪʤ."
+  },
+  {
+   "k": "b1",
+   "sub": "Now, the bread. Bimbo white bread 580 g. Same barcode. List price at both: about $8,100.",
+   "say": "Now, the bread. Bimbo white bread, five hundred and eighty grams. Same barcode. And the list price at both supermarkets, about eight thousand one hundred pesos.",
+   "start": 110.555,
+   "end": 120.307,
+   "dur": 9.752,
+   "ps": "nˈW, ðə bɹˈɛd. bˈɪmbO wˈIt bɹˈɛd, fˈIv hˈʌndɹəd ænd ˈATi ɡɹˈæmz. sˈAm bˈɑɹkˌOd. ˌænd ðə lˈɪst pɹˈIs æt bˈOθ sˈupəɹmˌɑɹkəts, əbˈWt ˈAt θˈWzᵊnd wˈʌn hˈʌndɹəd pˈAsOz."
+  },
+  {
+   "k": "b2",
+   "sub": "Día had it on offer at $5,670. Since Tuesday the 17th, $8,099. +23% on average.",
+   "say": "Dee-ah had it on offer, at five thousand six hundred and seventy. Since Tuesday the seventeenth, eight thousand and ninety nine. Up twenty three percent on average.",
+   "start": 120.607,
+   "end": 130.369,
+   "dur": 9.762,
+   "ps": "dˈiˌɑ hæd ɪt ˌɔn ˈɔfəɹ, æt fˈIv θˈWzᵊnd sˈɪks hˈʌndɹəd ænd sˈɛvənti. sˈɪns tˈuzdˌA ðə sˌɛvəntˈinθ, ˈAt θˈWzᵊnd ænd nˈIndi nˈIn. ˌʌp twˈɛnti θɹˈi pəɹsˈɛnt ˌɔn ˈævəɹɪʤ."
+  },
+  {
+   "k": "b3",
+   "sub": "Carrefour, the other way round: $8,099 until Tuesday. Since Wednesday the 18th, $6,074. −14%.",
+   "say": "At Carrefour, the other way round. Eight thousand and ninety nine until Tuesday. And since Wednesday the eighteenth, six thousand and seventy four. Down fourteen.",
+   "start": 130.669,
+   "end": 140.132,
+   "dur": 9.463,
+   "ps": "ˌæt kˌɛɹəfˈʊɹ, ði ˈʌðəɹ wˈA ɹˈWnd. ˈAt θˈWzᵊnd ænd nˈIndi nˈIn ˌʌntˈɪl tˈuzdˌA. ˌænd sˈɪns wˈɛnzdˌA ði ˌAttˈinθ, sˈɪks θˈWzᵊnd ænd sˈɛvənti fˈɔɹ. dˌWn fˌɔɹtˈin."
+  },
+  {
+   "k": "b4",
+   "sub": "The week before, Día was the better deal. Since Wednesday, Carrefour.",
+   "say": "The week before, Dee-ah was the better deal. Since Wednesday, Carrefour.",
+   "start": 140.432,
+   "end": 144.216,
+   "dur": 3.784,
+   "ps": "ðə wˈik bəfˈɔɹ, dˈiˌɑ wʌz ðə bˈɛTəɹ dˈil. sˈɪns wˈɛnzdˌA, kˌɛɹəfˈʊɹ."
+  },
+  {
+   "k": "b5",
+   "sub": "Colgate toothpaste 140 g, same story: −21% at Carrefour, +28% at Día.",
+   "say": "And Colgate toothpaste, one hundred and forty grams, same story. Down twenty one at Carrefour. Up twenty eight at Dee-ah.",
+   "gap": 0.7,
+   "start": 144.516,
+   "end": 151.635,
+   "dur": 7.119,
+   "ps": "ˌænd kˈɑlɡAt tˈuθpˌAst, wˈʌn hˈʌndɹəd ænd fˈɔɹTi ɡɹˈæmz, sˈAm stˈɔɹi. dˌWn twˈɛnti wˈʌn æt kˌɛɹəfˈʊɹ. ˌʌp twˈɛnti ˈAt æt dˈiˌɑ."
+  },
+  {
+   "k": "m1",
+   "sub": "So what happens on Tuesdays? Look at the index, day by day.",
+   "say": "So what happens on Tuesdays? Look at the index, day by day.",
+   "start": 152.335,
+   "end": 155.745,
+   "dur": 3.41,
+   "ps": "sˌO wˌʌt hˈæpənz ˌɔn tˈuzdˌAz? lˈʊk æt ði ˈɪndˌɛks, dˈA bI dˈA."
+  },
+  {
+   "k": "m2",
+   "sub": "For the third week in a row, the highest day was Tuesday: 3, 10 and 17 November.",
+   "say": "For the third week in a row, the highest day was Tuesday. November third, tenth, and seventeenth.",
+   "start": 156.045,
+   "end": 161.475,
+   "dur": 5.43,
+   "ps": "fˌɔɹ ðə θˈɜɹd wˈik ɪn ɐ ɹˈO, ðə hˈIᵻst dˈA wʌz tˈuzdˌA. nOvˈɛmbəɹ θˈɜɹd, tˈɛnθ, ænd sˌɛvəntˈinθ."
+  },
+  {
+   "k": "m3",
+   "sub": "At Día, basket products on offer: 78 on Monday the 16th. On Tuesday the 17th, only 17.",
+   "say": "At Dee-ah, the products in our basket on offer were seventy eight on Monday the sixteenth. On Tuesday the seventeenth, only seventeen.",
+   "start": 161.775,
+   "end": 169.655,
+   "dur": 7.88,
+   "ps": "ˌæt dˈiˌɑ, ðə pɹˈɑdˌʌkts ɪn ˌWəɹ bˈæskət ˌɔn ˈɔfəɹ wɜɹ sˈɛvənti ˈAt ˌɔn mˈʌndˌA ðə sˌɪkstˈinθ. ˌɔn tˈuzdˌA ðə sˌɛvəntˈinθ, ˈOnli sˌɛvəntˈin."
+  },
+  {
+   "k": "m4",
+   "sub": "The Tuesday before, the 10th, there were 4. And on Wednesday, the deals come back.",
+   "say": "The Tuesday before, the tenth, there were just four. And on Wednesday, the deals come back.",
+   "start": 169.955,
+   "end": 174.668,
+   "dur": 4.713,
+   "ps": "ðə tˈuzdˌA bəfˈɔɹ, ðə tˈɛnθ, ðɛɹ wɜɹ ʤˈʌst fˈɔɹ. ˌænd ˌɔn wˈɛnzdˌA, ðə dˈilz kˈʌm bˈæk."
+  },
+  {
+   "k": "m5",
+   "sub": "That is why, in our index, Tuesday keeps being the highest day of the week.",
+   "say": "That is why, in our index, Tuesday keeps being the highest day of the week.",
+   "gap": 0.7,
+   "start": 174.968,
+   "end": 178.944,
+   "dur": 3.976,
+   "ps": "ðˈæt ɪz wˌI, ɪn ˌWəɹ ˈɪndˌɛks, tˈuzdˌA kˈips bˈiɪŋ ðə hˈIᵻst dˈA ʌv ðə wˈik."
+  },
+  {
+   "k": "s1",
+   "sub": "Which chain rose most? Carrefour: +0.57%. The other three went down.",
+   "say": "Which chain rose most? Carrefour. Up zero point five seven percent. The other three went down.",
+   "start": 179.644,
+   "end": 185.405,
+   "dur": 5.761,
+   "ps": "wˌɪʧ ʧˈAn ɹˈOz mˈOst? kˌɛɹəfˈʊɹ. ˌʌp zˈɪɹO pˈYnt fˈIv sˈɛvən pəɹsˈɛnt. ði ˈʌðəɹ θɹˈi wˈɛnt dˌWn."
+  },
+  {
+   "k": "s2",
+   "sub": "Odd, because Carrefour had more deals: from 42 a day to 50. And since Wednesday the 18th, 60 or more.",
+   "say": "Odd, because Carrefour had more deals. From forty two products a day, to fifty. And since Wednesday the eighteenth, sixty or more.",
+   "start": 185.705,
+   "end": 193.393,
+   "dur": 7.688,
+   "ps": "ˈɑd, bəkˈʌz kˌɛɹəfˈʊɹ hæd mˈɔɹ dˈilz. fɹˌʌm fˈɔɹTi tˈu pɹˈɑdˌʌkts ɐ dˈA, tə fˈɪfti. ˌænd sˈɪns wˈɛnzdˌA ði ˌAttˈinθ, sˈɪksti ɔɹ mˈɔɹ."
+  },
+  {
+   "k": "s3",
+   "sub": "Its index jumped on Thursday the 12th, the week before. This week it eased, but it still weighs on the average.",
+   "say": "What happened is that its index jumped on Thursday the twelfth, the week before. This week it eased a little. But on the average, it still weighs.",
+   "start": 193.693,
+   "end": 201.855,
+   "dur": 8.163,
+   "ps": "wˌʌt hˈæpənd ɪz ðæt ɪts ˈɪndˌɛks ʤˈʌmpt ˌɔn θˈɜɹzdˌA ðə twˈɛlfθ, ðə wˈik bəfˈɔɹ. ðˌɪs wˈik ɪt ˈizd ɐ lˈɪTᵊl. bˌʌt ˌɔn ði ˈævəɹɪʤ, ɪt stˈɪl wˈAz."
+  },
+  {
+   "k": "s4",
+   "sub": "Ranking: the same 312 products. Día, the cheapest again.",
+   "say": "And the ranking. For the same three hundred and twelve products, Dee-ah was the cheapest again.",
+   "start": 202.155,
+   "end": 207.215,
+   "dur": 5.06,
+   "ps": "ˌænd ðə ɹˈæŋkɪŋ. fˌɔɹ ðə sˈAm θɹˈi hˈʌndɹəd ænd twˈɛlv pɹˈɑdˌʌkts, dˈiˌɑ wʌz ðə ʧˈipɪst əɡˈɛn."
+  },
+  {
+   "k": "s5",
+   "sub": "Carrefour, only 1.9% more. ChangoMás, 2.1%. Jumbo, 15.7% more for the same.",
+   "say": "But Carrefour was only one point nine percent behind. Chango Mas, two point one. And Jumbo, fifteen point seven percent more expensive, for exactly the same.",
+   "start": 207.515,
+   "end": 217.998,
+   "dur": 10.483,
+   "ps": "bˌʌt kˌɛɹəfˈʊɹ wʌz ˈOnli wˈʌn pˈYnt nˈIn pəɹsˈɛnt bəhˈInd. ʧˈæŋɡO mˈɑz, tˈu pˈYnt wˈʌn. ˌænd ʤˈʌmbO, fˌɪftˈin pˈYnt sˈɛvən pəɹsˈɛnt mˈɔɹ ɪkspˈɛnsɪv, fɔɹ ɪɡzˈæktli ðə sˈAm."
+  },
+  {
+   "k": "s6",
+   "sub": "But: Día had the lowest price in 126 of the 312. ChangoMás in 115. Carrefour in 113.",
+   "say": "And here's the thing. Dee-ah had the lowest price in one hundred and twenty six of the three hundred and twelve products. Chango Mas in one hundred and fifteen. And Carrefour in one hundred and thirteen. Comparing pays.",
+   "gap": 0.7,
+   "start": 218.298,
+   "end": 231.253,
+   "dur": 12.955,
+   "ps": "ˌænd hˈɪɹz ðə θˈɪŋ. dˈiˌɑ hæd ðə lˈOᵻst pɹˈIs ɪn wˈʌn hˈʌndɹəd ænd twˈɛnti sˈɪks ʌv ðə θɹˈi hˈʌndɹəd ænd twˈɛlv pɹˈɑdˌʌkts. ʧˈæŋɡO mˈɑz ɪn wˈʌn hˈʌndɹəd ænd fˌɪftˈin. ˌænd kˌɛɹəfˈʊɹ ɪn wˈʌn hˈʌndɹəd ænd θˌɜɹtˈin. kəmpˈɛɹɪŋ pˈAz."
+  },
+  {
+   "k": "e1",
+   "sub": "In short: a third week down, cheaper vegetables and Tuesdays with fewer deals.",
+   "say": "In short. A third week down, cheaper vegetables, and Tuesdays with fewer deals.",
+   "start": 231.953,
+   "end": 236.634,
+   "dur": 4.682,
+   "ps": "ɪn ʃˈɔɹt. ɐ θˈɜɹd wˈik dˌWn, ʧˈipəɹ vˈɛʤtəbəlz, ænd tˈuzdˌAz wɪð fjˈuəɹ dˈilz."
+  },
+  {
+   "k": "e2",
+   "sub": "December 1: supermarket inflation for November.",
+   "say": "On December first, the November report comes out. Supermarket inflation for the month.",
+   "start": 236.934,
+   "end": 241.978,
+   "dur": 5.043,
+   "ps": "ˌɔn disˈɛmbəɹ fˈɜɹst, ðə nOvˈɛmbəɹ ɹəpˈɔɹt kˈʌmz ˈWt. sˈupəɹmˌɑɹkət ɪnflˈAʃən fɔɹ ðə mˈʌnθ."
+  },
+  {
+   "k": "e3",
+   "sub": "A new report every Sunday. Subscribe. Data at lacanastaindex.com",
+   "say": "And every Sunday, a new weekly report. Subscribe. All the data is at la canasta index dot com.",
+   "start": 242.278,
+   "end": 248.568,
+   "dur": 6.29,
+   "ps": "ˌænd ˈɛvəɹi sˈʌndˌA, ɐ nˈu wˈikli ɹəpˈɔɹt. səbskɹˈIb. ˈɔl ðə dˈATə ɪz æt lˌɑ kənˈæstə ˈɪndˌɛks dˈɑt kˈɑm."
+  }
+ ]
+}

@@ -1,0 +1,339 @@
+{
+ "total": 235.459,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "i1",
+   "sub": "Reporte semanal. Semana del 15 al 21 de noviembre.",
+   "say": "Reporte semanal. Semana del quince al veintiuno de noviembre.",
+   "gap": 0.6,
+   "start": 3.2,
+   "end": 6.639,
+   "dur": 3.439,
+   "ps": "repˈoɾte sˌemanˈal. semˈana ðel kˈinse al βAntjˈuno ðe noβjˈembɾe."
+  },
+  {
+   "k": "i2",
+   "sub": "Esta semana, el mismo pan subió 23% en un súper…",
+   "say": "Esta semana, el mismo pan subió veintitrés por ciento en un súper.",
+   "start": 7.239,
+   "end": 10.741,
+   "dur": 3.502,
+   "ps": "ˈesta semˈana, el mˈismo pˈan suβjˈo βˌAntitɾˈes poɾ sjˈɛnto en ˈun sˈupeɾ."
+  },
+  {
+   "k": "i3",
+   "sub": "…y bajó 14% en otro.",
+   "say": "Y bajó catorce en otro.",
+   "gap": 0.5,
+   "start": 11.041,
+   "end": 12.58,
+   "dur": 1.539,
+   "ps": "i βaxˈo katˈoɾse en ˈotɾo."
+  },
+  {
+   "k": "i4",
+   "sub": "Y hay algo raro que pasa todos los martes. Vamos por partes.",
+   "say": "Y hay algo raro que pasa todos los martes. Vamos por partes.",
+   "gap": 0.7,
+   "start": 13.08,
+   "end": 16.562,
+   "dur": 3.482,
+   "ps": "i ˈI ˈalɣo rˈaɾo ke pˈasa tˈoðos los mˈaɾtes. bˈamos poɾ pˈaɾtes."
+  },
+  {
+   "k": "n1",
+   "sub": "Cada producto, contra su precio de la semana anterior (8 al 14 de noviembre).",
+   "say": "Comparamos cada producto contra su precio de la semana anterior, del ocho al catorce de noviembre.",
+   "start": 17.262,
+   "end": 22.632,
+   "dur": 5.369,
+   "ps": "kˌompaɾˈamos kˈaða pɾoðˈukto kˈontɾa su pɾˈesjo ðe la semˈana ˌanteɾjˈoɾ, del ˈoʧo al katˈoɾse ðe noβjˈembɾe."
+  },
+  {
+   "k": "n2",
+   "sub": "945 productos comparados.",
+   "say": "Novecientos cuarenta y cinco productos.",
+   "start": 22.932,
+   "end": 25.365,
+   "dur": 2.434,
+   "ps": "nˌoβesjˈɛntos kwaɾˈɛnta i sˈinko pɾoðˈuktos."
+  },
+  {
+   "k": "n3",
+   "sub": "Resultado: −0,33%. Tercera semana seguida en baja.",
+   "say": "Resultado: menos cero coma treinta y tres por ciento. Tercera semana seguida en baja.",
+   "start": 25.665,
+   "end": 30.453,
+   "dur": 4.788,
+   "ps": "rˌesultˈaðo: mˈenos sˈeɾo kˈoma tɾˈAnta i tɾˈes poɾ sjˈɛnto. teɾsˈeɾa semˈana seɣˈiða em bˈaxa."
+  },
+  {
+   "k": "n4",
+   "sub": "Sin promociones, con el precio de lista: +0,02%. Casi igual.",
+   "say": "Sin promociones, con el precio de lista, más cero coma cero dos. Casi igual.",
+   "start": 30.753,
+   "end": 34.858,
+   "dur": 4.104,
+   "ps": "sim pɾˌomosjˈones, kon el pɾˈesjo ðe lˈista, mˈas sˈeɾo kˈoma sˈeɾo ðˈos. kˈasi iɣwˈal."
+  },
+  {
+   "k": "n5",
+   "sub": "244 subieron. 170 bajaron. 531 quedaron igual.",
+   "say": "Doscientos cuarenta y cuatro productos subieron. Ciento setenta bajaron. Y quinientos treinta y uno quedaron igual.",
+   "start": 35.158,
+   "end": 41.713,
+   "dur": 6.555,
+   "ps": "dosjˈɛntos kwaɾˈɛnta i kwˈatɾo pɾoðˈuktos suβjˈeɾon. sjˈɛnto setˈɛnta βaxˈaɾon. i kinjˈɛntos tɾˈAnta i ˈuno keðˈaɾon iɣwˈal."
+  },
+  {
+   "k": "n6",
+   "sub": "El sábado 21, el índice marcó 97,9: el día más bajo desde que empezamos, el 24 de octubre.",
+   "say": "Y el sábado veintiuno, el índice marcó noventa y siete coma nueve. El día más bajo desde que empezamos a medir, el veinticuatro de octubre.",
+   "gap": 0.7,
+   "start": 42.013,
+   "end": 49.839,
+   "dur": 7.826,
+   "ps": "i el sˈaβaðo βAntjˈuno, el ˈindise maɾkˈo noβˈɛnta i sjˈete kˈoma nwˈeβe. el ðˈia mˈas βˌaxo ðˌesðe ke ˌempesˈamos a meðˈiɾ, el βˌAntikwˈatɾo ðe oktˈuβɾe."
+  },
+  {
+   "k": "g1",
+   "sub": "Por grupos, lo que más subió: limpieza, +4,7%. Otros alimentos, +1,4%.",
+   "say": "Por grupos del índice, lo que más subió fue limpieza, cuatro coma siete por ciento. Y otros alimentos, uno coma cuatro.",
+   "start": 50.539,
+   "end": 57.191,
+   "dur": 6.652,
+   "ps": "poɾ ɣɾˈupos ðel ˈindise, lo ke mˈas suβjˈo fwˈe limpjˈesa, kwˈatɾo kˈoma sjˈete poɾ sjˈɛnto. i ˈotɾos ˌalimˈɛntos, ˈuno kˈoma kwˈatɾo."
+  },
+  {
+   "k": "g2",
+   "sub": "Lo que más bajó: las verduras, −6,8%. Y la semana anterior ya habían bajado 6,1%.",
+   "say": "Lo que más bajó: las verduras. Menos seis coma ocho por ciento. Y la semana anterior ya habían bajado seis coma uno.",
+   "start": 57.491,
+   "end": 64.211,
+   "dur": 6.72,
+   "ps": "lo ke mˈas βaxˈo: las βeɾðˈuɾas. mˈenos sˈAs kˈoma ˈoʧo poɾ sjˈɛnto. i la semˈana ˌanteɾjˈoɾ ʃˈa aβˈiam baxˈaðo sˈAs kˈoma ˈuno."
+  },
+  {
+   "k": "g3",
+   "sub": "La carne vacuna, lo que más pesa en la canasta: igual (+0,01%).",
+   "say": "Y la carne vacuna, que es lo que más pesa en la canasta, quedó igual.",
+   "gap": 0.7,
+   "start": 64.511,
+   "end": 68.077,
+   "dur": 3.566,
+   "ps": "i la kˈaɾne βakˈuna, ke ˈes lo ke mˈas pˈesa en la kanˈasta, keðˈo iɣwˈal."
+  },
+  {
+   "k": "u1",
+   "sub": "¿Por qué subió limpieza? Detergente Cif Active Gel 400 ml, en ChangoMás: +48%.",
+   "say": "¿Por qué subió limpieza? El detergente Cif Active Gel de cuatrocientos mililitros, en ChangoMás. De dos mil quinientos setenta, a tres mil ochocientos en promedio. Cuarenta y ocho por ciento.",
+   "start": 68.777,
+   "end": 79.672,
+   "dur": 10.895,
+   "ps": "¿poɾ kˈe suβjˈo limpjˈesa? el ðˌeteɾxˈɛnte sˈif aktˈiβe xˈel ðe kwˌatɾosjˈɛntos mˌililˈitɾos, en ʧˈaŋɡo mˈas. de ðˈos mˈil kinjˈɛntos setˈɛnta, a tɾˈes mˈil ˌoʧosjˈɛntos em pɾomˈeðjo. kwaɾˈɛnta i ˈoʧo poɾ sjˈɛnto."
+  },
+  {
+   "k": "u2",
+   "sub": "Pero su precio de lista no cambió. Era una promo, y terminó el martes 17.",
+   "say": "Pero ojo. Su precio de lista no cambió nada. Era una promo, y terminó el martes diecisiete.",
+   "start": 79.972,
+   "end": 85.162,
+   "dur": 5.19,
+   "ps": "pˌeɾo ˈoxo. su pɾˈesjo ðe lˈista nˈo kambjˈo nˈaða. ˈeɾa ˈuna pɾˈomo, i tˌeɾminˈo el mˈaɾtes ðjˌesisjˈete."
+  },
+  {
+   "k": "u3",
+   "sub": "Yerba Nobleza Gaucha Selección 1 kg, en Día: +37%. Precio de lista, igual. Otra promo que se fue.",
+   "say": "La yerba Nobleza Gaucha Selección de un kilo, en Día: más treinta y siete por ciento. Y su precio de lista, igual. Otra promo que se fue.",
+   "start": 85.462,
+   "end": 93.063,
+   "dur": 7.601,
+   "ps": "la ʃˈeɾβa noβlˈesa ɣˈWʧa sˌeleksjˈon de ˈuŋ kˈilo, en dˈia: mˈas tɾˈAnta i sjˈete poɾ sjˈɛnto. i su pɾˈesjo ðe lˈista, iɣwˈal. ˈotɾa pɾˈomo ke se fwˈe."
+  },
+  {
+   "k": "d1",
+   "sub": "Del otro lado: la cebolla por kilo, en Jumbo. De $3.699 a $2.299 desde el lunes 16. −35%.",
+   "say": "Del otro lado, la cebolla por kilo, en Jumbo. Pasó de tres mil seiscientos noventa y nueve, a dos mil doscientos noventa y nueve, desde el lunes dieciséis. Treinta y cinco por ciento menos en el promedio.",
+   "gap": 0.7,
+   "start": 93.363,
+   "end": 104.792,
+   "dur": 11.429,
+   "ps": "del ˈotɾo lˈaðo, la seβˈoʃa poɾ kˈilo, en xˈumbo. pasˈo ðe tɾˈes mˈil sAsjˈɛntos noβˈɛnta i nwˈeβe, a ðˈos mˈil ðosjˈɛntos noβˈɛnta i nwˈeβe, dˌesðe el lˈunes ðjˌesisˈeis. tɾˈAnta i sˈinko poɾ sjˈɛnto mˈenos en el pɾomˈeðjo."
+  },
+  {
+   "k": "b1",
+   "sub": "Ahora, el pan. Pan blanco Bimbo 580 g. Mismo código de barras. Precio de lista en los dos: unos $8.100.",
+   "say": "Ahora sí, el pan. Pan blanco Bimbo, de quinientos ochenta gramos. Mismo código de barras. Y el precio de lista, en los dos súper, unos ocho mil cien.",
+   "start": 105.492,
+   "end": 113.283,
+   "dur": 7.791,
+   "ps": "aˈoɾa sˈi, el pˈan. pˈam blˈanko βˈimbo, de kinjˈɛntos oʧˈɛnta ɣɾˈamos. mˈismo kˈoðiɣo ðe βˈaras. i el pɾˈesjo ðe lˈista, en los ðˈos sˈupeɾ, ˈunos ˈoʧo mˈil sjˈen."
+  },
+  {
+   "k": "b2",
+   "sub": "Día lo tenía en promo a $5.670. Desde el martes 17, a $8.099. +23% en el promedio.",
+   "say": "Día lo tenía en promo, a cinco mil seiscientos setenta. Desde el martes diecisiete, ocho mil noventa y nueve. Más veintitrés por ciento en el promedio.",
+   "start": 113.583,
+   "end": 122.078,
+   "dur": 8.494,
+   "ps": "dˈia lo tenˈia em pɾˈomo, a sˈinko mˈil sAsjˈɛntos setˈɛnta. dˌesðe el mˈaɾtes ðjˌesisjˈete, ˈoʧo mˈil noβˈɛnta i nwˈeβe. mˈas βˌAntitɾˈes poɾ sjˈɛnto en el pɾomˈeðjo."
+  },
+  {
+   "k": "b3",
+   "sub": "Carrefour, al revés: $8.099 hasta el martes. Desde el miércoles 18, $6.074. −14%.",
+   "say": "En Carrefour, al revés. Ocho mil noventa y nueve hasta el martes. Y desde el miércoles dieciocho, seis mil setenta y cuatro. Menos catorce.",
+   "start": 122.378,
+   "end": 130.111,
+   "dur": 7.733,
+   "ps": "en kˌarefˈowɾ, al reβˈes. ˈoʧo mˈil noβˈɛnta i nwˈeβe ˌasta el mˈaɾtes. i ðˌesðe el mjˈeɾkoles ðjesjˈoʧo, sˈAs mˈil setˈɛnta i kwˈatɾo. mˈenos katˈoɾse."
+  },
+  {
+   "k": "b4",
+   "sub": "La semana anterior convenía Día. Desde el miércoles, Carrefour.",
+   "say": "La semana anterior convenía Día. Desde el miércoles, Carrefour.",
+   "start": 130.411,
+   "end": 133.982,
+   "dur": 3.571,
+   "ps": "la semˈana ˌanteɾjˈoɾ kˌombenˈia ðˈia. dˌesðe el mjˈeɾkoles, kˌarefˈowɾ."
+  },
+  {
+   "k": "b5",
+   "sub": "Con la pasta dental Colgate de 140 g, lo mismo: −21% en Carrefour, +28% en Día.",
+   "say": "Y con la pasta dental Colgate de ciento cuarenta gramos pasó lo mismo. Menos veintiuno en Carrefour. Más veintiocho en Día.",
+   "gap": 0.7,
+   "start": 134.282,
+   "end": 141.159,
+   "dur": 6.877,
+   "ps": "i kon la pˈasta ðentˈal kolɣˈate ðe sjˈɛnto kwaɾˈɛnta ɣɾˈamos pasˈo lo mˈismo. mˈenos βAntjˈuno en kˌarefˈowɾ. mˈas βAntjˈoʧo en dˈia."
+  },
+  {
+   "k": "m1",
+   "sub": "¿Y qué pasa los martes? Mirá el índice, día por día.",
+   "say": "¿Y qué pasa los martes? Mirá el índice, día por día.",
+   "start": 141.859,
+   "end": 144.792,
+   "dur": 2.933,
+   "ps": "¿i kˈe pˈasa los mˈaɾtes? miɾˈa el ˈindise, dˈia poɾ ðˈia."
+  },
+  {
+   "k": "m2",
+   "sub": "Por tercera semana seguida, el día más alto fue el martes: 3, 10 y 17 de noviembre.",
+   "say": "Por tercera semana seguida, el día más alto fue el martes. El tres, el diez, y el diecisiete de noviembre.",
+   "start": 145.092,
+   "end": 151.05,
+   "dur": 5.958,
+   "ps": "poɾ teɾsˈeɾa semˈana seɣˈiða, el ðˈia mˈas ˈalto fwˈe el mˈaɾtes. el tɾˈes, el ðjˈes, i el ðjˌesisjˈete ðe noβjˈembɾe."
+  },
+  {
+   "k": "m3",
+   "sub": "En Día, los productos de la canasta en oferta: 78 el lunes 16. El martes 17, solo 17.",
+   "say": "En Día, los productos de nuestra canasta en oferta eran setenta y ocho el lunes dieciséis. El martes diecisiete, solo diecisiete.",
+   "start": 151.35,
+   "end": 158.84,
+   "dur": 7.49,
+   "ps": "en dˈia, los pɾoðˈuktos ðe nwˌestɾa kanˈasta en ofˈeɾta ˈeɾan setˈɛnta i ˈoʧo el lˈunes ðjˌesisˈeis. el mˈaɾtes ðjˌesisjˈete, sˈolo ðjˌesisjˈete."
+  },
+  {
+   "k": "m4",
+   "sub": "El martes anterior, el 10, fueron 4. Y el miércoles, las ofertas vuelven.",
+   "say": "El martes anterior, el diez, fueron apenas cuatro. Y el miércoles, las ofertas vuelven.",
+   "start": 159.14,
+   "end": 164.242,
+   "dur": 5.102,
+   "ps": "el mˈaɾtes ˌanteɾjˈoɾ, el ðjˈes, fwˈeɾon apˈenas kwˈatɾo. i el mjˈeɾkoles, las ofˈeɾtas βwˈelβen."
+  },
+  {
+   "k": "m5",
+   "sub": "Por eso, en nuestro índice, el martes viene siendo el día más alto de la semana.",
+   "say": "Por eso, en nuestro índice, el martes viene siendo el día más alto de la semana.",
+   "gap": 0.7,
+   "start": 164.542,
+   "end": 168.938,
+   "dur": 4.396,
+   "ps": "poɾ ˈeso, en nwˌestɾo ˈindise, el mˈaɾtes βjˈene sjˈɛndo el ðˈia mˈas ˈalto ðe la semˈana."
+  },
+  {
+   "k": "s1",
+   "sub": "¿Qué cadena subió más? Carrefour: +0,57%. Las otras tres bajaron.",
+   "say": "¿Qué cadena subió más? Carrefour. Más cero coma cincuenta y siete por ciento. Las otras tres bajaron.",
+   "start": 169.638,
+   "end": 175.178,
+   "dur": 5.54,
+   "ps": "¿kˈe kaðˈena suβjˈo mˈas? kˌarefˈowɾ. mˈas sˈeɾo kˈoma sinkwˈɛnta i sjˈete poɾ sjˈɛnto. las ˈotɾas tɾˈes βaxˈaɾon."
+  },
+  {
+   "k": "s2",
+   "sub": "Raro, porque Carrefour tuvo más ofertas: de 42 por día a 50. Y desde el miércoles 18, 60 o más.",
+   "say": "Raro, porque Carrefour tuvo más ofertas. De cuarenta y dos productos por día, a cincuenta. Y desde el miércoles dieciocho, sesenta o más.",
+   "start": 175.478,
+   "end": 183.486,
+   "dur": 8.008,
+   "ps": "rˈaɾo, pˌoɾke kˌarefˈowɾ tˈuβo mˈas ofˈeɾtas. de kwaɾˈɛnta i ðˈos pɾoðˈuktos poɾ ðˈia, a sinkwˈɛnta. i ðˌesðe el mjˈeɾkoles ðjesjˈoʧo, sesˈɛnta o mˈas."
+  },
+  {
+   "k": "s3",
+   "sub": "Su índice saltó el jueves 12, la semana anterior. Esta semana bajó de a poco, pero en el promedio todavía pesa.",
+   "say": "Lo que pasó es que su índice saltó el jueves doce, en la semana anterior. Esta semana bajó de a poco. Pero en el promedio, todavía pesa.",
+   "start": 183.786,
+   "end": 191.199,
+   "dur": 7.413,
+   "ps": "lo ke pasˈo ˈes ke su ˈindise saltˈo el xwˈeβes ðˈose, en la semˈana ˌanteɾjˈoɾ. ˈesta semˈana βaxˈo ðe a pˈoko. pˌeɾo en el pɾomˈeðjo, tˌoðaβˈia pˈesa."
+  },
+  {
+   "k": "s4",
+   "sub": "Ranking: los mismos 312 productos. Día, el más barato otra vez.",
+   "say": "Y el ranking. Para los mismos trescientos doce productos, Día fue el más barato otra vez.",
+   "start": 191.499,
+   "end": 196.304,
+   "dur": 4.805,
+   "ps": "i el rˈaŋkiŋ. pˌaɾa los mˈismos tɾesjˈɛntos ðˈose pɾoðˈuktos, dˈia fwˈe el mˈas βaɾˈato ˈotɾa βˈes."
+  },
+  {
+   "k": "s5",
+   "sub": "Carrefour, a solo 1,9%. ChangoMás, 2,1%. Jumbo, 15,7% más caro por lo mismo.",
+   "say": "Pero Carrefour quedó a solo uno coma nueve por ciento. ChangoMás, a dos coma uno. Y Jumbo, quince coma siete por ciento más caro, por exactamente lo mismo.",
+   "start": 196.604,
+   "end": 205.495,
+   "dur": 8.89,
+   "ps": "pˌeɾo kˌarefˈowɾ keðˈo a sˈolo ˈuno kˈoma nwˈeβe poɾ sjˈɛnto. ʧˈaŋɡo mˈas, a ðˈos kˈoma ˈuno. i xˈumbo, kˈinse kˈoma sjˈete poɾ sjˈɛnto mˈas kˈaɾo, poɾ eksˈaktamˈente lo mˈismo."
+  },
+  {
+   "k": "s6",
+   "sub": "Y ojo: Día tuvo el precio más bajo en 126 de los 312. ChangoMás, en 115. Carrefour, en 113.",
+   "say": "Y ojo. Día tuvo el precio más bajo en ciento veintiséis de los trescientos doce productos. ChangoMás, en ciento quince. Y Carrefour, en ciento trece. Comparar, conviene.",
+   "gap": 0.7,
+   "start": 205.795,
+   "end": 215.12,
+   "dur": 9.326,
+   "ps": "i ˈoxo. dˈia tˈuβo el pɾˈesjo mˈas βˌaxo en sjˈɛnto βˌAntisˈeis ðe los tɾesjˈɛntos ðˈose pɾoðˈuktos. ʧˈaŋɡo mˈas, en sjˈɛnto kˈinse. i kˌarefˈowɾ, en sjˈɛnto tɾˈese. kˌompaɾˈaɾ, kombjˈene."
+  },
+  {
+   "k": "e1",
+   "sub": "En resumen: tercera semana en baja, verduras más baratas y martes con menos ofertas.",
+   "say": "En resumen. Tercera semana en baja, verduras más baratas, y martes con menos ofertas.",
+   "start": 215.82,
+   "end": 220.899,
+   "dur": 5.079,
+   "ps": "en resˈumen. teɾsˈeɾa semˈana em bˈaxa, beɾðˈuɾas mˈas βaɾˈatas, i mˈaɾtes kon mˈenos ofˈeɾtas."
+  },
+  {
+   "k": "e2",
+   "sub": "El 1 de diciembre: la inflación del súper de noviembre.",
+   "say": "El primero de diciembre sale el informe de noviembre. La inflación del súper del mes.",
+   "start": 221.199,
+   "end": 225.878,
+   "dur": 4.679,
+   "ps": "el pɾimˈeɾo ðe ðisjˈembɾe sˈale el infˈoɾme ðe noβjˈembɾe. la ˌimflasjˈon del sˈupeɾ ðel mˈes."
+  },
+  {
+   "k": "e3",
+   "sub": "Cada domingo, un reporte nuevo. Suscribite. Datos en lacanastaindex.com",
+   "say": "Y cada domingo, un nuevo reporte semanal. Suscribite. Todos los datos están en la canasta index punto com.",
+   "start": 226.178,
+   "end": 232.559,
+   "dur": 6.381,
+   "ps": "i kˈaða ðomˈiŋɡo, ˈun nwˈeβo repˈoɾte sˌemanˈal. sˌuskɾiβˈite. tˈoðos los ðˈatos estˈan en la kanˈasta indˈeks pˈunto kˈom."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "total": 26.22,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo Fernet Branca Menta. Mismo código de barras.",
+   "say": "Mismo Fernet Branca Menta. Mismo código de barras.",
+   "start": 0.12,
+   "end": 3.083,
+   "dur": 2.963,
+   "ps": "mˈismo feɾnˈet βɾˈanka mˈɛnta. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$13.650… o $21.000.",
+   "say": "Trece mil seiscientos cincuenta, o veintiún mil.",
+   "gap": 0.35,
+   "start": 3.303,
+   "end": 5.961,
+   "dur": 2.658,
+   "ps": "tɾˈese mˈil sAsjˈɛntos sinkwˈɛnta, o βAntjˈun mˈil."
+  },
+  {
+   "k": "w1",
+   "sub": "En Carrefour: $13.650.",
+   "say": "En Carrefour: trece mil seiscientos cincuenta.",
+   "start": 6.311,
+   "end": 8.776,
+   "dur": 2.465,
+   "ps": "en kˌarefˈowɾ: tɾˈese mˈil sAsjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $14.900. Jumbo $21.000.",
+   "say": "En Día, catorce mil novecientos. En Jumbo, veintiún mil.",
+   "start": 8.996,
+   "end": 12.153,
+   "dur": 3.158,
+   "ps": "en dˈia, katˈoɾse mˈil nˌoβesjˈɛntos. en xˈumbo, bAntjˈun mˈil."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $21.000.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es veintiún mil.",
+   "gap": 0.3,
+   "start": 12.373,
+   "end": 15.485,
+   "dur": 3.112,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes βAntjˈun mˈil."
+  },
+  {
+   "k": "b2",
+   "sub": "Carrefour lo bajó el jueves 19. El clásico sigue a $21.000.",
+   "say": "Carrefour lo bajó el jueves diecinueve. El clásico sigue a veintiún mil.",
+   "start": 15.785,
+   "end": 19.55,
+   "dur": 3.765,
+   "ps": "kˌarefˈowɾ lo βaxˈo el xwˈeβes ðjˌesinwˈeβe. el klˈasiko sˈiɣe a βAntjˈun mˈil."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $7.350 por botella. Un 35% menos.",
+   "say": "Ahorrás siete mil trescientos cincuenta por botella. Un treinta y cinco por ciento menos.",
+   "start": 19.77,
+   "end": 24.7,
+   "dur": 4.93,
+   "ps": "ˌaorˈas sjˈete mˈil tɾesjˈɛntos sinkwˈɛnta poɾ βotˈeʃa. ˈun tɾˈAnta i sˈinko poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

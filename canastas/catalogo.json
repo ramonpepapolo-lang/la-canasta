@@ -1,5 +1,5 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -170,8 +170,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Chorizo de cerdo al gancho x kg",
-      "unit_price": 10500.0,
+      "name": "Chorizo fresco en gancho x kg",
+      "unit_price": 10900.0,
       "promo": false
      },
      "quality": {
@@ -182,8 +182,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Chorizo Tipo Alemán de Cerdo Fresco al vacio x 1 Kg Facundo Chorizo Alemán Paquete X Kg Facundo",
-      "unit_price": 16890.0,
+      "name": "Chorizo Bombón Gancho X Kg - La Criolla",
+      "unit_price": 15890.0,
       "promo": false
      },
      "quality": {
@@ -264,18 +264,18 @@
    "q": 1,
    "has_quality": false,
    "shops": {
-    "Jumbo": {
+    "Carrefour": {
      "cheap": {
-      "name": "Pan Frances",
-      "unit_price": 4790.0,
+      "name": "Pan frances Schar sin tacc 100 grs",
+      "unit_price": 72000.0,
       "promo": false
      },
      "quality": null
     },
-    "ChangoMas": {
+    "Jumbo": {
      "cheap": {
-      "name": "Pan Francés 1 Kg",
-      "unit_price": 3699.0,
+      "name": "Pan Francés 100 Gr Schar",
+      "unit_price": 78500.0,
       "promo": false
      },
      "quality": null
@@ -292,8 +292,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Carbon vegetal asados x 4 kg",
-      "unit_price": 1574.75,
+      "name": "Carbón vegetal 4 kg.",
+      "unit_price": 1249.75,
       "promo": false
      },
      "quality": null
@@ -354,8 +354,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Queso Provoleta Doña Aurora 190 G",
-      "unit_price": 41415.79,
+      "name": "Queso Provoleta Vacalin 320g",
+      "unit_price": 32559.38,
       "promo": false
      },
      "quality": {
@@ -526,9 +526,9 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Vino Tinto Esperado Malbec 750 Ml",
-      "unit_price": 6665.33,
-      "promo": true
+      "name": "Vino Tinto Nampe Malbec 750 Ml",
+      "unit_price": 6172.0,
+      "promo": false
      },
      "quality": {
       "name": "Vino Tinto Portillo Malbec 750 Ml",
@@ -538,8 +538,8 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Vino Tinto Clasico Finca Norte 750 Ml.",
-      "unit_price": 3986.67,
+      "name": "Vino Tinto Estancia Mendoza Malbec 750 ml.",
+      "unit_price": 4653.33,
       "promo": true
      },
      "quality": {
@@ -601,8 +601,8 @@
       "promo": true
      },
      "quality": {
-      "name": "Cerveza Bajo Cero Quilmes 473 Ml.",
-      "unit_price": 2748.41,
+      "name": "Cerveza Brahma 710 Ml.",
+      "unit_price": 2929.58,
       "promo": true
      }
     }
@@ -665,8 +665,8 @@
       "promo": false
      },
      "quality": {
-      "name": "Salsa chimichurri La Parmesana picante 300 g.",
-      "unit_price": 3599.0,
+      "name": "Salsa chimichurri La Parmesana 300 g.",
+      "unit_price": 4400.0,
       "promo": false
      }
     },
@@ -1528,14 +1528,14 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Aceite De Girasol Cañuelas 1.5 L",
-      "unit_price": 3332.67,
-      "promo": true
+      "name": "Aceite De Girasol Legítimo 1.5 L",
+      "unit_price": 4546.0,
+      "promo": false
      },
      "quality": {
-      "name": "Aceite De Girasol Cañuelas 1.5 L",
-      "unit_price": 3332.67,
-      "promo": true
+      "name": "Aceite De Girasol Legítimo 1.5 L",
+      "unit_price": 4546.0,
+      "promo": false
      }
     },
     "Dia": {
@@ -1760,9 +1760,9 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Azúcar Azucel 1kg",
-      "unit_price": 999.0,
-      "promo": true
+      "name": "Azúcar Ledesma Superior Refinada 1 Kg",
+      "unit_price": 1639.0,
+      "promo": false
      },
      "quality": {
       "name": "Azúcar Ledesma Superior Refinada 1 Kg",
@@ -1876,14 +1876,14 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
+      "name": "Galletitas Rellenas Con Cacao Dia 119 Gr.",
       "unit_price": 890.0,
-      "promo": false
+      "promo": true
      },
      "quality": {
-      "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
+      "name": "Galletitas Rellenas Con Cacao Dia 119 Gr.",
       "unit_price": 890.0,
-      "promo": false
+      "promo": true
      }
     }
    }
@@ -1910,8 +1910,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Aderezo Mayonesa Cada Día 250 Gr",
-      "unit_price": 900.0,
+      "name": "Aderezo Mayonesa Natura 237 Gr",
+      "unit_price": 1750.0,
       "promo": false
      },
      "quality": {
@@ -2652,8 +2652,8 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Milanesa bola de Lomo Envasado al Vacío x 1 Kg.",
-      "unit_price": 15490.0,
+      "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
+      "unit_price": 18990.0,
       "promo": false
      },
      "quality": null
@@ -3149,14 +3149,6 @@
       "promo": false
      },
      "quality": null
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Molleja Fresca 500 G",
-      "unit_price": 31499.0,
-      "promo": false
-     },
-     "quality": null
     }
    }
   },
@@ -3178,16 +3170,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Chinchulin Fresco",
-      "unit_price": 5599.0,
-      "promo": false
-     },
-     "quality": null
-    },
-    "ChangoMas": {
-     "cheap": {
-      "name": "Chinchulín Fresco 1 Kg",
-      "unit_price": 7899.0,
+      "name": "Chinchulin Congelado",
+      "unit_price": 8799.0,
       "promo": false
      },
      "quality": null
@@ -3213,16 +3197,16 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Bondiola finas hierbas Etiqueta Negra x kg",
-      "unit_price": 15000.0,
+      "name": "Bondiola de cerdo x kg",
+      "unit_price": 10500.0,
       "promo": false
      },
      "quality": null
     },
     "Jumbo": {
      "cheap": {
-      "name": "Bondiola De Cerdo - Cabaña Argentina",
-      "unit_price": 18599.0,
+      "name": "Bondiola de Cerdo Fresca",
+      "unit_price": 10599.0,
       "promo": false
      },
      "quality": null
@@ -3256,7 +3240,7 @@
     "Carrefour": {
      "cheap": {
       "name": "Carré de cerdo x kg",
-      "unit_price": 7800.0,
+      "unit_price": 8455.0,
       "promo": false
      },
      "quality": null
@@ -3594,7 +3578,11 @@
       "unit_price": 21431.25,
       "promo": true
      },
-     "quality": null
+     "quality": {
+      "name": "Queso Danbo La Paulina 26 Fetas 500g",
+      "unit_price": 27698.0,
+      "promo": false
+     }
     },
     "Dia": {
      "cheap": {
@@ -3756,8 +3744,8 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Queso Muzzarella Check 500 G",
-      "unit_price": 13998.0,
+      "name": "Queso Mozzarella Aliada 500 G",
+      "unit_price": 14998.0,
       "promo": true
      },
      "quality": null
@@ -3886,8 +3874,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Queso crema Casancrem clásico 500 grs",
-      "unit_price": 12582.7,
+      "name": "Queso crema entero San ignacio en pote 480 g.",
+      "unit_price": 8307.81,
       "promo": true
      },
      "quality": {
@@ -4002,8 +3990,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Tapa para empanada criolla Bulnez 12 uni",
-      "unit_price": 1290.0,
+      "name": "Tapa de empanada criolla Signo de Oro 12 uni",
+      "unit_price": 1700.0,
       "promo": false
      },
      "quality": {
@@ -4031,7 +4019,7 @@
       "promo": false
      },
      "quality": {
-      "name": "Tapas Empanadas La Salteña Para Freir 12u 330g",
+      "name": "Tapas Empanadas La Salteña Balance 12u 330g",
       "unit_price": 1949.25,
       "promo": true
      }
@@ -4103,8 +4091,8 @@
     "Carrefour": {
      "cheap": {
       "name": "Prepizza Bulnez de tomate 250 g.",
-      "unit_price": 5596.0,
-      "promo": true
+      "unit_price": 7960.0,
+      "promo": false
      },
      "quality": null
     },
@@ -4396,7 +4384,7 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Limón comercial x kg.",
+      "name": "Limón x kg.",
       "unit_price": 2299.0,
       "promo": false
      },
@@ -4640,10 +4628,26 @@
    "q": 1,
    "has_quality": false,
    "shops": {
+    "Carrefour": {
+     "cheap": {
+      "name": "Mandarina nova Huella Natural x kg.",
+      "unit_price": 1399.0,
+      "promo": false
+     },
+     "quality": null
+    },
     "Jumbo": {
      "cheap": {
       "name": "Mandarina Mineola X Kg.",
       "unit_price": 1799.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Mandarina 400 G",
+      "unit_price": 1599.0,
       "promo": false
      },
      "quality": null
@@ -4704,6 +4708,14 @@
      "cheap": {
       "name": "Uva Negra X Kg",
       "unit_price": 9999.0,
+      "promo": false
+     },
+     "quality": null
+    },
+    "ChangoMas": {
+     "cheap": {
+      "name": "Uva Blanca 300 G",
+      "unit_price": 11999.0,
       "promo": false
      },
      "quality": null
@@ -5064,13 +5076,13 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Sal Entrefina Celusal 1 Kg",
-      "unit_price": 3218.0,
+      "name": "Sal Fina 500 Grs Dos Anclas",
+      "unit_price": 3400.0,
       "promo": false
      },
      "quality": {
-      "name": "Sal Entrefina Celusal 1 Kg",
-      "unit_price": 3218.0,
+      "name": "Sal Fina 500 Grs Dos Anclas",
+      "unit_price": 3400.0,
       "promo": false
      }
     },
@@ -5238,8 +5250,8 @@
     },
     "Jumbo": {
      "cheap": {
-      "name": "Aceite De Oliva 2 Lts Pisi",
-      "unit_price": 20200.0,
+      "name": "Aceite De Oliva Puro X 900 Ml Cocinero",
+      "unit_price": 24333.33,
       "promo": false
      },
      "quality": {
@@ -5308,9 +5320,9 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Ketchup D' Fiesta 220 G",
-      "unit_price": 4905.68,
-      "promo": true
+      "name": "Ketchup Danica 220 G",
+      "unit_price": 6904.55,
+      "promo": false
      },
      "quality": {
       "name": "Ketchup Danica 220 G",
@@ -5563,8 +5575,8 @@
       "promo": true
      },
      "quality": {
-      "name": "Tostadas clásicas Libres Riera 200 grs",
-      "unit_price": 9945.0,
+      "name": "Tostadas Criollitas clásicas 195 g.",
+      "unit_price": 11225.64,
       "promo": false
      }
     },
@@ -5691,20 +5703,20 @@
       "promo": false
      },
      "quality": {
-      "name": "Granola Cereal, Coco Y Miel 350 Gr Granix",
-      "unit_price": 13714.29,
+      "name": "Granola Integral Sabor Banana y Manzana 200 Grs Kellogg's",
+      "unit_price": 25750.0,
       "promo": false
      }
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Cereal Azucarado Skarchitos 240 Gr",
-      "unit_price": 9495.83,
+      "name": "Cereales 3 Arroyos Redonditos Chocolate 210g",
+      "unit_price": 10614.29,
       "promo": false
      },
      "quality": {
-      "name": "Cereal Azucarado Skarchitos 240 Gr",
-      "unit_price": 9495.83,
+      "name": "Granola Crocante Granix Coco Y Miel 350 G",
+      "unit_price": 13140.0,
       "promo": false
      }
     },
@@ -5790,8 +5802,8 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Papas fritas Bulnez corte clásico 450 g.",
-      "unit_price": 17311.11,
+      "name": "Papas fritas Krachitos corte americano 420 g.",
+      "unit_price": 17857.14,
       "promo": false
      },
      "quality": {
@@ -6536,9 +6548,9 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Soda Carrefour Classic 2,25 lts",
-      "unit_price": 707.78,
-      "promo": true
+      "name": "Soda Bulnez 2,25 lts",
+      "unit_price": 706.67,
+      "promo": false
      },
      "quality": null
     },
@@ -6583,8 +6595,8 @@
       "promo": true
      },
      "quality": {
-      "name": "Agua saborizada citrus H2OH con gas 2,25 lts",
-      "unit_price": 1252.89,
+      "name": "Agua saborizada sin gas H2OH de pomelo 2 lts",
+      "unit_price": 1675.0,
       "promo": false
      }
     },
@@ -6602,12 +6614,12 @@
     },
     "ChangoMas": {
      "cheap": {
-      "name": "Agua Saborizada H2oh! Still Sabor Manzana 2 L",
+      "name": "Agua Saborizada H2oh! Still Sabor Pomelo 2 L",
       "unit_price": 989.5,
       "promo": true
      },
      "quality": {
-      "name": "Agua Saborizada H2oh! Still Sabor Manzana 2 L",
+      "name": "Agua Saborizada H2oh! Still Sabor Pomelo 2 L",
       "unit_price": 989.5,
       "promo": true
      }
@@ -6902,9 +6914,9 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Limpiador de pisos Pino Luz aroma pino (botella) 1800 ml.",
-      "unit_price": 2361.11,
-      "promo": false
+      "name": "Limpiador líquido Carrefour Essential limón 4 lts",
+      "unit_price": 1430.97,
+      "promo": true
      },
      "quality": {
       "name": "Limpiador líquido Procenex pisos marina 1.8 l.",
@@ -7092,13 +7104,13 @@
     },
     "Dia": {
      "cheap": {
-      "name": "Desodorante femenino Nivea Protect & Care Roll On 50 ml",
-      "unit_price": 2338.0,
+      "name": "Desodorante Femenino Nivea Invisible B&W Roll On 50 Ml.",
+      "unit_price": 2500.0,
       "promo": true
      },
      "quality": {
-      "name": "Desodorante femenino Nivea Protect & Care Roll On 50 ml",
-      "unit_price": 2338.0,
+      "name": "Desodorante Femenino Nivea Invisible B&W Roll On 50 Ml.",
+      "unit_price": 2500.0,
       "promo": true
      }
     }
@@ -7288,12 +7300,12 @@
    "shops": {
     "Carrefour": {
      "cheap": {
-      "name": "Dulce de batata con vainilla Emeth 2 kg",
+      "name": "Dulce de batata con cacao Emeth 2 kg",
       "unit_price": 3145.0,
       "promo": false
      },
      "quality": {
-      "name": "Dulce de batata con vainilla Emeth 2 kg",
+      "name": "Dulce de batata con cacao Emeth 2 kg",
       "unit_price": 3145.0,
       "promo": false
      }

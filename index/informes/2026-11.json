@@ -3,14 +3,14 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.62,
+ "inflation": -1.56,
  "base_date": "2026-10-31",
- "end_date": "2026-11-21",
- "days_of_data": 21,
- "prices_collected": 426028,
+ "end_date": "2026-11-22",
+ "days_of_data": 22,
+ "prices_collected": 450034,
  "headline": {
-  "end_to_end_paid": -1.62,
-  "end_to_end_regular": -0.72,
+  "end_to_end_paid": -1.56,
+  "end_to_end_regular": -0.65,
   "avg_paid": null,
   "avg_regular": null
  },
@@ -21,11 +21,11 @@
   },
   {
    "shop": "ChangoMas",
-   "pct": -0.83
+   "pct": -0.73
   },
   {
    "shop": "Dia",
-   "pct": -2.43
+   "pct": -2.31
   },
   {
    "shop": "Jumbo",
@@ -61,12 +61,17 @@
   {
    "group": "carne_vacuna",
    "in_headline": true,
-   "pct": -0.43
+   "pct": -0.19
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
    "pct": -0.7
+  },
+  {
+   "group": "aceites",
+   "in_headline": true,
+   "pct": -1.41
   },
   {
    "group": "frutas",
@@ -77,11 +82,6 @@
    "group": "cafe_te_yerba",
    "in_headline": true,
    "pct": -2.05
-  },
-  {
-   "group": "aceites",
-   "in_headline": true,
-   "pct": -2.44
   },
   {
    "group": "aguas_gaseosas",
@@ -96,7 +96,7 @@
   {
    "group": "alcohol",
    "in_headline": true,
-   "pct": -4.63
+   "pct": -4.2
   },
   {
    "group": "verduras",
@@ -105,9 +105,9 @@
   }
  ],
  "products_compared": 1018,
- "products_up": 236,
- "products_down": 173,
- "products_same": 609,
+ "products_up": 237,
+ "products_down": 169,
+ "products_same": 612,
  "top_up": [
   {
    "type": "arroz",
@@ -312,6 +312,11 @@
    "date": "2026-11-21",
    "paid": 97.9,
    "regular": 99.233
+  },
+  {
+   "date": "2026-11-22",
+   "paid": 97.967,
+   "regular": 99.295
   }
  ]
 }

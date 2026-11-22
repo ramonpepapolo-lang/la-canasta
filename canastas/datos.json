@@ -1,5 +1,5 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,12 +93,10 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 16455.78,
-     "complete": false,
-     "missing": [
-      "pan"
-     ],
-     "kcal": 2696,
+     "total": 16308.78,
+     "complete": true,
+     "missing": [],
+     "kcal": 2961,
      "items": [
       {
        "ing": "asado_tira",
@@ -124,10 +122,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 10500.0,
-       "cost": 1260.0,
-       "name": "Chorizo de cerdo al gancho x kg",
-       "sku_id": "50037",
+       "unit_price": 10900.0,
+       "cost": 1308.0,
+       "name": "Chorizo fresco en gancho x kg",
+       "sku_id": "250077",
        "promo": false
       },
       {
@@ -144,16 +142,20 @@
        "ing": "pan",
        "qty": 0.1,
        "fixed": false,
-       "missing": true
+       "unit_price": 72000.0,
+       "cost": 7200.0,
+       "name": "Pan frances Schar sin tacc 100 grs",
+       "sku_id": "157132",
+       "promo": false
       },
       {
        "ing": "carbon",
        "qty": 0.6,
        "fixed": false,
-       "unit_price": 1574.75,
-       "cost": 944.85,
-       "name": "Carbon vegetal asados x 4 kg",
-       "sku_id": "123760",
+       "unit_price": 1249.75,
+       "cost": 749.85,
+       "name": "Carbón vegetal 4 kg.",
+       "sku_id": "19873",
        "promo": false
       },
       {
@@ -247,13 +249,11 @@
        "promo": false
       }
      ],
-     "lacks": [
-      "pan"
-     ],
+     "lacks": [],
      "fixed_total": 2840.0
     },
     "Jumbo": {
-     "total": 19661.58,
+     "total": 19541.58,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -282,10 +282,10 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 16890.0,
-       "cost": 2026.8,
-       "name": "Chorizo Tipo Alemán de Cerdo Fresco al vacio x 1 Kg Facundo Chorizo Alemán Paquete X Kg Facundo",
-       "sku_id": "7818",
+       "unit_price": 15890.0,
+       "cost": 1906.8,
+       "name": "Chorizo Bombón Gancho X Kg - La Criolla",
+       "sku_id": "41215",
        "promo": false
       },
       {
@@ -302,10 +302,10 @@
        "ing": "pan",
        "qty": 0.1,
        "fixed": false,
-       "unit_price": 4790.0,
-       "cost": 479.0,
-       "name": "Pan Frances",
-       "sku_id": "262594",
+       "unit_price": 78500.0,
+       "cost": 7850.0,
+       "name": "Pan Francés 100 Gr Schar",
+       "sku_id": "406268",
        "promo": false
       },
       {
@@ -413,12 +413,13 @@
      "fixed_total": 3050.0
     },
     "ChangoMas": {
-     "total": 19239.77,
+     "total": 18407.93,
      "complete": false,
      "missing": [
+      "pan",
       "lechuga"
      ],
-     "kcal": 2948,
+     "kcal": 2683,
      "items": [
       {
        "ing": "asado_tira",
@@ -464,11 +465,7 @@
        "ing": "pan",
        "qty": 0.1,
        "fixed": false,
-       "unit_price": 3699.0,
-       "cost": 369.9,
-       "name": "Pan Francés 1 Kg",
-       "sku_id": "112033",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "carbon",
@@ -484,10 +481,10 @@
        "ing": "provoleta",
        "qty": 0.08,
        "fixed": false,
-       "unit_price": 41415.79,
-       "cost": 3313.26,
-       "name": "Queso Provoleta Doña Aurora 190 G",
-       "sku_id": "216375",
+       "unit_price": 32559.38,
+       "cost": 2604.75,
+       "name": "Queso Provoleta Vacalin 320g",
+       "sku_id": "221323",
        "promo": false
       },
       {
@@ -520,11 +517,11 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6665.33,
-       "cost": 1666.33,
-       "name": "Vino Tinto Esperado Malbec 750 Ml",
-       "sku_id": "213025",
-       "promo": true
+       "unit_price": 6172.0,
+       "cost": 1543.0,
+       "name": "Vino Tinto Nampe Malbec 750 Ml",
+       "sku_id": "23050",
+       "promo": false
       },
       {
        "ing": "cerveza",
@@ -568,12 +565,13 @@
       }
      ],
      "lacks": [
+      "pan",
       "lechuga"
      ],
      "fixed_total": 2988.0
     },
     "Dia": {
-     "total": 17330.82,
+     "total": 17497.48,
      "complete": false,
      "missing": [
       "pan"
@@ -680,10 +678,10 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 3986.67,
-       "cost": 996.67,
-       "name": "Vino Tinto Clasico Finca Norte 750 Ml.",
-       "sku_id": "260650",
+       "unit_price": 4653.33,
+       "cost": 1163.33,
+       "name": "Vino Tinto Estancia Mendoza Malbec 750 ml.",
+       "sku_id": "117701",
        "promo": true
       },
       {
@@ -1264,7 +1262,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 38692.9,
+     "total": 38996.23,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1443,11 +1441,11 @@
        "ing": "aceite",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 3332.67,
-       "cost": 833.17,
-       "name": "Aceite De Girasol Cañuelas 1.5 L",
-       "sku_id": "14810",
-       "promo": true
+       "unit_price": 4546.0,
+       "cost": 1136.5,
+       "name": "Aceite De Girasol Legítimo 1.5 L",
+       "sku_id": "216055",
+       "promo": false
       },
       {
        "ing": "yerba",
@@ -1982,7 +1980,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 41574.84,
+     "total": 42424.84,
      "complete": false,
      "missing": [
       "leche"
@@ -2149,10 +2147,10 @@
        "ing": "mayonesa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 900.0,
-       "cost": 900.0,
-       "name": "Aderezo Mayonesa Cada Día 250 Gr",
-       "sku_id": "1510",
+       "unit_price": 1750.0,
+       "cost": 1750.0,
+       "name": "Aderezo Mayonesa Natura 237 Gr",
+       "sku_id": "20517",
        "promo": false
       },
       {
@@ -2172,7 +2170,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 38634.94,
+     "total": 39561.6,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2251,11 +2249,11 @@
        "ing": "azucar",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 999.0,
-       "cost": 499.5,
-       "name": "Azúcar Azucel 1kg",
-       "sku_id": "41373",
-       "promo": true
+       "unit_price": 1639.0,
+       "cost": 819.5,
+       "name": "Azúcar Ledesma Superior Refinada 1 Kg",
+       "sku_id": "34042",
+       "promo": false
       },
       {
        "ing": "carne_picada",
@@ -2321,11 +2319,11 @@
        "ing": "aceite",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3332.67,
-       "cost": 1666.34,
-       "name": "Aceite De Girasol Cañuelas 1.5 L",
-       "sku_id": "14810",
-       "promo": true
+       "unit_price": 4546.0,
+       "cost": 2273.0,
+       "name": "Aceite De Girasol Legítimo 1.5 L",
+       "sku_id": "216055",
+       "promo": false
       },
       {
        "ing": "queso",
@@ -2503,9 +2501,9 @@
        "fixed": false,
        "unit_price": 890.0,
        "cost": 2670.0,
-       "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
-       "sku_id": "168119",
-       "promo": false
+       "name": "Galletitas Rellenas Con Cacao Dia 119 Gr.",
+       "sku_id": "307389",
+       "promo": true
       },
       {
        "ing": "aceite",

@@ -1,12 +1,12 @@
 {
- "date": "2026-11-21",
- "previous": "2026-11-20",
+ "date": "2026-11-22",
+ "previous": "2026-11-21",
  "index": {
-  "date": "2026-11-21",
-  "paid": 97.9,
-  "regular": 99.233,
-  "day_change": -0.23,
-  "days_of_data": 29,
+  "date": "2026-11-22",
+  "paid": 97.967,
+  "regular": 99.295,
+  "day_change": 0.07,
+  "days_of_data": 30,
   "series": [
    [
     "2026-10-24",
@@ -152,154 +152,132 @@
     "2026-11-21",
     97.9,
     99.233
+   ],
+   [
+    "2026-11-22",
+    97.967,
+    99.295
    ]
   ],
   "mode": "week",
-  "week_paid": -0.33,
-  "week_regular": 0.02,
+  "week_paid": -0.53,
+  "week_regular": 0.06,
   "now": [
-   "2026-11-15",
-   "2026-11-21"
+   "2026-11-16",
+   "2026-11-22"
   ],
   "before": [
-   "2026-11-08",
-   "2026-11-14"
+   "2026-11-09",
+   "2026-11-15"
   ]
  },
  "ranking": {
-  "label_es": "Semana del 15 al 21 de noviembre de 2026",
-  "label_en": "Week of 15 to 21 November 2026",
+  "label_es": "Semana del 22 al 28 de noviembre de 2026",
+  "label_en": "Week of 22 to 28 November 2026",
   "days": [
-   "2026-11-15",
-   "2026-11-21"
+   "2026-11-22",
+   "2026-11-22"
   ],
-  "n_products": 312,
+  "n_products": 306,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1260691.49,
+    "total": 1241315.35,
     "pct": 0.0
    },
    {
-    "shop": "Carrefour",
-    "total": 1283987.95,
-    "pct": 1.85
+    "shop": "ChangoMas",
+    "total": 1251682.75,
+    "pct": 0.84
    },
    {
-    "shop": "ChangoMas",
-    "total": 1287361.13,
-    "pct": 2.12
+    "shop": "Carrefour",
+    "total": 1253615.06,
+    "pct": 0.99
    },
    {
     "shop": "Jumbo",
-    "total": 1458914.43,
-    "pct": 15.72
+    "total": 1452210.0,
+    "pct": 16.99
    }
   ]
  },
  "down": [
   {
-   "shop": "Carrefour",
-   "name": "Cebolla Sanes en red 4 uni",
-   "type": "cebolla",
-   "before": 4990.0,
-   "now": 2999.0,
-   "pct": -39.9,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Gaseosa cola Coca Cola sabor original 1,75 lts",
-   "type": "coca_cola",
-   "before": 5400.0,
-   "now": 3699.0,
-   "pct": -31.5,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Cebolla x kg.",
-   "type": "cebolla",
-   "before": 2499.0,
-   "now": 2199.0,
-   "pct": -12.0,
-   "why": "promo_start"
+   "shop": "Dia",
+   "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
+   "type": "milanesa_carne",
+   "before": 15490.0,
+   "now": 18990.0,
+   "pct": 22.6,
+   "why": "list_up"
   },
   {
    "shop": "Dia",
-   "name": "Cebolla Morada x 1 Kg.",
-   "type": "cebolla",
-   "before": 4990.0,
-   "now": 4490.0,
-   "pct": -10.0,
-   "why": "list_down"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Papa cepillada x kg.",
-   "type": "papa",
-   "before": 2799.0,
-   "now": 2599.0,
-   "pct": -7.1,
-   "why": "list_down"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Galletitas coco Coquitas 260 g.",
-   "type": "galletitas",
-   "before": 2619.0,
-   "now": 2900.0,
-   "pct": 10.7,
+   "name": "Milanesa bola de Lomo Envasado al Vacío x 1 Kg.",
+   "type": "milanesa_carne",
+   "before": 15490.0,
+   "now": 19900.0,
+   "pct": 28.5,
    "why": "list_up"
   },
   {
    "shop": "ChangoMas",
-   "name": "Tomate Redondo 500 G",
-   "type": "tomate",
-   "before": 4599.0,
-   "now": 5299.0,
-   "pct": 15.2,
-   "why": "list_up"
+   "name": "Aceite De Girasol Cañuelas 1.5 L",
+   "type": "aceite_girasol",
+   "before": 4999.0,
+   "now": 6989.0,
+   "pct": 39.8,
+   "why": "promo_end"
   },
   {
-   "shop": "Carrefour",
-   "name": "Mayonesa clásica Hellmans dp 275.5 grs",
-   "type": "mayonesa",
-   "before": 1795.0,
-   "now": 2100.0,
-   "pct": 17.0,
-   "why": "list_up"
+   "shop": "ChangoMas",
+   "name": "Cerveza En Lata Brahma 354ml",
+   "type": "cerveza",
+   "before": 1546.3,
+   "now": 2209.0,
+   "pct": 42.9,
+   "why": "promo_end"
   }
  ],
  "up": [
   {
-   "shop": "Carrefour",
-   "name": "Mayonesa clásica Hellmans dp 275.5 grs",
-   "type": "mayonesa",
-   "before": 1795.0,
-   "now": 2100.0,
-   "pct": 17.0,
-   "why": "list_up"
+   "shop": "ChangoMas",
+   "name": "Cerveza En Lata Brahma 354ml",
+   "type": "cerveza",
+   "before": 1546.3,
+   "now": 2209.0,
+   "pct": 42.9,
+   "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Tomate Redondo 500 G",
-   "type": "tomate",
-   "before": 4599.0,
-   "now": 5299.0,
-   "pct": 15.2,
+   "name": "Aceite De Girasol Cañuelas 1.5 L",
+   "type": "aceite_girasol",
+   "before": 4999.0,
+   "now": 6989.0,
+   "pct": 39.8,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Milanesa bola de Lomo Envasado al Vacío x 1 Kg.",
+   "type": "milanesa_carne",
+   "before": 15490.0,
+   "now": 19900.0,
+   "pct": 28.5,
    "why": "list_up"
   },
   {
-   "shop": "Carrefour",
-   "name": "Galletitas coco Coquitas 260 g.",
-   "type": "galletitas",
-   "before": 2619.0,
-   "now": 2900.0,
-   "pct": 10.7,
+   "shop": "Dia",
+   "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
+   "type": "milanesa_carne",
+   "before": 15490.0,
+   "now": 18990.0,
+   "pct": 22.6,
    "why": "list_up"
   }
  ],
- "n_down": 5,
- "n_up": 3
+ "n_down": 0,
+ "n_up": 4
 }

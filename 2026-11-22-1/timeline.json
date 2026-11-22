@@ -1,0 +1,71 @@
+{
+ "total": 29.321,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo Fernet Branca Menta. Mismo código de barras.",
+   "say": "Mismo Fernet Branca Menta. Mismo código de barras.",
+   "start": 0.12,
+   "end": 3.083,
+   "dur": 2.963,
+   "ps": "mˈismo feɾnˈet βɾˈanka mˈɛnta. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$13.650… o $21.000.",
+   "say": "Trece mil seiscientos cincuenta, o veintiún mil.",
+   "gap": 0.35,
+   "start": 3.303,
+   "end": 5.961,
+   "dur": 2.658,
+   "ps": "tɾˈese mˈil sAsjˈɛntos sinkwˈɛnta, o βAntjˈun mˈil."
+  },
+  {
+   "k": "w1",
+   "sub": "Botella de 750: $13.650 en Carrefour.",
+   "say": "La botella de setecientos cincuenta, en Carrefour: trece mil seiscientos cincuenta.",
+   "start": 6.311,
+   "end": 10.888,
+   "dur": 4.577,
+   "ps": "la βotˈeʃa ðe sˌetesjˈɛntos sinkwˈɛnta, en kˌarefˈowɾ: tɾˈese mˈil sAsjˈɛntos sinkwˈɛnta."
+  },
+  {
+   "k": "w2",
+   "sub": "Día $14.900. Jumbo $21.000.",
+   "say": "En Día, catorce mil novecientos. En Jumbo, veintiún mil.",
+   "start": 11.108,
+   "end": 14.258,
+   "dur": 3.15,
+   "ps": "en dˈia, katˈoɾse mˈil nˌoβesjˈɛntos. en xˈumbo, bAntjˈun mˈil."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $21.000.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es veintiún mil.",
+   "gap": 0.3,
+   "start": 14.478,
+   "end": 17.589,
+   "dur": 3.112,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes βAntjˈun mˈil."
+  },
+  {
+   "k": "b2",
+   "sub": "Carrefour lo bajó el jueves 19. El clásico sigue a $21.000.",
+   "say": "Carrefour lo bajó el jueves diecinueve. El clásico, sin menta, sigue a veintiún mil.",
+   "start": 17.889,
+   "end": 22.302,
+   "dur": 4.413,
+   "ps": "kˌarefˈowɾ lo βaxˈo el xwˈeβes ðjˌesinwˈeβe. el klˈasiko, sin mˈɛnta, sˈiɣe a βAntjˈun mˈil."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $7.350 por botella. Un 35% menos.",
+   "say": "Ahorrás siete mil trescientos cincuenta pesos por botella. Un treinta y cinco por ciento menos.",
+   "start": 22.522,
+   "end": 27.801,
+   "dur": 5.279,
+   "ps": "ˌaorˈas sjˈete mˈil tɾesjˈɛntos sinkwˈɛnta pˈesos poɾ βotˈeʃa. ˈun tɾˈAnta i sˈinko poɾ sjˈɛnto mˈenos."
+  }
+ ]
+}

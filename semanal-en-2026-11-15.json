@@ -1,0 +1,199 @@
+{
+ "lang": "en",
+ "voice": "af_heart",
+ "speed": 1.0,
+ "pre": 3.2,
+ "gap": 0.3,
+ "tail": 2.6,
+ "lines": [
+  {
+   "k": "i1",
+   "sub": "Weekly report. Week of 15 to 21 November.",
+   "say": "Weekly report. The week of November fifteenth to twenty first.",
+   "gap": 0.6
+  },
+  {
+   "k": "i2",
+   "sub": "This week, the same bread went up 23% at one supermarket…",
+   "say": "This week, the same loaf of bread went up twenty three percent at one supermarket."
+  },
+  {
+   "k": "i3",
+   "sub": "…and down 14% at another.",
+   "say": "And down fourteen at another.",
+   "gap": 0.5
+  },
+  {
+   "k": "i4",
+   "sub": "And something strange happens every Tuesday. Let's go step by step.",
+   "say": "And something strange happens every Tuesday. Let's take it step by step.",
+   "gap": 0.7
+  },
+  {
+   "k": "n1",
+   "sub": "Every product, against its price the week before (8 to 14 November).",
+   "say": "We compare every product against its price the week before, November eighth to fourteenth."
+  },
+  {
+   "k": "n2",
+   "sub": "945 products compared.",
+   "say": "Nine hundred and forty five products."
+  },
+  {
+   "k": "n3",
+   "sub": "Result: −0.33%. The third week in a row going down.",
+   "say": "The result: down zero point three three percent. The third week in a row going down."
+  },
+  {
+   "k": "n4",
+   "sub": "Without deals, at the list price: +0.02%. Almost the same.",
+   "say": "Without deals, at the list price, up zero point zero two. Almost the same."
+  },
+  {
+   "k": "n5",
+   "sub": "244 went up. 170 went down. 531 stayed the same.",
+   "say": "Two hundred and forty four products went up. One hundred and seventy went down. And five hundred and thirty one stayed the same."
+  },
+  {
+   "k": "n6",
+   "sub": "On Saturday the 21st, the index hit 97.9: the lowest day since we started, on 24 October.",
+   "say": "And on Saturday the twenty first, the index hit ninety seven point nine. The lowest day since we started measuring, on October twenty fourth.",
+   "gap": 0.7
+  },
+  {
+   "k": "g1",
+   "sub": "By group, the biggest rise: cleaning products, +4.7%. Other food, +1.4%.",
+   "say": "Among the index groups, the biggest rise was cleaning products, four point seven percent. And other food, one point four."
+  },
+  {
+   "k": "g2",
+   "sub": "The biggest fall: vegetables, −6.8%. And the week before they had already fallen 6.1%.",
+   "say": "The biggest fall: vegetables. Down six point eight percent. And the week before, they had already fallen six point one."
+  },
+  {
+   "k": "g3",
+   "sub": "Beef, the biggest part of the basket: unchanged (+0.01%).",
+   "say": "And beef, the biggest part of the basket, didn't move.",
+   "gap": 0.7
+  },
+  {
+   "k": "u1",
+   "sub": "Why did cleaning go up? Cif Active Gel dish soap 400 ml, at ChangoMás: +48%.",
+   "say": "Why did cleaning go up? Cif Active Gel dish soap, four hundred milliliters, at Chango Mas. From two thousand five hundred and seventy pesos, to three thousand eight hundred on average. Forty eight percent."
+  },
+  {
+   "k": "u2",
+   "sub": "But its list price did not change. It was a deal, and it ended on Tuesday the 17th.",
+   "say": "But careful. Its list price didn't change at all. It was a deal, and it ended on Tuesday the seventeenth."
+  },
+  {
+   "k": "u3",
+   "sub": "Nobleza Gaucha Selección yerba mate 1 kg, at Día: +37%. Same list price. Another deal gone.",
+   "say": "Nobleza Gaucha yerba mate, one kilo, at Dee-ah: up thirty seven percent. And its list price, the same. Another deal gone."
+  },
+  {
+   "k": "d1",
+   "sub": "On the other side: onions by the kilo, at Jumbo. From $3,699 to $2,299 since Monday the 16th. −35%.",
+   "say": "On the other side, onions by the kilo, at Jumbo. From three thousand six hundred and ninety nine pesos, to two thousand two hundred and ninety nine, since Monday the sixteenth. Thirty five percent less on average.",
+   "gap": 0.7
+  },
+  {
+   "k": "b1",
+   "sub": "Now, the bread. Bimbo white bread 580 g. Same barcode. List price at both: about $8,100.",
+   "say": "Now, the bread. Bimbo white bread, five hundred and eighty grams. Same barcode. And the list price at both supermarkets, about eight thousand one hundred pesos."
+  },
+  {
+   "k": "b2",
+   "sub": "Día had it on offer at $5,670. Since Tuesday the 17th, $8,099. +23% on average.",
+   "say": "Dee-ah had it on offer, at five thousand six hundred and seventy. Since Tuesday the seventeenth, eight thousand and ninety nine. Up twenty three percent on average."
+  },
+  {
+   "k": "b3",
+   "sub": "Carrefour, the other way round: $8,099 until Tuesday. Since Wednesday the 18th, $6,074. −14%.",
+   "say": "At Carrefour, the other way round. Eight thousand and ninety nine until Tuesday. And since Wednesday the eighteenth, six thousand and seventy four. Down fourteen."
+  },
+  {
+   "k": "b4",
+   "sub": "The week before, Día was the better deal. Since Wednesday, Carrefour.",
+   "say": "The week before, Dee-ah was the better deal. Since Wednesday, Carrefour."
+  },
+  {
+   "k": "b5",
+   "sub": "Colgate toothpaste 140 g, same story: −21% at Carrefour, +28% at Día.",
+   "say": "And Colgate toothpaste, one hundred and forty grams, same story. Down twenty one at Carrefour. Up twenty eight at Dee-ah.",
+   "gap": 0.7
+  },
+  {
+   "k": "m1",
+   "sub": "So what happens on Tuesdays? Look at the index, day by day.",
+   "say": "So what happens on Tuesdays? Look at the index, day by day."
+  },
+  {
+   "k": "m2",
+   "sub": "For the third week in a row, the highest day was Tuesday: 3, 10 and 17 November.",
+   "say": "For the third week in a row, the highest day was Tuesday. November third, tenth, and seventeenth."
+  },
+  {
+   "k": "m3",
+   "sub": "At Día, basket products on offer: 78 on Monday the 16th. On Tuesday the 17th, only 17.",
+   "say": "At Dee-ah, the products in our basket on offer were seventy eight on Monday the sixteenth. On Tuesday the seventeenth, only seventeen."
+  },
+  {
+   "k": "m4",
+   "sub": "The Tuesday before, the 10th, there were 4. And on Wednesday, the deals come back.",
+   "say": "The Tuesday before, the tenth, there were just four. And on Wednesday, the deals come back."
+  },
+  {
+   "k": "m5",
+   "sub": "That is why, in our index, Tuesday keeps being the highest day of the week.",
+   "say": "That is why, in our index, Tuesday keeps being the highest day of the week.",
+   "gap": 0.7
+  },
+  {
+   "k": "s1",
+   "sub": "Which chain rose most? Carrefour: +0.57%. The other three went down.",
+   "say": "Which chain rose most? Carrefour. Up zero point five seven percent. The other three went down."
+  },
+  {
+   "k": "s2",
+   "sub": "Odd, because Carrefour had more deals: from 42 a day to 50. And since Wednesday the 18th, 60 or more.",
+   "say": "Odd, because Carrefour had more deals. From forty two products a day, to fifty. And since Wednesday the eighteenth, sixty or more."
+  },
+  {
+   "k": "s3",
+   "sub": "Its index jumped on Thursday the 12th, the week before. This week it eased, but it still weighs on the average.",
+   "say": "What happened is that its index jumped on Thursday the twelfth, the week before. This week it eased a little. But on the average, it still weighs."
+  },
+  {
+   "k": "s4",
+   "sub": "Ranking: the same 312 products. Día, the cheapest again.",
+   "say": "And the ranking. For the same three hundred and twelve products, Dee-ah was the cheapest again."
+  },
+  {
+   "k": "s5",
+   "sub": "Carrefour, only 1.9% more. ChangoMás, 2.1%. Jumbo, 15.7% more for the same.",
+   "say": "But Carrefour was only one point nine percent behind. Chango Mas, two point one. And Jumbo, fifteen point seven percent more expensive, for exactly the same."
+  },
+  {
+   "k": "s6",
+   "sub": "But: Día had the lowest price in 126 of the 312. ChangoMás in 115. Carrefour in 113.",
+   "say": "And here's the thing. Dee-ah had the lowest price in one hundred and twenty six of the three hundred and twelve products. Chango Mas in one hundred and fifteen. And Carrefour in one hundred and thirteen. Comparing pays.",
+   "gap": 0.7
+  },
+  {
+   "k": "e1",
+   "sub": "In short: a third week down, cheaper vegetables and Tuesdays with fewer deals.",
+   "say": "In short. A third week down, cheaper vegetables, and Tuesdays with fewer deals."
+  },
+  {
+   "k": "e2",
+   "sub": "December 1: supermarket inflation for November.",
+   "say": "On December first, the November report comes out. Supermarket inflation for the month."
+  },
+  {
+   "k": "e3",
+   "sub": "A new report every Sunday. Subscribe. Data at lacanastaindex.com",
+   "say": "And every Sunday, a new weekly report. Subscribe. All the data is at la canasta index dot com."
+  }
+ ]
+}

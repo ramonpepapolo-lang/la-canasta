@@ -1,27 +1,63 @@
 {
- "when_utc": "2026-11-21 15:35",
+ "when_utc": "2026-11-22 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4235,
-  "/": 4059,
+  "TOTAL": 4246,
+  "/": 4068,
   "/precios/": 12,
-  "/canastas/": 18,
+  "/canastas/": 19,
   "/informes.html": 49,
   "/metodo.html": 28,
   "/articulos.html": 12,
-  "/ramon-pepa.html": 22,
+  "/ramon-pepa.html": 23,
   "/prensa.html": 3,
   "/precios/supermercado-mas-barato.html": 3
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "621",
-  "views_total_text": "170,638",
-  "views_sum_of_videos": 82314,
-  "videos": 43,
+  "subscribers_text": "620",
+  "views_total_text": "171,264",
+  "views_sum_of_videos": 82390,
+  "videos": 46,
   "list": [
+   {
+    "id": "2wkxKbiHD8Q",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Weekly report: same bread, +23% at one store and −14% at another | Week of Nov 15 to 21",
+    "published": "2026-11-22",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "J8cL6VaFq00",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
+    "published": "2026-11-22",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
+   {
+    "id": "rBpbQSqEcY4",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Aceite de oliva La Toscana: $6.889 en Carrefour, $11.600 en Jumbo",
+    "published": "2026-11-21",
+    "views": 46,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "FjPFd5ld5TM",
     "debug": null,
@@ -29,7 +65,7 @@
     "player_status": null,
     "title": "Café La Virginia 250 g: $2.916 en Carrefour, $7.850 en Jumbo",
     "published": "2026-11-20",
-    "views": 6,
+    "views": 11,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +77,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 38,
+    "views": 43,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +89,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 33,
+    "views": 36,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -65,9 +101,9 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 7,
+    "views": 8,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -77,9 +113,9 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 8,
+    "views": 10,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -89,9 +125,9 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 4,
+    "views": 5,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -101,9 +137,9 @@
     "player_status": null,
     "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
     "published": "2026-11-17",
-    "views": 1,
+    "views": 2,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -113,9 +149,9 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 130,
+    "views": 140,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -125,7 +161,7 @@
     "player_status": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 37,
+    "views": 42,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -173,9 +209,9 @@
     "player_status": null,
     "title": "El cerdo subió $1.000 el kilo… menos la bondiola 🐖",
     "published": "2026-11-15",
-    "views": 19,
+    "views": 22,
     "views_exact": true,
-    "likes": 5,
+    "likes": 1,
     "comments": null
    },
    {
@@ -209,7 +245,7 @@
     "player_status": null,
     "title": "Picada del sábado: el salamín bajó 20% hoy 🌦️",
     "published": "2026-11-14",
-    "views": 24,
+    "views": 25,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -233,7 +269,7 @@
     "player_status": null,
     "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
     "published": "2026-11-13",
-    "views": 17,
+    "views": 18,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -305,7 +341,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 20016,
+    "views": 20013,
     "views_exact": true,
     "likes": 5,
     "comments": null
@@ -317,9 +353,9 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "",
-    "views": 44,
+    "views": 45,
     "views_exact": true,
-    "likes": 1,
+    "likes": 2,
     "comments": null
    },
    {
@@ -331,7 +367,7 @@
     "published": "",
     "views": 950,
     "views_exact": true,
-    "likes": 7,
+    "likes": 8,
     "comments": null
    },
    {
@@ -341,7 +377,7 @@
     "player_status": null,
     "title": "Promos que arrancaron hoy: hasta 44% menos 🛒",
     "published": "2026-11-04",
-    "views": 14,
+    "views": 15,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -377,7 +413,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1065,
+    "views": 1063,
     "views_exact": true,
     "likes": 118,
     "comments": null
@@ -461,9 +497,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10081,
+    "views": 10079,
     "views_exact": true,
-    "likes": 673,
+    "likes": 672,
     "comments": 2
    },
    {
@@ -485,7 +521,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8556,
+    "views": 8553,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -548,45 +584,45 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 44,
-  "tweet_count": 72,
+  "media_count": 48,
+  "tweet_count": 76,
   "tweets_status": 200,
   "last_posts": [
    {
-    "date": "2026-11-20",
-    "text": "Papas Lays clásicas, mismo paquete en 4 súper, hoy 20/11: en Carrefour, la de 85 g sale $2",
+    "date": "2026-11-22",
+    "text": "Weekly report, Nov 15 to 21 🛒\n\nThe same bread went up 23% at one supermarket and down 14% ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-22",
+    "text": "Reporte semanal, 15 al 21 de noviembre 🛒\n\nEl mismo pan subió 23% en un súper y bajó 14% en",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-21",
+    "text": "Coca-Cola 1,75 L, mismo código de barras: toda la semana a $5.400 en Carrefour, Día y Jumb",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-21",
+    "text": "Mismo aceite de oliva La Toscana 250 ml, mismo código de barras, hoy 21/11:\n\nCarrefour $6.",
     "bookmark_count": 0,
     "impression_count": 2,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-20",
-    "text": "Mismo café La Virginia 250 g, mismo código de barras, hoy 20/11:\n\nCarrefour $2.916\nDía $7.",
-    "bookmark_count": 0,
-    "impression_count": 1,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-19",
-    "text": "Desde fines de octubre, lo que más bajó en el súper: verduras −14,7% y frutas −6,1% (preci",
-    "bookmark_count": 0,
-    "impression_count": 3,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-19",
-    "text": "Mismo latón de Brahma 710, mismo código de barras: $2.080 en Día y $4.200 en Jumbo 🍺 Coto ",
-    "bookmark_count": 0,
-    "impression_count": 3,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-22 14:42",
+ "when_utc": "2026-11-22 15:38",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -584,10 +584,20 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 48,
-  "tweet_count": 76,
+  "media_count": 49,
+  "tweet_count": 77,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-22",
+    "text": "Los mismos 306 productos, comprados hoy en cada súper: Día $1.241.315, ChangoMás +0,8%, Ca",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-22",
     "text": "Weekly report, Nov 15 to 21 🛒\n\nThe same bread went up 23% at one supermarket and down 14% ",
@@ -613,16 +623,6 @@
     "text": "Coca-Cola 1,75 L, mismo código de barras: toda la semana a $5.400 en Carrefour, Día y Jumb",
     "bookmark_count": 0,
     "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-21",
-    "text": "Mismo aceite de oliva La Toscana 250 ml, mismo código de barras, hoy 21/11:\n\nCarrefour $6.",
-    "bookmark_count": 0,
-    "impression_count": 2,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

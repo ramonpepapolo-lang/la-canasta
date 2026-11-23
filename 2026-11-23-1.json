@@ -1,0 +1,10 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Misma leche condensada. Mismo código de barras.","say":"Misma leche condensada. Mismo código de barras."},
+{"k":"h2","sub":"$2.838… o $6.200.","say":"Dos mil ochocientos treinta y ocho, o seis mil doscientos.","gap":0.35},
+{"k":"w1","sub":"Nestlé 395 g: $2.838 en Carrefour.","say":"Leche condensada Nestlé, en Carrefour: dos mil ochocientos treinta y ocho."},
+{"k":"w2","sub":"ChangoMás $5.789. Jumbo $6.200.","say":"En ChangoMás, cinco mil setecientos ochenta y nueve. En Jumbo, seis mil doscientos."},
+{"k":"b1","sub":"Pero ojo: es una oferta. El precio de lista es $5.675.","say":"Pero ojo. Es una oferta: el precio de lista es cinco mil seiscientos setenta y cinco.","gap":0.3},
+{"k":"b2","sub":"Está a mitad de precio desde el 30 de octubre. Puede terminar cualquier día.","say":"Está a mitad de precio desde el treinta de octubre. Puede terminar cualquier día."},
+{"k":"b3","sub":"Hoy sale menos que la marca Carrefour, que cuesta $5.090.","say":"Hoy sale menos que la leche condensada marca Carrefour, que cuesta cinco mil noventa."},
+{"k":"p1","sub":"Ahorrás $3.362 por cajita. Más de la mitad.","say":"Ahorrás tres mil trescientos sesenta y dos pesos por cajita. Más de la mitad."}
+]}

@@ -1,0 +1,71 @@
+{
+ "total": 24.99,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma leche condensada. Mismo código de barras.",
+   "say": "Misma leche condensada. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.832,
+   "dur": 2.712,
+   "ps": "mˈisma lˈeʧe kˌondensˈaða. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.838… o $6.200.",
+   "say": "Dos mil ochocientos treinta y ocho, o seis mil doscientos.",
+   "gap": 0.3,
+   "start": 3.052,
+   "end": 6.155,
+   "dur": 3.104,
+   "ps": "dˈos mˈil ˌoʧosjˈɛntos tɾˈAnta i ˈoʧo, o sˈAs mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "En ChangoMás, $5.789.",
+   "say": "En ChangoMás, cinco mil setecientos ochenta y nueve.",
+   "start": 6.455,
+   "end": 9.494,
+   "dur": 3.039,
+   "ps": "en ʧˈaŋɡo mˈas, sˈinko mˈil sˌetesjˈɛntos oʧˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta, a mitad de precio.",
+   "say": "Pero ojo: es una oferta, a mitad de precio.",
+   "gap": 0.3,
+   "start": 9.714,
+   "end": 11.928,
+   "dur": 2.214,
+   "ps": "pˌeɾo ˈoxo: ˈes ˈuna ofˈeɾta, a mitˈad ðe pɾˈesjo."
+  },
+  {
+   "k": "b2",
+   "sub": "Así está desde el 30 de octubre. Puede terminar cualquier día.",
+   "say": "Así está desde el treinta de octubre. Puede terminar cualquier día.",
+   "start": 12.228,
+   "end": 15.742,
+   "dur": 3.514,
+   "ps": "asˈi estˈa ðˌesðe el tɾˈAnta ðe oktˈuβɾe. pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "b3",
+   "sub": "Hoy sale menos que la marca Carrefour: $5.090.",
+   "say": "Hoy sale menos que la marca Carrefour: cinco mil noventa.",
+   "start": 15.962,
+   "end": 19.001,
+   "dur": 3.039,
+   "ps": "ˈoɪ sˈale mˈenos ke la mˈaɾka kˌarefˈowɾ: sˈinko mˈil noβˈɛnta."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $3.362 por cajita. Más de la mitad.",
+   "say": "Ahorrás tres mil trescientos sesenta y dos pesos por cajita. Más de la mitad.",
+   "start": 19.221,
+   "end": 23.47,
+   "dur": 4.249,
+   "ps": "ˌaorˈas tɾˈes mˈil tɾesjˈɛntos sesˈɛnta i ðˈos pˈesos poɾ kaxˈita. mˈas ðe la mitˈad."
+  }
+ ]
+}

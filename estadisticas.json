@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-23 14:42",
+ "when_utc": "2026-11-23 14:53",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -19,7 +19,7 @@
   "source": "public pages",
   "subscribers_text": "620",
   "views_total_text": "171,278",
-  "views_sum_of_videos": 82421,
+  "views_sum_of_videos": 82424,
   "videos": 47,
   "list": [
    {
@@ -65,7 +65,7 @@
     "player_status": null,
     "title": "Aceite de oliva La Toscana: $6.889 en Carrefour, $11.600 en Jumbo",
     "published": "2026-11-21",
-    "views": 49,
+    "views": 52,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -499,7 +499,7 @@
     "published": "2026-10-31",
     "views": 15,
     "views_exact": true,
-    "likes": 478,
+    "likes": 2,
     "comments": null
    },
    {

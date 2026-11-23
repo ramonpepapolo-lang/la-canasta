@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-23 14:53",
+ "when_utc": "2026-11-23 19:27",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -19,9 +19,21 @@
   "source": "public pages",
   "subscribers_text": "620",
   "views_total_text": "171,278",
-  "views_sum_of_videos": 82424,
-  "videos": 47,
+  "views_sum_of_videos": 82439,
+  "videos": 48,
   "list": [
+   {
+    "id": "ljn_3DGZ7k0",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
+    "published": "2026-11-23",
+    "views": 18,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "Wm6YfulZGEY",
     "debug": null,
@@ -41,7 +53,7 @@
     "player_status": null,
     "title": "Weekly report: same bread, +23% at one store and −14% at another | Week of Nov 15 to 21",
     "published": "2026-11-22",
-    "views": 1,
+    "views": 0,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +65,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 1,
+    "views": 0,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -65,7 +77,7 @@
     "player_status": null,
     "title": "Aceite de oliva La Toscana: $6.889 en Carrefour, $11.600 en Jumbo",
     "published": "2026-11-21",
-    "views": 52,
+    "views": 53,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -89,7 +101,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 46,
+    "views": 44,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -199,7 +211,7 @@
     "published": "2026-11-16",
     "views": 46,
     "views_exact": true,
-    "likes": 1,
+    "likes": 556,
     "comments": null
    },
    {
@@ -247,7 +259,7 @@
     "published": "2026-11-14",
     "views": 42,
     "views_exact": true,
-    "likes": 1,
+    "likes": 556,
     "comments": null
    },
    {
@@ -295,7 +307,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 1,
+    "likes": 564,
     "comments": null
    },
    {
@@ -307,7 +319,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 2,
+    "likes": 564,
     "comments": null
    },
    {
@@ -331,7 +343,7 @@
     "published": "2026-11-05",
     "views": 67,
     "views_exact": true,
-    "likes": 2,
+    "likes": 564,
     "comments": null
    },
    {
@@ -391,7 +403,7 @@
     "published": "2026-11-04",
     "views": 15,
     "views_exact": true,
-    "likes": 1,
+    "likes": 569,
     "comments": null
    },
    {
@@ -463,7 +475,7 @@
     "published": "2026-10-31",
     "views": 21,
     "views_exact": true,
-    "likes": 2,
+    "likes": 578,
     "comments": 1
    },
    {
@@ -499,7 +511,7 @@
     "published": "2026-10-31",
     "views": 15,
     "views_exact": true,
-    "likes": 2,
+    "likes": 578,
     "comments": null
    },
    {
@@ -535,7 +547,7 @@
     "published": "2026-10-29",
     "views": 8552,
     "views_exact": true,
-    "likes": 7,
+    "likes": 592,
     "comments": null
    },
    {
@@ -596,10 +608,30 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 50,
-  "tweet_count": 78,
+  "media_count": 52,
+  "tweet_count": 80,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-23",
+    "text": "¿Cuántos productos en oferta tiene cada súper? El martes 17/11 Día cayó de 29,6% a 12% y C",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-23",
+    "text": "Misma leche condensada Nestlé 395 g, mismo código de barras: $2.838 en Carrefour y $6.200 ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-22",
     "text": "Mismo Fernet Branca Menta 750, mismo código de barras:\nCarrefour $13.650\nDía $14.900\nJumbo",
@@ -613,26 +645,6 @@
    {
     "date": "2026-11-22",
     "text": "Los mismos 306 productos, comprados hoy en cada súper: Día $1.241.315, ChangoMás +0,8%, Ca",
-    "bookmark_count": 0,
-    "impression_count": 1,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-22",
-    "text": "Weekly report, Nov 15 to 21 🛒\n\nThe same bread went up 23% at one supermarket and down 14% ",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-22",
-    "text": "Reporte semanal, 15 al 21 de noviembre 🛒\n\nEl mismo pan subió 23% en un súper y bajó 14% en",
     "bookmark_count": 0,
     "impression_count": 1,
     "like_count": 0,

@@ -3,21 +3,21 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -1.56,
+ "inflation": -0.7,
  "base_date": "2026-10-31",
- "end_date": "2026-11-22",
- "days_of_data": 22,
- "prices_collected": 450034,
+ "end_date": "2026-11-23",
+ "days_of_data": 23,
+ "prices_collected": 474063,
  "headline": {
-  "end_to_end_paid": -1.56,
-  "end_to_end_regular": -0.65,
+  "end_to_end_paid": -0.7,
+  "end_to_end_regular": -0.66,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": -0.71
+   "pct": -0.72
   },
   {
    "shop": "ChangoMas",
@@ -25,18 +25,18 @@
   },
   {
    "shop": "Dia",
-   "pct": -2.31
+   "pct": -1.42
   },
   {
    "shop": "Jumbo",
-   "pct": 0.43
+   "pct": 4.11
   }
  ],
  "groups": [
   {
    "group": "carne_ave",
    "in_headline": true,
-   "pct": 6.86
+   "pct": 12.8
   },
   {
    "group": "limpieza",
@@ -46,7 +46,7 @@
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 1.15
+   "pct": 1.14
   },
   {
    "group": "otros_alimentos",
@@ -54,29 +54,29 @@
    "pct": 1.13
   },
   {
+   "group": "pan_cereales",
+   "in_headline": true,
+   "pct": 0.74
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": 0.41
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 0.07
+  },
+  {
    "group": "cuidado_personal",
    "in_headline": false,
    "pct": 0.07
   },
   {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -0.19
-  },
-  {
-   "group": "pan_cereales",
-   "in_headline": true,
-   "pct": -0.7
-  },
-  {
    "group": "aceites",
    "in_headline": true,
    "pct": -1.41
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": -2.0
   },
   {
    "group": "cafe_te_yerba",
@@ -101,13 +101,13 @@
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -18.55
+   "pct": -18.02
   }
  ],
  "products_compared": 1018,
- "products_up": 237,
- "products_down": 169,
- "products_same": 612,
+ "products_up": 243,
+ "products_down": 165,
+ "products_same": 610,
  "top_up": [
   {
    "type": "arroz",
@@ -119,40 +119,40 @@
    "pct": 81.61
   },
   {
-   "type": "harina_000",
-   "type_en": "Wheat flour 000 / 0000",
-   "shop": "ChangoMas",
-   "name": "Harina De Trigo Favorita 0000 1 Kg",
-   "before": 1099.0,
-   "now": 1839.0,
-   "pct": 67.33
-  },
-  {
-   "type": "pasta_dental",
-   "type_en": "Toothpaste",
+   "type": "fideos",
+   "type_en": "Dry pasta",
    "shop": "Dia",
-   "name": "Pasta Dental Colgate Sensitive Whitening 100 Gr.",
-   "before": 3790.0,
-   "now": 6320.0,
-   "pct": 66.75
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
   },
   {
-   "type": "lavandina",
-   "type_en": "Bleach",
-   "shop": "ChangoMas",
-   "name": "Lavandina Ayudín Anti-Splash 1 Lt",
-   "before": 1433.4,
-   "now": 2389.0,
-   "pct": 66.67
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
   },
   {
-   "type": "lavandina",
-   "type_en": "Bleach",
-   "shop": "ChangoMas",
-   "name": "Lavandina Ayudín Anti-Splash 2 Lt",
-   "before": 2771.4,
-   "now": 4619.0,
-   "pct": 66.67
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Letritas Lucchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
+  },
+  {
+   "type": "fideos",
+   "type_en": "Dry pasta",
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
+   "before": 1050.0,
+   "now": 1850.0,
+   "pct": 76.19
   }
  ],
  "top_down": [
@@ -317,6 +317,11 @@
    "date": "2026-11-22",
    "paid": 97.967,
    "regular": 99.295
+  },
+  {
+   "date": "2026-11-23",
+   "paid": 98.822,
+   "regular": 99.294
   }
  ]
 }

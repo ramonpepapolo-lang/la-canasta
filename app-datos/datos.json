@@ -1,12 +1,12 @@
 {
- "date": "2026-11-22",
- "previous": "2026-11-21",
+ "date": "2026-11-23",
+ "previous": "2026-11-22",
  "index": {
-  "date": "2026-11-22",
-  "paid": 97.967,
-  "regular": 99.295,
-  "day_change": 0.07,
-  "days_of_data": 30,
+  "date": "2026-11-23",
+  "paid": 98.822,
+  "regular": 99.294,
+  "day_change": 0.87,
+  "days_of_data": 31,
   "series": [
    [
     "2026-10-24",
@@ -146,29 +146,34 @@
    [
     "2026-11-20",
     98.121,
-    99.244
+    99.307
    ],
    [
     "2026-11-21",
     97.9,
-    99.233
+    99.295
    ],
    [
     "2026-11-22",
     97.967,
     99.295
+   ],
+   [
+    "2026-11-23",
+    98.822,
+    99.294
    ]
   ],
   "mode": "week",
-  "week_paid": -0.53,
-  "week_regular": 0.06,
+  "week_paid": -0.76,
+  "week_regular": 0.09,
   "now": [
-   "2026-11-16",
-   "2026-11-22"
+   "2026-11-17",
+   "2026-11-23"
   ],
   "before": [
-   "2026-11-09",
-   "2026-11-15"
+   "2026-11-10",
+   "2026-11-16"
   ]
  },
  "ranking": {
@@ -176,108 +181,252 @@
   "label_en": "Week of 22 to 28 November 2026",
   "days": [
    "2026-11-22",
-   "2026-11-22"
+   "2026-11-23"
   ],
-  "n_products": 306,
+  "n_products": 315,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1241315.35,
+    "total": 1282780.85,
     "pct": 0.0
    },
    {
-    "shop": "ChangoMas",
-    "total": 1251682.75,
-    "pct": 0.84
+    "shop": "Carrefour",
+    "total": 1296852.31,
+    "pct": 1.1
    },
    {
-    "shop": "Carrefour",
-    "total": 1253615.06,
-    "pct": 0.99
+    "shop": "ChangoMas",
+    "total": 1298196.25,
+    "pct": 1.2
    },
    {
     "shop": "Jumbo",
-    "total": 1452210.0,
-    "pct": 16.99
+    "total": 1500266.0,
+    "pct": 16.95
    }
   ]
  },
  "down": [
   {
-   "shop": "Dia",
-   "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
-   "type": "milanesa_carne",
-   "before": 15490.0,
-   "now": 18990.0,
-   "pct": 22.6,
-   "why": "list_up"
+   "shop": "Jumbo",
+   "name": "Manzana Roja por Kg",
+   "type": "manzana",
+   "before": 3299.0,
+   "now": 3899.0,
+   "pct": 18.2,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
+   "type": "vacio",
+   "before": 17999.0,
+   "now": 22289.0,
+   "pct": 23.8,
+   "why": "price"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Papa Cepillada Granel Por Kg",
+   "type": "papa",
+   "before": 2299.0,
+   "now": 2899.0,
+   "pct": 26.1,
+   "why": "price"
   },
   {
    "shop": "Dia",
-   "name": "Milanesa bola de Lomo Envasado al Vacío x 1 Kg.",
-   "type": "milanesa_carne",
-   "before": 15490.0,
-   "now": 19900.0,
-   "pct": 28.5,
-   "why": "list_up"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Aceite De Girasol Cañuelas 1.5 L",
-   "type": "aceite_girasol",
-   "before": 4999.0,
-   "now": 6989.0,
-   "pct": 39.8,
+   "name": "Fideos Al Huevo Tirabuzón Don Vicente 500 Gr.",
+   "type": "fideos",
+   "before": 2962.5,
+   "now": 3950.0,
+   "pct": 33.3,
    "why": "promo_end"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Cerveza En Lata Brahma 354ml",
-   "type": "cerveza",
-   "before": 1546.3,
-   "now": 2209.0,
-   "pct": 42.9,
+   "shop": "Dia",
+   "name": "Fideos Letritas Lucchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti Favorita 500 Gr.",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 1650.0,
+   "now": 2200.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 1650.0,
+   "now": 2200.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tirabuzón Favorita 500 Gr.",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
    "why": "promo_end"
   }
  ],
  "up": [
   {
-   "shop": "ChangoMas",
-   "name": "Cerveza En Lata Brahma 354ml",
-   "type": "cerveza",
-   "before": 1546.3,
-   "now": 2209.0,
-   "pct": 42.9,
-   "why": "promo_end"
+   "shop": "Jumbo",
+   "name": "Suprema De Pollo Granel Fresca",
+   "type": "suprema",
+   "before": 8999.0,
+   "now": 12449.0,
+   "pct": 38.3,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Aceite De Girasol Cañuelas 1.5 L",
-   "type": "aceite_girasol",
-   "before": 4999.0,
-   "now": 6989.0,
-   "pct": 39.8,
+   "shop": "Dia",
+   "name": "Fideos Al Huevo Tirabuzón Don Vicente 500 Gr.",
+   "type": "fideos",
+   "before": 2962.5,
+   "now": 3950.0,
+   "pct": 33.3,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Milanesa bola de Lomo Envasado al Vacío x 1 Kg.",
-   "type": "milanesa_carne",
-   "before": 15490.0,
-   "now": 19900.0,
-   "pct": 28.5,
-   "why": "list_up"
+   "name": "Fideos Letritas Lucchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Milanesa Bola de Lomo Envasado al Vacío x Kg.",
-   "type": "milanesa_carne",
-   "before": 15490.0,
-   "now": 18990.0,
-   "pct": 22.6,
-   "why": "list_up"
+   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti Favorita 500 Gr.",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 1650.0,
+   "now": 2200.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
+   "type": "fideos",
+   "before": 1387.5,
+   "now": 1850.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 1650.0,
+   "now": 2200.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Fideos Tirabuzón Favorita 500 Gr.",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Spaghetti Rina Matarazzo 500 Gr.",
+   "type": "fideos",
+   "before": 2850.0,
+   "now": 3800.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Papa Cepillada Granel Por Kg",
+   "type": "papa",
+   "before": 2299.0,
+   "now": 2899.0,
+   "pct": 26.1,
+   "why": "price"
   }
  ],
  "n_down": 0,
- "n_up": 4
+ "n_up": 14
 }

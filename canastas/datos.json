@@ -1,5 +1,5 @@
 {
- "date": "2026-11-22",
+ "date": "2026-11-23",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -94,9 +94,11 @@
    "shops": {
     "Carrefour": {
      "total": 16308.78,
-     "complete": true,
-     "missing": [],
-     "kcal": 2961,
+     "complete": false,
+     "missing": [
+      "lechuga"
+     ],
+     "kcal": 2948,
      "items": [
       {
        "ing": "asado_tira",
@@ -192,11 +194,7 @@
        "ing": "lechuga",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6199.0,
-       "cost": 1549.75,
-       "name": "Lechuga mantecosa Buy & Eat 400 grs",
-       "sku_id": "8244",
-       "promo": false
+       "missing": true
       },
       {
        "ing": "vino",
@@ -232,10 +230,10 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1345.0,
-       "cost": 1345.0,
-       "name": "Chimichurri disecado La campagnola en sobre 23 g.",
-       "sku_id": "97829",
+       "unit_price": 2499.0,
+       "cost": 2499.0,
+       "name": "Chimichurri 50 g.",
+       "sku_id": "8717",
        "promo": false
       },
       {
@@ -249,11 +247,13 @@
        "promo": false
       }
      ],
-     "lacks": [],
-     "fixed_total": 2840.0
+     "lacks": [
+      "lechuga"
+     ],
+     "fixed_total": 3994.0
     },
     "Jumbo": {
-     "total": 19541.58,
+     "total": 21374.88,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -262,8 +262,8 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 15999.0,
-       "cost": 4799.7,
+       "unit_price": 19965.0,
+       "cost": 5989.5,
        "name": "Asado Del Centro Novillito",
        "sku_id": "322124",
        "promo": false
@@ -272,8 +272,8 @@
        "ing": "vacio",
        "qty": 0.15,
        "fixed": false,
-       "unit_price": 17999.0,
-       "cost": 2699.85,
+       "unit_price": 22289.0,
+       "cost": 3343.35,
        "name": "Vacio Novillito",
        "sku_id": "330346",
        "promo": false
@@ -392,10 +392,10 @@
        "ing": "chimichurri",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1450.0,
-       "cost": 1450.0,
-       "name": "Condimento para Chimichurri 25 Grs La Campagnola Condimento P/chimichurri La Campagnola",
-       "sku_id": "349211",
+       "unit_price": 2499.0,
+       "cost": 2499.0,
+       "name": "Mezcla Para Chimichurri 100 Gr",
+       "sku_id": "21167",
        "promo": false
       },
       {
@@ -410,10 +410,10 @@
       }
      ],
      "lacks": [],
-     "fixed_total": 3050.0
+     "fixed_total": 4099.0
     },
     "ChangoMas": {
-     "total": 18407.93,
+     "total": 19881.26,
      "complete": false,
      "missing": [
       "pan",
@@ -425,10 +425,10 @@
        "ing": "asado_tira",
        "qty": 0.3,
        "fixed": false,
-       "unit_price": 12799.0,
-       "cost": 3839.7,
-       "name": "Asado Carnicero De Novillito 1kg",
-       "sku_id": "38221",
+       "unit_price": 17299.0,
+       "cost": 5189.7,
+       "name": "Asado De Tira De Novillito 1 Kg",
+       "sku_id": "112394",
        "promo": false
       },
       {
@@ -517,11 +517,11 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 6172.0,
-       "cost": 1543.0,
-       "name": "Vino Tinto Nampe Malbec 750 Ml",
-       "sku_id": "23050",
-       "promo": false
+       "unit_price": 6665.33,
+       "cost": 1666.33,
+       "name": "Vino Tinto Esperado Malbec 750 Ml",
+       "sku_id": "213025",
+       "promo": true
       },
       {
        "ing": "cerveza",
@@ -571,7 +571,7 @@
      "fixed_total": 2988.0
     },
     "Dia": {
-     "total": 17497.48,
+     "total": 16919.92,
      "complete": false,
      "missing": [
       "pan"
@@ -602,11 +602,11 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 12390.8,
-       "cost": 1486.9,
-       "name": "Chorizo 435 Gr.",
-       "sku_id": "242582",
-       "promo": false
+       "unit_price": 8966.67,
+       "cost": 1076.0,
+       "name": "Chorizo Verdeo Parrillero Dia 300 Gr.",
+       "sku_id": "295206",
+       "promo": true
       },
       {
        "ing": "morcilla",
@@ -678,10 +678,10 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 4653.33,
-       "cost": 1163.33,
-       "name": "Vino Tinto Estancia Mendoza Malbec 750 ml.",
-       "sku_id": "117701",
+       "unit_price": 3986.67,
+       "cost": 996.67,
+       "name": "Vino Tinto Clasico Finca Norte 750 Ml.",
+       "sku_id": "260650",
        "promo": true
       },
       {
@@ -732,12 +732,12 @@
     }
    },
    "ranking": [
-    "Carrefour",
     "Dia",
+    "Carrefour",
     "ChangoMas",
     "Jumbo"
    ],
-   "cheapest": "Carrefour",
+   "cheapest": "Dia",
    "common": [
     "asado_tira",
     "vacio",
@@ -862,7 +862,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 43199.11,
+     "total": 43166.89,
      "complete": false,
      "missing": [
       "pollo"
@@ -893,8 +893,8 @@
        "ing": "yogur",
        "qty": 1,
        "fixed": false,
-       "unit_price": 5143.33,
-       "cost": 5143.33,
+       "unit_price": 5111.11,
+       "cost": 5111.11,
        "name": "Yogur entero Milkaut frutilla sachet 900 g.",
        "sku_id": "78118",
        "promo": false
@@ -1062,7 +1062,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 48363.24,
+     "total": 49563.24,
      "complete": false,
      "missing": [
       "leche"
@@ -1169,8 +1169,8 @@
        "ing": "manzana",
        "qty": 1,
        "fixed": false,
-       "unit_price": 3299.0,
-       "cost": 3299.0,
+       "unit_price": 3899.0,
+       "cost": 3899.0,
        "name": "Manzana Roja por Kg",
        "sku_id": "10238",
        "promo": false
@@ -1219,8 +1219,8 @@
        "ing": "papa",
        "qty": 1,
        "fixed": false,
-       "unit_price": 2299.0,
-       "cost": 2299.0,
+       "unit_price": 2899.0,
+       "cost": 2899.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -1980,7 +1980,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 42424.84,
+     "total": 43624.84,
      "complete": false,
      "missing": [
       "leche"
@@ -2067,10 +2067,10 @@
        "ing": "carne_picada",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 12999.0,
-       "cost": 6499.5,
-       "name": "Picada Especial",
-       "sku_id": "322126",
+       "unit_price": 9169.0,
+       "cost": 4584.5,
+       "name": "Picada Comun Novillito",
+       "sku_id": "346994",
        "promo": false
       },
       {
@@ -2087,8 +2087,8 @@
        "ing": "papa",
        "qty": 2,
        "fixed": false,
-       "unit_price": 2299.0,
-       "cost": 4598.0,
+       "unit_price": 2899.0,
+       "cost": 5798.0,
        "name": "Papa Cepillada Granel Por Kg",
        "sku_id": "7380",
        "promo": false
@@ -2360,7 +2360,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 36688.07,
+     "total": 37287.57,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2369,11 +2369,11 @@
        "ing": "fideos",
        "qty": 1,
        "fixed": false,
-       "unit_price": 1798.5,
-       "cost": 1798.5,
+       "unit_price": 2398.0,
+       "cost": 2398.0,
        "name": "Fideos Spaghetti Favorita 500 Gr.",
        "sku_id": "61256",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "arroz",
@@ -2501,9 +2501,9 @@
        "fixed": false,
        "unit_price": 890.0,
        "cost": 2670.0,
-       "name": "Galletitas Rellenas Con Cacao Dia 119 Gr.",
-       "sku_id": "307389",
-       "promo": true
+       "name": "Galletitas Rellenas DIA Vainilla 97 Gr.",
+       "sku_id": "168119",
+       "promo": false
       },
       {
        "ing": "aceite",

@@ -8,37 +8,37 @@
   "complete": false,
   "days": [
    "2026-11-22",
-   "2026-11-22"
+   "2026-11-23"
   ],
-  "days_of_data": 1,
-  "n_products": 306,
+  "days_of_data": 2,
+  "n_products": 315,
   "shops": [
    {
     "shop": "Dia",
-    "total": 1241315.35,
+    "total": 1282780.85,
     "pct": 0.0
    },
    {
-    "shop": "ChangoMas",
-    "total": 1251682.75,
-    "pct": 0.84
+    "shop": "Carrefour",
+    "total": 1296852.31,
+    "pct": 1.1
    },
    {
-    "shop": "Carrefour",
-    "total": 1253615.06,
-    "pct": 0.99
+    "shop": "ChangoMas",
+    "total": 1298196.25,
+    "pct": 1.2
    },
    {
     "shop": "Jumbo",
-    "total": 1452210.0,
-    "pct": 16.99
+    "total": 1500266.0,
+    "pct": 16.95
    }
   ],
   "cheapest_count": {
-   "Carrefour": 123,
-   "Jumbo": 10,
+   "Carrefour": 125,
+   "Jumbo": 9,
    "ChangoMas": 116,
-   "Dia": 123
+   "Dia": 127
   },
   "examples": [
    {
@@ -51,6 +51,15 @@
     "pct": 159.1
    },
    {
+    "ean": "8445291395961",
+    "name": "Leche Chocolotada 200ml Nesquik",
+    "low_shop": "Carrefour",
+    "low": 1095.0,
+    "high_shop": "Jumbo",
+    "high": 2350.0,
+    "pct": 114.6
+   },
+   {
     "ean": "7790310985458",
     "name": "Papas Fritas Lays Clásicas 85 G",
     "low_shop": "Carrefour",
@@ -58,15 +67,6 @@
     "high_shop": "Jumbo",
     "high": 4450.0,
     "pct": 103.8
-   },
-   {
-    "ean": "7794626012846",
-    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
-    "low_shop": "Dia",
-    "low": 15200.0,
-    "high_shop": "Jumbo",
-    "high": 27750.0,
-    "pct": 82.6
    }
   ]
  },

@@ -378,7 +378,7 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-11-19,limpieza,Cleaning products,yes,99.534,101.298
 2026-11-19,cuidado_personal,Personal care,no (weight pending),101.511,101.119
 2026-11-20,pan_cereales,Bread and cereals,yes,97.85,101.241
-2026-11-20,carne_vacuna,Beef,yes,100.636,100.122
+2026-11-20,carne_vacuna,Beef,yes,100.636,100.484
 2026-11-20,carne_ave,Chicken,yes,99.806,100.0
 2026-11-20,lacteos,Dairy and eggs,yes,102.512,100.592
 2026-11-20,aceites,Oils,yes,98.186,100.584
@@ -392,7 +392,7 @@ date,group,group_name,in_headline_index,index_paid,index_regular
 2026-11-20,limpieza,Cleaning products,yes,97.689,101.306
 2026-11-20,cuidado_personal,Personal care,no (weight pending),100.188,101.238
 2026-11-21,pan_cereales,Bread and cereals,yes,97.905,101.318
-2026-11-21,carne_vacuna,Beef,yes,100.636,100.122
+2026-11-21,carne_vacuna,Beef,yes,100.636,100.484
 2026-11-21,carne_ave,Chicken,yes,99.806,100.0
 2026-11-21,lacteos,Dairy and eggs,yes,102.541,100.629
 2026-11-21,aceites,Oils,yes,98.186,100.584

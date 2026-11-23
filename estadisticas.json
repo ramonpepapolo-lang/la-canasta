@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-23 19:27",
+ "when_utc": "2026-11-23 22:53",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "620",
-  "views_total_text": "171,278",
-  "views_sum_of_videos": 82439,
+  "subscribers_text": "621",
+  "views_total_text": "171,332",
+  "views_sum_of_videos": 82455,
   "videos": 48,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 18,
+    "views": 25,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Fernet Branca Menta 750: $13.650 en Carrefour, $21.000 en Jumbo",
     "published": "2026-11-22",
-    "views": 20,
+    "views": 25,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 44,
+    "views": 47,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -211,7 +211,7 @@
     "published": "2026-11-16",
     "views": 46,
     "views_exact": true,
-    "likes": 556,
+    "likes": 1,
     "comments": null
    },
    {
@@ -233,7 +233,7 @@
     "player_status": null,
     "title": "El cerdo subió $1.000 el kilo… menos la bondiola 🐖",
     "published": "2026-11-15",
-    "views": 22,
+    "views": 23,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -259,7 +259,7 @@
     "published": "2026-11-14",
     "views": 42,
     "views_exact": true,
-    "likes": 556,
+    "likes": 1,
     "comments": null
    },
    {
@@ -307,7 +307,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 564,
+    "likes": 1,
     "comments": null
    },
    {
@@ -319,7 +319,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 564,
+    "likes": 2,
     "comments": null
    },
    {
@@ -343,7 +343,7 @@
     "published": "2026-11-05",
     "views": 67,
     "views_exact": true,
-    "likes": 564,
+    "likes": 2,
     "comments": null
    },
    {
@@ -403,7 +403,7 @@
     "published": "2026-11-04",
     "views": 15,
     "views_exact": true,
-    "likes": 569,
+    "likes": 1,
     "comments": null
    },
    {
@@ -475,7 +475,7 @@
     "published": "2026-10-31",
     "views": 21,
     "views_exact": true,
-    "likes": 578,
+    "likes": 2,
     "comments": 1
    },
    {
@@ -511,7 +511,7 @@
     "published": "2026-10-31",
     "views": 15,
     "views_exact": true,
-    "likes": 578,
+    "likes": 2,
     "comments": null
    },
    {
@@ -547,7 +547,7 @@
     "published": "2026-10-29",
     "views": 8552,
     "views_exact": true,
-    "likes": 592,
+    "likes": 7,
     "comments": null
    },
    {
@@ -636,7 +636,7 @@
     "date": "2026-11-22",
     "text": "Mismo Fernet Branca Menta 750, mismo código de barras:\nCarrefour $13.650\nDía $14.900\nJumbo",
     "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

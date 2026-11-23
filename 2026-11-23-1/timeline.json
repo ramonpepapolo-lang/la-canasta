@@ -1,0 +1,80 @@
+{
+ "total": 35.468,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma leche condensada. Mismo código de barras.",
+   "say": "Misma leche condensada. Mismo código de barras.",
+   "start": 0.12,
+   "end": 2.828,
+   "dur": 2.708,
+   "ps": "mˈisma lˈeʧe kˌondensˈaða. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$2.838… o $6.200.",
+   "say": "Dos mil ochocientos treinta y ocho, o seis mil doscientos.",
+   "gap": 0.35,
+   "start": 3.048,
+   "end": 6.152,
+   "dur": 3.104,
+   "ps": "dˈos mˈil ˌoʧosjˈɛntos tɾˈAnta i ˈoʧo, o sˈAs mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "w1",
+   "sub": "Nestlé 395 g: $2.838 en Carrefour.",
+   "say": "Leche condensada Nestlé, en Carrefour: dos mil ochocientos treinta y ocho.",
+   "start": 6.502,
+   "end": 10.598,
+   "dur": 4.096,
+   "ps": "lˈeʧe kˌondensˈaða nestlˈe, en kˌarefˈowɾ: dˈos mˈil ˌoʧosjˈɛntos tɾˈAnta i ˈoʧo."
+  },
+  {
+   "k": "w2",
+   "sub": "ChangoMás $5.789. Jumbo $6.200.",
+   "say": "En ChangoMás, cinco mil setecientos ochenta y nueve. En Jumbo, seis mil doscientos.",
+   "start": 10.818,
+   "end": 15.426,
+   "dur": 4.608,
+   "ps": "en ʧˈaŋɡo mˈas, sˈinko mˈil sˌetesjˈɛntos oʧˈɛnta i nwˈeβe. en xˈumbo, sˈAs mˈil ðosjˈɛntos."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: es una oferta. El precio de lista es $5.675.",
+   "say": "Pero ojo. Es una oferta: el precio de lista es cinco mil seiscientos setenta y cinco.",
+   "gap": 0.3,
+   "start": 15.646,
+   "end": 20.182,
+   "dur": 4.535,
+   "ps": "pˌeɾo ˈoxo. ˈes ˈuna ofˈeɾta: el pɾˈesjo ðe lˈista ˈes sˈinko mˈil sAsjˈɛntos setˈɛnta i sˈinko."
+  },
+  {
+   "k": "b2",
+   "sub": "Está a mitad de precio desde el 30 de octubre. Puede terminar cualquier día.",
+   "say": "Está a mitad de precio desde el treinta de octubre. Puede terminar cualquier día.",
+   "start": 20.482,
+   "end": 24.746,
+   "dur": 4.264,
+   "ps": "estˈa a mitˈad ðe pɾˈesjo ðˌesðe el tɾˈAnta ðe oktˈuβɾe. pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "b3",
+   "sub": "Hoy sale menos que la marca Carrefour, que cuesta $5.090.",
+   "say": "Hoy sale menos que la leche condensada marca Carrefour, que cuesta cinco mil noventa.",
+   "start": 24.966,
+   "end": 29.479,
+   "dur": 4.513,
+   "ps": "ˈoɪ sˈale mˈenos ke la lˈeʧe kˌondensˈaða mˈaɾka kˌarefˈowɾ, ke kwˈesta sˈinko mˈil noβˈɛnta."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $3.362 por cajita. Más de la mitad.",
+   "say": "Ahorrás tres mil trescientos sesenta y dos pesos por cajita. Más de la mitad.",
+   "start": 29.699,
+   "end": 33.948,
+   "dur": 4.248,
+   "ps": "ˌaorˈas tɾˈes mˈil tɾesjˈɛntos sesˈɛnta i ðˈos pˈesos poɾ kaxˈita. mˈas ðe la mitˈad."
+  }
+ ]
+}

@@ -8,56 +8,47 @@
   "complete": false,
   "days": [
    "2026-11-22",
-   "2026-11-23"
+   "2026-11-24"
   ],
-  "days_of_data": 2,
-  "n_products": 315,
+  "days_of_data": 3,
+  "n_products": 293,
   "shops": [
    {
-    "shop": "Dia",
-    "total": 1282780.85,
+    "shop": "ChangoMas",
+    "total": 1153802.71,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1296852.31,
-    "pct": 1.1
+    "total": 1200397.79,
+    "pct": 4.04
    },
    {
-    "shop": "ChangoMas",
-    "total": 1298196.25,
-    "pct": 1.2
+    "shop": "Dia",
+    "total": 1220129.07,
+    "pct": 5.75
    },
    {
     "shop": "Jumbo",
-    "total": 1500266.0,
-    "pct": 16.95
+    "total": 1393172.33,
+    "pct": 20.75
    }
   ],
   "cheapest_count": {
-   "Carrefour": 125,
-   "Jumbo": 9,
-   "ChangoMas": 116,
-   "Dia": 127
+   "Carrefour": 68,
+   "Jumbo": 3,
+   "ChangoMas": 178,
+   "Dia": 59
   },
   "examples": [
    {
     "ean": "7790070431516",
     "name": "Arroz Lucchetti Parboil 500 G",
     "low_shop": "Dia",
-    "low": 617.5,
+    "low": 728.33,
     "high_shop": "Jumbo",
     "high": 1600.0,
-    "pct": 159.1
-   },
-   {
-    "ean": "8445291395961",
-    "name": "Leche Chocolotada 200ml Nesquik",
-    "low_shop": "Carrefour",
-    "low": 1095.0,
-    "high_shop": "Jumbo",
-    "high": 2350.0,
-    "pct": 114.6
+    "pct": 119.7
    },
    {
     "ean": "7790310985458",
@@ -67,6 +58,15 @@
     "high_shop": "Jumbo",
     "high": 4450.0,
     "pct": 103.8
+   },
+   {
+    "ean": "7794626012846",
+    "name": "Pañales Huggies Soft Comfort G X 40 Ud.",
+    "low_shop": "Dia",
+    "low": 15200.0,
+    "high_shop": "Jumbo",
+    "high": 27750.0,
+    "pct": 82.6
    }
   ]
  },

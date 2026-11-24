@@ -1,12 +1,12 @@
 {
- "date": "2026-11-23",
- "previous": "2026-11-22",
+ "date": "2026-11-24",
+ "previous": "2026-11-23",
  "index": {
-  "date": "2026-11-23",
-  "paid": 98.822,
-  "regular": 99.294,
-  "day_change": 0.87,
-  "days_of_data": 31,
+  "date": "2026-11-24",
+  "paid": 98.766,
+  "regular": 99.459,
+  "day_change": -0.06,
+  "days_of_data": 32,
   "series": [
    [
     "2026-10-24",
@@ -162,18 +162,23 @@
     "2026-11-23",
     98.822,
     99.294
+   ],
+   [
+    "2026-11-24",
+    98.766,
+    99.459
    ]
   ],
   "mode": "week",
-  "week_paid": -0.76,
-  "week_regular": 0.09,
+  "week_paid": -1.17,
+  "week_regular": 0.13,
   "now": [
-   "2026-11-17",
-   "2026-11-23"
+   "2026-11-18",
+   "2026-11-24"
   ],
   "before": [
-   "2026-11-10",
-   "2026-11-16"
+   "2026-11-11",
+   "2026-11-17"
   ]
  },
  "ranking": {
@@ -181,252 +186,252 @@
   "label_en": "Week of 22 to 28 November 2026",
   "days": [
    "2026-11-22",
-   "2026-11-23"
+   "2026-11-24"
   ],
-  "n_products": 315,
+  "n_products": 293,
   "shops": [
    {
-    "shop": "Dia",
-    "total": 1282780.85,
+    "shop": "ChangoMas",
+    "total": 1153802.71,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1296852.31,
-    "pct": 1.1
+    "total": 1200397.79,
+    "pct": 4.04
    },
    {
-    "shop": "ChangoMas",
-    "total": 1298196.25,
-    "pct": 1.2
+    "shop": "Dia",
+    "total": 1220129.07,
+    "pct": 5.75
    },
    {
     "shop": "Jumbo",
-    "total": 1500266.0,
-    "pct": 16.95
+    "total": 1393172.33,
+    "pct": 20.75
    }
   ]
  },
  "down": [
   {
-   "shop": "Jumbo",
-   "name": "Manzana Roja por Kg",
-   "type": "manzana",
-   "before": 3299.0,
-   "now": 3899.0,
-   "pct": 18.2,
-   "why": "price"
+   "shop": "ChangoMas",
+   "name": "Mayonesa Hellmanns Clásica 475 G",
+   "type": "mayonesa",
+   "before": 3089.0,
+   "now": 1619.25,
+   "pct": -47.6,
+   "why": "promo_start"
   },
   {
-   "shop": "Jumbo",
-   "name": "Vacio Medio Envasado Al Vacio La Hacienda",
-   "type": "vacio",
-   "before": 17999.0,
-   "now": 22289.0,
-   "pct": 23.8,
-   "why": "price"
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "type": "cerveza",
+   "before": 3699.0,
+   "now": 1941.98,
+   "pct": -47.5,
+   "why": "promo_start"
   },
   {
-   "shop": "Jumbo",
-   "name": "Papa Cepillada Granel Por Kg",
-   "type": "papa",
-   "before": 2299.0,
-   "now": 2899.0,
-   "pct": 26.1,
-   "why": "price"
+   "shop": "ChangoMas",
+   "name": "Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U",
+   "type": "papel_higienico",
+   "before": 2649.0,
+   "now": 1490.06,
+   "pct": -43.8,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Al Huevo Tirabuzón Don Vicente 500 Gr.",
-   "type": "fideos",
-   "before": 2962.5,
-   "now": 3950.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Vino Tinto Suter Malbec 750ml",
+   "type": "vino",
+   "before": 4829.0,
+   "now": 2999.0,
+   "pct": -37.9,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Letritas Lucchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Yerba Mate Mañanita 1 Kg",
+   "type": "yerba",
+   "before": 5749.0,
+   "now": 3999.0,
+   "pct": -30.4,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Active Gel Limón 500 Ml",
+   "type": "detergente",
+   "before": 4665.65,
+   "now": 3399.0,
+   "pct": -27.1,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Spaghetti Favorita 500 Gr.",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Detergente Cif Concentrado Active Gel 500ml",
+   "type": "detergente",
+   "before": 4665.65,
+   "now": 3399.0,
+   "pct": -27.1,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1650.0,
-   "now": 2200.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Arroz Cañuelas Parboil 500 G",
+   "type": "arroz",
+   "before": 1609.0,
+   "now": 1206.75,
+   "pct": -25.0,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Arroz Check Largo Fino 1 Kg",
+   "type": "arroz",
+   "before": 1749.0,
+   "now": 1311.75,
+   "pct": -25.0,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Arroz Doble Dos Hermanos Non Gmo 1kg",
+   "type": "arroz",
+   "before": 3249.0,
+   "now": 2436.75,
+   "pct": -25.0,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1650.0,
-   "now": 2200.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Arroz Gallo Parboil 1kg",
+   "type": "arroz",
+   "before": 3249.0,
+   "now": 2436.75,
+   "pct": -25.0,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Fideos Tirabuzón Favorita 500 Gr.",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
-   "why": "promo_end"
+   "shop": "ChangoMas",
+   "name": "Arroz Largo Fino Lucchetti 1 Kg",
+   "type": "arroz",
+   "before": 2239.0,
+   "now": 1679.25,
+   "pct": -25.0,
+   "why": "promo_start"
   }
  ],
  "up": [
   {
-   "shop": "Jumbo",
-   "name": "Suprema De Pollo Granel Fresca",
-   "type": "suprema",
-   "before": 8999.0,
-   "now": 12449.0,
-   "pct": 38.3,
-   "why": "price"
-  },
-  {
    "shop": "Dia",
-   "name": "Fideos Al Huevo Tirabuzón Don Vicente 500 Gr.",
-   "type": "fideos",
-   "before": 2962.5,
-   "now": 3950.0,
-   "pct": 33.3,
+   "name": "Galletitas Rellenas Melba 360 Gr.",
+   "type": "galletitas",
+   "before": 2250.0,
+   "now": 4540.0,
+   "pct": 101.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Letritas Lucchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
+   "name": "Harina 0000 con Vitaminas Favorita 1 Kg.",
+   "type": "harina_000",
+   "before": 1050.0,
+   "now": 1836.0,
+   "pct": 74.9,
+   "why": "list_up"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Cebolla Sanes en red 4 uni",
+   "type": "cebolla",
+   "before": 2999.0,
+   "now": 4990.0,
+   "pct": 66.4,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Lucchetti Dedalitos 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
+   "name": "Agua Mineral sin Gas Eco de los Andes 2 Lts.",
+   "type": "agua",
+   "before": 2050.0,
+   "now": 3187.0,
+   "pct": 55.5,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Spaghetti Favorita 500 Gr.",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
+   "name": "Shampoo Low Poo Metodo Curly Plusbelle 700 Ml.",
+   "type": "shampoo",
+   "before": 5110.0,
+   "now": 7870.0,
+   "pct": 54.0,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Spaghetti N3 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1650.0,
-   "now": 2200.0,
-   "pct": 33.3,
+   "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
+   "type": "arroz",
+   "before": 1709.5,
+   "now": 2630.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Spaghetti N7 Luchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
+   "name": "Cerveza Brahma 710 Ml.",
+   "type": "cerveza",
+   "before": 2080.0,
+   "now": 3200.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Tallarin N5 Luchetti 500 Gr.",
-   "type": "fideos",
-   "before": 1387.5,
-   "now": 1850.0,
-   "pct": 33.3,
+   "name": "Cerveza Brahma Lata 473 ml.",
+   "type": "cerveza",
+   "before": 1911.0,
+   "now": 2940.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Tirabuzon N28 Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 1650.0,
-   "now": 2200.0,
-   "pct": 33.3,
+   "name": "Cerveza Heineken Lata 473 ml.",
+   "type": "cerveza",
+   "before": 2788.5,
+   "now": 4290.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Fideos Tirabuzón Favorita 500 Gr.",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
+   "name": "Cerveza Heineken lata 710 Ml.",
+   "type": "cerveza",
+   "before": 4023.5,
+   "now": 6190.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
    "shop": "Dia",
-   "name": "Spaghetti Rina Matarazzo 500 Gr.",
-   "type": "fideos",
-   "before": 2850.0,
-   "now": 3800.0,
-   "pct": 33.3,
+   "name": "Cerveza Warsteiner 473 Ml.",
+   "type": "cerveza",
+   "before": 2398.5,
+   "now": 3690.0,
+   "pct": 53.8,
    "why": "promo_end"
   },
   {
-   "shop": "Jumbo",
-   "name": "Papa Cepillada Granel Por Kg",
-   "type": "papa",
-   "before": 2299.0,
-   "now": 2899.0,
-   "pct": 26.1,
-   "why": "price"
+   "shop": "Dia",
+   "name": "Detergente Concentrado CIF Lima Botella 300 Ml.",
+   "type": "detergente",
+   "before": 1755.0,
+   "now": 2700.0,
+   "pct": 53.8,
+   "why": "promo_end"
   }
  ],
- "n_down": 0,
- "n_up": 14
+ "n_down": 133,
+ "n_up": 81
 }

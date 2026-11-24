@@ -1,0 +1,80 @@
+{
+ "total": 28.269,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma Fanta de 2,25 litros, mismo código de barras.",
+   "say": "Misma Fanta de dos litros y cuarto, mismo código de barras.",
+   "start": 0.12,
+   "end": 3.257,
+   "dur": 3.137,
+   "ps": "mˈisma fˈanta ðe ðˈos lˈitɾos i kwˈaɾto, mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$3.431… o $6.100.",
+   "say": "Tres mil cuatrocientos treinta y uno, o seis mil cien.",
+   "gap": 0.3,
+   "start": 3.477,
+   "end": 6.517,
+   "dur": 3.04,
+   "ps": "tɾˈes mˈil kwˌatɾosjˈɛntos tɾˈAnta i ˈuno, o sˈAs mˈil sjˈen."
+  },
+  {
+   "k": "w1",
+   "sub": "En ChangoMás: $3.431.",
+   "say": "En ChangoMás: tres mil cuatrocientos treinta y uno.",
+   "start": 6.817,
+   "end": 9.724,
+   "dur": 2.907,
+   "ps": "en ʧˈaŋɡo mˈas: tɾˈes mˈil kwˌatɾosjˈɛntos tɾˈAnta i ˈuno."
+  },
+  {
+   "k": "w2",
+   "sub": "En Carrefour, Día y Jumbo: $6.100.",
+   "say": "En Carrefour, Día y Jumbo: seis mil cien.",
+   "start": 9.944,
+   "end": 12.301,
+   "dur": 2.356,
+   "ps": "en kˌarefˈowɾ, dˈia i xˈumbo: sˈAs mˈil sjˈen."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: ayer ChangoMás la tenía a $6.099.",
+   "say": "Pero ojo: ayer ChangoMás la tenía a seis mil noventa y nueve.",
+   "gap": 0.3,
+   "start": 12.521,
+   "end": 15.923,
+   "dur": 3.402,
+   "ps": "pˌeɾo ˈoxo: aʃˈeɾ ʧˈaŋɡo mˈas la tenˈia a sˈAs mˈil noβˈɛnta i nwˈeβe."
+  },
+  {
+   "k": "b2",
+   "sub": "Hoy tiene 2.533 productos en oferta. Ayer, 609.",
+   "say": "Hoy tiene dos mil quinientos treinta y tres productos en oferta. Ayer, seiscientos nueve.",
+   "start": 16.223,
+   "end": 21.262,
+   "dur": 5.039,
+   "ps": "ˈoɪ tjˈene ðˈos mˈil kinjˈɛntos tɾˈAnta i tɾˈes pɾoðˈuktos en ofˈeɾta. aʃˈeɾ, sAsjˈɛntos nwˈeβe."
+  },
+  {
+   "k": "b3",
+   "sub": "Puede terminar cualquier día.",
+   "say": "Puede terminar cualquier día.",
+   "start": 21.482,
+   "end": 23.166,
+   "dur": 1.684,
+   "ps": "pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.669 por botella.",
+   "say": "Ahorrás dos mil seiscientos sesenta y nueve pesos por botella.",
+   "start": 23.386,
+   "end": 26.749,
+   "dur": 3.363,
+   "ps": "ˌaorˈas ðˈos mˈil sAsjˈɛntos sesˈɛnta i nwˈeβe pˈesos poɾ βotˈeʃa."
+  }
+ ]
+}

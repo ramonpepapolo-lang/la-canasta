@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-24 17:40",
+ "when_utc": "2026-11-24 19:04",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -19,7 +19,7 @@
   "source": "public pages",
   "subscribers_text": "621",
   "views_total_text": "171,442",
-  "views_sum_of_videos": 82515,
+  "views_sum_of_videos": 82517,
   "videos": 49,
   "list": [
    {
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Aceite de oliva La Toscana: $6.889 en Carrefour, $11.600 en Jumbo",
     "published": "2026-11-21",
-    "views": 53,
+    "views": 54,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -319,7 +319,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 1,
+    "likes": 569,
     "comments": null
    },
    {
@@ -389,7 +389,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "",
-    "views": 47,
+    "views": 48,
     "views_exact": true,
     "likes": 2,
     "comments": null

@@ -1,0 +1,80 @@
+{
+ "total": 31.085,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Misma Fanta naranja de 2,25 litros. Mismo código de barras.",
+   "say": "Misma Fanta naranja de dos litros y cuarto. Mismo código de barras.",
+   "start": 0.12,
+   "end": 3.882,
+   "dur": 3.762,
+   "ps": "mˈisma fˈanta naɾˈaŋxa ðe ðˈos lˈitɾos i kwˈaɾto. mˈismo kˈoðiɣo ðe βˈaras."
+  },
+  {
+   "k": "h2",
+   "sub": "$3.431… o $6.100.",
+   "say": "Tres mil cuatrocientos treinta y uno, o seis mil cien.",
+   "gap": 0.35,
+   "start": 4.102,
+   "end": 7.164,
+   "dur": 3.063,
+   "ps": "tɾˈes mˈil kwˌatɾosjˈɛntos tɾˈAnta i ˈuno, o sˈAs mˈil sjˈen."
+  },
+  {
+   "k": "w1",
+   "sub": "En ChangoMás: $3.431.",
+   "say": "En ChangoMás: tres mil cuatrocientos treinta y uno.",
+   "start": 7.514,
+   "end": 10.416,
+   "dur": 2.902,
+   "ps": "en ʧˈaŋɡo mˈas: tɾˈes mˈil kwˌatɾosjˈɛntos tɾˈAnta i ˈuno."
+  },
+  {
+   "k": "w2",
+   "sub": "En Carrefour, Día y Jumbo: $6.100.",
+   "say": "En Carrefour, Día y Jumbo: seis mil cien.",
+   "start": 10.636,
+   "end": 12.993,
+   "dur": 2.356,
+   "ps": "en kˌarefˈowɾ, dˈia i xˈumbo: sˈAs mˈil sjˈen."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: ayer ChangoMás la tenía a $6.099, como todos.",
+   "say": "Pero ojo: ayer ChangoMás la tenía a seis mil noventa y nueve, como todos.",
+   "gap": 0.3,
+   "start": 13.213,
+   "end": 17.295,
+   "dur": 4.082,
+   "ps": "pˌeɾo ˈoxo: aʃˈeɾ ʧˈaŋɡo mˈas la tenˈia a sˈAs mˈil noβˈɛnta i nwˈeβe, kˌomo tˈoðos."
+  },
+  {
+   "k": "b2",
+   "sub": "Hoy tiene en oferta 2.533 productos de su web. Ayer eran 609.",
+   "say": "Hoy tiene en oferta dos mil quinientos treinta y tres productos de su web. Ayer eran seiscientos nueve.",
+   "start": 17.595,
+   "end": 23.284,
+   "dur": 5.689,
+   "ps": "ˈoɪ tjˈene en ofˈeɾta ðˈos mˈil kinjˈɛntos tɾˈAnta i tɾˈes pɾoðˈuktos ðe su wˈeb. aʃˈeɾ ˈeɾan sAsjˈɛntos nwˈeβe."
+  },
+  {
+   "k": "b3",
+   "sub": "Puede terminar cualquier día.",
+   "say": "Puede terminar cualquier día.",
+   "start": 23.504,
+   "end": 25.186,
+   "dur": 1.682,
+   "ps": "pwˈeðe tˌeɾminˈaɾ kwalkjˈeɾ ðˈia."
+  },
+  {
+   "k": "p1",
+   "sub": "Ahorrás $2.669 por botella. Casi la mitad.",
+   "say": "Ahorrás dos mil seiscientos sesenta y nueve pesos por botella. Casi la mitad.",
+   "start": 25.406,
+   "end": 29.565,
+   "dur": 4.158,
+   "ps": "ˌaorˈas ðˈos mˈil sAsjˈɛntos sesˈɛnta i nwˈeβe pˈesos poɾ βotˈeʃa. kˈasi la mitˈad."
+  }
+ ]
+}

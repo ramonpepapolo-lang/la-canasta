@@ -1,0 +1,10 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"Misma Fanta de 2,25 litros, mismo código de barras.","say":"Misma Fanta de dos litros y cuarto, mismo código de barras."},
+{"k":"h2","sub":"$3.431… o $6.100.","say":"Tres mil cuatrocientos treinta y uno, o seis mil cien.","gap":0.3},
+{"k":"w1","sub":"En ChangoMás: $3.431.","say":"En ChangoMás: tres mil cuatrocientos treinta y uno."},
+{"k":"w2","sub":"En Carrefour, Día y Jumbo: $6.100.","say":"En Carrefour, Día y Jumbo: seis mil cien."},
+{"k":"b1","sub":"Pero ojo: ayer ChangoMás la tenía a $6.099.","say":"Pero ojo: ayer ChangoMás la tenía a seis mil noventa y nueve.","gap":0.3},
+{"k":"b2","sub":"Hoy tiene 2.533 productos en oferta. Ayer, 609.","say":"Hoy tiene dos mil quinientos treinta y tres productos en oferta. Ayer, seiscientos nueve."},
+{"k":"b3","sub":"Puede terminar cualquier día.","say":"Puede terminar cualquier día."},
+{"k":"p1","sub":"Ahorrás $2.669 por botella.","say":"Ahorrás dos mil seiscientos sesenta y nueve pesos por botella."}
+]}

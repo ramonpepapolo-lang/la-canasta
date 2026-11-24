@@ -1,25 +1,25 @@
 {
- "when_utc": "2026-11-23 22:53",
+ "when_utc": "2026-11-24 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4267,
-  "/": 4076,
-  "/precios/": 13,
+  "TOTAL": 4272,
+  "/": 4078,
+  "/precios/": 15,
   "/canastas/": 21,
   "/informes.html": 51,
   "/metodo.html": 29,
   "/articulos.html": 13,
   "/ramon-pepa.html": 23,
   "/prensa.html": 3,
-  "/precios/supermercado-mas-barato.html": 4
+  "/precios/supermercado-mas-barato.html": 5
  },
  "youtube": {
   "source": "public pages",
   "subscribers_text": "621",
-  "views_total_text": "171,332",
-  "views_sum_of_videos": 82455,
+  "views_total_text": "171,366",
+  "views_sum_of_videos": 82511,
   "videos": 48,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 25,
+    "views": 62,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Fernet Branca Menta 750: $13.650 en Carrefour, $21.000 en Jumbo",
     "published": "2026-11-22",
-    "views": 25,
+    "views": 39,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Café La Virginia 250 g: $2.916 en Carrefour, $7.850 en Jumbo",
     "published": "2026-11-20",
-    "views": 14,
+    "views": 15,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -173,7 +173,7 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 141,
+    "views": 142,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -185,7 +185,7 @@
     "player_status": null,
     "title": "55 bebidas iguales en 4 súper: $19.333 de diferencia 🥤",
     "published": "2026-11-17",
-    "views": 43,
+    "views": 44,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -197,7 +197,7 @@
     "player_status": null,
     "title": "Mismo changuito de limpieza, 4 súper: $43.404 de diferencia 🧽",
     "published": "2026-11-16",
-    "views": 31,
+    "views": 32,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -221,7 +221,7 @@
     "player_status": null,
     "title": "Mismo changuito, 4 súper: $217.288 de diferencia 🛒",
     "published": "2026-11-15",
-    "views": 32,
+    "views": 33,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -626,7 +626,7 @@
     "date": "2026-11-23",
     "text": "Misma leche condensada Nestlé 395 g, mismo código de barras: $2.838 en Carrefour y $6.200 ",
     "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 4,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
@@ -636,7 +636,7 @@
     "date": "2026-11-22",
     "text": "Mismo Fernet Branca Menta 750, mismo código de barras:\nCarrefour $13.650\nDía $14.900\nJumbo",
     "bookmark_count": 0,
-    "impression_count": 1,
+    "impression_count": 4,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

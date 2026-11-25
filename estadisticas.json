@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-25 16:05",
+ "when_utc": "2026-11-25 18:10",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -18,8 +18,8 @@
  "youtube": {
   "source": "public pages",
   "subscribers_text": "618",
-  "views_total_text": "171,476",
-  "views_sum_of_videos": 82581,
+  "views_total_text": "171,511",
+  "views_sum_of_videos": 82584,
   "videos": 50,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Mismos 19 de higiene: $20.271 más caro en Jumbo que en Día",
     "published": "2026-11-25",
-    "views": 0,
+    "views": 4,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Fanta 2,25 L: $3.431 en ChangoMás, $6.100 en Carrefour, Día y Jumbo",
     "published": "2026-11-24",
-    "views": 42,
+    "views": 41,
     "views_exact": true,
     "likes": 0,
     "comments": null

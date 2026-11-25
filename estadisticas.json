@@ -1,15 +1,15 @@
 {
- "when_utc": "2026-11-24 19:04",
+ "when_utc": "2026-11-25 14:43",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4272,
-  "/": 4078,
-  "/precios/": 15,
-  "/canastas/": 21,
+  "TOTAL": 4278,
+  "/": 4080,
+  "/precios/": 17,
+  "/canastas/": 22,
   "/informes.html": 51,
-  "/metodo.html": 29,
+  "/metodo.html": 30,
   "/articulos.html": 13,
   "/ramon-pepa.html": 23,
   "/prensa.html": 3,
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "621",
-  "views_total_text": "171,442",
-  "views_sum_of_videos": 82517,
+  "subscribers_text": "618",
+  "views_total_text": "171,476",
+  "views_sum_of_videos": 82579,
   "videos": 49,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Fanta 2,25 L: $3.431 en ChangoMás, $6.100 en Carrefour, Día y Jumbo",
     "published": "2026-11-24",
-    "views": 2,
+    "views": 42,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 62,
+    "views": 69,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Fernet Branca Menta 750: $13.650 en Carrefour, $21.000 en Jumbo",
     "published": "2026-11-22",
-    "views": 39,
+    "views": 45,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Aceite de oliva La Toscana: $6.889 en Carrefour, $11.600 en Jumbo",
     "published": "2026-11-21",
-    "views": 54,
+    "views": 53,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -113,7 +113,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 47,
+    "views": 51,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -125,7 +125,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 36,
+    "views": 37,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -161,7 +161,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 8,
+    "views": 9,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -185,7 +185,7 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 142,
+    "views": 144,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -221,7 +221,7 @@
     "player_status": null,
     "title": "Carne en Jumbo: el lunes pagás $11.706 más 🥩",
     "published": "2026-11-16",
-    "views": 46,
+    "views": 47,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -319,7 +319,7 @@
     "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
-    "likes": 569,
+    "likes": 1,
     "comments": null
    },
    {
@@ -389,7 +389,7 @@
     "player_status": "LOGIN_REQUIRED",
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
     "published": "",
-    "views": 48,
+    "views": 49,
     "views_exact": true,
     "likes": 2,
     "comments": null

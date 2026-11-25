@@ -1,0 +1,32 @@
+[
+ {
+  "outlet": "La Nación (Laura Ponasso)",
+  "to": "lponasso@lanacion.com.ar",
+  "sent": true,
+  "info": "<202611251301.79710152628@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "La Nación (Melisa Reinhold)",
+  "to": "mreinhold@lanacion.com.ar",
+  "sent": true,
+  "info": "<202611251301.57843363524@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Infobae (Pablo Wende)",
+  "to": "pwende@infobae.com",
+  "sent": true,
+  "info": "<202611251301.11036172770@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Infobae (Lucrecia Eterovich)",
+  "to": "leterovich@infobae.com",
+  "sent": true,
+  "info": "<202611251302.97041976610@smtp-relay.mailin.fr>"
+ },
+ {
+  "outlet": "Infobae (Brisa Bujakiewicz)",
+  "to": "bbujakiewicz@infobae.com",
+  "sent": true,
+  "info": "<202611251302.79152418293@smtp-relay.mailin.fr>"
+ }
+]

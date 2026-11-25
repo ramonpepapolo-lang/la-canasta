@@ -1,0 +1,71 @@
+{
+ "total": 26.591,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Los mismos 19 productos de higiene.",
+   "say": "Los mismos diecinueve productos de higiene.",
+   "start": 0.12,
+   "end": 2.411,
+   "dur": 2.291,
+   "ps": "los mˈismos ðjˌesinwˈeβe pɾoðˈuktos ðe ixjˈene."
+  },
+  {
+   "k": "h2",
+   "sub": "$98.037 en Día. $118.308 en Jumbo.",
+   "say": "Noventa y ocho mil en Día. Ciento dieciocho mil en Jumbo.",
+   "gap": 0.3,
+   "start": 2.631,
+   "end": 5.92,
+   "dur": 3.289,
+   "ps": "noβˈɛnta i ˈoʧo mˈil en dˈia. sjˈɛnto ðjesjˈoʧo mˈil en xˈumbo."
+  },
+  {
+   "k": "w1",
+   "sub": "Pasta dental, desodorante, jabón, shampoo y papel higiénico.",
+   "say": "Pasta dental, desodorante, jabón, shampoo y papel higiénico.",
+   "start": 6.22,
+   "end": 9.615,
+   "dur": 3.395,
+   "ps": "pˈasta ðentˈal, dˌesoðoɾˈante, xaβˈon, ʃampˈoo i papˈel ixjˈeniko."
+  },
+  {
+   "k": "w2",
+   "sub": "Carrefour, $108.565. ChangoMás, $111.249.",
+   "say": "Carrefour, ciento ocho mil. ChangoMás, ciento once mil.",
+   "start": 9.835,
+   "end": 12.826,
+   "dur": 2.991,
+   "ps": "kˌarefˈowɾ, sjˈɛnto ˈoʧo mˈil. ʧˈaŋɡo mˈas, sjˈɛnto ˈonse mˈil."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: 10 de los 19 están en oferta en Día desde hoy.",
+   "say": "Pero ojo: diez de los diecinueve están en oferta en Día desde hoy.",
+   "gap": 0.3,
+   "start": 13.046,
+   "end": 16.464,
+   "dur": 3.418,
+   "ps": "pˌeɾo ˈoxo: djˈes ðe los ðjˌesinwˈeβe estˈan en ofˈeɾta en dˈia ðˌesðe ˈoɪ."
+  },
+  {
+   "k": "b2",
+   "sub": "Ayer, el mismo changuito en Día salía $110.330.",
+   "say": "Ayer, el mismo changuito en Día salía ciento diez mil trescientos.",
+   "start": 16.764,
+   "end": 20.248,
+   "dur": 3.483,
+   "ps": "aʃˈeɾ, el mˈismo ʧaŋɡˈito en dˈia salˈia sjˈɛnto ðjˈes mˈil tɾesjˈɛntos."
+  },
+  {
+   "k": "p1",
+   "sub": "Si hacés esta compra una vez al mes, son $20.271 por mes.",
+   "say": "Si hacés esta compra una vez al mes, son veinte mil doscientos setenta pesos por mes.",
+   "start": 20.468,
+   "end": 25.071,
+   "dur": 4.603,
+   "ps": "si asˈes ˈesta kˈompɾa ˈuna βˈes al mˈes, sˈom bˈAnte mˈil ðosjˈɛntos setˈɛnta pˈesos poɾ mˈes."
+  }
+ ]
+}

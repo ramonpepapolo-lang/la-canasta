@@ -1,12 +1,12 @@
 {
- "date": "2026-11-24",
- "previous": "2026-11-23",
+ "date": "2026-11-25",
+ "previous": "2026-11-24",
  "index": {
-  "date": "2026-11-24",
-  "paid": 98.766,
-  "regular": 99.459,
-  "day_change": -0.06,
-  "days_of_data": 32,
+  "date": "2026-11-25",
+  "paid": 99.524,
+  "regular": 99.365,
+  "day_change": 0.77,
+  "days_of_data": 33,
   "series": [
    [
     "2026-10-24",
@@ -167,18 +167,23 @@
     "2026-11-24",
     98.766,
     99.459
+   ],
+   [
+    "2026-11-25",
+    99.524,
+    99.365
    ]
   ],
   "mode": "week",
-  "week_paid": -1.17,
-  "week_regular": 0.13,
+  "week_paid": -0.83,
+  "week_regular": 0.16,
   "now": [
-   "2026-11-18",
-   "2026-11-24"
+   "2026-11-19",
+   "2026-11-25"
   ],
   "before": [
-   "2026-11-11",
-   "2026-11-17"
+   "2026-11-12",
+   "2026-11-18"
   ]
  },
  "ranking": {
@@ -186,252 +191,252 @@
   "label_en": "Week of 22 to 28 November 2026",
   "days": [
    "2026-11-22",
-   "2026-11-24"
+   "2026-11-25"
   ],
-  "n_products": 293,
+  "n_products": 307,
   "shops": [
    {
     "shop": "ChangoMas",
-    "total": 1153802.71,
+    "total": 1227116.6,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1200397.79,
-    "pct": 4.04
+    "total": 1257384.08,
+    "pct": 2.47
    },
    {
     "shop": "Dia",
-    "total": 1220129.07,
-    "pct": 5.75
+    "total": 1263940.7,
+    "pct": 3.0
    },
    {
     "shop": "Jumbo",
-    "total": 1393172.33,
-    "pct": 20.75
+    "total": 1448411.5,
+    "pct": 18.03
    }
   ]
  },
  "down": [
   {
-   "shop": "ChangoMas",
-   "name": "Mayonesa Hellmanns Clásica 475 G",
-   "type": "mayonesa",
-   "before": 3089.0,
-   "now": 1619.25,
-   "pct": -47.6,
+   "shop": "Carrefour",
+   "name": "Shampoo Fructis Hydraliss 350 ml",
+   "type": "shampoo",
+   "before": 8990.0,
+   "now": 5394.0,
+   "pct": -40.0,
    "why": "promo_start"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Cerveza Rubia Warsteiner 473 Ml",
+   "shop": "Dia",
+   "name": "Detergente Concentrado Cif Active Gel Limon 500 Ml.",
+   "type": "detergente",
+   "before": 5450.0,
+   "now": 3270.0,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Detergente Concentrado Cif Active Gel Original 500 Ml.",
+   "type": "detergente",
+   "before": 5450.0,
+   "now": 3270.0,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Shampoo TRESEMME Brillo Lamelar 500 Ml.",
+   "type": "shampoo",
+   "before": 11880.0,
+   "now": 7128.0,
+   "pct": -40.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Dia",
+   "name": "Cerveza Schneider Rubia 710 Ml.",
    "type": "cerveza",
-   "before": 3699.0,
-   "now": 1941.98,
-   "pct": -47.5,
+   "before": 3890.0,
+   "now": 2490.0,
+   "pct": -36.0,
    "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Papel Higiénico Higienol Fresh Hoja Simple 30 M 4 U",
-   "type": "papel_higienico",
-   "before": 2649.0,
-   "now": 1490.06,
-   "pct": -43.8,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Vino Tinto Suter Malbec 750ml",
-   "type": "vino",
-   "before": 4829.0,
-   "now": 2999.0,
-   "pct": -37.9,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Yerba Mate Mañanita 1 Kg",
-   "type": "yerba",
-   "before": 5749.0,
-   "now": 3999.0,
-   "pct": -30.4,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Detergente Cif Active Gel Limón 500 Ml",
-   "type": "detergente",
-   "before": 4665.65,
-   "now": 3399.0,
-   "pct": -27.1,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Detergente Cif Concentrado Active Gel 500ml",
-   "type": "detergente",
-   "before": 4665.65,
-   "now": 3399.0,
-   "pct": -27.1,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Arroz Cañuelas Parboil 500 G",
-   "type": "arroz",
-   "before": 1609.0,
-   "now": 1206.75,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Arroz Check Largo Fino 1 Kg",
-   "type": "arroz",
-   "before": 1749.0,
-   "now": 1311.75,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Arroz Doble Dos Hermanos Non Gmo 1kg",
-   "type": "arroz",
-   "before": 3249.0,
-   "now": 2436.75,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Arroz Gallo Parboil 1kg",
-   "type": "arroz",
-   "before": 3249.0,
-   "now": 2436.75,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Arroz Largo Fino Lucchetti 1 Kg",
-   "type": "arroz",
-   "before": 2239.0,
-   "now": 1679.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  }
- ],
- "up": [
-  {
-   "shop": "Dia",
-   "name": "Galletitas Rellenas Melba 360 Gr.",
-   "type": "galletitas",
-   "before": 2250.0,
-   "now": 4540.0,
-   "pct": 101.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Harina 0000 con Vitaminas Favorita 1 Kg.",
-   "type": "harina_000",
-   "before": 1050.0,
-   "now": 1836.0,
-   "pct": 74.9,
-   "why": "list_up"
   },
   {
    "shop": "Carrefour",
    "name": "Cebolla Sanes en red 4 uni",
    "type": "cebolla",
-   "before": 2999.0,
-   "now": 4990.0,
-   "pct": 66.4,
-   "why": "promo_end"
+   "before": 4990.0,
+   "now": 3199.0,
+   "pct": -35.9,
+   "why": "list_down"
   },
   {
    "shop": "Dia",
    "name": "Agua Mineral sin Gas Eco de los Andes 2 Lts.",
    "type": "agua",
-   "before": 2050.0,
-   "now": 3187.0,
-   "pct": 55.5,
-   "why": "promo_end"
+   "before": 3187.0,
+   "now": 2050.0,
+   "pct": -35.7,
+   "why": "promo_start"
   },
   {
    "shop": "Dia",
    "name": "Shampoo Low Poo Metodo Curly Plusbelle 700 Ml.",
    "type": "shampoo",
-   "before": 5110.0,
-   "now": 7870.0,
-   "pct": 54.0,
-   "why": "promo_end"
+   "before": 7870.0,
+   "now": 5110.0,
+   "pct": -35.1,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Arroz Parboil Bolsa Luchetti 1 Kg.",
-   "type": "arroz",
-   "before": 1709.5,
-   "now": 2630.0,
-   "pct": 53.8,
-   "why": "promo_end"
+   "shop": "Carrefour",
+   "name": "Detergente Magistral Ultra Limón Botella 300 ml",
+   "type": "detergente",
+   "before": 3400.0,
+   "now": 2210.0,
+   "pct": -35.0,
+   "why": "promo_start"
   },
   {
-   "shop": "Dia",
-   "name": "Cerveza Brahma 710 Ml.",
+   "shop": "Carrefour",
+   "name": "Detergente Magistral Ultra Limón Botella 500 ml",
+   "type": "detergente",
+   "before": 5505.0,
+   "now": 3578.25,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Detergente Magistral Ultra Limón Botella 750 ml",
+   "type": "detergente",
+   "before": 8239.0,
+   "now": 5355.35,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Detergente Magistral Ultra de limón Doy Pack 450 ml",
+   "type": "detergente",
+   "before": 4709.0,
+   "now": 3060.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  }
+ ],
+ "up": [
+  {
+   "shop": "ChangoMas",
+   "name": "Cerveza Rubia Warsteiner 473 Ml",
    "type": "cerveza",
-   "before": 2080.0,
-   "now": 3200.0,
-   "pct": 53.8,
+   "before": 1941.98,
+   "now": 3699.0,
+   "pct": 90.5,
    "why": "promo_end"
   },
   {
-   "shop": "Dia",
-   "name": "Cerveza Brahma Lata 473 ml.",
+   "shop": "Carrefour",
+   "name": "Yerba mate Amanda tradicional 500 grs",
+   "type": "yerba",
+   "before": 1735.0,
+   "now": 2675.0,
+   "pct": 54.2,
+   "why": "list_up"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Cerveza blanca Qulmes 710 ml",
    "type": "cerveza",
-   "before": 1911.0,
-   "now": 2940.0,
+   "before": 2577.25,
+   "now": 3965.0,
    "pct": 53.8,
    "why": "promo_end"
   },
   {
-   "shop": "Dia",
-   "name": "Cerveza Heineken Lata 473 ml.",
+   "shop": "Carrefour",
+   "name": "Cerveza rubia Corona 330 ml",
    "type": "cerveza",
-   "before": 2788.5,
-   "now": 4290.0,
+   "before": 3177.85,
+   "now": 4886.67,
    "pct": 53.8,
-   "why": "promo_end"
+   "why": "list_down"
   },
   {
-   "shop": "Dia",
-   "name": "Cerveza Heineken lata 710 Ml.",
+   "shop": "Carrefour",
+   "name": "Cerveza rubia clásica Quilmes 1 lt",
    "type": "cerveza",
-   "before": 4023.5,
-   "now": 6190.0,
+   "before": 3097.25,
+   "now": 4765.0,
    "pct": 53.8,
    "why": "promo_end"
   },
   {
-   "shop": "Dia",
-   "name": "Cerveza Warsteiner 473 Ml.",
-   "type": "cerveza",
-   "before": 2398.5,
-   "now": 3690.0,
-   "pct": 53.8,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Dia",
-   "name": "Detergente Concentrado CIF Lima Botella 300 Ml.",
+   "shop": "Carrefour",
+   "name": "Detergente Concentrado Cif Lima Botella 300 ml",
    "type": "detergente",
    "before": 1755.0,
    "now": 2700.0,
    "pct": 53.8,
    "why": "promo_end"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Detergente Concentrado Cif Lima Botella 500 ml",
+   "type": "detergente",
+   "before": 2853.5,
+   "now": 4390.0,
+   "pct": 53.8,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Banana 1 Kg",
+   "type": "banana",
+   "before": 1799.0,
+   "now": 2699.0,
+   "pct": 50.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Vino tinto Malbec Elementos 750 ml",
+   "type": "vino",
+   "before": 5124.0,
+   "now": 7320.0,
+   "pct": 42.9,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Manzana Roja 1 Kg",
+   "type": "manzana",
+   "before": 2799.0,
+   "now": 3999.0,
+   "pct": 42.9,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Papa 500 G",
+   "type": "papa",
+   "before": 1999.0,
+   "now": 2799.0,
+   "pct": 40.0,
+   "why": "promo_end"
+  },
+  {
+   "shop": "Dia",
+   "name": "Pasta Dental Colgate Luminous White Color Correct 70 Gr.",
+   "type": "pasta_dental",
+   "before": 5620.0,
+   "now": 7495.0,
+   "pct": 33.4,
+   "why": "promo_end"
   }
  ],
- "n_down": 133,
- "n_up": 81
+ "n_down": 89,
+ "n_up": 186
 }

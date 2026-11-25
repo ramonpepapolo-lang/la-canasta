@@ -2,7 +2,7 @@ name: Enviar emails a medios
 on:
   push:
     branches: [envios]
-    paths: [emails6.json]
+    paths: [emails7.json]
 permissions:
   contents: write
 jobs:
@@ -14,9 +14,9 @@ jobs:
       - name: Send
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-        run: python3 enviar.py emails6.json resultados6.json hola@lacanastaindex.com
+        run: python3 enviar.py emails7.json resultados7.json hola@lacanastaindex.com
       - name: Save the result
         if: always()
         run: |
           git config user.name "la-canasta-bot" && git config user.email "actions@users.noreply.github.com"
-          git add resultados6.json && git commit -q -m "Resultado del envío" && git push -q
+          git add resultados7.json && git commit -q -m "Resultado del envío" && git push -q

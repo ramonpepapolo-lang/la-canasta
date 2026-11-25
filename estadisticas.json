@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-25 14:43",
+ "when_utc": "2026-11-25 16:05",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -19,9 +19,21 @@
   "source": "public pages",
   "subscribers_text": "618",
   "views_total_text": "171,476",
-  "views_sum_of_videos": 82579,
-  "videos": 49,
+  "views_sum_of_videos": 82581,
+  "videos": 50,
   "list": [
+   {
+    "id": "sb2xCVTI95o",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Mismos 19 de higiene: $20.271 más caro en Jumbo que en Día",
+    "published": "2026-11-25",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "aP2HhpxV2XM",
     "debug": null,
@@ -41,7 +53,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 69,
+    "views": 71,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -620,15 +632,35 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 54,
-  "tweet_count": 82,
+  "media_count": 56,
+  "tweet_count": 84,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-25",
+    "text": "Los mismos 233 productos, del jueves 19 al miércoles 25/11: el más barato del día fue Carr",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-25",
+    "text": "Los mismos 19 productos de higiene, mismo código de barras, hoy 25/11:\nDía $98.037\nCarrefo",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-24",
     "text": "Los mismos 262 productos, lunes vs martes (24/11):\nChangoMás $1.084.460 → $951.187 (−12,3%",
     "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,
@@ -639,26 +671,6 @@
     "text": "Misma Fanta 2,25 L, mismo código de barras, hoy 24/11:\nChangoMás $3.431\nCarrefour, Día y J",
     "bookmark_count": 0,
     "impression_count": 1,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-23",
-    "text": "¿Cuántos productos en oferta tiene cada súper? El martes 17/11 Día cayó de 29,6% a 12% y C",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-23",
-    "text": "Misma leche condensada Nestlé 395 g, mismo código de barras: $2.838 en Carrefour y $6.200 ",
-    "bookmark_count": 0,
-    "impression_count": 4,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

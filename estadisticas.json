@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-26 14:42",
+ "when_utc": "2026-11-26 17:53",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,11 +17,23 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "662",
-  "views_total_text": "172,880",
-  "views_sum_of_videos": 85331,
-  "videos": 50,
+  "subscribers_text": "672",
+  "views_total_text": "178,720",
+  "views_sum_of_videos": 85921,
+  "videos": 51,
   "list": [
+   {
+    "id": "xs0FIU39QBc",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Misma picada: $22.139 más cara en Jumbo que en Carrefour",
+    "published": "2026-11-26",
+    "views": 0,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "sb2xCVTI95o",
     "debug": null,
@@ -65,7 +77,7 @@
     "player_status": null,
     "title": "Fernet Branca Menta 750: $13.650 en Carrefour, $21.000 en Jumbo",
     "published": "2026-11-22",
-    "views": 48,
+    "views": 49,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +101,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 4,
+    "views": 6,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -137,7 +149,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 37,
+    "views": 38,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -149,7 +161,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 12,
+    "views": 13,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -161,7 +173,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 11,
+    "views": 13,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -338,9 +350,9 @@
     "id": "WxtF4OwrTQA",
     "debug": null,
     "views_text": null,
-    "player_status": "LOGIN_REQUIRED",
+    "player_status": null,
     "title": "Asado para 6: hoy ChangoMás le ganó a Carrefour 🥩 #finanzas #supermercado #dinero #inflación",
-    "published": "",
+    "published": "2026-11-06",
     "views": 42,
     "views_exact": true,
     "likes": 2,
@@ -355,7 +367,7 @@
     "published": "2026-11-05",
     "views": 61,
     "views_exact": true,
-    "likes": 612,
+    "likes": 1,
     "comments": null
    },
    {
@@ -389,9 +401,9 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 22074,
+    "views": 22436,
     "views_exact": true,
-    "likes": 6,
+    "likes": 660,
     "comments": null
    },
    {
@@ -461,9 +473,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1303,
+    "views": 1307,
     "views_exact": true,
-    "likes": 132,
+    "likes": 136,
     "comments": null
    },
    {
@@ -509,9 +521,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21377,
+    "views": 21384,
     "views_exact": true,
-    "likes": 150,
+    "likes": 149,
     "comments": 1
    },
    {
@@ -545,7 +557,7 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10395,
+    "views": 10385,
     "views_exact": true,
     "likes": 682,
     "comments": 2
@@ -559,7 +571,7 @@
     "published": "2026-10-29",
     "views": 46,
     "views_exact": true,
-    "likes": 0,
+    "likes": 858,
     "comments": null
    },
    {
@@ -569,7 +581,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8953,
+    "views": 9028,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -617,7 +629,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19546,
+    "views": 19691,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -632,10 +644,30 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 56,
-  "tweet_count": 84,
+  "media_count": 58,
+  "tweet_count": 86,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-26",
+    "text": "Detergente Magistral 750 ml, mismo código de barras: del 20 al 23/11 lo más barato estaba ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-26",
+    "text": "La misma picada, 26 productos con el mismo código de barras, hoy 26/11:\nCarrefour $123.331",
+    "bookmark_count": 0,
+    "impression_count": 1,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-25",
     "text": "Los mismos 233 productos, del jueves 19 al miércoles 25/11: el más barato del día fue Carr",
@@ -649,26 +681,6 @@
    {
     "date": "2026-11-25",
     "text": "Los mismos 19 productos de higiene, mismo código de barras, hoy 25/11:\nDía $98.037\nCarrefo",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-24",
-    "text": "Los mismos 262 productos, lunes vs martes (24/11):\nChangoMás $1.084.460 → $951.187 (−12,3%",
-    "bookmark_count": 0,
-    "impression_count": 2,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-24",
-    "text": "Misma Fanta 2,25 L, mismo código de barras, hoy 24/11:\nChangoMás $3.431\nCarrefour, Día y J",
     "bookmark_count": 0,
     "impression_count": 1,
     "like_count": 0,

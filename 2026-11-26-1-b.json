@@ -1,0 +1,7 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"La misma picada, 26 productos: $123.331 en Carrefour, $145.470 en Jumbo.","say":"La misma picada, veintiséis productos: ciento veintitrés mil en Carrefour, ciento cuarenta y cinco mil en Jumbo.","gap":0.3},
+{"k":"w1","sub":"Día, $127.619. ChangoMás, $133.893.","say":"Día, ciento veintiocho mil. ChangoMás, ciento treinta y cuatro mil."},
+{"k":"b1","sub":"Pero ojo: más de la mitad de la diferencia son 5 fiambres en oferta en Carrefour.","say":"Pero ojo: más de la mitad de la diferencia son cinco fiambres en oferta en Carrefour.","gap":0.3},
+{"k":"b2","sub":"Si la oferta termina, Día pasa adelante.","say":"Si la oferta termina, Día pasa adelante."},
+{"k":"p1","sub":"Si la armás una vez por mes: $22.139 por mes.","say":"Si la armás una vez por mes, son veintidós mil pesos por mes."}
+]}

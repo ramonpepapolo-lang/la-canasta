@@ -1,0 +1,53 @@
+{
+ "total": 22.457,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "La misma picada, 26 productos: $123.331 en Carrefour, $145.470 en Jumbo.",
+   "say": "La misma picada, veintiséis productos: ciento veintitrés mil en Carrefour, ciento cuarenta y cinco mil en Jumbo.",
+   "gap": 0.3,
+   "start": 0.12,
+   "end": 6.295,
+   "dur": 6.175,
+   "ps": "la mˈisma pikˈaða, bˌAntisˈeis pɾoðˈuktos: sjˈɛnto βˌAntitɾˈes mˈil en kˌarefˈowɾ, sjˈɛnto kwaɾˈɛnta i sˈinko mˈil en xˈumbo."
+  },
+  {
+   "k": "w1",
+   "sub": "Día, $127.619. ChangoMás, $133.893.",
+   "say": "Día, ciento veintiocho mil. ChangoMás, ciento treinta y cuatro mil.",
+   "start": 6.595,
+   "end": 10.059,
+   "dur": 3.464,
+   "ps": "dˈia, sjˈɛnto βAntjˈoʧo mˈil. ʧˈaŋɡo mˈas, sjˈɛnto tɾˈAnta i kwˈatɾo mˈil."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: más de la mitad de la diferencia son 5 fiambres en oferta en Carrefour.",
+   "say": "Pero ojo: más de la mitad de la diferencia son cinco fiambres en oferta en Carrefour.",
+   "gap": 0.3,
+   "start": 10.279,
+   "end": 14.8,
+   "dur": 4.52,
+   "ps": "pˌeɾo ˈoxo: mˈas ðe la mitˈad ðe la ðˌifeɾˈɛnsja sˈon sˈinko fjˈambɾes en ofˈeɾta en kˌarefˈowɾ."
+  },
+  {
+   "k": "b2",
+   "sub": "Si la oferta termina, Día pasa adelante.",
+   "say": "Si la oferta termina, Día pasa adelante.",
+   "start": 15.1,
+   "end": 17.364,
+   "dur": 2.264,
+   "ps": "si la ofˈeɾta teɾmˈina, dˈia pˈasa ˌaðelˈante."
+  },
+  {
+   "k": "p1",
+   "sub": "Si la armás una vez por mes: $22.139 por mes.",
+   "say": "Si la armás una vez por mes, son veintidós mil pesos por mes.",
+   "start": 17.584,
+   "end": 20.937,
+   "dur": 3.353,
+   "ps": "si la aɾmˈas ˈuna βˈes poɾ mˈes, sˈom bˌAntiðˈos mˈil pˈesos poɾ mˈes."
+  }
+ ]
+}

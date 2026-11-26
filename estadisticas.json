@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-25 18:10",
+ "when_utc": "2026-11-26 02:06",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "618",
+  "subscribers_text": "642",
   "views_total_text": "171,511",
-  "views_sum_of_videos": 82584,
+  "views_sum_of_videos": 83162,
   "videos": 50,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Mismos 19 de higiene: $20.271 más caro en Jumbo que en Día",
     "published": "2026-11-25",
-    "views": 4,
+    "views": 27,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -41,7 +41,7 @@
     "player_status": null,
     "title": "Fanta 2,25 L: $3.431 en ChangoMás, $6.100 en Carrefour, Día y Jumbo",
     "published": "2026-11-24",
-    "views": 41,
+    "views": 47,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 71,
+    "views": 70,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -65,7 +65,7 @@
     "player_status": null,
     "title": "Fernet Branca Menta 750: $13.650 en Carrefour, $21.000 en Jumbo",
     "published": "2026-11-22",
-    "views": 45,
+    "views": 48,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -77,7 +77,7 @@
     "player_status": null,
     "title": "Weekly report: same bread, +23% at one store and −14% at another | Week of Nov 15 to 21",
     "published": "2026-11-22",
-    "views": 0,
+    "views": 4,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,9 +89,9 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 0,
+    "views": 3,
     "views_exact": true,
-    "likes": 0,
+    "likes": 1,
     "comments": null
    },
    {
@@ -125,7 +125,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 51,
+    "views": 52,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -149,7 +149,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 8,
+    "views": 10,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -197,7 +197,7 @@
     "player_status": null,
     "title": "Pañales talle G: el mismo paquete, $15.200 o $27.750",
     "published": "2026-11-17",
-    "views": 144,
+    "views": 148,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -389,9 +389,9 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 20013,
+    "views": 20347,
     "views_exact": true,
-    "likes": 5,
+    "likes": 6,
     "comments": null
    },
    {
@@ -408,13 +408,13 @@
    },
    {
     "id": "JjtoCbpvaQg",
-    "debug": null,
+    "debug": " - YouTube",
     "views_text": null,
     "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
     "published": "",
-    "views": 950,
-    "views_exact": true,
+    "views": null,
+    "views_exact": false,
     "likes": 8,
     "comments": null
    },
@@ -461,9 +461,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1062,
+    "views": 1280,
     "views_exact": true,
-    "likes": 118,
+    "likes": 124,
     "comments": null
    },
    {
@@ -509,9 +509,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21166,
+    "views": 21303,
     "views_exact": true,
-    "likes": 140,
+    "likes": 143,
     "comments": 1
    },
    {
@@ -545,9 +545,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10076,
+    "views": 10325,
     "views_exact": true,
-    "likes": 672,
+    "likes": 680,
     "comments": 2
    },
    {
@@ -569,7 +569,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 8552,
+    "views": 8900,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -617,7 +617,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19156,
+    "views": 19353,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -660,7 +660,7 @@
     "date": "2026-11-24",
     "text": "Los mismos 262 productos, lunes vs martes (24/11):\nChangoMás $1.084.460 → $951.187 (−12,3%",
     "bookmark_count": 0,
-    "impression_count": 1,
+    "impression_count": 2,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

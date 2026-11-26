@@ -1,0 +1,10 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.22,"tail":1.3,"lines":[
+{"k":"h1","sub":"La misma picada: 26 productos.","say":"La misma picada: veintiséis productos."},
+{"k":"h2","sub":"$123.331 en Carrefour. $145.470 en Jumbo.","say":"Ciento veintitrés mil en Carrefour. Ciento cuarenta y cinco mil en Jumbo.","gap":0.3},
+{"k":"w1","sub":"Mismo código de barras. Carrefour $123.331, Día $127.619.","say":"Mismo código de barras. Carrefour, ciento veintitrés mil. Día, ciento veintisiete mil seiscientos."},
+{"k":"w2","sub":"ChangoMás $133.893. Jumbo $145.470: $22.139 más.","say":"ChangoMás, ciento treinta y tres mil novecientos. Jumbo, ciento cuarenta y cinco mil quinientos: veintidós mil más."},
+{"k":"b1","sub":"Pero ojo: más de la mitad de esa diferencia son 5 fiambres.","say":"Pero ojo. Más de la mitad de esa diferencia son cinco fiambres.","gap":0.3},
+{"k":"b2","sub":"Jamón y salame en oferta en Carrefour, 25% a 30% menos, hace casi 3 semanas.","say":"Jamón y salame en oferta en Carrefour, veinticinco a treinta por ciento menos, hace casi tres semanas."},
+{"k":"b3","sub":"Si la oferta termina, Día pasa a ser el más barato.","say":"Si la oferta termina, Día pasa a ser el más barato."},
+{"k":"p1","sub":"Si la armás una vez por mes: $22.139 por mes.","say":"Si la armás una vez por mes, son veintidós mil ciento treinta y nueve pesos por mes."}
+]}

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-26 17:53",
+ "when_utc": "2026-11-26 21:53",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "672",
+  "subscribers_text": "683",
   "views_total_text": "178,720",
-  "views_sum_of_videos": 85921,
+  "views_sum_of_videos": 181686,
   "videos": 51,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Misma picada: $22.139 más cara en Jumbo que en Carrefour",
     "published": "2026-11-26",
-    "views": 0,
+    "views": 5,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +53,7 @@
     "player_status": null,
     "title": "Fanta 2,25 L: $3.431 en ChangoMás, $6.100 en Carrefour, Día y Jumbo",
     "published": "2026-11-24",
-    "views": 62,
+    "views": 63,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 6,
+    "views": 8,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -197,7 +197,7 @@
     "player_status": null,
     "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
     "published": "2026-11-17",
-    "views": 2,
+    "views": 3,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -367,7 +367,7 @@
     "published": "2026-11-05",
     "views": 61,
     "views_exact": true,
-    "likes": 1,
+    "likes": 669,
     "comments": null
    },
    {
@@ -401,18 +401,18 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 22436,
+    "views": 22675,
     "views_exact": true,
-    "likes": 660,
+    "likes": 6,
     "comments": null
    },
    {
     "id": "Y9JkCvIlXLk",
     "debug": null,
     "views_text": null,
-    "player_status": "LOGIN_REQUIRED",
+    "player_status": null,
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
-    "published": "",
+    "published": "2026-11-04",
     "views": 49,
     "views_exact": true,
     "likes": 2,
@@ -420,14 +420,14 @@
    },
    {
     "id": "JjtoCbpvaQg",
-    "debug": " - YouTube",
+    "debug": null,
     "views_text": null,
-    "player_status": "LOGIN_REQUIRED",
+    "player_status": null,
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
-    "published": "",
-    "views": null,
-    "views_exact": false,
-    "likes": 8,
+    "published": "2026-11-04",
+    "views": 1530,
+    "views_exact": true,
+    "likes": 9,
     "comments": null
    },
    {
@@ -473,9 +473,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1307,
+    "views": 1312,
     "views_exact": true,
-    "likes": 136,
+    "likes": 135,
     "comments": null
    },
    {
@@ -521,9 +521,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21384,
+    "views": 21387,
     "views_exact": true,
-    "likes": 149,
+    "likes": 150,
     "comments": 1
    },
    {
@@ -557,9 +557,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10385,
+    "views": 10399,
     "views_exact": true,
-    "likes": 682,
+    "likes": 685,
     "comments": 2
    },
    {
@@ -571,7 +571,7 @@
     "published": "2026-10-29",
     "views": 46,
     "views_exact": true,
-    "likes": 858,
+    "likes": 0,
     "comments": null
    },
    {
@@ -581,7 +581,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 9028,
+    "views": 9149,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -590,9 +590,9 @@
     "id": "Sg7xwPm2cvA",
     "debug": null,
     "views_text": null,
-    "player_status": "LOGIN_REQUIRED",
+    "player_status": null,
     "title": "La Canasta: tracking Argentina’s supermarket prices every day - (Supermarket Inflation)",
-    "published": "",
+    "published": "2026-10-28",
     "views": 43,
     "views_exact": true,
     "likes": 3,
@@ -600,13 +600,13 @@
    },
    {
     "id": "fKmu-LsOw64",
-    "debug": " - YouTube",
+    "debug": null,
     "views_text": null,
-    "player_status": "LOGIN_REQUIRED",
+    "player_status": null,
     "title": "La Canasta: medimos los precios del súper en Argentina todos los días - (Supermarket Inflation)",
-    "published": "",
-    "views": null,
-    "views_exact": false,
+    "published": "2026-10-28",
+    "views": 93783,
+    "views_exact": true,
     "likes": 8,
     "comments": 1
    },
@@ -629,7 +629,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19691,
+    "views": 19752,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -662,7 +662,7 @@
     "date": "2026-11-26",
     "text": "La misma picada, 26 productos con el mismo código de barras, hoy 26/11:\nCarrefour $123.331",
     "bookmark_count": 0,
-    "impression_count": 1,
+    "impression_count": 2,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

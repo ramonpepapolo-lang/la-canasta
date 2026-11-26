@@ -9,6 +9,16 @@
 # average price in the last 7 days of the month vs its average price on the same days of the month
 # before (24-30 November vs 24-30 October). Same days of the week on both sides, so weekend promos
 # do not bias it. Products are combined like the index: type, then group, then INDEC weights.
+#
+# Which price is the main number (decided with Ramon, 26 Nov 2026):
+# - "average" months (a full month against a full month, like INDEC): the price people pay, promotions
+#   open to everyone included, as INDEC does. Temporary sales are a small part of a whole month.
+# - "week" (November 2026 only): the REGULAR price. A single week is fully exposed to one-off sales (the
+#   last week of November 2026 is Black Friday, 27 Nov: ChangoMás cut 130 basket products by 25% on 24 Nov),
+#   which INDEC, collecting across the whole month, barely sees. The price paid is shown right next to it.
+# - Also always given: "sin frutas ni verduras" (fruit and vegetables left out, like INDEC's figures without
+#   seasonal products), because our base week only had 3 vegetables and 2 fruits (onion fell 36% in November
+#   with the new harvest and moved the whole index by about 1 point).
 
 import calendar
 import csv
@@ -25,6 +35,7 @@ TOP = 5           # how many products to show going up and going down
 WEEK = 7          # days in each window of the "week" method
 MIN_WEEK_DAYS = 5 # days with data each window needs
 MIN_IN_STOCK = 4  # days in stock a product needs in each window to be compared
+SEASONAL = {"frutas", "verduras"}  # left out of the "sin frutas ni verduras" figure
 
 
 def read_csv(path):
@@ -153,7 +164,7 @@ def week_compare(now_days, before_days, min_stock=MIN_IN_STOCK):
                                  "sku_id": key[1], "name": b["name"], "before": round(mean(pb), 2),
                                  "now": round(mean(pn), 2), "pct": pct(mean(pn), mean(pb))})
 
-    def combine(kind, shop=None, only_group=None):
+    def combine(kind, shop=None, only_group=None, no_seasonal=False):
         per_type = defaultdict(list)  # type -> [shop average]
         for (t, s), xs in logs[kind].items():
             if shop is None or s == shop:
@@ -166,7 +177,7 @@ def week_compare(now_days, before_days, min_stock=MIN_IN_STOCK):
             return round((math.exp(mean(xs)) - 1) * 100, 2) if xs else None
         num = den = 0.0
         for g, xs in per_group.items():
-            if weight.get(g):
+            if weight.get(g) and not (no_seasonal and g in SEASONAL):
                 num += weight[g] * mean(xs)
                 den += weight[g]
         return round((math.exp(num / den) - 1) * 100, 2) if den else None
@@ -176,6 +187,14 @@ def week_compare(now_days, before_days, min_stock=MIN_IN_STOCK):
         p_["regular_pct"] = round((r_ - 1) * 100, 2) if r_ else None
     return products, combine
 
+
+# 7-day average of the index up to each day (fewer days only at the very start), for the charts:
+# each chain has weekly promotion cycles, so the daily line jumps; the average shows the trend.
+avg7 = {}
+for i, r in enumerate(daily):
+    w_ = daily[max(0, i - 6):i + 1]
+    avg7[r["date"]] = (round(sum(float(x["index_paid"]) for x in w_) / len(w_), 3),
+                       round(sum(float(x["index_regular"]) for x in w_) / len(w_), 3))
 
 os.makedirs("index/informes", exist_ok=True)
 listing = []
@@ -199,17 +218,29 @@ for i, m in enumerate(months):
         avg = lambda rs, k: sum(float(r[k]) for r in rs) / len(rs)
         headline["avg_paid"] = pct(avg(rows, "index_paid"), avg(prev, "index_paid"))
         headline["avg_regular"] = pct(avg(rows, "index_regular"), avg(prev, "index_regular"))
+        # without fruit and vegetables: every product's average price over the whole month vs the month before
+        _p, _c = week_compare([r["date"] for r in rows if r["date"] in prices],
+                              [r["date"] for r in prev if r["date"] in prices], min_stock=MIN_DAYS // 2)
+        headline["avg_paid_core"] = _c("paid", no_seasonal=True)
+        headline["avg_regular_core"] = _c("regular", no_seasonal=True)
     week_now, week_before = week_windows(m, months[i - 1], end["date"]) if prev else ([], [])
     use_week = (not full and len(week_now) >= MIN_WEEK_DAYS and len(week_before) >= MIN_WEEK_DAYS)
     if use_week:
         week_products, combine = week_compare(week_now, week_before)
         headline["week_paid"] = combine("paid")
         headline["week_regular"] = combine("regular")
+        headline["week_paid_core"] = combine("paid", no_seasonal=True)
+        headline["week_regular_core"] = combine("regular", no_seasonal=True)
         headline["week_now"] = [week_now[0], week_now[-1]]
         headline["week_before"] = [week_before[0], week_before[-1]]
     method = "average" if full else ("week" if use_week else "end_to_end")
-    main = {"average": headline["avg_paid"], "week": headline.get("week_paid"),
+    main_kind = "regular" if method == "week" else "paid"
+    main = {"average": headline["avg_paid"], "week": headline.get("week_regular"),
             "end_to_end": headline["end_to_end_paid"]}[method]
+    other = {"average": headline["avg_regular"], "week": headline.get("week_paid"),
+             "end_to_end": headline["end_to_end_regular"]}[method]
+    core = {"average": headline.get(f"avg_{main_kind}_core"), "week": headline.get(f"week_{main_kind}_core"),
+            "end_to_end": None}[method]
 
     if use_week:
         shop_changes = [{"shop": s, "pct": combine("paid", shop=s)} for s in shops]
@@ -220,7 +251,7 @@ for i, m in enumerate(months):
     for g, gr in group_at[end["date"]].items():
         b = group_at[base["date"]].get(g)
         if use_week:
-            v = combine("paid", only_group=g)
+            v = combine(main_kind, only_group=g)
             if v is not None:
                 group_changes.append({"group": g, "in_headline": gr["in_headline_index"] == "yes", "pct": v})
         elif b:
@@ -247,19 +278,23 @@ for i, m in enumerate(months):
 
     report = {
         "month": m, "complete": complete, "full_month": full, "method": method, "inflation": main,
+        "main_kind": main_kind, "other_kind": "paid" if main_kind == "regular" else "regular",
+        "inflation_other": other, "inflation_core": core,
         "base_date": base["date"], "end_date": end["date"], "days_of_data": len(rows),
         "prices_collected": sum(collected[r["date"]] for r in rows),
         "headline": headline, "shops": shop_changes, "groups": group_changes,
         "products_compared": len(products), "products_up": len(up), "products_down": len(down),
         "products_same": len(products) - len(up) - len(down),
         "top_up": up[:TOP], "top_down": sorted(down, key=lambda x: x["pct"])[:TOP],
-        "series": [{"date": r["date"], "paid": float(r["index_paid"]), "regular": float(r["index_regular"])}
+        "series": [{"date": r["date"], "paid": float(r["index_paid"]), "regular": float(r["index_regular"]),
+                    "paid7": avg7[r["date"]][0], "regular7": avg7[r["date"]][1]}
                    for r in ([base] if prev else []) + rows],
     }
     with open(f"index/informes/{m}.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=1)
     listing.append({"month": m, "complete": complete, "days_of_data": len(rows),
-                    "publishable": complete and len(rows) >= MIN_DAYS, "inflation": main, "method": method})
+                    "publishable": complete and len(rows) >= MIN_DAYS, "inflation": main, "method": method,
+                    "main_kind": main_kind, "inflation_other": other, "inflation_core": core})
 
 with open("index/informes/lista.json", "w", encoding="utf-8") as f:
     json.dump(listing, f, ensure_ascii=False, indent=1)
@@ -282,7 +317,8 @@ with open("index/semana.json", "w", encoding="utf-8") as f:
 monthly_path = "index/monthly.csv"
 if os.path.exists(monthly_path):
     mrows = read_csv(monthly_path)
-    week_by_month = {x["month"]: x["inflation"] for x in listing if x["method"] == "week"}
+    week_by_month = {x["month"]: (x["inflation_other"] if x["main_kind"] == "regular" else x["inflation"])
+                     for x in listing if x["method"] == "week"}
     for r in mrows:
         r["week_paid_pct"] = week_by_month.get(r["month"], "")
     with open(monthly_path, "w", newline="", encoding="utf-8") as f:

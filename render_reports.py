@@ -78,7 +78,9 @@ def line_chart(series, shade_from, lang, w=680, h=180):
     """Daily index, price paid and list price. Days from shade_from on are shaded (this week)."""
     if len(series) < 2:
         return ""
-    vals = [p["paid"] for p in series] + [p["regular"] for p in series]
+    sm = series[0].get("paid7") is not None  # monthly: 7-day averages thick, each day thin
+    PK, RK = ("paid7", "regular7") if sm else ("paid", "regular")
+    vals = [p["paid"] for p in series] + [p[RK] for p in series] + [p[PK] for p in series]
     lo, hi = min(vals), max(vals)
     pad = max(0.3, (hi - lo) * 0.15)
     lo, hi = lo - pad, hi + pad
@@ -100,11 +102,15 @@ def line_chart(series, shade_from, lang, w=680, h=180):
         t += step
     for i, p in enumerate(series):
         out.append(f'<text x="{X(i):.1f}" y="{h - 12}" text-anchor="middle" fill="{MUTED}">{short_day(p["date"], lang)}</text>')
-    for key, col, dash in (("regular", MUTED, "4 3"), ("paid", NAVY, "")):
+    if sm:
+        pts = " ".join(f"{X(i):.1f},{Y(p['paid']):.1f}" for i, p in enumerate(series))
+        out.append(f'<polyline points="{pts}" fill="none" stroke="{CELESTE}" stroke-width="1.3" stroke-linejoin="round"/>')
+    for key, col, dash in ((RK, MUTED, "4 3"), (PK, NAVY, "")):
         pts = " ".join(f"{X(i):.1f},{Y(p[key]):.1f}" for i, p in enumerate(series))
         out.append(f'<polyline points="{pts}" fill="none" stroke="{col}" stroke-width="2.4" stroke-dasharray="{dash}" stroke-linejoin="round"/>')
-    for i, p in enumerate(series):
-        out.append(f'<circle cx="{X(i):.1f}" cy="{Y(p["paid"]):.1f}" r="2.6" fill="{NAVY}"/>')
+    if not sm:
+        for i, p in enumerate(series):
+            out.append(f'<circle cx="{X(i):.1f}" cy="{Y(p["paid"]):.1f}" r="2.6" fill="{NAVY}"/>')
     out.append("</svg>")
     return "".join(out)
 
@@ -152,8 +158,8 @@ p {{ margin: 0 0 2mm; }}
 .top img {{ height: 9mm; }}
 .kind {{ font-size: 8.5pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: {SUN}; }}
 .sub {{ color: {MUTED}; font-size: 10pt; }}
-.big {{ display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin: 3mm 0 2.5mm; }}
-.box {{ border: 1px solid #D9DFE8; border-radius: 3mm; padding: 3mm 4mm; }}
+.big {{ display: flex; gap: 4mm; margin: 3mm 0 2.5mm; }}
+.box {{ flex: 1 1 0; min-width: 0; border: 1px solid #D9DFE8; border-radius: 3mm; padding: 3mm 4mm; }}
 .box .l {{ font-size: 8.8pt; color: {MUTED}; font-weight: 600; }}
 .box .v {{ font-family: "DM Serif Display", Georgia, serif; font-size: 24pt; line-height: 1.05; }}
 .box .n {{ font-size: 8.6pt; color: {MUTED}; }}
@@ -350,11 +356,22 @@ def monthly(r, lang, comment=""):
                              "the month's last day against the previous month's last day")}[r["method"]][0 if es else 1]
     subtitle = (f"Inflación del supermercado. Se mide {esc(method)}." if es else f"Supermarket inflation. Measured as {esc(method)}.")
     h = r["headline"]
-    reg = h.get("avg_regular") if r["method"] == "average" else (h.get("week_regular") if r["method"] == "week" else h.get("end_to_end_regular"))
-    big = (f'<div class="big"><div class="box"><div class="l">{"Inflación del súper (precio que se paga)" if es else "Supermarket inflation (price paid)"}</div>'
-           f'<div class="v" style="color:{color(r["inflation"])}">{pct(r["inflation"], lang)}</div><div class="n">{"Con las promociones abiertas a todos" if es else "With the promotions open to everyone"}</div></div>'
-           f'<div class="box"><div class="l">{"Precio de lista (sin promociones)" if es else "List price (no promotions)"}</div>'
-           f'<div class="v" style="color:{color(reg)}">{pct(reg, lang)}</div><div class="n">Carrefour, ChangoMás {"y" if es else "and"} Día</div></div></div>')
+    kind = r.get("main_kind", "paid")
+    other = r.get("inflation_other")
+    if other is None:
+        other = h.get("avg_regular") if r["method"] == "average" else (h.get("week_regular") if r["method"] == "week" else h.get("end_to_end_regular"))
+    core = r.get("inflation_core")
+    LBL = {"paid": (("Precio que se paga", "Con las promociones abiertas a todos"), ("Price paid", "With the promotions open to everyone")),
+           "regular": (("Precio de lista (sin promociones)", "Carrefour, ChangoMás y Día"), ("List price (no promotions)", "Carrefour, ChangoMás and Día"))}
+    lab = lambda k: LBL[k][0 if es else 1]
+    okind = "regular" if kind == "paid" else "paid"
+    box = lambda l, v, n: (f'<div class="box"><div class="l">{l}</div><div class="v" style="color:{color(v)}">{pct(v, lang)}</div>'
+                           f'<div class="n">{n}</div></div>')
+    big = ('<div class="big">' + box(("Inflación del súper: " if es else "Supermarket inflation: ") + lab(kind)[0].lower(), r["inflation"], lab(kind)[1])
+           + box(lab(okind)[0], other, lab(okind)[1])
+           + (box("Sin frutas ni verduras" if es else "Without fruit and vegetables", core,
+                  "Cambian con la estación" if es else "They move with the season") if core is not None else "")
+           + '</div>')
     gs = [g for g in r["groups"] if g["in_headline"]]
     gname = {g: n for g, n in ((x, None) for x in [])}
     names_es = {"pan_cereales": "Pan y cereales", "carne_vacuna": "Carne vacuna", "carne_ave": "Pollo", "lacteos": "Lácteos y huevos", "aceites": "Aceites",
@@ -368,8 +385,11 @@ def monthly(r, lang, comment=""):
     nm = names_es if es else names_en
     up = gs[0] if gs else None
     down = gs[-1] if gs else None
-    s1 = (f"En {MES[m - 1]}, lo que se paga en el súper cambió {pct(r['inflation'], lang)}; sin promociones, {pct(reg, lang)}. "
-          if es else f"In {MONTH_EN[m - 1]}, what people pay at the supermarket changed {pct(r['inflation'], lang)}; without promotions, {pct(reg, lang)}. ")
+    paid_v, reg_v = (r["inflation"], other) if kind == "paid" else (other, r["inflation"])
+    s1 = (f"En {MES[m - 1]}, los precios de lista del súper cambiaron {pct(reg_v, lang)}; con las promociones, lo que se paga cambió {pct(paid_v, lang)}"
+          + (f"; sin frutas ni verduras, {pct(core, lang)}. " if core is not None else ". ")
+          if es else f"In {MONTH_EN[m - 1]}, supermarket list prices changed {pct(reg_v, lang)}; with promotions, what people pay changed {pct(paid_v, lang)}"
+          + (f"; without fruit and vegetables, {pct(core, lang)}. " if core is not None else ". "))
     if up and down:
         s1 += (f"Lo que más subió fue {nm.get(up['group'], up['group']).lower()} ({pct(up['pct'], lang, 1)}) y lo que más bajó, "
                f"{nm.get(down['group'], down['group']).lower()} ({pct(down['pct'], lang, 1)}). " if es else
@@ -379,7 +399,7 @@ def monthly(r, lang, comment=""):
            if es else f"Of {r['products_compared']} products compared, {r['products_up']} went up, {r['products_down']} went down and {r['products_same']} stayed the same.")
     com = f'<div class="note" style="margin-top:2mm">{esc(comment)}<br><b>Ramon Pepa</b></div>' if comment else ""
     key = (f'<p class="key"><b></b>{"Precio que se paga" if es else "Price paid"}<i></i>{"Precio de lista" if es else "List price"}'
-           f' · {"100 = promedio del 24 al 30 de octubre de 2026" if es else "100 = average of 24 to 30 October 2026"}</p>')
+           f' · {"promedio de 7 días (la línea fina, cada día)" if es else "7-day average (thin line: each day)"} · {"100 = promedio del 24 al 30 de octubre de 2026" if es else "100 = average of 24 to 30 October 2026"}</p>')
     th = (f'<tr><th>{"Producto" if es else "Product"}</th><th class="r">{"Antes → ahora" if es else "Before → now"}</th><th class="r">%</th></tr>')
     prods = (f'<div class="two"><div><h2>{"Los que más subieron" if es else "Biggest rises"}</h2><table>{th}{product_rows(r["top_up"], lang)}</table></div>'
              f'<div><h2>{"Los que más bajaron" if es else "Biggest falls"}</h2><table>{th}{product_rows(r["top_down"], lang)}</table></div></div>')

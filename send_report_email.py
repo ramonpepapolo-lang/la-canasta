@@ -51,9 +51,16 @@ def build_email(r, unsubscribe):
     m = r["month"]
     mi, y = int(m[5:]) - 1, m[:4]
     link = f"{SITE}/informe.html?m={m}"
-    reg = {"average": r["headline"].get("avg_regular"), "week": r["headline"].get("week_regular")}.get(
-        r["method"], r["headline"]["end_to_end_regular"])
+    kind = r.get("main_kind", "paid")
+    other = r.get("inflation_other")
+    if other is None:
+        other = {"average": r["headline"].get("avg_regular"), "week": r["headline"].get("week_regular")}.get(
+            r["method"], r["headline"]["end_to_end_regular"])
+    core = r.get("inflation_core")
     word = "Suba" if r["inflation"] >= 0 else "Baja"
+    main_lbl = "precio de lista, sin promociones" if kind == "regular" else "precio que se paga, con las promociones abiertas a todos"
+    other_lbl = "Con las promociones (lo que se paga)" if kind == "regular" else "Precio de lista"
+    extra = f"{other_lbl}: {sp(other)}." + (f" Sin frutas ni verduras: {sp(core)}." if core is not None else "")
     color = lambda v: UP if v > 0 else DOWN if v < 0 else MUTED
 
     def rows(items):
@@ -87,7 +94,7 @@ def build_email(r, unsubscribe):
 <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:{MUTED}">Informe mensual</p>
 <h1 style="font-family:Georgia,serif;font-weight:400;font-size:30px;line-height:1.15;margin:6px 0 18px">Informe de {MES[mi]} de {y}</h1>
 <p style="font-family:Georgia,serif;font-size:64px;line-height:1;margin:0">{sp(r["inflation"])}</p>
-<p style="margin:8px 0 0;color:{MUTED}">{word} de los precios del súper en {MES[mi]}. Precio de lista: {sp(reg)}.</p>
+<p style="margin:8px 0 0;color:{MUTED}">{word} de los precios del súper en {MES[mi]} ({main_lbl}). {extra}</p>
 {note_html}
 {h3("Por grupo")}{table(groups)}
 {h3("Por supermercado")}{table(shops)}

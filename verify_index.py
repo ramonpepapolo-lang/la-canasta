@@ -145,23 +145,24 @@ else:
         calc[d] = {key: v * 100 for key, v in calc[d].items()}
 
 # ---------- "Week" method of the monthly report, recalculated another way ----------
-def direct_week(now_days, old_days, min_stock=4):
+def direct_week(now_days, old_days, min_stock=4, kind="paid", no_seasonal=False):
     """Every product's average price in two windows, combined type -> group -> weights (ratios, not logs)."""
     tree = {}  # group -> type -> shop -> [ratio]
     for k, t in basket.items():
         if k[0] not in shops:
             continue
-        pn = [prices[x][k]["paid"] for x in now_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
-        po = [prices[x][k]["paid"] for x in old_days if k in prices[x] and (x, k[0], k[1], "paid") not in skip]
+        pn = [prices[x][k][kind] for x in now_days if k in prices[x] and kind in prices[x][k] and (x, k[0], k[1], kind) not in skip]
+        po = [prices[x][k][kind] for x in old_days if k in prices[x] and kind in prices[x][k] and (x, k[0], k[1], kind) not in skip]
         if len(pn) < min_stock or len(po) < min_stock:
             continue
         r = (sum(pn) / len(pn)) / (sum(po) / len(po))
         if 1 / 3 <= r <= 3:
             tree.setdefault(grp[t], {}).setdefault(t, {}).setdefault(k[0], []).append(r)
-    total = sum(w[g] for g in tree if w.get(g))
+    use = lambda g: w.get(g) and not (no_seasonal and g in ("frutas", "verduras"))
+    total = sum(w[g] for g in tree if use(g))
     f = 1.0
     for g, types in tree.items():
-        if w.get(g):
+        if use(g):
             f *= geo([geo([geo(rs) for rs in by_shop.values()]) for by_shop in types.values()]) ** (w[g] / total)
     return round((f - 1) * 100, 2)
 
@@ -178,7 +179,14 @@ def week_check(rep, m, prev_m):
     old_days = [x for x in (f"{prev_m}-{n:02d}" for n in nums) if x in prices]
     if [now_days[0], now_days[-1]] != a or [old_days[0], old_days[-1]] != b:
         problems.append(f"Informe {m}: ventanas de semana distintas a las recalculadas")
-    return direct_week(now_days, old_days)
+    # the other kind and the figure without fruit and vegetables, also recalculated
+    kind = rep.get("main_kind", "paid")
+    okind = "regular" if kind == "paid" else "paid"
+    for label, val, exp in (("otro precio", rep.get("inflation_other"), direct_week(now_days, old_days, kind=okind)),
+                            ("sin frutas ni verduras", rep.get("inflation_core"), direct_week(now_days, old_days, kind=kind, no_seasonal=True))):
+        if val is not None and abs(val - exp) > 0.011:
+            problems.append(f"Informe {m} ({label}): dice {val}%, recalculado {exp}%")
+    return direct_week(now_days, old_days, kind=kind)
 
 
 # ---------- Compare with what is published ----------

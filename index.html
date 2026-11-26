@@ -225,6 +225,7 @@ main { display: grid; gap: 0; }
 .key::before { content: ""; width: 1.2rem; height: 4px; border-radius: 2px; background: var(--celeste); }
 .key.regular::before { height: 0; border-top: 2px dashed var(--navy); background: none; }
 .chart-wrap { position: relative; }
+.chart-note { margin: 0.6rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .range { font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--navy); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: 0.4rem 2rem 0.4rem 0.9rem; cursor: pointer; appearance: none; -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232B3B5C' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.8rem center; }
 .range:focus-visible { outline: 2px solid var(--celeste); outline-offset: 2px; }
@@ -549,6 +550,7 @@ footer p { font-size: 0.8rem; line-height: 1.55; }
           </div>
         </div>
         <div class="chart-wrap"><div id="chart" role="img" aria-label="Line chart of the La Canasta index"></div><div class="tip" id="tip" hidden></div></div>
+        <p class="chart-note" data-t="chartNote">Líneas gruesas: promedio de los últimos 7 días. Línea fina: cada día, que se mueve mucho por las promociones semanales de cada súper.</p>
       </div>
       <div class="panel two-nums" id="dos-numeros">
         <h3><span data-lang="es">Dos números: ¿cuál mirar?</span><span data-lang="en">Two numbers: which one to look at?</span></h3>
@@ -1036,7 +1038,8 @@ const T = {
     c2t: "All of today's prices", c2: "The 20,000+ prices collected today across the five supermarkets. Free to use.", c2g: "Download (compressed CSV)",
     c3t: "Read the method", c3: "How the index is calculated, which price is used, the full basket and the known limits.", c3g: "Read it",
     foot1: "La Canasta is an independent project by Ramon Pepa. Every day it measures how much everyday products cost in Argentina's main supermarkets, to track food inflation before the official figure comes out. The data is open and free for journalists, researchers and anyone else. Not linked to any supermarket, INDEC or the government.",
-    chartLabel: "Line chart of the La Canasta index"
+    chartLabel: "Line chart of the La Canasta index",
+    chartNote: "Thick lines: average of the last 7 days. Thin line: each day, which moves a lot with each chain's weekly promotions."
   },
   es: {
     navIndex: "El índice", navBasket: "La canasta", navShops: "Supermercados", navData: "Datos y método", langLabel: "Language", navMethod: "Metodología",
@@ -1085,7 +1088,8 @@ const T = {
     c2t: "Todos los precios de hoy", c2: "Los más de 20.000 precios recolectados hoy en los cinco supermercados. Uso libre.", c2g: "Descargar (CSV comprimido)",
     c3t: "Leer el método", c3: "Cómo se calcula el índice, qué precio se usa, la canasta completa y los límites conocidos.", c3g: "Leerlo",
     foot1: "La Canasta es un proyecto independiente de Ramon Pepa. Mide todos los días cuánto cuestan los productos básicos en los principales supermercados de la Argentina, para seguir la inflación de los alimentos antes que el dato oficial. Los datos son abiertos y gratuitos para periodistas, investigadores y cualquier persona. Sin vínculo con ningún supermercado, el INDEC ni el gobierno.",
-    chartLabel: "Gráfico de líneas del índice La Canasta"
+    chartLabel: "Gráfico de líneas del índice La Canasta",
+    chartNote: "Líneas gruesas: promedio de los últimos 7 días. Línea fina: cada día, que se mueve mucho por las promociones semanales de cada súper."
   }
 };
 
@@ -1162,14 +1166,23 @@ function fillRange() {
   sel.value = range;
   sel.setAttribute("aria-label", es ? "Período del gráfico" : "Chart period");
 }
+// 7-day average of the index up to each day (fewer days only at the very start). The daily line moves a lot
+// because each chain has weekly promotion cycles (Día switches ~60 offers off every Tuesday); the average shows the trend.
+function avg7(key) {
+  const out = {};
+  daily.forEach((d, i) => { const w = daily.slice(Math.max(0, i - 6), i + 1); out[d.date] = w.reduce((a, r) => a + +r[key], 0) / w.length; });
+  return out;
+}
 function drawChart() {
   const box = document.getElementById("chart");
   box.setAttribute("aria-label", T[lang].chartLabel);
   fillRange();
   const rows = shown = rangeRows();
   const W = 900, H = 320, L = 46, R = 18, Tp = 16, B = 32;
-  const paid = rows.map(d => +d.index_paid), reg = rows.map(d => +d.index_regular);
-  let lo = Math.min(100, ...paid, ...reg), hi = Math.max(100, ...paid, ...reg);
+  const AP = avg7("index_paid"), AR = avg7("index_regular");
+  const day = rows.map(d => +d.index_paid);
+  const paid = rows.map(d => AP[d.date]), reg = rows.map(d => AR[d.date]);
+  let lo = Math.min(100, ...paid, ...reg, ...day), hi = Math.max(100, ...paid, ...reg, ...day);
   const span0 = hi - lo, pad = Math.max(0.5, span0 * 0.2);
   const step = span0 + 2 * pad <= 3 ? 0.5 : span0 + 2 * pad <= 8 ? 1 : span0 + 2 * pad <= 20 ? 2 : 5;
   lo = Math.floor((lo - pad) / step) * step; hi = Math.ceil((hi + pad) / step) * step;
@@ -1192,6 +1205,7 @@ function drawChart() {
   });
   const path = arr => arr.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
   if (n > 1) s += `<path d="${path(paid)} L${x(n - 1).toFixed(1)},${(H - B).toFixed(1)} L${x(0).toFixed(1)},${(H - B).toFixed(1)} Z" fill="var(--celeste-fill)"/>`;
+  s += `<path d="${path(day)}" fill="none" stroke="var(--celeste)" stroke-width="1.5" opacity="0.45" stroke-linejoin="round" stroke-linecap="round"/>`;
   s += `<path d="${path(reg)}" fill="none" stroke="var(--navy)" stroke-width="2" stroke-dasharray="6 5" stroke-linejoin="round" stroke-linecap="round"/>`;
   s += `<path d="${path(paid)}" fill="none" stroke="var(--celeste)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>`;
   s += `<line id="hoverLine" x1="0" x2="0" y1="${Tp}" y2="${H - B}" stroke="var(--muted)" stroke-dasharray="3 4" visibility="hidden"/>`;
@@ -1208,12 +1222,13 @@ function hover(evt) {
   const sx = ((evt.clientX - rect.left) / rect.width) * geo.W;
   let best = 0, bd = Infinity;
   shown.forEach((d, i) => { const dd = Math.abs(geo.x(i) - sx); if (dd < bd) { bd = dd; best = i; } });
-  const d = shown[best], px = geo.x(best), py = geo.y(+d.index_paid);
+  const AP = avg7("index_paid"), AR = avg7("index_regular");
+  const d = shown[best], px = geo.x(best), py = geo.y(AP[d.date]);
   const hl = document.getElementById("hoverLine"), hd = document.getElementById("hoverDot");
   hl.setAttribute("x1", px); hl.setAttribute("x2", px); hl.setAttribute("visibility", "visible");
   hd.setAttribute("cx", px); hd.setAttribute("cy", py); hd.setAttribute("visibility", "visible");
   const tip = document.getElementById("tip");
-  tip.textContent = `${fmtDate(d.date)} · ${num(+d.index_paid)} / ${num(+d.index_regular)}`;
+  tip.textContent = `${fmtDate(d.date)} · ${num(AP[d.date])} / ${num(AR[d.date])} · ${lang === "es" ? "ese día" : "that day"} ${num(+d.index_paid)}`;
   const k = rect.width / geo.W;
   tip.hidden = false;
   // keep the whole label inside the chart, so it never sticks out of the screen on a phone
@@ -1312,8 +1327,8 @@ function render() {
     document.getElementById("regularToday").textContent = num(+last.index_regular);
   }
   document.getElementById("statDays").textContent = daily.length;
-  document.getElementById("roPaid").textContent = num(+last.index_paid);
-  document.getElementById("roReg").textContent = num(+last.index_regular);
+  document.getElementById("roPaid").textContent = num(avg7("index_paid")[last.date]);
+  document.getElementById("roReg").textContent = num(avg7("index_regular")[last.date]);
   document.getElementById("roDate").textContent = fmtDate(last.date);
   document.getElementById("latestPrices").setAttribute("href", "data/" + last.date + ".csv.gz");
   document.getElementById("latestPrices").setAttribute("download", "la-canasta-precios-" + last.date + ".csv.gz");

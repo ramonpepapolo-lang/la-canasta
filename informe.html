@@ -444,6 +444,8 @@ ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-wid
       <h2><span data-lang="es">Día a día</span><span data-lang="en">Day by day</span></h2>
       <div class="legend"><span class="key k-paid"></span><span data-lang="es">Precio pagado</span><span data-lang="en">Price paid</span>
         <span class="key k-reg"></span><span data-lang="es">Precio de lista</span><span data-lang="en">Regular price</span></div>
+      <p class="small muted" data-lang="es">Líneas gruesas: promedio de los últimos 7 días. Línea fina: cada día, que se mueve mucho por las promociones semanales de cada súper.</p>
+      <p class="small muted" data-lang="en">Thick lines: average of the last 7 days. Thin line: each day, which moves a lot with each chain's weekly promotions.</p>
       <div class="chart" id="chart"></div>
     </section>
 
@@ -642,9 +644,12 @@ function chart() {
   [0, Math.floor((s.length - 1) / 2), s.length - 1].forEach((i, n) => { const t = mk("text", { x: X(i), y: H - 10, "text-anchor": n === 0 ? "start" : n === 2 ? "end" : "middle", "font-size": 12, fill: "#5D6A84" });
     t.textContent = `${+s[i].date.slice(8)} ${MONTHS[lang][+s[i].date.slice(5, 7) - 1].slice(0, 3)}`; svg.append(t); });
   const path = k => s.map((d, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(d[k]).toFixed(1)).join(" ");
-  svg.append(mk("path", { d: path("paid") + ` L${X(s.length - 1)} ${H - pb} L${pl} ${H - pb} Z`, fill: "rgba(127,177,198,0.18)" }));
-  svg.append(mk("path", { d: path("regular"), fill: "none", stroke: "#2B3B5C", "stroke-width": 2, "stroke-dasharray": "6 5" }));
-  svg.append(mk("path", { d: path("paid"), fill: "none", stroke: "#7FB1C6", "stroke-width": 3, "stroke-linejoin": "round" }));
+  const sm = s[0].paid7 != null;  // 7-day averages (thick), each day (thin)
+  const P = sm ? "paid7" : "paid", Rg = sm ? "regular7" : "regular";
+  svg.append(mk("path", { d: path(P) + ` L${X(s.length - 1)} ${H - pb} L${pl} ${H - pb} Z`, fill: "rgba(127,177,198,0.18)" }));
+  if (sm) svg.append(mk("path", { d: path("paid"), fill: "none", stroke: "#7FB1C6", "stroke-width": 1.5, opacity: 0.45, "stroke-linejoin": "round" }));
+  svg.append(mk("path", { d: path(Rg), fill: "none", stroke: "#2B3B5C", "stroke-width": 2, "stroke-dasharray": "6 5" }));
+  svg.append(mk("path", { d: path(P), fill: "none", stroke: "#7FB1C6", "stroke-width": 3, "stroke-linejoin": "round" }));
   const cross = mk("line", { y1: pt, y2: H - pb, stroke: "#2B3B5C", "stroke-width": 1, opacity: 0 }); svg.append(cross);
   const dot = mk("circle", { r: 5, fill: "#7FB1C6", stroke: "#FFFFFF", "stroke-width": 2, opacity: 0 }); svg.append(dot);
   const hit = mk("rect", { x: pl, y: pt, width: W - pl - pr, height: H - pt - pb, fill: "transparent" }); svg.append(hit);
@@ -652,9 +657,10 @@ function chart() {
   const move = ev => { const r = svg.getBoundingClientRect(); const x = (ev.clientX - r.left) * W / r.width;
     const i = Math.max(0, Math.min(s.length - 1, Math.round((x - pl) / ((W - pl - pr) / (s.length - 1))))); const d = s[i];
     cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("opacity", 0.35);
-    dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(d.paid)); dot.setAttribute("opacity", 1);
-    tip.textContent = ""; tip.append(el("strong", null, longDate(d.date)), el("br"), document.createTextNode(L("Pagado ", "Paid ") + num(d.paid, 2) + " · " + L("Lista ", "Regular ") + num(d.regular, 2)));
-    tip.hidden = false; { const half = tip.offsetWidth / 2 + 4; tip.style.left = Math.min(Math.max(X(i) * r.width / W, half), Math.max(half, r.width - half)) + "px"; } tip.style.top = Math.max(Y(d.paid) * r.height / H, tip.offsetHeight * 1.2) + "px"; };
+    dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(d[P])); dot.setAttribute("opacity", 1);
+    tip.textContent = ""; tip.append(el("strong", null, longDate(d.date)), el("br"), document.createTextNode(L("Pagado ", "Paid ") + num(d[P], 2) + " · " + L("Lista ", "Regular ") + num(d[Rg], 2)
+      + (sm ? L(" (promedio 7 días) · ese día ", " (7-day average) · that day ") + num(d.paid, 2) : "")));
+    tip.hidden = false; { const half = tip.offsetWidth / 2 + 4; tip.style.left = Math.min(Math.max(X(i) * r.width / W, half), Math.max(half, r.width - half)) + "px"; } tip.style.top = Math.max(Y(d[P]) * r.height / H, tip.offsetHeight * 1.2) + "px"; };
   hit.addEventListener("pointermove", move); hit.addEventListener("pointerleave", () => { tip.hidden = true; cross.setAttribute("opacity", 0); dot.setAttribute("opacity", 0); });
   box.append(svg, tip);
 }
@@ -680,19 +686,24 @@ function render() {
   $("eyebrow").textContent = L("La Canasta · Informe mensual", "La Canasta · Monthly report");
   $("title").textContent = lang === "es" ? `Informe de ${monthTitle(m)}` : `${monthTitle(m)} report`;
   $("big").textContent = sp(rep.inflation);
-  $("bigSub").textContent = rep.inflation >= 0 ? L(`Suba de los precios del súper en ${monthName(m)}`, `Rise in supermarket prices in ${monthName(m)}`)
-                                                : L(`Baja de los precios del súper en ${monthName(m)}`, `Fall in supermarket prices in ${monthName(m)}`);
-  const reg = rep.method === "average" ? rep.headline.avg_regular : rep.method === "week" ? rep.headline.week_regular : rep.headline.end_to_end_regular;
-  const facts = [[L("Precio de lista", "Regular price"), sp(reg)], [L("Días de datos", "Days of data"), String(rep.days_of_data)],
+  const kind = rep.main_kind || "paid";
+  const kindTxt = kind === "regular" ? L(" (precio de lista, sin promociones)", " (list price, no promotions)") : L(" (precio que se paga)", " (price paid)");
+  $("bigSub").textContent = (rep.inflation >= 0 ? L(`Suba de los precios del súper en ${monthName(m)}`, `Rise in supermarket prices in ${monthName(m)}`)
+                                                : L(`Baja de los precios del súper en ${monthName(m)}`, `Fall in supermarket prices in ${monthName(m)}`)) + kindTxt;
+  const other = rep.inflation_other != null ? rep.inflation_other
+    : (rep.method === "average" ? rep.headline.avg_regular : rep.method === "week" ? rep.headline.week_regular : rep.headline.end_to_end_regular);
+  const facts = [[kind === "regular" ? L("Con promociones (lo que se paga)", "With promotions (price paid)") : L("Precio de lista", "Regular price"), sp(other)]]
+    .concat(rep.inflation_core != null ? [[L("Sin frutas ni verduras", "Without fruit and vegetables"), sp(rep.inflation_core)]] : [])
+    .concat([[L("Días de datos", "Days of data"), String(rep.days_of_data)],
     [L("Precios recolectados", "Prices collected"), Number(rep.prices_collected).toLocaleString(lang === "es" ? "es-AR" : "en-GB")],
-    [L("Productos que subieron", "Products that rose"), `${rep.products_up} / ${rep.products_compared}`]];
+    [L("Productos que subieron", "Products that rose"), `${rep.products_up} / ${rep.products_compared}`]]);
   const fx = $("facts"); fx.textContent = ""; facts.forEach(([k, v]) => { const w = el("div"); w.append(el("dt", null, k), el("dd", null, v)); fx.append(w); });
 
   const prevName = monthName(rep.base_date.slice(0, 7));
   const wk = rep.headline.week_now, wb = rep.headline.week_before;
   $("period").textContent = rep.method === "week"
-    ? L(`Semana contra semana: el precio promedio de cada producto del ${longDate(wk[0])} al ${longDate(wk[1])}, contra su precio promedio del ${longDate(wb[0])} al ${longDate(wb[1])}. Mismos días de la semana de los dos lados, así las promos de fin de semana no mueven el número. Se usa porque ${prevName} tiene menos de 20 días de datos; desde el mes siguiente se compara promedio contra promedio, como el INDEC.`,
-        `Week against week: each product's average price from ${longDate(wk[0])} to ${longDate(wk[1])}, against its average price from ${longDate(wb[0])} to ${longDate(wb[1])}. The same days of the week on both sides, so weekend promotions do not move the number. Used because ${prevName} has fewer than 20 days of data; from the next month on it compares average vs average, like INDEC.`)
+    ? L(`Semana contra semana: el precio promedio de cada producto del ${longDate(wk[0])} al ${longDate(wk[1])}, contra su precio promedio del ${longDate(wb[0])} al ${longDate(wb[1])}. Mismos días de la semana de los dos lados, así las promos de fin de semana no mueven el número. Se usa porque ${prevName} tiene menos de 20 días de datos; desde el mes siguiente se compara promedio contra promedio, como el INDEC. El número principal es el precio de lista: una sola semana queda expuesta entera a ofertas puntuales (la última de noviembre es la del Black Friday), algo que el INDEC, que releva todo el mes, casi no ve. Al lado va lo que se paga con las promociones. "Sin frutas ni verduras" deja afuera los productos que cambian con la estación.`,
+        `Week against week: each product's average price from ${longDate(wk[0])} to ${longDate(wk[1])}, against its average price from ${longDate(wb[0])} to ${longDate(wb[1])}. The same days of the week on both sides, so weekend promotions do not move the number. Used because ${prevName} has fewer than 20 days of data; from the next month on it compares average vs average, like INDEC. The main number is the list price: a single week is fully exposed to one-off sales (the last week of November is Black Friday), which INDEC, collecting all month, barely sees. The price paid with promotions is shown next to it. "Without fruit and vegetables" leaves out the products that move with the season.`)
     : rep.method === "average"
     ? L(`Promedio de ${monthName(m)} contra promedio de ${prevName}, como el INDEC. Punta a punta (${longDate(rep.base_date)} al ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`,
         `Average of ${monthName(m)} vs average of ${prevName}, like INDEC. End to end (${longDate(rep.base_date)} to ${longDate(rep.end_date)}): ${sp(rep.headline.end_to_end_paid)}.`)
@@ -713,6 +724,7 @@ function render() {
   $("indecBox").hidden = !ind;
   if (ind) { const tb = $("indec"); tb.textContent = "";
     [[L("La Canasta (supermercados)", "La Canasta (supermarkets)"), rep.inflation],
+     [L("La Canasta, sin frutas ni verduras", "La Canasta, without fruit and vegetables"), rep.inflation_core],
      [L("INDEC: Alimentos y bebidas, GBA", "INDEC: Food and drinks, Greater BA"), ind.alimentos_pct],
      [L("INDEC: Nivel general, nacional", "INDEC: All items, national"), ind.general_pct]].forEach(([k, v]) => {
       if (v === "" || v == null) return; const tr = el("tr"); tr.append(el("td", null, k), el("td", "pc", sp(Number(v)))); tb.append(tr); }); }

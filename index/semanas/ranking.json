@@ -8,47 +8,47 @@
   "complete": false,
   "days": [
    "2026-11-22",
-   "2026-11-25"
+   "2026-11-26"
   ],
-  "days_of_data": 4,
-  "n_products": 307,
+  "days_of_data": 5,
+  "n_products": 288,
   "shops": [
    {
     "shop": "ChangoMas",
-    "total": 1227116.6,
+    "total": 1161374.4,
     "pct": 0.0
    },
    {
     "shop": "Carrefour",
-    "total": 1257384.08,
-    "pct": 2.47
+    "total": 1176263.71,
+    "pct": 1.28
    },
    {
     "shop": "Dia",
-    "total": 1263940.7,
-    "pct": 3.0
+    "total": 1176667.81,
+    "pct": 1.32
    },
    {
     "shop": "Jumbo",
-    "total": 1448411.5,
-    "pct": 18.03
+    "total": 1347032.2,
+    "pct": 15.99
    }
   ],
   "cheapest_count": {
-   "Carrefour": 68,
+   "Carrefour": 57,
    "Jumbo": 2,
-   "ChangoMas": 156,
-   "Dia": 94
+   "ChangoMas": 141,
+   "Dia": 98
   },
   "examples": [
    {
     "ean": "7790070431516",
     "name": "Arroz Lucchetti Parboil 500 G",
     "low_shop": "Dia",
-    "low": 783.75,
+    "low": 817.0,
     "high_shop": "Jumbo",
     "high": 1600.0,
-    "pct": 104.1
+    "pct": 95.8
    },
    {
     "ean": "7794626012846",
@@ -60,13 +60,13 @@
     "pct": 82.6
    },
    {
-    "ean": "7790310985458",
-    "name": "Papas Fritas Lays Clásicas 85 G",
+    "ean": "7791290793446",
+    "name": "Jabón En Polvo Skip Bio-Enzimas 600g",
     "low_shop": "Carrefour",
-    "low": 2477.41,
+    "low": 2824.25,
     "high_shop": "Jumbo",
-    "high": 4450.0,
-    "pct": 79.6
+    "high": 4750.0,
+    "pct": 68.2
    }
   ]
  },

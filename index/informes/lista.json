@@ -5,7 +5,10 @@
   "days_of_data": 8,
   "publishable": false,
   "inflation": 0.99,
-  "method": "end_to_end"
+  "method": "end_to_end",
+  "main_kind": "paid",
+  "inflation_other": 0.22,
+  "inflation_core": null
  },
  {
   "month": "2026-11",
@@ -13,6 +16,9 @@
   "days_of_data": 25,
   "publishable": false,
   "inflation": 0.01,
-  "method": "end_to_end"
+  "method": "end_to_end",
+  "main_kind": "paid",
+  "inflation_other": -0.58,
+  "inflation_core": null
  }
 ]

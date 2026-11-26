@@ -4,6 +4,10 @@
  "full_month": false,
  "method": "end_to_end",
  "inflation": 0.99,
+ "main_kind": "paid",
+ "other_kind": "regular",
+ "inflation_other": 0.22,
+ "inflation_core": null,
  "base_date": "2026-10-24",
  "end_date": "2026-10-31",
  "days_of_data": 8,
@@ -206,42 +210,58 @@
   {
    "date": "2026-10-24",
    "paid": 98.544,
-   "regular": 99.729
+   "regular": 99.729,
+   "paid7": 98.544,
+   "regular7": 99.729
   },
   {
    "date": "2026-10-25",
    "paid": 99.249,
-   "regular": 99.729
+   "regular": 99.729,
+   "paid7": 98.897,
+   "regular7": 99.729
   },
   {
    "date": "2026-10-26",
    "paid": 100.977,
-   "regular": 99.828
+   "regular": 99.828,
+   "paid7": 99.59,
+   "regular7": 99.762
   },
   {
    "date": "2026-10-27",
    "paid": 101.29,
-   "regular": 99.729
+   "regular": 99.729,
+   "paid7": 100.015,
+   "regular7": 99.754
   },
   {
    "date": "2026-10-28",
    "paid": 100.239,
-   "regular": 100.346
+   "regular": 100.346,
+   "paid7": 100.06,
+   "regular7": 99.872
   },
   {
    "date": "2026-10-29",
    "paid": 99.898,
-   "regular": 100.291
+   "regular": 100.291,
+   "paid7": 100.033,
+   "regular7": 99.942
   },
   {
    "date": "2026-10-30",
    "paid": 99.803,
-   "regular": 100.348
+   "regular": 100.348,
+   "paid7": 100.0,
+   "regular7": 100.0
   },
   {
    "date": "2026-10-31",
    "paid": 99.517,
-   "regular": 99.949
+   "regular": 99.949,
+   "paid7": 100.139,
+   "regular7": 100.031
   }
  ]
 }

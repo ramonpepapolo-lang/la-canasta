@@ -4,6 +4,10 @@
  "full_month": false,
  "method": "end_to_end",
  "inflation": 0.01,
+ "main_kind": "paid",
+ "other_kind": "regular",
+ "inflation_other": -0.58,
+ "inflation_core": null,
  "base_date": "2026-10-31",
  "end_date": "2026-11-25",
  "days_of_data": 25,
@@ -206,132 +210,184 @@
   {
    "date": "2026-10-31",
    "paid": 99.517,
-   "regular": 99.949
+   "regular": 99.949,
+   "paid7": 100.139,
+   "regular7": 100.031
   },
   {
    "date": "2026-11-01",
    "paid": 99.79,
-   "regular": 100.03
+   "regular": 100.03,
+   "paid7": 100.216,
+   "regular7": 100.074
   },
   {
    "date": "2026-11-02",
    "paid": 100.573,
-   "regular": 99.947
+   "regular": 99.947,
+   "paid7": 100.159,
+   "regular7": 100.091
   },
   {
    "date": "2026-11-03",
    "paid": 101.51,
-   "regular": 100.108
+   "regular": 100.108,
+   "paid7": 100.19,
+   "regular7": 100.146
   },
   {
    "date": "2026-11-04",
    "paid": 98.456,
-   "regular": 99.368
+   "regular": 99.368,
+   "paid7": 99.935,
+   "regular7": 100.006
   },
   {
    "date": "2026-11-05",
    "paid": 98.089,
-   "regular": 99.396
+   "regular": 99.396,
+   "paid7": 99.677,
+   "regular7": 99.878
   },
   {
    "date": "2026-11-06",
    "paid": 98.235,
-   "regular": 99.381
+   "regular": 99.381,
+   "paid7": 99.453,
+   "regular7": 99.74
   },
   {
    "date": "2026-11-07",
    "paid": 98.196,
-   "regular": 99.363
+   "regular": 99.363,
+   "paid7": 99.264,
+   "regular7": 99.656
   },
   {
    "date": "2026-11-08",
    "paid": 98.373,
-   "regular": 99.25
+   "regular": 99.25,
+   "paid7": 99.062,
+   "regular7": 99.545
   },
   {
    "date": "2026-11-09",
    "paid": 99.696,
-   "regular": 99.25
+   "regular": 99.25,
+   "paid7": 98.936,
+   "regular7": 99.445
   },
   {
    "date": "2026-11-10",
    "paid": 101.643,
-   "regular": 99.284
+   "regular": 99.284,
+   "paid7": 98.955,
+   "regular7": 99.327
   },
   {
    "date": "2026-11-11",
    "paid": 98.621,
-   "regular": 99.191
+   "regular": 99.191,
+   "paid7": 98.979,
+   "regular7": 99.302
   },
   {
    "date": "2026-11-12",
    "paid": 99.093,
-   "regular": 99.288
+   "regular": 99.288,
+   "paid7": 99.122,
+   "regular7": 99.287
   },
   {
    "date": "2026-11-13",
    "paid": 98.819,
-   "regular": 99.101
+   "regular": 99.101,
+   "paid7": 99.206,
+   "regular7": 99.247
   },
   {
    "date": "2026-11-14",
    "paid": 98.998,
-   "regular": 99.112
+   "regular": 99.112,
+   "paid7": 99.32,
+   "regular7": 99.211
   },
   {
    "date": "2026-11-15",
    "paid": 99.084,
-   "regular": 99.112
+   "regular": 99.112,
+   "paid7": 99.422,
+   "regular7": 99.191
   },
   {
    "date": "2026-11-16",
    "paid": 100.066,
-   "regular": 99.21
+   "regular": 99.21,
+   "paid7": 99.475,
+   "regular7": 99.185
   },
   {
    "date": "2026-11-17",
    "paid": 102.155,
-   "regular": 99.198
+   "regular": 99.198,
+   "paid7": 99.548,
+   "regular7": 99.173
   },
   {
    "date": "2026-11-18",
    "paid": 98.812,
-   "regular": 99.231
+   "regular": 99.231,
+   "paid7": 99.575,
+   "regular7": 99.179
   },
   {
    "date": "2026-11-19",
    "paid": 98.74,
-   "regular": 99.501
+   "regular": 99.501,
+   "paid7": 99.525,
+   "regular7": 99.209
   },
   {
    "date": "2026-11-20",
    "paid": 98.121,
-   "regular": 99.307
+   "regular": 99.307,
+   "paid7": 99.425,
+   "regular7": 99.239
   },
   {
    "date": "2026-11-21",
    "paid": 97.9,
-   "regular": 99.295
+   "regular": 99.295,
+   "paid7": 99.268,
+   "regular7": 99.265
   },
   {
    "date": "2026-11-22",
    "paid": 97.967,
-   "regular": 99.295
+   "regular": 99.295,
+   "paid7": 99.109,
+   "regular7": 99.291
   },
   {
    "date": "2026-11-23",
    "paid": 98.822,
-   "regular": 99.294
+   "regular": 99.294,
+   "paid7": 98.931,
+   "regular7": 99.303
   },
   {
    "date": "2026-11-24",
    "paid": 98.766,
-   "regular": 99.666
+   "regular": 99.666,
+   "paid7": 98.447,
+   "regular7": 99.37
   },
   {
    "date": "2026-11-25",
    "paid": 99.524,
-   "regular": 99.365
+   "regular": 99.365,
+   "paid7": 98.549,
+   "regular7": 99.389
   }
  ]
 }

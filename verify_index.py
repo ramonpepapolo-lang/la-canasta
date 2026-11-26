@@ -149,7 +149,7 @@ def direct_week(now_days, old_days, min_stock=4, kind="paid", no_seasonal=False)
     """Every product's average price in two windows, combined type -> group -> weights (ratios, not logs)."""
     tree = {}  # group -> type -> shop -> [ratio]
     for k, t in basket.items():
-        if k[0] not in shops:
+        if k[0] not in shops or starts.get(k, "") > now_days[0]:
             continue
         pn = [prices[x][k][kind] for x in now_days if k in prices[x] and kind in prices[x][k] and (x, k[0], k[1], kind) not in skip]
         po = [prices[x][k][kind] for x in old_days if k in prices[x] and kind in prices[x][k] and (x, k[0], k[1], kind) not in skip]

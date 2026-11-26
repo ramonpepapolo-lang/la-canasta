@@ -25,7 +25,7 @@ MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
        "noviembre", "diciembre"]
 MONTH_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
             "November", "December"]
-TYPE_ES = {"pan_lactal": "Pan lactal", "harina_000": "Harina", "arroz": "Arroz", "fideos": "Fideos secos",
+TYPE_ES = {"lechuga": "Lechuga", "zanahoria": "Zanahoria", "zapallo": "Zapallo", "batata": "Batata", "acelga": "Acelga", "choclo": "Choclo", "naranja": "Naranja", "limon": "Limón", "mandarina": "Mandarina", "frutilla": "Frutilla", "pera": "Pera", "uva": "Uva", "pan_lactal": "Pan lactal", "harina_000": "Harina", "arroz": "Arroz", "fideos": "Fideos secos",
            "pollo_entero": "Pollo entero", "asado": "Asado", "vacio": "Vacío", "nalga": "Nalga", "carne_picada": "Carne picada", "milanesa_carne": "Milanesas de carne", "cuadril": "Cuadril", "cortes_magros": "Bola de lomo, cuadrada y peceto", "bifes": "Bifes", "roast_paleta": "Roast beef y paleta", "yogur": "Yogur", "galletitas": "Galletitas", "suprema": "Suprema de pollo", "leche": "Leche", "manteca": "Manteca", "queso_cremoso": "Queso",
            "dulce_de_leche": "Dulce de leche", "huevos": "Huevos", "aceite_girasol": "Aceite", "papa": "Papa",
            "cebolla": "Cebolla", "tomate": "Tomate", "banana": "Banana", "manzana": "Manzana", "azucar": "Azúcar",

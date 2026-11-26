@@ -60,6 +60,21 @@ RULES = {
  "pasta_dental": (r"pasta dental|crema dental|dentifrico", r"cepillo|kit|enjuague|hilo|infantil|kids|niño|bebe|blanqueador gel|harry|potter|disney|frozen", ["dental", "bucal", "oral"]),
  "jabon_tocador": (r"^jabon\b.*(tocador|barra)|^jabon de tocador|^jabon\b", r"polvo|ropa|liquido|lavarropas|manos liquido|intimo|bebe|repuesto|en barra para ropa|blanco para ropa|federal", ["jabon", "tocador", "higiene"]),
  "papel_higienico": (r"papel higienico", r"humedo|toallita|pañuelo|rollo de cocina|servilleta", ["papel", "higien"]),
+ # ---- added 26 November 2026 (Ramon's OK): 6 more vegetables and 6 more fruits, counting from 1 December ----
+ # The base week only had papa, cebolla, tomate, banana and manzana, so one product (onion, -36% in November
+ # with the new harvest) moved the whole index. Collected since 6-7 Nov 2026. Fresh produce, often without barcode.
+ "lechuga": (r"^lechuga", r"mix|ensalada|semilla|lista|lavada|cortada|baby|bolsa|hidropon|organic", ["verdu", "fruta"]),
+ "zanahoria": (r"^zanahoria", r"rallad|baby|jugo|pure|congel|snack|cubo|baston|organic|semilla|torta", ["verdu", "fruta"]),
+ "zapallo": (r"^zapallo\b|^calabaza|^anco\b", r"zapallito|pure|congel|cubo|trozad|rallad|semilla|sopa|dulce|rodaja|organic|tarta|pasta|cabutia|kabutia|plancha", ["verdu", "fruta"]),
+ "batata": (r"^batata", r"dulce|chips|frita|congel|pure|baston|snack|cubo|organic", ["verdu", "fruta"]),
+ "acelga": (r"^acelga", r"congel|tarta|pasta|lista|baby|lavada|organic", ["verdu", "fruta"]),
+ "choclo": (r"^choclo", r"lata|congel|crema|desgran|grano|conserva|cremoso|pochoclo|tamal|humita|pastel|sopa|baby|organic|bandeja", ["verdu", "fruta"]),
+ "naranja": (r"^naranja", r"jugo|gaseosa|sabor|mermelada|confit|agua|polvo|bebida|pulpa|cascara|esencia|aceite|organic", ["verdu", "fruta"]),
+ "limon": (r"^limon", r"jugo|gaseosa|sabor|bebida|agua|aceite|pimienta|esencia|polvo|organic|sutil|exprimid", ["verdu", "fruta"]),
+ "mandarina": (r"^mandarina", r"jugo|gaseosa|sabor|agua|polvo|organic", ["verdu", "fruta"]),
+ "frutilla": (r"^frutilla", r"mermelada|yogur|congel|helado|sabor|jugo|deshidrat|confit|gelatina|crema|banad|chocolate|licor|pulpa|bocadito|leche|organic", ["verdu", "fruta"]),
+ "pera": (r"^pera\b|^peras\b", r"jugo|lata|almibar|deshidrat|sabor|pure|mermelada|sidra|organic", ["verdu", "fruta"]),
+ "uva": (r"^uva\b|^uvas\b", r"pasa|jugo|vino|mosto|sabor|gaseosa|deshidrat|semilla|organic", ["verdu", "fruta"]),
  # ---- added 6 November 2026: beef (INDEC 112100), yoghurt, biscuits and chicken supremas ----
  # Beef: fresh cuts only (the "carne vacuna" or butcher's aisle, never frozen, cooked, pork, lamb or wagyu).
  "asado": (r"^asado\b", BEEF_NO, ["carne vacuna", "carniceria", "carnes/"]),
@@ -75,9 +90,15 @@ RULES = {
  "galletitas": (r"^galletitas?\b", r"perro|gato|mascota|sin tacc|sin gluten|arroz|surtid|pack|x ?\d+ ?(u|un|paq)|caja|lata|navide|regalo|helado", ["galletit", "desayuno", "almacen"]),
  "suprema": (r"^supremas? (de )?pollo\b", r"rebozad|congel|milanesa|napolitana|rellen|cocid|nugget|apanad|empanad", ["pollo", "carniceria", "carnes/", "milanesas"]),
 }
-FRESH = {"asado", "vacio", "nalga", "carne_picada", "milanesa_carne", "cuadril", "cortes_magros", "bifes", "roast_paleta", "suprema"}
+PRODUCE_NEW = {"lechuga", "zanahoria", "zapallo", "batata", "acelga", "choclo",
+               "naranja", "limon", "mandarina", "frutilla", "pera", "uva"}
+FRESH = PRODUCE_NEW | {"asado", "vacio", "nalga", "carne_picada", "milanesa_carne", "cuadril", "cortes_magros", "bifes", "roast_paleta", "suprema"}
 # product type and category for the types that are new to the basket
 NEW_INFO = {
+ "lechuga": ("Lettuce", "Vegetables"), "zanahoria": ("Carrot", "Vegetables"), "zapallo": ("Squash (zapallo, calabaza)", "Vegetables"),
+ "batata": ("Sweet potato", "Vegetables"), "acelga": ("Chard", "Vegetables"), "choclo": ("Sweetcorn (choclo)", "Vegetables"),
+ "naranja": ("Orange", "Fruit"), "limon": ("Lemon", "Fruit"), "mandarina": ("Mandarin", "Fruit"),
+ "frutilla": ("Strawberry", "Fruit"), "pera": ("Pear", "Fruit"), "uva": ("Grape", "Fruit"),
  "asado": ("Beef ribs (asado)", "Beef"), "vacio": ("Beef flank (vacío)", "Beef"), "nalga": ("Beef round (nalga)", "Beef"),
  "carne_picada": ("Minced beef", "Beef"), "milanesa_carne": ("Beef milanesas", "Beef"), "cuadril": ("Beef rump (cuadril)", "Beef"),
  "cortes_magros": ("Lean cuts (bola de lomo, cuadrada, peceto)", "Beef"), "bifes": ("Beef steaks (bife de chorizo, ancho)", "Beef"),
@@ -106,6 +127,10 @@ VARIANTS = {
  "lavandina": r"lavanda|citric|floral|aroma|perfum|glaciar|pureza|fresh|concentrad",
  "yogur": r"griego|prote|pro\+|danonino|deslactos|sin lactosa|cereal|zero|descrem|light|balance|probiot|sabor (?!natural)|frutilla|vainilla|banana|durazno|anana|arandano|multifruta|tiramisu|frutos",
 }
+# fresh produce (26 Nov 2026): never canned, cooked, dried or packaged-brand versions
+PRODUCE_NO = r"mitades|desecad|cocid|al vacio|almibar|bonduelle|arcor|campagnola|cuisine|gentleman|hidrop|\blata\b|rocky|amarillo entero|extra fina"
+for _t in PRODUCE_NEW:
+    VARIANTS[_t] = PRODUCE_NO
 # the name MUST say this (yoghurt: plain only)
 MUST = {"yogur": r"\bnatural\b"}
 # beef and chicken sold by weight: a price far from the rest of its kind is a wrong or stale price

@@ -99,7 +99,7 @@ for path in sorted(glob.glob("data/????-??-??.csv.gz")):
                 if pe > 0:
                     ean_price[date][(r["ean"], r["shop"])] = pe
                     ean_name.setdefault(r["ean"], []).append(r["name"] or "")
-            if key in basket and r.get("available") == "True":
+            if key in basket and r.get("available") == "True" and (basket[key].get("from_date") or "").strip() <= date:
                 try:
                     p = float(r["price"])
                 except (TypeError, ValueError):
@@ -148,6 +148,8 @@ def week_compare(now_days, before_days, min_stock=MIN_IN_STOCK):
     for key, b in basket.items():
         if key[0] not in shops:
             continue
+        if (b.get("from_date") or "").strip() > now_days[0]:
+            continue  # added later: followed before its from_date, but not counted (same rule as the index)
         for kind, src in (("paid", prices), ("regular", regular)):
             pn = [src[d][key] for d in now_days if key in src[d]]
             pb = [src[d][key] for d in before_days if key in src[d]]

@@ -13,12 +13,12 @@
  {
   "month": "2026-11",
   "complete": false,
-  "days_of_data": 26,
+  "days_of_data": 27,
   "publishable": false,
-  "inflation": -0.37,
+  "inflation": -2.11,
   "method": "end_to_end",
   "main_kind": "paid",
-  "inflation_other": -0.02,
+  "inflation_other": -0.84,
   "inflation_core": null
  }
 ]

@@ -8,47 +8,47 @@
   "complete": false,
   "days": [
    "2026-11-22",
-   "2026-11-26"
+   "2026-11-27"
   ],
-  "days_of_data": 5,
-  "n_products": 288,
+  "days_of_data": 6,
+  "n_products": 301,
   "shops": [
    {
     "shop": "ChangoMas",
-    "total": 1161374.4,
+    "total": 1217360.68,
     "pct": 0.0
    },
    {
-    "shop": "Carrefour",
-    "total": 1176263.71,
-    "pct": 1.28
+    "shop": "Dia",
+    "total": 1227029.43,
+    "pct": 0.79
    },
    {
-    "shop": "Dia",
-    "total": 1176667.81,
-    "pct": 1.32
+    "shop": "Carrefour",
+    "total": 1234446.59,
+    "pct": 1.4
    },
    {
     "shop": "Jumbo",
-    "total": 1347032.2,
-    "pct": 15.99
+    "total": 1408724.67,
+    "pct": 15.72
    }
   ],
   "cheapest_count": {
-   "Carrefour": 57,
+   "Carrefour": 62,
    "Jumbo": 2,
-   "ChangoMas": 141,
-   "Dia": 98
+   "ChangoMas": 146,
+   "Dia": 105
   },
   "examples": [
    {
     "ean": "7790070431516",
     "name": "Arroz Lucchetti Parboil 500 G",
     "low_shop": "Dia",
-    "low": 817.0,
+    "low": 839.17,
     "high_shop": "Jumbo",
     "high": 1600.0,
-    "pct": 95.8
+    "pct": 90.7
    },
    {
     "ean": "7794626012846",

@@ -1,12 +1,12 @@
 {
- "date": "2026-11-26",
- "previous": "2026-11-25",
+ "date": "2026-11-27",
+ "previous": "2026-11-26",
  "index": {
-  "date": "2026-11-26",
-  "paid": 99.149,
-  "regular": 99.933,
-  "day_change": -0.38,
-  "days_of_data": 34,
+  "date": "2026-11-27",
+  "paid": 97.413,
+  "regular": 99.108,
+  "day_change": -1.75,
+  "days_of_data": 35,
   "series": [
    [
     "2026-10-24",
@@ -171,24 +171,29 @@
    [
     "2026-11-25",
     99.524,
-    99.365
+    99.749
    ],
    [
     "2026-11-26",
     99.149,
     99.933
+   ],
+   [
+    "2026-11-27",
+    97.413,
+    99.108
    ]
   ],
   "mode": "week",
   "week_paid": -0.72,
-  "week_regular": 0.23,
+  "week_regular": 0.27,
   "now": [
-   "2026-11-20",
-   "2026-11-26"
+   "2026-11-21",
+   "2026-11-27"
   ],
   "before": [
-   "2026-11-13",
-   "2026-11-19"
+   "2026-11-14",
+   "2026-11-20"
   ]
  },
  "ranking": {
@@ -196,252 +201,252 @@
   "label_en": "Week of 22 to 28 November 2026",
   "days": [
    "2026-11-22",
-   "2026-11-26"
+   "2026-11-27"
   ],
-  "n_products": 288,
+  "n_products": 301,
   "shops": [
    {
     "shop": "ChangoMas",
-    "total": 1161374.4,
+    "total": 1217360.68,
     "pct": 0.0
    },
    {
-    "shop": "Carrefour",
-    "total": 1176263.71,
-    "pct": 1.28
+    "shop": "Dia",
+    "total": 1227029.43,
+    "pct": 0.79
    },
    {
-    "shop": "Dia",
-    "total": 1176667.81,
-    "pct": 1.32
+    "shop": "Carrefour",
+    "total": 1234446.59,
+    "pct": 1.4
    },
    {
     "shop": "Jumbo",
-    "total": 1347032.2,
-    "pct": 15.99
+    "total": 1408724.67,
+    "pct": 15.72
    }
   ]
  },
  "down": [
   {
    "shop": "ChangoMas",
-   "name": "Shampoo Dove Hidratación Hialuron Vit 400ml",
+   "name": "Shampoo Fructis Hydraliss 350ml",
    "type": "shampoo",
-   "before": 11079.0,
-   "now": 6647.4,
+   "before": 8989.0,
+   "now": 5393.4,
    "pct": -40.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Banana 1 Kg",
-   "type": "banana",
-   "before": 2699.0,
-   "now": 1799.0,
-   "pct": -33.3,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Manteca La Paulina Calidad Extra 200 G",
-   "type": "manteca",
-   "before": 4949.0,
-   "now": 3299.0,
-   "pct": -33.3,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Papa 500 G",
-   "type": "papa",
-   "before": 2799.0,
-   "now": 1999.0,
-   "pct": -28.6,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Favorita Dedalitos 500g",
-   "type": "fideos",
-   "before": 1199.0,
-   "now": 899.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Favorita Tirabuzón 500 G",
-   "type": "fideos",
-   "before": 1199.0,
-   "now": 899.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Matarazzo Rigatti 500g",
-   "type": "fideos",
-   "before": 3799.0,
-   "now": 2849.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Rina Spaghetti 500g",
-   "type": "fideos",
-   "before": 3799.0,
-   "now": 2849.25,
-   "pct": -25.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Yerba Mate Amanda Con Palo 1 Kg",
-   "type": "yerba",
-   "before": 5089.0,
-   "now": 3816.75,
-   "pct": -25.0,
+   "name": "Vino Tinto Suter Malbec 750ml",
+   "type": "vino",
+   "before": 4829.0,
+   "now": 2999.0,
+   "pct": -37.9,
    "why": "promo_start"
   },
   {
    "shop": "Carrefour",
-   "name": "Lechuga francesa x kg.",
-   "type": "lechuga",
-   "before": 4499.0,
-   "now": 3499.0,
-   "pct": -22.2,
+   "name": "Banana selección x kg.",
+   "type": "banana",
+   "before": 3599.0,
+   "now": 2299.0,
+   "pct": -36.1,
+   "why": "promo_start"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Vino tinto Malbec Suter 750 ml",
+   "type": "vino",
+   "before": 4825.0,
+   "now": 3100.0,
+   "pct": -35.8,
    "why": "list_down"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Batata 500 G",
-   "type": "batata",
-   "before": 3499.0,
-   "now": 2799.0,
-   "pct": -20.0,
-   "why": "list_up"
+   "shop": "Jumbo",
+   "name": "Lechuga Francesa Por Kg",
+   "type": "lechuga",
+   "before": 4499.0,
+   "now": 2899.0,
+   "pct": -35.6,
+   "why": "price"
   },
   {
    "shop": "ChangoMas",
-   "name": "Fideos Bucattini Matarazzo 500g",
-   "type": "fideos",
-   "before": 1869.15,
-   "now": 1649.25,
-   "pct": -11.8,
+   "name": "Cerveza Rubia Quilmes Laton 710 Cc",
+   "type": "cerveza",
+   "before": 3829.0,
+   "now": 2488.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Detergente Líquido Ala Concentrado Pomelo 300ml",
+   "type": "detergente",
+   "before": 2319.0,
+   "now": 1507.35,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Dulce De Leche La Serenísima Clásico 1 Kg",
+   "type": "dulce_de_leche",
+   "before": 9809.0,
+   "now": 6375.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Dulce De Leche La Serenísima Clásico 400 G",
+   "type": "dulce_de_leche",
+   "before": 4179.0,
+   "now": 2716.35,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Dulce De Leche La Serenísima Colonial 400 G",
+   "type": "dulce_de_leche",
+   "before": 4999.0,
+   "now": 3249.35,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Shampoo Pantene Restauración 400ml",
+   "type": "shampoo",
+   "before": 11769.0,
+   "now": 7649.85,
+   "pct": -35.0,
+   "why": "promo_start"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Yogur Cremoso La Serenísima Nutrición Activa Natural Sin Azúcar 120 G",
+   "type": "yogur",
+   "before": 1449.0,
+   "now": 941.85,
+   "pct": -35.0,
    "why": "promo_start"
   }
  ],
  "up": [
   {
    "shop": "ChangoMas",
-   "name": "Vino Tinto Suter Malbec 750ml",
-   "type": "vino",
-   "before": 2999.0,
-   "now": 4829.0,
-   "pct": 61.0,
+   "name": "Shampoo Dove Hidratación Hialuron Vit 400ml",
+   "type": "shampoo",
+   "before": 6647.4,
+   "now": 11079.0,
+   "pct": 66.7,
    "why": "promo_end"
   },
   {
    "shop": "Carrefour",
-   "name": "Banana selección x kg.",
-   "type": "banana",
-   "before": 2299.0,
-   "now": 3599.0,
-   "pct": 56.5,
-   "why": "list_up"
+   "name": "Cebolla Sanes en red 4 uni",
+   "type": "cebolla",
+   "before": 3199.0,
+   "now": 4990.0,
+   "pct": 56.0,
+   "why": "promo_end"
   },
   {
    "shop": "ChangoMas",
-   "name": "Cerveza Rubia Brahma 473ml",
-   "type": "cerveza",
-   "before": 1999.0,
-   "now": 2949.0,
-   "pct": 47.5,
+   "name": "Manteca La Paulina Calidad Extra 200 G",
+   "type": "manteca",
+   "before": 3299.0,
+   "now": 4949.0,
+   "pct": 50.0,
    "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Uva Negra X Kg",
-   "type": "uva",
-   "before": 9999.0,
-   "now": 13999.0,
-   "pct": 40.0,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Queso cremoso Cremac x kg.",
-   "type": "queso_cremoso",
-   "before": 9490.0,
-   "now": 11990.0,
-   "pct": 26.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Uva Red Globe X Kg",
-   "type": "uva",
-   "before": 12999.0,
-   "now": 14999.0,
-   "pct": 15.4,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Jabón de tocador Palmolive Naturals toque nutritivo 125 grs",
-   "type": "jabon_tocador",
-   "before": 1559.0,
-   "now": 1700.0,
-   "pct": 9.0,
-   "why": "list_up"
-  },
-  {
-   "shop": "Jumbo",
-   "name": "Harina 000 Ultra Refinada 1 Kg Pureza",
-   "type": "harina_000",
-   "before": 1300.0,
-   "now": 1400.0,
-   "pct": 7.7,
-   "why": "price"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Pasta dental Colgate triple beneficio 140 g.",
-   "type": "pasta_dental",
-   "before": 5980.0,
-   "now": 6400.0,
-   "pct": 7.0,
-   "why": "list_up"
   },
   {
    "shop": "ChangoMas",
-   "name": "Zapallo Coreano 500g Zapallo Coreano 1kg",
-   "type": "zapallo",
-   "before": 4199.0,
-   "now": 4490.0,
-   "pct": 6.9,
-   "why": "list_up"
+   "name": "Fideos Favorita Dedalitos 500g",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
+   "why": "promo_end"
   },
   {
-   "shop": "Carrefour",
-   "name": "Naranja ombligo premiun x kg.",
-   "type": "naranja",
-   "before": 1699.0,
-   "now": 1799.0,
-   "pct": 5.9,
-   "why": "list_up"
+   "shop": "ChangoMas",
+   "name": "Fideos Favorita Tirabuzón 500 G",
+   "type": "fideos",
+   "before": 899.25,
+   "now": 1199.0,
+   "pct": 33.3,
+   "why": "promo_end"
   },
   {
-   "shop": "Carrefour",
-   "name": "Pasta dental Colgate triple beneficio 90 g.",
-   "type": "pasta_dental",
-   "before": 4155.0,
-   "now": 4400.0,
-   "pct": 5.9,
-   "why": "list_up"
+   "shop": "ChangoMas",
+   "name": "Fideos Lucchetti Codito 500 G",
+   "type": "fideos",
+   "before": 1386.75,
+   "now": 1849.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Lucchetti Tallarin 500 G",
+   "type": "fideos",
+   "before": 1386.75,
+   "now": 1849.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Matarazzo Rigatti 500g",
+   "type": "fideos",
+   "before": 2849.25,
+   "now": 3799.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Rina Spaghetti 500g",
+   "type": "fideos",
+   "before": 2849.25,
+   "now": 3799.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
+   "type": "fideos",
+   "before": 1386.75,
+   "now": 1849.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Yerba Mate Amanda Con Palo 1 Kg",
+   "type": "yerba",
+   "before": 3816.75,
+   "now": 5089.0,
+   "pct": 33.3,
+   "why": "promo_end"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Asado De Tira De Novillito 1 Kg",
+   "type": "asado",
+   "before": 14704.15,
+   "now": 17299.0,
+   "pct": 17.6,
+   "why": "promo_end"
   }
  ],
- "n_down": 22,
- "n_up": 14
+ "n_down": 49,
+ "n_up": 31
 }

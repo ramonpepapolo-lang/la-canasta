@@ -3,84 +3,84 @@
  "complete": false,
  "full_month": false,
  "method": "end_to_end",
- "inflation": -0.37,
+ "inflation": -2.11,
  "main_kind": "paid",
  "other_kind": "regular",
- "inflation_other": -0.02,
+ "inflation_other": -0.84,
  "inflation_core": null,
  "base_date": "2026-10-31",
- "end_date": "2026-11-26",
- "days_of_data": 26,
- "prices_collected": 546237,
+ "end_date": "2026-11-27",
+ "days_of_data": 27,
+ "prices_collected": 570291,
  "headline": {
-  "end_to_end_paid": -0.37,
-  "end_to_end_regular": -0.02,
+  "end_to_end_paid": -2.11,
+  "end_to_end_regular": -0.84,
   "avg_paid": null,
   "avg_regular": null
  },
  "shops": [
   {
    "shop": "Carrefour",
-   "pct": 1.18
+   "pct": 0.9
   },
   {
    "shop": "ChangoMas",
-   "pct": -2.46
+   "pct": -3.43
   },
   {
    "shop": "Dia",
-   "pct": 0.99
+   "pct": -1.09
   },
   {
    "shop": "Jumbo",
-   "pct": 3.59
+   "pct": -0.73
   }
  ],
  "groups": [
   {
-   "group": "carne_ave",
+   "group": "limpieza",
    "in_headline": true,
-   "pct": 9.78
-  },
-  {
-   "group": "frutas",
-   "in_headline": true,
-   "pct": 7.83
+   "pct": 3.98
   },
   {
    "group": "pan_cereales",
    "in_headline": true,
-   "pct": 4.16
-  },
-  {
-   "group": "alcohol",
-   "in_headline": true,
-   "pct": 4.08
-  },
-  {
-   "group": "limpieza",
-   "in_headline": true,
-   "pct": 3.94
+   "pct": 2.86
   },
   {
    "group": "otros_alimentos",
    "in_headline": true,
-   "pct": 2.82
+   "pct": 2.66
   },
   {
    "group": "cuidado_personal",
    "in_headline": false,
-   "pct": 2.59
+   "pct": 1.77
+  },
+  {
+   "group": "alcohol",
+   "in_headline": true,
+   "pct": 1.13
+  },
+  {
+   "group": "frutas",
+   "in_headline": true,
+   "pct": 0.13
+  },
+  {
+   "group": "carne_vacuna",
+   "in_headline": true,
+   "pct": -0.05
   },
   {
    "group": "lacteos",
    "in_headline": true,
-   "pct": 0.36
+   "pct": -0.36
   },
   {
    "group": "cafe_te_yerba",
    "in_headline": true,
-   "pct": -0.42
+   "pct": -0.7
   },
   {
    "group": "aguas_gaseosas",
@@ -90,28 +90,28 @@
   {
    "group": "aceites",
    "in_headline": true,
-   "pct": -2.21
-  },
-  {
-   "group": "carne_vacuna",
-   "in_headline": true,
-   "pct": -3.38
+   "pct": -1.78
   },
   {
    "group": "azucar",
    "in_headline": true,
-   "pct": -3.74
+   "pct": -2.94
+  },
+  {
+   "group": "carne_ave",
+   "in_headline": true,
+   "pct": -9.75
   },
   {
    "group": "verduras",
    "in_headline": true,
-   "pct": -18.62
+   "pct": -20.86
   }
  ],
  "products_compared": 1018,
- "products_up": 269,
- "products_down": 156,
- "products_same": 593,
+ "products_up": 263,
+ "products_down": 157,
+ "products_same": 598,
  "top_up": [
   {
    "type": "arroz",
@@ -163,20 +163,11 @@
   {
    "type": "cebolla",
    "type_en": "Onions",
-   "shop": "Jumbo",
-   "name": "Cebolla Fraccionada Por 1 Kg",
-   "before": 5499.0,
-   "now": 2999.0,
-   "pct": -45.46
-  },
-  {
-   "type": "cebolla",
-   "type_en": "Onions",
    "shop": "Carrefour",
    "name": "Cebolla x kg.",
    "before": 3999.0,
-   "now": 2199.0,
-   "pct": -45.01
+   "now": 1989.0,
+   "pct": -50.26
   },
   {
    "type": "cebolla",
@@ -184,8 +175,17 @@
    "shop": "Jumbo",
    "name": "Cebolla Superior Por Kg",
    "before": 3999.0,
-   "now": 2299.0,
-   "pct": -42.51
+   "now": 1999.0,
+   "pct": -50.01
+  },
+  {
+   "type": "cebolla",
+   "type_en": "Onions",
+   "shop": "Jumbo",
+   "name": "Cebolla Fraccionada Por 1 Kg",
+   "before": 5499.0,
+   "now": 2999.0,
+   "pct": -45.46
   },
   {
    "type": "pasta_dental",
@@ -395,6 +395,13 @@
    "regular": 99.933,
    "paid7": 98.607,
    "regular7": 99.506
+  },
+  {
+   "date": "2026-11-27",
+   "paid": 97.413,
+   "regular": 99.108,
+   "paid7": 98.506,
+   "regular7": 99.477
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-27 14:42",
+ "when_utc": "2026-11-27 17:38",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,9 +17,9 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "709",
-  "views_total_text": "182,897",
-  "views_sum_of_videos": 88188,
+  "subscribers_text": "717",
+  "views_total_text": "185,712",
+  "views_sum_of_videos": 88466,
   "videos": 51,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Misma picada: $22.139 más cara en Jumbo que en Carrefour",
     "published": "2026-11-26",
-    "views": 30,
+    "views": 31,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 9,
+    "views": 10,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -401,7 +401,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 23930,
+    "views": 24074,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -449,7 +449,7 @@
     "player_status": null,
     "title": "La gaseosa chica de Día subió 35% en un día 📈 #argentina #finanzas #supermercado #dinero #inflación",
     "published": "2026-11-04",
-    "views": 7,
+    "views": 6,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -473,7 +473,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1340,
+    "views": 1343,
     "views_exact": true,
     "likes": 144,
     "comments": null
@@ -521,9 +521,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21467,
+    "views": 21485,
     "views_exact": true,
-    "likes": 160,
+    "likes": 163,
     "comments": 1
    },
    {
@@ -557,9 +557,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10420,
+    "views": 10417,
     "views_exact": true,
-    "likes": 694,
+    "likes": 698,
     "comments": 2
    },
    {
@@ -581,9 +581,9 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 9327,
+    "views": 9368,
     "views_exact": true,
-    "likes": 717,
+    "likes": 7,
     "comments": null
    },
    {
@@ -629,7 +629,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19964,
+    "views": 20038,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -652,7 +652,7 @@
     "date": "2026-11-26",
     "text": "Detergente Magistral 750 ml, mismo código de barras: del 20 al 23/11 lo más barato estaba ",
     "bookmark_count": 0,
-    "impression_count": 0,
+    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

@@ -1,25 +1,25 @@
 {
- "when_utc": "2026-11-26 21:53",
+ "when_utc": "2026-11-27 14:42",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
  "website": {
-  "TOTAL": 4466,
-  "/": 4267,
-  "/precios/": 18,
-  "/canastas/": 22,
-  "/informes.html": 51,
-  "/metodo.html": 30,
-  "/articulos.html": 13,
-  "/ramon-pepa.html": 23,
+  "TOTAL": 4664,
+  "/": 4454,
+  "/precios/": 20,
+  "/canastas/": 23,
+  "/informes.html": 54,
+  "/metodo.html": 31,
+  "/articulos.html": 14,
+  "/ramon-pepa.html": 24,
   "/prensa.html": 3,
   "/precios/supermercado-mas-barato.html": 5
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "683",
-  "views_total_text": "178,720",
-  "views_sum_of_videos": 181686,
+  "subscribers_text": "709",
+  "views_total_text": "182,897",
+  "views_sum_of_videos": 88188,
   "videos": 51,
   "list": [
    {
@@ -29,7 +29,7 @@
     "player_status": null,
     "title": "Misma picada: $22.139 más cara en Jumbo que en Carrefour",
     "published": "2026-11-26",
-    "views": 5,
+    "views": 30,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -65,7 +65,7 @@
     "player_status": null,
     "title": "Leche condensada Nestlé: $2.838 en Carrefour, $6.200 en Jumbo",
     "published": "2026-11-23",
-    "views": 70,
+    "views": 74,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +89,7 @@
     "player_status": null,
     "title": "Weekly report: same bread, +23% at one store and −14% at another | Week of Nov 15 to 21",
     "published": "2026-11-22",
-    "views": 5,
+    "views": 6,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +101,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 8,
+    "views": 9,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -137,7 +137,7 @@
     "player_status": null,
     "title": "Cerveza Brahma 710 ml: $2.080 en Día, $4.200 en Jumbo",
     "published": "2026-11-19",
-    "views": 53,
+    "views": 54,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -149,7 +149,7 @@
     "player_status": null,
     "title": "Yerba Amanda 1 kg: $3.295 en Carrefour, $5.850 en Jumbo",
     "published": "2026-11-18",
-    "views": 38,
+    "views": 39,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -161,7 +161,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 13,
+    "views": 14,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -173,7 +173,7 @@
     "player_status": null,
     "title": "Reporte semanal: misma cerveza, +43% en un súper y −21% en otro | Semana del 8 al 14 de noviembre",
     "published": "2026-11-17",
-    "views": 13,
+    "views": 15,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -185,7 +185,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 10,
+    "views": 11,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -367,7 +367,7 @@
     "published": "2026-11-05",
     "views": 61,
     "views_exact": true,
-    "likes": 669,
+    "likes": 1,
     "comments": null
    },
    {
@@ -389,7 +389,7 @@
     "player_status": null,
     "title": "What is La Canasta? Argentina's supermarket prices, every day 🛒 #argentina",
     "published": "2026-11-05",
-    "views": 9,
+    "views": 10,
     "views_exact": true,
     "likes": 2,
     "comments": null
@@ -401,7 +401,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 22675,
+    "views": 23930,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -410,24 +410,24 @@
     "id": "Y9JkCvIlXLk",
     "debug": null,
     "views_text": null,
-    "player_status": null,
+    "player_status": "LOGIN_REQUIRED",
     "title": "What is La Canasta? Argentina's supermarket price index, measured every day",
-    "published": "2026-11-04",
-    "views": 49,
+    "published": "",
+    "views": 50,
     "views_exact": true,
     "likes": 2,
     "comments": null
    },
    {
     "id": "JjtoCbpvaQg",
-    "debug": null,
+    "debug": " - YouTube",
     "views_text": null,
-    "player_status": null,
+    "player_status": "LOGIN_REQUIRED",
     "title": "¿Qué es La Canasta? El índice de precios del súper que se mide todos los días",
-    "published": "2026-11-04",
-    "views": 1530,
-    "views_exact": true,
-    "likes": 9,
+    "published": "",
+    "views": null,
+    "views_exact": false,
+    "likes": 10,
     "comments": null
    },
    {
@@ -449,7 +449,7 @@
     "player_status": null,
     "title": "La gaseosa chica de Día subió 35% en un día 📈 #argentina #finanzas #supermercado #dinero #inflación",
     "published": "2026-11-04",
-    "views": 6,
+    "views": 7,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -473,9 +473,9 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1312,
+    "views": 1340,
     "views_exact": true,
-    "likes": 135,
+    "likes": 144,
     "comments": null
    },
    {
@@ -521,9 +521,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21387,
+    "views": 21467,
     "views_exact": true,
-    "likes": 150,
+    "likes": 160,
     "comments": 1
    },
    {
@@ -557,9 +557,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10399,
+    "views": 10420,
     "views_exact": true,
-    "likes": 685,
+    "likes": 694,
     "comments": 2
    },
    {
@@ -581,32 +581,32 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 9149,
+    "views": 9327,
     "views_exact": true,
-    "likes": 7,
+    "likes": 717,
     "comments": null
    },
    {
     "id": "Sg7xwPm2cvA",
     "debug": null,
     "views_text": null,
-    "player_status": null,
+    "player_status": "LOGIN_REQUIRED",
     "title": "La Canasta: tracking Argentina’s supermarket prices every day - (Supermarket Inflation)",
-    "published": "2026-10-28",
-    "views": 43,
+    "published": "",
+    "views": 44,
     "views_exact": true,
     "likes": 3,
     "comments": null
    },
    {
     "id": "fKmu-LsOw64",
-    "debug": null,
+    "debug": " - YouTube",
     "views_text": null,
-    "player_status": null,
+    "player_status": "LOGIN_REQUIRED",
     "title": "La Canasta: medimos los precios del súper en Argentina todos los días - (Supermarket Inflation)",
-    "published": "2026-10-28",
-    "views": 93783,
-    "views_exact": true,
+    "published": "",
+    "views": null,
+    "views_exact": false,
     "likes": 8,
     "comments": 1
    },
@@ -629,7 +629,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 19752,
+    "views": 19964,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -662,7 +662,7 @@
     "date": "2026-11-26",
     "text": "La misma picada, 26 productos con el mismo código de barras, hoy 26/11:\nCarrefour $123.331",
     "bookmark_count": 0,
-    "impression_count": 2,
+    "impression_count": 3,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

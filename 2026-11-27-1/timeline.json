@@ -1,0 +1,71 @@
+{
+ "total": 28.915,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo desayuno. 40 productos.",
+   "say": "Mismo desayuno. Cuarenta productos.",
+   "start": 0.12,
+   "end": 2.309,
+   "dur": 2.189,
+   "ps": "mˈismo ðˌesaʃˈuno. kwaɾˈɛnta pɾoðˈuktos."
+  },
+  {
+   "k": "h2",
+   "sub": "$132.769 en ChangoMás, o $166.452 en Jumbo.",
+   "say": "Ciento treinta y dos mil en ChangoMás, o ciento sesenta y seis mil en Jumbo.",
+   "gap": 0.3,
+   "start": 2.509,
+   "end": 6.829,
+   "dur": 4.32,
+   "ps": "sjˈɛnto tɾˈAnta i ðˈos mˈil en ʧˈaŋɡo mˈas, o sjˈɛnto sesˈɛnta i sˈAs mˈil en xˈumbo."
+  },
+  {
+   "k": "w1",
+   "sub": "Día: $147.593. Carrefour: $152.061.",
+   "say": "Día: ciento cuarenta y siete mil. Carrefour: ciento cincuenta y dos mil.",
+   "start": 7.129,
+   "end": 11.069,
+   "dur": 3.94,
+   "ps": "dˈia: sjˈɛnto kwaɾˈɛnta i sjˈete mˈil. kˌarefˈowɾ: sjˈɛnto sinkwˈɛnta i ðˈos mˈil."
+  },
+  {
+   "k": "w2",
+   "sub": "Jumbo cobra un 25% más.",
+   "say": "Jumbo cobra un veinticinco por ciento más.",
+   "start": 11.269,
+   "end": 13.582,
+   "dur": 2.313,
+   "ps": "xˈumbo kˈoβɾa ˈum bˌAntisˈinko poɾ sjˈɛnto mˈas."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: 14 de los 40 están en oferta en ChangoMás, 7 desde hoy.",
+   "say": "Pero ojo: catorce de los cuarenta están en oferta en ChangoMás, siete desde hoy.",
+   "gap": 0.3,
+   "start": 13.782,
+   "end": 17.924,
+   "dur": 4.142,
+   "ps": "pˌeɾo ˈoxo: katˈoɾse ðe los kwaɾˈɛnta estˈan en ofˈeɾta en ʧˈaŋɡo mˈas, sjˈete ðˌesðe ˈoɪ."
+  },
+  {
+   "k": "b2",
+   "sub": "Sin esas ofertas: $157.596. Más caro que Día y Carrefour.",
+   "say": "Sin esas ofertas: ciento cincuenta y siete mil. Más caro que Día y Carrefour.",
+   "start": 18.224,
+   "end": 22.606,
+   "dur": 4.382,
+   "ps": "sin ˈesas ofˈeɾtas: sjˈɛnto sinkwˈɛnta i sjˈete mˈil. mˈas kˈaɾo ke ðˈia i kˌarefˈowɾ."
+  },
+  {
+   "k": "p1",
+   "sub": "Por mes son $33.683 menos, mientras duren.",
+   "say": "Por mes son treinta y tres mil seiscientos ochenta y tres pesos menos, mientras duren.",
+   "start": 22.806,
+   "end": 27.415,
+   "dur": 4.609,
+   "ps": "poɾ mˈes sˈon tɾˈAnta i tɾˈes mˈil sAsjˈɛntos oʧˈɛnta i tɾˈes pˈesos mˈenos, mjˌentɾas ðˈuɾen."
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{"voice":"em_alex","speed":1.08,"pre":0.12,"gap":0.2,"tail":1.3,"lines":[
+{"k":"h1","sub":"Mismo desayuno. 40 productos.","say":"Mismo desayuno. Cuarenta productos."},
+{"k":"h2","sub":"$132.769 en ChangoMás, o $166.452 en Jumbo.","say":"Ciento treinta y dos mil en ChangoMás, o ciento sesenta y seis mil en Jumbo.","gap":0.3},
+{"k":"w1","sub":"Día: $147.593. Carrefour: $152.061.","say":"Día: ciento cuarenta y siete mil. Carrefour: ciento cincuenta y dos mil."},
+{"k":"w2","sub":"Jumbo cobra un 25% más.","say":"Jumbo cobra un veinticinco por ciento más."},
+{"k":"b1","sub":"Pero ojo: 14 de los 40 están en oferta en ChangoMás, 7 desde hoy.","say":"Pero ojo: catorce de los cuarenta están en oferta en ChangoMás, siete desde hoy.","gap":0.3},
+{"k":"b2","sub":"Sin esas ofertas: $157.596. Más caro que Día y Carrefour.","say":"Sin esas ofertas: ciento cincuenta y siete mil. Más caro que Día y Carrefour."},
+{"k":"p1","sub":"Por mes son $33.683 menos, mientras duren.","say":"Por mes son treinta y tres mil seiscientos ochenta y tres pesos menos, mientras duren."}
+]}

@@ -1,5 +1,5 @@
 {
- "when_utc": "2026-11-27 17:38",
+ "when_utc": "2026-11-27 22:25",
  "errors": [
   "youtube api: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics%2CcontentDetails%2Csnippet&mine=true&alt=json returned \"Request had insufficient authentication scopes"
  ],
@@ -17,11 +17,23 @@
  },
  "youtube": {
   "source": "public pages",
-  "subscribers_text": "717",
+  "subscribers_text": "731",
   "views_total_text": "185,712",
-  "views_sum_of_videos": 88466,
-  "videos": 51,
+  "views_sum_of_videos": 89086,
+  "videos": 52,
   "list": [
+   {
+    "id": "u4nJ26FhPAQ",
+    "debug": null,
+    "views_text": null,
+    "player_status": null,
+    "title": "Mismo desayuno: $33.683 más caro en Jumbo que en ChangoMás",
+    "published": "2026-11-27",
+    "views": 2,
+    "views_exact": true,
+    "likes": 0,
+    "comments": null
+   },
    {
     "id": "xs0FIU39QBc",
     "debug": null,
@@ -29,7 +41,7 @@
     "player_status": null,
     "title": "Misma picada: $22.139 más cara en Jumbo que en Carrefour",
     "published": "2026-11-26",
-    "views": 31,
+    "views": 30,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -53,7 +65,7 @@
     "player_status": null,
     "title": "Fanta 2,25 L: $3.431 en ChangoMás, $6.100 en Carrefour, Día y Jumbo",
     "published": "2026-11-24",
-    "views": 63,
+    "views": 64,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -89,7 +101,7 @@
     "player_status": null,
     "title": "Weekly report: same bread, +23% at one store and −14% at another | Week of Nov 15 to 21",
     "published": "2026-11-22",
-    "views": 6,
+    "views": 9,
     "views_exact": true,
     "likes": 0,
     "comments": null
@@ -101,7 +113,7 @@
     "player_status": null,
     "title": "Reporte semanal: mismo pan, +23% en un súper y −14% en otro | Semana del 15 al 21 de noviembre",
     "published": "2026-11-22",
-    "views": 10,
+    "views": 12,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -161,7 +173,7 @@
     "player_status": null,
     "title": "Weekly report: same beer, +43% at one supermarket, −21% at another | Week of Nov 8 to 14",
     "published": "2026-11-17",
-    "views": 14,
+    "views": 16,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -185,7 +197,7 @@
     "player_status": null,
     "title": "One person, 7 AI agents, 20,000 prices: tracking Argentina's grocery inflation every day",
     "published": "2026-11-17",
-    "views": 11,
+    "views": 12,
     "views_exact": true,
     "likes": 1,
     "comments": null
@@ -194,9 +206,9 @@
     "id": "cSz2RWeW-xM",
     "debug": null,
     "views_text": null,
-    "player_status": null,
+    "player_status": "LOGIN_REQUIRED",
     "title": "Una persona, 7 agentes de IA y 20.000 precios: así medimos el súper antes que el INDEC",
-    "published": "2026-11-17",
+    "published": "",
     "views": 3,
     "views_exact": true,
     "likes": 1,
@@ -329,7 +341,7 @@
     "player_status": null,
     "title": "30 huevos a $4.999 desde hoy: en otro súper, $9.300 🥚",
     "published": "2026-11-13",
-    "views": 18,
+    "views": 19,
     "views_exact": true,
     "likes": 3,
     "comments": null
@@ -401,7 +413,7 @@
     "player_status": null,
     "title": "¿Qué es La Canasta? Los precios del súper, todos los días 🛒 #argentina #finanzas #supermercado",
     "published": "2026-11-05",
-    "views": 24074,
+    "views": 24485,
     "views_exact": true,
     "likes": 6,
     "comments": null
@@ -473,7 +485,7 @@
     "player_status": null,
     "title": "El mismo detergente tuvo 3 precios en 3 días 🎢 #argentina #supermercado #precios #inflacion",
     "published": "2026-11-02",
-    "views": 1343,
+    "views": 1336,
     "views_exact": true,
     "likes": 144,
     "comments": null
@@ -521,9 +533,9 @@
     "player_status": null,
     "title": "Mismo carrito en 4 súper: ¿cuál cobra menos? 🛒 #Shorts #argentina #inflación #supermercado #economía",
     "published": "2026-10-31",
-    "views": 21485,
+    "views": 21478,
     "views_exact": true,
-    "likes": 163,
+    "likes": 164,
     "comments": 1
    },
    {
@@ -557,9 +569,9 @@
     "player_status": null,
     "title": "Armé un programa y 6 agentes de IA que miden la inflación del súper.. #argentina #precios  #economía",
     "published": "2026-10-29",
-    "views": 10417,
+    "views": 10430,
     "views_exact": true,
-    "likes": 698,
+    "likes": 701,
     "comments": 2
    },
    {
@@ -581,7 +593,7 @@
     "player_status": null,
     "title": "¿Cuánto cuesta desayunar en Argentina? El mismo desayuno en 4 súper #argentina #shorts #inflación",
     "published": "2026-10-29",
-    "views": 9368,
+    "views": 9496,
     "views_exact": true,
     "likes": 7,
     "comments": null
@@ -629,7 +641,7 @@
     "player_status": null,
     "title": "¿Cuánto suben los precios del súper en Argentina? Lo medimos todos los días #inflacion #argentina",
     "published": "2026-10-28",
-    "views": 20038,
+    "views": 20109,
     "views_exact": true,
     "likes": 5,
     "comments": 2
@@ -644,10 +656,30 @@
   "following_count": 3,
   "like_count": 39,
   "listed_count": 0,
-  "media_count": 58,
-  "tweet_count": 86,
+  "media_count": 60,
+  "tweet_count": 88,
   "tweets_status": 200,
   "last_posts": [
+   {
+    "date": "2026-11-27",
+    "text": "Arroz Lucchetti Parboil 500 g, mismo paquete: $950 en Día y $1.600 en Jumbo hoy. Jumbo no ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
+   {
+    "date": "2026-11-27",
+    "text": "Mismo desayuno, 40 productos, mismo código de barras: $132.769 en ChangoMás y $166.452 en ",
+    "bookmark_count": 0,
+    "impression_count": 0,
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0
+   },
    {
     "date": "2026-11-26",
     "text": "Detergente Magistral 750 ml, mismo código de barras: del 20 al 23/11 lo más barato estaba ",
@@ -663,26 +695,6 @@
     "text": "La misma picada, 26 productos con el mismo código de barras, hoy 26/11:\nCarrefour $123.331",
     "bookmark_count": 0,
     "impression_count": 3,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-25",
-    "text": "Los mismos 233 productos, del jueves 19 al miércoles 25/11: el más barato del día fue Carr",
-    "bookmark_count": 0,
-    "impression_count": 0,
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0
-   },
-   {
-    "date": "2026-11-25",
-    "text": "Los mismos 19 productos de higiene, mismo código de barras, hoy 25/11:\nDía $98.037\nCarrefo",
-    "bookmark_count": 0,
-    "impression_count": 1,
     "like_count": 0,
     "quote_count": 0,
     "reply_count": 0,

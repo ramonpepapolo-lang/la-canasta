@@ -1,0 +1,8 @@
+{"voice": "em_alex", "speed": 1.08, "pre": 0.12, "gap": 0.22, "tail": 1.3, "lines": [
+{"k": "h1", "sub": "Mismo lavado de ropa: 16 productos iguales.", "say": "Mismo lavado de ropa: dieciséis productos iguales."}, 
+{"k": "h2", "sub": "$78.214 en Día… o $122.000 en Jumbo.", "say": "Setenta y ocho mil en Día, o ciento veintidós mil en Jumbo.", "gap": 0.3}, 
+{"k": "w1", "sub": "En el medio: Carrefour $84.897 y ChangoMás $106.299.", "say": "En el medio, Carrefour, ochenta y cuatro mil, y ChangoMás, ciento seis mil."}, 
+{"k": "b1", "sub": "Pero ojo: 11 de los 16 de Día están en oferta.", "say": "Pero ojo: once de los dieciséis de Día están en oferta.", "gap": 0.3}, 
+{"k": "b2", "sub": "La mayoría, desde el miércoles 25. Jumbo no movió ni un peso.", "say": "La mayoría, desde el miércoles veinticinco. Jumbo no movió ni un peso."}, 
+{"k": "p1", "sub": "Un jabón para diluir y un suavizante al mes, en Día:", "say": "Un jabón para diluir y un suavizante por mes, en Día:"}, 
+{"k": "p2", "sub": "Por mes son $11.484 menos.", "say": "Por mes son once mil cuatrocientos ochenta y cuatro pesos menos."}]}

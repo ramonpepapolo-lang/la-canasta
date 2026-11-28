@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-22",
+  "start": "2026-11-22",
+  "end": "2026-11-28",
+  "label_es": "Semana del 22 al 28 de noviembre de 2026",
+  "label_en": "Week of 22 to 28 November 2026",
+  "paid": -0.75,
+  "regular": 0.19
+ },
+ {
   "id": "2026-11-15",
   "start": "2026-11-15",
   "end": "2026-11-21",

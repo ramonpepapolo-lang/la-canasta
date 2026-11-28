@@ -1,12 +1,12 @@
 {
- "date": "2026-11-27",
- "previous": "2026-11-26",
+ "date": "2026-11-28",
+ "previous": "2026-11-27",
  "index": {
-  "date": "2026-11-27",
-  "paid": 97.413,
-  "regular": 99.108,
-  "day_change": -1.75,
-  "days_of_data": 35,
+  "date": "2026-11-28",
+  "paid": 96.903,
+  "regular": 98.729,
+  "day_change": -0.52,
+  "days_of_data": 36,
   "series": [
    [
     "2026-10-24",
@@ -182,18 +182,23 @@
     "2026-11-27",
     97.413,
     99.108
+   ],
+   [
+    "2026-11-28",
+    96.903,
+    98.729
    ]
   ],
   "mode": "week",
-  "week_paid": -0.72,
-  "week_regular": 0.27,
+  "week_paid": -0.75,
+  "week_regular": 0.19,
   "now": [
-   "2026-11-21",
-   "2026-11-27"
+   "2026-11-22",
+   "2026-11-28"
   ],
   "before": [
-   "2026-11-14",
-   "2026-11-20"
+   "2026-11-15",
+   "2026-11-21"
   ]
  },
  "ranking": {
@@ -201,252 +206,153 @@
   "label_en": "Week of 22 to 28 November 2026",
   "days": [
    "2026-11-22",
-   "2026-11-27"
+   "2026-11-28"
   ],
-  "n_products": 301,
+  "n_products": 290,
   "shops": [
    {
     "shop": "ChangoMas",
-    "total": 1217360.68,
+    "total": 1167466.24,
     "pct": 0.0
    },
    {
     "shop": "Dia",
-    "total": 1227029.43,
-    "pct": 0.79
+    "total": 1176057.36,
+    "pct": 0.74
    },
    {
     "shop": "Carrefour",
-    "total": 1234446.59,
-    "pct": 1.4
+    "total": 1183564.35,
+    "pct": 1.38
    },
    {
     "shop": "Jumbo",
-    "total": 1408724.67,
-    "pct": 15.72
+    "total": 1351803.71,
+    "pct": 15.79
    }
   ]
  },
  "down": [
   {
    "shop": "ChangoMas",
-   "name": "Shampoo Fructis Hydraliss 350ml",
-   "type": "shampoo",
-   "before": 8989.0,
-   "now": 5393.4,
-   "pct": -40.0,
+   "name": "Cerveza Clasica Quilmes Retornable 1 L",
+   "type": "cerveza",
+   "before": 4769.0,
+   "now": 3099.85,
+   "pct": -35.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Vino Tinto Suter Malbec 750ml",
-   "type": "vino",
-   "before": 4829.0,
-   "now": 2999.0,
-   "pct": -37.9,
+   "name": "Cerveza Clásica Quilmes 473ml",
+   "type": "cerveza",
+   "before": 2799.0,
+   "now": 1819.35,
+   "pct": -35.0,
    "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Banana selección x kg.",
-   "type": "banana",
-   "before": 3599.0,
-   "now": 2299.0,
-   "pct": -36.1,
-   "why": "promo_start"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Vino tinto Malbec Suter 750 ml",
-   "type": "vino",
-   "before": 4825.0,
-   "now": 3100.0,
-   "pct": -35.8,
-   "why": "list_down"
   },
   {
    "shop": "Jumbo",
-   "name": "Lechuga Francesa Por Kg",
-   "type": "lechuga",
-   "before": 4499.0,
-   "now": 2899.0,
-   "pct": -35.6,
+   "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
+   "type": "tomate",
+   "before": 5599.0,
+   "now": 3999.0,
+   "pct": -28.6,
    "why": "price"
   },
   {
    "shop": "ChangoMas",
-   "name": "Cerveza Rubia Quilmes Laton 710 Cc",
+   "name": "Cerveza En Lata Brahma 354ml",
    "type": "cerveza",
-   "before": 3829.0,
-   "now": 2488.85,
-   "pct": -35.0,
+   "before": 2209.0,
+   "now": 1656.75,
+   "pct": -25.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Detergente Líquido Ala Concentrado Pomelo 300ml",
-   "type": "detergente",
-   "before": 2319.0,
-   "now": 1507.35,
-   "pct": -35.0,
+   "name": "Zapallo Coreano 500g Zapallo Coreano 1kg",
+   "type": "zapallo",
+   "before": 4490.0,
+   "now": 3499.0,
+   "pct": -22.1,
+   "why": "list_down"
+  },
+  {
+   "shop": "Jumbo",
+   "name": "Zapallo Delica",
+   "type": "zapallo",
+   "before": 5999.0,
+   "now": 4699.0,
+   "pct": -21.7,
+   "why": "price"
+  },
+  {
+   "shop": "ChangoMas",
+   "name": "Tomate Redondo 500 G",
+   "type": "tomate",
+   "before": 5399.0,
+   "now": 4299.0,
+   "pct": -20.4,
+   "why": "list_down"
+  },
+  {
+   "shop": "Carrefour",
+   "name": "Suprema de pollo al vacio Que Rico x kg",
+   "type": "suprema",
+   "before": 22500.0,
+   "now": 17999.0,
+   "pct": -20.0,
    "why": "promo_start"
   },
   {
    "shop": "ChangoMas",
-   "name": "Dulce De Leche La Serenísima Clásico 1 Kg",
-   "type": "dulce_de_leche",
-   "before": 9809.0,
-   "now": 6375.85,
-   "pct": -35.0,
-   "why": "promo_start"
+   "name": "Zanahoria 250 G",
+   "type": "zanahoria",
+   "before": 1899.0,
+   "now": 1599.0,
+   "pct": -15.8,
+   "why": "list_down"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Dulce De Leche La Serenísima Clásico 400 G",
-   "type": "dulce_de_leche",
-   "before": 4179.0,
-   "now": 2716.35,
-   "pct": -35.0,
-   "why": "promo_start"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Dulce De Leche La Serenísima Colonial 400 G",
-   "type": "dulce_de_leche",
+   "shop": "Jumbo",
+   "name": "Cebolla Morada Por Kg",
+   "type": "cebolla",
    "before": 4999.0,
-   "now": 3249.35,
-   "pct": -35.0,
-   "why": "promo_start"
+   "now": 4499.0,
+   "pct": -10.0,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Shampoo Pantene Restauración 400ml",
-   "type": "shampoo",
-   "before": 11769.0,
-   "now": 7649.85,
-   "pct": -35.0,
-   "why": "promo_start"
+   "shop": "Jumbo",
+   "name": "Zapallo Coreano Por Kg",
+   "type": "zapallo",
+   "before": 3999.0,
+   "now": 3699.0,
+   "pct": -7.5,
+   "why": "price"
   },
   {
-   "shop": "ChangoMas",
-   "name": "Yogur Cremoso La Serenísima Nutrición Activa Natural Sin Azúcar 120 G",
-   "type": "yogur",
-   "before": 1449.0,
-   "now": 941.85,
-   "pct": -35.0,
-   "why": "promo_start"
+   "shop": "Jumbo",
+   "name": "Azúcar Común Tipo A Cuisine  Co",
+   "type": "azucar",
+   "before": 1750.0,
+   "now": 1650.0,
+   "pct": -5.7,
+   "why": "price"
   }
  ],
  "up": [
   {
    "shop": "ChangoMas",
-   "name": "Shampoo Dove Hidratación Hialuron Vit 400ml",
-   "type": "shampoo",
-   "before": 6647.4,
-   "now": 11079.0,
-   "pct": 66.7,
-   "why": "promo_end"
-  },
-  {
-   "shop": "Carrefour",
-   "name": "Cebolla Sanes en red 4 uni",
-   "type": "cebolla",
-   "before": 3199.0,
-   "now": 4990.0,
-   "pct": 56.0,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Manteca La Paulina Calidad Extra 200 G",
-   "type": "manteca",
-   "before": 3299.0,
-   "now": 4949.0,
-   "pct": 50.0,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Favorita Dedalitos 500g",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Favorita Tirabuzón 500 G",
-   "type": "fideos",
-   "before": 899.25,
-   "now": 1199.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Lucchetti Codito 500 G",
-   "type": "fideos",
-   "before": 1386.75,
-   "now": 1849.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Lucchetti Tallarin 500 G",
-   "type": "fideos",
-   "before": 1386.75,
-   "now": 1849.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Matarazzo Rigatti 500g",
-   "type": "fideos",
-   "before": 2849.25,
-   "now": 3799.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Rina Spaghetti 500g",
-   "type": "fideos",
-   "before": 2849.25,
-   "now": 3799.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Fideos Soperos Dedalitos Lucchetti 500gr",
-   "type": "fideos",
-   "before": 1386.75,
-   "now": 1849.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Yerba Mate Amanda Con Palo 1 Kg",
-   "type": "yerba",
-   "before": 3816.75,
-   "now": 5089.0,
-   "pct": 33.3,
-   "why": "promo_end"
-  },
-  {
-   "shop": "ChangoMas",
-   "name": "Asado De Tira De Novillito 1 Kg",
-   "type": "asado",
-   "before": 14704.15,
-   "now": 17299.0,
-   "pct": 17.6,
-   "why": "promo_end"
+   "name": "Choclo 500 G",
+   "type": "choclo",
+   "before": 2299.0,
+   "now": 3999.0,
+   "pct": 73.9,
+   "why": "list_up"
   }
  ],
- "n_down": 49,
- "n_up": 31
+ "n_down": 12,
+ "n_up": 1
 }

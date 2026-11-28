@@ -1,5 +1,5 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "shops": [
   "Carrefour",
   "Jumbo",
@@ -93,7 +93,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 17812.02,
+     "total": 17385.36,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -202,11 +202,11 @@
        "ing": "vino",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 5705.33,
-       "cost": 1426.33,
-       "name": "Vino tinto Postales malbec 750 cc.",
-       "sku_id": "97541",
-       "promo": false
+       "unit_price": 3998.67,
+       "cost": 999.67,
+       "name": "Vino tinto Malbec Novecento 750 ml",
+       "sku_id": "35162",
+       "promo": true
       },
       {
        "ing": "cerveza",
@@ -253,7 +253,7 @@
      "fixed_total": 2840.0
     },
     "Jumbo": {
-     "total": 19090.66,
+     "total": 19141.27,
      "complete": true,
      "missing": [],
      "kcal": 2961,
@@ -332,8 +332,8 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 5599.0,
-       "cost": 671.88,
+       "unit_price": 3999.0,
+       "cost": 479.88,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -352,8 +352,8 @@
        "ing": "lechuga",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 3999.0,
-       "cost": 999.75,
+       "unit_price": 3299.0,
+       "cost": 824.75,
        "name": "Lechuga Mantecosa Organica X Unid",
        "sku_id": "347962",
        "promo": false
@@ -372,10 +372,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 5050.0,
-       "cost": 2525.0,
-       "name": "Cerveza Rubia 1000 Ml Schneider",
-       "sku_id": "26673",
+       "unit_price": 5535.21,
+       "cost": 2767.61,
+       "name": "Cerveza Rubia 710 Cc Schneider",
+       "sku_id": "272150",
        "promo": false
       },
       {
@@ -402,18 +402,18 @@
        "ing": "sal_gruesa",
        "qty": 1,
        "fixed": true,
-       "unit_price": 1600.0,
-       "cost": 1600.0,
+       "unit_price": 1650.0,
+       "cost": 1650.0,
        "name": "Sal Gruesa 500 Grs Dos Anclas",
-       "sku_id": "3089187",
+       "sku_id": "24634",
        "promo": false
       }
      ],
      "lacks": [],
-     "fixed_total": 3050.0
+     "fixed_total": 3100.0
     },
     "ChangoMas": {
-     "total": 19813.52,
+     "total": 19376.55,
      "complete": false,
      "missing": [
       "pan",
@@ -445,20 +445,20 @@
        "ing": "chorizo",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 13190.0,
-       "cost": 1582.8,
-       "name": "Chorizo En Gancho Alma Criolla 1kg",
-       "sku_id": "216353",
+       "unit_price": 12589.0,
+       "cost": 1510.68,
+       "name": "Chorizo Tradicional Campo Austral Tradicional Al Vacio 400 Gr",
+       "sku_id": "161138",
        "promo": false
       },
       {
        "ing": "morcilla",
        "qty": 0.06,
        "fixed": false,
-       "unit_price": 11590.0,
-       "cost": 695.4,
-       "name": "Morcilla Atada Al Vacio Santa Rita 400 Gr",
-       "sku_id": "111624",
+       "unit_price": 11089.0,
+       "cost": 665.34,
+       "name": "Morcilla Rosca Campo Austral Al Vacío 400 Gr",
+       "sku_id": "161135",
        "promo": false
       },
       {
@@ -491,8 +491,8 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 5399.0,
-       "cost": 647.88,
+       "unit_price": 4299.0,
+       "cost": 515.88,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
        "promo": false
@@ -505,7 +505,7 @@
        "cost": 159.92,
        "name": "Cebolla 350 G Cebolla 350g",
        "sku_id": "203195",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "lechuga",
@@ -527,10 +527,10 @@
        "ing": "cerveza",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 3505.42,
-       "cost": 1752.71,
-       "name": "Cerveza Rubia Quilmes Laton 710 Cc",
-       "sku_id": "228806",
+       "unit_price": 3099.85,
+       "cost": 1549.92,
+       "name": "Cerveza Clasica Quilmes Retornable 1 L",
+       "sku_id": "545",
        "promo": true
       },
       {
@@ -571,7 +571,7 @@
      "fixed_total": 2773.25
     },
     "Dia": {
-     "total": 17535.63,
+     "total": 17235.63,
      "complete": false,
      "missing": [
       "pan"
@@ -648,10 +648,10 @@
        "ing": "tomate",
        "qty": 0.12,
        "fixed": false,
-       "unit_price": 4490.0,
-       "cost": 538.8,
-       "name": "Tomate Redondo x Kg.",
-       "sku_id": "90127",
+       "unit_price": 1990.0,
+       "cost": 238.8,
+       "name": "Tomate Comercial en bolsa malla x 1 Kg.",
+       "sku_id": "90076",
        "promo": false
       },
       {
@@ -734,8 +734,8 @@
    "ranking": [
     "Carrefour",
     "Dia",
-    "Jumbo",
-    "ChangoMas"
+    "ChangoMas",
+    "Jumbo"
    ],
    "cheapest": "Carrefour",
    "common": [
@@ -895,8 +895,8 @@
        "fixed": false,
        "unit_price": 5111.11,
        "cost": 5111.11,
-       "name": "Yogur entero Milkaut frutilla sachet 900 g.",
-       "sku_id": "78118",
+       "name": "Yogur entero Milkaut vainilla sachet 900 g.",
+       "sku_id": "78123",
        "promo": false
       },
       {
@@ -1062,7 +1062,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 43342.13,
+     "total": 41869.63,
      "complete": false,
      "missing": [
       "leche"
@@ -1189,8 +1189,8 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 5599.0,
-       "cost": 3919.3,
+       "unit_price": 3999.0,
+       "cost": 2799.3,
        "name": "Tomate Redondo Grande Por Kg Tomate Redondo x Kg",
        "sku_id": "167769",
        "promo": false
@@ -1229,10 +1229,10 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 13900.0,
-       "cost": 3475.0,
-       "name": "Queso Cremoso Cuisine & Co Por Kilo",
-       "sku_id": "1360596",
+       "unit_price": 12490.0,
+       "cost": 3122.5,
+       "name": "Queso Cremoso Cremac-sob-kg-1",
+       "sku_id": "45158",
        "promo": false
       },
       {
@@ -1262,7 +1262,7 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 32787.77,
+     "total": 31867.77,
      "complete": true,
      "missing": [],
      "kcal": 19267,
@@ -1391,8 +1391,8 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 5399.0,
-       "cost": 3779.3,
+       "unit_price": 4299.0,
+       "cost": 3009.3,
        "name": "Tomate Redondo 500 G",
        "sku_id": "206060",
        "promo": false
@@ -1401,8 +1401,8 @@
        "ing": "zanahoria",
        "qty": 0.5,
        "fixed": false,
-       "unit_price": 1899.0,
-       "cost": 949.5,
+       "unit_price": 1599.0,
+       "cost": 799.5,
        "name": "Zanahoria 250 G",
        "sku_id": "204533",
        "promo": false
@@ -1415,7 +1415,7 @@
        "cost": 999.5,
        "name": "Cebolla 350 G Cebolla 350g",
        "sku_id": "203195",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "papa",
@@ -1462,7 +1462,7 @@
      "fixed_total": 0
     },
     "Dia": {
-     "total": 39253.1,
+     "total": 37503.1,
      "complete": false,
      "missing": [
       "yogur"
@@ -1589,10 +1589,10 @@
        "ing": "tomate",
        "qty": 0.7,
        "fixed": false,
-       "unit_price": 4490.0,
-       "cost": 3143.0,
-       "name": "Tomate Redondo x Kg.",
-       "sku_id": "90127",
+       "unit_price": 1990.0,
+       "cost": 1393.0,
+       "name": "Tomate Comercial en bolsa malla x 1 Kg.",
+       "sku_id": "90076",
        "promo": false
       },
       {
@@ -1791,7 +1791,7 @@
    },
    "shops": {
     "Carrefour": {
-     "total": 39466.87,
+     "total": 40161.87,
      "complete": false,
      "missing": [
       "carne_picada",
@@ -1927,8 +1927,8 @@
        "fixed": false,
        "unit_price": 902.85,
        "cost": 2708.55,
-       "name": "Galletitas Maná de vainilla livianas 136 g.",
-       "sku_id": "100955",
+       "name": "Galletitas de limón Maná livianas 136 g.",
+       "sku_id": "107106",
        "promo": true
       },
       {
@@ -1979,7 +1979,7 @@
      "fixed_total": 0
     },
     "Jumbo": {
-     "total": 42124.84,
+     "total": 42622.34,
      "complete": false,
      "missing": [
       "leche"
@@ -2136,10 +2136,10 @@
        "ing": "queso",
        "qty": 0.25,
        "fixed": false,
-       "unit_price": 13900.0,
-       "cost": 3475.0,
-       "name": "Queso Cremoso Cuisine & Co Por Kilo",
-       "sku_id": "1360596",
+       "unit_price": 12490.0,
+       "cost": 3122.5,
+       "name": "Queso Cremoso Cremac-sob-kg-1",
+       "sku_id": "45158",
        "promo": false
       },
       {
@@ -2169,12 +2169,10 @@
      "fixed_total": 0
     },
     "ChangoMas": {
-     "total": 38679.22,
-     "complete": false,
-     "missing": [
-      "azucar"
-     ],
-     "kcal": 26721,
+     "total": 39418.72,
+     "complete": true,
+     "missing": [],
+     "kcal": 28656,
      "items": [
       {
        "ing": "fideos",
@@ -2250,7 +2248,11 @@
        "ing": "azucar",
        "qty": 0.5,
        "fixed": false,
-       "missing": true
+       "unit_price": 1479.0,
+       "cost": 739.5,
+       "name": "Azúcar Azucel 1kg",
+       "sku_id": "41373",
+       "promo": false
       },
       {
        "ing": "carne_picada",
@@ -2290,7 +2292,7 @@
        "cost": 999.5,
        "name": "Cebolla 350 G Cebolla 350g",
        "sku_id": "203195",
-       "promo": true
+       "promo": false
       },
       {
        "ing": "banana",
@@ -2353,13 +2355,11 @@
        "promo": false
       }
      ],
-     "lacks": [
-      "azucar"
-     ],
+     "lacks": [],
      "fixed_total": 0
     },
     "Dia": {
-     "total": 38898.94,
+     "total": 39393.94,
      "complete": true,
      "missing": [],
      "kcal": 28656,
@@ -2550,12 +2550,12 @@
     }
    },
    "ranking": [
-    "ChangoMas",
     "Dia",
+    "ChangoMas",
     "Carrefour",
     "Jumbo"
    ],
-   "cheapest": "ChangoMas",
+   "cheapest": "Dia",
    "common": [
     "fideos",
     "arroz",
@@ -2563,6 +2563,7 @@
     "huevos",
     "pan_lactal",
     "yerba",
+    "azucar",
     "papa",
     "cebolla",
     "banana",

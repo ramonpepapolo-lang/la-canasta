@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-27 17:57",
+ "updated": "2026-11-28 16:47",
  "zenodo": {
-  "views": 28,
+  "views": 29,
   "downloads": 9,
   "url": "https://doi.org/10.5281/zenodo.23856045"
  },
  "kaggle": {
-  "views": 102,
-  "downloads": 60,
-  "votes": 0,
+  "views": 107,
+  "downloads": 61,
+  "votes": 1,
   "usability": 0.64705884,
   "url": "https://www.kaggle.com/datasets/ramonpepa/la-canasta-daily-supermarket-prices"
  },

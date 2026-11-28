@@ -1,0 +1,80 @@
+{
+ "total": 29.582,
+ "voice": "em_alex",
+ "lines": [
+  {
+   "k": "h1",
+   "sub": "Mismo lavado de ropa: 16 productos iguales.",
+   "say": "Mismo lavado de ropa: dieciséis productos iguales.",
+   "start": 0.12,
+   "end": 3.053,
+   "dur": 2.933,
+   "ps": "mˈismo laβˈaðo ðe rˈopa: djˌesisˈeis pɾoðˈuktos iɣwˈales."
+  },
+  {
+   "k": "h2",
+   "sub": "$78.214 en Día… o $122.000 en Jumbo.",
+   "say": "Setenta y ocho mil en Día, o ciento veintidós mil en Jumbo.",
+   "gap": 0.3,
+   "start": 3.273,
+   "end": 6.561,
+   "dur": 3.288,
+   "ps": "setˈɛnta i ˈoʧo mˈil en dˈia, o sjˈɛnto βˌAntiðˈos mˈil en xˈumbo."
+  },
+  {
+   "k": "w1",
+   "sub": "Día $78.214. Carrefour $84.897.",
+   "say": "Día, setenta y ocho mil. Carrefour, ochenta y cuatro mil novecientos.",
+   "start": 6.861,
+   "end": 10.668,
+   "dur": 3.807,
+   "ps": "dˈia, setˈɛnta i ˈoʧo mˈil. kˌarefˈowɾ, oʧˈɛnta i kwˈatɾo mˈil nˌoβesjˈɛntos."
+  },
+  {
+   "k": "w2",
+   "sub": "ChangoMás $106.299. Jumbo $122.000.",
+   "say": "ChangoMás, ciento seis mil. Jumbo, ciento veintidós mil.",
+   "start": 10.888,
+   "end": 13.974,
+   "dur": 3.086,
+   "ps": "ʧˈaŋɡo mˈas, sjˈɛnto sˈAs mˈil. xˈumbo, sjˈɛnto βˌAntiðˈos mˈil."
+  },
+  {
+   "k": "b1",
+   "sub": "Pero ojo: 11 de los 16 de Día están en oferta.",
+   "say": "Pero ojo: once de los dieciséis de Día están en oferta.",
+   "gap": 0.3,
+   "start": 14.194,
+   "end": 17.134,
+   "dur": 2.94,
+   "ps": "pˌeɾo ˈoxo: ˈonse ðe los ðjˌesisˈeis ðe ðˈia estˈan en ofˈeɾta."
+  },
+  {
+   "k": "b2",
+   "sub": "La mayoría, desde el miércoles 25. Jumbo no movió ni un peso.",
+   "say": "La mayoría, desde el miércoles veinticinco. Jumbo no movió ni un peso.",
+   "start": 17.434,
+   "end": 21.13,
+   "dur": 3.696,
+   "ps": "la mˌaʃoɾˈia, dˌesðe el mjˈeɾkoles βˌAntisˈinko. xˈumbo nˈo moβjˈo nˈi ˈum pˈeso."
+  },
+  {
+   "k": "p1",
+   "sub": "Un jabón para diluir y un suavizante al mes, en Día:",
+   "say": "Un jabón para diluir y un suavizante por mes, en Día:",
+   "start": 21.35,
+   "end": 24.239,
+   "dur": 2.888,
+   "ps": "ˈun xaβˈom pˌaɾa ðˌiluˈiɾ i ˈun swˌaβisˈante poɾ mˈes, en dˈia:"
+  },
+  {
+   "k": "p2",
+   "sub": "Por mes son $11.484 menos.",
+   "say": "Por mes son once mil cuatrocientos ochenta y cuatro pesos menos.",
+   "start": 24.459,
+   "end": 28.062,
+   "dur": 3.603,
+   "ps": "poɾ mˈes sˈon ˈonse mˈil kwˌatɾosjˈɛntos oʧˈɛnta i kwˈatɾo pˈesos mˈenos."
+  }
+ ]
+}
